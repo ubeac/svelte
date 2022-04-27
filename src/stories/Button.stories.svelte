@@ -1,64 +1,26 @@
 <script>
-  import { Meta, Template, Story } from "@storybook/addon-svelte-csf";
-  import {Button} from "$lib/components";
+	import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
+
+	import { Button } from '../lib';
 </script>
 
-<!-- More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export -->
-<!-- More on argTypes: https://storybook.js.org/docs/svelte/api/argtypes -->
 <Meta
-  title="Example/Button"
-  component={Button}
+	title="Button"
+	component={Button}
+	parameters={{
+    backgrounds: {
+    values: [
+      {name: 'dark', value: '#202020'},
+      {name: 'light', value: '#fff'},
+    ]
+  }
+}}
 />
-  <!-- argTypes={{
-    backgroundColor: { control: "color" },
-    label: { control: "text" },
-    onClick: { action: "onClick" },
-    primary: { control: "boolean" },
-    size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-    },
-  }} -->
 
-<!-- More on component templates: https://storybook.js.org/docs/svelte/writing-stories/introduction#using-args -->
 <Template let:args>
-  <Button {...args} on:click={args.onClick}>
-    {args.label}
-    </Button>
+	<Button {...args}>{args.label}</Button>
 </Template>
 
-<Story name="some" args={{label: 'Button', color: 'red'}} let:args let:context>
-  <Button color={args.color}>{args.label}</Button>
-
-</Story>
-
-<!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->
-<!-- <Story
-  name="Primary"
-  args={{
-    color: 'red',
-    label: "Button",
-  }}
-/>
-
-<Story
-  name="Secondary"
-  args={{
-    label: "Button",
-  }}
-/>
-<Story
-  name="Large"
-  args={{
-    size: "large",
-    label: "Button",
-  }}
-/>
-
-<Story
-  name="Small"
-  args={{
-    size: "small",
-    label: "Button",
-  }}
-/> -->
+<Story name="Red" args={{ color: 'red', label: 'RED' }} />
+<Story name="green" args={{ color: 'green', label: 'green' }} />
+<Story name="blue" args={{ color: 'blue', label: 'blue' }} />
