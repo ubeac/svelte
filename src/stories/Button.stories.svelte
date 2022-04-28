@@ -8,13 +8,13 @@
 	title="Button"
 	component={Button}
 	parameters={{
-    backgrounds: {
-    values: [
-      {name: 'dark', value: '#202020'},
-      {name: 'light', value: '#fff'},
-    ]
-  }
-}}
+		backgrounds: {
+			values: [
+				{ name: 'dark', value: '#202020' },
+				{ name: 'light', value: '#fff' }
+			]
+		}
+	}}
 />
 
 <Template let:args>
