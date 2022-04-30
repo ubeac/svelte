@@ -2,7 +2,7 @@ const preprocess = require('svelte-preprocess')
 const path = require('path')
 
 module.exports = {
-	stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx|svelte)'],
+	stories: ['../stories/**/*.stories.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx|svelte)'],
 	addons: ['@storybook/addon-essentials', '@storybook/addon-links', '@storybook/addon-svelte-csf'],
 	framework: '@storybook/svelte',
 	svelteOptions: {

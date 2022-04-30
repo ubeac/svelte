@@ -1,8 +1,8 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { COLORS } from '../../types'
-	import { Icon } from '../../components'
+	import { COLORS } from '../../src/types'
+	import { Icon } from '../../src/components'
 </script>
 
 <Meta
