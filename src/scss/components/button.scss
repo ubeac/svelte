@@ -1,0 +1,34 @@
+.u-button {
+	@extend .btn;
+}
+
+.u-button-block {
+	width: 100%;
+}
+
+.u-button-disabled {
+	@extend .disabled;
+}
+
+.u-button-loading {
+	@extend .btn-loading;
+}
+
+@each $name in sm, lg {
+	.u-button-#{$name} {
+		@extend .btn-#{$name};
+	}
+}
+
+@each $name, $color in theme-colors() {
+	.u-button-#{$name} {
+		@extend .btn-#{$name};
+	}
+	.u-button-outline-#{$name} {
+		@extend .btn-outline-#{$name};
+	}
+}
+
+.u-button-group {
+	@extend .btn-list;
+}

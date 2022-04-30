@@ -1,5 +1,5 @@
 <script>
-	import { ButtonJS } from '../components'
+	import { Button } from '../components'
 </script>
 
-<ButtonJS>Test</ButtonJS>
+<Button>Test</Button>

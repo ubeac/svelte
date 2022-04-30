@@ -4,6 +4,11 @@
 	/**
 	 * TODO
 	 */
+	// export let componentName: string | undefined = undefined
+
+	/**
+	 * TODO
+	 */
 	export let nodes: Array<any> = []
 
 	/**

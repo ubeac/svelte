@@ -23,7 +23,6 @@
 	/**
 	 * TODO
 	 */
-
 	export let disabled: boolean = false
 
 	/**
@@ -58,3 +57,8 @@
 <El tag="button" class={classes} {disabled} on:click {...$$restProps}>
 	<slot />
 </El>
+
+<!-- TODO -->
+<style lang="scss" global>
+	@import '../../scss';
+</style>
