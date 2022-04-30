@@ -1,10 +1,18 @@
 <script lang="ts">
 	import { getContext, onDestroy, setContext } from 'svelte'
 
+	import clsx from 'clsx'
+
 	/**
 	 * TODO
 	 */
-	// export let componentName: string | undefined = undefined
+	let klass: string | undefined = undefined
+	export { klass as class }
+
+	/**
+	 * TODO
+	 */
+	export let componentName: string | undefined = undefined
 
 	/**
 	 * TODO
@@ -27,6 +35,8 @@
 
 	const map = new Map<Symbol, any>()
 
+	$: classes = clsx(`u-${componentName}`, klass)
+
 	$: context && context.update(key, $$props)
 
 	function remove(key: Symbol) {
@@ -48,7 +58,7 @@
 {#if visible || !Object.keys($$props).includes('visible')}
 	{#if tag}
 		<!-- prettier-ignore -->
-		<svelte:element this={tag} {...$$restProps}>
+		<svelte:element class={classes} this={tag} {...$$restProps}>
 			<slot />
 		</svelte:element>
 	{:else}

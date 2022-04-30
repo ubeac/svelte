@@ -41,7 +41,6 @@
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
 	$: classes = clsx(
-		'u-button',
 		{
 			[`u-button-block`]: block,
 			[`u-button-disabled`]: disabled,
@@ -54,7 +53,7 @@
 	)
 </script>
 
-<El tag="button" class={classes} {disabled} on:click {...$$restProps}>
+<El tag="button" class={classes} componentName="button" {disabled} on:click {...$$restProps}>
 	<slot />
 </El>
 
