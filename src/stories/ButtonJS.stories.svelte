@@ -1,10 +1,10 @@
 <script>
-	import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
+	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { ButtonJS } from '../components';
+	import { ButtonJS } from '../components'
 </script>
 
-<Meta title="Button JSDoc" component={ButtonJS}/>
+<Meta title="Button JSDoc" component={ButtonJS} />
 
 <Template let:args>
 	<ButtonJS {...args} />

@@ -1,12 +1,12 @@
 <script>
-	import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
+	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { ButtonTS } from '../components';
+	import { ButtonTS } from '../components'
 
 	const colorControl = {
 		type: 'radio',
-		options: ['red', 'blue', 'green', 'black', 'white']
-	};
+		options: ['red', 'blue', 'green', 'black', 'white'],
+	}
 </script>
 
 <Meta
@@ -14,14 +14,14 @@
 	component={ButtonTS}
 	argTypes={{
 		text: {
-			control: { type: 'text' }
+			control: { type: 'text' },
 		},
 		color: {
-			control: colorControl
+			control: colorControl,
 		},
 		backgroundColor: {
-			control: colorControl
-		}
+			control: colorControl,
+		},
 	}}
 />
 
