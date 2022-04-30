@@ -1,13 +1,13 @@
 <script lang="ts">
-	import type { Color } from '../../types'
+	import type { Colors } from '../../types'
 
 	/** the Color of button
 	 */
-	export let color: Color = 'green'
+	export let color: Colors = 'green'
 
 	/** the background Color of button
 	 */
-	export let backgroundColor: Color = 'white'
+	export let backgroundColor: Colors = 'blue'
 
 	/**
 	 * Disabled state of button

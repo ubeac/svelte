@@ -12,11 +12,12 @@
 		"package": "svelte-kit package",
 		"prepare": "svelte-kit sync",
 		"preview": "svelte-kit preview",
-		"storybook": "start-storybook -p 6006",
+		"storybook:start": "start-storybook -p 6006",
 		"storybook:build": "build-storybook"
 	},
 	"dependencies": {
 		"@types/uuid": "^8.3.4",
+		"clsx": "^1.1.1",
 		"uuid": "^8.3.2"
 	},
 	"devDependencies": {

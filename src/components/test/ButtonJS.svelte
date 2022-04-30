@@ -1,6 +1,6 @@
 <script>
 	/** the Color of button
-	 * @type {'red'|'green'|'blue'|'black'|'white'}
+	 * @type {'' | 'primary' | 'secondary' | 'blue' | 'azure' | 'indigo' | 'purple' | 'pink' | 'red' | 'orange' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark'}
 	 */
 	export let color = 'green'
 
