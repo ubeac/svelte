@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte'
-	import clsx from 'clsx'
 
 	import type { Colors } from '@app/types'
+	import { classname } from '@app/utils'
 
 	/**
 	 * TODO
@@ -45,11 +45,11 @@
 		| '8x'
 		| '9x' = 'auto'
 
-	$: classes = clsx(
-		'u-icon',
+	$: classes = classname(
+		'icon',
 		{
-			[`u-icon-${size}`]: size,
-			[`u-text-${color}`]: color,
+			size,
+			[`$text-${color}`]: !!color,
 		},
 		klass
 	)

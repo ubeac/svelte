@@ -1,5 +1,5 @@
 <script>
-	import { Button } from '../components'
+	import { Button } from '@app/components'
 </script>
 
 <Button>Test</Button>

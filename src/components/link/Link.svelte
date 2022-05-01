@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '../el'
-	import { link } from '../router'
+	import { El, link } from '@app/components'
 
 	/**
 	 * TODO

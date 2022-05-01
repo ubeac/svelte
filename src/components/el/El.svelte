@@ -1,13 +1,18 @@
 <script lang="ts">
 	import { getContext, onDestroy, setContext } from 'svelte'
 
-	import clsx from 'clsx'
+	import { classname } from '@app/utils'
 
 	/**
 	 * TODO
 	 */
 	let klass: string | undefined = undefined
 	export { klass as class }
+
+	/**
+	 * TODO
+	 */
+	export let classes: Object | undefined = undefined
 
 	/**
 	 * TODO
@@ -35,7 +40,7 @@
 
 	const map = new Map<Symbol, any>()
 
-	$: classes = clsx(`u-${componentName}`, klass)
+	$: classnames = classname(componentName, classes, klass)
 
 	$: context && context.update(key, $$props)
 
@@ -58,7 +63,7 @@
 {#if visible || !Object.keys($$props).includes('visible')}
 	{#if tag}
 		<!-- prettier-ignore -->
-		<svelte:element class={classes} this={tag} {...$$restProps}>
+		<svelte:element class={classnames} this={tag} {...$$restProps}>
 			<slot />
 		</svelte:element>
 	{:else}

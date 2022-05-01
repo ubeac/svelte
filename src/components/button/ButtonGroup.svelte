@@ -2,6 +2,6 @@
 	import { El } from '@app/components'
 </script>
 
-<El tag="div" {...$$restProps}>
+<El tag="div" componentName="ButtonGroup" {...$$restProps}>
 	<slot />
 </El>

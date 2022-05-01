@@ -1,14 +1,6 @@
 <script lang="ts">
-	import clsx from 'clsx'
-
-	import type { Colors } from '../../types'
-	import { El } from '../el'
-
-	/**
-	 * TODO
-	 */
-	let klass: string | undefined = undefined
-	export { klass as class }
+	import { El } from '@app/components'
+	import type { Colors } from '@app/types'
 
 	/**
 	 * TODO
@@ -25,17 +17,14 @@
 	 */
 	export let style: 'border' | 'grow' = 'border'
 
-	$: classes = clsx(
-		{
-			[`u-spinner-${size}`]: size,
-			[`u-spinner-${style}`]: style,
-			[`u-text-${color}`]: color,
-		},
-		klass
-	)
+	$: classes = {
+		size,
+		style,
+		[`$text-${color}`]: !!color,
+	}
 </script>
 
-<El tag="div" class={classes} componentName="spinner" role="status" {...$$restProps} />
+<El tag="div" {classes} componentName="Spinner" role="status" {...$$restProps} />
 
 <!-- TODO -->
 <style lang="scss" global>
