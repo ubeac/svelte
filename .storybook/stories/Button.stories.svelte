@@ -30,8 +30,20 @@
 
 <Story name="default" />
 <Story name="block" args={{ block: true }} />
-<Story name="color" args={{ color: 'blue' }} />
+<Story name="color" args={{ color: 'blue' }} let:args>
+	<Button {...args}>Button</Button>
+	<br />
+	{#each COLORS as color}
+		<Button {color}>Button {color}</Button>
+	{/each}
+</Story>
 <Story name="disabled" args={{ disabled: true }} />
 <Story name="loading" args={{ loading: true, color: 'blue' }} />
 <Story name="outline" args={{ outline: true }} />
-<Story name="size" args={{ size: 'lg' }} />
+<Story name="size" args={{ size: 'lg' }} let:args>
+	<Button {...args}>Button</Button>
+	<br />
+	{#each ['sm', 'md', 'lg'] as size}
+		<Button {...{ args, size }}>Button {size}</Button>
+	{/each}
+</Story>
