@@ -2,7 +2,7 @@
 	import Icon from '@iconify/svelte'
 	import clsx from 'clsx'
 
-	import type { Colors } from '../../types'
+	import type { Colors } from '@types'
 
 	/**
 	 * TODO
