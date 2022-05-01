@@ -1,8 +1,26 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { COLORS } from '@types'
-	import { Icon } from '@components'
+	import { COLORS } from '@app/types'
+	import { Icon } from '@app/components'
+
+	const SIZES = [
+		'auto',
+		'xs',
+		'sm',
+		'md',
+		'lg',
+		'xl',
+		'1x',
+		'2x',
+		'3x',
+		'4x',
+		'5x',
+		'6x',
+		'7x',
+		'8x',
+		'9x',
+	]
 </script>
 
 <Meta
@@ -19,23 +37,7 @@
 			defaultValue: 'auto',
 			control: {
 				type: 'select',
-				options: [
-					'auto',
-					'xs',
-					'sm',
-					'md',
-					'lg',
-					'xl',
-					'1x',
-					'2x',
-					'3x',
-					'4x',
-					'5x',
-					'6x',
-					'7x',
-					'8x',
-					'9x',
-				],
+				options: SIZES,
 			},
 		},
 	}} />
@@ -45,3 +47,8 @@
 </Template>
 
 <Story name="default" args={{ name: 'menu' }} />
+<Story name="size" let:args>
+	{#each SIZES as size}
+		<Icon {...args} name="menu" {size} />
+	{/each}
+</Story>
