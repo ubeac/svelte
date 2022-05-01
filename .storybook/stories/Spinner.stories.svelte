@@ -1,8 +1,8 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { COLORS } from '../src/types'
-	import { Spinner } from '../src/components'
+	import { COLORS } from '@app/types'
+	import { Spinner } from '@app/components'
 </script>
 
 <Meta

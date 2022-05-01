@@ -22,6 +22,13 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		vite: {
+			resolve: {
+				alias: {
+					'@app': path.resolve('src'),
+				},
+			},
+		},
 	},
 }
 

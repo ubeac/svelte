@@ -13,7 +13,7 @@
 		"prepare": "svelte-kit sync",
 		"preview": "svelte-kit preview",
 		"storybook:start": "start-storybook -p 6006",
-		"storybook:build": "build-storybook"
+		"storybook:build": "build-storybook -o ./.storybook/build"
 	},
 	"dependencies": {
 		"@iconify/svelte": "^2.2.1",

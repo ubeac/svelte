@@ -2,7 +2,7 @@ const preprocess = require('svelte-preprocess')
 const path = require('path')
 
 module.exports = {
-	stories: ['../stories/**/*.stories.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx|svelte)'],
+	stories: ['./stories/**/*.svelte'],
 	addons: ['@storybook/addon-essentials', '@storybook/addon-links', '@storybook/addon-svelte-csf'],
 	framework: '@storybook/svelte',
 	svelteOptions: {
@@ -17,4 +17,13 @@ module.exports = {
 			},
 		}),
 	},
+	webpackFinal: async (config) => ({
+		...config,
+		resolve: {
+			alias: {
+				'@app': path.resolve('src'),
+			},
+			extensions: ['.js', '.ts'],
+		},
+	}),
 }
