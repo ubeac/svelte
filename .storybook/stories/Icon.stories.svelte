@@ -47,6 +47,11 @@
 </Template>
 
 <Story name="default" args={{ name: 'menu' }} />
+<Story name="color" let:args>
+	{#each COLORS as color}
+		<Icon {...args} name="user" {color} />
+	{/each}
+</Story>
 <Story name="size" let:args>
 	{#each SIZES as size}
 		<Icon {...args} name="menu" {size} />

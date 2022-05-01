@@ -3,6 +3,9 @@
 
 	import { COLORS } from '@app/types'
 	import { Spinner } from '@app/components'
+
+	const SIZES = ['sm', 'md']
+	const STYLES = ['border', 'grow']
 </script>
 
 <Meta
@@ -19,14 +22,14 @@
 			defaultValue: 'sm',
 			control: {
 				type: 'select',
-				options: ['sm', 'md'],
+				options: SIZES,
 			},
 		},
 		style: {
 			defaultValue: 'border',
 			control: {
 				type: 'radio',
-				options: ['border', 'grow'],
+				options: STYLES,
 			},
 		},
 	}} />
@@ -37,5 +40,13 @@
 
 <Story name="default" />
 <Story name="color" args={{ color: 'blue' }} />
-<Story name="size" args={{ size: 'md' }} />
-<Story name="style" args={{ style: 'grow' }} />
+<Story name="size" let:args>
+	{#each SIZES as size}
+		<Spinner {...args} {size} />
+	{/each}
+</Story>
+<Story name="style" let:args>
+	{#each STYLES as style}
+		<Spinner {...args} {style} />
+	{/each}
+</Story>
