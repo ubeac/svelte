@@ -32,7 +32,8 @@
 				options: STYLES,
 			},
 		},
-	}} />
+	}}
+/>
 
 <Template let:args>
 	<Spinner {...args} />
