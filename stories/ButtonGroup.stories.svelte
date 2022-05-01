@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Button } from '../../src/components'
+	import { Button } from '../src/components'
 </script>
 
 <Meta title="ButtonGroup" component={Button.Group} />
