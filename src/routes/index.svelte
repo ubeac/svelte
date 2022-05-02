@@ -1,8 +1,18 @@
-<script>
-    import Button from "$lib";
-
+<script lang="ts">
+	import { Button } from '$lib'
+	let x: any
+	let y = {}
 </script>
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
-<Button>Test</Button>
+<Button on:click={(e) => console.log('btn1')} a="1" b="test1">not set</Button>
+<Button on:click={() => console.log('btn')} a="2" b="test2" visible="any string">any string</Button>
+<Button on:click={() => console.log('btn')} a="2" b="test2" visible={true}>true</Button>
+<Button on:click={() => console.log('btn')} a="2" b="test2" visible="true">"true"</Button>
+<Button on:click={() => console.log('btn')} a="3" b="test3" visible={1}>1</Button>
+<Button on:click={() => console.log('btn')} a="3" b="test3" visible={y}>y</Button>
+<Button on:click={() => console.log('btn')} a="3" b="test3" visible={x}>x</Button>
+<Button on:click={() => console.log('btn')} a="3" b="test3" visible={y.a?.b}>false</Button>
+<Button on:click={() => console.log('btn')} a="3" b="test3" visible={false}>false</Button>
+<Button on:click={() => console.log('btn')} a="3" b="test3" visible="false">false</Button>
+<Button on:click={() => console.log('btn')} a="3" b="test3" visible={null}>false</Button>
+<Button on:click={() => console.log('btn')} a="3" b="test3" visible={0}>false</Button>

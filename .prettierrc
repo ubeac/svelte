@@ -1,6 +1,25 @@
 {
-	"useTabs": true,
+	"arrowParens": "always",
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"embeddedLanguageFormatting": "auto",
+	"endOfLine": "lf",
+	"htmlWhitespaceSensitivity": "css",
+	"insertPragma": false,
+	"jsxSingleQuote": false,
+	"overrides": [],
+	"plugins": [],
+	"proseWrap": "preserve",
+	"quoteProps": "consistent",
+	"requirePragma": false,
+	"semi": false,
 	"singleQuote": true,
-	"trailingComma": "none",
-	"printWidth": 100
+	"svelteAllowShorthand": true,
+	"svelteIndentScriptAndStyle": true,
+	"svelteSortOrder": "options-scripts-markup-styles",
+	"svelteStrictMode": false,
+	"trailingComma": "es5",
+	"tabWidth": 2,
+	"useTabs": true,
+	"printWidth": 150
 }
