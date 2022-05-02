@@ -1,19 +1,15 @@
 <script lang="ts">
-	import { El, link } from '@app/components'
+	import { link } from '@app/components'
+	import { condition } from '@app/utils'
 
 	/**
 	 * TODO
 	 */
 	export let to: string | undefined = undefined
-
-	/**
-	 * TODO
-	 */
-	export let visible: boolean = true
 </script>
 
-<El {visible}>
+{#if condition($$props)}
 	<a use:link href={to} {...$$restProps}>
 		<slot />
 	</a>
-</El>
+{/if}

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { El } from '@app/components'
 	import type { Colors } from '@app/types'
+	import { condition } from '@app/utils'
 
 	/**
 	 * TODO
@@ -24,7 +25,9 @@
 	}
 </script>
 
-<El tag="div" {classes} componentName="Spinner" role="status" {...$$restProps} />
+{#if condition($$props)}
+	<El tag="div" {classes} componentName="Spinner" role="status" {...$$restProps} />
+{/if}
 
 <!-- TODO -->
 <style lang="scss" global>

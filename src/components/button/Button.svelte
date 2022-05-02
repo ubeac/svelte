@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { El } from '@app/components'
 	import type { Colors } from '@app/types'
+	import { condition } from '@app/utils'
 
 	/**
 	 * TODO
@@ -42,9 +43,11 @@
 	}
 </script>
 
-<El tag="button" {classes} componentName="Button" {disabled} on:click {...$$restProps}>
-	<slot />
-</El>
+{#if condition($$props)}
+	<El tag="button" {classes} componentName="Button" {disabled} on:click {...$$restProps}>
+		<slot />
+	</El>
+{/if}
 
 <!-- TODO -->
 <style lang="scss" global>

@@ -2,7 +2,7 @@
 	import Icon from '@iconify/svelte'
 
 	import type { Colors } from '@app/types'
-	import { classname } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * TODO
@@ -55,7 +55,9 @@
 	)
 </script>
 
-<Icon class={classes} icon="{pack}:{name}" {...$$restProps} />
+{#if condition($$props)}
+	<Icon class={classes} icon="{pack}:{name}" {...$$restProps} />
+{/if}
 
 <!-- TODO -->
 <style lang="scss" global>

@@ -29,11 +29,6 @@
 	 */
 	export let tag: string | undefined = undefined
 
-	/**
-	 * TODO
-	 */
-	export let visible: boolean = false
-
 	const context: any = getContext('nodes')
 
 	const key = Symbol()
@@ -60,13 +55,11 @@
 	onDestroy(() => context && context.remove(key))
 </script>
 
-{#if visible || !Object.keys($$props).includes('visible')}
-	{#if tag}
-		<!-- prettier-ignore -->
-		<svelte:element class={classnames} this={tag} {...$$restProps}>
-			<slot />
-		</svelte:element>
-	{:else}
+{#if tag}
+	<!-- prettier-ignore -->
+	<svelte:element class={classnames} this={tag} {...$$restProps}>
 		<slot />
-	{/if}
+	</svelte:element>
+{:else}
+	<slot />
 {/if}

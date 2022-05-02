@@ -1,5 +1,5 @@
-<script>
+<script lang="ts">
 	import { Button } from '@app/components'
 </script>
 
-<Button>Test</Button>
+<Button>Test1</Button>
