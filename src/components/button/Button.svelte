@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { El } from '@components/el'
-	import type { Colors } from '@types'
 	import clsx from 'clsx'
+
+	import { El } from '@app/components'
+	import type { Colors } from '@app/types'
 
 	/**
 	 * TODO

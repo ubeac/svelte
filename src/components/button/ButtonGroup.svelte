@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El } from '@components/el'
+	import { El } from '@app/components'
 </script>
 
 <El tag="div" {...$$restProps}>
