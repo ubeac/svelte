@@ -1,8 +1,7 @@
 <script lang="ts">
-	import clsx from 'clsx'
-
-	import type { Colors } from '@types'
 	import { El } from '@components/el'
+	import type { Colors } from '@types'
+	import clsx from 'clsx'
 
 	/**
 	 * TODO
@@ -56,8 +55,3 @@
 <El tag="button" class={classes} componentName="button" {disabled} on:click {...$$restProps}>
 	<slot />
 </El>
-
-<!-- TODO -->
-<style lang="scss" global>
-	@import '../../scss';
-</style>
