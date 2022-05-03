@@ -12,6 +12,7 @@
 		"package": "svelte-kit package",
 		"prepare": "svelte-kit sync",
 		"preview": "svelte-kit preview",
+		"storybook:css": "node .storybook/scripts/generate-css.js",
 		"storybook:start": "start-storybook -p 6006",
 		"storybook:build": "build-storybook -o ./.storybook/build"
 	},

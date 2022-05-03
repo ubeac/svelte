@@ -28,8 +28,3 @@
 {#if condition($$props)}
 	<El tag="div" {classes} componentName="Spinner" role="status" {...$$restProps} />
 {/if}
-
-<!-- TODO -->
-<style lang="scss" global>
-	@import '../../scss';
-</style>

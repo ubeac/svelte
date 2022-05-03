@@ -58,8 +58,3 @@
 {#if condition($$props)}
 	<Icon class={classes} icon="{pack}:{name}" {...$$restProps} />
 {/if}
-
-<!-- TODO -->
-<style lang="scss" global>
-	@import '../../scss';
-</style>
