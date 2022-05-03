@@ -1,19 +1,12 @@
 <script lang="ts">
-	import clsx from 'clsx'
-
 	import { El } from '@app/components'
 	import type { Colors } from '@app/types'
+	import { condition } from '@app/utils'
 
 	/**
 	 * TODO
 	 */
 	export let block: boolean = false
-
-	/**
-	 * TODO
-	 */
-	let klass: string | undefined = undefined
-	export { klass as class }
 
 	/**
 	 * TODO
@@ -40,19 +33,18 @@
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
-	$: classes = clsx(
-		{
-			[`u-button-block`]: block,
-			[`u-button-disabled`]: disabled,
-			[`u-button-loading`]: loading,
-			[`u-button-${color}`]: !outline && color,
-			[`u-button-outline-${color}`]: outline && color,
-			[`u-button-${size}`]: size,
-		},
-		klass
-	)
+	$: classes = {
+		color: !outline && color,
+		block,
+		disabled,
+		loading,
+		size,
+		[`outline-${color}`]: !!(outline && color),
+	}
 </script>
 
-<El tag="button" class={classes} componentName="button" {disabled} on:click {...$$restProps}>
-	<slot />
-</El>
+{#if condition($$props)}
+	<El tag="button" {classes} componentName="Button" {disabled} on:click {...$$restProps}>
+		<slot />
+	</El>
+{/if}

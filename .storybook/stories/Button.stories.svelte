@@ -24,7 +24,8 @@
 				options: SIZES,
 			},
 		},
-	}} />
+	}}
+/>
 
 <Template let:args>
 	<Button {...args}>Button</Button>

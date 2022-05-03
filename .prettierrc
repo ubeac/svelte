@@ -21,7 +21,7 @@
 	"jsxSingleQuote": false,
 	"overrides": [],
 	"plugins": [],
-	"printWidth": 100,
+	"printWidth": 120,
 	"proseWrap": "preserve",
 	"quoteProps": "consistent",
 	"requirePragma": false,

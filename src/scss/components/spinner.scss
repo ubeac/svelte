@@ -1,0 +1,11 @@
+@each $name in border, grow {
+	.u-spinner-#{$name} {
+		@extend .spinner-#{$name};
+	}
+}
+
+.u-spinner-sm {
+	@extend .spinner-border-sm;
+	width: 1rem !important;
+	height: 1rem !important;
+}
