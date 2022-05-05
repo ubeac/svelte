@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El } from '@app/components'
+	import { get_current_component } from 'svelte/internal'
+
+	import { Root } from '@app/components'
 	import type { Colors } from '@app/types'
 	import { condition } from '@app/utils'
 
@@ -26,7 +28,13 @@
 </script>
 
 {#if condition($$props)}
-	<El tag="div" {classes} componentName="Spinner" role="status" {...$$restProps} />
+	<Root
+		tag="div"
+		{classes}
+		component={get_current_component()}
+		componentName="Spinner"
+		role="status"
+		{...$$restProps} />
 {/if}
 
 <!-- TODO -->

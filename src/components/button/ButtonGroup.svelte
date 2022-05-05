@@ -1,10 +1,12 @@
 <script lang="ts">
-	import { El } from '@app/components'
+	import { get_current_component } from 'svelte/internal'
+
+	import { Root } from '@app/components'
 	import { condition } from '@app/utils'
 </script>
 
 {#if condition($$props)}
-	<El tag="div" componentName="ButtonGroup" {...$$restProps}>
+	<Root tag="div" component={get_current_component()} componentName="ButtonGroup" {...$$restProps}>
 		<slot />
-	</El>
+	</Root>
 {/if}
