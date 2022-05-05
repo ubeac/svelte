@@ -1,1 +1,1 @@
-export * from './forwardEvents'
+export * from './forwardEventsBuilder'

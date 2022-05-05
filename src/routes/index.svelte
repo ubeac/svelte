@@ -9,7 +9,8 @@
 <Button block>block</Button>
 <Button size="lg">lg</Button>
 <Button
-	on:click={(event) => console.log('on:click', event)}
+	on:click={(event) => console.log('on:click1', event)}
+	on:click={(event) => console.log('on:click2', event)}
 	on:mousemove={() => console.log('on:mousemove')}
 	on:sMUIDialog:closed.passive={() => console.log('on:click')}>
 	Test1

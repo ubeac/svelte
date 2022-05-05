@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type { SvelteComponent } from 'svelte'
+
 	import { forwardEventsBuilder } from '@app/directives'
 	import { classname } from '@app/utils'
 
@@ -21,7 +23,7 @@
 	/**
 	 * TODO
 	 */
-	export let component: any = undefined
+	export let component: SvelteComponent
 
 	/**
 	 * TODO
