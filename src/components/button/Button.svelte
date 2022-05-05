@@ -46,7 +46,7 @@
 </script>
 
 {#if condition($$props)}
-	<Root tag="button" {classes} component={get_current_component()} componentName="Button" {...$$restProps}>
+	<Root element="button" {classes} component={get_current_component()} componentName="Button" {...$$restProps}>
 		<slot />
 	</Root>
 {/if}

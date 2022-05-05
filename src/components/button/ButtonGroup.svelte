@@ -6,7 +6,7 @@
 </script>
 
 {#if condition($$props)}
-	<Root tag="div" component={get_current_component()} componentName="ButtonGroup" {...$$restProps}>
+	<Root element="div" component={get_current_component()} componentName="ButtonGroup" {...$$restProps}>
 		<slot />
 	</Root>
 {/if}

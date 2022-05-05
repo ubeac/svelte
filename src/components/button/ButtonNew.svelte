@@ -25,7 +25,7 @@
 
 {#if condition($$props)}
 	<Root
-		tag="button"
+		element="button"
 		{classes}
 		{classesName}
 		component={get_current_component()}

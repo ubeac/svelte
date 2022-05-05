@@ -33,7 +33,7 @@
 	/**
 	 * TODO
 	 */
-	export let tag: string | undefined = undefined
+	export let element: any = undefined
 
 	const forwardEvents = forwardEventsBuilder(component)
 
@@ -45,11 +45,16 @@
 	)
 </script>
 
-{#if tag}
-	<!-- prettier-ignore -->
-	<svelte:element  class={classnames} this={tag} use:forwardEvents {...$$restProps}>
-		<slot />
-	</svelte:element>
+{#if element}
+	{#if typeof element == 'string'}
+		<svelte:element this={element} class={classnames} use:forwardEvents {...$$restProps}>
+			<slot />
+		</svelte:element>
+	{:else}
+		<svelte:component this={element} class={classnames} {...$$restProps}>
+			<slot />
+		</svelte:component>
+	{/if}
 {:else}
 	<slot />
 {/if}

@@ -29,7 +29,7 @@
 
 {#if condition($$props)}
 	<Root
-		tag="div"
+		element="div"
 		{classes}
 		component={get_current_component()}
 		componentName="Spinner"
