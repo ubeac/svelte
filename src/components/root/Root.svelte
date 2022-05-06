@@ -2,7 +2,7 @@
 	import type { SvelteComponent } from 'svelte'
 
 	import { forwardEventsBuilder } from '@app/directives'
-	import { classname } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * TODO
@@ -45,16 +45,18 @@
 	)
 </script>
 
-{#if element}
-	{#if typeof element == 'string'}
-		<svelte:element this={element} class={classnames} use:forwardEvents {...$$restProps}>
-			<slot />
-		</svelte:element>
+{#if condition($$props)}
+	{#if element}
+		{#if typeof element == 'string'}
+			<svelte:element this={element} class={classnames} use:forwardEvents {...$$restProps}>
+				<slot />
+			</svelte:element>
+		{:else}
+			<svelte:component this={element} class={classnames} {...$$restProps}>
+				<slot />
+			</svelte:component>
+		{/if}
 	{:else}
-		<svelte:component this={element} class={classnames} {...$$restProps}>
-			<slot />
-		</svelte:component>
+		<slot />
 	{/if}
-{:else}
-	<slot />
 {/if}

@@ -3,12 +3,6 @@
 
 	import { Root } from '@app/components'
 	import type { Colors } from '@app/types'
-	import { condition } from '@app/utils'
-
-	/**
-	 * TODO
-	 */
-	export let block: boolean = false
 
 	/**
 	 * TODO
@@ -18,38 +12,25 @@
 	/**
 	 * TODO
 	 */
-	export let disabled: boolean = false
-
-	/**
-	 * TODO
-	 */
-	export let loading: boolean = false
-
-	/**
-	 * TODO
-	 */
 	export let outline: boolean = false
-
-	/**
-	 * TODO
-	 */
-	export let size: 'sm' | 'md' | 'lg' = 'md'
 
 	$: classes = {
 		color: !outline && color,
-		block,
-		disabled,
-		loading,
-		size,
 		[`outline-${color}`]: !!(outline && color),
 	}
+
+	$: classesName = ['block', 'disabled', 'loading', 'size']
 </script>
 
-{#if condition($$props)}
-	<Root element="button" {classes} component={get_current_component()} componentName="Button" {...$$restProps}>
-		<slot />
-	</Root>
-{/if}
+<Root
+	element="button"
+	{classes}
+	{classesName}
+	component={get_current_component()}
+	componentName="Button"
+	{...$$restProps}>
+	<slot />
+</Root>
 
 <!-- TODO -->
 <style lang="scss" global>
