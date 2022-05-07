@@ -1,14 +1,10 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
+
 	import Icon from '@iconify/svelte'
 
+	import { Root } from '@app/components'
 	import type { Colors } from '@app/types'
-	import { classname, condition } from '@app/utils'
-
-	/**
-	 * TODO
-	 */
-	let klass: string | undefined = undefined
-	export { klass as class }
 
 	/**
 	 * TODO
@@ -25,36 +21,18 @@
 	 */
 	export let pack: 'tabler' = 'tabler'
 
-	/**
-	 * TODO
-	 */
-	export let size:
-		| 'auto'
-		| 'xs'
-		| 'sm'
-		| 'md'
-		| 'lg'
-		| 'xl'
-		| '1x'
-		| '2x'
-		| '3x'
-		| '4x'
-		| '5x'
-		| '6x'
-		| '7x'
-		| '8x'
-		| '9x' = 'auto'
+	$: classes = {
+		[`$text-${color}`]: !!color,
+	}
 
-	$: classes = classname(
-		'icon',
-		{
-			size,
-			[`$text-${color}`]: !!color,
-		},
-		klass
-	)
+	$: classesName = ['size']
 </script>
 
-{#if condition($$props)}
-	<Icon class={classes} icon="{pack}:{name}" {...$$restProps} />
-{/if}
+<Root
+	element={Icon}
+	{classes}
+	{classesName}
+	component={get_current_component()}
+	componentName="Icon"
+	icon="{pack}:{name}"
+	{...$$restProps} />
