@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from '@app/components'
+	import { Button, ButtonAmir } from '@app/components'
 </script>
 
 <Button loading>loading</Button>
@@ -9,9 +9,10 @@
 <Button block>block</Button>
 <Button size="lg">lg</Button>
 <Button
-	on:click={(event) => console.log('on:click1', event)}
+	on:click={() => console.log('on:click1')}
 	on:click={(event) => console.log('on:click2', event)}
 	on:mousemove={() => console.log('on:mousemove')}
 	on:sMUIDialog:closed.passive={() => console.log('on:click')}>
 	Test1
 </Button>
+<ButtonAmir on:click={() => console.log('on:click1')}>Amir</ButtonAmir>
