@@ -9,17 +9,26 @@
 	 */
 	export let color: Colors = undefined
 
+	/**
+	 * TODO
+	 */
+	export let size: 'sm' | 'md' = 'sm'
+
+	/**
+	 * TODO
+	 */
+	export let style: 'border' | 'grow' = 'border'
+
 	$: classes = {
+		size,
+		style,
 		[`$text-${color}`]: !!color,
 	}
-
-	$: classesName = ['size', 'style']
 </script>
 
 <Root
 	element="div"
 	{classes}
-	{classesName}
 	component={get_current_component()}
 	componentName="Spinner"
 	role="status"

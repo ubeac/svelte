@@ -7,28 +7,44 @@
 	/**
 	 * TODO
 	 */
+	export let block: boolean = false
+
+	/**
+	 * TODO
+	 */
 	export let color: Colors = undefined
+
+	/**
+	 * TODO
+	 */
+	export let disabled: boolean = false
+
+	/**
+	 * TODO
+	 */
+	export let loading: boolean = false
 
 	/**
 	 * TODO
 	 */
 	export let outline: boolean = false
 
-	$: classes = {
-		color: !outline && color,
-		[`outline-${color}`]: !!(outline && color),
-	}
+	/**
+	 * TODO
+	 */
+	export let size: 'sm' | 'md' | 'lg' = 'md'
 
-	$: classesName = ['block', 'disabled', 'loading', 'size']
+	$: classes = {
+		block,
+		color: !outline && color,
+		disabled,
+		loading,
+		[`outline-${color}`]: !!(outline && color),
+		size,
+	}
 </script>
 
-<Root
-	element="button"
-	{classes}
-	{classesName}
-	component={get_current_component()}
-	componentName="Button"
-	{...$$restProps}>
+<Root element="button" {classes} component={get_current_component()} componentName="Button" {...$$restProps}>
 	<slot />
 </Root>
 

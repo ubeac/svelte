@@ -18,11 +18,6 @@
 	/**
 	 * TODO
 	 */
-	export let classesName: Array<string> = []
-
-	/**
-	 * TODO
-	 */
 	export let component: SvelteComponent
 
 	/**
@@ -37,12 +32,7 @@
 
 	const forwardEvents = forwardEventsBuilder(component)
 
-	$: classnames = classname(
-		componentName,
-		classesName.reduce((result, current) => ({ ...result, [current]: $$props[current] }), {}),
-		classes,
-		klass
-	)
+	$: classnames = classname(componentName, classes, klass)
 </script>
 
 {#if condition($$props)}

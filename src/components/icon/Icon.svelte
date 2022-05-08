@@ -21,17 +21,35 @@
 	 */
 	export let pack: 'tabler' = 'tabler'
 
+	/**
+	 * TODO
+	 */
+	export let size:
+		| 'auto'
+		| 'xs'
+		| 'sm'
+		| 'md'
+		| 'lg'
+		| 'xl'
+		| '1x'
+		| '2x'
+		| '3x'
+		| '4x'
+		| '5x'
+		| '6x'
+		| '7x'
+		| '8x'
+		| '9x' = 'auto'
+
 	$: classes = {
+		size,
 		[`$text-${color}`]: !!color,
 	}
-
-	$: classesName = ['size']
 </script>
 
 <Root
 	element={Icon}
 	{classes}
-	{classesName}
 	component={get_current_component()}
 	componentName="Icon"
 	icon="{pack}:{name}"
