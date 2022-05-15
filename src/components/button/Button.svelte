@@ -47,8 +47,3 @@
 <Root element="button" {classes} component={get_current_component()} componentName="Button" {...$$restProps}>
 	<slot />
 </Root>
-
-<!-- TODO -->
-<style lang="scss" global>
-	@import '../../scss';
-</style>

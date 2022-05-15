@@ -54,8 +54,3 @@
 	componentName="Icon"
 	icon="{pack}:{name}"
 	{...$$restProps} />
-
-<!-- TODO -->
-<style lang="scss" global>
-	@import '../../scss';
-</style>
