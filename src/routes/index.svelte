@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { Button } from '@app/components'
+
+	// import '../scss/index.scss'
 </script>
 
 <Button>Button</Button>
-
-<!-- <style lang="scss" global>
-	@import '../scss';
-</style> -->
