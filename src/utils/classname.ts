@@ -16,6 +16,7 @@ export const classname = (root?: string, ...inputs: Array<any>): string => {
 					const global = key.startsWith('$')
 					const name = paramCase(key.replace('$', ''))
 					const value = input[key]
+					if (!value) continue
 					const sections = [prefix]
 					!global && root && sections.push(root)
 					sections.push(value === true ? name : value)
