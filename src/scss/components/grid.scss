@@ -1,0 +1,16 @@
+$align-items: (
+	start: start,
+	center: center,
+	end: end,
+	stretch: stretch,
+);
+
+.u-grid {
+	display: flex;
+}
+
+@each $key, $value in $align-items {
+	.u-grid-align-items-#{$key} {
+		align-items: $value;
+	}
+}

@@ -1,0 +1,30 @@
+$column: 12;
+
+$base: calc(100% / $column);
+
+.u-grid-item {
+	flex-grow: 0;
+	flex-basis: auto;
+	max-width: none;
+	box-sizing: border-box;
+}
+
+@each $breakpoint, $value in $breakpoints {
+	@include media-breakpoint-up($breakpoint) {
+		.u-grid-item-#{$breakpoint}-auto {
+			flex-basis: auto;
+			max-width: none;
+		}
+		.u-grid-item-#{$breakpoint}-grow {
+			flex-grow: 1;
+			flex-basis: 0;
+			max-width: 100%;
+		}
+		@for $number from 1 through $column {
+			.u-grid-item-#{$breakpoint}-#{$number} {
+				flex-basis: $number * $base;
+				max-width: $number * $base;
+			}
+		}
+	}
+}
