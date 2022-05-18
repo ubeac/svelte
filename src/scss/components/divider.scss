@@ -1,0 +1,78 @@
+$types: (dashed, solid, dotted);
+$widths: (
+	thin: 1px,
+	medium: 2px,
+	thick: 3px,
+);
+
+.u-divider {
+	--u-divider-color: currentColor;
+	--u-divider-type: solid;
+	--u-divider-gutter: 0.5rem;
+	--u-divider-opacity: 0.25;
+
+	display: flex;
+	align-items: center;
+	font-size: 0.75rem;
+	color: var(--u-divider-color);
+	/* margin: 2rem 0; */
+	/* background: pink; */
+	/* font-weight: 600; */
+	/* text-transform: uppercase; */
+	/* letter-spacing: 0.04em; */
+	/* line-height: 1.6; */
+	/* height: 1px; */
+}
+
+.u-divider:before {
+	content: '';
+	margin-inline-end: var(--u-divider-gutter);
+}
+
+.u-divider:after {
+	content: '';
+	margin-inline-start: var(--u-divider-gutter);
+}
+
+.u-divider:before,
+.u-divider:after {
+	flex: 1 1 auto;
+	opacity: var(--u-divider-opacity);
+	border-top-color: var(--u-divider-color);
+	border-top-style: var(--u-divider-type);
+	border-top-width: var(--u-divider-width);
+}
+
+@each $key in $types {
+	.u-divider-#{$key} {
+		--u-divider-type: #{$key};
+	}
+}
+
+@each $key, $value in $widths {
+	.u-divider-#{$key} {
+		--u-divider-width: #{$value};
+	}
+}
+
+.u-divider-middle:before {
+	margin-inline-start: 1rem;
+}
+
+.u-divider-middle:after {
+	margin-inline-end: 1rem;
+}
+
+.u-divider-inset:before {
+	margin-inline-start: 5rem;
+}
+
+.u-divider-empty:before,
+.u-divider-empty:after {
+	margin: 0;
+}
+
+.u-divider-start:before,
+.u-divider-end::after {
+	content: none;
+}
