@@ -30,6 +30,7 @@
 
 	$: classes = {
 		empty: !$$slots['default'],
+		horizontal: !vertical,
 		placement,
 		type,
 		variant,
