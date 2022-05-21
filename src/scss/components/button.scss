@@ -30,5 +30,22 @@
 }
 
 .u-button-group {
-	@extend .btn-list;
+	display: inline-flex;
+
+	.u-button:active,
+	.u-button:focus,
+	.u-button:hover {
+		z-index: 1;
+	}
+	// @extend .btn-list;
+	& > .u-button:not(:first-child) {
+		margin-left: -1px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	& > .u-button:not(:last-child) {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 }
