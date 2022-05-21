@@ -1,9 +1,9 @@
-.DS_Store
+.storybook/build
+.storybook/styles.css
+.svelte-kit
+build
 node_modules
-/build
-/.storybook/build
-/.svelte-kit
-/package
+package
 .env
 .env.*
 !.env.example
