@@ -42,8 +42,3 @@
 <Root element="div" {classes} component={get_current_component()} componentName="Divider" {...$$restProps}>
 	<slot />
 </Root>
-
-<!-- TODO -->
-<style lang="scss" global>
-	@import '../../scss';
-</style>
