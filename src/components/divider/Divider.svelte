@@ -4,36 +4,47 @@
 	import { Root } from '@app/components'
 
 	/**
-	 * TODO
+	 * Apply inset to the divider
+	 */
+	export let inset: boolean = false
+
+	/**
+	 * Place divider in middle of layout
+	 */
+	export let middle: boolean = false
+
+	/**
+	 * Set text position
 	 */
 	export let placement: 'start' | 'center' | 'end' = 'center'
 
 	/**
-	 * TODO
+	 * Set style of the divider line
 	 */
 	export let type: 'solid' | 'dashed' | 'dotted' = 'solid'
 
 	/**
-	 * TODO
+	 * Set Divider variant
 	 */
-	export let variant: 'middle' | 'inset' | 'full' = 'full'
+	// export let variant: 'middle' | 'inset' | 'full' = 'full'
 
 	/**
-	 * TODO
+	 * Split views vertically
 	 */
 	export let vertical: boolean = false
 
 	/**
-	 * TODO
+	 * Thickness of divider line
 	 */
 	export let width: 'medium' | 'thick' | 'thin' = 'thin'
 
 	$: classes = {
 		empty: !$$slots['default'],
 		horizontal: !vertical,
+		inset,
+		middle,
 		placement,
 		type,
-		variant,
 		vertical,
 		width,
 	}
@@ -42,8 +53,3 @@
 <Root element="div" {classes} component={get_current_component()} componentName="Divider" {...$$restProps}>
 	<slot />
 </Root>
-
-<!-- TODO -->
-<style lang="scss" global>
-	@import '../../scss';
-</style>
