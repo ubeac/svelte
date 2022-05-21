@@ -1,32 +1,127 @@
 <script lang="ts">
-	import { Grid } from '@app/components'
+	import { Divider } from '@app/components'
 </script>
 
-<Grid style="height: 100px;">
-	<Grid.Item xs={4} style="background: red;">
-		col 1
-	</Grid.Item>
-	<Grid.Item xs={5} style="background: green;">
-		col 2
-	</Grid.Item>
-	<Grid.Item xs={3} style="background: blue;">
-		col 3
-	</Grid.Item>
-</Grid>
-
 <br />
-
-<Grid style="height: 100px;">
-	<Grid.Item xs={4} >
-		<div style="background: red;">col 1</div>
-	</Grid.Item>
-	<Grid.Item xs={5} >
-		<div style="background: green;">col 2</div>
-	</Grid.Item>
-	<Grid.Item xs={3} >
-		<div style="background: blue;">col 3</div>
-	</Grid.Item>
-</Grid>
+<Divider />
+<br />
+<Divider>Test</Divider>
+<br />
+<Divider placement="start">start</Divider>
+<br />
+<Divider placement="center">center</Divider>
+<br />
+<Divider placement="end">end</Divider>
+<br />
+<Divider type="solid">solid</Divider>
+<br />
+<Divider type="dotted">dotted</Divider>
+<br />
+<Divider type="dashed">dashed</Divider>
+<br />
+<Divider middle>middle</Divider>
+<br />
+<Divider inset>inset</Divider>
+<br />
+<Divider>full</Divider>
+<br />
+<Divider width="medium">medium</Divider>
+<br />
+<Divider width="thick">thick</Divider>
+<br />
+<Divider width="thin">thin</Divider>
+<br />
+<br />
+<br />
+<br />
+<br />
+<div style="height: 300px; display: flex; gap: 10px; background: pink">
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical />
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical>Test</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical placement="start">start</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical placement="center">center</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical placement="end">end</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical type="solid">solid</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical type="dotted">dotted</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical type="dashed">dashed</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical middle>middle</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical inset>inset</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical>full</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical width="thin">thin</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical width="medium">medium</Divider>
+		<span>after</span>
+	</div>
+	<br />
+	<div style="height: 100%; display: flex; align-items: center;">
+		<span>before</span>
+		<Divider vertical width="thick">thick</Divider>
+		<span>after</span>
+	</div>
+</div>
+<br />
+<br />
 
 <style lang="scss" global>
 	@import '../scss';
