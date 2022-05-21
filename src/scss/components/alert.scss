@@ -1,0 +1,13 @@
+.u-alert {
+	@extend .alert;
+}
+
+@each $state, $value in $theme-colors {
+	.u-alert-#{$state} {
+		--#{$variable-prefix}alert-color: #{$value};
+	}
+}
+
+.u-alert-dismissible {
+	@extend .alert-dismissible;
+}
