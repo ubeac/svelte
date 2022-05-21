@@ -124,5 +124,5 @@
 <br />
 
 <style lang="scss" global>
-	@import '../scss';
+	// @import '../scss';
 </style>

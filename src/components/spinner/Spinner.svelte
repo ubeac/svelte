@@ -33,8 +33,3 @@
 	componentName="Spinner"
 	role="status"
 	{...$$restProps} />
-
-<!-- TODO -->
-<style lang="scss" global>
-	@import '../../scss';
-</style>
