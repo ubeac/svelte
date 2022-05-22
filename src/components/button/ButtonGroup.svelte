@@ -4,18 +4,19 @@
 	import { Root } from '@app/components'
 
 	/**
-	 * Align Buttons vertically
-	 */
-	export let vertical: boolean = false
-
-	/**
 	 * Size of buttons
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
+	/**
+	 * Align Buttons vertically
+	 */
+	export let vertical: boolean = false
+
 	$: classes = {
-		vertical,
+		horizontal: !vertical,
 		size,
+		vertical,
 	}
 </script>
 

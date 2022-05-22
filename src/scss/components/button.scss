@@ -38,38 +38,34 @@
 	.u-button:hover {
 		z-index: 1;
 	}
-	// @extend .btn-list;
+
+	&:not(.u-button-group-horizontal) {
+		flex-direction: column;
+		& > .u-button:not(:first-child) {
+			margin-top: -1px;
+		}
+		& > .u-button:not(:first-child) {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+		& > .u-button:not(:last-child) {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+
 	&:not(.u-button-group-vertical) {
+		flex-direction: row;
+		& > .u-button:not(:first-child) {
+			margin-inline-start: -1px;
+		}
 		& > .u-button:not(:first-child) {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
-		}
-
-		& > .u-button {
-			margin-left: -1px;
 		}
 		& > .u-button:not(:last-child) {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 		}
-	}
-}
-
-.u-button-group-vertical {
-	@extend .u-button-group;
-	flex-direction: column;
-
-	& > .u-button:not(:first-child) {
-		margin-top: -1px;
-	}
-
-	& > .u-button:not(:first-child) {
-		border-top-left-radius: 0;
-		border-top-right-radius: 0;
-	}
-
-	& > .u-button:not(:last-child) {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
 	}
 }

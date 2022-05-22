@@ -2,6 +2,8 @@
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
 	import { Button } from '@app/components'
+
+	const SIZES = ['sm', 'md', 'lg']
 </script>
 
 <Meta
@@ -10,7 +12,7 @@
 	argTypes={{
 		size: {
 			control: 'radio',
-			options: ['sm', 'md', 'lg'],
+			options: SIZES,
 		},
 	}} />
 
@@ -23,9 +25,4 @@
 </Template>
 
 <Story name="default" />
-
 <Story name="vertical" args={{ vertical: true }} />
-
-<Story name="small buttons" args={{ size: 'sm' }} />
-<Story name="medium buttons" args={{ size: 'md' }} />
-<Story name="large buttons" args={{ size: 'lg' }} />
