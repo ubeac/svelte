@@ -19,11 +19,11 @@
 <br />
 <Divider type="dashed">dashed</Divider>
 <br />
-<Divider middle>middle</Divider>
+<Divider variant="middle">middle</Divider>
 <br />
-<Divider inset>inset</Divider>
+<Divider variant="inset">inset</Divider>
 <br />
-<Divider>full</Divider>
+<Divider variant="full">full</Divider>
 <br />
 <Divider width="medium">medium</Divider>
 <br />
@@ -86,19 +86,19 @@
 	<br />
 	<div style="height: 100%; display: flex; align-items: center;">
 		<span>before</span>
-		<Divider vertical middle>middle</Divider>
+		<Divider vertical variant="middle">middle</Divider>
 		<span>after</span>
 	</div>
 	<br />
 	<div style="height: 100%; display: flex; align-items: center;">
 		<span>before</span>
-		<Divider vertical inset>inset</Divider>
+		<Divider vertical variant="inset">inset</Divider>
 		<span>after</span>
 	</div>
 	<br />
 	<div style="height: 100%; display: flex; align-items: center;">
 		<span>before</span>
-		<Divider vertical>full</Divider>
+		<Divider vertical variant="full">full</Divider>
 		<span>after</span>
 	</div>
 	<br />
@@ -124,5 +124,5 @@
 <br />
 
 <style lang="scss" global>
-	// @import '../scss';
+	@import '../scss';
 </style>

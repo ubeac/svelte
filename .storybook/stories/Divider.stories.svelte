@@ -15,6 +15,7 @@
 			},
 		},
 		type: { control: { type: 'radio', options: ['dotted', 'dashed', 'solid'] } },
+		variant: { control: { type: 'radio', options: ['full', 'inset', 'middle'] } },
 		placement: { control: { type: 'radio', options: ['start', 'center', 'end'] } },
 	}} />
 

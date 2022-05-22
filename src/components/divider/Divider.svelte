@@ -4,16 +4,6 @@
 	import { Root } from '@app/components'
 
 	/**
-	 * Apply inset to the divider
-	 */
-	export let inset: boolean = false
-
-	/**
-	 * Place divider in middle of layout
-	 */
-	export let middle: boolean = false
-
-	/**
 	 * Set text position
 	 */
 	export let placement: 'start' | 'center' | 'end' = 'center'
@@ -26,7 +16,7 @@
 	/**
 	 * Set Divider variant
 	 */
-	// export let variant: 'middle' | 'inset' | 'full' = 'full'
+	export let variant: 'middle' | 'inset' | 'full' = 'full'
 
 	/**
 	 * Split views vertically
@@ -41,10 +31,9 @@
 	$: classes = {
 		empty: !$$slots['default'],
 		horizontal: !vertical,
-		inset,
-		middle,
 		placement,
 		type,
+		variant,
 		vertical,
 		width,
 	}
