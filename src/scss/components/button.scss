@@ -15,6 +15,7 @@
 }
 
 @each $name in sm, lg {
+	.u-button-group-#{$name} > .u-button,
 	.u-button-#{$name} {
 		@extend .btn-#{$name};
 	}
@@ -30,5 +31,41 @@
 }
 
 .u-button-group {
-	@extend .btn-list;
+	display: inline-flex;
+
+	.u-button:active,
+	.u-button:focus,
+	.u-button:hover {
+		z-index: 1;
+	}
+
+	&:not(.u-button-group-horizontal) {
+		flex-direction: column;
+		& > .u-button:not(:first-child) {
+			margin-top: -1px;
+		}
+		& > .u-button:not(:first-child) {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+		& > .u-button:not(:last-child) {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+
+	&:not(.u-button-group-vertical) {
+		flex-direction: row;
+		& > .u-button:not(:first-child) {
+			margin-inline-start: -1px;
+		}
+		& > .u-button:not(:first-child) {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+		& > .u-button:not(:last-child) {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
 }
