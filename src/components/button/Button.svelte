@@ -22,6 +22,16 @@
 	/**
 	 * TODO
 	 */
+	export let flat: boolean = false
+
+	/**
+	 * TODO
+	 */
+	export let href: undefined | string = undefined
+
+	/**
+	 * TODO
+	 */
 	export let loading: boolean = false
 
 	/**
@@ -34,16 +44,35 @@
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
+	/**
+	 * TODO
+	 */
+	export let text: boolean = false
+
+	/**
+	 * TODO
+	 */
+	export let tile: boolean = false
+
 	$: classes = {
 		block,
-		color: !outline && color,
+		[color || '']: true,
 		disabled,
+		flat,
 		loading,
-		[`outline-${color}`]: !!(outline && color),
+		outline,
 		size,
+		text,
+		tile,
 	}
 </script>
 
-<Root element="button" {classes} component={get_current_component()} componentName="Button" {...$$restProps}>
+<Root
+	element={href ? 'a' : 'button'}
+	{classes}
+	component={get_current_component()}
+	componentName="Button"
+	{href}
+	{...$$restProps}>
 	<slot />
 </Root>

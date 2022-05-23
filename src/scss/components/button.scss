@@ -10,8 +10,16 @@
 	@extend .disabled;
 }
 
+.u-button-flat {
+	box-shadow: none;
+}
+
 .u-button-loading {
 	@extend .btn-loading;
+}
+
+.u-button-tile {
+	border-radius: 0;
 }
 
 @each $name in sm, lg {
@@ -25,8 +33,11 @@
 	.u-button-#{$name} {
 		@extend .btn-#{$name};
 	}
-	.u-button-outline-#{$name} {
+	.u-button-#{$name}.u-button-outline {
 		@extend .btn-outline-#{$name};
+	}
+	.u-button-#{$name}.u-button-text {
+		@extend .btn-ghost-#{$name};
 	}
 }
 

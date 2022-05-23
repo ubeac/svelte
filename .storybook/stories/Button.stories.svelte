@@ -24,8 +24,7 @@
 				options: SIZES,
 			},
 		},
-	}}
-/>
+	}} />
 
 <Template let:args>
 	<Button {...args}>Button</Button>
@@ -39,6 +38,8 @@
 	{/each}
 </Story>
 <Story name="disabled" args={{ disabled: true }} />
+<Story name="flat" args={{ flat: true }} />
+<Story name="href" args={{ href: 'https://www.google.com/' }} />
 <Story name="loading" args={{ loading: true, color: 'blue' }} />
 <Story name="outline" args={{ outline: true }} />
 <Story name="size" let:args>
@@ -46,3 +47,5 @@
 		<Button {...args} {size}>Button {size}</Button>
 	{/each}
 </Story>
+<Story name="text" args={{ color: 'primary', text: true }} />
+<Story name="tile" args={{ tile: true }} />
