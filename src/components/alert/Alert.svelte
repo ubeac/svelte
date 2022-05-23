@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { get_current_component, onMount } from 'svelte/internal'
 
 	import { Root } from '../root'
+	import AlertClose from './AlertClose.svelte'
 
 	/**
 	 * Show close button at the end of alert
@@ -9,9 +10,19 @@
 	export let dismissible: boolean = false
 
 	/**
-	 * Set Alert state
+	 * Control open/close state of Alert
+	 */
+	export let open: boolean = true
+
+	/**
+	 * Set Alert type
 	 */
 	export let type: 'error' | 'info' | 'success' | 'warning' = 'info'
+
+	function onClose() {
+		// TODO: Animation is not working this way
+		open = false
+	}
 
 	$: classes = {
 		type,
@@ -19,6 +30,25 @@
 	}
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="Alert" {...$$restProps}>
-	<slot />
-</Root>
+{#if open}
+	<Root element="div" {classes} component={get_current_component()} componentName="Alert" {...$$restProps}>
+		<div class="d-flex">
+			{#if $$slots['icon']}
+				<div class="alert-icon">
+					<slot name="icon" />
+				</div>
+			{/if}
+			<div>
+				<slot />
+			</div>
+		</div>
+		{#if dismissible}
+			<AlertClose on:close={onClose} on:close />
+		{/if}
+		{#if $$slots['actions']}
+			<div class="btn-list">
+				<slot name="actions" />
+			</div>
+		{/if}
+	</Root>
+{/if}

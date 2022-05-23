@@ -4,6 +4,19 @@
 
 <Alert>this is alert</Alert>
 
+<Alert open>this is open alert</Alert>
+
+<Alert dismissible>
+	<Alert.Title>Title</Alert.Title>
+	this is dismissible alert
+</Alert>
+
+<Alert dismissible>
+	<div slot="icon">icon</div>
+	<Alert.Title>Title</Alert.Title>
+	this is dismissible alert
+</Alert>
+
 <style lang="scss" global>
 	@import '../scss';
 </style>
