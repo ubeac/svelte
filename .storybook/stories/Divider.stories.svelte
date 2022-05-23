@@ -25,19 +25,16 @@
 		style:height="100px"
 		style:width="100%"
 		style:flex-direction={args.vertical ? 'row' : 'column'}>
-		<span>start</span>
-		<Divider {...args}>divider</Divider>
-		<span>Button</span>
+		<span>Before</span>
+		{#if args.content}
+			<Divider {...args}>CONTENT</Divider>
+		{:else}
+			<Divider {...args} />
+		{/if}
+		<span>After</span>
 	</div>
 </Template>
 
 <Story name="default" />
-<Story name="empty" let:args>
-	<div>
-		<span>start</span>
-		<Divider {...args} />
-		<span>end</span>
-	</div>
-</Story>
-
+<Story name="content" let:args args={{ content: true }} />
 <Story name="vertical" args={{ vertical: true }} />
