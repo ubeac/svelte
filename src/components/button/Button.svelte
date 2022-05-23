@@ -5,52 +5,52 @@
 	import type { Colors } from '@app/types'
 
 	/**
-	 * TODO
+	 * Make the button fit to its parent width
 	 */
 	export let block: boolean = false
 
 	/**
-	 * TODO
+	 * Set color of button
 	 */
 	export let color: Colors = undefined
 
 	/**
-	 * TODO
+	 * Set disabled state of button
 	 */
 	export let disabled: boolean = false
 
 	/**
-	 * TODO
+	 * Disable button's shadow
 	 */
 	export let flat: boolean = false
 
 	/**
-	 * TODO
+	 * Set redirect url for link button
 	 */
 	export let href: undefined | string = undefined
 
 	/**
-	 * TODO
+	 * Show loading spinner inside button
 	 */
 	export let loading: boolean = false
 
 	/**
-	 * TODO
+	 * Draws outlined Buttons with transparent background
 	 */
 	export let outline: boolean = false
 
 	/**
-	 * TODO
+	 * Set the size of button
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
 	/**
-	 * TODO
+	 * Only show text of button with trasnparent background and border
 	 */
 	export let text: boolean = false
 
 	/**
-	 * TODO
+	 * Disable roundness of button's border
 	 */
 	export let tile: boolean = false
 
