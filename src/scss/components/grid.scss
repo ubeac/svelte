@@ -1,16 +1,90 @@
-$align-items: (
-	start: start,
-	center: center,
-	end: end,
-	stretch: stretch,
+$grid-utils: (
+	'align-items': (
+		start: start,
+		center: center,
+		end: end,
+		stretch: stretch,
+	),
+	'align-content': (
+		start: flex-start,
+		center: center,
+		end: flex-end,
+		stretch: stretch,
+		between: space-between,
+		around: space-around,
+		evenly: space-evenly,
+	),
+	'justify-content': (
+		start: flex-start,
+		center: center,
+		end: flex-end,
+		between: space-between,
+		around: space-around,
+		evenly: space-evenly,
+	),
 );
 
 .u-grid {
 	display: flex;
 }
 
-@each $key, $value in $align-items {
-	.u-grid-align-items-#{$key} {
-		align-items: $value;
+.u-grid-horizontal {
+	flex-direction: row;
+	&.u-grid-reverse {
+		flex-direction: row-reverse;
+	}
+	@each $breakpoint, $_val in $breakpoints {
+		@include media-breakpoint-up($breakpoint) {
+			&.u-grid-reverse-#{$breakpoint} {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+}
+
+.u-grid-vertical {
+	flex-direction: column;
+	&.u-grid-reverse {
+		flex-direction: column-reverse;
+	}
+	@each $breakpoint, $_ in $breakpoints {
+		@include media-breakpoint-up($breakpoint) {
+			&.u-grid-reverse-#{$breakpoint} {
+				flex-direction: column-reverse;
+			}
+		}
+	}
+}
+
+.u-grid-wrap {
+	flex-wrap: wrap;
+	&-reverse {
+		flex-wrap: wrap-reverse;
+	}
+	@each $breakpoint, $_ in $breakpoints {
+		@include media-breakpoint-up($breakpoint) {
+			&-#{$breakpoint} {
+				flex-wrap: wrap;
+			}
+			&-#{$breakpoint}-reverse {
+				flex-wrap: wrap-reverse;
+			}
+		}
+	}
+}
+
+@each $name, $values in $grid-utils {
+	@each $key, $value in $values {
+		.u-grid-#{$name}-#{$key} {
+			#{$name}: $value;
+		}
+
+		@each $breakpoint, $_ in $breakpoints {
+			@include media-breakpoint-up($breakpoint) {
+				.u-grid-#{$name}-#{$breakpoint}-#{$key} {
+					#{$name}: $value;
+				}
+			}
+		}
 	}
 }
