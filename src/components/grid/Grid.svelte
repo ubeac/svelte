@@ -203,7 +203,6 @@
 	export let wrapXxl: boolean | 'reverse' = false
 
 	// TODO: use gutter, gutterX, gutterY in classes
-	// https://getbootstrap.com/docs/5.0/layout/gutters/
 
 	$: classes = {
 		[`align-items-${alignItems}`]: true,
