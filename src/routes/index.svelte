@@ -1,8 +1,30 @@
 <script lang="ts">
-	import { Button } from '@app/components'
+	import { Button, Icon } from '@app/components'
 </script>
 
 <div style="padding: 1rem; display: flex; align-items: center; flex-direction: column;">
+	<div>
+		<Button>Button</Button>
+		<Button />
+		<Button block>block</Button>
+		<Button icon>
+			<Icon name="sun" />
+		</Button>
+		<Button flat>flat</Button>
+		<Button color="green">green</Button>
+		<Button color="secondary">secondary</Button>
+		<Button tile>tile</Button>
+		<Button tile flat>tile flat</Button>
+		<Button color="blue" text>Text</Button>
+		<Button color="blue" outline>outline</Button>
+		<Button color="blue" outline tile>outline tile</Button>
+		<Button color="blue" text tile>text tile</Button>
+		<Button color="blue" text outline tile>text outline tile</Button>
+		<Button href="/">Href</Button>
+		<Button color="blue" text href="/">Href text</Button>
+		<Button color="blue" outline href="/">Href outline</Button>
+	</div>
+
 	<div>
 		<h1>horizontal</h1>
 
