@@ -25,9 +25,19 @@
 	export let flat: boolean = false
 
 	/**
+	 * Only show text of button with trasnparent background and border
+	 */
+	export let ghost: boolean = false
+
+	/**
 	 * Set redirect url for link button
 	 */
 	export let href: undefined | string = undefined
+
+	/**
+	 * Makes a square shape to show the icon
+	 */
+	export let icon: boolean = false
 
 	/**
 	 * Show loading spinner inside button
@@ -40,14 +50,14 @@
 	export let outline: boolean = false
 
 	/**
+	 * It makes rounded edges
+	 */
+	export let round: boolean = false
+
+	/**
 	 * Set the size of button
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
-
-	/**
-	 * Only show text of button with trasnparent background and border
-	 */
-	export let text: boolean = false
 
 	/**
 	 * Disable roundness of button's border
@@ -59,10 +69,12 @@
 		[color || '']: true,
 		disabled,
 		flat,
+		ghost,
+		icon,
 		loading,
 		outline,
+		round,
 		size,
-		text,
 		tile,
 	}
 </script>
