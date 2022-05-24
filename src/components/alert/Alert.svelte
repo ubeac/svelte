@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { get_current_component, onMount } from 'svelte/internal'
 
+	import type { Alert } from 'bootstrap'
+
 	import { Root } from '../root'
 	import AlertClose from './AlertClose.svelte'
 
@@ -19,9 +21,18 @@
 	 */
 	export let type: 'error' | 'info' | 'success' | 'warning' = 'info'
 
+	let el: HTMLDivElement
+	let instance: Alert
+
+	onMount(() => {
+		import('bootstrap').then(({ Alert }) => {
+			console.log({ el, document })
+			instance = new Alert(el)
+		})
+	})
+
 	function onClose() {
-		// TODO: Animation is not working this way
-		open = false
+		instance.close()
 	}
 
 	$: classes = {
@@ -31,7 +42,14 @@
 </script>
 
 {#if open}
-	<Root element="div" {classes} component={get_current_component()} componentName="Alert" {...$$restProps}>
+	<Root
+		bind:el
+		element="div"
+		class="show fade"
+		{classes}
+		component={get_current_component()}
+		componentName="Alert"
+		{...$$restProps}>
 		<div class="d-flex">
 			{#if $$slots['icon']}
 				<div class="alert-icon">
