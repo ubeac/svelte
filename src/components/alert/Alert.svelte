@@ -3,6 +3,7 @@
 
 	import type { Alert } from 'bootstrap'
 
+	import { Icon } from '../icon'
 	import { Root } from '../root'
 	import AlertClose from './AlertClose.svelte'
 
@@ -15,6 +16,11 @@
 	 * Set a timeout to close Alert automatically
 	 */
 	export let duration: number | false = false
+
+	/**
+	 * Set an Icon at the start side of alert
+	 */
+	export let icon: string = ''
 
 	/**
 	 * Control open/close state of Alert
@@ -59,9 +65,13 @@
 		componentName="Alert"
 		{...$$restProps}>
 		<div class="d-flex">
-			{#if $$slots['icon']}
+			{#if $$slots['icon'] || icon}
 				<div class="alert-icon">
-					<slot name="icon" />
+					{#if icon}
+						<Icon name={icon} />
+					{:else}
+						<slot name="icon" />
+					{/if}
 				</div>
 			{/if}
 			<div>
