@@ -4,27 +4,27 @@
 	import { Root } from '@app/components'
 
 	/**
-	 * TODO
+	 * Set text position
 	 */
 	export let placement: 'start' | 'center' | 'end' = 'center'
 
 	/**
-	 * TODO
+	 * Set style of the divider line
 	 */
 	export let type: 'solid' | 'dashed' | 'dotted' = 'solid'
 
 	/**
-	 * TODO
+	 * Set Divider variant
 	 */
 	export let variant: 'middle' | 'inset' | 'full' = 'full'
 
 	/**
-	 * TODO
+	 * Split views vertically
 	 */
 	export let vertical: boolean = false
 
 	/**
-	 * TODO
+	 * Thickness of divider line
 	 */
 	export let width: 'medium' | 'thick' | 'thin' = 'thin'
 

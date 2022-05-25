@@ -2,7 +2,7 @@
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
 	import { COLORS } from '@app/types'
-	import { Button } from '@app/components'
+	import { Button, Icon } from '@app/components'
 
 	const SIZES = ['sm', 'md', 'lg']
 </script>
@@ -24,8 +24,7 @@
 				options: SIZES,
 			},
 		},
-	}}
-/>
+	}} />
 
 <Template let:args>
 	<Button {...args}>Button</Button>
@@ -39,10 +38,26 @@
 	{/each}
 </Story>
 <Story name="disabled" args={{ disabled: true }} />
+<Story name="flat" args={{ flat: true }} />
+<Story name="ghost" args={{ color: 'primary', ghost: true }} />
+<Story name="href" args={{ href: 'https://www.google.com/' }} />
 <Story name="loading" args={{ loading: true, color: 'blue' }} />
 <Story name="outline" args={{ outline: true }} />
+<Story name="round" args={{ round: true }} />
 <Story name="size" let:args>
 	{#each SIZES as size}
 		<Button {...args} {size}>Button {size}</Button>
 	{/each}
+</Story>
+<Story name="tile" args={{ tile: true }} />
+<Story name="icon" let:args>
+	<Button {...args} icon>
+		<Icon name="send" />
+	</Button>
+</Story>
+<Story name="icon with text" let:args>
+	<Button {...args}>
+		<Icon name="send" />
+		Submit
+	</Button>
 </Story>

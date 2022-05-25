@@ -10,11 +10,24 @@
 	@extend .disabled;
 }
 
+.u-button-flat {
+	box-shadow: none;
+}
+
 .u-button-loading {
 	@extend .btn-loading;
 }
 
+.u-button-round {
+	@extend .btn-pill;
+}
+
+.u-button-tile {
+	border-radius: 0;
+}
+
 @each $name in sm, lg {
+	.u-button-group-#{$name} > .u-button,
 	.u-button-#{$name} {
 		@extend .btn-#{$name};
 	}
@@ -24,11 +37,63 @@
 	.u-button-#{$name} {
 		@extend .btn-#{$name};
 	}
-	.u-button-outline-#{$name} {
+	.u-button-#{$name}.u-button-outline {
 		@extend .btn-outline-#{$name};
+	}
+	.u-button-#{$name}.u-button-ghost {
+		@extend .btn-ghost-#{$name};
 	}
 }
 
 .u-button-group {
-	@extend .btn-list;
+	display: inline-flex;
+
+	.u-button:active,
+	.u-button:focus,
+	.u-button:hover {
+		z-index: 1;
+	}
+
+	&:not(.u-button-group-horizontal) {
+		flex-direction: column;
+		& > .u-button:not(:first-child) {
+			margin-top: -1px;
+		}
+		& > .u-button:not(:first-child) {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+		& > .u-button:not(:last-child) {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+
+	&:not(.u-button-group-vertical) {
+		flex-direction: row;
+		& > .u-button:not(:first-child) {
+			margin-inline-start: -1px;
+		}
+		& > .u-button:not(:first-child) {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+		& > .u-button:not(:last-child) {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+}
+
+.u-button .u-icon {
+	width: 1.25em;
+	height: 1.25em;
+	min-width: 1.25em;
+	margin: 0 0.5em 0 -0.25em;
+	vertical-align: bottom;
+	color: inherit;
+}
+
+.u-button-icon .u-icon {
+	margin: 0 -1em;
 }
