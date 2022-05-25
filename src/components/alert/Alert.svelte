@@ -52,18 +52,13 @@
 	$: classes = {
 		type,
 		dismissible,
+		$fade: true,
+		$show: true,
 	}
 </script>
 
 {#if open}
-	<Root
-		bind:el
-		element="div"
-		class="show fade"
-		{classes}
-		component={get_current_component()}
-		componentName="Alert"
-		{...$$restProps}>
+	<Root bind:el element="div" {classes} component={get_current_component()} componentName="Alert" {...$$restProps}>
 		<div class="d-flex">
 			{#if $$slots['icon'] || icon}
 				<div class="alert-icon">
