@@ -1,8 +1,8 @@
 import preprocess from 'svelte-preprocess'
 
 import adapter from '@sveltejs/adapter-auto'
+import { mdsvex } from 'mdsvex'
 import path from 'path'
-import { mdsvex } from "mdsvex"
 
 /**
  * @type {import('@sveltejs/kit').Config}
@@ -10,16 +10,24 @@ import { mdsvex } from "mdsvex"
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess({
-		scss: {
-			importer: (url, prev) => {
-				if (url[0] === '~') {
-					url = path.resolve('node_modules', url.substr(1))
-				}
-				return { file: url }
+	preprocess: [
+		preprocess({
+			scss: {
+				importer: (url, prev) => {
+					if (url[0] === '~') {
+						url = path.resolve('node_modules', url.substr(1))
+					}
+					return { file: url }
+				},
 			},
-		},
-	}),
+		}),
+		mdsvex({
+			extensions: ['.svelte.md', '.md'],
+			layout: {
+				_: 'src/routes/_markdown.svelte',
+			},
+		}),
+	],
 
 	kit: {
 		adapter: adapter(),
@@ -31,15 +39,7 @@ const config = {
 			},
 		},
 	},
-	extensions: [".svelte", ".svelte.md", ".md"],
-	preprocess: [
-		mdsvex({
-			extensions: [".svelte.md", ".md"],
-			layout: {
-				_: "src/routes/_markdown.svelte",
-			},
-		}),
-	],
+	extensions: ['.svelte', '.svelte.md', '.md'],
 }
 
 export default config
