@@ -12,6 +12,11 @@
 	export let dismissible: boolean = false
 
 	/**
+	 * Set a timeout to close Alert automatically
+	 */
+	export let duration: number | false = false
+
+	/**
 	 * Control open/close state of Alert
 	 */
 	export let open: boolean = true
@@ -28,10 +33,13 @@
 		import('bootstrap').then(({ Alert }) => {
 			console.log({ el, document })
 			instance = new Alert(el)
+			if (duration) {
+				setTimeout(closeAlert, duration)
+			}
 		})
 	})
 
-	function onClose() {
+	function closeAlert() {
 		instance.close()
 	}
 
@@ -61,7 +69,7 @@
 			</div>
 		</div>
 		{#if dismissible}
-			<AlertClose on:close={onClose} on:close />
+			<AlertClose on:close={closeAlert} on:close />
 		{/if}
 		{#if $$slots['actions']}
 			<div class="btn-list">
