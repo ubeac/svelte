@@ -53,6 +53,4 @@
 	component={get_current_component()}
 	componentName="Icon"
 	icon="{pack}:{name}"
-	width="auto"
-	height="auto"
 	{...$$restProps} />
