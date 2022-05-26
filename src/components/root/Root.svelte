@@ -28,11 +28,6 @@
 	/**
 	 * TODO
 	 */
-	export let el: SvelteComponent | HTMLElement | undefined = undefined
-
-	/**
-	 * TODO
-	 */
 	export let element: any = undefined
 
 	const forwardEvents = forwardEventsBuilder(component)
@@ -43,16 +38,15 @@
 {#if condition($$props)}
 	{#if element}
 		{#if typeof element == 'string'}
-			<svelte:element this={element} bind:this={el} class={classnames} use:forwardEvents {...$$restProps}>
+			<svelte:element this={element} class={classnames} use:forwardEvents {...$$restProps}>
 				<slot />
 			</svelte:element>
 		{:else}
-			<svelte:component this={element} bind:this={el} class={classnames} {...$$restProps}>
+			<svelte:component this={element} class={classnames} {...$$restProps}>
 				<slot />
 			</svelte:component>
 		{/if}
 	{:else}
-		<!-- TODO: '<slot> cannot have directives' bind:this={el} -->
 		<slot />
 	{/if}
 {/if}
