@@ -6,12 +6,23 @@
 	width: 100%;
 }
 
+// TODO
+.u-button-circle {
+}
+
 .u-button-disabled {
 	@extend .disabled;
 }
 
-.u-button-flat {
+.u-button-elevation-0 {
 	box-shadow: none;
+}
+
+.u-button-link {
+	padding: 0;
+	border: none;
+	background: none;
+	text-decoration: underline !important;
 }
 
 .u-button-loading {
@@ -27,8 +38,10 @@
 }
 
 @each $name in sm, lg {
-	.u-button-group-#{$name} > .u-button,
 	.u-button-#{$name} {
+		@extend .btn-#{$name};
+	}
+	.u-button-group-#{$name} > .u-button {
 		@extend .btn-#{$name};
 	}
 }
@@ -42,6 +55,17 @@
 	}
 	.u-button-#{$name}.u-button-ghost {
 		@extend .btn-ghost-#{$name};
+	}
+}
+
+.u-button {
+	.u-icon {
+		min-width: 1.25rem;
+		margin: 0 0.5rem 0 -0.25rem;
+		color: inherit;
+	}
+	&.u-button-icon .u-icon {
+		margin: 0 -1em;
 	}
 }
 
@@ -83,17 +107,4 @@
 			border-bottom-right-radius: 0;
 		}
 	}
-}
-
-.u-button .u-icon {
-	width: 1.25em;
-	height: 1.25em;
-	min-width: 1.25em;
-	margin: 0 0.5em 0 -0.25em;
-	vertical-align: bottom;
-	color: inherit;
-}
-
-.u-button-icon .u-icon {
-	margin: 0 -1em;
 }

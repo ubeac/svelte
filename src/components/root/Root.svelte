@@ -28,12 +28,12 @@
 	/**
 	 * TODO
 	 */
-	export let el: SvelteComponent | HTMLElement | undefined = undefined
+	export let element: any = undefined
 
 	/**
 	 * TODO
 	 */
-	export let element: any = undefined
+	export let ref: SvelteComponent | HTMLElement | undefined = undefined
 
 	const forwardEvents = forwardEventsBuilder(component)
 
@@ -43,11 +43,11 @@
 {#if condition($$props)}
 	{#if element}
 		{#if typeof element == 'string'}
-			<svelte:element this={element} bind:this={el} class={classnames} use:forwardEvents {...$$restProps}>
+			<svelte:element this={element} bind:this={ref} class={classnames} use:forwardEvents {...$$restProps}>
 				<slot />
 			</svelte:element>
 		{:else}
-			<svelte:component this={element} bind:this={el} class={classnames} {...$$restProps}>
+			<svelte:component this={element} bind:this={ref} class={classnames} {...$$restProps}>
 				<slot />
 			</svelte:component>
 		{/if}

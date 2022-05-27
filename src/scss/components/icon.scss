@@ -15,6 +15,10 @@ $sizes: (
 	9x: 9rem,
 );
 
+.u-icon {
+	@extend .icon;
+}
+
 @each $key, $value in $sizes {
 	.u-icon-#{$key} {
 		width: #{$value} !important;
