@@ -4,6 +4,8 @@
 
 	import type { Alert } from 'bootstrap'
 
+	import { classname } from '@app/utils'
+
 	import { Icon } from '../icon'
 	import { Root } from '../root'
 
@@ -69,9 +71,9 @@
 
 {#if open}
 	<Root bind:ref element="div" {classes} component={get_current_component()} componentName="Alert" {...$$restProps}>
-		<div class="d-flex">
+		<div class={classname('alert-body')}>
 			{#if $$slots['icon'] || icon}
-				<div class="u-alert-icon">
+				<div class={classname('alert-icon')}>
 					{#if icon}
 						<Icon name={icon} />
 					{:else}
@@ -84,10 +86,10 @@
 			</div>
 		</div>
 		{#if dismissible}
-			<button type="button" on:click={close} class="u-alert-close" aria-label="close" />
+			<button type="button" on:click={close} class={classname('alert-close')} aria-label="close" />
 		{/if}
 		{#if $$slots['actions']}
-			<div class="u-alert-actions">
+			<div class={classname('alert-actions')}>
 				<slot name="actions" />
 			</div>
 		{/if}

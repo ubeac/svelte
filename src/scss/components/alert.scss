@@ -2,6 +2,10 @@
 	@extend .alert;
 }
 
+.u-alert-body {
+	display: flex;
+}
+
 @each $name, $color in theme-colors() {
 	.u-alert-#{$name} {
 		--#{$variable-prefix}alert-color: #{$color};

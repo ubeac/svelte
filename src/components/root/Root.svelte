@@ -37,7 +37,7 @@
 
 	const forwardEvents = forwardEventsBuilder(component)
 
-	$: classnames = classname(componentName, classes, klass)
+	$: classnames = classname([{ [`$${componentName}`]: !!componentName }, classes, klass], { root: componentName })
 </script>
 
 {#if condition($$props)}
