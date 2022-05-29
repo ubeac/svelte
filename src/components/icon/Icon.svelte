@@ -7,22 +7,22 @@
 	import type { Colors } from '@app/types'
 
 	/**
-	 * TODO
+	 * Set color of the Icon
 	 */
 	export let color: Colors = undefined
 
 	/**
-	 * TODO
+	 * Name of the Icon, see https://icon-sets.iconify.design/ for list of icon names and packs
 	 */
 	export let name: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Change Icons package, see https://icon-sets.iconify.design/ for list of icon packs
 	 */
 	export let pack: 'tabler' = 'tabler'
 
 	/**
-	 * TODO
+	 * Set Size of the Icon
 	 */
 	export let size:
 		| 'auto'
@@ -53,4 +53,6 @@
 	component={get_current_component()}
 	componentName="Icon"
 	icon="{pack}:{name}"
+	width="auto"
+	height="auto"
 	{...$$restProps} />

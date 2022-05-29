@@ -20,9 +20,9 @@
 	export let disabled: boolean = false
 
 	/**
-	 * Disable button's shadow
+	 * TODO
 	 */
-	export let flat: boolean = false
+	export let elevation: number = 0
 
 	/**
 	 * Only show text of button with trasnparent background and border
@@ -35,11 +35,6 @@
 	export let href: undefined | string = undefined
 
 	/**
-	 * Makes a square shape to show the icon
-	 */
-	export let icon: boolean = false
-
-	/**
 	 * Show loading spinner inside button
 	 */
 	export let loading: boolean = false
@@ -50,36 +45,35 @@
 	export let outline: boolean = false
 
 	/**
-	 * It makes rounded edges
+	 * Shape of button
 	 */
-	export let round: boolean = false
+	export let shape: 'circle' | 'link' | 'round' | 'tile' | undefined = undefined
 
 	/**
 	 * Set the size of button
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
-	/**
-	 * Disable roundness of button's border
-	 */
-	export let tile: boolean = false
+	let ref: HTMLElement
+
+	$: icon = ref && (!ref.textContent || !ref.textContent.trim())
 
 	$: classes = {
 		block,
-		[color || '']: true,
+		[color!]: !!color,
 		disabled,
-		flat,
+		elevation,
 		ghost,
 		icon,
 		loading,
 		outline,
-		round,
+		shape,
 		size,
-		tile,
 	}
 </script>
 
 <Root
+	bind:ref
 	element={href ? 'a' : 'button'}
 	{classes}
 	component={get_current_component()}
