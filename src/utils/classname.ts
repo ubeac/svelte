@@ -13,12 +13,14 @@ export const classname = (root?: string, ...inputs: Array<any>): string => {
 				break
 			default:
 				for (const key in input) {
-					const global = key.startsWith('$')
-					const name = paramCase(key.replace('$', ''))
+					const local = key.startsWith('$')
+					const global = key.startsWith('$$')
+					const name = paramCase(key.replace(/\$/g, ''))
 					const value = input[key]
 					if (!value) continue
-					const sections = [prefix]
-					!global && root && sections.push(root)
+					const sections = []
+					if (!global) sections.push(prefix)
+					!local && root && sections.push(root)
 					sections.push(value === true ? name : value)
 					result.push(sections.join('-'))
 				}

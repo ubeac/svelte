@@ -2,14 +2,35 @@
 	@extend .alert;
 }
 
-@each $state, $value in $theme-colors {
-	.u-alert-#{$state} {
-		--#{$variable-prefix}alert-color: #{$value};
+@each $name, $color in theme-colors() {
+	.u-alert-#{$name} {
+		--#{$variable-prefix}alert-color: #{$color};
 	}
+}
+
+.u-alert-actions {
+	@extend .btn-list;
+}
+
+.u-alert-close {
+	@extend .btn-close;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	padding: 1.25rem 1rem;
 }
 
 .u-alert-dismissible {
 	@extend .alert-dismissible;
+}
+
+.u-alert-filled {
+	@extend .alert-important;
+}
+
+.u-alert-icon {
+	@extend .alert-icon;
 }
 
 .u-alert-title {

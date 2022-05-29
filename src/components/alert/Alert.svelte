@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { get_current_component, onMount } from 'svelte/internal'
+	import { createEventDispatcher } from 'svelte'
+	import { get_current_component, onDestroy, onMount } from 'svelte/internal'
 
 	import type { Alert } from 'bootstrap'
 
 	import { Icon } from '../icon'
 	import { Root } from '../root'
-	import AlertClose from './AlertClose.svelte'
 
 	/**
 	 * Show close button at the end of alert
@@ -15,12 +15,12 @@
 	/**
 	 * Set a timeout to close Alert automatically
 	 */
-	export let duration: number | false = false
+	export let duration: number = -1
 
 	/**
 	 * Set an Icon at the start side of alert
 	 */
-	export let icon: string = ''
+	export let icon: string | undefined = undefined
 
 	/**
 	 * Control open/close state of Alert
@@ -30,38 +30,48 @@
 	/**
 	 * Set Alert type
 	 */
-	export let type: 'error' | 'info' | 'success' | 'warning' = 'info'
+	export let type: 'error' | 'info' | 'success' | 'warning' | undefined = undefined
 
-	let el: HTMLDivElement
+	/**
+	 * TODO
+	 */
+	export let variant: 'outlined' | 'filled' | undefined = undefined
+
+	const dispatch = createEventDispatcher()
+
 	let instance: Alert
+	let ref: HTMLElement
+
+	function close() {
+		instance?.close()
+		dispatch('close')
+	}
 
 	onMount(() => {
 		import('bootstrap').then(({ Alert }) => {
-			console.log({ el, document })
-			instance = new Alert(el)
-			if (duration) {
-				setTimeout(closeAlert, duration)
-			}
+			instance = new Alert(ref)
+			if (duration >= 0) setTimeout(close, duration)
 		})
 	})
 
-	function closeAlert() {
-		instance.close()
-	}
+	onDestroy(() => {
+		instance?.dispose()
+	})
 
 	$: classes = {
-		type,
 		dismissible,
-		$fade: true,
-		$show: true,
+		type,
+		variant,
+		$$fade: true,
+		$$show: true,
 	}
 </script>
 
 {#if open}
-	<Root bind:el element="div" {classes} component={get_current_component()} componentName="Alert" {...$$restProps}>
+	<Root bind:ref element="div" {classes} component={get_current_component()} componentName="Alert" {...$$restProps}>
 		<div class="d-flex">
 			{#if $$slots['icon'] || icon}
-				<div class="alert-icon">
+				<div class="u-alert-icon">
 					{#if icon}
 						<Icon name={icon} />
 					{:else}
@@ -74,10 +84,10 @@
 			</div>
 		</div>
 		{#if dismissible}
-			<AlertClose on:close={closeAlert} on:close />
+			<button type="button" on:click={close} class="u-alert-close" aria-label="close" />
 		{/if}
 		{#if $$slots['actions']}
-			<div class="btn-list">
+			<div class="u-alert-actions">
 				<slot name="actions" />
 			</div>
 		{/if}
