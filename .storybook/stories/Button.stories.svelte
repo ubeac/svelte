@@ -5,7 +5,7 @@
 	import { Button, Icon } from '@app/components'
 
 	const SIZES = ['sm', 'md', 'lg']
-	const SHAPES = ['circle', 'link', 'round', 'tile']
+	const SHAPES = ['circle', 'link', 'round', 'tile', undefined]
 </script>
 
 <Meta
@@ -23,6 +23,13 @@
 			control: {
 				type: 'select',
 				options: SIZES,
+			},
+		},
+		shape: {
+			defaultValue: undefined,
+			control: {
+				type: 'select',
+				options: SHAPES,
 			},
 		},
 	}} />
