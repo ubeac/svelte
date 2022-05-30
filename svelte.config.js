@@ -33,9 +33,16 @@ const config = {
 		adapter: adapter(),
 		vite: {
 			resolve: {
-				alias: {
-					'@app': path.resolve('src'),
-				},
+				alias: [
+					{
+						find: '@app',
+						replacement: (val) => val.replace(/^@app/, path.resolve('src')),
+					},
+					{
+						find: /^~.+/,
+						replacement: (val) => val.replace(/^~/, ''),
+					},
+				],
 			},
 		},
 	},
