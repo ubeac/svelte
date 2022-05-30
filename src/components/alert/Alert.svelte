@@ -45,8 +45,7 @@
 	let ref: HTMLElement
 
 	function close() {
-		// TODO: storybook doesn't work with instance?.close()
-		if (instance) instance.close()
+		instance?.close()
 		dispatch('close')
 	}
 
@@ -58,8 +57,7 @@
 	})
 
 	onDestroy(() => {
-		// TODO: use instance?.dispose()
-		if (instance) instance.dispose()
+		instance?.dispose()
 	})
 
 	$: classes = {
