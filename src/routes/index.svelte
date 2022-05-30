@@ -1,6 +1,9 @@
 <script lang="ts">
-	import { Alert, Button, Icon } from '@app/components'
+	import { Alert, Button, Icon, Label } from '@app/components'
 </script>
+
+<Label for="input-1">Click Me</Label>
+<input class="form-control" id="input-1" />
 
 <Alert>this is alert</Alert>
 
