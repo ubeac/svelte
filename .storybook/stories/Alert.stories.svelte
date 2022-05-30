@@ -1,12 +1,9 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { COLORS } from '@app/types'
-	import { Alert, Icon } from '@app/components'
-	import AlertTitle from '@app/components/alert/AlertTitle.svelte'
-	import Button from '@app/components/button/Button.svelte'
+	import { Alert, Button, Icon } from '@app/components'
 
-	const TYPES = ['error', 'info', 'success', 'warning', undefined]
+	const TYPES = ['danger', 'info', 'success', 'warning', undefined]
 	const VARIANTS = ['outlined', 'filled', undefined]
 </script>
 
@@ -30,19 +27,19 @@
 
 <Template let:args>
 	<Alert {...args}>
-		<AlertTitle>Alert Title</AlertTitle>
-		this is Alert's content
+		<Alert.Title>Alert Title</Alert.Title>
+		This is Alert's content
 	</Alert>
 </Template>
 
 <Story name="default" />
-<Story name="Actons" let:args>
+<Story name="actions">
 	<Alert>
-		<AlertTitle>Title</AlertTitle>
-		Alert content
+		<Alert.Title>Title</Alert.Title>
+		<p>This is Alert's content</p>
 		<div slot="actions">
-			<Button color="green">Test</Button>
-			<Button>Test 2</Button>
+			<Button color="green">Ok</Button>
+			<Button>Cancel</Button>
 		</div>
 	</Alert>
 </Story>
@@ -52,8 +49,8 @@
 <Story name="icon slot" let:args>
 	<Alert {...args}>
 		<Icon slot="icon" pack="mdi" name="brightness" />
-		<AlertTitle>Alert Title</AlertTitle>
-		this is Alert content with material's brightness icon
+		<Alert.Title>Alert Title</Alert.Title>
+		This is Alert's content
 	</Alert>
 </Story>
 <Story name="open" args={{ open: true }} />

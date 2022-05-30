@@ -15,7 +15,7 @@ const extract = (key: string) => {
 
 export const classname = (inputs: any | any[], options?: ClassnameOptions): string => {
 	inputs = [inputs].flat()
-	const root = paramCase(options?.root || '')
+	const root = paramCase((options && options.root) || '')
 	const result: Array<string> = []
 	for (const input of inputs) {
 		const type = Object.prototype.toString

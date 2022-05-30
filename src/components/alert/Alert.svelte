@@ -32,7 +32,7 @@
 	/**
 	 * Set Alert type
 	 */
-	export let type: 'error' | 'info' | 'success' | 'warning' | undefined = undefined
+	export let type: 'danger' | 'info' | 'success' | 'warning' | undefined = undefined
 
 	/**
 	 * TODO
@@ -45,7 +45,7 @@
 	let ref: HTMLElement
 
 	function close() {
-		instance?.close()
+		instance && instance.close()
 		dispatch('close')
 	}
 
@@ -57,7 +57,7 @@
 	})
 
 	onDestroy(() => {
-		instance?.dispose()
+		instance && instance.dispose()
 	})
 
 	$: classes = {
