@@ -1,3 +1,35 @@
 .u-avatar {
 	@extend .avatar;
 }
+
+.u-avatar-circle {
+	@extend .rounded-circle;
+}
+
+.u-avatar-round {
+	@extend .rounded;
+}
+
+.u-avatar-square {
+	@extend .rounded-0;
+}
+
+@each $color in $colors {
+	.u-avatar-#{ $color + ''} {
+		@extend .bg-#{$color + ''}-lt;
+	}
+}
+
+@each $size in xs, sm, md, lg, xl {
+	.u-avatar-#{$size} {
+		@extend .avatar-#{$size};
+	}
+}
+
+.u-avatar-group {
+	@extend .avatar-list;
+}
+
+.u-avatar-group-stacked {
+	@extend .avatar-list-stacked;
+}
