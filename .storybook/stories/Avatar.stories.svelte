@@ -1,0 +1,58 @@
+<script>
+	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
+
+	import { Avatar } from '@app/components'
+	import { COLORS } from '@app/types'
+
+	let SHAPES = ['circle', 'round', 'square']
+	let SIZES = ['xs', 'sm', 'md', 'lg', 'xl']
+</script>
+
+<Meta
+	title="Avatar"
+	component={Avatar}
+	argTypes={{
+		color: {
+			control: {
+				type: 'select',
+				options: COLORS,
+			},
+		},
+		shape: {
+			control: {
+				type: 'radio',
+				options: SHAPES,
+			},
+		},
+		size: {
+			control: {
+				type: 'radio',
+				options: SIZES,
+			},
+		},
+	}} />
+
+<Template let:args>
+	<Avatar {...args}>
+		{args.slot}
+	</Avatar>
+</Template>
+
+<Story name="default" args={{ slot: 'AB' }} />
+<Story name="colors" let:args>
+	{#each COLORS as color}
+		<Avatar {...args} {color}>AB</Avatar>
+	{/each}
+</Story>
+<Story name="shapes" let:args>
+	{#each SHAPES as shape}
+		<Avatar {...args} {shape}>AB</Avatar>
+	{/each}
+</Story>
+<Story name="sizes" let:args>
+	{#each SIZES as size}
+		<Avatar {...args} {size}>
+			{size}
+		</Avatar>
+	{/each}
+</Story>

@@ -5,17 +5,17 @@
 	import type { Colors } from '@app/types'
 
 	/**
-	 * Set color of Badge
+	 * Set color of Avatar
 	 */
 	export let color: Colors = undefined
 
 	/**
-	 * TODO
+	 * Set shape of Avatar
 	 */
 	export let shape: 'circle' | 'round' | 'square' = 'round'
 
 	/**
-	 * TODO
+	 * Set size of Avatar
 	 */
 	export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md'
 
