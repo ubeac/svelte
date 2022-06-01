@@ -4,8 +4,8 @@
 	import { Avatar } from '@app/components'
 	import { COLORS } from '@app/types'
 
-	let SHAPES = ['circle', 'round', 'square']
-	let SIZES = ['xs', 'sm', 'md', 'lg', 'xl']
+	const SHAPES = ['circle', 'round', 'square']
+	const SIZES = ['xs', 'sm', 'md', 'lg', 'xl']
 </script>
 
 <Meta
@@ -42,11 +42,13 @@
 <Story name="colors" let:args>
 	{#each COLORS as color}
 		<Avatar {...args} {color}>AB</Avatar>
+		&nbsp;
 	{/each}
 </Story>
 <Story name="shapes" let:args>
 	{#each SHAPES as shape}
 		<Avatar {...args} {shape}>AB</Avatar>
+		&nbsp;
 	{/each}
 </Story>
 <Story name="sizes" let:args>
@@ -54,5 +56,6 @@
 		<Avatar {...args} {size}>
 			{size}
 		</Avatar>
+		&nbsp;
 	{/each}
 </Story>
