@@ -1,9 +1,23 @@
 <script lang="ts">
-	import { Card } from '@app/components'
+	import { Button, Card, Icon } from '@app/components'
 </script>
 
 <div style="max-width: 480px; margin: auto;">
+	<br />
+
 	<Card>content</Card>
+
+	<br />
+
+	<Card outline>
+		<Card.Body>Outline</Card.Body>
+	</Card>
+
+	<br />
+
+	<Card elevation={0}>
+		<Card.Body>No Elevation</Card.Body>
+	</Card>
 
 	<br />
 
@@ -14,7 +28,7 @@
 	<br />
 
 	<Card tile>
-		<Card.Body>Body</Card.Body>
+		<Card.Body>Tile</Card.Body>
 	</Card>
 
 	<br />
@@ -39,13 +53,13 @@
 
 	<Card>
 		<Card.Header>header</Card.Header>
-		<Card.Body>body</Card.Body>
+		<Card.Body>Body</Card.Body>
 	</Card>
 
 	<br />
 
 	<Card>
-		<Card.Body>body</Card.Body>
+		<Card.Body>Body</Card.Body>
 		<Card.Footer>footer</Card.Footer>
 	</Card>
 
@@ -53,7 +67,7 @@
 
 	<Card>
 		<Card.Header>header</Card.Header>
-		<Card.Body>body</Card.Body>
+		<Card.Body>Body</Card.Body>
 		<Card.Footer>footer</Card.Footer>
 	</Card>
 
@@ -61,8 +75,8 @@
 
 	<Card>
 		<Card.Body>
-			<Card.Title>title</Card.Title>
-			<p>body</p>
+			<Card.Title>Title</Card.Title>
+			<p>Body</p>
 		</Card.Body>
 	</Card>
 
@@ -70,20 +84,20 @@
 
 	<Card>
 		<Card.Header>
-			<Card.Title>title</Card.Title>
+			<Card.Title>Title</Card.Title>
 		</Card.Header>
-		<Card.Body>body</Card.Body>
+		<Card.Body>Body</Card.Body>
 	</Card>
 
 	<br />
 
 	<Card>
 		<Card.Media placement="top">
-			<img src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
+			<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
 		</Card.Media>
 		<Card.Body>
-			<Card.Title>title</Card.Title>
-			<p>body</p>
+			<Card.Title>Title</Card.Title>
+			<p>Body</p>
 		</Card.Body>
 	</Card>
 
@@ -91,11 +105,11 @@
 
 	<Card>
 		<Card.Body>
-			<Card.Title>title</Card.Title>
-			<p>body</p>
+			<Card.Title>Title</Card.Title>
+			<p>Body</p>
 		</Card.Body>
 		<Card.Media placement="bottom">
-			<img src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
+			<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
 		</Card.Media>
 	</Card>
 
@@ -103,15 +117,121 @@
 
 	<Card>
 		<Card.Body>
-			<Card.Title>title</Card.Title>
-			<p>body</p>
+			<Card.Title>Title</Card.Title>
+			<p>Body</p>
 		</Card.Body>
 		<Card.Media placement="middle">
-			<img src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
+			<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
 		</Card.Media>
 		<Card.Body>
-			<p>body</p>
+			<p>Body</p>
 		</Card.Body>
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Header>
+			<Card.Title>Title</Card.Title>
+			<Card.Actions>
+				<Button color="primary">Test</Button>
+			</Card.Actions>
+		</Card.Header>
+		<Card.Body>Body</Card.Body>
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Header>
+			<Card.Title>Title</Card.Title>
+			<Card.Actions>
+				<Button><Icon name="user" /></Button>
+				<Button><Icon name="refresh" /></Button>
+			</Card.Actions>
+		</Card.Header>
+		<Card.Body>Body</Card.Body>
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Header>
+			<Card.Title>Title</Card.Title>
+			<Card.Actions>
+				<Button.Group>
+					<Button><Icon name="user" /></Button>
+					<Button><Icon name="refresh" /></Button>
+				</Button.Group>
+			</Card.Actions>
+		</Card.Header>
+		<Card.Body>Body</Card.Body>
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Header>
+			<div>
+				<Card.Title>Title</Card.Title>
+				<Card.Subtitle>Subtitle</Card.Subtitle>
+			</div>
+			<Card.Actions>
+				<Button color="primary">Test</Button>
+			</Card.Actions>
+		</Card.Header>
+		<Card.Body>Body</Card.Body>
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Header>
+			<div>
+				<Card.Title>Title</Card.Title>
+				<Card.Subtitle>Subtitle</Card.Subtitle>
+			</div>
+			<Card.Actions>
+				<Button>Test</Button>
+				<Button color="primary">Test</Button>
+			</Card.Actions>
+		</Card.Header>
+		<Card.Body>Body</Card.Body>
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Header>
+			<Card.Title>Title</Card.Title>
+			<Card.Actions>
+				<Button>Test</Button>
+				<Button color="primary">Test</Button>
+			</Card.Actions>
+		</Card.Header>
+		<Card.Body>Body</Card.Body>
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Header>
+			<Card.Title>Title</Card.Title>
+		</Card.Header>
+		<Card.Body>Body</Card.Body>
+		<Card.Footer transparent>This is transparent card footer</Card.Footer>
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Header>
+			<Card.Title>Title</Card.Title>
+		</Card.Header>
+		<Card.Body>Body</Card.Body>
+		<Card.Footer>
+			<Button color="primary">Test</Button>
+		</Card.Footer>
 	</Card>
 
 	<br />

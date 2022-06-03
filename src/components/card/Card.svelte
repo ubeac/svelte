@@ -6,7 +6,7 @@
 	/**
 	 * If you want the card to have shadow, use the elevation property
 	 */
-	export let elevation: number = -1
+	export let elevation: number | undefined = undefined
 
 	/**
 	 * If you want the card to have border, use the outline property
