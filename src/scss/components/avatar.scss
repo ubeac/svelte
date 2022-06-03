@@ -10,8 +10,8 @@
 	@extend .rounded;
 }
 
-.u-avatar-square {
-	@extend .rounded-0;
+.u-avatar-tile {
+	border-radius: 0;
 }
 
 @each $color in $colors {

@@ -4,7 +4,7 @@
 	import { Avatar } from '@app/components'
 	import { COLORS } from '@app/types'
 
-	const SHAPES = ['circle', 'round', 'square']
+	const SHAPES = ['circle', 'round', 'tile']
 	const SIZES = ['xs', 'sm', 'md', 'lg', 'xl']
 </script>
 

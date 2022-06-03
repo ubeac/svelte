@@ -12,7 +12,7 @@
 	/**
 	 * Set shape of Avatar
 	 */
-	export let shape: 'circle' | 'round' | 'square' = 'round'
+	export let shape: 'circle' | 'round' | 'tile' = 'round'
 
 	/**
 	 * Set size of Avatar

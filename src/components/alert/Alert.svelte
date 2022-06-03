@@ -4,10 +4,8 @@
 
 	import type { Alert } from 'bootstrap'
 
+	import { Icon, Root } from '@app/components'
 	import { classname } from '@app/utils'
-
-	import { Icon } from '../icon'
-	import { Root } from '../root'
 
 	/**
 	 * Show close button at the end of alert
