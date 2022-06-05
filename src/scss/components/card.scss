@@ -17,9 +17,9 @@
 	border-radius: 0;
 }
 
-@each $size in sm, md, lg {
-	.u-card-#{$size} {
-		@extend .card-#{$size};
+@each $key in sm, md, lg {
+	.u-card-#{$key} {
+		@extend .card-#{$key};
 	}
 }
 
@@ -79,6 +79,30 @@
 	&.u-card-media-bottom > * {
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
+	}
+}
+
+// Card Status
+.u-card-status {
+	@each $key, $value in theme-colors() {
+		.u-card-status-#{$key} {
+			@extend .bg-#{$key};
+		}
+	}
+	@each $key in top, start, bottom {
+		&.u-card-status-#{$key} {
+			@extend .card-status-#{$key};
+		}
+	}
+	@each $key, $value in $card-status-sizes {
+		&.u-card-status-#{$key}.u-card-status-top,
+		&.u-card-status-#{$key}.u-card-status-bottom {
+			height: $value;
+		}
+		&.u-card-status-#{$key}.u-card-status-start,
+		&.u-card-status-#{$key}.u-card-status-end {
+			width: $value;
+		}
 	}
 }
 

@@ -225,6 +225,56 @@
 	<br />
 
 	<Card>
+		<Card.Body>
+			<Card.Title>Title</Card.Title>
+			Body
+		</Card.Body>
+		<Card.Status />
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Body>
+			<Card.Title>Title</Card.Title>
+			Body
+		</Card.Body>
+		<Card.Status color="red" placement="top" />
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Body>
+			<Card.Title>Title</Card.Title>
+			Body
+		</Card.Body>
+		<Card.Status color="blue" placement="start" size="md" />
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Body>
+			<Card.Title>Title</Card.Title>
+			Body
+		</Card.Body>
+		<Card.Status color="green" placement="bottom" size="lg" />
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Body>
+			<Card.Title>Title</Card.Title>
+			Body
+		</Card.Body>
+		<Card.Status color="yellow" placement="end" />
+	</Card>
+
+	<br />
+
+	<Card>
 		<Card.Header>
 			<Card.Title>Title</Card.Title>
 		</Card.Header>
