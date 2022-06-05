@@ -20,9 +20,9 @@
 	export let style: 'border' | 'grow' = 'border'
 
 	$: classes = {
+		color,
 		size,
 		style,
-		[`$text-${color}`]: !!color,
 	}
 </script>
 

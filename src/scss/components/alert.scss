@@ -6,9 +6,9 @@
 	display: flex;
 }
 
-@each $name, $color in theme-colors() {
-	.u-alert-#{$name} {
-		--#{$variable-prefix}alert-color: #{$color};
+@each $key, $value in theme-colors() {
+	.u-alert-#{$key} {
+		--#{$variable-prefix}alert-color: #{$value};
 	}
 }
 

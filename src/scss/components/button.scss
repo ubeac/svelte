@@ -59,15 +59,15 @@ $sizes-ratio: (
 	@extend .btn-lg;
 }
 
-@each $name, $color in theme-colors() {
-	.u-button-#{$name} {
-		@extend .btn-#{$name};
+@each $key, $value in theme-colors() {
+	.u-button-#{$key} {
+		@extend .btn-#{$key};
 	}
-	.u-button-#{$name}.u-button-outline {
-		@extend .btn-outline-#{$name};
+	.u-button-#{$key}.u-button-outline {
+		@extend .btn-outline-#{$key};
 	}
-	.u-button-#{$name}.u-button-ghost {
-		@extend .btn-ghost-#{$name};
+	.u-button-#{$key}.u-button-ghost {
+		@extend .btn-ghost-#{$key};
 	}
 }
 
@@ -119,21 +119,21 @@ $sizes-ratio: (
 	margin: 0 !important;
 }
 
-@each $name, $value in $sizes {
-	$padding: calc($value / map-get($sizes-ratio, $name));
-	.u-button-#{$name} > .u-icon,
-	.u-button-group-#{$name} > .u-button > .u-icon {
+@each $key, $value in $sizes {
+	$padding: calc($value / map-get($sizes-ratio, $key));
+	.u-button-#{$key} > .u-icon,
+	.u-button-group-#{$key} > .u-button > .u-icon {
 		font-size: $value;
 		width: $value;
 		height: $value;
 		min-width: $value;
 		margin: 0 calc($value / 2.5) 0 calc($value / -10);
 	}
-	.u-button-#{$name}.u-button-icon {
+	.u-button-#{$key}.u-button-icon {
 		padding-right: $padding;
 		padding-left: $padding;
 	}
-	.u-button-group-#{$name} > .u-button-icon {
+	.u-button-group-#{$key} > .u-button-icon {
 		padding-right: $padding !important;
 		padding-left: $padding !important;
 	}

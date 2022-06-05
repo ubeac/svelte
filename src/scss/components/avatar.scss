@@ -14,9 +14,9 @@
 	border-radius: 0;
 }
 
-@each $color in $colors {
-	.u-avatar-#{ $color + ''} {
-		@extend .bg-#{$color + ''}-lt;
+@each $key, $value in theme-colors() {
+	.u-avatar-#{ $key + ''} {
+		@extend .bg-#{$key + ''}-lt;
 	}
 }
 

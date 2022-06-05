@@ -1,6 +1,12 @@
-@each $name in border, grow {
-	.u-spinner-#{$name} {
-		@extend .spinner-#{$name};
+@each $key, $value in theme-colors() {
+	.u-spinner-#{$key} {
+		@extend .text-#{$key};
+	}
+}
+
+@each $key in border, grow {
+	.u-spinner-#{$key} {
+		@extend .spinner-#{$key};
 	}
 }
 

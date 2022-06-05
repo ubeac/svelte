@@ -42,8 +42,8 @@
 		| '9x' = 'auto'
 
 	$: classes = {
+		color,
 		size,
-		[`$text-${color}`]: !!color,
 	}
 </script>
 
