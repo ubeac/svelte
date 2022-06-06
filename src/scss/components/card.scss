@@ -82,10 +82,28 @@
 	}
 }
 
+// Card Stamp
+.u-card-stamp {
+	@extend .card-stamp;
+	.u-card-stamp-icon {
+		@extend .card-stamp-icon;
+	}
+	@each $key, $value in $card-stamp-sizes {
+		&.u-card-stamp-#{$key} {
+			--stamp-size: #{$value};
+		}
+	}
+	@each $key, $value in theme-colors() {
+		&.u-card-stamp-#{$key} .u-card-stamp-icon {
+			@extend .bg-#{$key};
+		}
+	}
+}
+
 // Card Status
 .u-card-status {
 	@each $key, $value in theme-colors() {
-		.u-card-status-#{$key} {
+		&.u-card-status-#{$key} {
 			@extend .bg-#{$key};
 		}
 	}

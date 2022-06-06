@@ -267,9 +267,25 @@
 	<Card>
 		<Card.Body>
 			<Card.Title>Title</Card.Title>
-			Body
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consectetur culpa ducimus eum fuga fugiat,
+			ipsa iusto, modi nostrum recusandae reiciendis saepe.
 		</Card.Body>
-		<Card.Status color="yellow" placement="end" />
+		<Card.Stamp placement="end" color="yellow">
+			<Icon name="bell" size="9x" />
+		</Card.Stamp>
+	</Card>
+
+	<br />
+
+	<Card>
+		<Card.Body>
+			<Card.Title>Title</Card.Title>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consectetur culpa ducimus eum fuga fugiat,
+			ipsa iusto, modi nostrum recusandae reiciendis saepe.
+		</Card.Body>
+		<Card.Stamp placement="end" color="yellow">
+			<Icon name="bell" />
+		</Card.Stamp>
 	</Card>
 
 	<br />
