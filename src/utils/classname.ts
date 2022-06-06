@@ -38,11 +38,12 @@ export const classname = (inputs: any | any[], options?: ClassnameOptions): stri
 				for (const key in input) {
 					const { global, local, name } = extract(key)
 					const value = input[key]
-					if (!value) continue
+					if (typeof value == 'undefined' || value === false) continue
 					const sections = []
 					if (!global) sections.push(prefix)
 					!local && root && sections.push(root)
 					if (value === true) name && sections.push(name)
+					else if (typeof value == 'number') name && sections.push(name, value)
 					else sections.push(value)
 					result.push(sections.join('-'))
 				}

@@ -39,6 +39,9 @@
 
 .u-card-footer {
 	@extend .card-footer;
+	color: inherit;
+	display: flex;
+	align-items: center;
 	&.u-card-footer-transparent {
 		@extend .card-footer-transparent;
 	}
