@@ -4,7 +4,7 @@
 	import { Root } from '@app/components'
 
 	/**
-	 * TODO
+	 * If you want to set Card footer's color same as card's body, use the transparent property
 	 */
 	export let transparent: boolean = false
 

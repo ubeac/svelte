@@ -4,7 +4,8 @@
 	import { Root } from '@app/components'
 
 	/**
-	 * TODO
+	 * TODO: make description better
+	 * You can change border radius of Media using placement property
 	 */
 	export let placement: 'top' | 'start' | 'middle' | 'end' | 'bottom' = 'middle'
 
