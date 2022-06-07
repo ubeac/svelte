@@ -13,6 +13,6 @@
 	}
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="CardFooter">
+<Root element="div" {classes} component={get_current_component()} componentName="CardFooter" {...$$restProps}>
 	<slot />
 </Root>

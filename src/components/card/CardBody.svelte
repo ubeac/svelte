@@ -4,6 +4,6 @@
 	import { Root } from '@app/components'
 </script>
 
-<Root element="div" component={get_current_component()} componentName="CardBody">
+<Root element="div" component={get_current_component()} componentName="CardBody" {...$$restProps}>
 	<slot />
 </Root>

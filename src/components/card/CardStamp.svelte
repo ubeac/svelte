@@ -27,7 +27,7 @@
 	}
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="CardStamp">
+<Root element="div" {classes} component={get_current_component()} componentName="CardStamp" {...$$restProps}>
 	<div class={classname('card-stamp-icon')}>
 		<slot />
 	</div>

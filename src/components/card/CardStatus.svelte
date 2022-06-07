@@ -26,4 +26,4 @@
 	}
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="CardStatus" />
+<Root element="div" {classes} component={get_current_component()} componentName="CardStatus" {...$$restProps} />

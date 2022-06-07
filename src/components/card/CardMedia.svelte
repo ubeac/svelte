@@ -13,6 +13,6 @@
 	}
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="CardMedia">
+<Root element="div" {classes} component={get_current_component()} componentName="CardMedia" {...$$restProps}>
 	<slot />
 </Root>
