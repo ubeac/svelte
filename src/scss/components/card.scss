@@ -1,0 +1,140 @@
+// Card
+
+.u-card {
+	@extend .card;
+	border: none;
+}
+
+.u-card-elevation-0 {
+	box-shadow: none;
+}
+
+.u-card-outline {
+	border: 1px solid rgba(98, 105, 118, 0.16);
+}
+
+.u-card-tile {
+	border-radius: 0;
+}
+
+@each $key in sm, md, lg {
+	.u-card-#{$key} {
+		@extend .card-#{$key};
+	}
+}
+
+// Card Actions
+
+.u-card-actions {
+	@extend .card-actions;
+}
+
+// Card Body
+
+.u-card-body {
+	@extend .card-body;
+}
+
+// Card Footer
+
+.u-card-footer {
+	@extend .card-footer;
+	color: inherit;
+	display: flex;
+	align-items: center;
+	&.u-card-footer-transparent {
+		@extend .card-footer-transparent;
+	}
+}
+
+// Card Header
+
+.u-card-header {
+	@extend .card-header;
+}
+
+// Card Media
+
+.u-card-media {
+	& > * {
+		border-radius: var(--tblr-card-border-radius);
+	}
+
+	& .u-card-media-top > * {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	&.u-card-media-start > * {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	&.u-card-media-middle > * {
+		border-radius: 0;
+	}
+
+	&.u-card-media-end > * {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	&.u-card-media-bottom > * {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
+
+// Card Stamp
+.u-card-stamp {
+	@extend .card-stamp;
+	.u-card-stamp-icon {
+		@extend .card-stamp-icon;
+	}
+	@each $key, $value in $card-stamp-sizes {
+		&.u-card-stamp-#{$key} {
+			--stamp-size: #{$value};
+		}
+	}
+	@each $key, $value in theme-colors() {
+		&.u-card-stamp-#{$key} .u-card-stamp-icon {
+			@extend .bg-#{$key};
+		}
+	}
+}
+
+// Card Status
+.u-card-status {
+	@each $key, $value in theme-colors() {
+		&.u-card-status-#{$key} {
+			@extend .bg-#{$key};
+		}
+	}
+	@each $key in top, start, bottom {
+		&.u-card-status-#{$key} {
+			@extend .card-status-#{$key};
+		}
+	}
+	@each $key, $value in $card-status-sizes {
+		&.u-card-status-#{$key}.u-card-status-top,
+		&.u-card-status-#{$key}.u-card-status-bottom {
+			height: $value;
+		}
+		&.u-card-status-#{$key}.u-card-status-start,
+		&.u-card-status-#{$key}.u-card-status-end {
+			width: $value;
+		}
+	}
+}
+
+// Card Subtitle
+
+.u-card-subtitle {
+	@extend .card-subtitle;
+}
+
+// Card Title
+
+.u-card-title {
+	@extend .card-title;
+}

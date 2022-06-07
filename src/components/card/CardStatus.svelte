@@ -12,24 +12,18 @@
 	/**
 	 * TODO
 	 */
-	export let size: 'sm' | 'md' = 'sm'
+	export let placement: 'top' | 'bottom' | 'start' | undefined = undefined
 
 	/**
 	 * TODO
 	 */
-	export let style: 'border' | 'grow' = 'border'
+	export let size: 'sm' | 'md' | 'lg' = 'md'
 
 	$: classes = {
 		color,
+		placement,
 		size,
-		style,
 	}
 </script>
 
-<Root
-	element="div"
-	{classes}
-	component={get_current_component()}
-	componentName="Spinner"
-	role="status"
-	{...$$restProps} />
+<Root element="div" {classes} component={get_current_component()} componentName="CardStatus" {...$$restProps} />

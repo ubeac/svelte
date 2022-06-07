@@ -9,19 +9,19 @@ $base: calc(100% / $column);
 	box-sizing: border-box;
 }
 
-@each $breakpoint, $value in $breakpoints {
-	@include media-breakpoint-up($breakpoint) {
-		.u-grid-item-#{$breakpoint}-auto {
+@each $key, $value in $breakpoints {
+	@include media-breakpoint-up($key) {
+		.u-grid-item-#{$key}-auto {
 			flex-basis: auto;
 			max-width: none;
 		}
-		.u-grid-item-#{$breakpoint}-grow {
+		.u-grid-item-#{$key}-grow {
 			flex-grow: 1;
 			flex-basis: 0;
 			max-width: 100%;
 		}
 		@for $number from 1 through $column {
-			.u-grid-item-#{$breakpoint}-#{$number} {
+			.u-grid-item-#{$key}-#{$number} {
 				flex-basis: $number * $base;
 				max-width: $number * $base;
 			}

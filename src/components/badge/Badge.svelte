@@ -5,47 +5,47 @@
 	import type { Colors, PlacementEdge } from '@app/types'
 
 	/**
-	 * TODO
+	 * Set color of Badge
 	 */
 	export let color: Colors = undefined
 
 	/**
-	 * TODO
+	 * Show badge as small dot
 	 */
 	export let dot: boolean = false
 
 	/**
-	 * TODO
+	 * Set a redirect url for badge
 	 */
 	export let href: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Draws Outlined Badge
 	 */
 	export let outline: boolean = false
 
 	/**
-	 * TODO
+	 *
 	 */
 	export let overlap: boolean = false
 
 	/**
-	 * TODO
+	 * Set position of badge
 	 */
 	export let placement: PlacementEdge = undefined
 
 	/**
-	 * TODO
+	 * Draw badge with rounded corners
 	 */
 	export let round: boolean = false
 
 	/**
-	 * TODO
+	 * reduce background color's opacity
 	 */
 	export let soft: boolean = false
 
 	/**
-	 * TODO
+	 * Disable roundness of Badge borders
 	 */
 	export let tile: boolean = false
 

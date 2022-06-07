@@ -1,3 +1,15 @@
+$sizes: (
+	sm: 1rem,
+	md: 1.25rem,
+	lg: 1.5rem,
+);
+
+$sizes-ratio: (
+	sm: 8,
+	md: 3,
+	lg: 3,
+);
+
 .u-button {
 	@extend .btn;
 }
@@ -6,12 +18,23 @@
 	width: 100%;
 }
 
+// TODO
+.u-button-circle {
+}
+
 .u-button-disabled {
 	@extend .disabled;
 }
 
-.u-button-flat {
+.u-button-elevation-0 {
 	box-shadow: none;
+}
+
+.u-button-link {
+	padding: 0;
+	border: none;
+	background: none;
+	text-decoration: underline !important;
 }
 
 .u-button-loading {
@@ -26,23 +49,30 @@
 	border-radius: 0;
 }
 
-@each $name in sm, lg {
-	.u-button-group-#{$name} > .u-button,
-	.u-button-#{$name} {
-		@extend .btn-#{$name};
+.u-button-sm,
+.u-button-group-sm > .u-button {
+	@extend .btn-sm;
+}
+
+.u-button-lg,
+.u-button-group-lg > .u-button {
+	@extend .btn-lg;
+}
+
+@each $key, $value in theme-colors() {
+	.u-button-#{$key} {
+		@extend .btn-#{$key};
+	}
+	.u-button-#{$key}.u-button-outline {
+		@extend .btn-outline-#{$key};
+	}
+	.u-button-#{$key}.u-button-ghost {
+		@extend .btn-ghost-#{$key};
 	}
 }
 
-@each $name, $color in theme-colors() {
-	.u-button-#{$name} {
-		@extend .btn-#{$name};
-	}
-	.u-button-#{$name}.u-button-outline {
-		@extend .btn-outline-#{$name};
-	}
-	.u-button-#{$name}.u-button-ghost {
-		@extend .btn-ghost-#{$name};
-	}
+.u-button > .u-icon {
+	color: inherit;
 }
 
 .u-button-group {
@@ -85,15 +115,26 @@
 	}
 }
 
-.u-button .u-icon {
-	width: 1.25em;
-	height: 1.25em;
-	min-width: 1.25em;
-	margin: 0 0.5em 0 -0.25em;
-	vertical-align: bottom;
-	color: inherit;
+.u-button-icon > .u-icon {
+	margin: 0 !important;
 }
 
-.u-button-icon .u-icon {
-	margin: 0 -1em;
+@each $key, $value in $sizes {
+	$padding: calc($value / map-get($sizes-ratio, $key));
+	.u-button-#{$key} > .u-icon,
+	.u-button-group-#{$key} > .u-button > .u-icon {
+		font-size: $value;
+		width: $value;
+		height: $value;
+		min-width: $value;
+		margin: 0 calc($value / 2.5) 0 calc($value / -10);
+	}
+	.u-button-#{$key}.u-button-icon {
+		padding-right: $padding;
+		padding-left: $padding;
+	}
+	.u-button-group-#{$key} > .u-button-icon {
+		padding-right: $padding !important;
+		padding-left: $padding !important;
+	}
 }
