@@ -62,6 +62,14 @@
 	}
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="Badge" {...$$restProps}>
-	<slot />
+<Root
+	element={href ? 'a' : 'span'}
+	{href}
+	{classes}
+	component={get_current_component()}
+	componentName="Badge"
+	{...$$restProps}>
+	{#if !dot}
+		<slot />
+	{/if}
 </Root>
