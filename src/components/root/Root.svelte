@@ -43,9 +43,13 @@
 {#if condition($$props)}
 	{#if element}
 		{#if typeof element == 'string'}
-			<svelte:element this={element} bind:this={ref} class={classnames} use:forwardEvents {...$$restProps}>
-				<slot />
-			</svelte:element>
+			{#if element == 'input'}
+				<svelte:element this={element} bind:this={ref} class={classnames} use:forwardEvents {...$$restProps} />
+			{:else}
+				<svelte:element this={element} bind:this={ref} class={classnames} use:forwardEvents {...$$restProps}>
+					<slot />
+				</svelte:element>
+			{/if}
 		{:else}
 			<svelte:component this={element} bind:this={ref} class={classnames} {...$$restProps}>
 				<slot />

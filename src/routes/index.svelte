@@ -1,8 +1,17 @@
 <script lang="ts">
-	// import {  } from '@app/components'
+	import { FormInput, Input } from '@app/components'
 </script>
 
-<!-- <div></div> -->
+<Input />
+
+<FormInput />
+
+<FormInput icon="user" />
+
+<FormInput icon="user" label="Label" />
+
+<FormInput icon="user" label="Label" loading />
+
 <style lang="scss" global>
 	@import '../scss';
 </style>
