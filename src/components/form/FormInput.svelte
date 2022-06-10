@@ -25,11 +25,16 @@
 	 * TODO
 	 */
 	export let loading: boolean = false
+
+	/**
+	 * TODO
+	 */
+	export let required: boolean = false
 </script>
 
 <Root element="div" component={get_current_component()} componentName="FormInput">
 	{#if label}
-		<Label for={id}>{label}</Label>
+		<Label for={id} {required}>{label}</Label>
 	{/if}
 	<FormGroup>
 		{#if icon}

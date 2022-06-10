@@ -5,3 +5,7 @@
 .u-input-icon {
 	@extend .input-icon-addon;
 }
+
+.u-input-preview {
+	@extend .form-control-plaintext;
+}
