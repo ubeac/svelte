@@ -14,7 +14,7 @@
 	export let outline: boolean = false
 
 	/**
-	 * TODO
+	 * If you want to change the padding between card's content and card's border, use padding property.
 	 */
 	export let padding: 'sm' | 'md' | 'lg' | undefined = undefined
 

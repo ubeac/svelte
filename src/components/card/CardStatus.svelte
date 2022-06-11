@@ -5,17 +5,17 @@
 	import type { Colors } from '@app/types'
 
 	/**
-	 * TODO
+	 * You can use color property to change status's border color
 	 */
 	export let color: Colors = undefined
 
 	/**
-	 * TODO
+	 * You can set position of status using placement property
 	 */
 	export let placement: 'top' | 'bottom' | 'start' | undefined = undefined
 
 	/**
-	 * TODO
+	 * If you want to change size of Status, use size property
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
