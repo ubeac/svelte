@@ -1,9 +1,33 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 	import { FormInput } from '@app/components'
+
+	const TYPES = [
+		'button',
+		'color',
+		'email',
+		'date',
+		'datetime',
+		'hidden',
+		'number',
+		'password',
+		'submit',
+		'text',
+		'url',
+	]
 </script>
 
-<Meta component={FormInput} title="FormInput" />
+<Meta
+	component={FormInput}
+	title="FormInput"
+	argTypes={{
+		type: {
+			control: {
+				type: 'select',
+				options: TYPES,
+			},
+		},
+	}} />
 
 <Template let:args>
 	<FormInput {...args} />
@@ -18,7 +42,12 @@
 <Story name="icon + loading" args={{ icon: 'package', loading: true }} />
 <Story name="placeholder" args={{ placeholder: 'this is placeholder' }} />
 <Story name="preview" args={{ value: 'content', preview: true }} />
-<Story name="read-only" args={{ value: 'content', readonly: true }} />
+<Story name="readonly" args={{ value: 'content', readonly: true }} />
+<Story name="type" let:args>
+	{#each TYPES as type}
+		<FormInput label={type} {...args} {type} />
+	{/each}
+</Story>
 <Story name="type" args={{ type: 'password', value: 'Test' }} />
 <Story name="type: number" args={{ type: 'number', value: '123' }} />
 <Story name="value" args={{ value: 'Test' }} />

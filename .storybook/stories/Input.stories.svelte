@@ -13,7 +13,7 @@
 
 <Story name="preview" args={{ value: 'content', preview: true }} />
 <Story name="disabled" args={{ disabled: true, value: 'Content' }} />
-<Story name="read-only" args={{ value: 'content', readonly: true }} />
+<Story name="readonly" args={{ value: 'content', readonly: true }} />
 <Story name="placeholder" args={{ placeholder: 'this is placeholder' }} />
 <Story name="value" args={{ value: 'Test' }} />
 <Story name="type" args={{ type: 'password', value: 'Test' }} />
