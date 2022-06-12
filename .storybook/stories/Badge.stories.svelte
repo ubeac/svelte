@@ -32,8 +32,11 @@
 <Story name="ghost" args={{ ghost: true, color: COLORS[1] }} />
 <Story name="href" args={{ href: 'https://www.google.com/' }} />
 <Story name="outline" args={{ outline: true, color: COLORS[1] }} />
-<Story name="round" args={{ round: true, color: COLORS[1] }} />
-<Story name="tile" args={{ tile: true }} />
+<Story name="shape" args={{ color: COLORS[1] }}>
+	<Badge shape="round">Round</Badge>
+	<Badge shape="tile">Tile</Badge>
+	<Badge>default</Badge>
+</Story>
 
 <Story name="Inside button" let:args>
 	<Button>
