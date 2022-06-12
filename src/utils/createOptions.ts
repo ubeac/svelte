@@ -1,12 +1,12 @@
 import { writable } from 'svelte/store'
 
 interface CreateOptions {
-	items: Array<any>
-	key: string
-	text: string
+	items?: Array<any> | object
+	key?: string
+	text?: string
 }
 
-export const createOptions = ({ items, key, text }: CreateOptions) => {
+export const createOptions = ({ items = [], key = 'key', text = 'text' }: CreateOptions) => {
 	const options = writable(Array.isArray(items) ? items : Object.entries(items))
 
 	const getId = (option: any) => {
