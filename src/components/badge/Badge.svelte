@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { Root } from '@app/components'
-	import type { Colors, PlacementEdge } from '@app/types'
+	import type { Colors } from '@app/types'
 
 	/**
 	 * Set color of Badge
@@ -30,11 +30,6 @@
 	export let outline: boolean = false
 
 	/**
-	 * Set position of badge
-	 */
-	export let placement: PlacementEdge = undefined
-
-	/**
 	 * You can change shape of badge using round property
 	 */
 	export let shape: 'round' | 'tile' | undefined = undefined
@@ -45,7 +40,6 @@
 		ghost,
 		href,
 		outline,
-		placement,
 		shape,
 	}
 </script>
