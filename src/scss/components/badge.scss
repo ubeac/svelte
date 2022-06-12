@@ -1,0 +1,34 @@
+.u-badge {
+	@extend .badge;
+
+	// TODO: support RTL
+	.u-button & {
+		margin-left: 0.5rem;
+	}
+}
+
+.u-badge-outline {
+	@extend .badge-outline;
+}
+
+.u-badge-round {
+	@extend .badge-pill;
+}
+
+.u-badge-tile {
+	border-radius: 0;
+}
+
+@each $color, $value in theme-colors() {
+	.u-badge-#{$color}:not(.u-badge-outline):not(.u-badge-ghost) {
+		@extend .bg-#{$color};
+	}
+
+	.u-badge-#{$color}.u-badge-outline:not(.u-badge-ghost) {
+		@extend .text-#{$color};
+	}
+
+	.u-badge-#{$color}.u-badge-ghost:not(.u-badge-outline) {
+		@extend .bg-#{$color}-lt;
+	}
+}

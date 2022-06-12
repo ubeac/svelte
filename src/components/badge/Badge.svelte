@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { Root } from '@app/components'
-	import type { Colors, PlacementEdge } from '@app/types'
+	import type { Colors } from '@app/types'
 
 	/**
 	 * Set color of Badge
@@ -15,6 +15,11 @@
 	export let dot: boolean = false
 
 	/**
+	 * reduce background color's opacity
+	 */
+	export let ghost: boolean = false
+
+	/**
 	 * Set a redirect url for badge
 	 */
 	export let href: string | undefined = undefined
@@ -25,43 +30,28 @@
 	export let outline: boolean = false
 
 	/**
-	 *
+	 * You can change shape of badge using round property
 	 */
-	export let overlap: boolean = false
-
-	/**
-	 * Set position of badge
-	 */
-	export let placement: PlacementEdge = undefined
-
-	/**
-	 * Draw badge with rounded corners
-	 */
-	export let round: boolean = false
-
-	/**
-	 * reduce background color's opacity
-	 */
-	export let soft: boolean = false
-
-	/**
-	 * Disable roundness of Badge borders
-	 */
-	export let tile: boolean = false
+	export let shape: 'round' | 'tile' | undefined = undefined
 
 	$: classes = {
 		color,
 		dot,
+		ghost,
 		href,
 		outline,
-		overlap,
-		placement,
-		round,
-		soft,
-		tile,
+		shape,
 	}
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="Badge" {...$$restProps}>
-	<slot />
+<Root
+	element={href ? 'a' : 'span'}
+	{href}
+	{classes}
+	component={get_current_component()}
+	componentName="Badge"
+	{...$$restProps}>
+	{#if !dot}
+		<slot />
+	{/if}
 </Root>
