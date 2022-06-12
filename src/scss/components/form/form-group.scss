@@ -1,3 +1,11 @@
 .u-form-group {
-	@extend .form-group;
+	position: relative;
+}
+
+.u-form-group .u-input:not(:first-child) {
+	padding-left: 2.5rem;
+}
+
+.u-form-group .u-input:not(:last-child) {
+	padding-right: 2.5rem;
 }

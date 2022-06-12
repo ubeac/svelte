@@ -1,37 +1,28 @@
 <script lang="ts">
-	import { Badge, Button } from '@app/components'
-	import { COLORS } from '@app/types'
-
-	let href = '/'
+	import { FormInput, Input } from '@app/components'
 </script>
 
-<Badge>10</Badge>
+<Input />
+<br />
+<Input type="password" />
+<br />
+<FormInput />
+<FormInput type="password" />
+<FormInput value="Value" />
+<FormInput value="Value" label="Label" required />
+<FormInput value="Value" label="Label" />
+<FormInput value="Value" preview />
+<FormInput value="Value" label="Label" preview />
+<FormInput icon="user" />
+<FormInput icon="user" disabled />
+<FormInput icon="user" disabled value="Value" />
+<FormInput icon="user" readonly />
+<FormInput icon="user" readonly value="Value" />
+<FormInput icon="user" placeholder="placeholder" />
+<FormInput icon="user" placeholder="placeholder" value="Value" />
+<FormInput icon="user" label="Label" />
+<FormInput icon="user" label="Label" loading />
 
-<Badge />
-
-<Button>
-	Test
-	<Badge />
-</Button>
-<Button>
-	Test
-	<Badge dot>123</Badge>
-</Button>
-
-{#each COLORS as color}
-	<Badge dot {href} {color}>123</Badge>
-	<Badge tile {href} {color}>123</Badge>
-	<Badge round {href} {color}>123</Badge>
-	<Badge overlap {href} {color}>123</Badge>
-	<Badge {color} />
-	<Badge {href} round outline {color}>123</Badge>
-	<Badge outline {color} />
-	<Badge soft {color}>123</Badge>
-	<Badge soft {color} />
-	<br />
-{/each}
-
-<!-- <div></div> -->
 <style lang="scss" global>
 	@import '../scss';
 </style>
