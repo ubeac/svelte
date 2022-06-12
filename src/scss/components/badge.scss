@@ -1,7 +1,7 @@
 .u-badge {
 	@extend .badge;
 
-	// badge inside button
+	// TODO: support RTL
 	.u-button & {
 		margin-left: 0.5rem;
 	}
@@ -20,15 +20,15 @@
 }
 
 @each $color, $value in theme-colors() {
-	.u-badge-#{$color}:not(.u-badge-outline):not(.u-badge-soft) {
+	.u-badge-#{$color}:not(.u-badge-outline):not(.u-badge-ghost) {
 		@extend .bg-#{$color};
 	}
 
-	.u-badge-outline.u-badge-#{$color}:not(.u-badge-soft) {
+	.u-badge-outline.u-badge-#{$color}:not(.u-badge-ghost) {
 		@extend .text-#{$color};
 	}
 
-	.u-badge-soft.u-badge-#{$color}:not(.u-badge-outline) {
+	.u-badge-ghost.u-badge-#{$color}:not(.u-badge-outline) {
 		@extend .bg-#{$color}-lt;
 	}
 }

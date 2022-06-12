@@ -29,10 +29,10 @@
 	{/each}
 </Story>
 <Story name="dot" args={{ dot: true }} />
+<Story name="ghost" args={{ ghost: true, color: COLORS[1] }} />
 <Story name="href" args={{ href: 'https://www.google.com/' }} />
-<Story name="outline" args={{ outline: true }} />
+<Story name="outline" args={{ outline: true, color: COLORS[1] }} />
 <Story name="round" args={{ round: true, color: COLORS[1] }} />
-<Story name="soft" args={{ soft: true, color: COLORS[1] }} />
 <Story name="tile" args={{ tile: true }} />
 
 <Story name="Inside button" let:args>
