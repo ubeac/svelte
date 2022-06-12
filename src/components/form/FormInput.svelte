@@ -42,7 +42,7 @@
 				<Icon name={icon} />
 			</div>
 		{/if}
-		<Input {id} {...$$restProps} />
+		<Input {id} {required} {...$$restProps} />
 		{#if loading}
 			<div class={classname('input-icon')}>
 				<Spinner />
