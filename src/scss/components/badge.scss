@@ -24,11 +24,11 @@
 		@extend .bg-#{$color};
 	}
 
-	.u-badge-outline.u-badge-#{$color}:not(.u-badge-ghost) {
+	.u-badge-#{$color}.u-badge-outline:not(.u-badge-ghost) {
 		@extend .text-#{$color};
 	}
 
-	.u-badge-ghost.u-badge-#{$color}:not(.u-badge-outline) {
+	.u-badge-#{$color}.u-badge-ghost:not(.u-badge-outline) {
 		@extend .bg-#{$color}-lt;
 	}
 }
