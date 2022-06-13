@@ -1,6 +1,20 @@
 <script lang="ts">
-	import { FormInput, Input } from '@app/components'
+	import { Avatar, Badge, FormInput, Input } from '@app/components'
 </script>
+
+{#each ['top', 'center', 'bottom'] as x}
+{#each ['left', 'center', 'right'] as y}
+<div>
+	<span>{x}{y}</span>
+	<br/>
+	<Avatar>
+		A
+		<Badge placement="{x}{y}"/>
+	</Avatar>
+	<br/>
+	</div>
+{/each}
+{/each}
 
 <Input />
 <br />

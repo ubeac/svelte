@@ -32,3 +32,46 @@
 		@extend .bg-#{$color}-lt;
 	}
 }
+
+.u-avatar > .u-badge {
+	transform: translate(-50%, -50%);
+
+	&.u-badge-topleft {
+		top: 0;
+		left: 0;
+	}
+	&.u-badge-topcenter {
+		top: 0;
+		left: 50%;
+	}
+	&.u-badge-topright {
+		top: 0;
+		left: 100%;
+	}
+
+	&.u-badge-centerleft {
+		top: 50%;
+		left: 0;
+	}
+	&.u-badge-centercenter {
+		top: 50%;
+		left: 50%;
+	}
+	&.u-badge-centerright {
+		top: 50%;
+		left: 100%;
+	}
+
+	&.u-badge-bottomleft {
+		top: 100%;
+		left: 0;
+	}
+	&.u-badge-bottomcenter {
+		top: 100%;
+		left: 50%;
+	}
+	&.u-badge-bottomright {
+		top: 100%;
+		left: 100%;
+	}
+}
