@@ -4,8 +4,9 @@
 
 	import type { Alert } from 'bootstrap'
 
-	import { Icon, Root } from '@app/components'
-	import { classname } from '@app/utils'
+	import { Icon } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * Show close button at the end of alert
@@ -42,6 +43,8 @@
 	let instance: Alert
 	let ref: HTMLElement
 
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
 	function close() {
 		instance && instance.close()
 		dispatch('close')
@@ -58,38 +61,42 @@
 		instance && instance.dispose()
 	})
 
-	$: classes = {
-		dismissible,
-		type,
-		variant,
-		$$fade: true,
-		$$show: true,
-	}
+	$: classes = classnameNew(
+		'Alert',
+		{
+			dismissible,
+			type,
+			variant,
+		},
+		['fade', 'show', $$props.class]
+	)
 </script>
 
-{#if open}
-	<Root bind:ref element="div" {classes} component={get_current_component()} componentName="Alert" {...$$restProps}>
-		<div class={classname('alert-body')}>
-			{#if $$slots['icon'] || icon}
-				<div class={classname('alert-icon')}>
-					{#if icon}
-						<Icon name={icon} />
-					{:else}
-						<slot name="icon" />
-					{/if}
+{#if condition($$props)}
+	{#if open}
+		<div bind:this={ref} use:forwardEvents {...$$restProps} class={classes}>
+			<div class={classnameNew('alert-body')}>
+				{#if $$slots['icon'] || icon}
+					<div class={classnameNew('alert-icon')}>
+						{#if icon}
+							<Icon name={icon} />
+						{:else}
+							<slot name="icon" />
+						{/if}
+					</div>
+				{/if}
+				<div>
+					<slot />
+				</div>
+			</div>
+			{#if dismissible}
+				<button type="button" on:click={close} class={classnameNew('alert-close')} aria-label="close" />
+			{/if}
+			{#if $$slots['actions']}
+				<div class={classnameNew('alert-actions')}>
+					<slot name="actions" />
 				</div>
 			{/if}
-			<div>
-				<slot />
-			</div>
 		</div>
-		{#if dismissible}
-			<button type="button" on:click={close} class={classname('alert-close')} aria-label="close" />
-		{/if}
-		{#if $$slots['actions']}
-			<div class={classname('alert-actions')}>
-				<slot name="actions" />
-			</div>
-		{/if}
-	</Root>
+	{/if}
 {/if}

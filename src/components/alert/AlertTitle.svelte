@@ -1,9 +1,17 @@
-<script>
+<script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew('AlertTitle', null, $$props.class)
 </script>
 
-<Root element="h4" component={get_current_component()} componentName="AlertTitle" {...$$restProps}>
-	<slot />
-</Root>
+{#if condition($$props)}
+	<h4 use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+		{classes}
+	</h4>
+{/if}
