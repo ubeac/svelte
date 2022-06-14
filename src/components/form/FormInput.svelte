@@ -3,8 +3,9 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { FormGroup, Icon, Input, Label, Root, Spinner } from '@app/components'
-	import { classname } from '@app/utils'
+	import { FormGroup, Icon, Input, Label, Spinner } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * TODO
@@ -30,23 +31,29 @@
 	 * TODO
 	 */
 	export let required: boolean = false
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew('form-input', null, $$props.class)
 </script>
 
-<Root element="div" component={get_current_component()} componentName="FormInput">
-	{#if label}
-		<Label for={id} {required}>{label}</Label>
-	{/if}
-	<FormGroup>
-		{#if icon}
-			<div class={classname('input-icon')}>
-				<Icon name={icon} />
-			</div>
+{#if condition($$props)}
+	<div use:forwardEvents class={classes}>
+		{#if label}
+			<Label for={id} {required}>{label}</Label>
 		{/if}
-		<Input {id} {required} {...$$restProps} />
-		{#if loading}
-			<div class={classname('input-icon')}>
-				<Spinner />
-			</div>
-		{/if}
-	</FormGroup>
-</Root>
+		<FormGroup>
+			{#if icon}
+				<div class={classnameNew('input-icon')}>
+					<Icon name={icon} />
+				</div>
+			{/if}
+			<Input {id} {required} {...$$restProps} />
+			{#if loading}
+				<div class={classnameNew('input-icon')}>
+					<Spinner />
+				</div>
+			{/if}
+		</FormGroup>
+	</div>
+{/if}
