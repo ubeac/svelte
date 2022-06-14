@@ -1,18 +1,27 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * TODO
 	 */
 	export let alignItems: 'flex-start' | 'center' | 'flex-end' | 'stretch' = 'stretch'
 
-	$: classes = {
-		[`align-items-${alignItems}`]: true,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'grid',
+		{
+			[`align-items-${alignItems}`]: true,
+		},
+		$$props.class
+	)
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="Grid" {...$$restProps}>
-	<slot />
-</Root>
+{#if condition($$props)}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</div>
+{/if}

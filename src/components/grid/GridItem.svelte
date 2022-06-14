@@ -1,18 +1,27 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * TODO
 	 */
 	export let xs: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 'auto' | 'grow' = 'auto'
 
-	$: classes = {
-		[`xs-${xs}`]: true,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'grid-item',
+		{
+			[`xs-${xs}`]: true,
+		},
+		$$props.class
+	)
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="GridItem" {...$$restProps}>
-	<slot />
-</Root>
+{#if condition($$props)}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</div>
+{/if}
