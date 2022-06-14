@@ -6,7 +6,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classnameNew('AlertTitle', null, $$props.class)
+	$: classes = classnameNew('alert-title', null, $$props.class)
 </script>
 
 {#if condition($$props)}

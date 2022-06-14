@@ -62,7 +62,7 @@
 	})
 
 	$: classes = classnameNew(
-		'Alert',
+		'alert',
 		{
 			dismissible,
 			type,
