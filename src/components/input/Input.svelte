@@ -1,22 +1,25 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * TODO
 	 */
 	export let preview: boolean = false
 
-	$: classes = {
-		preview,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew('input', { preview }, $$props.class)
 </script>
 
-{#if preview}
-	<Root element="div" {classes} component={get_current_component()} componentName="Input" {...$$restProps}>
-		{$$props.value}
-	</Root>
-{:else}
-	<Root element="input" {classes} component={get_current_component()} componentName="Input" {...$$restProps} />
+{#if condition($$props)}
+	{#if preview}
+		<div use:forwardEvents {...$$restProps} class={classes}>
+			{$$props.value}
+		</div>
+	{:else}
+		<input use:forwardEvents {...$$restProps} class={classes} />
+	{/if}
 {/if}
