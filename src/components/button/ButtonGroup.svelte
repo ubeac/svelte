@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * Size of buttons
@@ -13,13 +14,21 @@
 	 */
 	export let vertical: boolean = false
 
-	$: classes = {
-		horizontal: !vertical,
-		size,
-		vertical,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'button-group',
+		{
+			horizontal: !vertical,
+			size,
+			vertical,
+		},
+		$$props.class
+	)
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="ButtonGroup" {...$$restProps}>
-	<slot />
-</Root>
+{#if condition($$props)}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</div>
+{/if}

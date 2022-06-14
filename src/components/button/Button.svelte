@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
 	import type { Colors } from '@app/types'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * Make the button fit to its parent width
@@ -54,31 +55,38 @@
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
 	let ref: HTMLElement
 
 	$: icon = ref && (!ref.textContent || !ref.textContent.trim())
 
-	$: classes = {
-		block,
-		[color!]: !!color,
-		disabled,
-		elevation,
-		ghost,
-		icon,
-		loading,
-		outline,
-		shape,
-		size,
-	}
+	$: classes = classnameNew(
+		'button',
+		{
+			block,
+			[color!]: !!color,
+			disabled,
+			elevation,
+			ghost,
+			icon,
+			loading,
+			outline,
+			shape,
+			size,
+		},
+		$$props.class
+	)
 </script>
 
-<Root
-	bind:ref
-	element={href ? 'a' : 'button'}
-	{classes}
-	component={get_current_component()}
-	componentName="Button"
-	{href}
-	{...$$restProps}>
-	<slot />
-</Root>
+{#if condition($$props)}
+	<svelte:element
+		this={href ? 'a' : 'button'}
+		{href}
+		bind:this={ref}
+		use:forwardEvents
+		{...$$restProps}
+		class={classes}>
+		<slot />
+	</svelte:element>
+{/if}

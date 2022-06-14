@@ -43,6 +43,7 @@
 <Story name="color" let:args>
 	{#each COLORS as color}
 		<Button {...args} {color}>Button {color}</Button>
+		&nbsp;
 	{/each}
 </Story>
 <Story name="disabled" args={{ disabled: true }} />
@@ -54,11 +55,13 @@
 <Story name="shape" let:args>
 	{#each SHAPES as shape}
 		<Button {...args} {shape}>Button {shape}</Button>
+		&nbsp;
 	{/each}
 </Story>
 <Story name="size" let:args>
 	{#each SIZES as size}
 		<Button {...args} {size}>Button {size}</Button>
+		&nbsp;
 	{/each}
 </Story>
 <Story name="icon" let:args>
