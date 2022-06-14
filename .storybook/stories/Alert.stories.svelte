@@ -33,8 +33,8 @@
 </Template>
 
 <Story name="default" />
-<Story name="actions">
-	<Alert>
+<Story name="actions" let:args>
+	<Alert {...args}>
 		<Alert.Title>Title</Alert.Title>
 		<p>This is Alert's content</p>
 		<div slot="actions">
