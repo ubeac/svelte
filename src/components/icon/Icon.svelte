@@ -3,8 +3,9 @@
 
 	import Icon from '@iconify/svelte'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
 	import type { Colors } from '@app/types'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * Set color of the Icon
@@ -41,18 +42,18 @@
 		| '8x'
 		| '9x' = 'auto'
 
-	$: classes = {
-		color,
-		size,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'icon',
+		{
+			color,
+			size,
+		},
+		$$props.class
+	)
 </script>
 
-<Root
-	element={Icon}
-	{classes}
-	component={get_current_component()}
-	componentName="Icon"
-	icon="{pack}:{name}"
-	width="auto"
-	height="auto"
-	{...$$restProps} />
+{#if condition($$props)}
+	<Icon icon="{pack}:{name}" width="auto" height="auto" {...$$restProps} class={classes} />
+{/if}
