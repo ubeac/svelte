@@ -12,6 +12,5 @@
 {#if condition($$props)}
 	<h4 use:forwardEvents {...$$restProps} class={classes}>
 		<slot />
-		{classes}
 	</h4>
 {/if}
