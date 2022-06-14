@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * Set text position
@@ -28,17 +29,25 @@
 	 */
 	export let width: 'medium' | 'thick' | 'thin' = 'thin'
 
-	$: classes = {
-		empty: !$$slots['default'],
-		horizontal: !vertical,
-		placement,
-		type,
-		variant,
-		vertical,
-		width,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'divider',
+		{
+			empty: !$$slots['default'],
+			horizontal: !vertical,
+			placement,
+			type,
+			variant,
+			vertical,
+			width,
+		},
+		$$props.class
+	)
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="Divider" {...$$restProps}>
-	<slot />
-</Root>
+{#if condition($$props)}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</div>
+{/if}
