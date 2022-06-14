@@ -4,7 +4,7 @@
 	import { Root } from '@app/components'
 
 	/**
-	 * TODO
+	 * Moves items closer to each other
 	 */
 	export let stacked: boolean = false
 
