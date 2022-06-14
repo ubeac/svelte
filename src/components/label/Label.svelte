@@ -1,18 +1,21 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * TODO
 	 */
 	export let required: boolean = false
 
-	$: classes = {
-		required,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew('label', { required }, $$props.class)
 </script>
 
-<Root element="label" {classes} component={get_current_component()} componentName="Label" {...$$restProps}>
-	<slot />
-</Root>
+{#if condition($$props)}
+	<label use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</label>
+{/if}
