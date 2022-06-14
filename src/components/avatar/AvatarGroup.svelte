@@ -1,16 +1,27 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * Moves items closer to each other
 	 */
 	export let stacked: boolean = false
 
-	$: classes = { stacked }
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'avatar-group',
+		{
+			stacked,
+		},
+		$$props.class
+	)
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="AvatarGroup" {...$$restProps}>
-	<slot />
-</Root>
+{#if condition($$props)}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</div>
+{/if}
