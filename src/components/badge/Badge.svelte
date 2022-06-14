@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
 	import type { Colors } from '@app/types'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * Set color of Badge
@@ -34,24 +35,26 @@
 	 */
 	export let shape: 'round' | 'tile' | undefined = undefined
 
-	$: classes = {
-		color,
-		dot,
-		ghost,
-		href,
-		outline,
-		shape,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'badge',
+		{
+			color,
+			dot,
+			ghost,
+			href,
+			outline,
+			shape,
+		},
+		$$props.class
+	)
 </script>
 
-<Root
-	element={href ? 'a' : 'span'}
-	{href}
-	{classes}
-	component={get_current_component()}
-	componentName="Badge"
-	{...$$restProps}>
-	{#if !dot}
-		<slot />
-	{/if}
-</Root>
+{#if condition($$props)}
+	<svelte:element this={href ? 'a' : 'span'} {href} use:forwardEvents {...$$restProps} class={classes}>
+		{#if !dot}
+			<slot />
+		{/if}
+	</svelte:element>
+{/if}
