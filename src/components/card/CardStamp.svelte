@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
 	import type { Colors } from '@app/types'
-	import { classname } from '@app/utils'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * if you want to change color of Stamp, use the color property
@@ -20,15 +20,23 @@
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
-	$: classes = {
-		color,
-		placement,
-		size,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'card-stamp',
+		{
+			color,
+			placement,
+			size,
+		},
+		$$props.class
+	)
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="CardStamp" {...$$restProps}>
-	<div class={classname('card-stamp-icon')}>
-		<slot />
+{#if condition($$props)}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		<div class={classnameNew('card-stamp-icon')}>
+			<slot />
+		</div>
 	</div>
-</Root>
+{/if}

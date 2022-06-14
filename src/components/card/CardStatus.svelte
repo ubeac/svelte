@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
 	import type { Colors } from '@app/types'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * You can use color property to change status's border color
@@ -19,11 +20,21 @@
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
-	$: classes = {
-		color,
-		placement,
-		size,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'card-status',
+		{
+			color,
+			placement,
+			size,
+		},
+		$$props.class
+	)
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="CardStatus" {...$$restProps} />
+{#if condition($$props)}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</div>
+{/if}

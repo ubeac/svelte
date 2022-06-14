@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * If you want the card to have shadow, use the elevation property
@@ -23,14 +24,22 @@
 	 */
 	export let tile: boolean = false
 
-	$: classes = {
-		elevation,
-		outline,
-		padding,
-		tile,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'card',
+		{
+			elevation,
+			outline,
+			padding,
+			tile,
+		},
+		$$props.class
+	)
 </script>
 
-<Root element="div" {classes} component={get_current_component()} componentName="Card" {...$$restProps}>
-	<slot />
-</Root>
+{#if condition($$props)}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</div>
+{/if}
