@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '@app/directives'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * If you want the card to have shadow, use the elevation property
@@ -26,7 +26,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classnameNew(
+	$: classes = classname(
 		'card',
 		{
 			elevation,

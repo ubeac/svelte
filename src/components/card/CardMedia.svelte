@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '@app/directives'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * You can change border radius of Media using placement property
@@ -11,7 +11,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classnameNew('card-media', { placement }, $$props.class)
+	$: classes = classname('card-media', { placement }, $$props.class)
 </script>
 
 {#if condition($$props)}

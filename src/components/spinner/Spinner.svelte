@@ -3,7 +3,7 @@
 
 	import { forwardEventsBuilder } from '@app/directives'
 	import type { Colors } from '@app/types'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * TODO
@@ -22,7 +22,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classnameNew(
+	$: classes = classname(
 		'spinner',
 		{
 			color,

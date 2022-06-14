@@ -6,7 +6,7 @@
 
 	import { Icon } from '@app/components'
 	import { forwardEventsBuilder } from '@app/directives'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * Show close button at the end of alert
@@ -61,7 +61,7 @@
 		instance && instance.dispose()
 	})
 
-	$: classes = classnameNew(
+	$: classes = classname(
 		'alert',
 		{
 			dismissible,
@@ -75,9 +75,9 @@
 {#if condition($$props)}
 	{#if open}
 		<div bind:this={ref} use:forwardEvents {...$$restProps} class={classes}>
-			<div class={classnameNew('alert-body')}>
+			<div class={classname('alert-body')}>
 				{#if $$slots['icon'] || icon}
-					<div class={classnameNew('alert-icon')}>
+					<div class={classname('alert-icon')}>
 						{#if icon}
 							<Icon name={icon} />
 						{:else}
@@ -90,10 +90,10 @@
 				</div>
 			</div>
 			{#if dismissible}
-				<button type="button" on:click={close} class={classnameNew('alert-close')} aria-label="close" />
+				<button type="button" on:click={close} class={classname('alert-close')} aria-label="close" />
 			{/if}
 			{#if $$slots['actions']}
-				<div class={classnameNew('alert-actions')}>
+				<div class={classname('alert-actions')}>
 					<slot name="actions" />
 				</div>
 			{/if}

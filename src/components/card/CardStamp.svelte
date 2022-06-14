@@ -3,7 +3,7 @@
 
 	import { forwardEventsBuilder } from '@app/directives'
 	import type { Colors } from '@app/types'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * if you want to change color of Stamp, use the color property
@@ -22,7 +22,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classnameNew(
+	$: classes = classname(
 		'card-stamp',
 		{
 			color,
@@ -35,7 +35,7 @@
 
 {#if condition($$props)}
 	<div use:forwardEvents {...$$restProps} class={classes}>
-		<div class={classnameNew('card-stamp-icon')}>
+		<div class={classname('card-stamp-icon')}>
 			<slot />
 		</div>
 	</div>

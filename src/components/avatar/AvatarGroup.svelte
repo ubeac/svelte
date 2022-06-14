@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '@app/directives'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * Moves items closer to each other
@@ -11,7 +11,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classnameNew(
+	$: classes = classname(
 		'avatar-group',
 		{
 			stacked,

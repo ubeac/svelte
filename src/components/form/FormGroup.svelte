@@ -2,11 +2,11 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '@app/directives'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classnameNew('form-group', null, $$props.class)
+	$: classes = classname('form-group', null, $$props.class)
 </script>
 
 {#if condition($$props)}

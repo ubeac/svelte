@@ -3,7 +3,7 @@
 
 	import { forwardEventsBuilder } from '@app/directives'
 	import type { Colors } from '@app/types'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * Make the button fit to its parent width
@@ -61,7 +61,7 @@
 
 	$: icon = ref && (!ref.textContent || !ref.textContent.trim())
 
-	$: classes = classnameNew(
+	$: classes = classname(
 		'button',
 		{
 			block,

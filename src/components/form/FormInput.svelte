@@ -5,7 +5,7 @@
 
 	import { FormGroup, Icon, Input, Label, Spinner } from '@app/components'
 	import { forwardEventsBuilder } from '@app/directives'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	/**
 	 * TODO
@@ -34,7 +34,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classnameNew('form-input', null, $$props.class)
+	$: classes = classname('form-input', null, $$props.class)
 </script>
 
 {#if condition($$props)}
@@ -44,13 +44,13 @@
 		{/if}
 		<FormGroup>
 			{#if icon}
-				<div class={classnameNew('input-icon')}>
+				<div class={classname('input-icon')}>
 					<Icon name={icon} />
 				</div>
 			{/if}
 			<Input {id} {required} {...$$restProps} />
 			{#if loading}
-				<div class={classnameNew('input-icon')}>
+				<div class={classname('input-icon')}>
 					<Spinner />
 				</div>
 			{/if}

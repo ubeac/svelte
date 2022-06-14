@@ -2,11 +2,11 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '@app/directives'
-	import { classnameNew, condition } from '@app/utils'
+	import { classname, condition } from '@app/utils'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classnameNew('card-title', null, $$props.class)
+	$: classes = classname('card-title', null, $$props.class)
 </script>
 
 {#if condition($$props)}
