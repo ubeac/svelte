@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Root } from '@app/components'
+	import { forwardEventsBuilder } from '@app/directives'
 	import type { Colors } from '@app/types'
+	import { classnameNew, condition } from '@app/utils'
 
 	/**
 	 * TODO
@@ -19,17 +20,21 @@
 	 */
 	export let style: 'border' | 'grow' = 'border'
 
-	$: classes = {
-		color,
-		size,
-		style,
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classnameNew(
+		'spinner',
+		{
+			color,
+			size,
+			style,
+		},
+		$$props.class
+	)
 </script>
 
-<Root
-	element="div"
-	{classes}
-	component={get_current_component()}
-	componentName="Spinner"
-	role="status"
-	{...$$restProps} />
+{#if condition($$props)}
+	<div role="status" use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</div>
+{/if}
