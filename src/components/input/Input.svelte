@@ -9,6 +9,11 @@
 	 */
 	export let preview: boolean = false
 
+	/**
+	 * TODO
+	 */
+	export let value: any = undefined
+
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('input', { preview }, $$props.class)
@@ -20,6 +25,6 @@
 			{$$props.value}
 		</div>
 	{:else}
-		<input use:forwardEvents {...$$restProps} class={classes} />
+		<input bind:value use:forwardEvents {...$$restProps} class={classes} />
 	{/if}
 {/if}
