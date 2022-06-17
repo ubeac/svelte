@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
-	import { forwardEventsBuilder } from '@app/directives'
+	import { forwardEventsBuilderNew } from '@app/directives'
 	import { classname, condition, createOptions } from '@app/utils'
 
 	/**
@@ -31,7 +31,7 @@
 
 	const dispatch = createEventDispatcher()
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	const forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('select', { preview }, $$props.class)
 
@@ -48,7 +48,7 @@
 			{$$props.value}
 		</div>
 	{:else}
-		<select value={toId(value)} use:forwardEvents {...$$restProps} class={classes} on:change={change}>
+		<select value={toId(value)} on:change={change} use:forwardEvents {...$$restProps} class={classes}>
 			{#if $$props.placeholder}
 				<option disabled selected value="">{$$props.placeholder}</option>
 			{/if}
