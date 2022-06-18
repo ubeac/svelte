@@ -1,0 +1,11 @@
+$column: 12;
+
+$base: calc(100% / $column);
+
+$align-self: (
+	auto: auto,
+	stretch: stretch,
+	start: flex-start,
+	center: center,
+	end: flex-end,
+);

@@ -1,0 +1,35 @@
+$align-content: (
+	start: flex-start,
+	center: center,
+	end: flex-end,
+	stretch: stretch,
+	between: space-between,
+	around: space-around,
+	evenly: space-evenly,
+);
+
+$align-items: (
+	start: flex-start,
+	center: center,
+	end: flex-end,
+	stretch: stretch,
+);
+
+// TODO
+$gutters: (
+	xs: 0.25em,
+	sm: 0.5em,
+	md: 1em,
+	lg: 1.75em,
+	xl: 4em,
+	xxl: 8em,
+);
+
+$justify-content: (
+	start: flex-start,
+	center: center,
+	end: flex-end,
+	between: space-between,
+	around: space-around,
+	evenly: space-evenly,
+);

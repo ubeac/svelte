@@ -1,9 +1,7 @@
 <script lang="ts">
-	// import {} '@app/components'
+	// import { } from '@app/components'
 </script>
 
-<!-- 
 <style lang="scss" global>
 	@import '../scss';
-</style> 
--->
+</style>

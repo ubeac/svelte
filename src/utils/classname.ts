@@ -2,7 +2,7 @@ import { paramCase } from 'change-case'
 
 const prefix = `u`
 
-const parse = (inputs: any | any[]) => {
+const parse = (inputs: any | any[], includeName?: boolean) => {
 	const result: Array<string> = []
 	for (const input of inputs) {
 		const type = Object.prototype.toString
@@ -15,11 +15,12 @@ const parse = (inputs: any | any[]) => {
 				break
 			}
 			case 'object': {
-				for (const key in input) {
+				for (let key in input) {
 					const value = input[key]
+					key = paramCase(key)
 					if (typeof value == 'undefined' || value === false) continue
 					if (value === true) key && result.push(key)
-					else if (typeof value == 'number') key && result.push(`${key}-${value}`)
+					else if (typeof value == 'number' || includeName) key && result.push(`${key}-${value}`)
 					else result.push(value)
 				}
 				break
@@ -33,11 +34,11 @@ const parse = (inputs: any | any[]) => {
 	return result
 }
 
-export const classname = (root?: string, scoped?: any | any[], global?: any | any[]) => {
+export const classname = (root?: string, scoped?: any | any[], global?: any | any[], includeName?: boolean) => {
 	root = paramCase(root || '')
 	scoped = [scoped].flat()
 	global = [global].flat()
-	const classes = parse(scoped)
+	const classes = parse(scoped, includeName)
 		.map((input) => (root ? `${prefix}-${root}-${input}` : `${prefix}-${input}`))
 		.concat(...parse(global))
 		.filter((input) => input)
