@@ -22,11 +22,19 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		vite: {
-			resolve: {
-				alias: {
-					'@app': path.resolve('src'),
-				},
+		files: {
+			lib: 'src',
+		},
+		package: {
+			files(filePath) {
+				let result = false
+				const packageFolders = ['index.ts', 'components', 'directives', 'scss', 'types', 'utils']
+				packageFolders.map((folder) => {
+					if (filePath.startsWith(folder)) {
+						result = true
+					}
+				})
+				return result
 			},
 		},
 	},

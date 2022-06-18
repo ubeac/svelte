@@ -14,7 +14,8 @@
 		"strict": true,
 		"target": "es2019",
 		"paths": {
-			"@app/*": ["src/*"]
+			"$lib": ["src"],
+			"$lib/*": ["src/*"]
 		}
 	}
 }

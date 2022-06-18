@@ -3,9 +3,9 @@
 
 	import Icon from '@iconify/svelte'
 
-	import { forwardEventsBuilder } from '@app/directives'
-	import type { Colors } from '@app/types'
-	import { classname, condition } from '@app/utils'
+	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Colors } from '$lib/types'
+	import { classname, condition } from '$lib/utils'
 
 	/**
 	 * Set color of the Icon

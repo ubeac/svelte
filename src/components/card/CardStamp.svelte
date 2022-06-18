@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { forwardEventsBuilder } from '@app/directives'
-	import type { Colors } from '@app/types'
-	import { classname, condition } from '@app/utils'
+	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Colors } from '$lib/types'
+	import { classname, condition } from '$lib/utils'
 
 	/**
 	 * if you want to change color of Stamp, use the color property
