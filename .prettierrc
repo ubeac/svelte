@@ -8,7 +8,7 @@
 	"importOrder": [
 		"^svelte",
 		"<THIRD_PARTY_MODULES>",
-		"^@app/(.*)$",
+		"^$lib/(.*)$",
 		"^\\$",
 		"^[.](.*)",
 		".(css|scss)$",
