@@ -1,7 +1,10 @@
 <script lang="ts">
-	// import { } from '@app/components'
+	import { Button } from '$lib/components'
 </script>
 
+<Button>Hello</Button>
+
 <style lang="scss" global>
-	@import '../scss';
+	// @import '../sass';
+	@import '../styles.css'; // use this when you are not working on scss files
 </style>
