@@ -22,7 +22,7 @@
 {#if condition($$props)}
 	{#if preview}
 		<div use:forwardEvents {...$$restProps} class={classes}>
-			{$$props.value}
+			{value}
 		</div>
 	{:else}
 		<input bind:value use:forwardEvents {...$$restProps} class={classes} />

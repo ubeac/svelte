@@ -45,7 +45,7 @@
 {#if condition($$props)}
 	{#if preview}
 		<div {...$$restProps} class={classes}>
-			{$$props.value}
+			{value}
 		</div>
 	{:else}
 		<select value={toId(value)} on:change={change} use:forwardEvents {...$$restProps} class={classes}>
