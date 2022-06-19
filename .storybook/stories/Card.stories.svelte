@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Button, Card, Icon } from '@app/components'
+	import { Button, Card, Icon } from '$lib/components'
 </script>
 
 <Meta title="Card" component={Card} argTypes={{}} />

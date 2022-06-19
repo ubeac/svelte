@@ -1,6 +1,6 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
-	import { Avatar } from '@app/components'
+	import { Avatar } from '$lib/components'
 </script>
 
 <Meta id="Avatar Group" component={Avatar.Group} />

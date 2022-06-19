@@ -1,8 +1,8 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { COLORS } from '@app/types'
-	import { Icon } from '@app/components'
+	import { COLORS } from '$lib/types'
+	import { Icon } from '$lib/components'
 
 	const SIZES = ['auto', 'xs', 'sm', 'md', 'lg', 'xl', '1x', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x']
 </script>
@@ -24,8 +24,7 @@
 				options: SIZES,
 			},
 		},
-	}}
-/>
+	}} />
 
 <Template let:args>
 	<Icon {...args} />

@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Label } from '@app/components'
+	import { Label } from '$lib/components'
 </script>
 
 <Meta title="Label" component={Label} />

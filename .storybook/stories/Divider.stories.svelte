@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Divider } from '@app/components'
+	import { Divider } from '$lib/components'
 </script>
 
 <Meta

@@ -1,8 +1,8 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { COLORS } from '@app/types'
-	import { Spinner } from '@app/components'
+	import { COLORS } from '$lib/types'
+	import { Spinner } from '$lib/components'
 
 	const SIZES = ['sm', 'md']
 	const STYLES = ['border', 'grow']
@@ -32,8 +32,7 @@
 				options: STYLES,
 			},
 		},
-	}}
-/>
+	}} />
 
 <Template let:args>
 	<Spinner {...args} />

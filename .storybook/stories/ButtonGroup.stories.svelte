@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Button } from '@app/components'
+	import { Button } from '$lib/components'
 
 	const SIZES = ['sm', 'md', 'lg']
 </script>

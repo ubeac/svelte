@@ -1,6 +1,6 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
-	import { FormInput } from '@app/components'
+	import { FormInput } from '$lib/components'
 
 	const TYPES = [
 		'button',

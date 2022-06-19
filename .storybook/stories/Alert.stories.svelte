@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Alert, Button, Icon } from '@app/components'
+	import { Alert, Button, Icon } from '$lib/components'
 
 	const TYPES = ['danger', 'info', 'success', 'warning', undefined]
 	const VARIANTS = ['outlined', 'filled', undefined]

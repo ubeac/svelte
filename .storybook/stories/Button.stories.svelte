@@ -1,8 +1,8 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { COLORS } from '@app/types'
-	import { Button, Icon } from '@app/components'
+	import { COLORS } from '$lib/types'
+	import { Button, Icon } from '$lib/components'
 
 	const SIZES = ['sm', 'md', 'lg']
 	const SHAPES = ['circle', 'link', 'round', 'tile', undefined]

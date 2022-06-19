@@ -1,8 +1,8 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { COLORS } from '@app/types'
-	import { Badge, Button } from '@app/components'
+	import { COLORS } from '$lib/types'
+	import { Badge, Button } from '$lib/components'
 </script>
 
 <Meta
