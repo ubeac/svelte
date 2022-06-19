@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
-	import { forwardEventsBuilderNew } from '@app/directives'
-	import { classname, condition, createOptions } from '@app/utils'
+	import { forwardEventsBuilderNew } from '$lib/directives'
+	import { classname, condition, createOptions } from '$lib/utils'
 
 	/**
 	 * TODO
