@@ -4,9 +4,9 @@
 
 	import type { Alert } from 'bootstrap'
 
-	import { Icon } from '@app/components'
-	import { forwardEventsBuilder } from '@app/directives'
-	import { classname, condition } from '@app/utils'
+	import { Icon } from '$lib/components'
+	import { forwardEventsBuilder } from '$lib/directives'
+	import { classname, condition } from '$lib/utils'
 
 	/**
 	 * Show close button at the end of alert

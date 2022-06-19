@@ -24,7 +24,7 @@ module.exports = {
 		...config,
 		resolve: {
 			alias: {
-				'@app': path.resolve('src'),
+				$lib: path.resolve('src'),
 			},
 			extensions: ['.js', '.ts'],
 		},

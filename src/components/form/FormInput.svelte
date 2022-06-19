@@ -3,9 +3,9 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { FormGroup, Icon, Input, Label, Spinner } from '@app/components'
-	import { forwardEventsBuilder } from '@app/directives'
-	import { classname, condition } from '@app/utils'
+	import { FormGroup, Icon, Input, Label, Spinner } from '$lib/components'
+	import { forwardEventsBuilder } from '$lib/directives'
+	import { classname, condition } from '$lib/utils'
 
 	/**
 	 * TODO
