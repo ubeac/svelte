@@ -9,14 +9,14 @@
 	import { Checkbox } from '../input'
 
 	/**
-	 * TODO
+	 * Id of checkbox element
 	 */
 	export let id = nanoid(10)
 
 	/**
 	 * Aligns multiple elements in same line
 	 */
-	export let inline: boolean | undefined = undefined
+	export let inline: boolean = false
 
 	/**
 	 * Set label for checkbox
@@ -26,12 +26,12 @@
 	/**
 	 * TODO
 	 */
-	export let required: boolean | undefined = undefined
+	export let required: boolean = false
 
 	/**
 	 * The checked state of checkbox
 	 */
-	export let value: boolean | undefined = undefined
+	export let value: boolean = false
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
