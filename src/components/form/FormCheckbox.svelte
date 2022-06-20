@@ -39,7 +39,7 @@
 </script>
 
 {#if condition($$props)}
-	<label for={id} use:forwardEvents {required} {...$$restProps} class={classes}>
+	<label for={id} use:forwardEvents {required} class={classes}>
 		<Checkbox {id} on:change bind:value {required} {...$$restProps} />
 		{#if label}
 			<span class={classname('form-checkbox-label')}>{label}</span>
