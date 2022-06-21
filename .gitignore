@@ -7,3 +7,5 @@ package
 .env
 .env.*
 !.env.example
+src/styles.css
+package

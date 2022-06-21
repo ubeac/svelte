@@ -3,17 +3,27 @@
 	"version": "0.0.1",
 	"type": "module",
 	"svelte": "index.js",
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
+		"prebuild": "npm run build:css",
 		"build": "svelte-kit build",
+		"build:css": "node scripts/styles.generator.js",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"predev": "npm run build:css",
 		"dev": "svelte-kit dev",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
+		"prepackage": "npm run build:css",
 		"package": "svelte-kit package",
 		"prepare": "svelte-kit sync",
+		"publish": "npm run package && npm publish ./package",
 		"preview": "svelte-kit preview",
+		"prestorybook:start": "npm run build:css",
 		"storybook:start": "start-storybook -p 6006",
+		"prestorybook:build": "npm run build:css",
 		"storybook:build": "build-storybook -o ./.storybook/build"
 	},
 	"dependencies": {

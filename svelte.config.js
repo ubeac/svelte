@@ -28,7 +28,7 @@ const config = {
 		package: {
 			files(filePath) {
 				let result = false
-				const packageFolders = ['index.ts', 'components', 'directives', 'scss', 'types', 'utils']
+				const packageFolders = ['index.ts', 'styles.css', 'components', 'directives', 'scss', 'types', 'utils']
 				packageFolders.map((folder) => {
 					if (filePath.startsWith(folder)) {
 						result = true
