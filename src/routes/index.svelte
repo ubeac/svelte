@@ -1,7 +1,6 @@
 <script lang="ts">
-	// import { } from '@app/components'
+	// import { FormInput } from '$lib/components'
 </script>
 
 <style lang="scss" global>
-	@import '../scss';
 </style>
