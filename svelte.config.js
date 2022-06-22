@@ -11,7 +11,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: preprocess({
 		scss: {
-			importer: (url, prev) => {
+			importer(url) {
 				if (url[0] === '~') {
 					url = path.resolve('node_modules', url.substr(1))
 				}
@@ -26,15 +26,9 @@ const config = {
 			lib: 'src',
 		},
 		package: {
-			files(filePath) {
-				let result = false
-				const packageFolders = ['index.ts', 'styles.css', 'components', 'directives', 'scss', 'types', 'utils']
-				packageFolders.map((folder) => {
-					if (filePath.startsWith(folder)) {
-						result = true
-					}
-				})
-				return result
+			files(file) {
+				const items = ['index.ts', 'styles.css', 'components', 'directives', 'scss', 'types', 'utils']
+				return items.some((item) => file.startsWith(item))
 			},
 		},
 	},
