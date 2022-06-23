@@ -5,3 +5,7 @@
 .u-form-radio-inline {
 	@extend .form-check-inline;
 }
+
+.u-form-radio-label {
+	@extend .form-check-label;
+}

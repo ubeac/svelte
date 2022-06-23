@@ -35,11 +35,11 @@
 </script>
 
 {#if condition($$props)}
-	<FormGroup col={inline ? 'auto' : '12'}>
+	<FormGroup col={inline ? '0' : '12'}>
 		<label for={id} {required} class={classes}>
-			<Radio {id} {required} bind:value {...$$restProps} />
+			<Radio {id} {required} bind:value on:change {...$$restProps} />
 			{#if label}
-				<span>{label}</span>
+				<span class={classname('form-radio-label')}>{label}</span>
 			{/if}
 		</label>
 	</FormGroup>

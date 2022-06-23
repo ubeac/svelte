@@ -20,7 +20,7 @@
 	 */
 	export let value: boolean = false
 
-	const dispatch = createEventDispatcher()
+	const dispatch = createEventDispatcher<{ change: boolean }>()
 
 	// TODO: Typescript type for function parameters
 	function onChange({ target }) {
@@ -28,19 +28,11 @@
 		dispatch('change', value)
 	}
 
-	const forwardEvents = forwardEventsBuilderNew(get_current_component())
+	// const forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('Radio', null, $$props.class)
 </script>
 
 {#if condition($$props)}
-	<input
-		{id}
-		{name}
-		type="radio"
-		checked={value}
-		on:change={onChange}
-		use:forwardEvents
-		{...$$restProps}
-		class={classes} />
+	<input {id} {name} type="radio" checked={value} on:change={onChange} {...$$restProps} class={classes} />
 {/if}
