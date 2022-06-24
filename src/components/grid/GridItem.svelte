@@ -55,6 +55,11 @@
 	export let alignSelfXxl: GridItemAlignSelf = undefined
 
 	/**
+	 * TODO: same as xs
+	 */
+	export let col: GridItemColumn = undefined
+
+	/**
 	 * Specifies the number of columns for extra-small viewports (portrait phones).
 	 * It also determines the number of columns for bigger display sizes when
 	 * other upper breakpoints (sm, md, lg, xl and xxl) are not specified.
@@ -95,6 +100,11 @@
 	export let xxl: GridItemColumn = undefined
 
 	/**
+	 * Hides the grid-item in all display sizes.
+	 */
+	export let hide: GridItemHide = undefined
+
+	/**
 	 * Hides the grid-item in extra-small display sizes (portrait phones).
 	 */
 	export let hideXs: GridItemHide = undefined
@@ -123,11 +133,6 @@
 	 * Hides the grid-item in extra-extra-large display sizes (larger desktops).
 	 */
 	export let hideXxl: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in all display sizes.
-	 */
-	export let hide: GridItemHide = undefined
 
 	/**
 	 * Hides the grid-item in small and larger display sizes.
@@ -175,6 +180,11 @@
 	export let hideXxlDown: GridItemHide = undefined
 
 	/**
+	 * TODO: same as offsetXs
+	 */
+	export let offset: GridItemOffset = undefined
+
+	/**
 	 * Adds an offset space before the grid-item for extra-small display sizes.
 	 * It also applies to larger breakpoints and display sizes while they are not specified.
 	 */
@@ -207,6 +217,11 @@
 	 * Adds an offset space before the grid-item for extra-extra-large display sizes.
 	 */
 	export let offsetXxl: GridItemOffset = undefined
+
+	/**
+	 * TODO: same as orderXs
+	 */
+	export let order: GridItemOrder = undefined
 
 	/**
 	 * Overrides the default order of the grid-item for extra-small display sizes.
@@ -254,19 +269,20 @@
 			alignSelfLg,
 			alignSelfXl,
 			alignSelfXxl,
+			col,
 			xs,
 			sm,
 			md,
 			lg,
 			xl,
 			xxl,
+			hide,
 			hideXs,
 			hideSm,
 			hideMd,
 			hideLg,
 			hideXl,
 			hideXxl,
-			hide,
 			hideSmUp,
 			hideMdUp,
 			hideLgUp,
@@ -276,12 +292,14 @@
 			hideLgDown,
 			hideXlDown,
 			hideXxlDown,
+			offset,
 			offsetXs,
 			offsetSm,
 			offsetMd,
 			offsetLg,
 			offsetXl,
 			offsetXxl,
+			order,
 			orderXs,
 			orderSm,
 			orderMd,

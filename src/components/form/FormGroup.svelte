@@ -1,16 +1,14 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
-
-	import { forwardEventsBuilder } from '$lib/directives'
+	import { Grid } from '$lib/components'
 	import { classname, condition } from '$lib/utils'
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('form-group', null, $$props.class)
 </script>
 
 {#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</div>
+	<Grid.Item {...$$restProps} class={classes} col={$$props.col ?? '6'}>
+		<div>
+			<slot />
+		</div>
+	</Grid.Item>
 {/if}

@@ -23,6 +23,30 @@
 	}
 }
 
+.u-grid-item-col-auto {
+	flex-basis: auto;
+	max-width: none;
+}
+
+.u-grid-item-col-grow {
+	flex-grow: 1;
+	flex-basis: 0;
+	max-width: 100%;
+}
+
+@for $number from 1 through $column {
+	.u-grid-item-col-#{$number} {
+		flex-basis: $number * $base;
+		max-width: $number * $base;
+	}
+	.u-grid-item-offset-#{$number} {
+		margin-left: $number * $base;
+	}
+	.u-grid-item-order-#{$number} {
+		order: $number;
+	}
+}
+
 @each $breakpoint, $value in $breakpoints {
 	@include media-breakpoint-up($breakpoint) {
 		.u-grid-item-#{$breakpoint}-auto {

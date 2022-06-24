@@ -12,7 +12,7 @@
 	/**
 	 * TODO
 	 */
-	export let value: any = undefined
+	export let value: string = ''
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 

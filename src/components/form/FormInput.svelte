@@ -32,28 +32,28 @@
 	 */
 	export let required: boolean = false
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	export let value: any = undefined
+
+	// const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('form-input', null, $$props.class)
 </script>
 
 {#if condition($$props)}
-	<div use:forwardEvents class={classes}>
+	<FormGroup col={$$props.col}>
 		{#if label}
 			<Label for={id} {required}>{label}</Label>
 		{/if}
-		<FormGroup>
-			{#if icon}
-				<div class={classname('input-icon')}>
-					<Icon name={icon} />
-				</div>
-			{/if}
-			<Input {id} {required} {...$$restProps} />
-			{#if loading}
-				<div class={classname('input-icon')}>
-					<Spinner />
-				</div>
-			{/if}
-		</FormGroup>
-	</div>
+		{#if icon}
+			<div class={classname('input-icon')}>
+				<Icon name={icon} />
+			</div>
+		{/if}
+		<Input bind:value {id} {required} {...$$restProps} on:change={(e) => console.log(3333, e)} />
+		{#if loading}
+			<div class={classname('input-icon')}>
+				<Spinner />
+			</div>
+		{/if}
+	</FormGroup>
 {/if}
