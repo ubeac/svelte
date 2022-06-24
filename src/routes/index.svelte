@@ -1,14 +1,11 @@
 <script lang="ts">
-	import { Button, FormFieldset, FormRadio, Grid, Radio } from '$lib/components'
+	import { Button, FormFieldset, Grid, Radio } from '$lib/components'
 
 	let value = ''
 	let value2 = ''
 
 	function changeValue(val) {
 		value = val
-	}
-	function changeValue2(val) {
-		value2 = val
 	}
 </script>
 
@@ -21,14 +18,11 @@
 	</Grid>
 
 	<FormFieldset label="Radio {value}">
-		<FormRadio on:change={() => changeValue('Red')} label="Red" name="color" />
-		<FormRadio on:change={() => changeValue('Green')} label="Green" name="color" />
-		<FormRadio on:change={() => changeValue('Blue')} label="Blue" name="color" />
+		<Radio on:change={() => changeValue('Red')} name="color" />
+		<Radio on:change={() => changeValue('Green')} name="color" />
+		<Radio on:change={() => changeValue('Blue')} name="color" />
 	</FormFieldset>
 
-	<FormFieldset label="Inline radio {value2}">
-		<FormRadio inline on:change={() => changeValue2('Red')} label="Red" name="color2" />
-		<FormRadio inline on:change={() => changeValue2('Green')} label="Green" name="color2" />
-		<FormRadio inline on:change={() => changeValue2('Blue')} label="Blue" name="color2" />
-	</FormFieldset>
+	<Radio disabled on:change={() => changeValue('Green')} name="color" />
+	<Radio disabled on:change={() => changeValue('Blue')} name="color" />
 </div>
