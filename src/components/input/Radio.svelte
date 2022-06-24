@@ -1,38 +1,25 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
+	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilderNew } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
-
-	/**
-	 * Set id of the radio element
-	 */
-	export let id: string | undefined = undefined
-
-	/**
-	 * Set name of radio element
-	 */
-	export let name: string | unefined = undefined
 
 	/**
 	 * The checked state of radio button
 	 */
 	export let value: boolean = false
 
-	const dispatch = createEventDispatcher<{ change: boolean }>()
+	const dispatch = createEventDispatcher()
 
-	// TODO: Typescript type for function parameters
-	function onChange({ target }) {
-		value = target.checked
-		dispatch('change', value)
-	}
-
-	// const forwardEvents = forwardEventsBuilderNew(get_current_component())
+	const forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('Radio', null, $$props.class)
+
+	function change(event: any) {
+		dispatch('changed', (value = event.target.checked))
+	}
 </script>
 
 {#if condition($$props)}
-	<input {id} {name} type="radio" checked={value} on:change={onChange} {...$$restProps} class={classes} />
+	<input type="radio" checked={value} on:change={change} use:forwardEvents {...$$restProps} class={classes} />
 {/if}
