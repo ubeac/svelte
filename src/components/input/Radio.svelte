@@ -16,7 +16,7 @@
 	$: classes = classname('Radio', null, $$props.class)
 
 	function change(event: any) {
-		dispatch('changed', (value = event.target.checked))
+		value = event.target.checked
 	}
 </script>
 
