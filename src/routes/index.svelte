@@ -1,20 +1,25 @@
 <script lang="ts">
-	import { Checkbox } from '$lib/components'
-	import { Button } from '$lib/components'
+	import { Radio } from '$lib/components'
 
-	let check1Value: boolean = false
-	let check2Value: boolean = false
+	let model1 = undefined
+	let gender = 'F'
+
+	setTimeout(() => {
+		gender = 'M'
+	}, 3000)
+
+	function onChange(event) {
+		console.log(event.target.value, event.target.checked)
+	}
 </script>
 
-<Checkbox bind:value={check1Value} />
-<Checkbox bind:value={check2Value} />
-<Checkbox bind:value={check2Value} disabled />
-<Checkbox bind:value={check1Value} disabled />
-<Checkbox bind:value={check2Value} indeterminate />
-<Checkbox bind:value={check1Value} indeterminate />
+<Radio value="value1" bind:group={model1} on:change={onChange} />
+{model1}
 
-<div>
-	<Button color="red">This is button</Button>
-	<Button block>This is another button</Button>
-	<Button color="primary" block elevation={0}>This is button 3</Button>
-</div>
+<br />
+
+<Radio name="gender" value="M" bind:group={gender} on:change={onChange} />
+<Radio name="gender" value="F" bind:group={gender} on:change={onChange} />
+{gender}
+
+<br />
