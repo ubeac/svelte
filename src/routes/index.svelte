@@ -1,28 +1,25 @@
 <script lang="ts">
-	import { Button, FormFieldset, Grid, Radio } from '$lib/components'
+	import { Radio } from '$lib/components'
 
-	let value = ''
-	let value2 = ''
+	let model1 = undefined
+	let gender = 'F'
 
-	function changeValue(val) {
-		value = val
+	setTimeout(() => {
+		gender = 'M'
+	}, 3000)
+
+	function onChange(event) {
+		console.log(event.target.value, event.target.checked)
 	}
 </script>
 
-<div>
-	<Button color="red">This is button</Button>
-	<Grid>
-		<Button block>This is another button</Button>
-		<Button color="secondary" elevation={0}>This is button 3</Button>
-		<Button color="primary" elevation={0}>This is button 3</Button>
-	</Grid>
+<Radio value="value1" bind:group={model1} on:change={onChange} />
+{model1}
 
-	<FormFieldset label="Radio {value}">
-		<Radio on:change={() => changeValue('Red')} name="color" />
-		<Radio on:change={() => changeValue('Green')} name="color" />
-		<Radio on:change={() => changeValue('Blue')} name="color" />
-	</FormFieldset>
+<br />
 
-	<Radio disabled on:change={() => changeValue('Green')} name="color" />
-	<Radio disabled on:change={() => changeValue('Blue')} name="color" />
-</div>
+<Radio name="gender" value="M" bind:group={gender} on:change={onChange} />
+<Radio name="gender" value="F" bind:group={gender} on:change={onChange} />
+{gender}
+
+<br />
