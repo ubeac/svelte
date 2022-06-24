@@ -1,8 +1,11 @@
 <script lang="ts">
-	import { Radio } from '$lib/components'
+	import { Checkbox, Radio } from '$lib/components'
 
 	let model1 = undefined
 	let gender = 'F'
+
+	let check1Value: boolean = false
+	let check2Value: boolean = false
 
 	setTimeout(() => {
 		gender = 'M'
@@ -23,3 +26,10 @@
 {gender}
 
 <br />
+
+<Checkbox bind:value={check1Value} on:change={onChange} /> - {check1Value}
+<Checkbox bind:value={check2Value} on:change={onChange} /> - {check2Value}
+<Checkbox bind:value={check2Value} on:change={onChange} disabled /> - {check2Value}
+<Checkbox bind:value={check1Value} on:change={onChange} disabled /> - {check1Value}
+<Checkbox bind:value={check2Value} on:change={onChange} indeterminate /> - {check2Value}
+<Checkbox bind:value={check1Value} on:change={onChange} indeterminate /> - {check1Value}

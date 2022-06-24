@@ -15,5 +15,5 @@
 </script>
 
 {#if condition($$props)}
-	<input type="checkbox" bind:checked={value} use:forwardEvents {...$$restProps} class={classes} />
+	<input bind:checked={value} use:forwardEvents {...$$restProps} class={classes} type="checkbox" />
 {/if}
