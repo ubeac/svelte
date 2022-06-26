@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { nanoid } from 'nanoid'
 
-	import { FormGroup, Icon, Input, Label, Spinner } from '$lib/components'
+	import { FormGroup, Icon, Label, Spinner, Textarea } from '$lib/components'
 	import { classname, condition } from '$lib/utils'
 
 	/**
@@ -34,7 +34,7 @@
 	 */
 	export let value: any = undefined
 
-	$: classes = classname('form-input', null, $$props.class)
+	$: classes = classname('form-textarea', null, $$props.class)
 </script>
 
 {#if condition($$props)}
@@ -44,22 +44,18 @@
 				<Label for={id} {required}>{label}</Label>
 			{/if}
 		</svelte:fragment>
-		<slot name="outer:start" slot="outer:start" />
-		<slot name="middle:start" slot="middle:start" />
 		<svelte:fragment slot="inner:start">
 			{#if icon}
 				<Icon name={icon} />
 			{/if}
 			<slot name="inner:start" />
 		</svelte:fragment>
-		<Input bind:value {id} {...$$restProps} />
+		<Textarea bind:value {id} {...$$restProps} />
 		<svelte:fragment slot="inner:end">
 			{#if loading}
 				<Spinner />
 			{/if}
 			<slot name="inner:end" />
 		</svelte:fragment>
-		<slot name="middle:end" slot="middle:end" />
-		<slot name="outer:end" slot="outer:end" />
 	</FormGroup>
 {/if}
