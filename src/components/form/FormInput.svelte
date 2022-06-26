@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
+
 	import { nanoid } from 'nanoid'
 
 	import { FormGroup, Icon, Input, Label, Spinner } from '$lib/components'
+	import { forwardEventsBuilderNew } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
 	/**
@@ -34,6 +37,8 @@
 	 */
 	export let value: any = undefined
 
+	const forwardEvents = forwardEventsBuilderNew(get_current_component())
+
 	$: classes = classname('form-input', null, $$props.class)
 </script>
 
@@ -52,7 +57,7 @@
 			{/if}
 			<slot name="inner:start" />
 		</svelte:fragment>
-		<Input bind:value {id} {...$$restProps} />
+		<Input bind:value {id} {forwardEvents} {...$$restProps} />
 		<svelte:fragment slot="inner:end">
 			{#if loading}
 				<Spinner />

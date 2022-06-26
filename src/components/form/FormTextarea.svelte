@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
+
 	import { nanoid } from 'nanoid'
 
 	import { FormGroup, Icon, Label, Spinner, Textarea } from '$lib/components'
+	import { forwardEventsBuilderNew } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
 	/**
@@ -34,6 +37,8 @@
 	 */
 	export let value: any = undefined
 
+	const forwardEvents = forwardEventsBuilderNew(get_current_component())
+
 	$: classes = classname('form-textarea', null, $$props.class)
 </script>
 
@@ -50,7 +55,7 @@
 			{/if}
 			<slot name="inner:start" />
 		</svelte:fragment>
-		<Textarea bind:value {id} {...$$restProps} />
+		<Textarea bind:value {id} {forwardEvents} {...$$restProps} />
 		<svelte:fragment slot="inner:end">
 			{#if loading}
 				<Spinner />

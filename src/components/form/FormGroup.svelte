@@ -16,14 +16,12 @@
 				<div class="middle">
 					<slot name="middle:start" />
 					<div class="inner">
-						<div class="spacer" />
 						<slot name="inner:start" />
 						<div class="input">
 							<slot />
 							<div class="focus" />
 						</div>
 						<slot name="inner:end" />
-						<div class="spacer" />
 					</div>
 					<slot name="middle:end" />
 				</div>
@@ -52,20 +50,18 @@
 		border-radius: 4px;
 		column-gap: 8px;
 		position: relative;
-	}
 
-	.spacer {
-		width: 2px;
+		& > *:not(.input):first-child {
+			margin-left: 10px;
+		}
+
+		& > *:not(.input):last-child {
+			margin-right: 10px;
+		}
 	}
 
 	.input {
 		flex-grow: 1;
-
-		& > *:not(.focus) {
-			padding-right: 0;
-			padding-left: 0;
-		}
-
 		& > *:not(.focus),
 		& > *:not(.focus):focus {
 			box-shadow: none;
@@ -77,6 +73,11 @@
 			border-color: #90b5e2;
 			outline: 0;
 			box-shadow: 0 0 0 0.25rem rgb(32 107 196 / 25%);
+		}
+
+		&:not(:first-child) > *:not(.focus) {
+			padding-right: 0;
+			padding-left: 0;
 		}
 	}
 
