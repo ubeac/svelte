@@ -7,6 +7,11 @@
 	/**
 	 * TODO
 	 */
+	export let forwardEvents: any
+
+	/**
+	 * TODO
+	 */
 	export let items: Array<any> | Object | undefined = undefined
 
 	/**
@@ -31,7 +36,7 @@
 
 	const dispatch = createEventDispatcher()
 
-	const forwardEvents = forwardEventsBuilderNew(get_current_component())
+	if (!forwardEvents) forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('select', { preview }, $$props.class)
 
