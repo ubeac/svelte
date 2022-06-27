@@ -7,11 +7,6 @@
 	/**
 	 * TODO
 	 */
-	export let forwardEvents: any
-
-	/**
-	 * TODO
-	 */
 	export let preview: boolean = false
 
 	/**
@@ -19,7 +14,7 @@
 	 */
 	export let value: string | undefined = undefined
 
-	if (!forwardEvents) forwardEvents = forwardEventsBuilderNew(get_current_component())
+	const forwardEvents = $$props.forwardEvents ?? forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('textarea', { preview }, $$props.class)
 </script>

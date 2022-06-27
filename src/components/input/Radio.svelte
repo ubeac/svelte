@@ -14,7 +14,7 @@
 	 */
 	export let value: any = undefined
 
-	const forwardEvents = forwardEventsBuilderNew(get_current_component())
+	const forwardEvents = $$props.forwardEvents ?? forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('radio', null, $$props.class)
 </script>
