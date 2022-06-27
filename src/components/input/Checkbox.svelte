@@ -7,9 +7,12 @@
 	/**
 	 * TODO
 	 */
-	export let value: any = undefined
+	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
 
-	const forwardEvents = $$props.forwardEvents ?? forwardEventsBuilderNew(get_current_component())
+	/**
+	 * TODO
+	 */
+	export let value: any = undefined
 
 	$: classes = classname('checkbox', null, $$props.class)
 </script>

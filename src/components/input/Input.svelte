@@ -7,14 +7,17 @@
 	/**
 	 * TODO
 	 */
+	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
+
+	/**
+	 * TODO
+	 */
 	export let preview: boolean = false
 
 	/**
 	 * TODO
 	 */
 	export let value: any = undefined
-
-	const forwardEvents = $$props.forwardEvents ?? forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('input', { preview }, $$props.class)
 </script>

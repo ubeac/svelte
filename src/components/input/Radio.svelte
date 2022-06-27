@@ -7,14 +7,17 @@
 	/**
 	 * TODO
 	 */
+	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
+
+	/**
+	 * TODO
+	 */
 	export let group: any = undefined
 
 	/**
 	 * TODO
 	 */
 	export let value: any = undefined
-
-	const forwardEvents = $$props.forwardEvents ?? forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('radio', null, $$props.class)
 </script>
