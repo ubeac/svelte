@@ -1,0 +1,144 @@
+<script>
+	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
+
+	import { Grid } from '$lib/components'
+
+	const ALIGN_SELFS = ['start', 'center', 'end', 'stretch', 'auto', undefined]
+	const NUMBERS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+	const COL_NUMBERS = [...NUMBERS, 'grow', 'auto']
+
+	const GUTTERS = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl', undefined]
+	const JUSTIFY_CONTENTS = ['start', 'center', 'end', 'between', 'around', 'evenly', undefined]
+
+	function control(type, options) {
+		return {
+			control: {
+				type,
+				options,
+			},
+		}
+	}
+
+	const argTypes = {
+		alignSelf: control('select', ALIGN_SELFS),
+		alignSelfXs: control('select', ALIGN_SELFS),
+		alignSelfSm: control('select', ALIGN_SELFS),
+		alignSelfMd: control('select', ALIGN_SELFS),
+		alignSelfLg: control('select', ALIGN_SELFS),
+		alignSelfXl: control('select', ALIGN_SELFS),
+		alignSelfXxl: control('select', ALIGN_SELFS),
+		col: control('select', COL_NUMBERS),
+		xs: control('select', COL_NUMBERS),
+		sm: control('select', COL_NUMBERS),
+		md: control('select', COL_NUMBERS),
+		lg: control('select', COL_NUMBERS),
+		xl: control('select', COL_NUMBERS),
+		xxl: control('select', COL_NUMBERS),
+
+		hide: control('boolean'),
+		hideXs: control('boolean'),
+		hideSm: control('boolean'),
+		hideMd: control('boolean'),
+		hideLg: control('boolean'),
+		hideXl: control('boolean'),
+		hideXxl: control('boolean'),
+
+		hideSmUp: control('boolean'),
+		hideMdUp: control('boolean'),
+		hideLgUp: control('boolean'),
+		hideXlUp: control('boolean'),
+
+		hideSmDown: control('boolean'),
+		hideMdDown: control('boolean'),
+		hideLgDown: control('boolean'),
+		hideXlDown: control('boolean'),
+		hideXxlDown: control('boolean'),
+
+		offset: control('select', NUMBERS),
+		offsetXs: control('select', NUMBERS),
+		offsetSm: control('select', NUMBERS),
+		offsetMd: control('select', NUMBERS),
+		offsetLg: control('select', NUMBERS),
+		offsetXl: control('select', NUMBERS),
+		offsetXxl: control('select', NUMBERS),
+
+		order: control('select', NUMBERS),
+		orderXs: control('select', NUMBERS),
+		orderSm: control('select', NUMBERS),
+		orderMd: control('select', NUMBERS),
+		orderLg: control('select', NUMBERS),
+		orderXl: control('select', NUMBERS),
+		orderXxl: control('select', NUMBERS),
+	}
+</script>
+
+<Meta title="GridItem" component={Grid.Item} {argTypes} />
+
+<Template let:args>
+	<Grid class="bg-gray h-5">
+		<Grid.Item class="h-4 w-4 bg-red">1</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-yellow">2</Grid.Item>
+		<Grid.Item {...args} class="h-4 w-4 bg-green">3*</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-blue">4</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-red">5</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-yellow">6</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-green">7</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-blue">8</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-red">9</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-yellow">10</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-green">11</Grid.Item>
+		<Grid.Item class="h-4 w-4 bg-blue">12</Grid.Item>
+	</Grid>
+</Template>
+
+<Story name="default" />
+<Story name="Align Self" args={{ alignSelf: 'start' }} />
+<Story name="Align Self XS" args={{ alignSelfXs: 'start' }} />
+<Story name="Align Self SM" args={{ alignSelfSm: 'start' }} />
+<Story name="Align Self MD" args={{ alignSelfMd: 'start' }} />
+<Story name="Align Self LG" args={{ alignSelfLg: 'start' }} />
+<Story name="Align Self XL" args={{ alignSelfXl: 'start' }} />
+<Story name="Align Self XXL" args={{ alignSelfXxl: 'start' }} />
+
+<Story name="col" args={{ col: '3' }} />
+<Story name="xs" args={{ xs: '3' }} />
+<Story name="sm" args={{ sm: '3' }} />
+<Story name="md" args={{ md: '3' }} />
+<Story name="lg" args={{ lg: '3' }} />
+<Story name="xl" args={{ xl: '3' }} />
+<Story name="xxl" args={{ xxl: '3' }} />
+
+<Story name="Hide" args={{ hide: true }} />
+<Story name="Hide xs" args={{ hideXs: true }} />
+<Story name="Hide sm" args={{ hideSm: true }} />
+<Story name="Hide md" args={{ hideMd: true }} />
+<Story name="Hide lg" args={{ hideLg: true }} />
+<Story name="Hide xl" args={{ hideXl: true }} />
+<Story name="Hide xxl" args={{ hideXxl: true }} />
+
+<Story name="Hide sm Up" args={{ hideSmUp: true }} />
+<Story name="Hide md Up" args={{ hideMdUp: true }} />
+<Story name="Hide lg Up" args={{ hideLgUp: true }} />
+<Story name="Hide xl Up" args={{ hideXlUp: true }} />
+
+<Story name="Hide sm Down" args={{ hideSmDown: true }} />
+<Story name="Hide md Down" args={{ hideMdDown: true }} />
+<Story name="Hide lg Down" args={{ hideLgDown: true }} />
+<Story name="Hide xl Down" args={{ hideXlDown: true }} />
+<Story name="Hide xxl Down" args={{ hideXxlDown: true }} />
+
+<Story name="Offset" args={{ offset: '2' }} />
+<Story name="Offset XS" args={{ offsetXs: '2' }} />
+<Story name="Offset SM" args={{ offsetSm: '2' }} />
+<Story name="Offset MD" args={{ offsetMd: '2' }} />
+<Story name="Offset LG" args={{ offsetLg: '2' }} />
+<Story name="Offset XL" args={{ offsetXl: '2' }} />
+<Story name="Offset XXL" args={{ offsetXxl: '2' }} />
+
+<Story name="Order" args={{ order: '2' }} />
+<Story name="Order XS" args={{ orderXs: '2' }} />
+<Story name="Order SM" args={{ orderSm: '2' }} />
+<Story name="Order MD" args={{ orderMd: '2' }} />
+<Story name="Order LG" args={{ orderLg: '2' }} />
+<Story name="Order XL" args={{ orderXl: '2' }} />
+<Story name="Order XXL" args={{ orderXxl: '2' }} />
