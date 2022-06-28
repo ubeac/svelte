@@ -5,10 +5,7 @@
 
 	const ALIGN_SELFS = ['start', 'center', 'end', 'stretch', 'auto', undefined]
 	const NUMBERS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-	const COL_NUMBERS = [...NUMBERS, 'grow', 'auto']
-
-	const GUTTERS = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl', undefined]
-	const JUSTIFY_CONTENTS = ['start', 'center', 'end', 'between', 'around', 'evenly', undefined]
+	const COL_NUMBERS = [...NUMBERS, 'grow', 'auto', 'hide', 'hide-down', 'hide-up']
 
 	function control(type, options) {
 		return {
@@ -34,25 +31,6 @@
 		lg: control('select', COL_NUMBERS),
 		xl: control('select', COL_NUMBERS),
 		xxl: control('select', COL_NUMBERS),
-
-		hide: control('boolean'),
-		hideXs: control('boolean'),
-		hideSm: control('boolean'),
-		hideMd: control('boolean'),
-		hideLg: control('boolean'),
-		hideXl: control('boolean'),
-		hideXxl: control('boolean'),
-
-		hideSmUp: control('boolean'),
-		hideMdUp: control('boolean'),
-		hideLgUp: control('boolean'),
-		hideXlUp: control('boolean'),
-
-		hideSmDown: control('boolean'),
-		hideMdDown: control('boolean'),
-		hideLgDown: control('boolean'),
-		hideXlDown: control('boolean'),
-		hideXxlDown: control('boolean'),
 
 		offset: control('select', NUMBERS),
 		offsetXs: control('select', NUMBERS),
@@ -108,24 +86,24 @@
 <Story name="xl" args={{ xl: '3' }} />
 <Story name="xxl" args={{ xxl: '3' }} />
 
-<Story name="Hide" args={{ hide: true }} />
-<Story name="Hide xs" args={{ hideXs: true }} />
-<Story name="Hide sm" args={{ hideSm: true }} />
-<Story name="Hide md" args={{ hideMd: true }} />
-<Story name="Hide lg" args={{ hideLg: true }} />
-<Story name="Hide xl" args={{ hideXl: true }} />
-<Story name="Hide xxl" args={{ hideXxl: true }} />
+<Story name="Hide" args={{ col: 'hide' }} />
+<Story name="Hide xs" args={{ xs: 'hide' }} />
+<Story name="Hide sm" args={{ sm: 'hide' }} />
+<Story name="Hide md" args={{ md: 'hide' }} />
+<Story name="Hide lg" args={{ lg: 'hide' }} />
+<Story name="Hide xl" args={{ xl: 'hide' }} />
+<Story name="Hide xxl" args={{ xxl: 'hide' }} />
 
-<Story name="Hide sm Up" args={{ hideSmUp: true }} />
-<Story name="Hide md Up" args={{ hideMdUp: true }} />
-<Story name="Hide lg Up" args={{ hideLgUp: true }} />
-<Story name="Hide xl Up" args={{ hideXlUp: true }} />
+<Story name="Hide sm Up" args={{ sm: 'hide-up' }} />
+<Story name="Hide md Up" args={{ md: 'hide-up' }} />
+<Story name="Hide lg Up" args={{ lg: 'hide-up' }} />
+<Story name="Hide xl Up" args={{ xl: 'hide-up' }} />
 
-<Story name="Hide sm Down" args={{ hideSmDown: true }} />
-<Story name="Hide md Down" args={{ hideMdDown: true }} />
-<Story name="Hide lg Down" args={{ hideLgDown: true }} />
-<Story name="Hide xl Down" args={{ hideXlDown: true }} />
-<Story name="Hide xxl Down" args={{ hideXxlDown: true }} />
+<Story name="Hide sm Down" args={{ sm: 'hide-down' }} />
+<Story name="Hide md Down" args={{ md: 'hide-down' }} />
+<Story name="Hide lg Down" args={{ lg: 'hide-down' }} />
+<Story name="Hide xl Down" args={{ xl: 'hide-down' }} />
+<Story name="Hide xxl Down" args={{ xxl: 'hide-down' }} />
 
 <Story name="Offset" args={{ offset: '2' }} />
 <Story name="Offset XS" args={{ offsetXs: '2' }} />
