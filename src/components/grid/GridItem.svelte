@@ -100,86 +100,6 @@
 	export let xxl: GridItemColumn = undefined
 
 	/**
-	 * Hides the grid-item in all display sizes.
-	 */
-	export let hide: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in extra-small display sizes (portrait phones).
-	 */
-	export let hideXs: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in small display sizes (landscape phones).
-	 */
-	export let hideSm: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in medium display sizes (tablets).
-	 */
-	export let hideMd: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in large display sizes (desktop).
-	 */
-	export let hideLg: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in extra-large display sizes (large desktops).
-	 */
-	export let hideXl: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in extra-extra-large display sizes (larger desktops).
-	 */
-	export let hideXxl: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in small and larger display sizes.
-	 */
-	export let hideSmUp: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in medium and larger display sizes.
-	 */
-	export let hideMdUp: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in large and larger display sizes.
-	 */
-	export let hideLgUp: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in large and larger display sizes.
-	 */
-	export let hideXlUp: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in small and smaller display sizes.
-	 */
-	export let hideSmDown: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in medium and smaller display sizes.
-	 */
-	export let hideMdDown: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in large and smaller display sizes.
-	 */
-	export let hideLgDown: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in large and smaller display sizes.
-	 */
-	export let hideXlDown: GridItemHide = undefined
-
-	/**
-	 * Hides the grid-item in large and smaller display sizes.
-	 */
-	export let hideXxlDown: GridItemHide = undefined
-
-	/**
 	 * TODO: same as offsetXs
 	 */
 	export let offset: GridItemOffset = undefined
@@ -276,22 +196,6 @@
 			lg,
 			xl,
 			xxl,
-			hide,
-			hideXs,
-			hideSm,
-			hideMd,
-			hideLg,
-			hideXl,
-			hideXxl,
-			hideSmUp,
-			hideMdUp,
-			hideLgUp,
-			hideXlUp,
-			hideSmDown,
-			hideMdDown,
-			hideLgDown,
-			hideXlDown,
-			hideXxlDown,
 			offset,
 			offsetXs,
 			offsetSm,
