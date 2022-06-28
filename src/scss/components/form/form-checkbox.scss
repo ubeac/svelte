@@ -1,0 +1,11 @@
+.u-form-checkbox {
+	@extend .form-check;
+}
+
+.u-form-checkbox-label {
+	@extend .form-check-label;
+}
+
+.u-form-checkbox-description {
+	@extend .form-check-description;
+}
