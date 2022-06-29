@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Grid } from '$lib/components'
+	import { GridItem } from '$lib/components'
 	import { classname, condition } from '$lib/utils'
 
 	$: classes = classname('form-group', null, $$props.class)
@@ -8,7 +8,7 @@
 </script>
 
 {#if condition($$props)}
-	<Grid.Item {col}>
+	<GridItem {col}>
 		<div class={classes}>
 			<slot name="label" />
 			<div class="outer">
@@ -28,5 +28,5 @@
 				<slot name="outer:end" />
 			</div>
 		</div>
-	</Grid.Item>
+	</GridItem>
 {/if}
