@@ -26,7 +26,7 @@
 	/**
 	 * TODO
 	 */
-	export let key: string | undefined
+	export let key: string | undefined = undefined
 
 	/**
 	 * TODO
@@ -41,7 +41,7 @@
 	/**
 	 * TODO
 	 */
-	export let text: string | undefined
+	export let text: string | undefined = undefined
 
 	/**
 	 * TODO
