@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Grid } from '$lib/components'
+	import { Grid, GridItem } from '$lib/components'
 
 	const ALIGN_CONTENTS = ['start', 'center', 'end', 'stretch', 'between', 'around', 'evenly', undefined]
 	const ALIGN_ITEMS = ['start', 'center', 'end', 'stretch', undefined]
@@ -61,10 +61,10 @@
 
 <Template let:args>
 	<Grid class="h-5" {...args}>
-		<Grid.Item class="h-4 w-4 d-flex justify-content-center align-items-center bg-red">1</Grid.Item>
-		<Grid.Item class="h-4 w-4 d-flex justify-content-center align-items-center bg-yellow">2</Grid.Item>
-		<Grid.Item class="h-4 w-4 d-flex justify-content-center align-items-center bg-green">3</Grid.Item>
-		<Grid.Item class="h-4 w-4 d-flex justify-content-center align-items-center bg-blue">4</Grid.Item>
+		<GridItem class="h-4 w-4 d-flex justify-content-center align-items-center bg-red">1</GridItem>
+		<GridItem class="h-4 w-4 d-flex justify-content-center align-items-center bg-yellow">2</GridItem>
+		<GridItem class="h-4 w-4 d-flex justify-content-center align-items-center bg-green">3</GridItem>
+		<GridItem class="h-4 w-4 d-flex justify-content-center align-items-center bg-blue">4</GridItem>
 	</Grid>
 </Template>
 
