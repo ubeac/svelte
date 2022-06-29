@@ -1,6 +1,2 @@
-import Alert from './Alert.svelte'
-import { default as AlertTitle } from './AlertTitle.svelte'
-
-Alert.Title = AlertTitle
-
-export { Alert }
+export { default as Alert } from './Alert.svelte'
+export { default as AlertTitle } from './AlertTitle.svelte'
