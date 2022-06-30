@@ -17,12 +17,6 @@
 	border-radius: 0;
 }
 
-@each $key in sm, md, lg {
-	.u-card-#{$key} {
-		@extend .card-#{$key};
-	}
-}
-
 // Card Actions
 
 .u-card-actions {
