@@ -1,35 +1,54 @@
-<script lang="ts">
-	import { Checkbox, Radio } from '$lib/components'
-
-	let model1 = undefined
-	let gender = 'F'
-
-	let check1Value: boolean = false
-	let check2Value: boolean = false
-
-	setTimeout(() => {
-		gender = 'M'
-	}, 3000)
-
-	function onChange(event) {
-		console.log(event.target.value, event.target.checked)
-	}
+<script>
+	import { Card, Table, TableBody, TableFoot } from '$lib/components'
+	import TableCell from '$lib/components/table/TableCell.svelte'
+	import TableHead from '$lib/components/table/TableHead.svelte'
+	import TableRow from '$lib/components/table/TableRow.svelte'
 </script>
 
-<Radio value="value1" bind:group={model1} on:change={onChange} />
-{model1}
+<div class="p-2">
+	<Card outline>
+		<Table on:click={() => console.log('clicked on table')} hover nowrap>
+			<TableHead>
+				<TableRow>
+					<TableCell>id</TableCell>
+					<TableCell>username</TableCell>
+					<TableCell>name</TableCell>
+					<TableCell>email</TableCell>
+				</TableRow>
+			</TableHead>
+			<TableBody
+				on:click={(e) => {
+					console.log('clicked on table body')
+					e.stopPropagation()
+				}}>
+				<TableRow>
+					<TableCell>1</TableCell>
+					<TableCell>admin</TableCell>
+					<TableCell>Admin</TableCell>
+					<TableCell>admin@admin.com</TableCell>
+				</TableRow>
+				<TableRow>
+					<TableCell>2</TableCell>
+					<TableCell on:click={(e) => console.log('click on user')}>user</TableCell>
+					<TableCell>User</TableCell>
+					<TableCell>user@user.com</TableCell>
+				</TableRow>
 
-<br />
-
-<Radio name="gender" value="M" bind:group={gender} on:change={onChange} />
-<Radio name="gender" value="F" bind:group={gender} on:change={onChange} />
-{gender}
-
-<br />
-
-<Checkbox bind:value={check1Value} on:change={onChange} /> - {check1Value}
-<Checkbox bind:value={check2Value} on:change={onChange} /> - {check2Value}
-<Checkbox bind:value={check2Value} on:change={onChange} disabled /> - {check2Value}
-<Checkbox bind:value={check1Value} on:change={onChange} disabled /> - {check1Value}
-<Checkbox bind:value={check2Value} on:change={onChange} indeterminate /> - {check2Value}
-<Checkbox bind:value={check1Value} on:change={onChange} indeterminate /> - {check1Value}
+				<TableRow>
+					<TableCell>3</TableCell>
+					<TableCell>guest</TableCell>
+					<TableCell>Guest</TableCell>
+					<TableCell>guest@guest.com</TableCell>
+				</TableRow>
+			</TableBody>
+			<TableFoot>
+				<TableRow>
+					<TableCell>ID</TableCell>
+					<TableCell>Name</TableCell>
+					<TableCell>Username</TableCell>
+					<TableCell>Email</TableCell>
+				</TableRow>
+			</TableFoot>
+		</Table>
+	</Card>
+</div>

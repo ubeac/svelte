@@ -1,0 +1,24 @@
+.u-table {
+	@extend .table;
+	@extend .table-vcenter;
+}
+
+.u-table-parent {
+	@extend .table-responsive;
+}
+
+.u-table-nowrap {
+	@extend .table-nowrap;
+}
+
+.u-table-striped {
+	@extend .table-striped;
+}
+
+.u-table-hover {
+	@extend .table-hover;
+}
+
+.u-table-borderless {
+	@extend .table-borderless;
+}
