@@ -57,6 +57,7 @@
 	$: classes = classname('autocomplete', { preview }, $$props.class)
 
 	$: typeof window != 'undefined' && items && requestAnimationFrame(() => instance?.sync())
+	$: typeof window != 'undefined' && value && requestAnimationFrame(() => instance?.setValue(value as any, true))
 
 	$: if (disabled || loading) {
 		instance?.disable()
@@ -90,6 +91,7 @@
 
 {#if condition($$props)}
 	{#if preview}
+		<!-- TODO -->
 		<div use:forwardEvents {...$$restProps} class={classes}>
 			{value}
 		</div>
