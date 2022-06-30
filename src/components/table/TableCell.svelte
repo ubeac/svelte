@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
+	import { get_current_component, getContext } from 'svelte/internal'
+
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { condition } from '$lib/utils'
-	import { getContext, get_current_component } from 'svelte/internal'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
