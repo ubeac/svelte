@@ -36,6 +36,11 @@
 	/**
 	 * TODO
 	 */
+	export let multiple: boolean = false
+
+	/**
+	 * TODO
+	 */
 	export let preview: boolean = false
 
 	/**
@@ -70,17 +75,23 @@
 		onChange: (event) => {
 			dispatch('changed', (value = getValue(event)))
 		},
+		mode: multiple ? 'multi' : 'single',
 	}
 
 	$: ({ options, getId, getText, getValue, toId } = createOptions({ items, key, text }))
 
-	function bind() {
+	function bind(deps?: any) {
 		if (!element) return
 		instance = new TomSelect(element, settings)
 	}
 
 	function unbind() {
 		instance?.destroy()
+	}
+
+	$: {
+		unbind()
+		bind({ multiple })
 	}
 
 	onMount(bind)
@@ -94,7 +105,7 @@
 			{value}
 		</div>
 	{:else}
-		<select bind:this={element} value={toId(value)} use:forwardEvents {...$$restProps} class={classes}>
+		<select bind:this={element} value={toId(value)} use:forwardEvents {multiple} {...$$restProps} class={classes}>
 			{#each $options as option}
 				<option value={getId(option)}>
 					{getText(option)}
