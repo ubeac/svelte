@@ -6,7 +6,7 @@
 	import type { TomSettings } from 'tom-select/dist/types/types'
 
 	import { forwardEventsBuilderNew } from '$lib/directives'
-	import { classname, condition, createOptions } from '$lib/utils'
+	import { classname, condition, createOptions, requestAnimationFrame } from '$lib/utils'
 
 	/**
 	 * TODO
@@ -56,8 +56,8 @@
 
 	$: classes = classname('autocomplete', { preview }, $$props.class)
 
-	$: typeof window != 'undefined' && items && requestAnimationFrame(() => instance?.sync())
-	$: typeof window != 'undefined' && value && requestAnimationFrame(() => instance?.setValue(value as any, true))
+	$: items && requestAnimationFrame(() => instance?.sync())
+	$: value && requestAnimationFrame(() => instance?.setValue(fromValue(value), true))
 
 	$: if (disabled || loading) {
 		instance?.disable()
@@ -69,11 +69,11 @@
 		dropdownClass: classname('autocomplete-items'),
 		optionClass: classname('autocomplete-item'),
 		onChange: (event) => {
-			dispatch('changed', (value = getValue(event)))
+			dispatch('changed', (value = toValue(event)))
 		},
 	}
 
-	$: ({ options, getId, getText, getValue, toId } = createOptions({ items, key, text }))
+	$: ({ options, fromValue, getKey, getText, toValue } = createOptions({ items, key, text }))
 
 	function bind() {
 		if (!element) return
@@ -96,9 +96,9 @@
 			{value}
 		</div>
 	{:else}
-		<select bind:this={element} value={toId(value)} use:forwardEvents {...$$restProps} class={classes}>
+		<select bind:this={element} value="" use:forwardEvents {...$$restProps} class={classes}>
 			{#each $options as option}
-				<option value={getId(option)}>
+				<option value={getKey(option)}>
 					{getText(option)}
 				</option>
 			{/each}
