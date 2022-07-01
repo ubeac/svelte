@@ -26,12 +26,17 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('Table', {
-		nowrap,
-		striped,
-		hover,
-		borderless,
-	})
+	$: classes = classname(
+		'table',
+		{
+			nowrap,
+			striped,
+			hover,
+			borderless,
+		},
+		null,
+		$$props.class
+	)
 </script>
 
 {#if condition($$props)}
