@@ -1,35 +1,17 @@
 <script lang="ts">
-	import { Checkbox, Radio } from '$lib/components'
-
-	let model1 = undefined
-	let gender = 'F'
-
-	let check1Value: boolean = false
-	let check2Value: boolean = false
-
-	setTimeout(() => {
-		gender = 'M'
-	}, 3000)
-
-	function onChange(event) {
-		console.log(event.target.value, event.target.checked)
-	}
+	import { Card, CardBody, FormAutocomplete, FormInput, FormSelect, FormTextarea, Grid } from '$lib/components'
 </script>
 
-<Radio value="value1" bind:group={model1} on:change={onChange} />
-{model1}
-
-<br />
-
-<Radio name="gender" value="M" bind:group={gender} on:change={onChange} />
-<Radio name="gender" value="F" bind:group={gender} on:change={onChange} />
-{gender}
-
-<br />
-
-<Checkbox bind:value={check1Value} on:change={onChange} /> - {check1Value}
-<Checkbox bind:value={check2Value} on:change={onChange} /> - {check2Value}
-<Checkbox bind:value={check2Value} on:change={onChange} disabled /> - {check2Value}
-<Checkbox bind:value={check1Value} on:change={onChange} disabled /> - {check1Value}
-<Checkbox bind:value={check2Value} on:change={onChange} indeterminate /> - {check2Value}
-<Checkbox bind:value={check1Value} on:change={onChange} indeterminate /> - {check1Value}
+<div class="p-2">
+	<Card outline>
+		<CardBody>
+			<Grid gutter="sm">
+				<FormAutocomplete placeholder="FormAutocomplete..." label="col-3" items={[]} col="3" />
+				<FormTextarea placeholder="FormTextarea..." label="col-4" items={[]} col="4" />
+				<FormInput placeholder="FormInput..." label="col-5" items={[]} col="5" />
+				<FormSelect placeholder="FormSelect..." label="col-10" items={[]} col="10" />
+				<FormInput placeholder="FormInput..." label="col-2" items={[]} col="2" />
+			</Grid>
+		</CardBody>
+	</Card>
+</div>
