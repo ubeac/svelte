@@ -10,6 +10,11 @@
 	/**
 	 * TODO
 	 */
+	export let col: string | undefined = undefined
+
+	/**
+	 * TODO
+	 */
 	export let icon: string | undefined = undefined
 
 	/**
@@ -43,7 +48,7 @@
 </script>
 
 {#if condition($$props)}
-	<FormGroup class={classes}>
+	<FormGroup {col} class={classes}>
 		<svelte:fragment slot="label">
 			{#if label}
 				<Label for={id} {required}>{label}</Label>
