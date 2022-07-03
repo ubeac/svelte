@@ -20,6 +20,11 @@
 	 */
 	export let label: string | undefined = undefined
 
+	/**
+	 * TODO
+	 */
+	export let value: boolean | undefined = undefined
+
 	const forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('form-checkbox', { inline }, $$props.class)
@@ -28,12 +33,12 @@
 {#if condition($$props)}
 	<!-- svelte-ignore a11y-label-has-associated-control -->
 	<label class={classes}>
-		<Checkbox {forwardEvents} />
+		<Checkbox bind:value {forwardEvents} {...$$restProps} />
 		{#if label}
-			<span class="form-checkbox-label">{label}</span>
+			<span class={classname('form-checkbox-label')}>{label}</span>
 		{/if}
 		{#if description}
-			<span class="form-checkbox-description">
+			<span class={classname('form-checkbox-description')}>
 				{description}
 			</span>
 		{/if}
