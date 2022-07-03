@@ -1,15 +1,15 @@
-.u-form-checkbox {
+.u-form-radio {
 	@extend .form-check;
 }
 
-.u-form-checkbox-description {
+.u-form-radio-description {
 	@extend .form-check-description;
 }
 
-.u-form-checkbox-inline {
+.u-form-radio-inline {
 	@extend .form-check-inline;
 }
 
-.u-form-checkbox-label {
+.u-form-radio-label {
 	@extend .form-check-label;
 }
