@@ -1,17 +1,38 @@
 <script lang="ts">
-	import { Card, CardBody, FormAutocomplete, FormInput, FormSelect, FormTextarea, Grid } from '$lib/components'
+	import { Checkbox, DatePicker, FormCheckbox, FormRadio, Radio } from '$lib/components'
+
+	let value: any = undefined
 </script>
 
 <div class="p-2">
-	<Card outline>
-		<CardBody>
-			<Grid gutter="sm">
-				<FormAutocomplete placeholder="FormAutocomplete..." label="col-3" items={[]} col="3" />
-				<FormTextarea placeholder="FormTextarea..." label="col-4" items={[]} col="4" />
-				<FormInput placeholder="FormInput..." label="col-5" items={[]} col="5" />
-				<FormSelect placeholder="FormSelect..." label="col-10" items={[]} col="10" />
-				<FormInput placeholder="FormInput..." label="col-2" items={[]} col="2" />
-			</Grid>
-		</CardBody>
-	</Card>
+	<DatePicker bind:value />
+	{value}
+	<br />
+	<Checkbox bind:value />
+	<br />
+	<br />
+	<br />
+	<FormCheckbox bind:value />
+	<FormCheckbox bind:value description="description" />
+	<FormCheckbox bind:value inline />
+	<FormCheckbox bind:value inline label="label" />
+	<FormCheckbox bind:value inline label="label" />
+	<FormCheckbox bind:value inline label="label" />
+	<FormCheckbox bind:value label="label" description="description" />
+	<br />
+	<br />
+	<br />
+	<Radio bind:group={value} name="a" value="1" />
+	<Radio bind:group={value} name="a" value="2" />
+	<Radio bind:group={value} name="a" value="3" />
+	<br />
+	<br />
+	<br />
+	<FormRadio bind:group={value} name="b" value="1" />
+	<FormRadio bind:group={value} name="b" value="2" description="description" />
+	<FormRadio bind:group={value} name="b" value="3" inline />
+	<FormRadio bind:group={value} name="b" value="4" inline label="label" />
+	<FormRadio bind:group={value} name="b" value="5" inline label="label" />
+	<FormRadio bind:group={value} name="b" value="6" inline label="label" />
+	<FormRadio bind:group={value} name="b" value="7" label="label" description="description" />
 </div>
