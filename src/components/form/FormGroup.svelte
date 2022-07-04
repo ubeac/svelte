@@ -19,7 +19,7 @@
 						<slot name="inner:start" />
 						<div class="input">
 							<slot />
-							<div class="focus" />
+							<div class={classname('form-group-focus', null, $$props.class)} />
 						</div>
 						<slot name="inner:end" />
 					</div>

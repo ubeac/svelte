@@ -15,11 +15,6 @@
 	export let outline: boolean = false
 
 	/**
-	 * If you want to change the padding between card's content and card's border, use padding property.
-	 */
-	export let padding: 'sm' | 'md' | 'lg' | undefined = undefined
-
-	/**
 	 * Use tile property to neutralize border-radius
 	 */
 	export let tile: boolean = false
@@ -31,7 +26,6 @@
 		{
 			elevation,
 			outline,
-			padding,
 			tile,
 		},
 		$$props.class

@@ -30,7 +30,6 @@
 </Story>
 <Story name="dot" args={{ dot: true }} />
 <Story name="ghost" args={{ ghost: true, color: COLORS[1] }} />
-<Story name="href" args={{ href: 'https://www.google.com/' }} />
 <Story name="outline" args={{ outline: true, color: COLORS[1] }} />
 <Story name="shape" args={{ color: COLORS[1] }}>
 	<Badge shape="round">Round</Badge>
