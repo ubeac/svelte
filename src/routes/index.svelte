@@ -7,13 +7,13 @@
 
 <div class="p-2">
 	<Card outline>
-		<Table on:click={() => console.log('clicked on table')} hover nowrap>
+		<Table on:click={() => console.log('clicked on table')} hover border wrap>
 			<TableHead>
 				<TableRow>
-					<TableCell>id</TableCell>
-					<TableCell>username</TableCell>
-					<TableCell>name</TableCell>
-					<TableCell>email</TableCell>
+					<TableCell head>id</TableCell>
+					<TableCell head>m culpa. Unde odio libero impedit illum?</TableCell>
+					<TableCell head>name</TableCell>
+					<TableCell head>email</TableCell>
 				</TableRow>
 			</TableHead>
 			<TableBody
