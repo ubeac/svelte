@@ -1,14 +1,15 @@
 .u-table {
 	@extend .table;
 	@extend .table-vcenter;
+	@extend .table-nowrap;
 }
 
 .u-table-parent {
 	@extend .table-responsive;
 }
 
-.u-table-nowrap {
-	@extend .table-nowrap;
+.u-table-wrap > :not(caption) > * > * {
+	white-space: unset;
 }
 
 .u-table-striped {
@@ -19,6 +20,6 @@
 	@extend .table-hover;
 }
 
-.u-table-borderless {
-	@extend .table-borderless;
+.u-table-border {
+	@extend .table-bordered;
 }

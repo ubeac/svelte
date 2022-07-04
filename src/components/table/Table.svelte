@@ -7,7 +7,7 @@
 	/**
 	 * Disable wraping text inside Cells.
 	 */
-	export let nowrap: boolean | undefined = undefined
+	export let wrap: boolean | undefined = undefined
 
 	/**
 	 * Set different background color for even and odd rows.
@@ -22,17 +22,17 @@
 	/**
 	 * Removes border between Rows.
 	 */
-	export let borderless: boolean | undefined = undefined
+	export let border: boolean | undefined = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname(
 		'table',
 		{
-			nowrap,
+			wrap,
 			striped,
 			hover,
-			borderless,
+			border,
 		},
 		null,
 		$$props.class
