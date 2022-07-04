@@ -6,7 +6,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	const head = getContext('head') ?? false
+	export let head: boolean = undefined
 
 	$: classes = classname('table-cell', null, $$props.class)
 </script>

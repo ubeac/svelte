@@ -5,8 +5,6 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	setContext('head', true)
-
 	$: classes = classname('table-head', null, $$props.class)
 </script>
 
