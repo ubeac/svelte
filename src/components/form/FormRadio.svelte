@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Checkbox } from '$lib/components'
+	import { Radio } from '$lib/components'
 	import { forwardEventsBuilderNew } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
@@ -13,6 +13,11 @@
 	/**
 	 * TODO
 	 */
+	export let group: any = undefined
+
+	/**
+	 * TODO
+	 */
 	export let inline: boolean = false
 
 	/**
@@ -20,25 +25,20 @@
 	 */
 	export let label: string | undefined = undefined
 
-	/**
-	 * TODO
-	 */
-	export let value: boolean | undefined = undefined
-
 	const forwardEvents = forwardEventsBuilderNew(get_current_component())
 
-	$: classes = classname('form-checkbox', { inline }, $$props.class)
+	$: classes = classname('form-radio', { inline }, $$props.class)
 </script>
 
 {#if condition($$props)}
 	<!-- svelte-ignore a11y-label-has-associated-control -->
 	<label class={classes}>
-		<Checkbox bind:value {forwardEvents} {...$$restProps} />
+		<Radio bind:group {forwardEvents} {...$$restProps} />
 		{#if label}
-			<span class={classname('form-checkbox-label')}>{label}</span>
+			<span class={classname('form-radio-label')}>{label}</span>
 		{/if}
 		{#if description}
-			<span class={classname('form-checkbox-description')}>
+			<span class={classname('form-radio-description')}>
 				{description}
 			</span>
 		{/if}

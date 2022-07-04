@@ -35,19 +35,6 @@
 		<CardBody>Body</CardBody>
 	</Card>
 </Story>
-<Story name="padding">
-	<Card padding="sm">
-		<CardBody>Card with `sm` padding</CardBody>
-	</Card>
-	<br />
-	<Card padding="md">
-		<CardBody>Card with `md` padding</CardBody>
-	</Card>
-	<br />
-	<Card padding="lg">
-		<CardBody>Card with `lg` padding</CardBody>
-	</Card>
-</Story>
 <Story name="flat">
 	<Card>
 		<CardBody>With Elevation</CardBody>

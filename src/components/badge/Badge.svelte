@@ -52,9 +52,9 @@
 </script>
 
 {#if condition($$props)}
-	<svelte:element this={href ? 'a' : 'span'} {href} use:forwardEvents {...$$restProps} class={classes}>
+	<span use:forwardEvents {...$$restProps} class={classes}>
 		{#if !dot}
 			<slot />
 		{/if}
-	</svelte:element>
+	</span>
 {/if}

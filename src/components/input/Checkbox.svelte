@@ -12,7 +12,7 @@
 	/**
 	 * TODO
 	 */
-	export let value: any = undefined
+	export let value: boolean | undefined = undefined
 
 	$: classes = classname('checkbox', null, $$props.class)
 </script>

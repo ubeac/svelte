@@ -3,7 +3,7 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { FormGroup, Icon, Input, Label, Spinner } from '$lib/components'
+	import { Autocomplete, FormGroup, Icon, Label, Spinner } from '$lib/components'
 	import { forwardEventsBuilderNew } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
@@ -44,7 +44,7 @@
 
 	const forwardEvents = forwardEventsBuilderNew(get_current_component())
 
-	$: classes = classname('form-input', null, $$props.class)
+	$: classes = classname('form-autocomplete', null, $$props.class)
 </script>
 
 {#if condition($$props)}
@@ -62,7 +62,7 @@
 			{/if}
 			<slot name="inner:start" />
 		</svelte:fragment>
-		<Input bind:value {id} {forwardEvents} {...$$restProps} />
+		<Autocomplete bind:value {id} {forwardEvents} {...$$restProps} on:changed />
 		<svelte:fragment slot="inner:end">
 			{#if loading}
 				<Spinner />

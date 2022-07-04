@@ -38,10 +38,10 @@
 
 	$: classes = classname('select', { preview }, $$props.class)
 
-	$: ({ options, getId, getText, getValue, toId } = createOptions({ items, key, text }))
+	$: ({ options, fromValue, getKey, getText, toValue } = createOptions({ items, key, text }))
 
 	function change(event: any) {
-		dispatch('changed', (value = getValue(event.target.value)))
+		dispatch('changed', (value = toValue(event.target.value)))
 	}
 </script>
 
@@ -51,12 +51,12 @@
 			{value}
 		</div>
 	{:else}
-		<select value={toId(value)} on:change={change} use:forwardEvents {...$$restProps} class={classes}>
+		<select value={fromValue(value)} on:change={change} use:forwardEvents {...$$restProps} class={classes}>
 			{#if $$props.placeholder}
 				<option disabled selected value="">{$$props.placeholder}</option>
 			{/if}
 			{#each $options as option}
-				<option value={getId(option)}>
+				<option value={getKey(option)}>
 					{getText(option)}
 				</option>
 			{/each}
