@@ -18,8 +18,8 @@
 	component={Table}
 	argTypes={{
 		itemCount: control('number', null, 5),
-		borderless: control('boolean'),
-		nowrap: control('boolean'),
+		border: control('boolean'),
+		wrap: control('boolean'),
 		hover: control('boolean'),
 		striped: control('boolean'),
 	}} />
@@ -44,8 +44,8 @@
 </Template>
 
 <Story name="default" />
-<Story name="borderless" args={{ borderless: true }} />
-<Story name="nowrap" args={{ nowrap: true }} />
+<Story name="border" args={{ border: true }} />
+<Story name="wrap" args={{ wrap: true }} />
 <Story name="hover" args={{ hover: true }} />
 <Story name="striped" args={{ striped: true }} />
 <Story name="more Items" args={{ itemCount: 10 }} />
