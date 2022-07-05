@@ -1,0 +1,25 @@
+.u-table {
+	@extend .table;
+	@extend .table-vcenter;
+	@extend .table-nowrap;
+}
+
+.u-table-parent {
+	@extend .table-responsive;
+}
+
+.u-table-wrap > :not(caption) > * > * {
+	white-space: unset;
+}
+
+.u-table-striped {
+	@extend .table-striped;
+}
+
+.u-table-hover {
+	@extend .table-hover;
+}
+
+.u-table-border {
+	@extend .table-bordered;
+}
