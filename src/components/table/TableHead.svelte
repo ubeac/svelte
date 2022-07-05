@@ -1,11 +1,14 @@
 <script>
+	import { get_current_component, setContext } from 'svelte/internal'
+
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
-	import { get_current_component, setContext } from 'svelte/internal'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('table-head', null, $$props.class)
+	setContext('TABLE:HEAD', true)
+
+	$: classes = classname('table-head', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

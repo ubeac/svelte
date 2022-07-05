@@ -5,36 +5,35 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * Disable wraping text inside Cells.
+	 * Removes border between Rows.
 	 */
-	export let wrap: boolean | undefined = undefined
-
-	/**
-	 * Set different background color for even and odd rows.
-	 */
-	export let striped: boolean | undefined = undefined
+	export let border: boolean = false
 
 	/**
 	 * Change the background color of Row on mouse hover.
 	 */
-	export let hover: boolean | undefined = undefined
+	export let hover: boolean = false
 
 	/**
-	 * Removes border between Rows.
+	 * Set different background color for even and odd rows.
 	 */
-	export let border: boolean | undefined = undefined
+	export let striped: boolean = false
+
+	/**
+	 * Disable wraping text inside Cells.
+	 */
+	export let wrap: boolean = false
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname(
 		'table',
 		{
-			wrap,
-			striped,
-			hover,
 			border,
+			hover,
+			striped,
+			wrap,
 		},
-		null,
 		$$props.class
 	)
 </script>

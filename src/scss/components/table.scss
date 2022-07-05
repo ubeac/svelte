@@ -1,25 +1,25 @@
 .u-table {
 	@extend .table;
-	@extend .table-vcenter;
 	@extend .table-nowrap;
+	@extend .table-vcenter;
 }
 
-.u-table-parent {
-	@extend .table-responsive;
-}
-
-.u-table-wrap > :not(caption) > * > * {
-	white-space: unset;
-}
-
-.u-table-striped {
-	@extend .table-striped;
+.u-table-border {
+	@extend .table-bordered;
 }
 
 .u-table-hover {
 	@extend .table-hover;
 }
 
-.u-table-border {
-	@extend .table-bordered;
+.u-table-parent {
+	@extend .table-responsive;
+}
+
+.u-table-striped {
+	@extend .table-striped;
+}
+
+.u-table-wrap > :not(caption) > * > * {
+	white-space: unset;
 }

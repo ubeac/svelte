@@ -6,19 +6,13 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	export let head: boolean = undefined
+	const head = getContext('TABLE:HEAD') ?? false
 
-	$: classes = classname('table-cell', null, $$props.class)
+	$: classes = classname('table-cell', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}
-	{#if head}
-		<th use:forwardEvents {...$$restProps} class={classes}>
-			<slot />
-		</th>
-	{:else}
-		<td use:forwardEvents {...$$restProps}>
-			<slot />
-		</td>
-	{/if}
+	<svelte:element this={head ? 'th' : 'td'} use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</svelte:element>
 {/if}
