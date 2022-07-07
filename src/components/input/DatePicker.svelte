@@ -59,8 +59,9 @@
 		},
 		setup(picker: any) {
 			picker.on('selected', (date: any) => {
-				if (date?.dateInstance) value = luxon.DateTime.fromJSDate(date.dateInstance).toFormat(format)
-				dispatch('changed', value)
+				const newValue = date?.dateInstance ? luxon.DateTime.fromJSDate(date.dateInstance).toFormat(format) : value
+				if (value === newValue) return
+				dispatch('changed', (value = newValue))
 			})
 		},
 	}
