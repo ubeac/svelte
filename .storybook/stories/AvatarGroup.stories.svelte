@@ -1,26 +1,26 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
-	import { Avatar } from '$lib/components'
+	import { Avatar, AvatarGroup } from '$lib/components'
 </script>
 
-<Meta id="Avatar Group" component={Avatar.Group} />
+<Meta id="Avatar Group" component={AvatarGroup} />
 
 <Template let:args>
-	<Avatar.Group {...args}>
+	<AvatarGroup {...args}>
 		<Avatar>A</Avatar>
 		<Avatar>B</Avatar>
 		<Avatar>C</Avatar>
 		<Avatar>D</Avatar>
-	</Avatar.Group>
+	</AvatarGroup>
 	<br />
 	<br />
 	<br />
-	<Avatar.Group {...args}>
+	<AvatarGroup {...args}>
 		<Avatar size="sm" shape="circle">A</Avatar>
 		<Avatar size="sm" shape="circle">B</Avatar>
 		<Avatar size="sm" shape="circle">C</Avatar>
 		<Avatar size="sm" shape="circle">D</Avatar>
-	</Avatar.Group>
+	</AvatarGroup>
 </Template>
 
 <Story name="default" />

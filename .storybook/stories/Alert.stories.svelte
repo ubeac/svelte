@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Alert, Button, Icon } from '$lib/components'
+	import { Alert, AlertTitle, Button, Icon } from '$lib/components'
 
 	const TYPES = ['danger', 'info', 'success', 'warning', undefined]
 	const VARIANTS = ['outlined', 'filled', undefined]
@@ -27,7 +27,7 @@
 
 <Template let:args>
 	<Alert {...args}>
-		<Alert.Title>Alert Title</Alert.Title>
+		<AlertTitle>Alert Title</AlertTitle>
 		This is Alert's content
 	</Alert>
 </Template>
@@ -35,7 +35,7 @@
 <Story name="default" />
 <Story name="actions" let:args>
 	<Alert {...args}>
-		<Alert.Title>Title</Alert.Title>
+		<AlertTitle>Title</AlertTitle>
 		<p>This is Alert's content</p>
 		<div slot="actions">
 			<Button color="green">Ok</Button>
@@ -48,8 +48,8 @@
 <Story name="icon" args={{ icon: 'moon' }} />
 <Story name="icon slot" let:args>
 	<Alert {...args}>
-		<Icon slot="icon" pack="mdi" name="brightness" />
-		<Alert.Title>Alert Title</Alert.Title>
+		<Icon slot="icon" name="brightness" />
+		<AlertTitle>Alert Title</AlertTitle>
 		This is Alert's content
 	</Alert>
 </Story>

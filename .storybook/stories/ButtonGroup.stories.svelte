@@ -1,14 +1,14 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Button } from '$lib/components'
+	import { Button, ButtonGroup } from '$lib/components'
 
 	const SIZES = ['sm', 'md', 'lg']
 </script>
 
 <Meta
 	title="ButtonGroup"
-	component={Button.Group}
+	component={ButtonGroup}
 	argTypes={{
 		size: {
 			control: 'radio',
@@ -17,11 +17,11 @@
 	}} />
 
 <Template let:args>
-	<Button.Group {...args}>
+	<ButtonGroup {...args}>
 		<Button>Button</Button>
 		<Button>Button</Button>
 		<Button>Button</Button>
-	</Button.Group>
+	</ButtonGroup>
 </Template>
 
 <Story name="default" />

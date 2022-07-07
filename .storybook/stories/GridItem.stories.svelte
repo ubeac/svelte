@@ -1,7 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Grid } from '$lib/components'
+	import { Grid, GridItem } from '$lib/components'
 
 	const ALIGN_SELFS = ['start', 'center', 'end', 'stretch', 'auto', undefined]
 	const NUMBERS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
@@ -50,22 +50,22 @@
 	}
 </script>
 
-<Meta title="GridItem" component={Grid.Item} {argTypes} />
+<Meta title="GridItem" component={GridItem} {argTypes} />
 
 <Template let:args>
 	<Grid class="bg-gray h-5">
-		<Grid.Item class="h-4 w-4 bg-red">1</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-yellow">2</Grid.Item>
-		<Grid.Item {...args} class="h-4 w-4 bg-green">3*</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-blue">4</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-red">5</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-yellow">6</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-green">7</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-blue">8</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-red">9</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-yellow">10</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-green">11</Grid.Item>
-		<Grid.Item class="h-4 w-4 bg-blue">12</Grid.Item>
+		<GridItem class="h-4 w-4 bg-red">1</GridItem>
+		<GridItem class="h-4 w-4 bg-yellow">2</GridItem>
+		<GridItem {...args} class="h-4 w-4 bg-green">3*</GridItem>
+		<GridItem class="h-4 w-4 bg-blue">4</GridItem>
+		<GridItem class="h-4 w-4 bg-red">5</GridItem>
+		<GridItem class="h-4 w-4 bg-yellow">6</GridItem>
+		<GridItem class="h-4 w-4 bg-green">7</GridItem>
+		<GridItem class="h-4 w-4 bg-blue">8</GridItem>
+		<GridItem class="h-4 w-4 bg-red">9</GridItem>
+		<GridItem class="h-4 w-4 bg-yellow">10</GridItem>
+		<GridItem class="h-4 w-4 bg-green">11</GridItem>
+		<GridItem class="h-4 w-4 bg-blue">12</GridItem>
 	</Grid>
 </Template>
 
