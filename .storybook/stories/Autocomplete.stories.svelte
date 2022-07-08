@@ -32,8 +32,9 @@
 
 <Story name="default" />
 
-<Story name="placeholder" args={{ placeholder: 'this is placeholder' }} />
-<Story name="preview" args={{ preview: true }} />
-<Story name="readonly" args={{ readonly: true }} />
 <Story name="disabled" args={{ disabled: true }} />
+<Story name="items" args={{ items: [1, 2, 3, 4, 5, 11, 12, 13, 14, 15, 21, 22, 23, 24, 25] }} />
 <Story name="multiple" args={{ multiple: true }} />
+<Story name="preview" args={{ preview: true }} />
+<Story name="placeholder" args={{ placeholder: 'this is placeholder' }} />
+<Story name="readonly" args={{ readonly: true }} />
