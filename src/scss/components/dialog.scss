@@ -2,6 +2,10 @@
 	@extend .modal;
 }
 
+.u-dialog-scrollable .u-dialog-container {
+	@extend .modal-dialog-scrollable;
+}
+
 @each $size in sm, lg, xl {
 	.u-dialog-#{$size} .u-dialog-container {
 		@extend .modal-#{$size};
