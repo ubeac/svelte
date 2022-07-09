@@ -1,0 +1,54 @@
+.u-dialog-confirm-body * {
+	text-align: center;
+}
+
+.u-dialog-confirm-icon {
+	display: flex;
+	box-sizing: content-box;
+	justify-content: center;
+	width: 5em;
+	height: 5em;
+	margin: auto;
+	border: 0.25em solid transparent;
+	border-radius: 50%;
+	font-family: inherit;
+	line-height: 5em;
+	cursor: default;
+	user-select: none;
+}
+
+.u-dialog-confirm-icon-error {
+	border-color: #f27474;
+	color: #f27474;
+}
+
+.u-dialog-confirm-icon-info {
+	border-color: #9de0f6;
+	color: #3fc3ee;
+}
+
+.u-dialog-confirm-icon-question {
+	border-color: #c9dae1;
+	color: #87adbd;
+}
+
+.u-dialog-confirm-icon-success {
+	border-color: #dfffcd;
+	color: #a5dc86;
+}
+
+.u-dialog-confirm-icon-warning {
+	border-color: #facea8;
+	color: #f8bb86;
+}
+
+.u-dialog-confirm-icon * {
+	display: flex;
+	align-items: center;
+	font-size: 3.75em;
+}
+
+.u-dialog-confirm-actions {
+	display: flex;
+	justify-content: center;
+}
