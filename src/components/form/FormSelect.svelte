@@ -8,37 +8,37 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Set column width of component
 	 */
 	export let col: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show an icon inside Select component
 	 */
 	export let icon: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Sets id for HTML component
 	 */
 	export let id: string | undefined = nanoid(10)
 
 	/**
-	 * TODO
+	 * Set label for select component
 	 */
 	export let label: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show a loading indicator
 	 */
 	export let loading: boolean = false
 
 	/**
-	 * TODO
+	 * Mark this as required field in form
 	 */
 	export let required: boolean = false
 
 	/**
-	 * TODO
+	 * Value of selcted option
 	 */
 	export let value: any = undefined
 

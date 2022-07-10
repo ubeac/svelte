@@ -5,17 +5,17 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	/**
-	 * TODO
+	 * The Selected radio button's value
 	 */
 	export let group: any = undefined
 
 	/**
-	 * TODO
+	 * The value of radio button
 	 */
 	export let value: any = undefined
 

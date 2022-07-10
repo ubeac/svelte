@@ -9,12 +9,12 @@
 	import { classname, condition, createOptions, requestAnimationFrame } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	/**
-	 * TODO
+	 * Control disabled state of component
 	 */
 	export let disabled: boolean = false
 
@@ -24,27 +24,27 @@
 	export let items: Array<any> | object | undefined = undefined
 
 	/**
-	 * TODO
+	 * an existing field in object (if item is array of object)
 	 */
 	export let key: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show loading indicator
 	 */
 	export let loading: boolean = false
 
 	/**
-	 * TODO
+	 * Show value in Preview mode
 	 */
 	export let preview: boolean = false
 
 	/**
-	 * TODO
+	 * If items is array of objects, you should set text prop to an existing field in objects
 	 */
 	export let text: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Selected option
 	 */
 	export let value: Array<any> | string | number | undefined = undefined
 

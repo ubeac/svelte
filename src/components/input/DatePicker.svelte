@@ -8,22 +8,22 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Changes display format of the date
 	 */
 	export let format: string = 'yyyy-MM-dd'
 
 	/**
-	 * TODO
+	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	/**
-	 * TODO
+	 * Show date value in Preview mode
 	 */
 	export let preview: boolean = false
 
 	/**
-	 * TODO
+	 * The date value of Date picker
 	 */
 	export let value: Date | string | undefined = undefined
 

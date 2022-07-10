@@ -8,12 +8,12 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Set id for HTML element
 	 */
 	export let id: string = nanoid(10)
 
 	/**
-	 * TODO
+	 * Set label for filedset
 	 */
 	export let label: string | undefined = undefined
 

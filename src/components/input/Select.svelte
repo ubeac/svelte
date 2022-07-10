@@ -5,7 +5,7 @@
 	import { classname, condition, createOptions } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
 
@@ -20,7 +20,7 @@
 	export let key: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show Selected value in Preview mode
 	 */
 	export let preview: boolean = false
 
@@ -30,7 +30,7 @@
 	export let text: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Selected option's value
 	 */
 	export let value: any = undefined
 

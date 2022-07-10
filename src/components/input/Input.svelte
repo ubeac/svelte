@@ -5,17 +5,17 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	/**
-	 * TODO
+	 * Show value of input in Preview mode
 	 */
 	export let preview: boolean = false
 
 	/**
-	 * TODO
+	 * the text Value of input
 	 */
 	export let value: any = undefined
 
