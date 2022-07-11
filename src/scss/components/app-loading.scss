@@ -1,0 +1,49 @@
+.u-app-loading {
+	overflow: hidden;
+	display: none;
+	position: relative;
+	height: 0.25rem;
+	width: 100%;
+}
+
+@each $color, $value in theme-colors() {
+	.u-app-loading-#{$color} {
+		@extend .bg-#{$color}-lt;
+
+		.u-app-loading-bar {
+			@extend .bg-#{$color};
+		}
+	}
+}
+
+.u-app-loading-show {
+	display: block;
+}
+
+.u-app-loading-indeterminate > .u-app-loading-bar {
+	animation: u-loading-animate-progress 1s linear infinite;
+}
+
+.u-app-loading-bar {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 0.125rem;
+}
+
+@keyframes u-loading-animate-progress {
+	0% {
+		left: 0%;
+		width: 0%;
+	}
+	50% {
+		left: 10%;
+		width: 80%;
+	}
+
+	100% {
+		left: 100%;
+		width: 0%;
+	}
+}
