@@ -8,37 +8,37 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Set column width of Textarea
 	 */
 	export let col: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show an icon inside component
 	 */
 	export let icon: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Set id for HTML element
 	 */
 	export let id: string | undefined = nanoid(10)
 
 	/**
-	 * TODO
+	 * Set label for Textarea
 	 */
 	export let label: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show a loading indicator
 	 */
 	export let loading: boolean = false
 
 	/**
-	 * TODO
+	 * Mark this as required field in form
 	 */
 	export let required: boolean = false
 
 	/**
-	 * TODO
+	 * The text content of textarea
 	 */
 	export let value: any = undefined
 

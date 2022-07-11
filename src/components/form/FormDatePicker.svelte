@@ -8,37 +8,37 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Sets column width
 	 */
 	export let col: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Sets an icon for the Component
 	 */
 	export let icon: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Sets id for HTML element
 	 */
 	export let id: string | undefined = nanoid(10)
 
 	/**
-	 * TODO
+	 * Sets label for Date Picker
 	 */
 	export let label: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show loading indicator inside component
 	 */
 	export let loading: boolean = false
 
 	/**
-	 * TODO
+	 * Mark this as a required field in form
 	 */
 	export let required: boolean = false
 
 	/**
-	 * TODO
+	 * Selected date value
 	 */
 	export let value: any = undefined
 

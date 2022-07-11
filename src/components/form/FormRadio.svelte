@@ -6,22 +6,22 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Description for Radio button
 	 */
 	export let description: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * value of Selected radio button
 	 */
 	export let group: any = undefined
 
 	/**
-	 * TODO
+	 * Align multiple Radio buttons in a single horizontal line
 	 */
 	export let inline: boolean = false
 
 	/**
-	 * TODO
+	 * Label of Radio button
 	 */
 	export let label: string | undefined = undefined
 

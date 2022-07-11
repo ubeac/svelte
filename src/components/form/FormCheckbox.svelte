@@ -6,22 +6,22 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Description of checkbox
 	 */
 	export let description: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show multiple Checkboxes in same horozontal line
 	 */
 	export let inline: boolean = false
 
 	/**
-	 * TODO
+	 * label for checkbox
 	 */
 	export let label: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show checked state of checkbox
 	 */
 	export let value: boolean | undefined = undefined
 

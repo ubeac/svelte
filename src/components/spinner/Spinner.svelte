@@ -6,17 +6,17 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * The color of spinner
 	 */
 	export let color: Colors = undefined
 
 	/**
-	 * TODO
+	 * Sets the size of component
 	 */
 	export let size: 'sm' | 'md' = 'sm'
 
 	/**
-	 * TODO
+	 * You can choose a style for spinner using style property
 	 */
 	export let style: 'border' | 'grow' = 'border'
 

@@ -5,12 +5,12 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	/**
-	 * TODO
+	 * Checked state of Checkbox
 	 */
 	export let value: boolean | undefined = undefined
 
