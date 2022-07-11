@@ -27,7 +27,7 @@
 	$: icon = (() => {
 		switch (type) {
 			case 'error':
-				return 'x'
+				return '✗'
 			case 'info':
 				return 'i'
 			case 'question':
@@ -44,28 +44,26 @@
 	<Dialog bind:open size="sm" persistent>
 		<DialogContent>
 			<DialogBody>
-				<div class={classname('dialog-confirm-body')}>
-					{#if icon}
-						<div class={classname('dialog-confirm-icon', { type })}>
-							<div>{icon}</div>
-						</div>
+				{#if icon}
+					<div class={classname('confirm-icon', { type })}>
+						<div>{icon}</div>
+					</div>
+				{/if}
+				<slot name="title">
+					{#if title}
+						<h2 class={classname('confirm-title')}>
+							{title}
+						</h2>
 					{/if}
-					<slot name="title">
-						{#if title}
-							<h2>
-								{title}
-							</h2>
-						{/if}
-					</slot>
-					<slot name="description">
-						{#if description}
-							<p>
-								{description}
-							</p>
-						{/if}
-					</slot>
-				</div>
-				<div class={classname('dialog-confirm-actions')}>
+				</slot>
+				<slot name="description">
+					{#if description}
+						<p class={classname('confirm-description')}>
+							{description}
+						</p>
+					{/if}
+				</slot>
+				<div class={classname('confirm-actions')}>
 					<slot>
 						<Button color="primary" on:click={() => (open = !open)}>OK</Button>
 					</slot>
