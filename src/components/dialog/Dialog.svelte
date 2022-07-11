@@ -25,6 +25,11 @@
 	/**
 	 * TODO
 	 */
+	export let placement: 'top' | 'center' = 'top'
+
+	/**
+	 * TODO
+	 */
 	export let scrollable: boolean = false
 
 	/**
@@ -34,7 +39,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('dialog', { scrollable, size }, `fade ${$$props.class || ''}`)
+	$: classes = classname('dialog', { placement, scrollable, size }, `fade ${$$props.class || ''}`)
 
 	let element: HTMLElement
 	let instance: Modal

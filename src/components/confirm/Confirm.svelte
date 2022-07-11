@@ -41,7 +41,7 @@
 </script>
 
 {#if condition($$props)}
-	<Dialog bind:open size="sm" persistent>
+	<Dialog bind:open size="sm" persistent placement="center">
 		<DialogContent>
 			<DialogBody>
 				{#if icon}
