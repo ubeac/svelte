@@ -16,12 +16,19 @@
 	}
 }
 
-.u-app-loading-show {
-	display: block;
+.u-app-loading-fixed {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
 }
 
 .u-app-loading-indeterminate > .u-app-loading-bar {
-	animation: u-loading-animate-progress 1s linear infinite;
+	animation: u-app-loading-animate-progress 1s linear infinite;
+}
+
+.u-app-loading-show {
+	display: block;
 }
 
 .u-app-loading-bar {
@@ -32,7 +39,7 @@
 	border-radius: 0.125rem;
 }
 
-@keyframes u-loading-animate-progress {
+@keyframes u-app-loading-animate-progress {
 	0% {
 		left: 0%;
 		width: 0%;

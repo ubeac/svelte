@@ -8,6 +8,7 @@
 	let el: SvelteComponent
 	let color: Colors
 	let indeterminate: boolean
+	let fixed: boolean
 	let showInCard: boolean = false
 
 	onMount(() => {
@@ -41,7 +42,7 @@
 	}
 </script>
 
-<AppLoadingBar {color} {indeterminate} bind:this={el} />
+<AppLoadingBar {fixed} {color} {indeterminate} bind:this={el} />
 
 <Card outline class="m-4">
 	{#if showInCard}
@@ -50,6 +51,7 @@
 	<CardHeader>Controls</CardHeader>
 	<CardBody>
 		<FormCheckbox bind:value={indeterminate} label="Indeterminate" />
+		<FormCheckbox bind:value={fixed} label="fixed" />
 		<FormCheckbox bind:value={showInCard} label="Show inside card?" />
 		<Select
 			bind:value={color}
@@ -62,3 +64,13 @@
 		<Button on:click={pop}>Pop</Button>
 	</CardBody>
 </Card>
+<div style="height: 100vh;" />
+<div>hi</div>
+<div style="height: 100vh;" />
+<div>hi</div>
+<div style="height: 100vh;" />
+<div>hi</div>
+<div style="height: 100vh;" />
+<div>hi</div>
+<div style="height: 100vh;" />
+<div>hi</div>

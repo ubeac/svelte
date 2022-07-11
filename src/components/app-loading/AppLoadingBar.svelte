@@ -13,6 +13,11 @@
 	export let color: Colors = 'primary'
 
 	/**
+	 * Always show loading bar in top of page
+	 */
+	export let fixed: boolean = false
+
+	/**
 	 * Use Indeterminate prop when you don't know how long the loading will take
 	 */
 	export let indeterminate: boolean = false
@@ -77,6 +82,7 @@
 		'app-loading',
 		{
 			color,
+			fixed,
 			indeterminate,
 			show,
 		},
