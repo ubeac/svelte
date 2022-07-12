@@ -1,8 +1,14 @@
-.u-dialog-confirm-body * {
+.u-confirm-title {
 	text-align: center;
+	margin-bottom: 0.75rem;
 }
 
-.u-dialog-confirm-icon {
+.u-confirm-description {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.u-confirm-icon {
 	display: flex;
 	box-sizing: content-box;
 	justify-content: center;
@@ -15,40 +21,45 @@
 	line-height: 5em;
 	cursor: default;
 	user-select: none;
+	margin-bottom: 0.75rem;
 }
 
-.u-dialog-confirm-icon-error {
-	border-color: #f27474;
-	color: #f27474;
-}
-
-.u-dialog-confirm-icon-info {
-	border-color: #9de0f6;
-	color: #3fc3ee;
-}
-
-.u-dialog-confirm-icon-question {
-	border-color: #c9dae1;
-	color: #87adbd;
-}
-
-.u-dialog-confirm-icon-success {
-	border-color: #dfffcd;
-	color: #a5dc86;
-}
-
-.u-dialog-confirm-icon-warning {
-	border-color: #facea8;
-	color: #f8bb86;
-}
-
-.u-dialog-confirm-icon * {
+.u-confirm-icon * {
 	display: flex;
 	align-items: center;
 	font-size: 3.75em;
 }
 
-.u-dialog-confirm-actions {
+.u-confirm-icon-error {
+	border-color: #f27474;
+	color: #f27474;
+	div {
+		margin-bottom: 0.125em;
+	}
+}
+
+.u-confirm-icon-info {
+	border-color: #9de0f6;
+	color: #3fc3ee;
+}
+
+.u-confirm-icon-question {
+	border-color: #c9dae1;
+	color: #87adbd;
+}
+
+.u-confirm-icon-success {
+	border-color: #dfffcd;
+	color: #a5dc86;
+}
+
+.u-confirm-icon-warning {
+	border-color: #facea8;
+	color: #f8bb86;
+}
+
+.u-confirm-actions {
 	display: flex;
 	justify-content: center;
+	column-gap: 0.75em;
 }

@@ -5,13 +5,13 @@
 	import TomSelect from 'tom-select'
 	import type { TomSettings } from 'tom-select/dist/types/types'
 
-	import { forwardEventsBuilderNew } from '$lib/directives'
+	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition, createOptions, requestAnimationFrame } from '$lib/utils'
 
 	/**
 	 * Forward all native Events
 	 */
-	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Control disabled state of component
