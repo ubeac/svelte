@@ -7,7 +7,7 @@ type EventDestructor = () => void
 
 const regex = /^[a-z]+(?::(?:preventDefault|stopPropagation|passive|nonpassive|capture|once|self))+$/
 
-// TODO: global event handler
+// TODO: experimental global event handler
 const handler = (detail: any) => {
 	document.dispatchEvent(new CustomEvent('UBEAC:EVENTS', { detail }))
 }
@@ -26,7 +26,7 @@ export const forwardEventsBuilder = (component: SvelteComponent) => {
 
 		const callbacks = (component.$$.callbacks[eventType] ??= [])
 
-		// TODO: global event handler
+		// TODO: experimental global event handler
 		const cb = callback
 		callback = (event) => {
 			handler(event)
@@ -91,7 +91,7 @@ export const forwardEventsBuilder = (component: SvelteComponent) => {
 
 				const destructor = listen(node, eventType, callback, options)
 
-				// TODO: global event handler
+				// TODO: experimental global event handler
 				const mirror = listen(node, eventType, handler, options)
 
 				destructors.push(destructor, mirror)
