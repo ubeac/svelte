@@ -1,11 +1,16 @@
 import type { SvelteComponent } from 'svelte'
-import { bubble, listen, prevent_default, stop_propagation } from 'svelte/internal'
+import { listen, prevent_default, stop_propagation } from 'svelte/internal'
 
 type EventCallback = (event: any) => void
 
 type EventDestructor = () => void
 
 const regex = /^[a-z]+(?::(?:preventDefault|stopPropagation|passive|nonpassive|capture|once|self))+$/
+
+// TODO: global event handler
+const handler = (detail: any) => {
+	document.dispatchEvent(new CustomEvent('UBEAC:EVENTS', { detail }))
+}
 
 export const forwardEventsBuilder = (component: SvelteComponent) => {
 	const natives: { [key: string]: EventCallback[] } = {}
@@ -15,24 +20,28 @@ export const forwardEventsBuilder = (component: SvelteComponent) => {
 
 		if (isNative) {
 			const callbacks = natives[eventType] || (natives[eventType] = [])
-
 			callbacks.push(callback)
-
 			return () => {}
 		}
 
 		const callbacks = (component.$$.callbacks[eventType] ??= [])
 
+		// TODO: global event handler
+		const cb = callback
+		callback = (event) => {
+			handler(event)
+			return cb(event)
+		}
+
 		callbacks.push(callback)
 
 		return () => {
 			const index = callbacks.indexOf(callback)
-
 			if (index == -1) return
-
 			callbacks.splice(index, 1)
 		}
 	}
+
 	return (node: HTMLElement | SVGElement) => {
 		const eventTypes = Object.keys(natives)
 
@@ -82,7 +91,10 @@ export const forwardEventsBuilder = (component: SvelteComponent) => {
 
 				const destructor = listen(node, eventType, callback, options)
 
-				destructors.push(destructor)
+				// TODO: global event handler
+				const mirror = listen(node, eventType, handler, options)
+
+				destructors.push(destructor, mirror)
 			}
 		}
 
