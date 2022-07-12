@@ -16,7 +16,7 @@
 	$: classes = classname(
 		'carousel-item',
 		null,
-		($$props.class || '') + 'carousel-item' + ($activeItem === id ? 'active' : '')
+		($$props.class || '') + ' carousel-item' + ($activeItem === id ? ' active' : '')
 	)
 
 	onMount(() => {
