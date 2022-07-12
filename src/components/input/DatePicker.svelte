@@ -4,7 +4,7 @@
 
 	import * as luxon from 'luxon'
 
-	import { forwardEventsBuilderNew } from '$lib/directives'
+	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
 	/**
@@ -15,7 +15,7 @@
 	/**
 	 * Forward all native Events
 	 */
-	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Show date value in Preview mode

@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { Checkbox } from '$lib/components'
-	import { forwardEventsBuilderNew } from '$lib/directives'
+	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
 	/**
@@ -25,7 +25,7 @@
 	 */
 	export let value: boolean | undefined = undefined
 
-	const forwardEvents = forwardEventsBuilderNew(get_current_component())
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('form-checkbox', { inline }, $$props.class)
 </script>
