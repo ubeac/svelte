@@ -79,7 +79,7 @@
 	$: max = initialMax + tasksLength
 
 	$: classes = classname(
-		'app-loading',
+		'app-loading-bar',
 		{
 			color,
 			fixed,
@@ -91,5 +91,5 @@
 </script>
 
 <div class={classes}>
-	<div style="width: {($value * 100) / max}%;" class={classname('app-loading-bar')} />
+	<div style="width: {($value * 100) / max}%;" class={classname('app-loading-bar-body')} />
 </div>

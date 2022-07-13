@@ -1,4 +1,4 @@
-.u-app-loading {
+.u-app-loading-bar {
 	overflow: hidden;
 	display: none;
 	position: relative;
@@ -7,31 +7,31 @@
 }
 
 @each $color, $value in theme-colors() {
-	.u-app-loading-#{$color} {
+	.u-app-loading-bar-#{$color} {
 		@extend .bg-#{$color}-lt;
 
-		.u-app-loading-bar {
+		.u-app-loading-bar-body {
 			@extend .bg-#{$color};
 		}
 	}
 }
 
-.u-app-loading-fixed {
+.u-app-loading-bar-fixed {
 	position: fixed;
 	z-index: 10;
 	top: 0;
 	left: 0;
 }
 
-.u-app-loading-indeterminate > .u-app-loading-bar {
-	animation: u-app-loading-animate-progress 1s linear infinite;
+.u-app-loading-bar-indeterminate > .u-app-loading-bar-body {
+	animation: u-app-loading-bar-animate-progress 1s linear infinite;
 }
 
-.u-app-loading-show {
+.u-app-loading-bar-show {
 	display: block;
 }
 
-.u-app-loading-bar {
+.u-app-loading-bar-body {
 	height: 100%;
 	position: absolute;
 	left: 0;
@@ -39,7 +39,7 @@
 	border-radius: 0.125rem;
 }
 
-@keyframes u-app-loading-animate-progress {
+@keyframes u-app-loading-bar-animate-progress {
 	0% {
 		left: 0%;
 		width: 0%;
