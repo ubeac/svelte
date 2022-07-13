@@ -32,51 +32,53 @@
 	 */
 	export let show: boolean = false
 
-	let initialMax: number = 100
-	let value = tweened<number>(0, { duration })
-	let tasksLength: number = 0
-	let intervalId: any
+	let MAX: number = 100
 
-	function increment(val: number) {
-		$value += val
+	let interval: any
+	let total: number = 0
+	let value = tweened<number>(0, { duration })
+
+	function increment() {
+		$value += (MAX - $value) / 4
 	}
 
 	export function start() {
 		show = true
 		dispatch('start')
 		value.set(0, { duration: 0 })
-		intervalId = setInterval(() => increment((initialMax - $value) / 4), duration)
+		interval = setInterval(increment, duration)
 	}
 
-	export function push(number = initialMax / 4) {
+	export function push(number = MAX / 4) {
 		show = true
 		dispatch('push', number)
-		tasksLength += number
+		total += number
 	}
 
-	export function pop(number = initialMax / 4) {
+	export function pop(number = MAX / 4) {
 		dispatch('pop', number)
-		tasksLength -= number
-		if (tasksLength <= 0) {
-			tasksLength = 0
-			done()
-		}
+		total -= number
+		if (total > 0) return
+		total = 0
+		done()
 	}
 
 	export function done() {
 		dispatch('done')
-		clearInterval(intervalId)
+		clearInterval(interval)
 		value.set(max, { duration: duration / 2 })
 		setTimeout(() => (show = false), duration)
 	}
 
 	$: if ($value > (max * 95) / 100) {
-		clearInterval(intervalId)
+		clearInterval(interval)
 	}
 
 	$: if (show) start()
 
-	$: max = initialMax + tasksLength
+	$: max = MAX + total
+
+	$: width = ($value * 100) / max
 
 	$: classes = classname(
 		'app-loading-bar',
@@ -91,5 +93,5 @@
 </script>
 
 <div class={classes}>
-	<div style="width: {($value * 100) / max}%;" class={classname('app-loading-bar-body')} />
+	<div style="width: {width}%;" class={classname('app-loading-bar-body')} />
 </div>
