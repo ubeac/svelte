@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
-	import { forwardEventsBuilderNew } from '$lib/directives'
+	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition, createOptions } from '$lib/utils'
 
 	/**
 	 * Forward all native Events
 	 */
-	export let forwardEvents = forwardEventsBuilderNew(get_current_component())
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * TODO

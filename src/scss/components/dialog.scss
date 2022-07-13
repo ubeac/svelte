@@ -2,6 +2,10 @@
 	@extend .modal;
 }
 
+.u-dialog-center .u-dialog-container {
+	@extend .modal-dialog-centered;
+}
+
 .u-dialog-scrollable .u-dialog-container {
 	@extend .modal-dialog-scrollable;
 }
