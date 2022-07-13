@@ -1,67 +1,77 @@
 <script lang="ts">
-	import { Button, Carousel, CarouselItem } from '$lib/components'
-	import { Confirm } from '$lib/components'
+	import { onMount } from 'svelte'
+	import type { SvelteComponent } from 'svelte'
 
-	let confirm1: any
-	let confirm2: any
-	let confirm3: any
-	let confirm4: any
-	let confirm5: any
+	import { AppLoadingBar, Button, Card, CardBody, CardHeader, FormCheckbox, Select } from '$lib/components'
+	import type { Colors } from '$lib/types'
 
-	let items = [1, 2, 3, 4, 5, 6, 7]
+	let el: SvelteComponent
+	let color: Colors
+	let indeterminate: boolean
+	let fixed: boolean
+	let showInCard: boolean = false
 
-	// TODO: sometimes add more doesn't work (breaks carousel because of duplicate active item)
-	function addMore() {
-		items = [...items, 5, 6, 7]
+	onMount(() => {
+		el.start()
+	})
+
+	function start() {
+		color = 'primary'
+		el.start()
 	}
 
-	function removeFromStart() {
-		items.shift()
-		items = items
+	function done() {
+		el.done()
 	}
 
-	function removeFromEnd() {
-		items.pop()
-		items = items
+	function push() {
+		el.push()
 	}
 
-	function reset() {
-		items = [1, 2, 3, 4]
+	function pop() {
+		el.pop()
+	}
+
+	function success() {
+		color = 'success'
+		el.done()
+	}
+	function fail() {
+		color = 'danger'
+		el.done()
 	}
 </script>
 
-<Button on:click={addMore}>Add More</Button>
-<Button on:click={removeFromStart}>Remove From Start</Button>
-<Button on:click={removeFromEnd}>Remove From End</Button>
-<Button on:click={reset}>Reset</Button>
+<AppLoadingBar {fixed} {color} {indeterminate} bind:this={el} />
 
-<Carousel indicators buttons interval={1000}>
-	{#each items as item (item)}
-		<CarouselItem>
-			<img src="/images/{item}.jpeg" alt={item} />
-		</CarouselItem>
-	{/each}
-</Carousel>
+<Card outline class="m-4">
+	{#if showInCard}
+		<AppLoadingBar {color} {indeterminate} />
+	{/if}
+	<CardHeader>Controls</CardHeader>
+	<CardBody>
+		<FormCheckbox bind:value={indeterminate} label="Indeterminate" />
+		<FormCheckbox bind:value={fixed} label="fixed" />
+		<FormCheckbox bind:value={showInCard} label="Show inside card?" />
+		<Select
+			bind:value={color}
+			items={['primary', 'secondary', 'success', 'danger', 'red', 'blue', 'warning', 'gray', 'purple']} />
+		<Button on:click={start}>Start</Button>
+		<Button on:click={done}>Done</Button>
+		<Button on:click={fail}>Fail</Button>
+		<Button on:click={success}>Success</Button>
+		<Button on:click={push}>Push</Button>
+		<Button on:click={pop}>Pop</Button>
+	</CardBody>
+</Card>
+<div style="height: 100vh;" />
+<div>hi</div>
+<div style="height: 100vh;" />
+<div>hi</div>
+<div style="height: 100vh;" />
+<div>hi</div>
+<div style="height: 100vh;" />
+<div>hi</div>
+<div style="height: 100vh;" />
+<div>hi</div>
 
-<br />
-<button on:click={() => (confirm1.open = !confirm1.open)}> toggle </button>
-<Confirm title="The Internet?" description="That thing is still around?" type="error" bind:this={confirm1}>
-	<Button on:click={() => (confirm1.open = false)}>OK</Button>
-	<Button on:click={() => (confirm1.open = false)}>CANCEL</Button>
-</Confirm>
-
-<br />
-<button on:click={() => (confirm2.open = !confirm2.open)}> toggle </button>
-<Confirm title="Title" type="info" bind:this={confirm2} />
-
-<br />
-<button on:click={() => (confirm3.open = !confirm3.open)}> toggle </button>
-<Confirm title="Title" type="question" bind:this={confirm3} />
-
-<br />
-<button on:click={() => (confirm4.open = !confirm4.open)}> toggle </button>
-<Confirm title="Title" type="success" bind:this={confirm4} />
-
-<br />
-<button on:click={() => (confirm5.open = !confirm5.open)}> toggle </button>
-<Confirm title="Title" type="warning" bind:this={confirm5} />

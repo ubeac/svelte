@@ -1,4 +1,5 @@
 export * from './alert'
+export * from './app-loading-bar'
 export * from './avatar'
 export * from './badge'
 export * from './button'
