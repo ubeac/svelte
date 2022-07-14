@@ -1,0 +1,8 @@
+.u-switch {
+	@extend .form-check;
+	@extend .form-switch;
+}
+
+.u-switch > input[type='checkbox'] {
+	@extend .form-check-input;
+}
