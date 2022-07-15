@@ -1,0 +1,27 @@
+.u-google-map {
+    @extend .border;
+}
+
+.u-google-map-error {
+    @extend .text-muted;
+    font-size: 24px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.u-google-map-sm {
+    height: 320px;
+}
+
+.u-google-map-md {
+    height: 400px;
+}
+.u-google-map-lg {
+    height: 480px;
+}
+
