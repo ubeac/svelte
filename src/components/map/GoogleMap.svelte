@@ -1,16 +1,13 @@
 <script lang="ts">
-    import {get_current_component} from 'svelte/internal'
-	import { onDestroy, onMount } from 'svelte'
+	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
+	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Coordinate } from '$lib/types'
 	import { classname } from '$lib/utils'
-    import type { Coordinate } from '$lib/types'
-
-
-    // TODO: Events (click, change_center, change_zoom, ...) 
 
 	/**
-	 * TODO
+	 * Focused Coordinate in map
 	 */
 	export let center: Coordinate = {
 		latitude: 0,
@@ -18,7 +15,7 @@
 	}
 
 	/**
-	 * TODO
+	 * Connects selected positions with a line
 	 */
 	export let connect: boolean = false
 
@@ -28,20 +25,15 @@
 	export let draggable: boolean = false
 
 	/**
-	 * Height of map box
-	 * TODO: support string and number
+	 * Height of map container
 	 */
 	export let height: 'sm' | 'md' | 'lg' = 'md'
 
 	/**
-	 * TODO
-	 */
-	// export let multiple = false
-
-	/**
-	 * TODO
+	 * Disables location updates
 	 */
 	export let readonly: boolean = false
+
 	/**
 	 * TODO
 	 */
@@ -55,12 +47,14 @@
 	 */
 	export let zoom: number = 8
 
-    const forwardEvents = forwardEventsBuilder(get_current_component())
+	const dispatch = createEventDispatcher()
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	let element: HTMLDivElement
-    let map : any = null;
+	let map: any = null
 	let values: Coordinate[] = []
-    let polygon: any;
+	let polygon: any
 
 	$: update('center', center)
 	$: update('value', value)
@@ -144,20 +138,16 @@
 				break
 			}
 		}
+		dispatch('changed', { center, zoom, value })
 	}
 
 	function onClick(event) {
 		if (readonly) return
 		const marker = addMarker(event.latLng)
 		const model = toModel(marker.position.toJSON())
-		// TODO: enable multiple values
-		// if (multiple) {
-		// 	// value = value || []
-		// 	// value.push(model)
-		// } else {
+
 		value = model
 		values.forEach(removeMarker)
-		// }
 		values.push(marker)
 	}
 
@@ -173,15 +163,15 @@
 
 	onDestroy(destroy)
 
-    $: classes = classname('google-map', {height}, $$props.class)
+	$: classes = classname('google-map', { height }, $$props.class)
 </script>
 
 <div bind:this={element} use:forwardEvents {...$$restProps} {...$$restProps} class={classes}>
-    <slot>
-        <div class={classname('google-map-error')}>
-            Cannot show GoogleMap Component without loading it's script
-            <br />
-            You should add the script tag for google map in head section of your html
-        </div>
-    </slot>
+	<slot>
+		<div class={classname('google-map-error')}>
+			Cannot show GoogleMap Component without loading it's script
+			<br />
+			You should add the script tag for google map in head section of your html
+		</div>
+	</slot>
 </div>
