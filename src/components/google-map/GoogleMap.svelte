@@ -3,13 +3,13 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Coordinate } from '$lib/types'
+	import type { GoogleMapCoordinate } from '$lib/types'
 	import { classname } from '$lib/utils'
 
 	/**
 	 * Focused Coordinate in map
 	 */
-	export let center: Coordinate = {
+	export let center: GoogleMapCoordinate = {
 		latitude: 0,
 		longitude: 0,
 	}
@@ -37,7 +37,7 @@
 	/**
 	 * TODO
 	 */
-	export let value: Coordinate | Coordinate[] = {
+	export let value: GoogleMapCoordinate | GoogleMapCoordinate[] = {
 		latitude: 0,
 		longitude: 0,
 	}
@@ -51,71 +51,80 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
+	const google = typeof window == 'undefined' ? undefined : (window['google' as any] as any)
+
 	let element: HTMLDivElement
 	let map: any = null
-	let values: Coordinate[] = []
 	let polygon: any
+	let values: GoogleMapCoordinate[] = []
+
+	$: classes = classname('google-map', { height }, $$props.class)
 
 	$: update('center', center)
 	$: update('value', value)
 	$: update('zoom', zoom)
 
-	function fromModel(input) {
-		return {
-			lat: input.latitude,
-			lng: input.longitude,
+	function addMarker(position: any) {
+		const icon = {
+			url: 'https://cdn.tourradar.com/images/responsive/tour/destination-map-new.svg',
+			anchor: new google.maps.Point(10.34 / 2, 10.34 / 2),
 		}
-	}
 
-	function toModel(input) {
-		return {
-			latitude: input.lat,
-			longitude: input.lng,
-		}
-	}
-
-	function init() {
-		map = new window['google'].maps.Map(element, {
-			center: fromModel(center),
-			zoom,
-		})
-
-		polygon = new window['google'].maps.Polygon({
+		const marker = new google.maps.Marker({
 			map,
-			fillOpacity: 0,
-			strokeColor: 'rgb(10, 123, 189)',
-			strokeWeight: 3,
+			draggable,
+			position,
+			icon: !connect ? undefined : icon,
 		})
-		map.addListener('click', onClick)
-		map.addListener('center_changed', onCenterChanged)
-		map.addListener('zoom_changed', onZoomChanged)
+
+		if (connect) polygon.getPath().push(marker.position)
+
+		return marker
 	}
 
 	function destroy() {
 		map?.unbindAll()
 	}
 
-	function addMarker(position) {
-		const marker = new window['google'].maps.Marker({
-			map,
-			draggable,
-			position,
-			icon: !connect
-				? undefined
-				: {
-						url: 'https://cdn.tourradar.com/images/responsive/tour/destination-map-new.svg',
-						anchor: new window['google'].maps.Point(10.34 / 2, 10.34 / 2),
-				  },
-		})
-		if (connect) polygon.getPath().push(marker.position)
-		return marker
+	function fromModel(input: GoogleMapCoordinate) {
+		return {
+			lat: input.latitude,
+			lng: input.longitude,
+		}
 	}
 
-	function removeMarker(marker) {
+	function init() {
+		if (!google) return
+
+		map = new google.maps.Map(element, {
+			center: fromModel(center),
+			zoom,
+		})
+
+		polygon = new google.maps.Polygon({
+			map,
+			fillOpacity: 0,
+			strokeColor: 'rgb(10, 123, 189)',
+			strokeWeight: 3,
+		})
+
+		map.addListener('click', onClick)
+		map.addListener('center_changed', onCenterChanged)
+		map.addListener('zoom_changed', onZoomChanged)
+	}
+
+	function removeMarker(marker: any) {
 		marker?.setMap(null)
 	}
 
-	function update(key, input) {
+	function toModel(input: any) {
+		return {
+			latitude: input.lat,
+			longitude: input.lng,
+		}
+	}
+
+	function update(key: any, input: any) {
 		if (!map) return
 		switch (key) {
 			case 'center': {
@@ -141,11 +150,10 @@
 		dispatch('changed', { center, zoom, value })
 	}
 
-	function onClick(event) {
+	function onClick(event: any) {
 		if (readonly) return
 		const marker = addMarker(event.latLng)
 		const model = toModel(marker.position.toJSON())
-
 		value = model
 		values.forEach(removeMarker)
 		values.push(marker)
@@ -162,16 +170,11 @@
 	onMount(init)
 
 	onDestroy(destroy)
-
-	$: classes = classname('google-map', { height }, $$props.class)
 </script>
 
-<div bind:this={element} use:forwardEvents {...$$restProps} {...$$restProps} class={classes}>
-	<slot>
-		<div class={classname('google-map-error')}>
-			Cannot show GoogleMap Component without loading it's script
-			<br />
-			You should add the script tag for google map in head section of your html
-		</div>
-	</slot>
+<div bind:this={element} use:forwardEvents {...$$restProps} class={classes}>
+	<div class={classname('google-map-error')}>
+		<p>Cannot show GoogleMap Component without loading its script</p>
+		<small> You should add the script tag for google map in head section of your html </small>
+	</div>
 </div>

@@ -1,3 +1,3 @@
 export * from './colors'
+export * from './google-map'
 export * from './placement'
-export * from './map'

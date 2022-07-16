@@ -91,7 +91,7 @@
 		autocomplete?.unbindAll()
 	})
 
-	$: classes = classname('google-autocomplete', { hide: !autocomplete }, $$props.class)
+	$: classes = classname('google-map-autocomplete', { hide: !autocomplete }, $$props.class)
 </script>
 
 {#if !autocomplete}
