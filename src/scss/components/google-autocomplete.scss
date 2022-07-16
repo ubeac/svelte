@@ -1,0 +1,7 @@
+.u-google-autocomplete {
+	@extend .form-control;
+
+	&.u-google-autocomplete-hide {
+		display: none;
+	}
+}
