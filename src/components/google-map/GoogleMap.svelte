@@ -30,6 +30,11 @@
 	export let height: 'sm' | 'md' | 'lg' = 'md'
 
 	/**
+	 * TODO
+	 */
+	export let multiple: boolean = false
+
+	/**
 	 * Disables location updates
 	 */
 	export let readonly: boolean = false
@@ -37,10 +42,7 @@
 	/**
 	 * TODO
 	 */
-	export let value: GoogleMapCoordinate | GoogleMapCoordinate[] = {
-		latitude: 0,
-		longitude: 0,
-	}
+	export let value: GoogleMapCoordinate | GoogleMapCoordinate[] | undefined = undefined
 
 	/**
 	 * TODO
@@ -55,8 +57,8 @@
 
 	let element: HTMLDivElement
 	let map: any = null
+	let markers: any[] = []
 	let polygon: any
-	let values: GoogleMapCoordinate[] = []
 
 	$: classes = classname('google-map', { height }, $$props.class)
 
@@ -78,6 +80,8 @@
 		})
 
 		if (connect) polygon.getPath().push(marker.position)
+
+		if (draggable) marker.addListener('dragend', onDragEnd)
 
 		return marker
 	}
@@ -114,7 +118,7 @@
 	}
 
 	function removeMarker(marker: any) {
-		marker?.setMap(null)
+		marker.setMap(null)
 	}
 
 	function toModel(input: any) {
@@ -137,8 +141,9 @@
 			}
 			case 'value': {
 				if (!input) break
-				values.forEach(removeMarker)
-				values = [input].flat().map(fromModel).map(addMarker)
+				markers.forEach(removeMarker)
+				polygon.getPath().clear()
+				markers = [input].flat().map(fromModel).map(addMarker)
 				break
 			}
 			case 'zoom': {
@@ -152,15 +157,28 @@
 
 	function onClick(event: any) {
 		if (readonly) return
-		const marker = addMarker(event.latLng)
-		const model = toModel(marker.position.toJSON())
-		value = model
-		values.forEach(removeMarker)
-		values.push(marker)
+		const model = toModel(event.latLng.toJSON())
+		if (multiple) {
+			if (!Array.isArray(value)) value = []
+			value = [...value, model]
+		} else {
+			value = model
+		}
 	}
 
 	function onCenterChanged() {
 		center = toModel(map.getCenter().toJSON())
+	}
+
+	function onDragEnd(event: any) {
+		const model = toModel(event.latLng.toJSON())
+		if (multiple) {
+			const index = markers.findIndex((value) => value == this)
+			;(value as any).splice(index, 1, model)
+			value = value
+		} else {
+			value = model
+		}
 	}
 
 	function onZoomChanged() {
