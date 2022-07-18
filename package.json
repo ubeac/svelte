@@ -22,6 +22,7 @@
 		"style": "node scripts/styles.generator.js"
 	},
 	"dependencies": {
+		"@googlemaps/js-api-loader": "^1.14.3",
 		"@iconify/svelte": "^2.2.1",
 		"@tabler/core": "^1.0.0-beta9",
 		"bootstrap": "^5.1.3",

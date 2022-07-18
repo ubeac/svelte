@@ -2,9 +2,13 @@
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 	import { get_current_component } from 'svelte/internal'
 
+	import { Loader } from '@googlemaps/js-api-loader'
+
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { GoogleMapCoordinate } from '$lib/types'
 	import { classname } from '$lib/utils'
+
+	export let apiKey: string | undefined = undefined
 
 	/**
 	 * Focused Coordinate in map
@@ -97,8 +101,15 @@
 		}
 	}
 
-	function init() {
-		if (!google) return
+	async function init() {
+		let google = window.google
+		if (!google && apiKey) {
+			const loader = new Loader({
+				apiKey,
+			})
+
+			google = await loader.load()
+		}
 
 		map = new google.maps.Map(element, {
 			center: fromModel(center),
@@ -194,5 +205,7 @@
 	<div class={classname('google-map-error')}>
 		<p>Cannot show GoogleMap Component without loading its script</p>
 		<small> You should add the script tag for google map in head section of your html </small>
+		<br />
+		<small>or you can pass an apiKey prop for This component</small>
 	</div>
 </div>
