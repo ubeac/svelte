@@ -4,6 +4,7 @@
 
 	import { Loader } from '@googlemaps/js-api-loader'
 
+	import { browser } from '$app/env'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { GoogleMapCoordinate } from '$lib/types'
 	import { classname } from '$lib/utils'
@@ -57,8 +58,6 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	const google = typeof window == 'undefined' ? undefined : (window['google' as any] as any)
-
 	let element: HTMLDivElement
 	let map: any = null
 	let markers: any[] = []
@@ -104,6 +103,8 @@
 	}
 
 	async function init() {
+		if (!browser) return
+
 		let google = window.google
 		if (!google && apiKey) {
 			const loader = new Loader({
