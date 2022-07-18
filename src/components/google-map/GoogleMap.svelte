@@ -25,7 +25,7 @@
 	export let connect: boolean = false
 
 	/**
-	 * TODO
+	 * Enable Moving Marker's Position
 	 */
 	export let draggable: boolean = false
 
@@ -35,7 +35,7 @@
 	export let height: 'sm' | 'md' | 'lg' = 'md'
 
 	/**
-	 * TODO
+	 * Set multiple Markers in map
 	 */
 	export let multiple: boolean = false
 
@@ -45,12 +45,12 @@
 	export let readonly: boolean = false
 
 	/**
-	 * TODO
+	 * Position of Marker(s) in map
 	 */
 	export let value: GoogleMapCoordinate | GoogleMapCoordinate[] | undefined = undefined
 
 	/**
-	 * TODO
+	 * Set zoom level of map 
 	 */
 	export let zoom: number = 8
 
