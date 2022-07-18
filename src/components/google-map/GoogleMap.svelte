@@ -9,6 +9,9 @@
 	import type { GoogleMapCoordinate } from '$lib/types'
 	import { classname } from '$lib/utils'
 
+	/**
+	 * ApiKey for Google Maps api
+	 */
 	export let apiKey: string | undefined = undefined
 
 	/**
@@ -50,7 +53,7 @@
 	export let value: GoogleMapCoordinate | GoogleMapCoordinate[] | undefined = undefined
 
 	/**
-	 * Set zoom level of map 
+	 * Set zoom level of map
 	 */
 	export let zoom: number = 8
 
@@ -59,9 +62,9 @@
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	let element: HTMLDivElement
-	let map: any = null
-	let markers: any[] = []
-	let polygon: any
+	let map: google.maps.Map
+	let markers: google.maps.Marker[] = []
+	let polygon: google.maps.Polygon
 
 	$: classes = classname('google-map', { height }, $$props.class)
 
@@ -84,7 +87,7 @@
 			icon: !connect ? undefined : icon,
 		})
 
-		if (connect) polygon.getPath().push(marker.position)
+		if (connect) polygon.getPath().push(marker.getPosition())
 
 		if (draggable) marker.addListener('dragend', onDragEnd)
 
@@ -148,7 +151,7 @@
 		switch (key) {
 			case 'center': {
 				if (!input || !input.latitude || !input.longitude) break
-				const before = map.getCenter().toJSON()
+				const before = map.getCenter()!.toJSON()
 				if (input.latitude === before.lat && input.longitude === before.lng) break
 				const next = fromModel(input)
 				map.setCenter(next)
@@ -182,7 +185,7 @@
 	}
 
 	function onCenterChanged() {
-		center = toModel(map.getCenter().toJSON())
+		center = toModel(map.getCenter()!.toJSON())
 	}
 
 	function onDragEnd(event: any) {
@@ -197,7 +200,7 @@
 	}
 
 	function onZoomChanged() {
-		zoom = map.getZoom()
+		zoom = map.getZoom()!
 	}
 
 	onMount(init)

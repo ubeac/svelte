@@ -2,22 +2,31 @@
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 	import { get_current_component } from 'svelte/internal'
 
+	import { Loader } from '@googlemaps/js-api-loader'
+
+	import { browser } from '$app/env'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * ApiKey for Google Maps api
 	 */
-	export let title = ''
+	export let apiKey: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Title of the place that you want to search
 	 */
-	export let value = {
+	export let title: string | undefined = undefined
+
+	/**
+	 * Information about selected place
+	 */
+
+	export let value: google.maps.places.PlaceResult & { title: string | undefined; parsed?: object } = {
 		title,
 	}
 
-	let autocomplete: any
+	let autocomplete: google.maps.places.Autocomplete
 	let element: HTMLInputElement
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
@@ -27,6 +36,7 @@
 
 	const change = () => {
 		const place = autocomplete.getPlace()
+
 		try {
 			let address = '',
 				postcode = '',
@@ -77,20 +87,30 @@
 		dispatch('changed', value)
 	}
 
-	onMount(() => {
-		if (!window['google']?.maps) {
-			console.log('window.google not found!, please add script of Google map in head section of your html file')
-			return
-		}
-		autocomplete = new window['google'].maps.places.Autocomplete(element)
+	async function init() {
+		if (!browser) return
 
-		autocomplete?.addListener('place_changed', change)
-	})
+		let google = window.google
+		if (!google) {
+			if (apiKey) {
+				const loader = new Loader({ apiKey })
+				google = await loader.load()
+			}
+		}
+		if (!google) return
+
+		autocomplete = new google.maps.places.Autocomplete(element)
+
+		autocomplete.addListener('place_changed', change)
+	}
+
+	onMount(init)
 
 	onDestroy(() => {
 		autocomplete?.unbindAll()
 	})
 
+	$: if (apiKey) init()
 	$: classes = classname('google-map-autocomplete', { hide: !autocomplete }, $$props.class)
 </script>
 
