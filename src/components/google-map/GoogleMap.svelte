@@ -110,6 +110,7 @@
 
 			google = await loader.load()
 		}
+		if (!google) return
 
 		map = new google.maps.Map(element, {
 			center: fromModel(center),
