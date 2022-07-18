@@ -70,6 +70,8 @@
 	$: update('value', value)
 	$: update('zoom', zoom)
 
+	$: if (apiKey) init()
+
 	function addMarker(position: any) {
 		const icon = {
 			url: 'https://cdn.tourradar.com/images/responsive/tour/destination-map-new.svg',
