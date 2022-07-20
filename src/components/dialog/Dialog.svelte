@@ -8,32 +8,32 @@
 	import { classname, condition, requestAnimationFrame } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Make page's color Dimmer
 	 */
 	export let backdrop: boolean = true
 
 	/**
-	 * TODO
+	 * Controls open/close state of Dialog
 	 */
 	export let open: boolean = false
 
 	/**
-	 * TODO
+	 * Do not close dialog if user clicked outside of Dialog Component
 	 */
 	export let persistent: boolean = false
 
 	/**
-	 * TODO
+	 * Set position of Dialog
 	 */
 	export let placement: 'top' | 'center' = 'top'
 
 	/**
-	 * TODO
+	 * Makes dialog's body scrollable
 	 */
 	export let scrollable: boolean = false
 
 	/**
-	 * TODO
+	 * Changes width of Dialog
 	 */
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 

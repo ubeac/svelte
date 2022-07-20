@@ -2,9 +2,17 @@
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 	import { get_current_component } from 'svelte/internal'
 
+	import { Loader } from '@googlemaps/js-api-loader'
+
+	import { browser } from '$app/env'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { GoogleMapCoordinate } from '$lib/types'
 	import { classname } from '$lib/utils'
+
+	/**
+	 * ApiKey for Google Maps api
+	 */
+	export let apiKey: string | undefined = undefined
 
 	/**
 	 * Focused Coordinate in map
@@ -20,7 +28,7 @@
 	export let connect: boolean = false
 
 	/**
-	 * TODO
+	 * Enable Moving Marker's Position
 	 */
 	export let draggable: boolean = false
 
@@ -30,7 +38,7 @@
 	export let height: 'sm' | 'md' | 'lg' = 'md'
 
 	/**
-	 * TODO
+	 * Set multiple Markers in map
 	 */
 	export let multiple: boolean = false
 
@@ -40,12 +48,12 @@
 	export let readonly: boolean = false
 
 	/**
-	 * TODO
+	 * Position of Marker(s) in map
 	 */
 	export let value: GoogleMapCoordinate | GoogleMapCoordinate[] | undefined = undefined
 
 	/**
-	 * TODO
+	 * Set zoom level of map
 	 */
 	export let zoom: number = 8
 
@@ -53,18 +61,18 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	const google = typeof window == 'undefined' ? undefined : (window['google' as any] as any)
-
 	let element: HTMLDivElement
-	let map: any = null
-	let markers: any[] = []
-	let polygon: any
+	let map: google.maps.Map
+	let markers: google.maps.Marker[] = []
+	let polygon: google.maps.Polygon
 
 	$: classes = classname('google-map', { height }, $$props.class)
 
 	$: update('center', center)
 	$: update('value', value)
 	$: update('zoom', zoom)
+
+	$: if (apiKey) init()
 
 	function addMarker(position: any) {
 		const icon = {
@@ -79,7 +87,7 @@
 			icon: !connect ? undefined : icon,
 		})
 
-		if (connect) polygon.getPath().push(marker.position)
+		if (connect) polygon.getPath().push(marker.getPosition())
 
 		if (draggable) marker.addListener('dragend', onDragEnd)
 
@@ -97,7 +105,17 @@
 		}
 	}
 
-	function init() {
+	async function init() {
+		if (!browser) return
+
+		let google = window.google
+		if (!google && apiKey) {
+			const loader = new Loader({
+				apiKey,
+			})
+
+			google = await loader.load()
+		}
 		if (!google) return
 
 		map = new google.maps.Map(element, {
@@ -133,7 +151,7 @@
 		switch (key) {
 			case 'center': {
 				if (!input || !input.latitude || !input.longitude) break
-				const before = map.getCenter().toJSON()
+				const before = map.getCenter()!.toJSON()
 				if (input.latitude === before.lat && input.longitude === before.lng) break
 				const next = fromModel(input)
 				map.setCenter(next)
@@ -167,7 +185,7 @@
 	}
 
 	function onCenterChanged() {
-		center = toModel(map.getCenter().toJSON())
+		center = toModel(map.getCenter()!.toJSON())
 	}
 
 	function onDragEnd(event: any) {
@@ -182,7 +200,7 @@
 	}
 
 	function onZoomChanged() {
-		zoom = map.getZoom()
+		zoom = map.getZoom()!
 	}
 
 	onMount(init)
@@ -194,5 +212,7 @@
 	<div class={classname('google-map-error')}>
 		<p>Cannot show GoogleMap Component without loading its script</p>
 		<small> You should add the script tag for google map in head section of your html </small>
+		<br />
+		<small>or you can pass an apiKey prop for This component</small>
 	</div>
 </div>
