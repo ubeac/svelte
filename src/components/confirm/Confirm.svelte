@@ -5,22 +5,22 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Set Description of component
 	 */
 	export let description: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Controls open/close state of Confirm Dialog
 	 */
 	export let open: boolean = false
 
 	/**
-	 * TODO
+	 * Set title of Confirm dialog
 	 */
 	export let title: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Set type of component
 	 */
 	export let type: 'error' | 'info' | 'question' | 'success' | 'warning' | undefined = undefined
 
