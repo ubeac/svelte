@@ -1,1 +1,1 @@
-export { default as GoogleAutocomplete } from './GoogleMapAutocomplete.svelte'
+export { default as GoogleMapAutocomplete } from './GoogleMapAutocomplete.svelte'
