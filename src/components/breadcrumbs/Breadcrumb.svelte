@@ -5,7 +5,7 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Change separator Icon between items
 	 */
 	export let separator: 'arrows' | 'bullets' | 'dots' | undefined = undefined
 

@@ -5,14 +5,14 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Mark this as an active Breadcrumb item
 	 */
 	export let active: boolean = false
 
 	/**
-	 * TODO
+	 * Set the Href of component
 	 */
-	export let href: 'string' | undefined = undefined
+	export let href: string | undefined = undefined
 
 	const forwardEevnts = forwardEventsBuilder(get_current_component())
 
