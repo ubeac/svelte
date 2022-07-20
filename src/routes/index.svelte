@@ -1,22 +1,25 @@
-<script lang="ts">
-	import { Button, GoogleAutocomplete, GoogleMap } from '$lib/components'
-	import type { Coordinate } from '$lib/types'
-
-	let autocompleteValue: any
-	let value: Coordinate
-
-	// $: {
-	// 	value = {
-	// 		lat: autocompleteValue?.address_components?.[0].geometry?.location.lat,
-	// 		lng: autocompleteValue?.address_components?.[0].geometry?.location.lng,
-	// 	}
-	// }
+<script>
+	import { Breadcrumb, BreadcrumbItem } from '$lib/components'
 </script>
 
-<Button>Some Button</Button>
-<GoogleAutocomplete bind:value={autocompleteValue} />
-<pre>AUTOCOMPLETE: {JSON.stringify(autocompleteValue, null, 2)}</pre>
+<Breadcrumb>
+	<BreadcrumbItem>Home</BreadcrumbItem>
+	<BreadcrumbItem>page 1</BreadcrumbItem>
+	<BreadcrumbItem active>Page 2</BreadcrumbItem>
+</Breadcrumb>
 
-<br /><br />
-<GoogleMap bind:value />
-<pre>MAP: {JSON.stringify(value, null, 2)}</pre>
+<Breadcrumb separator="dots">
+	<BreadcrumbItem>Home</BreadcrumbItem>
+	<BreadcrumbItem>page 1</BreadcrumbItem>
+	<BreadcrumbItem active>Page 2</BreadcrumbItem>
+</Breadcrumb>
+<Breadcrumb separator="arrows">
+	<BreadcrumbItem href="/">Home</BreadcrumbItem>
+	<BreadcrumbItem href="/">page 1</BreadcrumbItem>
+	<BreadcrumbItem href="/" active>Page 2</BreadcrumbItem>
+</Breadcrumb>
+<Breadcrumb separator="bullets">
+	<BreadcrumbItem>Home</BreadcrumbItem>
+	<BreadcrumbItem>page 1</BreadcrumbItem>
+	<BreadcrumbItem active>Page 2</BreadcrumbItem>
+</Breadcrumb>
