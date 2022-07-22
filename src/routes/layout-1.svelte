@@ -39,9 +39,9 @@
 				</div>
 			</GridItem>
 
-			<GridItem md="hide-up">
+			<GridItem md="hide-up" xs="grow">
 				<div class="headers blue">
-					<Grid justifyContent="end">
+					<Grid>
 						<GridItem md="hide-up">
 							<Button on:click={() => (show = !show)}>
 								<Icon pack="la" name="bars" />
@@ -50,6 +50,7 @@
 						<GridItem md="hide-up">
 							<a class="brand" href="/">Header</a>
 						</GridItem>
+						<GridItem xs="grow" />
 						<GridItem md="hide-up">
 							<Avatar size="sm" shape="circle">PR</Avatar>
 						</GridItem>
