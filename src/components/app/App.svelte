@@ -14,21 +14,24 @@
 		'header-start' | 'header' | 'header-end' | 'aside-start' | 'aside-end' | 'footer-start' | 'footer' | 'footer-end'
 	> = []
 
-	$: areas = [
-		"'",
-		area('header', 'start'),
-		' header ',
-		area('header', 'end'),
-		"' '",
-		$$slots['aside-start'] ? 'aside-start' : 'main',
-		' main ',
-		$$slots['aside-end'] ? 'aside-end' : 'main',
-		"' '",
-		area('footer', 'start'),
-		' footer ',
-		area('footer', 'end'),
-		"'",
-	].join('')
+	$: areas = (() => {
+		;[content, footer, header]
+		return [
+			"'",
+			area('header', 'start'),
+			' header ',
+			area('header', 'end'),
+			"' '",
+			$$slots['aside-start'] ? 'aside-start' : 'main',
+			' main ',
+			$$slots['aside-end'] ? 'aside-end' : 'main',
+			"' '",
+			area('footer', 'start'),
+			' footer ',
+			area('footer', 'end'),
+			"'",
+		].join('')
+	})()
 
 	function area(key: string, position: string) {
 		const hasSlot = ($$slots as any)[`${key}-${position}`]

@@ -10,9 +10,9 @@
 </script>
 
 <App {header} {footer} {sticky}>
-	<div slot="header-start">Header Start</div>
+	<!-- <div slot="header-start">Header Start</div> -->
 	<div slot="header">Header</div>
-	<div slot="header-end">Header End</div>
+	<!-- <div slot="header-end">Header End</div> -->
 	<div slot="aside-start">Aside Start</div>
 	<div style="height: 1200px">
 		<Select items={['grow', 'start', 'end', 'center']} bind:value={header} />
@@ -32,9 +32,9 @@
 			]} />
 	</div>
 	<div slot="aside-end">Aside End</div>
-	<div slot="footer-start">Footer Start</div>
+	<!-- <div slot="footer-start">Footer Start</div> -->
 	<div slot="footer">Footer</div>
-	<div slot="footer-end">Footer End</div>
+	<!-- <div slot="footer-end">Footer End</div> -->
 </App>
 
 <style global>
