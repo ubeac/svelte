@@ -18,9 +18,9 @@
 	</div>
 	<div slot="header">
 		<Grid justifyContent="between">
-			<GridItem sm="hide-down">
+			<GridItem xs="grow" sm="hide-down">
 				<div class="headers white">
-					<Grid justifyContent="between">
+					<Grid gutter="sm" justifyContent="end">
 						<GridItem sm="hide-down">
 							<Button>
 								<Icon name="moon" />
@@ -41,16 +41,15 @@
 
 			<GridItem md="hide-up" xs="grow">
 				<div class="headers blue">
-					<Grid>
+					<Grid alignItems="center" justifyContent="between">
 						<GridItem md="hide-up">
-							<Button on:click={() => (show = !show)}>
+							<Button color="secondary" outline on:click={() => (show = !show)}>
 								<Icon pack="la" name="bars" />
 							</Button>
 						</GridItem>
 						<GridItem md="hide-up">
 							<a class="brand" href="/">Header</a>
 						</GridItem>
-						<GridItem xs="grow" />
 						<GridItem md="hide-up">
 							<Avatar size="sm" shape="circle">PR</Avatar>
 						</GridItem>
@@ -60,7 +59,7 @@
 		</Grid>
 
 		<Grid if={show}>
-			<GridItem alignSelf="stretch">
+			<GridItem xs="grow" alignSelf="stretch">
 				<div class="aside-items">
 					<div class="aside-item">item</div>
 					<div class="aside-item">item</div>
