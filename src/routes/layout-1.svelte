@@ -1,20 +1,52 @@
 <script>
-	import { Avatar, Button, Card, CardBody, FormRadio, Grid, Icon, Layout } from '$lib/components'
+	import { App, Avatar, Button, Card, CardBody, FormRadio, Grid, Icon } from '$lib/components'
 	import GridItem from '$lib/components/grid/GridItem.svelte'
 	import '../styles.css'
 
+	/** @type {import('../components/grid/Grid.types').GridAlignItems}*/
 	let alignItems = 'center'
 	let show = false
 </script>
 
-<Layout header="center">
-	<Grid alignItems="center" justifyContent="center" class="header-grid" slot="header:start">
+<App header="end">
+	<Grid alignItems="center" justifyContent="center" class="header-grid h-full" slot="header-start">
 		<GridItem sm="hide-down">
 			<a class="brand" href="/">Header</a>
 		</GridItem>
 	</Grid>
 	<Grid slot="header" vertical>
 		<GridItem>
+			<!-- TODO Grid should support responsive props for Class (or color) -->
+			<!-- <Grid color="blue" colorMd="white"> -->
+				<!-- or: -->
+			<!-- <Grid class="blue" classMd="white"> -->
+			
+				<!-- Usage:  -->
+			<!-- <Grid gutter="sm" class="blue" classMd="white" justifyContent="between" justifyContentMd="end">
+				<GridItem md="hide-up">
+					<Button color="secondary" outline on:click={() => (show = !show)}>
+						<Icon pack="la" name="bars" />
+					</Button>
+				</GridItem>
+				<GridItem md="hide-up">
+					<a class="brand" href="/">Header</a>
+				</GridItem>
+
+				<GridItem sm="hide-down">
+					<Button>
+						<Icon name="moon" />
+					</Button>
+				</GridItem>
+				<GridItem sm="hide-down">
+					<Button>
+						<Icon name="bell" />
+					</Button>
+				</GridItem>
+
+				<GridItem>
+					<Avatar size="sm" shape="circle">PR</Avatar>
+				</GridItem>
+			</Grid> -->
 			<Grid justifyContent="between">
 				<GridItem xs="grow" sm="hide-down">
 					<div class="headers white">
@@ -57,7 +89,7 @@
 			</Grid>
 		</GridItem>
 
-		<GridItem if={show} class="aside-items" xs="grow">
+		<GridItem if={show} class="aside-items" xs="grow" md="hide-up">
 			<div class="aside-item">item</div>
 			<div class="aside-item">item</div>
 			<div class="aside-item">item</div>
@@ -68,7 +100,7 @@
 		</GridItem>
 	</Grid>
 
-	<Grid slot="aside:start">
+	<Grid class="aside-items h-full" slot="aside-start">
 		<GridItem sm="hide-down">
 			<div class="aside-item">item</div>
 			<div class="aside-item">item</div>
@@ -79,9 +111,9 @@
 			<div class="aside-item">item</div>
 		</GridItem>
 	</Grid>
-	<Grid {alignItems} justifyContent="center" class="app-content">
+	<Grid {alignItems} justifyContent="center" class="h-full p-3">
 		<GridItem>
-			<Card class="app-body" outline>
+			<Card class="h-full" outline>
 				<CardBody>
 					<a href="https://preview.tabler.io/layout-combo.html">Reference layout</a>
 				</CardBody>
@@ -102,7 +134,7 @@
 			</Card>
 		</GridItem>
 	</Grid>
-</Layout>
+</App>
 
 <style global>
 	* {
@@ -110,7 +142,8 @@
 	}
 
 	.header-grid {
-		height: 100%;
+		font-weight: bold;
+		background-color: #32374d;
 	}
 	.layout {
 		background-color: #efefef;
@@ -124,10 +157,6 @@
 	.aside-item {
 		min-width: 240px;
 	}
-	.header-start {
-		font-weight: bold;
-		background-color: #32374d;
-	}
 	.brand {
 		font-size: 32px;
 		color: white;
@@ -137,16 +166,7 @@
 		color: #32374d;
 	}
 
-	.main {
-		height: 100%;
-	}
-
-	.app-content {
-		height: 100%;
-		padding: 1rem;
-	}
-
-	.app-body {
+	.h-full {
 		height: 100%;
 	}
 	.aside-items {
