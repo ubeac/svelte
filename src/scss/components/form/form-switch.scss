@@ -1,9 +1,11 @@
 .u-form-switch {
 	@extend .form-check;
+	padding: 0;
 }
 
 .u-form-switch-description {
 	@extend .form-check-description;
+	padding-left: 2.3rem;
 }
 
 .u-form-switch-inline {
@@ -12,4 +14,7 @@
 
 .u-form-switch-label {
 	@extend .form-check-label;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 0.25rem;
 }
