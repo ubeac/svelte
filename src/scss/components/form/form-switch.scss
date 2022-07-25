@@ -1,0 +1,15 @@
+.u-form-switch {
+	@extend .form-check;
+}
+
+.u-form-switch-description {
+	@extend .form-check-description;
+}
+
+.u-form-switch-inline {
+	@extend .form-check-inline;
+}
+
+.u-form-switch-label {
+	@extend .form-check-label;
+}
