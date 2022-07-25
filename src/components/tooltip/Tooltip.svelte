@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { createPopper, Instance } from '@popperjs/core'
+	import { createPopper } from '@popperjs/core'
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
