@@ -5,7 +5,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('carousel-indicators', null, $$props.class)
+	$: classes = classname('carousel-indicators', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

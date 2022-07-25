@@ -44,7 +44,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-input', null, $$props.class)
+	$: classes = classname('form-input', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

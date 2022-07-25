@@ -14,7 +14,7 @@
 	 */
 	export let value: boolean | undefined = undefined
 
-	$: classes = classname('checkbox', null, $$props.class)
+	$: classes = classname('checkbox', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

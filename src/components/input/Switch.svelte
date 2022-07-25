@@ -14,7 +14,7 @@
 	 */
 	export let value: boolean | undefined = undefined
 
-	$: classes = classname('switch', null, $$props.class)
+	$: classes = classname('switch', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

@@ -2,7 +2,7 @@
 	import { GridItem } from '$lib/components'
 	import { classname, condition } from '$lib/utils'
 
-	$: classes = classname('form-group', null, $$props.class)
+	$: classes = classname('form-group', undefined, $$props.class)
 
 	$: col = $$props.col ?? '6'
 </script>
@@ -19,7 +19,7 @@
 						<slot name="inner:start" />
 						<div class="input">
 							<slot />
-							<div class={classname('form-group-focus', null, $$props.class)} />
+							<div class={classname('form-group-focus', undefined, $$props.class)} />
 						</div>
 						<slot name="inner:end" />
 					</div>
