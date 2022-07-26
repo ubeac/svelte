@@ -103,7 +103,7 @@
 </script>
 
 {#if condition($$props)}
-	<div bind:this={ref} use:forwardEvents {...$$restProps}>
+	<div bind:this={ref} hidden use:forwardEvents {...$$restProps}>
 		<slot />
 	</div>
 {/if}
