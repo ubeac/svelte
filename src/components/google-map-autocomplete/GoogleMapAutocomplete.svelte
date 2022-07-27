@@ -4,7 +4,6 @@
 
 	import { Loader } from '@googlemaps/js-api-loader'
 
-	import { browser } from '$app/env'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
@@ -88,7 +87,7 @@
 	}
 
 	async function init() {
-		if (!browser) return
+		if (typeof window == 'undefined') return
 
 		let google = window.google
 		if (!google) {
