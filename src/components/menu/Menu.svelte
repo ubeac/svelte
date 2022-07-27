@@ -28,7 +28,7 @@
 </script>
 
 {#if condition($$props)}
-	<Popup {forwardEvents} trigger={['click']} {offset} {placement} {...$$restProps} class={classes}>
+	<Popup {forwardEvents} trigger={['click']} {offset} {persistence} {placement} {...$$restProps} class={classes}>
 		<slot />
 	</Popup>
 {/if}

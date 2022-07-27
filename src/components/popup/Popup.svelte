@@ -30,6 +30,11 @@
 	/**
 	 * TODO
 	 */
+	export let persistence: boolean = false
+
+	/**
+	 * TODO
+	 */
 	export let placement: Placement = 'auto'
 
 	/**
@@ -75,6 +80,7 @@
 
 	function bind() {
 		if (disabled) return
+		if (typeof window != 'undefined') document.addEventListener('click', onOutside)
 		eventsName().map(([hide, show]) => {
 			ref?.previousElementSibling?.addEventListener(hide, onHide)
 			ref?.previousElementSibling?.addEventListener(show, onShow)
@@ -82,6 +88,7 @@
 	}
 
 	function unbind() {
+		if (typeof window != 'undefined') document.removeEventListener('click', onOutside)
 		eventsName().map(([hide, show]) => {
 			ref?.previousElementSibling?.removeEventListener(hide, onHide)
 			ref?.previousElementSibling?.removeEventListener(show, onShow)
@@ -93,7 +100,23 @@
 		unbind()
 	}
 
-	function onHide() {
+	function onHide(event?: Event) {
+		const run = () => {
+			instance?.destroy()
+			ref.setAttribute('hidden', '')
+		}
+
+		if (!event) return run()
+
+		if (persistence) return
+
+		setTimeout(run, 150)
+	}
+
+	function onOutside(event: Event) {
+		if (!persistence) return
+		if (ref.hasAttribute('hidden')) return
+		if (event.composedPath().some((path) => path == ref || path == ref?.previousElementSibling)) return
 		instance?.destroy()
 		ref.setAttribute('hidden', '')
 	}
