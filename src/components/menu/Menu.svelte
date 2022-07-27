@@ -10,12 +10,12 @@
 	/**
 	 * TODO
 	 */
-	export let trigger: Array<'click' | 'focus' | 'hover'> = ['click']
+	export let offset: [number, number] = [0, 2]
 
 	/**
 	 * TODO
 	 */
-	export let offset: [number, number] = [0, 0]
+	export let persistence: boolean = false
 
 	/**
 	 * TODO
@@ -28,7 +28,7 @@
 </script>
 
 {#if condition($$props)}
-	<Popup {forwardEvents} {trigger} {offset} {placement} {...$$restProps} class={classes}>
+	<Popup {forwardEvents} trigger={['click']} {offset} {placement} {...$$restProps} class={classes}>
 		<slot />
 	</Popup>
 {/if}

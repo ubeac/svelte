@@ -45,6 +45,12 @@
 		strategy: fixed ? 'fixed' : 'absolute',
 		modifiers: [
 			{
+				name: 'preventOverflow',
+				options: {
+					boundary: 'clippingParents',
+				},
+			},
+			{
 				name: 'offset',
 				options: {
 					offset,
@@ -93,6 +99,7 @@
 	}
 
 	function onShow() {
+		if (!ref.hasAttribute('hidden')) return onHide()
 		instance = createPopper(ref?.previousElementSibling!, ref, options as any)
 		ref.removeAttribute('hidden')
 	}
