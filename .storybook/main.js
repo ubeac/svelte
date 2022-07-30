@@ -3,6 +3,7 @@ const path = require('path')
 
 module.exports = {
 	stories: ['./stories/**/*.svelte'],
+	staticDirs: ['./public'],
 	addons: [
 		'@storybook/addon-actions',
 		'@storybook/addon-essentials',
