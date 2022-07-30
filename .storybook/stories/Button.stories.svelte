@@ -11,6 +11,11 @@
 <Meta
 	title="Button"
 	component={Button}
+	parameters={{
+		actions: {
+			handles: ['click'],
+		},
+	}}
 	argTypes={{
 		color: {
 			control: {
@@ -39,7 +44,18 @@
 </Template>
 
 <Story name="default" />
-<Story name="block" args={{ block: true }} />
+<Story
+	name="block"
+	let:args
+	parameters={{
+		docs: {
+			description: {
+				story: 'Sample Description For Block Example',
+			},
+		},
+	}}>
+	<Button block {...args}>Button</Button>
+</Story>
 <Story name="color" let:args>
 	{#each COLORS as color}
 		<Button {...args} {color}>Button {color}</Button>

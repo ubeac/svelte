@@ -3,7 +3,12 @@ const path = require('path')
 
 module.exports = {
 	stories: ['./stories/**/*.svelte'],
-	addons: ['@storybook/addon-essentials', '@storybook/addon-links', '@storybook/addon-svelte-csf'],
+	addons: [
+		'@storybook/addon-actions',
+		'@storybook/addon-essentials',
+		'@storybook/addon-links',
+		'@storybook/addon-svelte-csf',
+	],
 	framework: '@storybook/svelte',
 	svelteOptions: {
 		preprocess: preprocess({
