@@ -245,9 +245,6 @@
 	<Button href="https://www.google.com/" color="primary" shape="link">Google</Button>
 </Story>
 
-<!-- TODO: implement or remove elevation property from source -->
-<Story name="elevation" args={{ elevation: 0 }} />
-
 <!-- TODO: add Button with Avatar -->
 
 <Story name="TODO">
