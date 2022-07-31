@@ -21,7 +21,7 @@
 	export let disabled: boolean = false
 
 	/**
-	 * TODO
+	 * TODO: Set elevation level of button (not implemented yet!). Eleveation is not supported in Tabler.
 	 */
 	export let elevation: number = 0
 
