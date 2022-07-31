@@ -4,7 +4,7 @@
 	import { COLORS } from '$lib/types'
 	import { Button, Icon } from '$lib/components'
 
-	// todo: move below lines to types
+	// TODO: move below lines to types
 	const SIZES = ['sm', 'md', 'lg']
 	const SHAPES = [undefined, 'circle', 'link', 'round', 'tile']
 </script>
@@ -75,7 +75,7 @@
 </Story>
 
 <Story name="Shapes">
-	<!-- todo: don't we need this as a feature/property in ButtonGroup component? -->
+	<!-- TODO: don't we need this as a feature/property in ButtonGroup component? -->
 	<div class="btn-list">
 		{#each SHAPES as shape}
 			<Button {shape}>{shape}</Button>
@@ -241,16 +241,16 @@
 </Story>
 
 <Story name="href">
-	<!-- todo: this is not working -->
+	<!-- TODO: this is not working -->
 	<Button href="https://www.google.com/" color="primary" shape="link">Google</Button>
 </Story>
 
-<!-- todo: implement or remove elevation property from source -->
+<!-- TODO: implement or remove elevation property from source -->
 <Story name="elevation" args={{ elevation: 0 }} />
 
-<!-- todo: add Button with Avatar -->
+<!-- TODO: add Button with Avatar -->
 
-<Story name="Support">
+<Story name="TODO">
 	<b>
 		These scenarios should be developed
 		<br />
