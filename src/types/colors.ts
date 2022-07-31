@@ -1,5 +1,6 @@
 export const COLORS = [
 	undefined,
+	'default',
 	'primary',
 	'secondary',
 	'blue',
