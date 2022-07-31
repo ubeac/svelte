@@ -5,6 +5,8 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
+	import type { ButtonShape, ButtonSize } from './button.types'
+
 	/**
 	 * Make the button fit to its parent width
 	 */
@@ -13,7 +15,7 @@
 	/**
 	 * Set color of button
 	 */
-	export let color: Colors = undefined
+	export let color: Colors = 'default'
 
 	/**
 	 * Set disabled state of button
@@ -48,12 +50,12 @@
 	/**
 	 * Shape of button
 	 */
-	export let shape: 'circle' | 'link' | 'round' | 'tile' | undefined = undefined
+	export let shape: ButtonShape = 'default'
 
 	/**
 	 * Set the size of button
 	 */
-	export let size: 'sm' | 'md' | 'lg' = 'md'
+	export let size: ButtonSize = 'md'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
