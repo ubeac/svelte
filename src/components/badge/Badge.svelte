@@ -5,6 +5,8 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
+	import type { BadgeShape } from './badge.types'
+
 	/**
 	 * Set color of Badge
 	 */
@@ -33,7 +35,7 @@
 	/**
 	 * You can change shape of badge using round property
 	 */
-	export let shape: 'round' | 'tile' | undefined = undefined
+	export let shape: BadgeShape = 'default'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -52,9 +54,9 @@
 </script>
 
 {#if condition($$props)}
-	<span use:forwardEvents {...$$restProps} class={classes}>
+	<svelte:element this={href ? 'a' : 'span'} use:forwardEvents {...$$restProps} class={classes}>
 		{#if !dot}
 			<slot />
 		{/if}
-	</span>
+	</svelte:element>
 {/if}
