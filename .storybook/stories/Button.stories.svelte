@@ -22,7 +22,7 @@
 		},
 		href: {
 			control: {
-				type: 'string',
+				type: 'text',
 			},
 		},
 		size: {

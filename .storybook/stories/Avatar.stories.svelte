@@ -31,6 +31,12 @@
 				options: AVATAR_SIZES,
 			},
 		},
+		image: {
+			defaultValue: undefined,
+			control: {
+				type: 'text',
+			},
+		},
 	}} />
 
 <Story name="default" let:args>

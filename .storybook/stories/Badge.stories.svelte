@@ -2,7 +2,7 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
 
 	import { COLORS } from '$lib/types'
-	import { Badge, Button } from '$lib/components'
+	import { Badge, Button, BADGE_SHAPES } from '$lib/components'
 </script>
 
 <Meta
@@ -16,8 +16,16 @@
 			},
 		},
 		href: {
+			defaultValue: undefined,
 			control: {
-				type: 'string',
+				type: 'text',
+			},
+		},
+		shape: {
+			defaultValue: 'default',
+			control: {
+				type: 'radio',
+				options: BADGE_SHAPES,
 			},
 		},
 	}} />
