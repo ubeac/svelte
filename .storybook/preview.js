@@ -1,3 +1,4 @@
+import './stories/_examples.css'
 import './styles.css'
 
 export const parameters = {

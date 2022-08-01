@@ -1,5 +1,5 @@
-export const BUTTON_SHAPE = ['circle', 'default', 'link', 'round', 'tile'] as const
-export type ButtonShape = typeof BUTTON_SHAPE[number]
+export const BUTTON_SHAPES = ['default', 'round', 'tile', 'circle', 'link'] as const
+export type ButtonShapes = typeof BUTTON_SHAPES[number]
 
-export const BUTTON_Size = ['sm', 'md', 'lg'] as const
-export type ButtonSize = typeof BUTTON_Size[number]
+export const BUTTON_SIZES = ['sm', 'md', 'lg'] as const
+export type ButtonSizes = typeof BUTTON_SIZES[number]
