@@ -2,7 +2,7 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
 
 	import { COLORS } from '$lib/types'
-	import { BUTTON_SHAPE, BUTTON_Size, Avatar, Button, ButtonGroup, Icon, Grid, GridItem } from '$lib/components'
+	import { BUTTON_SHAPE, BUTTON_Size, Avatar, Badge, Button, ButtonGroup, Icon, Grid, GridItem } from '$lib/components'
 </script>
 
 <Meta
@@ -87,25 +87,34 @@
 
 <Story name="Shapes" let:args>
 	<Grid justifyContent="center">
-		<GridItem>
-			<ButtonGroup>
-				{#each BUTTON_SHAPE as shape}
-					<Button {shape} {...args}>{shape}</Button>
-				{/each}
-			</ButtonGroup>
-		</GridItem>
+		{#each BUTTON_SHAPE as shape}
+			<GridItem>
+				<Button {shape} {...args}>{shape}</Button>
+			</GridItem>
+		{/each}
 	</Grid>
 </Story>
 
 <Story name="Size" let:args>
-	<Grid justifyContent="center">
-		<GridItem>
-			<ButtonGroup>
-				{#each BUTTON_Size as size}
-					<Button {size} {...args}>{size}</Button>
-				{/each}
-			</ButtonGroup>
-		</GridItem>
+	<Grid alignItems="center" justifyContent="center">
+		{#each BUTTON_Size as size}
+			<GridItem>
+				<Button {...args} {size}>{size}</Button>
+			</GridItem>
+		{/each}
+	</Grid>
+</Story>
+
+<Story name="Button Size with Icon" let:args>
+	<Grid alignItems="center" justifyContent="center">
+		{#each BUTTON_Size as size}
+			<GridItem>
+				<Button {...args} {size}>
+					<Icon name="user" />
+					{size}
+				</Button>
+			</GridItem>
+		{/each}
 	</Grid>
 </Story>
 
@@ -173,6 +182,14 @@
 			</ButtonGroup>
 		</GridItem>
 	</Grid>
+</Story>
+
+<Story name="Button with Badge and Icon" let:args>
+	<Button {...args}>
+		<Icon name="user" />
+		Button's text
+		<Badge color="primary">12</Badge>
+	</Button>
 </Story>
 
 <Story name="Social Buttons" let:args>
