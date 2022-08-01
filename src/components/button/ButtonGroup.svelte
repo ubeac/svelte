@@ -4,10 +4,12 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
+	import type { ButtonSize } from './button.types'
+
 	/**
 	 * Size of buttons
 	 */
-	export let size: 'sm' | 'md' | 'lg' = 'md'
+	export let size: ButtonSize = 'md'
 
 	/**
 	 * Align Buttons vertically
