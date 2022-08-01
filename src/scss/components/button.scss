@@ -27,7 +27,7 @@ $sizes-ratio: (
 	box-shadow: none;
 }
 
-.u-button-link {
+.u-button-shape-link {
 	@extend .u-button-ghost;
 	padding: 0;
 	border: none;
@@ -35,8 +35,8 @@ $sizes-ratio: (
 	color: inherit;
 	text-decoration: none;
 }
-.u-button-link:hover {
-	color: var(--tblr-btn-color);
+.u-button-shape-link:hover {
+	color: var(--tblr-btn-color) !important;
 	background-color: transparent !important;
 	text-decoration: underline !important;
 }
