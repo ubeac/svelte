@@ -19,3 +19,14 @@
 .example-avatars > * {
 	margin: 0 0.5rem 0.5rem 0 !important;
 }
+
+.example-badges {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 0rem !important;
+	margin-right: -0.5rem;
+	justify-content: center;
+}
+.example-badges > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}

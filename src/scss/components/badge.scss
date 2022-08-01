@@ -11,11 +11,11 @@
 	@extend .badge-outline;
 }
 
-.u-badge-round {
+.u-badge-shape-round {
 	@extend .badge-pill;
 }
 
-.u-badge-tile {
+.u-badge-shape-tile {
 	border-radius: 0;
 }
 
