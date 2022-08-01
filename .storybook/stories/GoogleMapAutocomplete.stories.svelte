@@ -3,7 +3,7 @@
 	import { GoogleMapAutocomplete } from '$lib/components'
 </script>
 
-<Meta title="GoogleMapAutocomplete" component={GoogleMapAutocomplete} />
+<Meta title="Components/Map/GoogleMapAutocomplete" component={GoogleMapAutocomplete} />
 
 <Template let:args>
 	<GoogleMapAutocomplete {...args} />

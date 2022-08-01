@@ -5,7 +5,7 @@
 </script>
 
 <Meta
-	title="Divider"
+	title="Components/Divider"
 	component={Divider}
 	argTypes={{
 		width: {

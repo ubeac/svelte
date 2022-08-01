@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="FormTextarea"
+	title="Components/Form/Textarea"
 	component={FormTextarea}
 	argTypes={{
 		col: {

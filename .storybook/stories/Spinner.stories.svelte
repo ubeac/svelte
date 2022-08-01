@@ -9,7 +9,7 @@
 </script>
 
 <Meta
-	title="Spinner"
+	title="Components/Spinner"
 	component={Spinner}
 	argTypes={{
 		color: {

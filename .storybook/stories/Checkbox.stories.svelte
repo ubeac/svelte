@@ -3,7 +3,7 @@
 	import { Checkbox } from '$lib/components'
 </script>
 
-<Meta component={Checkbox} title="Checkbox" />
+<Meta component={Checkbox} title="Components/Input/Checkbox" />
 
 <Template let:args>
 	<Checkbox {...args} />

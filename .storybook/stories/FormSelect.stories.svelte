@@ -13,7 +13,7 @@
 </script>
 
 <Meta
-	title="FormSelect"
+	title="Components/Form/Select"
 	component={FormSelect}
 	argTypes={{
 		col: {

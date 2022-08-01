@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="Table"
+	title="Components/Table"
 	component={Table}
 	argTypes={{
 		border: {

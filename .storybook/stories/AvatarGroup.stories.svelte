@@ -3,7 +3,7 @@
 	import { Avatar, AvatarGroup } from '$lib/components'
 </script>
 
-<Meta id="Avatar Group" component={AvatarGroup} />
+<Meta title="Components/Avatar/Avatar Group" component={AvatarGroup} />
 
 <Template let:args>
 	<AvatarGroup {...args}>

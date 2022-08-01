@@ -6,7 +6,7 @@
 </script>
 
 <Meta
-	title="FormRadio"
+	title="Components/Form/Radio"
 	component={FormRadio}
 	argTypes={{
 		description: {

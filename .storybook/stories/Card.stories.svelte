@@ -18,7 +18,7 @@
 	} from '$lib/components'
 </script>
 
-<Meta title="Card" component={Card} argTypes={{}} />
+<Meta title="Components/Card" component={Card} argTypes={{}} />
 
 <Template let:args>
 	<Card {...args}>

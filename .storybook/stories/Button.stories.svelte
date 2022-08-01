@@ -6,7 +6,7 @@
 </script>
 
 <Meta
-	title="Button"
+	title="Components/Button/Button"
 	component={Button}
 	parameters={{
 		actions: {

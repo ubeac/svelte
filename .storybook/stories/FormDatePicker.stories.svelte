@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="FormDatePicker"
+	title="Components/Form/DatePicker"
 	component={FormDatePicker}
 	argTypes={{
 		col: {

@@ -50,7 +50,7 @@
 	}
 </script>
 
-<Meta title="GridItem" component={GridItem} {argTypes} />
+<Meta title="Components/Grid/GridItem" component={GridItem} {argTypes} />
 
 <Template let:args>
 	<Grid class="bg-gray h-5">

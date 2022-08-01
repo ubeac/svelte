@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="Radio"
+	title="Components/Input/Radio"
 	component={Radio}
 	argTypes={{
 		group: {

@@ -7,7 +7,7 @@
 </script>
 
 <Meta
-	title="ButtonGroup"
+	title="Components/Button/ButtonGroup"
 	component={ButtonGroup}
 	argTypes={{
 		size: {

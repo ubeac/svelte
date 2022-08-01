@@ -9,7 +9,7 @@
 </script>
 
 <Meta
-	title="Avatar"
+	title="Components/Avatar/Avatar"
 	component={Avatar}
 	argTypes={{
 		color: {

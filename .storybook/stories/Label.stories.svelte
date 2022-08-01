@@ -4,7 +4,7 @@
 	import { Label } from '$lib/components'
 </script>
 
-<Meta title="Label" component={Label} />
+<Meta title="Components/Label" component={Label} />
 
 <Template let:args>
 	<Label {...args}>{args.slot}</Label>

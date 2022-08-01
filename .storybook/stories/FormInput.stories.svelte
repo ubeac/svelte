@@ -19,7 +19,7 @@
 
 <Meta
 	component={FormInput}
-	title="FormInput"
+	title="Components/Form/Input"
 	argTypes={{
 		type: {
 			control: {

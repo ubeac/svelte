@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="FormCheckbox"
+	title="Components/Form/Checkbox"
 	component={FormCheckbox}
 	argTypes={{
 		description: {

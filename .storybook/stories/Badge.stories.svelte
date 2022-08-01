@@ -10,7 +10,7 @@
 
 <!-- TODO: padding in all examples -->
 <Meta
-	title="Badge"
+	title="Components/Badge"
 	component={Badge}
 	argTypes={{
 		color: {

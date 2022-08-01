@@ -3,7 +3,7 @@
 	import { Input } from '$lib/components'
 </script>
 
-<Meta component={Input} title="Input" />
+<Meta component={Input} title="Components/Input/Input" />
 
 <Template let:args>
 	<Input {...args} />

@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="FormFieldset"
+	title="Components/Form/Fieldset"
 	component={FormFieldset}
 	argTypes={{
 		label: {

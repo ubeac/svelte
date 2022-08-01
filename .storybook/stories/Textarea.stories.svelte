@@ -4,7 +4,7 @@
 	import { Textarea } from '$lib/components'
 </script>
 
-<Meta title="Textarea" component={Textarea} />
+<Meta title="Components/Input/Textarea" component={Textarea} />
 
 <Template let:args>
 	<Textarea on:change={console.log} {...args} />

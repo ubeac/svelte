@@ -3,7 +3,7 @@
 	import { Select } from '$lib/components'
 </script>
 
-<Meta title="Select" component={Select} />
+<Meta title="Components/Input/Select" component={Select} />
 
 <Template let:args>
 	<Select {...args} />

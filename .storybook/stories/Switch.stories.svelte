@@ -3,7 +3,7 @@
 	import { Switch } from '$lib/components'
 </script>
 
-<Meta component={Switch} title="Switch" argTypes={{ value: { control: 'boolean' } }} />
+<Meta component={Switch} title="Components/Input/Switch" argTypes={{ value: { control: 'boolean' } }} />
 
 <Template let:args>
 	<Switch {...args} />

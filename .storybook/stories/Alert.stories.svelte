@@ -8,7 +8,7 @@
 </script>
 
 <Meta
-	title="Alert"
+	title="Components/Alert"
 	component={Alert}
 	argTypes={{
 		type: {
