@@ -19,10 +19,6 @@ $sizes-ratio: (
 	width: 100%;
 }
 
-// TODO
-.u-button-circle {
-}
-
 .u-button-disabled {
 	@extend .disabled;
 }
@@ -49,12 +45,17 @@ $sizes-ratio: (
 	@extend .btn-loading;
 }
 
-.u-button-round {
+// Shape
+.u-button-shape-round {
 	@extend .btn-pill;
 }
 
-.u-button-tile {
+.u-button-shape-tile {
 	border-radius: 0;
+}
+
+.u-button-shape-circle {
+	border-radius: 50%;
 }
 
 .u-button-sm,

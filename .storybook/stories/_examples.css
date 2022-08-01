@@ -1,0 +1,10 @@
+.example-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -0.5rem !important;
+	margin-right: -0.5rem;
+	justify-content: center;
+}
+.example-buttons > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
