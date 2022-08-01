@@ -8,6 +8,10 @@
 	export let footer: 'grow' | 'start' | 'end' | 'center' | 'sticky' = 'grow'
 	export let main: 'stretch' | 'center' = 'stretch'
 
+	export let headerSticky: boolean = false
+	export let headerStartSticky: boolean = false
+	export let headerEndSticky: boolean = false
+
 	$: style = ((header, footer, main) => {
 		header
 		footer
@@ -57,7 +61,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('layout', {}, $$props.class)
+	$: classes = classname('layout', { headerSticky, headerStartSticky, headerEndSticky }, $$props.class)
 </script>
 
 {#if condition($$props)}
@@ -121,6 +125,24 @@
 			grid-template-rows: auto 1fr auto;
 			min-height: inherit;
 			gap: 2px;
+		}
+
+		&.u-layout-header-sticky .header {
+			position: sticky;
+			top: 0;
+			z-index: 1020;
+		}
+
+		&.u-layout-header-start-sticky .header-start {
+			position: sticky;
+			top: 0;
+			z-index: 1020;
+		}
+
+		&.u-layout-header-end-sticky .header-end {
+			position: sticky;
+			top: 0;
+			z-index: 1020;
 		}
 
 		.header-start {

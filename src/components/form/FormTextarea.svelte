@@ -44,7 +44,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-textarea', null, $$props.class)
+	$: classes = classname('form-textarea', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

@@ -6,7 +6,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('card-subtitle', null, $$props.class)
+	$: classes = classname('card-subtitle', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

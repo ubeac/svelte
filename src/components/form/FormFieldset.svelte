@@ -19,7 +19,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-fieldset', null, $$props.class)
+	$: classes = classname('form-fieldset', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

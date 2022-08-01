@@ -44,7 +44,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-autocomplete', null, $$props.class)
+	$: classes = classname('form-autocomplete', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

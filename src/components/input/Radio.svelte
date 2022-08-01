@@ -19,7 +19,7 @@
 	 */
 	export let value: any = undefined
 
-	$: classes = classname('radio', null, $$props.class)
+	$: classes = classname('radio', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

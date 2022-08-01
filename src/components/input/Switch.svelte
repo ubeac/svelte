@@ -14,11 +14,9 @@
 	 */
 	export let value: boolean | undefined = undefined
 
-	$: classes = classname('switch', null, $$props.class)
+	$: classes = classname('switch', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}
-	<label class={classes}>
-		<input bind:checked={value} use:forwardEvents {...$$restProps} type="checkbox" />
-	</label>
+	<input bind:checked={value} use:forwardEvents {...$$restProps} class={classes} type="checkbox" />
 {/if}

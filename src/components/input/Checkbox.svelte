@@ -10,13 +10,28 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * Checked state of Checkbox
+	 * TODO
 	 */
-	export let value: boolean | undefined = undefined
+	export let group: any = undefined
 
-	$: classes = classname('checkbox', null, $$props.class)
+	/**
+	 * TODO
+	 */
+	export let value: any = undefined
+
+	$: classes = classname('checkbox', undefined, $$props.class)
+
+	function onChange(event: any) {
+		group = group?.filter((item: any) => item != value) ?? []
+		if (!event.target.checked) return
+		group = [...group, value]
+	}
 </script>
 
 {#if condition($$props)}
-	<input bind:checked={value} use:forwardEvents {...$$restProps} class={classes} type="checkbox" />
+	{#if group}
+		<input bind:value group use:forwardEvents {...$$restProps} class={classes} type="checkbox" on:change={onChange} />
+	{:else}
+		<input bind:checked={value} use:forwardEvents {...$$restProps} class={classes} type="checkbox" />
+	{/if}
 {/if}
