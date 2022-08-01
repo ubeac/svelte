@@ -2,7 +2,17 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
 
 	import { COLORS } from '$lib/types'
-	import { BUTTON_SHAPES, BUTTON_SIZES, Avatar, Badge, Button, ButtonGroup, Icon, Grid, GridItem } from '$lib/components'
+	import {
+		BUTTON_SHAPES,
+		BUTTON_SIZES,
+		Avatar,
+		Badge,
+		Button,
+		ButtonGroup,
+		Icon,
+		Grid,
+		GridItem,
+	} from '$lib/components'
 </script>
 
 <Meta
@@ -156,62 +166,64 @@
 </Story>
 
 <Story name="Social Buttons" let:args>
-	<Button class="btn-facebook" {...args}>
-		<Icon name="brand-facebook" />
-		Facebook
-	</Button>
-	<Button class="btn-twitter" {...args}>
-		<Icon name="brand-twitter" />
-		Twitter
-	</Button>
-	<Button class="btn-google" {...args}>
-		<Icon name="brand-google" />
-		Google
-	</Button>
-	<Button class="btn-youtube" {...args}>
-		<Icon name="brand-youtube" />
-		Youtube
-	</Button>
-	<Button class="btn-vimeo" {...args}>
-		<Icon name="brand-vimeo" />
-		Vimeo
-	</Button>
-	<Button class="btn-dribbble" {...args}>
-		<Icon name="brand-dribbble" />
-		Dribbble
-	</Button>
-	<Button class="btn-github" {...args}>
-		<Icon name="brand-github" />
-		Github
-	</Button>
-	<Button class="btn-instagram" {...args}>
-		<Icon name="brand-instagram" />
-		Instagram
-	</Button>
-	<Button class="btn-pinterest" {...args}>
-		<Icon name="brand-pinterest" />
-		Pinterest
-	</Button>
-	<Button class="btn-vk" {...args}>
-		<Icon name="brand-vk" />
-		VK
-	</Button>
-	<Button class="btn-rss" {...args}>
-		<Icon name="rss" />
-		RSS
-	</Button>
-	<Button class="btn-flickr" {...args}>
-		<Icon name="brand-flickr" />
-		Flickr
-	</Button>
-	<Button class="btn-bitbucket" {...args}>
-		<Icon name="brand-bitbucket" />
-		Bitbucket
-	</Button>
-	<Button class="btn-tabler" {...args}>
-		<Icon name="brand-tabler" />
-		Tabler
-	</Button>
+	<div class="example-buttons">
+		<Button class="btn-facebook" {...args}>
+			<Icon name="brand-facebook" />
+			Facebook
+		</Button>
+		<Button class="btn-twitter" {...args}>
+			<Icon name="brand-twitter" />
+			Twitter
+		</Button>
+		<Button class="btn-google" {...args}>
+			<Icon name="brand-google" />
+			Google
+		</Button>
+		<Button class="btn-youtube" {...args}>
+			<Icon name="brand-youtube" />
+			Youtube
+		</Button>
+		<Button class="btn-vimeo" {...args}>
+			<Icon name="brand-vimeo" />
+			Vimeo
+		</Button>
+		<Button class="btn-dribbble" {...args}>
+			<Icon name="brand-dribbble" />
+			Dribbble
+		</Button>
+		<Button class="btn-github" {...args}>
+			<Icon name="brand-github" />
+			Github
+		</Button>
+		<Button class="btn-instagram" {...args}>
+			<Icon name="brand-instagram" />
+			Instagram
+		</Button>
+		<Button class="btn-pinterest" {...args}>
+			<Icon name="brand-pinterest" />
+			Pinterest
+		</Button>
+		<Button class="btn-vk" {...args}>
+			<Icon name="brand-vk" />
+			VK
+		</Button>
+		<Button class="btn-rss" {...args}>
+			<Icon name="rss" />
+			RSS
+		</Button>
+		<Button class="btn-flickr" {...args}>
+			<Icon name="brand-flickr" />
+			Flickr
+		</Button>
+		<Button class="btn-bitbucket" {...args}>
+			<Icon name="brand-bitbucket" />
+			Bitbucket
+		</Button>
+		<Button class="btn-tabler" {...args}>
+			<Icon name="brand-tabler" />
+			Tabler
+		</Button>
+	</div>
 </Story>
 
 <Story name="Loading" let:args>
