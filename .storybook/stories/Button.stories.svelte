@@ -15,6 +15,7 @@
 	}}
 	argTypes={{
 		color: {
+			defaultValue: 'default',
 			control: {
 				type: 'select',
 				options: COLORS,
@@ -33,7 +34,7 @@
 			},
 		},
 		shape: {
-			defaultValue: undefined,
+			defaultValue: 'default',
 			control: {
 				type: 'select',
 				options: BUTTON_SHAPES,
