@@ -1,28 +1,75 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Button, ButtonGroup } from '$lib/components'
+	import { Button, ButtonGroup, Icon } from '$lib/components'
 
 	const SIZES = ['sm', 'md', 'lg']
 </script>
 
-<Meta
-	title="ButtonGroup"
-	component={ButtonGroup}
-	argTypes={{
-		size: {
-			control: 'radio',
-			options: SIZES,
-		},
-	}} />
+<Meta title="ButtonGroup" component={ButtonGroup} argTypes={{}} />
 
-<Template let:args>
-	<ButtonGroup {...args}>
-		<Button>Button</Button>
-		<Button>Button</Button>
-		<Button>Button</Button>
-	</ButtonGroup>
-</Template>
+<Story name="Default" let:args>
+	<div class="example-buttons">
+		<ButtonGroup {...args}>
+			<Button>Button</Button>
+			<Button>Button</Button>
+			<Button>Button</Button>
+		</ButtonGroup>
+	</div>
+</Story>
 
-<Story name="default" />
-<Story name="vertical" args={{ vertical: true }} />
+<Story name="Vertical" let:args>
+	<div class="example-buttons">
+		<ButtonGroup vertical {...args}>
+			<Button>Button</Button>
+			<Button>Button</Button>
+			<Button>Button</Button>
+		</ButtonGroup>
+	</div>
+</Story>
+
+<Story name="Compact (Vertical)" let:args>
+	<div class="example-buttons">
+		<ButtonGroup compact {...args}>
+			<Button>Button</Button>
+			<Button>Button</Button>
+			<Button>Button</Button>
+		</ButtonGroup>
+	</div>
+</Story>
+
+<Story name="Compact (Horizontal" let:args>
+	<div class="example-buttons">
+		<ButtonGroup compact vertical {...args}>
+			<Button>Button</Button>
+			<Button>Button</Button>
+			<Button>Button</Button>
+		</ButtonGroup>
+	</div>
+</Story>
+
+<Story name="Wrap" let:args>
+	<div class="example-buttons">
+		<ButtonGroup wrap {...args}>
+			{#each Array(12) as _, i}
+				<Button>Button {i + 1}</Button>
+			{/each}
+		</ButtonGroup>
+	</div>
+</Story>
+
+<Story name="Toolbar" let:args>
+	<div class="example-buttons">
+		<ButtonGroup compact {...args}>
+			<Button>
+				<Icon name="align-left" />
+			</Button>
+			<Button>
+				<Icon name="align-center" />
+			</Button>
+			<Button>
+				<Icon name="align-right" />
+			</Button>
+		</ButtonGroup>
+	</div>
+</Story>
