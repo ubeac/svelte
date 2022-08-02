@@ -15,7 +15,6 @@
 	}}
 	argTypes={{
 		color: {
-			defaultValue: 'default',
 			control: {
 				type: 'select',
 				options: COLORS,
@@ -27,14 +26,12 @@
 			},
 		},
 		size: {
-			defaultValue: 'md',
 			control: {
 				type: 'select',
 				options: BUTTON_SIZES,
 			},
 		},
 		shape: {
-			defaultValue: 'default',
 			control: {
 				type: 'select',
 				options: BUTTON_SHAPES,
@@ -83,21 +80,20 @@
 <Story name="Shapes" let:args>
 	<div class="example-buttons">
 		{#each BUTTON_SHAPES as shape, index}
-			<Button size="lg" {shape} {...args} title={shape}>{index}</Button>
+			<Button {shape} {...args}>{shape}</Button>
 		{/each}
 	</div>
 </Story>
 
-<!-- TODO: args should be after size -->
 <Story name="Size" let:args>
 	<div class="example-buttons">
 		{#each BUTTON_SIZES as size}
-			<Button {...args} {size}>{size}</Button>
+			<Button {size} {...args}>{size}</Button>
 		{/each}
 	</div>
 </Story>
 
-<Story name="Buttons with icons" let:args>
+<Story name="Buttons With Icons (start)" let:args>
 	<div class="example-buttons">
 		<Button color="default" {...args}>
 			<Icon name="send" />
@@ -123,7 +119,11 @@
 			<Icon name="edit" />
 			Edit
 		</Button>
+	</div>
+</Story>
 
+<Story name="Buttons With Icons (end)" let:args>
+	<div class="example-buttons">
 		<Button color="default" {...args}>
 			Send
 			<Icon name="send" />
