@@ -46,7 +46,7 @@
 </Story>
 
 <Story name="Colors" let:args>
-	<div class="example-buttons">
+	<div class="example-items">
 		{#each COLORS as color}
 			<Button {color} {...args} elevation="0">{color}</Button>
 		{/each}
@@ -54,7 +54,7 @@
 </Story>
 
 <Story name="Disabled" let:args>
-	<div class="example-buttons">
+	<div class="example-items">
 		{#each COLORS as color}
 			<Button {color} disabled {...args}>{color}</Button>
 		{/each}
@@ -62,7 +62,7 @@
 </Story>
 
 <Story name="Outline" let:args>
-	<div class="example-buttons">
+	<div class="example-items">
 		{#each COLORS as color}
 			<Button {color} outline {...args}>{color}</Button>
 		{/each}
@@ -70,7 +70,7 @@
 </Story>
 
 <Story name="Ghost" let:args>
-	<div class="example-buttons">
+	<div class="example-items">
 		{#each COLORS as color}
 			<Button {color} ghost {...args}>{color}</Button>
 		{/each}
@@ -78,7 +78,7 @@
 </Story>
 
 <Story name="Shapes" let:args>
-	<div class="example-buttons">
+	<div class="example-items">
 		{#each BUTTON_SHAPES as shape, index}
 			<Button size="lg" {shape} {...args} title={shape}>{index}</Button>
 		{/each}
@@ -86,7 +86,7 @@
 </Story>
 
 <Story name="Size" let:args>
-	<div class="example-buttons">
+	<div class="example-items">
 		{#each BUTTON_SIZES as size}
 			<Button {size} {...args}>{size}</Button>
 		{/each}
@@ -94,7 +94,7 @@
 </Story>
 
 <Story name="Buttons with icons" let:args>
-	<div class="example-buttons">
+	<div class="example-items">
 		<Button color="default" {...args}>
 			<Icon name="send" />
 			Send

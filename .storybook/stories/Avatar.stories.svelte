@@ -44,7 +44,7 @@
 </Story>
 
 <Story name="Colors" let:args>
-	<div class="example-avatars">
+	<div class="example-items">
 		{#each COLORS as color}
 			<Avatar {...args} {color} title={color}>AB</Avatar>
 		{/each}
@@ -52,7 +52,7 @@
 </Story>
 
 <Story name="Shapes" let:args>
-	<div class="example-avatars">
+	<div class="example-items">
 		<Avatar {...args} shape="round" color="red">AB</Avatar>
 		<Avatar {...args} shape="circle" color="blue">CD</Avatar>
 		<Avatar {...args} shape="tile" color="green">EF</Avatar>
@@ -60,7 +60,7 @@
 </Story>
 
 <Story name="Sizes" let:args>
-	<div class="example-avatars">
+	<div class="example-items">
 		{#each AVATAR_SIZES as size}
 			<Avatar {...args} {size}>{size}</Avatar>
 		{/each}
@@ -68,7 +68,7 @@
 </Story>
 
 <Story name="Avatars with images" let:args>
-	<div class="example-avatars">
+	<div class="example-items">
 		<Avatar {...args} image="https://preview.tabler.io/static/avatars/001m.jpg" />
 		<Avatar {...args} image="https://preview.tabler.io/static/avatars/002m.jpg" />
 		<Avatar {...args} image="https://preview.tabler.io/static/avatars/003f.jpg" />
@@ -79,7 +79,7 @@
 </Story>
 
 <Story name="Avatars with icons" let:args>
-	<div class="example-avatars">
+	<div class="example-items">
 		<Avatar {...args} color="blue">
 			<Icon name="user" />
 		</Avatar>
@@ -102,7 +102,7 @@
 </Story>
 
 <Story name="Avatars with status" let:args>
-	<div class="example-avatars">
+	<div class="example-items">
 		<Avatar {...args} image="https://preview.tabler.io/static/avatars/001m.jpg" />
 		<Avatar {...args} image="https://preview.tabler.io/static/avatars/001f.jpg">
 			<Badge dot color="danger" />
@@ -125,7 +125,7 @@
 </Story>
 
 <Story name="Avatar group">
-	<div class="example-avatars">
+	<div class="example-items">
 		<AvatarGroup>
 			<Avatar>EB</Avatar>
 			<Avatar image="https://preview.tabler.io/static/avatars/001m.jpg" />
@@ -138,7 +138,7 @@
 </Story>
 
 <Story name="Avatar group (stacked)">
-	<div class="example-avatars">
+	<div class="example-items">
 		<AvatarGroup stacked>
 			<Avatar shape="circle">EB</Avatar>
 			<Avatar shape="circle" image="https://preview.tabler.io/static/avatars/001m.jpg" />

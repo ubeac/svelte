@@ -1,10 +1,8 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Alert, AlertTitle, Button, Icon } from '$lib/components'
-
-	const TYPES = ['danger', 'info', 'success', 'warning', undefined]
-	const VARIANTS = ['outlined', 'filled', undefined]
+	import { COLORS } from '$lib/types'
+	import { Alert, AlertTitle, Button, Icon, ALERT_VARIANTS, Grid, GridItem } from '$lib/components'
 </script>
 
 <Meta
@@ -12,15 +10,17 @@
 	component={Alert}
 	argTypes={{
 		type: {
+			defaultValue: 'default',
 			control: {
-				type: 'radio',
-				options: TYPES,
+				type: 'select',
+				options: COLORS,
 			},
 		},
 		variant: {
+			defaultValue: 'default',
 			control: {
 				type: 'radio',
-				options: VARIANTS,
+				options: ALERT_VARIANTS,
 			},
 		},
 	}} />
@@ -55,12 +55,24 @@
 </Story>
 <Story name="open" args={{ open: true }} />
 <Story name="type" let:args>
-	{#each TYPES as type}
-		<Alert {...args} {type}>Alert {type}</Alert>
+	{#each COLORS as type}
+		<Alert {...args} {type}>
+			<AlertTitle>Title</AlertTitle>
+			Alert {type}
+		</Alert>
 	{/each}
 </Story>
+
+<Story name="type + filled" let:args>
+	{#each COLORS as type}
+		<Alert variant="filled" {...args} {type}>
+			Alert {type}
+		</Alert>
+	{/each}
+</Story>
+
 <Story name="variant" let:args>
-	{#each VARIANTS as variant}
+	{#each ALERT_VARIANTS as variant}
 		<Alert {...args} {variant}>Alert {variant}</Alert>
 	{/each}
 </Story>

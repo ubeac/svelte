@@ -2,7 +2,7 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
 
 	import { COLORS } from '$lib/types'
-	import { Badge, Button, BADGE_SHAPES } from '$lib/components'
+	import { Badge, Button, Grid, GridItem, BADGE_SHAPES } from '$lib/components'
 </script>
 
 <Meta
@@ -35,7 +35,7 @@
 </Story>
 
 <Story name="Colors" let:args>
-	<div class="example-badges">
+	<div class="example-items">
 		{#each COLORS as color}
 			<Badge {...args} {color}>{color}</Badge>
 		{/each}
@@ -43,7 +43,7 @@
 </Story>
 
 <Story name="Outline" let:args>
-	<div class="example-badges">
+	<div class="example-items">
 		{#each COLORS as color}
 			<Badge {...args} {color} outline>{color}</Badge>
 		{/each}
@@ -51,7 +51,7 @@
 </Story>
 
 <Story name="Ghost" let:args>
-	<div class="example-badges">
+	<div class="example-items">
 		{#each COLORS as color}
 			<Badge {...args} {color} ghost>{color}</Badge>
 		{/each}
@@ -68,7 +68,7 @@
 </Story>
 
 <Story name="Shapes" let:args>
-	<div class="example-badges">
+	<div class="example-items">
 		<Badge color="green">default</Badge>
 		<Badge shape="round" color="azure">Round</Badge>
 		<Badge shape="tile" color="blue">Tile</Badge>
@@ -76,8 +76,8 @@
 </Story>
 
 <Story name="Numbers and shapes" let:args>
-	<div>
-		<div class="example-badges">
+	<Grid alignItems="center" vertical>
+		<GridItem class="example-items">
 			<Badge color="blue">1</Badge>
 			<Badge color="azure">2</Badge>
 			<Badge color="indigo">3</Badge>
@@ -90,10 +90,8 @@
 			<Badge color="green">10</Badge>
 			<Badge color="teal">11</Badge>
 			<Badge color="cyan">12</Badge>
-		</div>
-	</div>
-	<div>
-		<div class="example-badges">
+		</GridItem>
+		<GridItem class="example-items">
 			<Badge shape="round" color="blue">1</Badge>
 			<Badge shape="round" color="azure">2</Badge>
 			<Badge shape="round" color="indigo">3</Badge>
@@ -106,10 +104,8 @@
 			<Badge shape="round" color="green">10</Badge>
 			<Badge shape="round" color="teal">11</Badge>
 			<Badge shape="round" color="cyan">12</Badge>
-		</div>
-	</div>
-	<div>
-		<div class="example-badges">
+		</GridItem>
+		<GridItem class="example-items">
 			<Badge shape="tile" color="blue">1</Badge>
 			<Badge shape="tile" color="azure">2</Badge>
 			<Badge shape="tile" color="indigo">3</Badge>
@@ -122,12 +118,12 @@
 			<Badge shape="tile" color="green">10</Badge>
 			<Badge shape="tile" color="teal">11</Badge>
 			<Badge shape="tile" color="cyan">12</Badge>
-		</div>
-	</div>
+		</GridItem>
+	</Grid>
 </Story>
 
 <Story name="Dots" let:args>
-	<div class="example-badges">
+	<div class="example-items">
 		{#each COLORS as color}
 			<Badge {...args} {color} dot />
 		{/each}
@@ -135,7 +131,7 @@
 </Story>
 
 <Story name="Links" let:args>
-	<div class="example-badges">
+	<div class="example-items">
 		<Badge href="#" color="blue">Blue</Badge>
 		<Badge href="#" color="azure">Azure</Badge>
 		<Badge href="#" color="indigo">Indigo</Badge>
@@ -152,7 +148,7 @@
 </Story>
 
 <Story name="Button with badge" let:args>
-	<div class="example-badges">
+	<div class="example-items">
 		<Button>
 			Notifications
 			<Badge {...args} color="green">1</Badge>
