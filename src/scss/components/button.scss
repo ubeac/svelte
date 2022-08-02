@@ -30,6 +30,23 @@ $sizes-ratio: (
 	@extend .btn-loading;
 }
 
+.u-button-shape-circle {
+	border-radius: 50%;
+	padding: 0;
+	&.u-button-size-sm {
+		height: 1.447rem;
+		width: 1.447rem;
+	}
+	&.u-button-size-md {
+		height: 2.25rem;
+		width: 2.25rem;
+	}
+	&.u-button-size-lg {
+		height: 2.911rem;
+		width: 2.911rem;
+	}
+}
+
 .u-button-shape-link {
 	padding: 0;
 	border: none;
@@ -43,10 +60,6 @@ $sizes-ratio: (
 
 .u-button-shape-tile {
 	border-radius: 0;
-}
-
-.u-button-shape-circle {
-	border-radius: 50%;
 }
 
 .u-button-size-sm {
@@ -78,17 +91,19 @@ $sizes-ratio: (
 }
 
 @each $key, $value in $sizes {
-	$padding: calc($value / map-get($sizes-ratio, $key));
-	.u-button-size-#{$key} > .u-icon {
-		font-size: $value;
-		width: $value;
-		height: $value;
-		min-width: $value;
-		margin: 0 calc($value / 2.5) 0 calc($value / -10);
-	}
-	.u-button-size-#{$key}.u-button-icon {
-		padding-right: $padding;
-		padding-left: $padding;
+	.u-button-size-#{$key} {
+		$padding: calc($value / map-get($sizes-ratio, $key));
+		& > .u-icon {
+			font-size: $value;
+			width: $value;
+			height: $value;
+			min-width: $value;
+			margin: 0 calc($value / 2.5) 0 calc($value / -10);
+		}
+		&.u-button-icon {
+			padding-right: $padding;
+			padding-left: $padding;
+		}
 	}
 }
 
