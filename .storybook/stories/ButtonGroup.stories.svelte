@@ -1,58 +1,75 @@
 <script>
-	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
+	import { Meta, Story } from '@storybook/addon-svelte-csf'
 
-	import { Button, ButtonGroup, Grid, GridItem, BUTTON_SIZES } from '$lib/components'
+	import { Button, ButtonGroup, Icon } from '$lib/components'
+
+	const SIZES = ['sm', 'md', 'lg']
 </script>
 
-<Meta
-	title="ButtonGroup"
-	component={ButtonGroup}
-	argTypes={{
-		size: {
-			control: 'radio',
-			options: BUTTON_SIZES,
-		},
-	}} />
+<Meta title="ButtonGroup" component={ButtonGroup} argTypes={{}} />
 
-<Story name="default" let:args>
-	<ButtonGroup {...args}>
-		<Button>Button</Button>
-		<Button>Button</Button>
-		<Button>Button</Button>
-	</ButtonGroup>
+<Story name="Default" let:args>
+	<div class="example-items">
+		<ButtonGroup {...args}>
+			<Button>Button</Button>
+			<Button>Button</Button>
+			<Button>Button</Button>
+		</ButtonGroup>
+	</div>
 </Story>
 
-<Story name="vertical" let:args>
-	<ButtonGroup vertical {...args}>
-		<Button>Button</Button>
-		<Button>Button</Button>
-		<Button>Button</Button>
-	</ButtonGroup>
-</Story>
-<Story name="Sizes" let:args>
-	<Grid gutter="sm" vertical alignItems="center">
-		{#each BUTTON_SIZES as size}
-			<GridItem>
-				<ButtonGroup {size} {...args}>
-					<Button>Button</Button>
-					<Button>Button</Button>
-					<Button>Button</Button>
-				</ButtonGroup>
-			</GridItem>
-		{/each}
-	</Grid>
+<Story name="Vertical" let:args>
+	<div class="example-items">
+		<ButtonGroup vertical {...args}>
+			<Button>Button</Button>
+			<Button>Button</Button>
+			<Button>Button</Button>
+		</ButtonGroup>
+	</div>
 </Story>
 
-<Story name="vertical + Sizes" let:args>
-	<Grid gutter="sm" justifyContent="center">
-		{#each BUTTON_SIZES as size}
-			<GridItem>
-				<ButtonGroup vertical {size} {...args}>
-					<Button>Button</Button>
-					<Button>Button</Button>
-					<Button>Button</Button>
-				</ButtonGroup>
-			</GridItem>
-		{/each}
-	</Grid>
+<Story name="Compact (Vertical)" let:args>
+	<div class="example-items">
+		<ButtonGroup compact {...args}>
+			<Button>Button</Button>
+			<Button>Button</Button>
+			<Button>Button</Button>
+		</ButtonGroup>
+	</div>
+</Story>
+
+<Story name="Compact (Horizontal" let:args>
+	<div class="example-items">
+		<ButtonGroup compact vertical {...args}>
+			<Button>Button</Button>
+			<Button>Button</Button>
+			<Button>Button</Button>
+		</ButtonGroup>
+	</div>
+</Story>
+
+<Story name="Wrap" let:args>
+	<div class="example-items">
+		<ButtonGroup wrap {...args}>
+			{#each Array(12) as _, i}
+				<Button>Button {i + 1}</Button>
+			{/each}
+		</ButtonGroup>
+	</div>
+</Story>
+
+<Story name="Toolbar" let:args>
+	<div class="example-items">
+		<ButtonGroup compact {...args}>
+			<Button>
+				<Icon name="align-left" />
+			</Button>
+			<Button>
+				<Icon name="align-center" />
+			</Button>
+			<Button>
+				<Icon name="align-right" />
+			</Button>
+		</ButtonGroup>
+	</div>
 </Story>
