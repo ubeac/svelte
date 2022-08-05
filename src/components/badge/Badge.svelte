@@ -5,7 +5,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
-	import type { BadgeShape } from './badge.types'
+	import type { BadgeShapes } from './badge.types'
 
 	/**
 	 * Set color of Badge
@@ -35,7 +35,7 @@
 	/**
 	 * You can change shape of badge using round property
 	 */
-	export let shape: BadgeShape = 'default'
+	export let shape: BadgeShapes = 'default'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
