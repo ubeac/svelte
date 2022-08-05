@@ -2,15 +2,15 @@
 	@extend .avatar;
 }
 
-.u-avatar-circle {
+.u-avatar-shape-circle {
 	@extend .rounded-circle;
 }
 
-.u-avatar-round {
+.u-avatar-shape-round {
 	@extend .rounded;
 }
 
-.u-avatar-tile {
+.u-avatar-shape-tile {
 	border-radius: 0;
 }
 
@@ -21,7 +21,7 @@
 }
 
 @each $size in xs, sm, md, lg, xl {
-	.u-avatar-#{$size} {
+	.u-avatar-size-#{$size} {
 		@extend .avatar-#{$size};
 	}
 }

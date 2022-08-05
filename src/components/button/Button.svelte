@@ -5,7 +5,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
-	import type { ButtonShape, ButtonSize } from './button.types'
+	import type { ButtonShapes, ButtonSizes } from './button.types'
 
 	/**
 	 * Make the button fit to its parent width
@@ -50,12 +50,12 @@
 	/**
 	 * Shape of button
 	 */
-	export let shape: ButtonShape = 'default'
+	export let shape: ButtonShapes = 'default'
 
 	/**
 	 * Set the size of button
 	 */
-	export let size: ButtonSize = 'md'
+	export let size: ButtonSizes = 'md'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -67,7 +67,7 @@
 		'button',
 		{
 			block,
-			[color!]: !!color,
+			color,
 			disabled,
 			elevation,
 			ghost,
@@ -77,7 +77,8 @@
 			shape,
 			size,
 		},
-		$$props.class
+		$$props.class,
+		true
 	)
 </script>
 

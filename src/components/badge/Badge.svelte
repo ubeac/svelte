@@ -10,10 +10,10 @@
 	/**
 	 * Set color of Badge
 	 */
-	export let color: Colors = undefined
+	export let color: Colors = 'default'
 
 	/**
-	 * Show badge as small dot
+	 * Show badge as small dot. If true, default slot will be ignored.
 	 */
 	export let dot: boolean = false
 
@@ -28,7 +28,7 @@
 	export let href: string | undefined = undefined
 
 	/**
-	 * Draws Outlined Badge
+	 * Draws outlined badge
 	 */
 	export let outline: boolean = false
 
@@ -42,19 +42,19 @@
 	$: classes = classname(
 		'badge',
 		{
-			color,
+			[color!]: !!color,
 			dot,
 			ghost,
-			href,
 			outline,
 			shape,
 		},
-		$$props.class
+		$$props.class,
+		true
 	)
 </script>
 
 {#if condition($$props)}
-	<svelte:element this={href ? 'a' : 'span'} use:forwardEvents {...$$restProps} class={classes}>
+	<svelte:element this={href ? 'a' : 'span'} {href} use:forwardEvents {...$$restProps} class={classes}>
 		{#if !dot}
 			<slot />
 		{/if}

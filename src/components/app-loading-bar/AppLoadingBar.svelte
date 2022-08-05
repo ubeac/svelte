@@ -42,6 +42,9 @@
 		$value += (MAX - $value) / 4
 	}
 
+	/**
+	 * Show component and start the loading animation
+	 */
 	export function start() {
 		show = true
 		dispatch('start')
@@ -49,12 +52,20 @@
 		interval = setInterval(increment, duration)
 	}
 
+	/**
+	 * Add a task that Loading Bar should wait until it's done
+	 * @param number
+	 */
 	export function push(number = MAX / 4) {
 		show = true
 		dispatch('push', number)
 		total += number
 	}
 
+	/**
+	 * TODO
+	 * @param number
+	 */
 	export function pop(number = MAX / 4) {
 		dispatch('pop', number)
 		total -= number
@@ -63,6 +74,9 @@
 		done()
 	}
 
+	/**
+	 * Finish loading animation and remove LoadingBar from page
+	 */
 	export function done() {
 		dispatch('done')
 		clearInterval(interval)

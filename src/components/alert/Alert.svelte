@@ -8,6 +8,9 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
+	import type { Colors } from '$lib/types';
+	import type { AlertVariants } from './alert.types';
+
 	/**
 	 * Show close button at the end of alert
 	 */
@@ -29,14 +32,14 @@
 	export let open: boolean = true
 
 	/**
-	 * Set Alert type
+	 * Set Alert's color
 	 */
-	export let type: 'danger' | 'info' | 'success' | 'warning' | undefined = undefined
+	export let type: Colors = 'default'
 
 	/**
-	 * TODO
+	 * Set Alert's variant
 	 */
-	export let variant: 'outlined' | 'filled' | undefined = undefined
+	export let variant: AlertVariants = 'default'
 
 	const dispatch = createEventDispatcher()
 
@@ -68,7 +71,8 @@
 			type,
 			variant,
 		},
-		['fade', 'show', $$props.class]
+		['fade', 'show', $$props.class],
+		true
 	)
 </script>
 
