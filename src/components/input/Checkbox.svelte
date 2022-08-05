@@ -12,26 +12,14 @@
 	/**
 	 * TODO
 	 */
-	export let group: any = undefined
-
-	/**
-	 * TODO
-	 */
 	export let value: any = undefined
 
 	$: classes = classname('checkbox', undefined, $$props.class)
-
-	function onChange(event: any) {
-		group = group?.filter((item: any) => item != value) ?? []
-		if (!event.target.checked) return
-		group = [...group, value]
-	}
 </script>
 
 {#if condition($$props)}
-	{#if group}
-		<input bind:value group use:forwardEvents {...$$restProps} class={classes} type="checkbox" on:change={onChange} />
-	{:else}
-		<input bind:checked={value} use:forwardEvents {...$$restProps} class={classes} type="checkbox" />
-	{/if}
+	<input bind:checked={value} on:change {...$$restProps} class={classes} type="checkbox" />
+
+	<!-- TODO: use:forwardEvents -->
+	<!-- <input bind:checked={value} use:forwardEvents {...$$restProps} class={classes} type="checkbox" /> -->
 {/if}

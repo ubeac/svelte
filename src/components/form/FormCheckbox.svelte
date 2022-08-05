@@ -11,6 +11,11 @@
 	export let description: string | undefined = undefined
 
 	/**
+	 * Forward all native Events
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
+	/**
 	 * Show multiple Checkboxes in same horozontal line
 	 */
 	export let inline: boolean = false
@@ -25,15 +30,14 @@
 	 */
 	export let value: boolean | undefined = undefined
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
 	$: classes = classname('form-checkbox', { inline }, $$props.class)
 </script>
 
+<!-- TODO: remove on:change -->
 {#if condition($$props)}
 	<!-- svelte-ignore a11y-label-has-associated-control -->
 	<label class={classes}>
-		<Checkbox bind:value {forwardEvents} {...$$restProps} />
+		<Checkbox bind:value {...$$restProps} on:change {forwardEvents} />
 		{#if label}
 			<span class={classname('form-checkbox-label')}>{label}</span>
 		{/if}
