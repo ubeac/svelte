@@ -21,6 +21,8 @@
 
 	$: classes = classname('checkbox', undefined, $$props.class)
 
+	$: checked = group?.some((item: any) => item === value)
+
 	function onChange(event: any) {
 		group = group?.filter((item: any) => item != value) ?? []
 		if (!event.target.checked) return
@@ -30,7 +32,7 @@
 
 {#if condition($$props)}
 	{#if group}
-		<input bind:value group use:forwardEvents {...$$restProps} class={classes} type="checkbox" on:change={onChange} />
+		<input {checked} {group} use:forwardEvents {...$$restProps} class={classes} type="checkbox" on:change={onChange} />
 	{:else}
 		<input bind:checked={value} use:forwardEvents {...$$restProps} class={classes} type="checkbox" />
 	{/if}
