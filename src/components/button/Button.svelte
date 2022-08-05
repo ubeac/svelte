@@ -67,7 +67,7 @@
 		'button',
 		{
 			block,
-			[color!]: !!color,
+			color,
 			disabled,
 			elevation,
 			ghost,

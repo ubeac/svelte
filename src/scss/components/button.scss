@@ -27,25 +27,42 @@ $sizes-ratio: (
 	box-shadow: none;
 }
 
+.u-button-loading {
+	@extend .btn-loading;
+}
+
+.u-button-shape-circle {
+	border-radius: 50%;
+	padding: 0;
+	&.u-button-size-sm {
+		height: 1.447rem;
+		width: 1.447rem;
+	}
+	&.u-button-size-md {
+		height: 2.25rem;
+		width: 2.25rem;
+	}
+	&.u-button-size-lg {
+		height: 2.911rem;
+		width: 2.911rem;
+	}
+}
+
 .u-button-shape-link {
 	@extend .u-button-ghost;
-	padding: 0;
+  padding: 0;
 	border: none;
 	background: none;
 	color: inherit;
 	text-decoration: none;
 }
+
 .u-button-shape-link:hover {
 	color: var(--tblr-btn-color) !important;
 	background-color: transparent !important;
 	text-decoration: underline !important;
 }
 
-.u-button-loading {
-	@extend .btn-loading;
-}
-
-// Shape
 .u-button-shape-round {
 	@extend .btn-pill;
 }
@@ -54,29 +71,23 @@ $sizes-ratio: (
 	border-radius: 0;
 }
 
-.u-button-shape-circle {
-	border-radius: 50%;
-}
-
-.u-button-sm,
-.u-button-group-sm > .u-button {
+.u-button-size-sm {
 	@extend .btn-sm;
 }
 
-.u-button-lg,
-.u-button-group-lg > .u-button {
+.u-button-size-lg {
 	@extend .btn-lg;
 	@extend .gap-3;
 }
 
 @each $key, $value in theme-colors() {
-	.u-button-#{$key} {
+	.u-button-color-#{$key} {
 		@extend .btn-#{$key};
 	}
-	.u-button-#{$key}.u-button-outline {
+	.u-button-color-#{$key}.u-button-outline {
 		@extend .btn-outline-#{$key};
 	}
-	.u-button-#{$key}.u-button-ghost {
+	.u-button-color-#{$key}.u-button-ghost {
 		@extend .btn-ghost-#{$key};
 	}
 }
@@ -85,17 +96,49 @@ $sizes-ratio: (
 	color: inherit;
 }
 
+.u-button-icon > .u-icon {
+	margin: 0 !important;
+}
+
+@each $key, $value in $sizes {
+	.u-button-size-#{$key} {
+		$padding: calc($value / map-get($sizes-ratio, $key));
+		& > .u-icon {
+			font-size: $value;
+			width: $value;
+			height: $value;
+			min-width: $value;
+			margin: 0 calc($value / 2.5) 0 calc($value / -10);
+		}
+		&.u-button-icon {
+			padding-right: $padding;
+			padding-left: $padding;
+		}
+	}
+}
+
 .u-button-group {
 	display: inline-flex;
-
+	flex-wrap: nowrap;
+	gap: 0.5rem;
 	.u-button:active,
 	.u-button:focus,
 	.u-button:hover {
 		z-index: 1;
 	}
+}
 
-	&:not(.u-button-group-horizontal) {
-		flex-direction: column;
+.u-button-group-compact {
+	gap: 0;
+}
+
+.u-button-group-wrap {
+	flex-wrap: wrap;
+}
+
+.u-button-group-vertical {
+	flex-direction: column;
+	&.u-button-group-compact {
 		& > .u-button:not(:first-child) {
 			margin-top: -1px;
 		}
@@ -108,9 +151,11 @@ $sizes-ratio: (
 			border-bottom-right-radius: 0;
 		}
 	}
+}
 
-	&:not(.u-button-group-vertical) {
-		flex-direction: row;
+.u-button-group-horizontal {
+	flex-direction: row;
+	&.u-button-group-compact {
 		& > .u-button:not(:first-child) {
 			margin-inline-start: -1px;
 		}

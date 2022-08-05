@@ -1,5 +1,5 @@
 <script>
-	import { AppLoadingBar, Button, Card, CardActions, CardBody, CardHeader, CardTitle } from '$lib'
+	import { AppLoadingBar, Card, CardBody, CardHeader, CardTitle, Grid, GridItem } from '$lib'
 
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
 	import { COLORS } from '$lib/types'
@@ -32,12 +32,17 @@
 
 <Story name="default" />
 <Story name="color" let:args>
-	<AppLoadingBar {...args} />
-	<br />
-	{#each COLORS as color}
-		<AppLoadingBar {...args} {color} />
-	{/each}
+	<Grid vertical gutterY="sm">
+		{#each COLORS as color}
+			<GridItem>
+				<AppLoadingBar show {...args} {color} />
+			</GridItem>
+		{/each}
+	</Grid>
 </Story>
-<Story name="fixed" args={{ fixed: true }} />
-<Story name="indeterminate" args={{ indeterminate: true }} />
+<Story name="fixed" args={{ show: true, fixed: true }} let:args>
+	<AppLoadingBar fixed {...args} />
+	See Top of the page
+</Story>
+<Story name="indeterminate" args={{ show: true, indeterminate: true }} />
 <Story name="show" args={{ show: true }} />

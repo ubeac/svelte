@@ -32,18 +32,16 @@
 		},
 		href: {
 			control: {
-				type: 'string',
+				type: 'text',
 			},
 		},
 		size: {
-			defaultValue: 'md',
 			control: {
 				type: 'select',
 				options: BUTTON_SIZES,
 			},
 		},
 		shape: {
-			defaultValue: undefined,
 			control: {
 				type: 'select',
 				options: BUTTON_SHAPES,
@@ -52,13 +50,15 @@
 	}} />
 
 <Story name="Default" let:args>
-	<Button {...args}>Button</Button>
+	<div class="example-buttons">
+		<Button {...args}>Button</Button>
+	</div>
 </Story>
 
 <Story name="Colors" let:args>
 	<div class="example-buttons">
 		{#each COLORS as color}
-			<Button {color} {...args} elevation="0">{color}</Button>
+			<Button {color} {...args}>{color}</Button>
 		{/each}
 	</div>
 </Story>
@@ -90,7 +90,7 @@
 <Story name="Shapes" let:args>
 	<div class="example-buttons">
 		{#each BUTTON_SHAPES as shape, index}
-			<Button size="lg" {shape} {...args} title={shape}>{index}</Button>
+			<Button {shape} {...args}>{shape}</Button>
 		{/each}
 	</div>
 </Story>
@@ -103,7 +103,7 @@
 	</div>
 </Story>
 
-<Story name="Buttons with icons" let:args>
+<Story name="Buttons With Icons (start)" let:args>
 	<div class="example-buttons">
 		<Button color="default" {...args}>
 			<Icon name="send" />
@@ -129,7 +129,11 @@
 			<Icon name="edit" />
 			Edit
 		</Button>
+	</div>
+</Story>
 
+<Story name="Buttons With Icons (end)" let:args>
+	<div class="example-buttons">
 		<Button color="default" {...args}>
 			Send
 			<Icon name="send" />
@@ -226,13 +230,72 @@
 	</div>
 </Story>
 
+<Story name="Social Buttons" let:args>
+	<div class="example-buttons">
+		<Button class="btn-facebook" {...args}>
+			<Icon name="brand-facebook" />
+			Facebook
+		</Button>
+		<Button class="btn-twitter" {...args}>
+			<Icon name="brand-twitter" />
+			Twitter
+		</Button>
+		<Button class="btn-google" {...args}>
+			<Icon name="brand-google" />
+			Google
+		</Button>
+		<Button class="btn-youtube" {...args}>
+			<Icon name="brand-youtube" />
+			Youtube
+		</Button>
+		<Button class="btn-vimeo" {...args}>
+			<Icon name="brand-vimeo" />
+			Vimeo
+		</Button>
+		<Button class="btn-dribbble" {...args}>
+			<Icon name="brand-dribbble" />
+			Dribbble
+		</Button>
+		<Button class="btn-github" {...args}>
+			<Icon name="brand-github" />
+			Github
+		</Button>
+		<Button class="btn-instagram" {...args}>
+			<Icon name="brand-instagram" />
+			Instagram
+		</Button>
+		<Button class="btn-pinterest" {...args}>
+			<Icon name="brand-pinterest" />
+			Pinterest
+		</Button>
+		<Button class="btn-vk" {...args}>
+			<Icon name="brand-vk" />
+			VK
+		</Button>
+		<Button class="btn-rss" {...args}>
+			<Icon name="rss" />
+			RSS
+		</Button>
+		<Button class="btn-flickr" {...args}>
+			<Icon name="brand-flickr" />
+			Flickr
+		</Button>
+		<Button class="btn-bitbucket" {...args}>
+			<Icon name="brand-bitbucket" />
+			Bitbucket
+		</Button>
+		<Button class="btn-tabler" {...args}>
+			<Icon name="brand-tabler" />
+			Tabler
+		</Button>
+	</div>
+</Story>
+
 <Story name="Loading" let:args>
-	<Grid justifyContent="center">
-		<GridItem>
-			<Button loading color="primary" {...args}>Button</Button>
-			<Button loading color="primary" {...args}>Loading button with loooong content</Button>
-		</GridItem>
-	</Grid>
+	<div class="example-buttons">
+		<Button loading color="primary" {...args}>Button</Button>
+		<Button loading color="primary" {...args}>Loading button with loooong content</Button>
+	</div>
 </Story>
 
 <Story name="Block" let:args>
@@ -240,25 +303,15 @@
 </Story>
 
 <Story name="Link" let:args>
-	{#each COLORS as color}
-		<Button {color} href="https://www.google.com" shape="link" target="_blank" {...args}>Google</Button>
-	{/each}
-</Story>
-
-<Story name="TODO1" let:args>
-	<Grid justifyContent="center">
-		<GridItem>
-			<ButtonGroup>
-				<Button color="success" {...args}>Save changes</Button>
-				<Button color="default" {...args}>Save and continue</Button>
-				<Button color="danger" {...args}>Cancel</Button>
-			</ButtonGroup>
-		</GridItem>
-	</Grid>
+	<div class="example-buttons">
+		{#each COLORS as color}
+			<Button {color} href="https://www.google.com" shape="link" target="_blank" {...args}>Google</Button>
+		{/each}
+	</div>
 </Story>
 
 <Story name="TODO2" let:args>
-	<ButtonGroup wrap>
+	<div class="example-buttons">
 		<Button {...args}>One</Button>
 		<Button {...args}>Two</Button>
 		<Button {...args}>Three</Button>
@@ -278,7 +331,22 @@
 		<Button {...args}>Seventeen</Button>
 		<Button {...args}>Eighteen</Button>
 		<Button {...args}>Nineteen</Button>
-	</ButtonGroup>
+	</div>
+</Story>
+
+<Story name="Button With Avatar" let:args>
+	<div class="example-buttons">
+		<Button {...args}>
+			<Avatar>A</Avatar>
+			Avatar
+		</Button>
+		<Button {...args}>
+			<Avatar>
+				<img alt="" src="https://picsum.photos/id/1005/90/90" />
+			</Avatar>
+			Avatar
+		</Button>
+	</div>
 </Story>
 
 <Story name="Align Start" let:args>
@@ -314,118 +382,52 @@
 	</Grid>
 </Story>
 
-<Story name="Button With Avatar" let:args>
-	<Grid justifyContent="center">
-		<GridItem>
-			<ButtonGroup>
-				<Button {...args}>
-					<Avatar>A</Avatar>
-					Avatar
-				</Button>
-				<Button {...args}>
-					<Avatar>
-						<img alt="" src="https://picsum.photos/id/1005/90/90" />
-					</Avatar>
-					Avatar
-				</Button>
-			</ButtonGroup>
-		</GridItem>
-	</Grid>
-</Story>
-
 <Story name="Icon Buttons" let:args>
-	<Grid justifyContent="center">
-		<GridItem>
-			<ButtonGroup>
-				<Button color="default" {...args}>
-					<Icon name="send" />
-				</Button>
-				<Button color="warning" {...args}>
-					<Icon name="upload" />
-				</Button>
-				<Button color="success" {...args}>
-					<Icon name="plus" />
-				</Button>
-				<Button color="primary" {...args}>
-					<Icon name="heart" />
-				</Button>
-				<Button color="red" {...args}>
-					<Icon name="link" />
-				</Button>
-				<Button color="info" {...args}>
-					<Icon name="edit" />
-				</Button>
-				<Button color="purple" {...args}>
-					<Icon name="activity" />
-				</Button>
-				<Button color="dark" {...args}>
-					<Icon name="brand-github" />
-				</Button>
-				<Button color="azure" {...args}>
-					<Icon name="bell" />
-				</Button>
-			</ButtonGroup>
-			<br />
-			<br />
-			<ButtonGroup>
-				<Button outline color="default" {...args}>
-					<Icon name="send" />
-				</Button>
-				<Button outline color="warning" {...args}>
-					<Icon name="upload" />
-				</Button>
-				<Button outline color="success" {...args}>
-					<Icon name="plus" />
-				</Button>
-				<Button outline color="primary" {...args}>
-					<Icon name="heart" />
-				</Button>
-				<Button outline color="red" {...args}>
-					<Icon name="link" />
-				</Button>
-				<Button outline color="info" {...args}>
-					<Icon name="edit" />
-				</Button>
-				<Button outline color="purple" {...args}>
-					<Icon name="activity" />
-				</Button>
-				<Button outline color="dark" {...args}>
-					<Icon name="brand-github" />
-				</Button>
-				<Button outline color="azure" {...args}>
-					<Icon name="bell" />
-				</Button>
-			</ButtonGroup>
-		</GridItem>
-	</Grid>
+	<div class="example-buttons">
+		<Button color="default" {...args}>
+			<Icon name="send" />
+		</Button>
+		<Button color="warning" {...args}>
+			<Icon name="upload" />
+		</Button>
+		<Button color="success" {...args}>
+			<Icon name="plus" />
+		</Button>
+		<Button color="primary" {...args}>
+			<Icon name="heart" />
+		</Button>
+		<Button color="red" {...args}>
+			<Icon name="link" />
+		</Button>
+		<Button color="info" {...args}>
+			<Icon name="edit" />
+		</Button>
+		<Button color="purple" {...args}>
+			<Icon name="activity" />
+		</Button>
+		<Button color="dark" {...args}>
+			<Icon name="brand-github" />
+		</Button>
+		<Button color="azure" {...args}>
+			<Icon name="bell" />
+		</Button>
+	</div>
 </Story>
 
 <Story name="Type" let:args>
-	<Grid justifyContent="center">
-		<GridItem>
-			<ButtonGroup compact>
-				<Button type="button" {...args}>Button</Button>
-				<Button type="submit" {...args}>Submit</Button>
-				<Button type="reset" {...args}>Reset</Button>
-			</ButtonGroup>
-		</GridItem>
-	</Grid>
+	<div class="example-buttons">
+		<Button type="button" {...args}>Button</Button>
+		<Button type="submit" {...args}>Submit</Button>
+		<Button type="reset" {...args}>Reset</Button>
+	</div>
 </Story>
 
-<Story name="Toolbar" let:args>
-	<Grid justifyContent="center">
-		<GridItem>
-			<ButtonGroup compact>
-				<Button {...args}>
-					<Icon name="align-left" />
-				</Button>
-				<Button {...args}>
-					<Icon name="align-center" />
-				</Button>
-				<Button {...args}>
-					<Icon name="align-right" />
-				</Button>
-			</ButtonGroup>
-		</GridItem>
-	</Grid>
+<Story name="Group" let:args>
+	<div class="example-buttons">
+		<ButtonGroup>
+			<Button color="success" {...args}>Save changes</Button>
+			<Button color="default" {...args}>Save and continue</Button>
+			<Button color="danger" {...args}>Cancel</Button>
+		</ButtonGroup>
+	</div>
 </Story>

@@ -4,26 +4,30 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
-	import type { ButtonSize } from './button.types'
-
 	/**
-	 * Size of buttons
+	 * TODO
 	 */
-	export let size: ButtonSize = 'md'
+	export let compact: boolean = false
 
 	/**
 	 * Align Buttons vertically
 	 */
 	export let vertical: boolean = false
 
+	/**
+	 * TODO
+	 */
+	export let wrap: boolean = false
+
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname(
 		'button-group',
 		{
+			compact,
 			horizontal: !vertical,
-			size,
 			vertical,
+			wrap,
 		},
 		$$props.class
 	)
