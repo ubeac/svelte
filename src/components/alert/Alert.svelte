@@ -68,7 +68,8 @@
 			type,
 			variant,
 		},
-		['fade', 'show', $$props.class]
+		['fade', 'show', $$props.class],
+		true
 	)
 </script>
 
