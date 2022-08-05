@@ -1,10 +1,9 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Alert, AlertTitle, Button, Icon } from '$lib/components'
+	import { Alert, AlertTitle, ALERT_VARIANTS, Button, Icon } from '$lib/components'
+	import { COLORS } from '$lib/types'
 
-	const TYPES = ['danger', 'info', 'success', 'warning', undefined]
-	const VARIANTS = ['outlined', 'filled', undefined]
 </script>
 
 <Meta
@@ -13,26 +12,27 @@
 	argTypes={{
 		type: {
 			control: {
-				type: 'radio',
-				options: TYPES,
+				type: 'select',
+				options: COLORS,
 			},
 		},
 		variant: {
 			control: {
 				type: 'radio',
-				options: VARIANTS,
+				options: ALERT_VARIANTS,
 			},
 		},
-	}} />
+	}} 
+/>
 
-<Template let:args>
+
+<Story name="default" let:args>
 	<Alert {...args}>
 		<AlertTitle>Alert Title</AlertTitle>
 		This is Alert's content
 	</Alert>
-</Template>
+</Story>
 
-<Story name="default" />
 <Story name="actions" let:args>
 	<Alert {...args}>
 		<AlertTitle>Title</AlertTitle>
@@ -43,9 +43,28 @@
 		</div>
 	</Alert>
 </Story>
-<Story name="dismissible" args={{ dismissible: true }} />
-<Story name="duration" args={{ duration: 2000 }} />
-<Story name="icon" args={{ icon: 'moon' }} />
+
+<Story name="dismissible" args={{ dismissible: true }} let:args>
+	<Alert dismissible {...args}>
+		<AlertTitle>Title</AlertTitle>
+		<p>This is Alert's content</p>
+	</Alert>
+</Story>
+
+<Story name="duration" args={{ duration: 2000 }} let:args>
+	<Alert duration={2000} {...args}>
+		<AlertTitle>Title</AlertTitle>
+		<p>This is Alert's content</p>
+	</Alert>
+</Story>
+
+<Story name="icon" args={{ icon: 'moon' }} let:args>
+	<Alert dismissible {...args}>
+		<AlertTitle>Title</AlertTitle>
+		<p>This is Alert's content</p>
+	</Alert>
+</Story>
+
 <Story name="icon slot" let:args>
 	<Alert {...args}>
 		<Icon slot="icon" name="brightness" />
@@ -53,14 +72,25 @@
 		This is Alert's content
 	</Alert>
 </Story>
-<Story name="open" args={{ open: true }} />
+
+<Story name="open" args={{ open: true }} let:args>
+	<Alert open {...args}>
+		<AlertTitle>Alert Title</AlertTitle>
+		This is Alert's content
+	</Alert>
+</Story>
+
 <Story name="type" let:args>
-	{#each TYPES as type}
-		<Alert {...args} {type}>Alert {type}</Alert>
+	{#each COLORS as type}
+		<Alert {...args} {type}>
+			<AlertTitle>Title</AlertTitle>
+			Alert {type}
+		</Alert>
 	{/each}
 </Story>
+
 <Story name="variant" let:args>
-	{#each VARIANTS as variant}
+	{#each ALERT_VARIANTS as variant}
 		<Alert {...args} {variant}>Alert {variant}</Alert>
 	{/each}
 </Story>
