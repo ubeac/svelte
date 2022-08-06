@@ -11,6 +11,11 @@
 	export let description: string | undefined = undefined
 
 	/**
+	 * Forward all Native events
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
+	/**
 	 * Show multiple Checkboxes in same horozontal line
 	 */
 	export let inline: boolean = false
@@ -24,8 +29,6 @@
 	 * Show checked state of checkbox
 	 */
 	export let value: boolean | undefined = undefined
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('form-checkbox', { inline }, $$props.class)
 </script>
