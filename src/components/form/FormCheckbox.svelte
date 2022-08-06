@@ -11,7 +11,7 @@
 	export let description: string | undefined = undefined
 
 	/**
-	 * Forward all Native events
+	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
