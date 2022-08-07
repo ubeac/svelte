@@ -1,12 +1,15 @@
 const preprocess = require('svelte-preprocess')
 const path = require('path')
 
-// TODO: It's a experimental solution
-require('./styles.generator')
-
 module.exports = {
 	stories: ['./stories/**/*.svelte'],
-	addons: ['@storybook/addon-essentials', '@storybook/addon-links', '@storybook/addon-svelte-csf'],
+	staticDirs: ['./public'],
+	addons: [
+		'@storybook/addon-actions',
+		'@storybook/addon-essentials',
+		'@storybook/addon-links',
+		'@storybook/addon-svelte-csf',
+	],
 	framework: '@storybook/svelte',
 	svelteOptions: {
 		preprocess: preprocess({

@@ -1,6 +1,3 @@
-import Button from './Button.svelte'
-import ButtonGroup from './ButtonGroup.svelte'
-
-Button.Group = ButtonGroup
-
-export { Button }
+export { default as Button } from './Button.svelte'
+export * from './button.types'
+export { default as ButtonGroup } from './ButtonGroup.svelte'

@@ -5,16 +5,19 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Forward all native Events
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
+	/**
+	 * Show content of textarea in Preview mode
 	 */
 	export let preview: boolean = false
 
 	/**
-	 * TODO
+	 * The text content of Textarea
 	 */
 	export let value: string | undefined = undefined
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('textarea', { preview }, $$props.class)
 </script>

@@ -5,36 +5,46 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
-	/**
-	 * Set color of Avatar
-	 */
-	export let color: Colors = undefined
+	import type { AvatarShapes, AvatarSizes } from './avatar.types'
 
 	/**
-	 * Set shape of Avatar
+	 * Set color for Avatar
 	 */
-	export let shape: 'circle' | 'round' | 'tile' = 'round'
+	export let color: Colors = 'default'
 
 	/**
-	 * Set size of Avatar
+	 * Set image for Avatar
 	 */
-	export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md'
+	export let image: string | undefined = undefined
+
+	/**
+	 * Set shape for Avatar: 'circle', 'round', 'tile'
+	 */
+	export let shape: AvatarShapes = 'round'
+
+	/**
+	 * Set size for Avatar: 'xs', 'sm', 'ep', 'md', 'lg', 'xl'
+	 */
+	export let size: AvatarSizes = 'ep'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: style = image ? `background-image: url(${image})` : null
 
 	$: classes = classname(
 		'avatar',
 		{
-			color,
+			[color!]: !!color,
 			shape,
 			size,
 		},
-		$$props.class
+		$$props.class,
+		true
 	)
 </script>
 
 {#if condition($$props)}
-	<span use:forwardEvents {...$$restProps} class={classes}>
+	<span use:forwardEvents {...$$restProps} class={classes} {style}>
 		<slot />
 	</span>
 {/if}

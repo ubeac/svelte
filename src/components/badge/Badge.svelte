@@ -5,13 +5,15 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
+	import type { BadgeShapes } from './badge.types'
+
 	/**
 	 * Set color of Badge
 	 */
-	export let color: Colors = undefined
+	export let color: Colors = 'default'
 
 	/**
-	 * Show badge as small dot
+	 * Show badge as small dot. If true, default slot will be ignored.
 	 */
 	export let dot: boolean = false
 
@@ -26,28 +28,28 @@
 	export let href: string | undefined = undefined
 
 	/**
-	 * Draws Outlined Badge
+	 * Draws outlined badge
 	 */
 	export let outline: boolean = false
 
 	/**
 	 * You can change shape of badge using round property
 	 */
-	export let shape: 'round' | 'tile' | undefined = undefined
+	export let shape: BadgeShapes = 'default'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname(
 		'badge',
 		{
-			color,
+			[color!]: !!color,
 			dot,
 			ghost,
-			href,
 			outline,
 			shape,
 		},
-		$$props.class
+		$$props.class,
+		true
 	)
 </script>
 

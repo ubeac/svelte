@@ -18,10 +18,6 @@ $sizes-ratio: (
 	width: 100%;
 }
 
-// TODO
-.u-button-circle {
-}
-
 .u-button-disabled {
 	@extend .disabled;
 }
@@ -30,43 +26,58 @@ $sizes-ratio: (
 	box-shadow: none;
 }
 
-.u-button-link {
+.u-button-loading {
+	@extend .btn-loading;
+}
+
+.u-button-shape-circle {
+	border-radius: 50%;
+	padding: 0;
+	&.u-button-size-sm {
+		height: 1.447rem;
+		width: 1.447rem;
+	}
+	&.u-button-size-md {
+		height: 2.25rem;
+		width: 2.25rem;
+	}
+	&.u-button-size-lg {
+		height: 2.911rem;
+		width: 2.911rem;
+	}
+}
+
+.u-button-shape-link {
 	padding: 0;
 	border: none;
 	background: none;
 	text-decoration: underline !important;
 }
 
-.u-button-loading {
-	@extend .btn-loading;
-}
-
-.u-button-round {
+.u-button-shape-round {
 	@extend .btn-pill;
 }
 
-.u-button-tile {
+.u-button-shape-tile {
 	border-radius: 0;
 }
 
-.u-button-sm,
-.u-button-group-sm > .u-button {
+.u-button-size-sm {
 	@extend .btn-sm;
 }
 
-.u-button-lg,
-.u-button-group-lg > .u-button {
+.u-button-size-lg {
 	@extend .btn-lg;
 }
 
 @each $key, $value in theme-colors() {
-	.u-button-#{$key} {
+	.u-button-color-#{$key} {
 		@extend .btn-#{$key};
 	}
-	.u-button-#{$key}.u-button-outline {
+	.u-button-color-#{$key}.u-button-outline {
 		@extend .btn-outline-#{$key};
 	}
-	.u-button-#{$key}.u-button-ghost {
+	.u-button-color-#{$key}.u-button-ghost {
 		@extend .btn-ghost-#{$key};
 	}
 }
@@ -75,17 +86,49 @@ $sizes-ratio: (
 	color: inherit;
 }
 
+.u-button-icon > .u-icon {
+	margin: 0 !important;
+}
+
+@each $key, $value in $sizes {
+	.u-button-size-#{$key} {
+		$padding: calc($value / map-get($sizes-ratio, $key));
+		& > .u-icon {
+			font-size: $value;
+			width: $value;
+			height: $value;
+			min-width: $value;
+			margin: 0 calc($value / 2.5) 0 calc($value / -10);
+		}
+		&.u-button-icon {
+			padding-right: $padding;
+			padding-left: $padding;
+		}
+	}
+}
+
 .u-button-group {
 	display: inline-flex;
-
+	flex-wrap: nowrap;
+	gap: 0.5rem;
 	.u-button:active,
 	.u-button:focus,
 	.u-button:hover {
 		z-index: 1;
 	}
+}
 
-	&:not(.u-button-group-horizontal) {
-		flex-direction: column;
+.u-button-group-compact {
+	gap: 0;
+}
+
+.u-button-group-wrap {
+	flex-wrap: wrap;
+}
+
+.u-button-group-vertical {
+	flex-direction: column;
+	&.u-button-group-compact {
 		& > .u-button:not(:first-child) {
 			margin-top: -1px;
 		}
@@ -98,9 +141,11 @@ $sizes-ratio: (
 			border-bottom-right-radius: 0;
 		}
 	}
+}
 
-	&:not(.u-button-group-vertical) {
-		flex-direction: row;
+.u-button-group-horizontal {
+	flex-direction: row;
+	&.u-button-group-compact {
 		& > .u-button:not(:first-child) {
 			margin-inline-start: -1px;
 		}
@@ -112,29 +157,5 @@ $sizes-ratio: (
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 		}
-	}
-}
-
-.u-button-icon > .u-icon {
-	margin: 0 !important;
-}
-
-@each $key, $value in $sizes {
-	$padding: calc($value / map-get($sizes-ratio, $key));
-	.u-button-#{$key} > .u-icon,
-	.u-button-group-#{$key} > .u-button > .u-icon {
-		font-size: $value;
-		width: $value;
-		height: $value;
-		min-width: $value;
-		margin: 0 calc($value / 2.5) 0 calc($value / -10);
-	}
-	.u-button-#{$key}.u-button-icon {
-		padding-right: $padding;
-		padding-left: $padding;
-	}
-	.u-button-group-#{$key} > .u-button-icon {
-		padding-right: $padding !important;
-		padding-left: $padding !important;
 	}
 }

@@ -7,7 +7,7 @@
 }
 
 @each $key, $value in theme-colors() {
-	.u-alert-#{$key} {
+	.u-alert-type-#{$key} {
 		--#{$variable-prefix}alert-color: #{$value};
 	}
 }
@@ -29,8 +29,12 @@
 	@extend .alert-dismissible;
 }
 
-.u-alert-filled {
+.u-alert-variant-filled {
 	@extend .alert-important;
+}
+
+.u-alert-variant-outlined {
+	// TODO
 }
 
 .u-alert-icon {

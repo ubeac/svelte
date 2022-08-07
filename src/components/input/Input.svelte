@@ -1,20 +1,23 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { forwardEventsBuilderNew } from '$lib/directives'
+	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Forward all native Events
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
+	/**
+	 * Show value of input in Preview mode
 	 */
 	export let preview: boolean = false
 
 	/**
-	 * TODO
+	 * the text Value of input
 	 */
 	export let value: any = undefined
-
-	const forwardEvents = forwardEventsBuilderNew(get_current_component())
 
 	$: classes = classname('input', { preview }, $$props.class)
 </script>

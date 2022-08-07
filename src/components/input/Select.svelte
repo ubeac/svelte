@@ -1,8 +1,13 @@
 <script lang="ts">
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
-	import { forwardEventsBuilderNew } from '$lib/directives'
+	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition, createOptions } from '$lib/utils'
+
+	/**
+	 * Forward all native Events
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * TODO
@@ -15,7 +20,7 @@
 	export let key: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Show Selected value in Preview mode
 	 */
 	export let preview: boolean = false
 
@@ -25,20 +30,18 @@
 	export let text: string | undefined = undefined
 
 	/**
-	 * TODO
+	 * Selected option's value
 	 */
 	export let value: any = undefined
 
 	const dispatch = createEventDispatcher()
 
-	const forwardEvents = forwardEventsBuilderNew(get_current_component())
-
 	$: classes = classname('select', { preview }, $$props.class)
 
-	$: ({ options, getId, getText, getValue, toId } = createOptions({ items, key, text }))
+	$: ({ options, fromValue, getKey, getText, toValue } = createOptions({ items, key, text }))
 
 	function change(event: any) {
-		dispatch('changed', (value = getValue(event.target.value)))
+		dispatch('changed', (value = toValue(event.target.value)))
 	}
 </script>
 
@@ -48,12 +51,12 @@
 			{value}
 		</div>
 	{:else}
-		<select value={toId(value)} on:change={change} use:forwardEvents {...$$restProps} class={classes}>
+		<select value={fromValue(value)} on:change={change} use:forwardEvents {...$$restProps} class={classes}>
 			{#if $$props.placeholder}
 				<option disabled selected value="">{$$props.placeholder}</option>
 			{/if}
 			{#each $options as option}
-				<option value={getId(option)}>
+				<option value={getKey(option)}>
 					{getText(option)}
 				</option>
 			{/each}

@@ -17,4 +17,3 @@
 <Story name="placeholder" args={{ placeholder: 'this is placeholder' }} />
 <Story name="value" args={{ value: 'Test' }} />
 <Story name="type" args={{ type: 'password', value: 'Test' }} />
-<Story name="id" args={{ id: 'input-1' }} />

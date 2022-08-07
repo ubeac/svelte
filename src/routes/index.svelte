@@ -1,9 +1,11 @@
 <script lang="ts">
-	import { Button } from '$lib/components'
+	import { Divider } from '$lib/components'
+	import FormCheckboxGroup from '$lib/components/form/FormCheckboxGroup.svelte'
+
+	let value = ['b']
 </script>
 
-<div>
-	<Button color="red">This is button</Button>
-	<Button block>This is another button</Button>
-	<Button color="primary" block elevation={0}>This is button 3</Button>
-</div>
+{value}
+<Divider />
+
+<FormCheckboxGroup on:click={console.log} bind:value items={{ a: 1, b: 2, c: 3 }} />

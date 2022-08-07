@@ -1,7 +1,13 @@
 export const COLORS = [
-	undefined,
+	'default',
 	'primary',
 	'secondary',
+	'success',
+	'danger',
+	'warning',
+	'info',
+	'light',
+	'dark',
 	'blue',
 	'azure',
 	'indigo',
@@ -14,12 +20,6 @@ export const COLORS = [
 	'green',
 	'teal',
 	'cyan',
-	'success',
-	'danger',
-	'warning',
-	'info',
-	'light',
-	'dark',
 ] as const
 
 export type Colors = typeof COLORS[number]

@@ -1,0 +1,10 @@
+@import '@tabler/core/src/scss/vendor/tom-select';
+
+.u-autocomplete-items {
+	@extend .dropdown-menu;
+	@extend .w-100;
+}
+
+.u-autocomplete-item {
+	@extend .dropdown-item;
+}

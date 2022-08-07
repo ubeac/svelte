@@ -1,6 +1,3 @@
-import Avatar from './Avatar.svelte'
-import { default as AvatarGroup } from './AvatarGroup.svelte'
-
-Avatar.Group = AvatarGroup
-
-export { Avatar }
+export { default as Avatar } from './Avatar.svelte'
+export { default as AvatarGroup } from './AvatarGroup.svelte'
+export * from './avatar.types'
