@@ -5,7 +5,7 @@
 	import { nanoid } from 'nanoid'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	import { classname, condition } from '$lib/utils'
 
 	import { Collapse, CollapseToggler } from '../collapse'
 
@@ -38,13 +38,15 @@
 	$: classes = classname('accordion', {}, $$props.class)
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
-	<div class={classname('accordion-header')}>
-		<CollapseToggler class={classname('collapse-toggler-accordion')} {id}>
-			{title}
-		</CollapseToggler>
+{#if condition($$props)}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		<div class={classname('accordion-header')}>
+			<CollapseToggler class={classname('collapse-toggler-accordion')} {id}>
+				{title}
+			</CollapseToggler>
+		</div>
+		<Collapse class={classname('collapse-accordion')} {id} {open} {group}>
+			<slot />
+		</Collapse>
 	</div>
-	<Collapse class={classname('collapse-accordion')} {id} {open} {group}>
-		<slot />
-	</Collapse>
-</div>
+{/if}

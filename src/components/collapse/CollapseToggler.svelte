@@ -4,7 +4,7 @@
 	import { nanoid } from 'nanoid'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	import { classname, condition } from '$lib/utils'
 
 	/**
 	 * Forward all native events
@@ -19,14 +19,16 @@
 	$: classes = classname('collapse-toggler', {}, $$props.class)
 </script>
 
-<button
-	id="collapse-{id}-toggler"
-	type="button"
-	data-bs-target="#collapse-{id}"
-	data-bs-toggle="collapse"
-	aria-controls="#collapse-{id}"
-	use:forwardEvents
-	{...$$restProps}
-	class={classes}>
-	<slot />
-</button>
+{#if condition($$props)}
+	<button
+		id="collapse-{id}-toggler"
+		type="button"
+		data-bs-target="#collapse-{id}"
+		data-bs-toggle="collapse"
+		aria-controls="#collapse-{id}"
+		use:forwardEvents
+		{...$$restProps}
+		class={classes}>
+		<slot />
+	</button>
+{/if}

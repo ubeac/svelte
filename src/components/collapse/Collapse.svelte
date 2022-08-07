@@ -14,6 +14,11 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
+	 * Id of parent Element, if more than one Collapse is related together
+	 */
+	export let group: string | undefined = undefined
+
+	/**
 	 * Unique id of collapse
 	 */
 	export let id: string = nanoid()
@@ -22,11 +27,6 @@
 	 * Controls open/close state of Collapse
 	 */
 	export let open = false
-
-	/**
-	 * Id of parent Element, if more than one Collapse is related together
-	 */
-	export let group: string | undefined = undefined
 
 	let element: HTMLDivElement
 	let instance: Collapse
