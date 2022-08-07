@@ -36,7 +36,7 @@
 {#if condition($$props)}
 	<!-- svelte-ignore a11y-label-has-associated-control -->
 	<label class={classes}>
-		<Checkbox bind:value {forwardEvents} {...$$restProps} />
+		<Checkbox bind:value {forwardEvents} {...$$restProps} on:changed />
 		{#if label}
 			<span class={classname('form-checkbox-label')}>{label}</span>
 		{/if}
