@@ -17,6 +17,7 @@
 		"preview": "svelte-kit preview",
 		"publish": "npm run package && npm publish ./package",
 		"start": "npm run style && svelte-kit dev",
+		"dev": "npm run style && svelte-kit dev",
 		"storybook:start": "npm run style && start-storybook -p 6006",
 		"storybook:build": "npm run style && build-storybook -o ./.storybook/build",
 		"style": "node scripts/styles.generator.js"

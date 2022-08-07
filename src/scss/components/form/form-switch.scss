@@ -1,20 +1,24 @@
-.u-form-switch {
+.u-switch {
 	@extend .form-check;
-	padding: 0;
-}
+	@extend .form-switch;
+	// padding: 0;
+	&-description {
+		@extend .form-check-description;
+		// padding-left: 2.3rem;
+	}
 
-.u-form-switch-description {
-	@extend .form-check-description;
-	padding-left: 2.3rem;
-}
+	&-inline {
+		@extend .form-check-inline;
+	}
 
-.u-form-switch-inline {
-	@extend .form-check-inline;
-}
+	&-input {
+		@extend .form-check-input;
+	}
 
-.u-form-switch-label {
-	@extend .form-check-label;
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 0.25rem;
+	&-label {
+		@extend .form-check-label;
+		// display: inline-block;
+		// vertical-align: middle;
+		// padding-left: 0.25rem;
+	}
 }

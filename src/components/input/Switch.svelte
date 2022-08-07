@@ -13,10 +13,20 @@
 	 * Checked state of Checkbox
 	 */
 	export let value: boolean | undefined = undefined
-
-	$: classes = classname('switch', undefined, $$props.class)
+	export let label: string | undefined = undefined
+	$: switchClasses = classname('switch', undefined, $$props.class)
+	$: inputClasses = classname('switch-input', undefined, $$props.class)
+	$: labelClasses = classname('switch-label', undefined, $$props.class)
+	function onClick() {
+		value = !value
+	}
 </script>
 
 {#if condition($$props)}
-	<input bind:checked={value} use:forwardEvents {...$$restProps} class={classes} type="checkbox" />
+	<span class={switchClasses}>
+		<input type="checkbox" bind:checked={value} use:forwardEvents {...$$restProps} class={inputClasses} />
+		{#if label}
+			<span on:click={onClick} class={labelClasses}>{label}</span>
+		{/if}
+	</span>
 {/if}
