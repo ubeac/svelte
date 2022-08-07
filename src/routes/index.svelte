@@ -1,7 +1,11 @@
 <script lang="ts">
-	import AppTest from '$lib/components/app/App.Test.svelte'
+	import { Divider } from '$lib/components'
 	import FormCheckboxGroup from '$lib/components/form/FormCheckboxGroup.svelte'
+
+	let value = ['b']
 </script>
 
-<!-- <AppTest /> -->
-<FormCheckboxGroup on:click={console.log} on:change={console.log} />
+{value}
+<Divider />
+
+<FormCheckboxGroup on:click={console.log} bind:value items={{ a: 1, b: 2, c: 3 }} />
