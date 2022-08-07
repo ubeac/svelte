@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createEventDispatcher, getContext, onDestroy, onMount } from 'svelte'
+	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 	import { get_current_component } from 'svelte/internal'
 
 	import type { Collapse } from 'bootstrap'
@@ -14,30 +14,30 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * TODO
+	 * Unique id of collapse
 	 */
 	export let id: string = nanoid()
 
 	/**
-	 * TODO
+	 * Controls open/close state of Collapse
 	 */
 	export let open = false
 
 	/**
-	 * TODO
+	 * Id of parent Element, if more than one Collapse is related together
 	 */
-	export let parent: string | undefined = undefined
+	export let group: string | undefined = undefined
 
 	let element: HTMLDivElement
 	let instance: Collapse
 
 	const dispatch = createEventDispatcher()
 
-	function onShow(e) {
+	function onShow(e: any) {
 		dispatch('changed', true)
 	}
 
-	function onHide(e) {
+	function onHide(e: any) {
 		dispatch('changed', false)
 	}
 
@@ -68,7 +68,7 @@
 			}
 	}
 
-	$: classes = classname('collapse', {}, $$props.class)
+	$: classes = classname('collapse', {}, { collapse: true, show: open, class: $$props.class })
 </script>
 
 {#if condition($$props)}
@@ -78,7 +78,7 @@
 		use:forwardEvents
 		id="collapse-{id}"
 		class={classes}
-		data-bs-parent={parent ? `#${parent}` : null}
+		data-bs-parent={group ? `#${group}` : null}
 		aria-labelledby="#collapse-{id}-toggler">
 		<slot />
 	</div>
