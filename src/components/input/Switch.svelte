@@ -25,8 +25,12 @@
 {#if condition($$props)}
 	<span class={switchClasses}>
 		<input type="checkbox" bind:checked={value} use:forwardEvents {...$$restProps} class={inputClasses} />
-		{#if label}
-			<span on:click={onClick} class={labelClasses}>{label}</span>
-		{/if}
+		<span on:click={onClick} class={labelClasses}>
+			{#if label}
+				{label}
+			{:else}
+				<slot />
+			{/if}
+		</span>
 	</span>
 {/if}
