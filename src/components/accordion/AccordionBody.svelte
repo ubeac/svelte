@@ -9,6 +9,6 @@
 	$: classes = classname('accordion-body', {}, $$props.class)
 </script>
 
-<div {...$$restProps} class={classes}>
+<div use:forwardEvents {...$$restProps} class={classes}>
 	<slot />
 </div>

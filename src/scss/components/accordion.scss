@@ -2,6 +2,10 @@
 	@extend .accordion-item;
 }
 
+.u-accordion-body {
+	@extend .accordion-body;
+}
+
 .u-accordion-header {
 	@extend .u-accordion-header;
 }
