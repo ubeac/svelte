@@ -10,9 +10,9 @@
 	import { Collapse, CollapseToggler } from '../collapse'
 
 	/**
-	 * Controls open/close state of Accordion Item
+	 * Id of related Accordions Element
 	 */
-	export let open: boolean = false
+	export let group: string | undefined = undefined
 
 	/**
 	 * Id of Accordion
@@ -20,9 +20,9 @@
 	export let id: string = nanoid()
 
 	/**
-	 * Id of related Accordions Element
+	 * Controls open/close state of Accordion Item
 	 */
-	export let group: string | undefined = undefined
+	export let open: boolean = false
 
 	/**
 	 * Title of Accordion

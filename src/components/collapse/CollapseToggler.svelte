@@ -7,19 +7,14 @@
 	import { classname } from '$lib/utils'
 
 	/**
-	 * Id of target Collapse component
-	 */
-	export let id: string = nanoid()
-
-	/**
-	 * Collapsed
-	 */
-	// export let collapsed = false
-
-	/**
 	 * Forward all native events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
+	/**
+	 * Id of target Collapse component
+	 */
+	export let id: string = nanoid()
 
 	$: classes = classname('collapse-toggler', {}, $$props.class)
 </script>
