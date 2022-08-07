@@ -3,11 +3,9 @@
 
 	import { nanoid } from 'nanoid'
 
+	import { FormCheckbox, Label } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition, createOptions } from '$lib/utils'
-
-	import { Label } from '../label'
-	import FormCheckbox from './FormCheckbox.svelte'
 
 	/**
 	 * Set id for HTML element
@@ -49,22 +47,19 @@
 	 */
 	export let value: Array<any> = []
 
-	let forwardEvents = forwardEventsBuilder(get_current_component())
-
 	const dispatch = createEventDispatcher()
 
-	function onChange(event: any, option: any) {
-		const filtered = value?.filter((key) => key !== toValue(getKey(option))) ?? []
-		if (event.target.checked) {
-			value = filtered.concat([toValue(getKey(option))])
-		} else {
-			value = filtered
-		}
-		dispatch('changed', value)
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: ({ options, getKey, toValue, getText, isSelected } = createOptions({ items, key, text }))
-	$: classes = classname('form-checkbox-group', null, $$props.class)
+
+	$: classes = classname('form-checkbox-group', undefined, $$props.class)
+
+	function onChange(event: any, option: any) {
+		value = value?.filter((key) => key !== toValue(getKey(option))) ?? []
+		if (event.detail) value = value.concat([toValue(getKey(option))])
+		dispatch('changed', value)
+	}
 </script>
 
 {#if condition($$props)}
@@ -80,12 +75,13 @@
 	{:else}
 		{#each $options as option}
 			<FormCheckbox
-				{forwardEvents}
 				class={classes}
 				{inline}
+				{forwardEvents}
 				label={getText(option)}
-				on:change={(event) => onChange(event, option)}
-				value={isSelected(option, value)} />
+				value={isSelected(option, value)}
+				{...$$restProps}
+				on:changed={(event) => onChange(event, option)} />
 		{/each}
 	{/if}
 {/if}
