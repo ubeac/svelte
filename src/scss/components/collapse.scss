@@ -5,3 +5,11 @@
 .u-collapse-open {
 	@extend .show;
 }
+
+.u-collapse-accordion {
+	@extend .accordion-collapse;
+}
+
+.u-collapse-toggler-accordion {
+	@extend .accordion-button;
+}

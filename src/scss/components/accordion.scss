@@ -1,0 +1,11 @@
+.u-accordion {
+	@extend .accordion-item;
+}
+
+.u-accordion-header {
+	@extend .u-accordion-header;
+}
+
+.u-accordions {
+	@extend .accordion;
+}

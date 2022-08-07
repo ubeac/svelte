@@ -24,8 +24,6 @@
 	$: classes = classname('collapse-toggler', {}, $$props.class)
 </script>
 
-<!-- class:collapsed -->
-<!-- aria-expanded={!collapsed} -->
 <button
 	id="collapse-{id}-toggler"
 	type="button"

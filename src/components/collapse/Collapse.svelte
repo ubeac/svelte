@@ -41,22 +41,37 @@
 		dispatch('changed', false)
 	}
 
+	function bind() {
+		import('bootstrap').then(({ Collapse }) => {
+			instance = new Collapse(element, {
+				toggle: false,
+				parent: group,
+			})
+		})
+	}
+
+	function unbind() {
+		instance?.dispose()
+	}
+
+	function rebind(deps?: any) {
+		if (!element) return
+		unbind()
+		bind()
+	}
+
 	onMount(() => {
 		element.addEventListener('show.bs.collapse', onShow)
 		element.addEventListener('hide.bs.collapse', onHide)
 
-		import('bootstrap').then(({ Collapse }) => {
-			instance = new Collapse(element, {
-				toggle: false,
-			})
-		})
+		bind()
 	})
 
 	onDestroy(() => {
 		element?.removeEventListener('show.bs.collapse', onShow)
 		element?.removeEventListener('hide.bs.collapse', onHide)
 
-		instance?.dispose()
+		unbind()
 	})
 
 	$: {
@@ -68,6 +83,8 @@
 			}
 	}
 
+	$: rebind({ group })
+
 	$: classes = classname('collapse', {}, { collapse: true, show: open, class: $$props.class })
 </script>
 
@@ -78,7 +95,6 @@
 		use:forwardEvents
 		id="collapse-{id}"
 		class={classes}
-		data-bs-parent={group ? `#${group}` : null}
 		aria-labelledby="#collapse-{id}-toggler">
 		<slot />
 	</div>

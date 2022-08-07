@@ -1,0 +1,14 @@
+<script lang="ts">
+	import { get_current_component } from 'svelte/internal'
+
+	import { forwardEventsBuilder } from '$lib/directives'
+	import { classname } from '$lib/utils'
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: classes = classname('accordion-body', {}, $$props.class)
+</script>
+
+<div {...$$restProps} class={classes}>
+	<slot />
+</div>
