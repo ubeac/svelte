@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { Divider } from '$lib/components'
-	import FormCheckboxGroup from '$lib/components/form/FormCheckboxGroup.svelte'
-
-	let value = ['b']
+	import { Tab, Tabs } from '$lib/components'
+	import TabHeader from '$lib/components/tab/TabHeader.svelte'
 </script>
 
-{value}
-<Divider />
-
-<FormCheckboxGroup on:click={console.log} bind:value items={{ a: 1, b: 2, c: 3 }} />
+<Tabs let:tabs>
+	<TabHeader {tabs} />
+	<Tab name="p-1">Hello Page 1</Tab>
+	<Tab active name="p-2">Hello Page 2</Tab>
+	<Tab disabled name="p-3">Hello Page 3</Tab>
+</Tabs>
