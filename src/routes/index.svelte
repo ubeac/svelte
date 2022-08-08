@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { Divider } from '$lib/components'
-	import { Checkbox, Radio, RadioGroup, Switch } from '$lib/components/index'
+	import { Checkbox, RadioGroup, Switch } from '$lib/components/index'
 
+	let buttonModel = 'apple'
+	let switchModel = true
 	let singleCheckboxModel = true
 	let multiCheckboxModel: any[] = []
 	let items = [
@@ -11,6 +13,21 @@
 		{ label: 'plum', value: 'plum' },
 	]
 </script>
+
+<h1>Button Group</h1>
+<h2>model : {buttonModel}</h2>
+<RadioGroup {items} bind:value={buttonModel} />
+<Divider />
+
+<h1>Button Group inline</h1>
+<h2>model : {buttonModel}</h2>
+<RadioGroup row {items} bind:value={buttonModel} />
+<Divider />
+
+<h1>switch</h1>
+<h2>model : {switchModel}</h2>
+<Switch bind:value={switchModel} label="Are you sure?" />
+<Divider />
 
 <h1>checkbox</h1>
 <h2>model : {singleCheckboxModel}</h2>
