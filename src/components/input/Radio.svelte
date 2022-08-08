@@ -4,24 +4,34 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
+	import { Label } from '../label'
+
 	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * The Selected radio button's value
+	 * Checked state of Checkbox
 	 */
-	export let group: any = undefined
-
-	/**
-	 * The value of radio button
-	 */
-	export let value: any = undefined
-
-	$: classes = classname('radio', undefined, $$props.class)
+	export let value: string | undefined = undefined
+	export let label: string | undefined = undefined
+	export let name: string | undefined = undefined
+	let id = 'id' + Math.random()
+	$: radioClasses = classname('radio', undefined, $$props.class)
+	$: inputClasses = classname('radio-input', undefined, $$props.class)
+	$: labelClasses = classname('radio-label', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}
-	<input bind:group {value} use:forwardEvents {...$$restProps} class={classes} type="radio" />
+	<span class={radioClasses}>
+		<input {id} type="radio" {name} {value} use:forwardEvents {...$$restProps} class={inputClasses} />
+		<Label for={id} class={labelClasses}>
+			{#if label}
+				{label}
+			{:else}
+				<slot />
+			{/if}
+		</Label>
+	</span>
 {/if}

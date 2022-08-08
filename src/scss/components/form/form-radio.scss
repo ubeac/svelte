@@ -1,15 +1,23 @@
-.u-form-radio {
+.u-radio {
 	@extend .form-check;
-}
+	// padding: 0;
+	&-description {
+		@extend .form-check-description;
+		// padding-left: 2.3rem;
+	}
 
-.u-form-radio-description {
-	@extend .form-check-description;
-}
+	&-inline {
+		@extend .form-check-inline;
+	}
 
-.u-form-radio-inline {
-	@extend .form-check-inline;
-}
+	&-input {
+		@extend .form-check-input;
+	}
 
-.u-form-radio-label {
-	@extend .form-check-label;
+	&-label {
+		@extend .form-check-label;
+		// display: inline-block;
+		// vertical-align: middle;
+		// padding-left: 0.25rem;
+	}
 }

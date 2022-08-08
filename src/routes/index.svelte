@@ -1,14 +1,17 @@
 <script lang="ts">
 	import { Divider } from '$lib/components'
-	import { Icon, Switch, Textarea } from '$lib/components/index'
+	import { Radio, RadioGroup } from '$lib/components/index'
 
-	let value = 'test'
-	let value2 = false
+	let value = false
+	function onChange(event) {
+		console.log('obj')
+		console.log(event)
+	}
 </script>
 
-{value2}
+{value}
 <Divider />
-<Switch bind:value={value2}>
-	<span>switch <Icon name="home" size="sm" /></span>
-</Switch>
-<!-- <FormCheckboxGroup on:click={console.log} bind:value items={{ a: 1, b: 2, c: 3 }} /> -->
+<RadioGroup row>
+	<Radio on:change={onChange} value="10" label="10" name="test" />
+	<Radio on:change={onChange} value="20" label="20" name="test" />
+</RadioGroup>
