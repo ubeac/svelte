@@ -1,18 +1,33 @@
 <script lang="ts">
 	import { Divider } from '$lib/components'
-	import { Checkbox } from '$lib/components/index'
+	import { Checkbox, Radio, RadioGroup, Switch } from '$lib/components/index'
 
-	let value: any[] = []
+	let singleCheckboxModel = true
+	let multiCheckboxModel: any[] = []
 	let items = [
-		{ label: '10', value: 10 },
-		{ label: '20', value: 20 },
-		{ label: '30', value: 30 },
+		{ label: 'apple', value: 'apple' },
+		{ label: 'banana', value: 'banana' },
+		{ label: 'orange', value: 'orange' },
+		{ label: 'plum', value: 'plum' },
 	]
 </script>
 
-{value}
+<h1>checkbox</h1>
+<h2>model : {singleCheckboxModel}</h2>
+<Checkbox bind:model={singleCheckboxModel} label="Are you sure?" />
 <Divider />
-<Checkbox inline bind:model={value} value="apple" label="apple" />
-<Checkbox inline bind:model={value} value="banana" label="banana" />
-<Checkbox inline bind:model={value} value="orange" label="orange" />
-<Checkbox inline bind:model={value} value="plum" label="plum" />
+
+<h1>checkbox</h1>
+<h2>model : {multiCheckboxModel}</h2>
+{#each items as item}
+	<Checkbox bind:model={multiCheckboxModel} value={item.value} label={item.label} />
+{/each}
+
+<Divider />
+<h1>checkbox inline</h1>
+<h2>model : {multiCheckboxModel}</h2>
+{#each items as item}
+	<Checkbox inline bind:model={multiCheckboxModel} value={item.value} label={item.label} />
+{/each}
+
+<Divider />
