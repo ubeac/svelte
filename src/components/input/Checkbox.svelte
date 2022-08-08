@@ -19,17 +19,9 @@
 
 	const dispatch = createEventDispatcher()
 	let id = 'id' + Math.random()
-	let modelSync = model
 	$: checkboxClasses = classname('checkbox', { checked, inline }, $$props.class)
 	$: inputClasses = classname('checkbox-input', undefined, $$props.class)
 	$: labelClasses = classname('checkbox-label', undefined, $$props.class)
-	// $: {
-	// 	if (Array.isArray(modelSync) && Array.isArray(model) && modelSync.join('') != model.join('')) {
-	// 		checked = model.some((x) => x == value)
-	// 	} else if (!Array.isArray(modelSync) && model != modelSync) {
-	// 		checked = Boolean(model)
-	// 	}
-	// }
 	$: checked = Array.isArray(model) ? model.some((x) => x == value) : model
 	function toggle(e: any) {
 		checked = e.target.checked
