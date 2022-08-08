@@ -1,15 +1,23 @@
-.u-form-checkbox {
+.u-checkbox {
 	@extend .form-check;
-}
+	// padding: 0;
+	&-description {
+		@extend .form-check-description;
+		// padding-left: 2.3rem;
+	}
 
-.u-form-checkbox-description {
-	@extend .form-check-description;
-}
+	&-inline {
+		@extend .form-check-inline;
+	}
 
-.u-form-checkbox-inline {
-	@extend .form-check-inline;
-}
+	&-input {
+		@extend .form-check-input;
+	}
 
-.u-form-checkbox-label {
-	@extend .form-check-label;
+	&-label {
+		@extend .form-check-label;
+		// display: inline-block;
+		// vertical-align: middle;
+		// padding-left: 0.25rem;
+	}
 }
