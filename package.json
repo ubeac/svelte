@@ -18,6 +18,7 @@
 		"publish": "npm run package && npm publish ./package",
 		"start": "npm run style && svelte-kit dev",
 		"dev": "npm run style && svelte-kit dev",
+		"sb": "npm run style && start-storybook -p 6006",
 		"storybook:start": "npm run style && start-storybook -p 6006",
 		"storybook:build": "npm run style && build-storybook -o ./.storybook/build",
 		"style": "node scripts/styles.generator.js"

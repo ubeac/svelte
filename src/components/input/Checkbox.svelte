@@ -1,28 +1,32 @@
 <script lang="ts">
+	/*
+	 * We need to write some mixin to prevent this imports ???
+	 */
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
-	import { mode } from '$app/env'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
 	import { Label } from '../label'
 
-	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	let forwardEvents = forwardEventsBuilder(get_current_component())
+	const dispatch = createEventDispatcher()
 
 	export let label: string | undefined = undefined
 	export let model: any[] | boolean | undefined = undefined
 	export let value: string | number | undefined = undefined
 	export let inline: boolean = false
 
-	const dispatch = createEventDispatcher()
+	/*
+	 * We need to write some util function for return unique id  ???
+	 */
 	let id = 'id' + Math.random()
+
 	$: checkboxClasses = classname('checkbox', { checked, inline }, $$props.class)
 	$: inputClasses = classname('checkbox-input', undefined, $$props.class)
 	$: labelClasses = classname('checkbox-label', undefined, $$props.class)
 	$: checked = Array.isArray(model) ? model.some((x) => x == value) : model
+
 	function toggle(e: any) {
 		checked = e.target.checked
 		if (checked) {
