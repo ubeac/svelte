@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
+	import { get_current_component, getContext } from 'svelte/internal'
 
 	import type { Tab } from 'bootstrap'
 
@@ -8,16 +8,17 @@
 	import { classname, condition } from '$lib/utils'
 
 	import { Icon } from '../icon'
+	import type { TabType } from './tab.types'
 
 	/**
-	 * TODO
+	 * Forward All native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * TODO
 	 */
-	export let tab: any
+	export let tab: TabType | undefined = undefined
 
 	let element: HTMLButtonElement
 
@@ -40,7 +41,7 @@
 	}
 
 	$: if (instance) {
-		if (tab.active) instance.show()
+		if (tab?.active) instance.show()
 	}
 
 	$: classes = classname('tab-item', {}, $$props.class)
@@ -51,14 +52,14 @@
 		<button
 			bind:this={element}
 			on:click={show}
-			data-bs-target="#{tab.id}"
-			class={classname('tab-item-link', null, { active: tab.active, disabled: tab.disabled })}>
-			{#if tab.icon}
+			data-bs-target="#{tab?.id}"
+			class={classname('tab-item-link', null, { active: tab?.active, disabled: tab?.disabled })}>
+			{#if tab?.icon}
 				<div class={classname('tab-item-icon')}>
-					<Icon name={tab.icon} />
+					<Icon name={tab?.icon} />
 				</div>
 			{/if}
-			{tab.name}
+			{tab?.name}
 		</button>
 	</li>
 {/if}

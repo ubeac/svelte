@@ -8,15 +8,13 @@
 	import TabItem from './TabItem.svelte'
 
 	/**
-	 * TODO
+	 * List of Tab items
 	 */
 	export let tabs: any = []
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: console.log({ tabs })
-
-	$: classes = classname('tab-header', {}, { class: $$props.class, nav: true })
+	$: classes = classname('tab-header', {}, [$$props.class, 'nav'])
 </script>
 
 <ul use:forwardEvents {...$$restProps} class={classes}>
