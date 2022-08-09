@@ -4,7 +4,7 @@
 	let tabs = []
 </script>
 
-<Tabs vertical bind:tabs>
+<Tabs shape="pills" vertical bind:tabs>
 	<TabHeader vertical {tabs} />
 	<TabContent>
 		<Tab name="p-1">Hello Page 1</Tab>

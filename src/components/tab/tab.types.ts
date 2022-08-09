@@ -1,4 +1,4 @@
-export const TAB_SHAPES = ['default', 'shape'] as const
+export const TAB_SHAPES = ['default', 'pills'] as const
 export type TabShapes = typeof TAB_SHAPES[number]
 
 export type TabType = {
