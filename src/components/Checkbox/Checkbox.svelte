@@ -1,7 +1,4 @@
 <script lang="ts">
-	/*
-	 * We need to write some mixin to prevent this imports ???
-	 */
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
@@ -17,35 +14,30 @@
 	export let value: string | number | undefined = undefined
 	export let inline: boolean = false
 
-	/*
-	 * We need to write some util function for return unique id  ???
-	 */
 	let id = 'id' + Math.random()
-
 	$: checkboxClasses = classname('checkbox', { checked, inline }, $$props.class)
 	$: inputClasses = classname('checkbox-input', undefined, $$props.class)
 	$: labelClasses = classname('checkbox-label', undefined, $$props.class)
 	$: checked = Array.isArray(model) ? model.some((x) => x == value) : model
-
 	function toggle(e: any) {
 		checked = e.target.checked
-		if (checked) {
-			if (Array.isArray(model)) {
-				if (!model.some((x) => x == value)) {
-					model = [...model, value]
-				}
-			} else {
-				model = true
-			}
-		}
-		if (!checked) {
-			if (Array.isArray(model)) {
-				model = model.filter((item) => item != value)
-			} else {
-				model = false
-			}
-		}
-		model = model
+		// if (checked) {
+		// 	// if (Array.isArray(model)) {
+		// 	// 	if (!model.some((x) => x == value)) {
+		// 	// 		model = [...model, value]
+		// 	// 	}
+		// 	// } else {
+		// 	// }
+		// 	model = true
+		// }
+		// if (!checked) {
+		// 	// if (Array.isArray(model)) {
+		// 	// 	model = model.filter((item) => item != value)
+		// 	// } else {
+		// 	// }
+		// 	model = false
+		// }
+		model = checked
 		dispatch('changed', model)
 	}
 </script>

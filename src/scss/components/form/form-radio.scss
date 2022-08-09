@@ -1,9 +1,7 @@
 .u-radio {
 	@extend .form-check;
-	// padding: 0;
 	&-description {
 		@extend .form-check-description;
-		// padding-left: 2.3rem;
 	}
 
 	&-inline {
@@ -16,8 +14,5 @@
 
 	&-label {
 		@extend .form-check-label;
-		// display: inline-block;
-		// vertical-align: middle;
-		// padding-left: 0.25rem;
 	}
 }

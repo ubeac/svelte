@@ -9,7 +9,7 @@
 	/**
 	 * Forward all native Events
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Checked state of Checkbox

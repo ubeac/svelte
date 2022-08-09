@@ -10,8 +10,8 @@
 	export let row: boolean = false
 	$: radioGroupClasses = classname('radio-group', { column, row }, $$props.class)
 	$: slugName = name || 'radio-group' + Math.random()
-	function onClick(e) {
-		value = e.currentTarget.value
+	function onClick(e: any) {
+		value = e.target.value
 	}
 </script>
 
@@ -19,7 +19,13 @@
 	<div class={radioGroupClasses}>
 		<slot>
 			{#each items as item}
-				<Radio checked={value == item.value} on:click={onClick} value={item.value} name={slugName} label={item.label} />
+				<Radio
+					disabled={item.disabled}
+					checked={value == item.value}
+					on:click={onClick}
+					value={item.value}
+					name={slugName}
+					label={item.label} />
 			{/each}
 		</slot>
 	</div>

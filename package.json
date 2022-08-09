@@ -47,6 +47,7 @@
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
+		"@tsconfig/svelte": "^3.0.0",
 		"@types/bootstrap": "^5.1.10",
 		"@types/luxon": "^2.3.2",
 		"babel-loader": "^8.2.5",

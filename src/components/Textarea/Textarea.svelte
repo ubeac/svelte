@@ -10,24 +10,13 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * Show content of textarea in Preview mode
-	 */
-	export let preview: boolean = false
-
-	/**
 	 * The text content of Textarea
 	 */
 	export let value: string | undefined = undefined
 
-	$: classes = classname('textarea', { preview }, $$props.class)
+	$: classes = classname('textarea', $$props.class)
 </script>
 
 {#if condition($$props)}
-	{#if preview}
-		<div use:forwardEvents {...$$restProps} class={classes}>
-			{value}
-		</div>
-	{:else}
-		<textarea bind:value use:forwardEvents {...$$restProps} class={classes} />
-	{/if}
+	<textarea bind:value use:forwardEvents {...$$restProps} class={classes} />
 {/if}

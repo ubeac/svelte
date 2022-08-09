@@ -18,48 +18,47 @@
 	 * TODO
 	 */
 	export let key: string | undefined = undefined
-
-	/**
-	 * Show Selected value in Preview mode
-	 */
-	export let preview: boolean = false
-
 	/**
 	 * TODO
 	 */
 	export let text: string | undefined = undefined
-
 	/**
 	 * Selected option's value
 	 */
 	export let value: any = undefined
+	export let multiple: boolean = false
 
 	const dispatch = createEventDispatcher()
 
-	$: classes = classname('select', { preview }, $$props.class)
+	$: classes = classname('select', $$props.class)
 
 	$: ({ options, fromValue, getKey, getText, toValue } = createOptions({ items, key, text }))
 
 	function change(event: any) {
-		dispatch('changed', (value = toValue(event.target.value)))
+		let selectedItems = []
+		let selectedList = event.target.selectedOptions
+		for (const item of selectedList) {
+			selectedItems.push(toValue(item.value))
+		}
+		if (multiple) {
+			value = selectedItems
+		} else {
+			value = selectedItems[0]
+		}
+		// 	value = [...value,val]
+		dispatch('change', value)
 	}
 </script>
 
 {#if condition($$props)}
-	{#if preview}
-		<div {...$$restProps} class={classes}>
-			{value}
-		</div>
-	{:else}
-		<select value={fromValue(value)} on:change={change} use:forwardEvents {...$$restProps} class={classes}>
-			{#if $$props.placeholder}
-				<option disabled selected value="">{$$props.placeholder}</option>
-			{/if}
-			{#each $options as option}
-				<option value={getKey(option)}>
-					{getText(option)}
-				</option>
-			{/each}
-		</select>
-	{/if}
+	<select value={fromValue(value)} {multiple} on:change={change} use:forwardEvents {...$$restProps} class={classes}>
+		{#if $$props.placeholder}
+			<option disabled selected value="">{$$props.placeholder}</option>
+		{/if}
+		{#each $options as option}
+			<option value={getKey(option)}>
+				{getText(option)}
+			</option>
+		{/each}
+	</select>
 {/if}
