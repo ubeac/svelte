@@ -4,15 +4,27 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
-	export let content: 'stretch' | 'center' = 'stretch'
+	import type { AppContents, AppFooters, AppHeaders, AppStickies } from './app.types'
 
-	export let footer: 'grow' | 'start' | 'end' | 'center' = 'grow'
+	/**
+	 * TODO
+	 */
+	export let content: AppContents = 'stretch'
 
-	export let header: 'grow' | 'start' | 'end' | 'center' = 'grow'
+	/**
+	 * TODO
+	 */
+	export let footer: AppFooters = 'grow'
 
-	export let sticky: Array<
-		'header-start' | 'header' | 'header-end' | 'aside-start' | 'aside-end' | 'footer-start' | 'footer' | 'footer-end'
-	> = []
+	/**
+	 * TODO
+	 */
+	export let header: AppHeaders = 'grow'
+
+	/**
+	 * TODO
+	 */
+	export let sticky: AppStickies = []
 
 	$: areas = (() => {
 		;[content, footer, header]
@@ -59,7 +71,7 @@
 
 	$: classes = classname(
 		'app',
-		sticky.map((x) => `sticky-${x}`),
+		sticky?.map((x) => `sticky-${x}`),
 		$$props.class
 	)
 </script>
@@ -113,52 +125,3 @@
 		</div>
 	</div>
 {/if}
-
-<style lang="scss" global>
-	.u-app {
-		display: block;
-		min-height: 100vh;
-	}
-
-	.u-app-wrapper {
-		display: grid;
-		grid-template-columns: auto 1fr auto;
-		grid-template-rows: auto 1fr auto;
-		min-height: inherit;
-	}
-
-	.u-app-main-center {
-		align-self: center;
-		justify-self: center;
-	}
-
-	@each $key in header-start, header, header-end, aside-start, main, aside-end, footer-start, footer, footer-end {
-		.u-app-#{$key} {
-			grid-area: #{$key};
-		}
-	}
-
-	@each $key in header-start, header, header-end {
-		.u-app-sticky-#{$key} .u-app-#{$key} {
-			position: sticky;
-			top: 0;
-			z-index: 1002;
-		}
-	}
-
-	@each $key in aside-start, aside-end {
-		.u-app-sticky-#{$key} .u-app-#{$key} {
-			position: sticky;
-			top: 0;
-			z-index: 1001;
-		}
-	}
-
-	@each $key in footer-start, footer, footer-end {
-		.u-app-sticky-#{$key} .u-app-#{$key} {
-			position: sticky;
-			bottom: 0;
-			z-index: 1000;
-		}
-	}
-</style>

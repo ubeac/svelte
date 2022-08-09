@@ -30,19 +30,26 @@
 	</Card>
 </Template>
 
-<Story name="default" />
-<Story name="color" let:args>
-	<Grid vertical gutterY="sm">
-		{#each COLORS as color}
-			<GridItem>
-				<AppLoadingBar show {...args} {color} />
-			</GridItem>
-		{/each}
-	</Grid>
+<Story name="Default" let:args>
+	<AppLoadingBar show {...args} />
 </Story>
-<Story name="fixed" args={{ show: true, fixed: true }} let:args>
+
+<Story name="Color" let:args>
+	{#each COLORS as color}
+		<AppLoadingBar {color} show {...args} />
+		<br />
+	{/each}
+</Story>
+
+<Story name="Duration" let:args>
+	<AppLoadingBar duration={3000} show {...args} />
+</Story>
+
+<Story name="Fixed" args={{ show: true, fixed: true }} let:args>
 	<AppLoadingBar fixed {...args} />
-	See Top of the page
+	<div style="height: 200vh;">Scroll the page and see top of it</div>
 </Story>
-<Story name="indeterminate" args={{ show: true, indeterminate: true }} />
-<Story name="show" args={{ show: true }} />
+
+<Story name="Indeterminate" let:args>
+	<AppLoadingBar indeterminate show {...args} />
+</Story>
