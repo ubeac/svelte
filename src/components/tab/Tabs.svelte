@@ -13,7 +13,6 @@
 
 	/**
 	 * list of Tab panes
-	 * TODO: Tab.types.ts
 	 */
 	export let tabs: Array<TabType> = []
 

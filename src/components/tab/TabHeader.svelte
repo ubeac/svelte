@@ -5,12 +5,13 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
+	import type { TabType } from './tab.types'
 	import TabItem from './TabItem.svelte'
 
 	/**
 	 * List of Tab items
 	 */
-	export let tabs: any = []
+	export let tabs: Array<TabType> = []
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 

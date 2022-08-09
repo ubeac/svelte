@@ -20,7 +20,7 @@
 	/**
 	 * Id of Tab Pane
 	 */
-	export let id = 'tab-' + nanoid()
+	export let id: string = 'tab-' + nanoid()
 
 	/**
 	 * Name or title of Tab
