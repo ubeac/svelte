@@ -1,16 +1,18 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte'
 	import { tweened } from 'svelte/motion'
 
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	const dispatch = createEventDispatcher()
-
 	/**
 	 * The Color of loading bar
 	 */
 	export let color: Colors = 'primary'
+
+	/**
+	 * The amount of time that loading will take
+	 */
+	export let duration: number = 1000
 
 	/**
 	 * Always show loading bar in top of page
@@ -23,31 +25,23 @@
 	export let indeterminate: boolean = false
 
 	/**
-	 * The amount of time that loading will take
-	 */
-	export let duration: number = 1000
-
-	/**
 	 * Show and start the loading when component mounted
 	 */
 	export let show: boolean = false
 
 	let MAX: number = 100
 
-	let interval: any
-	let total: number = 0
-	let value = tweened<number>(0, { duration })
+	let interval: NodeJS.Timer
 
-	function increment() {
-		$value += (MAX - $value) / 4
-	}
+	let total: number = 0
+
+	let value = tweened<number>(0, { duration })
 
 	/**
 	 * Show component and start the loading animation
 	 */
 	export function start() {
 		show = true
-		dispatch('start')
 		value.set(0, { duration: 0 })
 		interval = setInterval(increment, duration)
 	}
@@ -58,7 +52,6 @@
 	 */
 	export function push(number = MAX / 4) {
 		show = true
-		dispatch('push', number)
 		total += number
 	}
 
@@ -67,7 +60,6 @@
 	 * @param number
 	 */
 	export function pop(number = MAX / 4) {
-		dispatch('pop', number)
 		total -= number
 		if (total > 0) return
 		total = 0
@@ -78,15 +70,16 @@
 	 * Finish loading animation and remove LoadingBar from page
 	 */
 	export function done() {
-		dispatch('done')
 		clearInterval(interval)
 		value.set(max, { duration: duration / 2 })
 		setTimeout(() => (show = false), duration)
 	}
 
-	$: if ($value > (max * 95) / 100) {
-		clearInterval(interval)
+	function increment() {
+		$value += (MAX - $value) / 4
 	}
+
+	$: if ($value > (max * 95) / 100) clearInterval(interval)
 
 	$: if (show) start()
 
