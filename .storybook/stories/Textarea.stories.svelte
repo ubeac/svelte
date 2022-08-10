@@ -4,14 +4,31 @@
 	import { Textarea } from '$lib/components'
 </script>
 
-<Meta title="Textarea" component={Textarea} />
+<Meta
+	title="Textarea"
+	component={Textarea}
+	parameters={{
+		actions: {
+			handles: ['change'],
+		},
+	}} />
 
-<Template let:args>
-	<Textarea on:change={console.log} {...args} />
-</Template>
+<Story name="default" let:args>
+	<Textarea {...args} />
+</Story>
 
-<Story name="default" />
-<Story name="placeholder" args={{ placeholder: 'this is placeholder' }} />
-<Story name="preview" args={{ placeholder: 'this is placeholder', preview: true }} />
-<Story name="readonly" args={{ placeholder: 'this is placeholder', readonly: true }} />
-<Story name="disabled" args={{ placeholder: 'this is placeholder', disabled: true }} />
+<Story name="placeholder" let:args>
+	<Textarea placeholder="This is placeholder" {...args} />
+</Story>
+
+<Story name="preview" let:args>
+	<Textarea placeholder="This is placeholder" value="this is value" preview {...args} />
+</Story>
+
+<Story name="readonly" let:args>
+	<Textarea readonly value="this is read-only value" {...args} />
+</Story>
+
+<Story name="disabled" let:args>
+	<Textarea disabled value="this is disabled" {...args} />
+</Story>
