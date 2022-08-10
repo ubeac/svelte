@@ -3,7 +3,31 @@
 	import { Table, TableBody, TableCell, TableHead, TableRow } from '$lib/components'
 </script>
 
-<Meta title="Table" component={Table} />
+<Meta
+	title="Table"
+	component={Table}
+	argTypes={{
+		border: {
+			control: {
+				type: 'boolean',
+			},
+		},
+		wrap: {
+			control: {
+				type: 'boolean',
+			},
+		},
+		hover: {
+			control: {
+				type: 'boolean',
+			},
+		},
+		striped: {
+			control: {
+				type: 'boolean',
+			},
+		},
+	}} />
 
 <Template let:args>
 	<Table {...args}>
@@ -11,18 +35,13 @@
 			<TableRow>
 				<TableCell>First</TableCell>
 				<TableCell>Second</TableCell>
-				<TableCell>Third</TableCell>
 			</TableRow>
 		</TableHead>
 		<TableBody>
 			{#each Array.from({ length: 5 }) as _, index}
 				<TableRow>
 					<TableCell>First: {index}</TableCell>
-					<TableCell
-						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam explicabo saepe, at atque natus consequuntur
-						deleniti perferendis officia
-					</TableCell>
-					<TableCell>odio est nihil vitae officiis ab, sint a, illo architecto pariatur voluptas.</TableCell>
+					<TableCell>Second: {index}</TableCell>
 				</TableRow>
 			{/each}
 		</TableBody>
