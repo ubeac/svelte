@@ -2,6 +2,8 @@
 	import { Divider } from '$lib/components'
 	import FormCheckboxGroup from '$lib/components/form/FormCheckboxGroup.svelte'
 
+	let stayOpen = false
+
 	let value = ['b']
 </script>
 
