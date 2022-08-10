@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { Tab, TabContent, TabHeader, Tabs } from '$lib/components'
-
 	let tabs = []
+	let stayOpen = false
+
+	let value = ['b']
 </script>
 
 <Tabs shape="pills" vertical bind:tabs>
