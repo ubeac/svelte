@@ -59,7 +59,9 @@
 					<Icon name={tab.icon} />
 				</div>
 			{/if}
-			{tab.name}
+			{#if tab.name}
+				{tab.name}
+			{/if}
 		</button>
 	</li>
 {/if}
