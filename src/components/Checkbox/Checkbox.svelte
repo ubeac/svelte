@@ -14,7 +14,6 @@
 	export let value: string | number | undefined = undefined
 	export let inline: boolean = false
 
-	let id = 'id' + Math.random()
 	$: checkboxClasses = classname('checkbox', { checked, inline }, $$props.class)
 	$: inputClasses = classname('checkbox-input', undefined, $$props.class)
 	$: labelClasses = classname('checkbox-label', undefined, $$props.class)
@@ -43,22 +42,21 @@
 </script>
 
 {#if condition($$props)}
-	<span class={checkboxClasses}>
+	<label class={checkboxClasses}>
 		<input
 			on:click={toggle}
-			{id}
 			{checked}
 			{value}
 			use:forwardEvents
 			{...$$restProps}
 			class={inputClasses}
 			type="checkbox" />
-		<Label for={id} class={labelClasses}>
+		<span class={labelClasses}>
 			{#if label}
 				{label}
 			{:else}
 				<slot />
 			{/if}
-		</Label>
-	</span>
+		</span>
+	</label>
 {/if}

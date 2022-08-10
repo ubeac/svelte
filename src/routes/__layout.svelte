@@ -1,5 +1,5 @@
 <slot />
 
 <style lang="scss" global>
-	@import '../scss/index.scss';
+	@import '../styles.css';
 </style>

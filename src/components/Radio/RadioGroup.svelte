@@ -3,7 +3,13 @@
 
 	import Radio from './Radio.svelte'
 
-	export let items: any[] = []
+	interface Item {
+		label: string
+		value: string
+		disabled?: boolean
+	}
+
+	export let items: Item[] = []
 	export let value: string | number | undefined = undefined
 	export let name: string | undefined = undefined
 	export let column: boolean = false

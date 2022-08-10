@@ -6,7 +6,7 @@
 <Meta component={Switch} title="Switch" argTypes={{ value: { control: 'boolean' } }} />
 
 <Template let:args>
-	<Switch {...args} />
+	<Switch label="switch1" {...args} />
 </Template>
 
 <Story name="default" />

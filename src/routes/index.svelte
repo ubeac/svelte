@@ -3,7 +3,7 @@
 	import { Checkbox, CheckboxGroup, RadioGroup, Select, Switch, Textarea } from '$lib/components'
 
 	let TextareaModel = ''
-	let selectMultipleModel: any[] = []
+	let selectMultipleModel: any[] = ['1']
 	let selectModel = 'apple'
 	let radiobuttonModel = 'banana'
 	let switchModel = true
@@ -24,7 +24,7 @@
 
 <h1>Select Multiple</h1>
 <h2>model : {selectMultipleModel}</h2>
-<Select {items} multiple bind:value={selectMultipleModel} key="value" text="label" placeholder="choose ..." />
+<Select items={[1, 2, 3]} multiple bind:value={selectMultipleModel} placeholder="choose ..." />
 <Divider />
 
 <h1>Select</h1>

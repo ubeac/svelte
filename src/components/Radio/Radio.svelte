@@ -18,21 +18,20 @@
 	export let label: string | undefined = undefined
 	export let name: string | undefined = undefined
 	export let checked: boolean | undefined = undefined
-	let id = 'id' + Math.random()
 	$: radioClasses = classname('radio', { checked }, $$props.class)
 	$: inputClasses = classname('radio-input', undefined, $$props.class)
 	$: labelClasses = classname('radio-label', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}
-	<span class={radioClasses}>
-		<input {checked} {id} type="radio" {name} {value} use:forwardEvents {...$$restProps} class={inputClasses} />
-		<Label for={id} class={labelClasses}>
+	<label class={radioClasses}>
+		<input {checked} type="radio" {name} {value} use:forwardEvents {...$$restProps} class={inputClasses} />
+		<span class={labelClasses}>
 			{#if label}
 				{label}
 			{:else}
 				<slot />
 			{/if}
-		</Label>
-	</span>
+		</span>
+	</label>
 {/if}

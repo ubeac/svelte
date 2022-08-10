@@ -1,3 +1,5 @@
-export { default as Autocomplete } from './Autocomplete.svelte'
-export { default as DatePicker } from './DatePicker.svelte'
-export { default as Input } from './Input.svelte'
+import Input from './Input.svelte'
+
+export { Input }
+
+export default Input

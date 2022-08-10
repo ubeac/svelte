@@ -1,6 +1,6 @@
 <script>
-	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
-	import { RadioGroup } from '$lib/components'
+	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
+	import { CheckboxGroup } from '$lib/components'
 	let items = [
 		{ label: 'apple', value: 'apple' },
 		{ label: 'banana', value: 'banana' },
@@ -16,8 +16,8 @@
 </script>
 
 <Meta
-	title="RadioGroup"
-	component={RadioGroup}
+	title="CheckboxGroup"
+	component={CheckboxGroup}
 	argTypes={{
 		group: {
 			control: 'text',
@@ -25,11 +25,11 @@
 	}} />
 
 <Story name="default">
-	<RadioGroup {items} />
+	<CheckboxGroup {items} />
 </Story>
 <Story name="inline">
-	<RadioGroup row {items} />
+	<CheckboxGroup row {items} />
 </Story>
 <Story name="disable">
-	<RadioGroup row items={items2} />
+	<CheckboxGroup row items={items2} />
 </Story>

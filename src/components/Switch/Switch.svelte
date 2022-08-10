@@ -17,20 +17,17 @@
 	$: switchClasses = classname('switch', undefined, $$props.class)
 	$: inputClasses = classname('switch-input', undefined, $$props.class)
 	$: labelClasses = classname('switch-label', undefined, $$props.class)
-	function onClick() {
-		value = !value
-	}
 </script>
 
 {#if condition($$props)}
-	<span class={switchClasses}>
+	<label class={switchClasses}>
 		<input type="checkbox" bind:checked={value} use:forwardEvents {...$$restProps} class={inputClasses} />
-		<span on:click={onClick} class={labelClasses}>
+		<span class={labelClasses}>
 			{#if label}
 				{label}
 			{:else}
 				<slot />
 			{/if}
 		</span>
-	</span>
+	</label>
 {/if}

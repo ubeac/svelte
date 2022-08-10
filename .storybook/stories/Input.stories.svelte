@@ -9,11 +9,21 @@
 	<Input {...args} />
 </Template>
 
-<Story name="default" />
-
-<Story name="preview" args={{ value: 'content', preview: true }} />
-<Story name="disabled" args={{ disabled: true, value: 'Content' }} />
-<Story name="readonly" args={{ value: 'content', readonly: true }} />
-<Story name="placeholder" args={{ placeholder: 'this is placeholder' }} />
-<Story name="value" args={{ value: 'Test' }} />
-<Story name="type" args={{ type: 'password', value: 'Test' }} />
+<Story name="default">
+	<Input />
+</Story>
+<Story name="disabled">
+	<Input value="test" disabled />
+</Story>
+<Story name="readonly">
+	<Input value="test" readonly />
+</Story>
+<Story name="placeholder">
+	<Input placeholder="this is placeholder" />
+</Story>
+<Story name="value">
+	<Input value="test" />
+</Story>
+<Story name="type">
+	<Input value="abcd" type="password" />
+</Story>

@@ -2,7 +2,7 @@
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 	import { get_current_component } from 'svelte/internal'
 
-	import * as luxon from 'luxon'
+	import moment from 'moment'
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
@@ -10,17 +10,12 @@
 	/**
 	 * Changes display format of the date
 	 */
-	export let format: string = 'yyyy-MM-dd'
+	export let format: string = 'YYYY-MM-DD'
 
 	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
-
-	/**
-	 * Show date value in Preview mode
-	 */
-	export let preview: boolean = false
 
 	/**
 	 * The date value of Date picker
@@ -33,7 +28,7 @@
 
 	let instance: any = undefined
 
-	$: classes = classname('date-picker', { preview }, $$props.class)
+	$: classes = classname('date-picker', $$props.class)
 
 	$: instance?.setDate(value)
 
@@ -46,20 +41,21 @@
 			nextMonth: `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>`,
 			reset: '',
 		},
+		// format,
 		format: {
 			parse(date: any) {
 				if (date instanceof Date) return date
-				if (typeof date === 'string') return luxon.DateTime.fromFormat(date, format).toJSDate()
-				if (typeof date === 'number') return new Date(date)
-				return new Date()
+				if (typeof date === 'string') return moment(date, format).toDate()
+				if (typeof date === 'number') return moment(date).toDate()
+				return moment().toDate()
 			},
 			output(date: any) {
-				return luxon.DateTime.fromJSDate(date).toFormat(format)
+				return moment(date).format(format)
 			},
 		},
 		setup(picker: any) {
 			picker.on('selected', (date: any) => {
-				const newValue = date?.dateInstance ? luxon.DateTime.fromJSDate(date.dateInstance).toFormat(format) : value
+				const newValue = date?.dateInstance ? moment(date.dateInstance).format(format) : value
 				if (value === newValue) return
 				dispatch('changed', (value = newValue))
 			})
@@ -80,11 +76,5 @@
 </script>
 
 {#if condition($$props)}
-	{#if preview}
-		<div use:forwardEvents {...$$restProps} class={classes}>
-			{value}
-		</div>
-	{:else}
-		<input bind:this={element} use:forwardEvents {...$$restProps} class={classes} />
-	{/if}
+	<input bind:value bind:this={element} use:forwardEvents {...$$restProps} class={classes} />
 {/if}

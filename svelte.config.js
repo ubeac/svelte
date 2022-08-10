@@ -11,7 +11,6 @@ const config = {
 	// for more information about preprocessors
 	preprocess: preprocess({
 		scss: {
-			prependData: `@import '@tabler/core/src/scss/config';`,
 			importer(url) {
 				if (url[0] === '~') {
 					url = path.resolve('node_modules', url.substr(1))

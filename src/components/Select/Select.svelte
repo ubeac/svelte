@@ -12,32 +12,32 @@
 	/**
 	 * TODO
 	 */
-	export let items: Array<any> | Object | undefined = undefined
+	export let items: Array<any> = []
 
 	/**
 	 * TODO
 	 */
-	export let key: string | undefined = undefined
+	export let key: string = 'value'
 	/**
 	 * TODO
 	 */
-	export let text: string | undefined = undefined
+	export let text: string = 'text'
 	/**
 	 * Selected option's value
 	 */
-	export let value: any = undefined
 	export let multiple: boolean = false
+	export let value: any = multiple ? [] : ''
 
 	const dispatch = createEventDispatcher()
 
 	$: classes = classname('select', $$props.class)
 
-	$: ({ options, fromValue, getKey, getText, toValue } = createOptions({ items, key, text }))
-
+	$: ({ fromValue, getKey, getText, toValue } = createOptions({ items, key, text }))
 	function change(event: any) {
 		let selectedItems = []
 		let selectedList = event.target.selectedOptions
 		for (const item of selectedList) {
+			debugger
 			selectedItems.push(toValue(item.value))
 		}
 		if (multiple) {
@@ -51,14 +51,24 @@
 </script>
 
 {#if condition($$props)}
-	<select value={fromValue(value)} {multiple} on:change={change} use:forwardEvents {...$$restProps} class={classes}>
-		{#if $$props.placeholder}
-			<option disabled selected value="">{$$props.placeholder}</option>
-		{/if}
-		{#each $options as option}
-			<option value={getKey(option)}>
-				{getText(option)}
-			</option>
-		{/each}
-	</select>
+	{#if multiple}
+		<select {value} on:change={change} multiple use:forwardEvents {...$$restProps} class={classes}>
+			{#each items as item}
+				<option value={getKey(item)}>
+					{getText(item)}
+				</option>
+			{/each}
+		</select>
+	{:else}
+		<select bind:value on:change={change} use:forwardEvents {...$$restProps} class={classes}>
+			{#if $$props.placeholder}
+				<option disabled selected value="">{$$props.placeholder}</option>
+			{/if}
+			{#each items as item}
+				<option value={getKey(item)}>
+					{getText(item)}
+				</option>
+			{/each}
+		</select>
+	{/if}
 {/if}
