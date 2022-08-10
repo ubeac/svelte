@@ -28,18 +28,24 @@
 	 */
 	export let open = false
 
-	let element: HTMLDivElement
-	let instance: Collapse
-
 	const dispatch = createEventDispatcher()
 
-	function onShow(e: any) {
-		dispatch('changed', true)
+	let element: HTMLDivElement
+
+	let instance: Collapse
+
+	$: {
+		if (instance)
+			if (open) {
+				instance.show()
+			} else {
+				instance.hide()
+			}
 	}
 
-	function onHide(e: any) {
-		dispatch('changed', false)
-	}
+	$: classes = classname('collapse', undefined, { collapse: true, show: open, class: $$props.class })
+
+	$: rebind({ group })
 
 	function bind() {
 		import('bootstrap').then(({ Collapse }) => {
@@ -54,48 +60,41 @@
 		instance?.dispose()
 	}
 
-	function rebind(deps?: any) {
+	function rebind(dependencies?: any) {
 		if (!element) return
 		unbind()
 		bind()
 	}
 
+	function onHide() {
+		dispatch('changed', false)
+	}
+
+	function onShow() {
+		dispatch('changed', true)
+	}
+
 	onMount(() => {
 		element.addEventListener('show.bs.collapse', onShow)
 		element.addEventListener('hide.bs.collapse', onHide)
-
 		bind()
 	})
 
 	onDestroy(() => {
 		element?.removeEventListener('show.bs.collapse', onShow)
 		element?.removeEventListener('hide.bs.collapse', onHide)
-
 		unbind()
 	})
-
-	$: {
-		if (instance)
-			if (open) {
-				instance.show()
-			} else {
-				instance.hide()
-			}
-	}
-
-	$: rebind({ group })
-
-	$: classes = classname('collapse', {}, { collapse: true, show: open, class: $$props.class })
 </script>
 
 {#if condition($$props)}
 	<div
+		aria-labelledby="#collapse-{id}-toggler"
 		bind:this={element}
-		{...$$restProps}
-		use:forwardEvents
 		id="collapse-{id}"
-		class={classes}
-		aria-labelledby="#collapse-{id}-toggler">
+		use:forwardEvents
+		{...$$restProps}
+		class={classes}>
 		<slot />
 	</div>
 {/if}

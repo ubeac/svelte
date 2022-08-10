@@ -16,16 +16,16 @@
 	 */
 	export let id: string = nanoid()
 
-	$: classes = classname('collapse-toggler', {}, $$props.class)
+	$: classes = classname('collapse-toggler', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}
 	<button
-		id="collapse-{id}-toggler"
-		type="button"
+		aria-controls="#collapse-{id}"
 		data-bs-target="#collapse-{id}"
 		data-bs-toggle="collapse"
-		aria-controls="#collapse-{id}"
+		id="collapse-{id}-toggler"
+		type="button"
 		use:forwardEvents
 		{...$$restProps}
 		class={classes}>

@@ -6,7 +6,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('accordion-body', {}, $$props.class)
+	$: classes = classname('accordion-body', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

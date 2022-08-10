@@ -33,9 +33,9 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: group = $context
+	$: classes = classname('accordion', undefined, $$props.class)
 
-	$: classes = classname('accordion', {}, $$props.class)
+	$: group = $context
 </script>
 
 {#if condition($$props)}
