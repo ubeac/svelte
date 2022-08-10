@@ -1,3 +1,18 @@
-// .u-radio {
-// 	@extend .form-check-input;
-// }
+.u-radio {
+	@extend .form-check;
+	&-description {
+		@extend .form-check-description;
+	}
+
+	&-inline {
+		@extend .form-check-inline;
+	}
+
+	&-input {
+		@extend .form-check-input;
+	}
+
+	&-label {
+		@extend .form-check-label;
+	}
+}
