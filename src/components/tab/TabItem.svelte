@@ -52,14 +52,14 @@
 		<button
 			bind:this={element}
 			on:click={show}
-			data-bs-target="#{tab?.id}"
-			class={classname('tab-item-link', null, { active: tab?.active, disabled: tab?.disabled })}>
-			{#if tab?.icon}
+			data-bs-target="#{tab.id}"
+			class={classname('tab-item-link', null, { active: tab.active, disabled: tab.disabled })}>
+			{#if tab.icon}
 				<div class={classname('tab-item-icon')}>
-					<Icon name={tab?.icon} />
+					<Icon name={tab.icon} />
 				</div>
 			{/if}
-			{tab?.name}
+			{tab.name}
 		</button>
 	</li>
 {/if}
