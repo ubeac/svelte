@@ -13,22 +13,22 @@
 		},
 	}} />
 
-<Story name="default" let:args>
+<Story name="Default" let:args>
 	<Textarea {...args} />
 </Story>
 
-<Story name="placeholder" let:args>
+<Story name="Disabled" let:args>
+	<Textarea disabled value="this is disabled" {...args} />
+</Story>
+
+<Story name="Placeholder" let:args>
 	<Textarea placeholder="This is placeholder" {...args} />
 </Story>
 
-<Story name="preview" let:args>
+<Story name="Preview" let:args>
 	<Textarea placeholder="This is placeholder" value="this is value" preview {...args} />
 </Story>
 
-<Story name="readonly" let:args>
+<Story name="Readonly" let:args>
 	<Textarea readonly value="this is read-only value" {...args} />
-</Story>
-
-<Story name="disabled" let:args>
-	<Textarea disabled value="this is disabled" {...args} />
 </Story>
