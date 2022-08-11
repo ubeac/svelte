@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { get_current_component, getContext } from 'svelte/internal'
+	import { get_current_component, getContext, setContext } from 'svelte/internal'
 	import type { Writable } from 'svelte/store'
 
 	import { nanoid } from 'nanoid'
@@ -7,6 +7,7 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
+	import { AccordionHeader } from '.'
 	import { Collapse, CollapseToggler } from '../collapse'
 
 	/**
@@ -31,6 +32,8 @@
 
 	const context = getContext<Writable<string | undefined>>('ACCORDIONS:GROUP')
 
+	setContext('ACCORDION:ID', id)
+
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('accordion', undefined, $$props.class)
@@ -40,11 +43,13 @@
 
 {#if condition($$props)}
 	<div use:forwardEvents {...$$restProps} class={classes}>
-		<div class={classname('accordion-header')}>
-			<CollapseToggler class={classname('collapse-toggler-accordion')} {id}>
-				{title}
-			</CollapseToggler>
-		</div>
+		<slot name="header">
+			{#if title}
+				<AccordionHeader>
+					{title}
+				</AccordionHeader>
+			{/if}
+		</slot>
 		<Collapse class={classname('collapse-accordion')} {id} {open} {group}>
 			<slot />
 		</Collapse>
