@@ -39,6 +39,7 @@
 
 .u-tab-item-link {
 	@extend .nav-link;
+	@extend .gap-2;
 }
 
 .u-tab-item-link-active {
@@ -47,8 +48,4 @@
 
 .u-tab-item-link-disabled {
 	@extend .disabled;
-}
-
-.u-tab-item-icon {
-	@extend .me-2;
 }
