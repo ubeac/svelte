@@ -20,13 +20,13 @@ $sizes: (
 }
 
 @each $key, $value in theme-colors() {
-	.u-icon-#{$key} {
+	.u-icon-color-#{$key} {
 		@extend .text-#{$key};
 	}
 }
 
 @each $key, $value in $sizes {
-	.u-icon-#{$key} {
+	.u-icon-size-#{$key} {
 		width: #{$value} !important;
 		height: #{$value} !important;
 	}
