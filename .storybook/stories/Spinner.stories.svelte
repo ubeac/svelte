@@ -31,26 +31,27 @@
 		},
 	}} />
 
-<Template let:args>
+<Story name="Default" let:args>
 	<Spinner {...args} />
-</Template>
+</Story>
 
-<Story name="default" />
-<Story name="color" let:args>
+<Story name="Color" let:args>
 	<div class="example-spinners">
 		{#each COLORS as color}
 			<Spinner {color} {...args} />
 		{/each}
 	</div>
 </Story>
-<Story name="size" let:args>
+
+<Story name="Size" let:args>
 	<div class="example-spinners">
 		{#each SPINNER_SIZES as size}
 			<Spinner {...args} {size} />
 		{/each}
 	</div>
 </Story>
-<Story name="style" let:args>
+
+<Story name="Style" let:args>
 	<div class="example-spinners">
 		{#each SPINNER_STYLES as style}
 			<Spinner {...args} {style} />
