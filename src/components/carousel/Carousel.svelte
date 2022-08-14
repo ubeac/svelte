@@ -8,6 +8,7 @@
 	import { CarouselButton, CarouselIndicator, CarouselIndicators } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
+import { CarouselContext, type CarouselTransitions } from './carousel.types';
 
 	/**
 	 * Shows next and previous buttons
@@ -28,15 +29,27 @@
 	/**
 	 * Set transition type
 	 */
-	export let transition: 'slide' | 'fade' | undefined = undefined
+	export let transition: CarouselTransitions = 'none'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	let activeItem = writable<string>()
-	let activeIndex = 0
+	let activeIndex: number = 0
 	let component: Carousel | undefined = undefined
 	let element: HTMLDivElement
 	let items: string[] = []
+
+	setContext<CarouselContext>('CAROUSEL', { register, unregister, activeItem, next, prev, to })
+
+	$: classes = classname(
+		'carousel',
+		{
+			fade: transition === 'fade',
+		},
+		($$props.class || '') + transition !== 'none' ? ' slide' : ''
+	)
+
+	$: rebind({ interval, transition, items, indicators, buttons })
 
 	function next() {
 		activeIndex = (activeIndex + 1) % items.length
@@ -106,20 +119,8 @@
 		$activeItem = items[activeIndex]
 	}
 
-	setContext('CAROUSEL', { register, unregister, activeItem, next, prev, to })
-
 	onMount(bind)
 	onDestroy(unbind)
-
-	$: classes = classname(
-		'carousel',
-		{
-			fade: transition === 'fade',
-		},
-		($$props.class || '') + transition ? ' slide' : ''
-	)
-
-	$: rebind({ interval, transition, items, indicators, buttons })
 </script>
 
 {#if condition($$props)}
