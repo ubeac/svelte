@@ -7,6 +7,8 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
+	import type { IconPacks, IconSizes } from './icon.types'
+
 	/**
 	 * Set color of the Icon
 	 */
@@ -20,28 +22,14 @@
 	/**
 	 * Change Icons package, see https://icon-sets.iconify.design/ for list of icon packs
 	 */
-	export let pack: 'tabler' = 'tabler'
+	export let pack: IconPacks = 'tabler'
 
 	/**
 	 * Set Size of the Icon
 	 */
-	export let size:
-		| 'auto'
-		| 'xs'
-		| 'sm'
-		| 'md'
-		| 'lg'
-		| 'xl'
-		| '1x'
-		| '2x'
-		| '3x'
-		| '4x'
-		| '5x'
-		| '6x'
-		| '7x'
-		| '8x'
-		| '9x' = 'auto'
+	export let size: IconSizes = 'auto'
 
+	// TODO
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname(
@@ -50,7 +38,8 @@
 			color,
 			size,
 		},
-		$$props.class
+		$$props.class,
+		true
 	)
 </script>
 
