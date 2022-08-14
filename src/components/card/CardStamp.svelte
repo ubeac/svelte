@@ -5,20 +5,22 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
+	import type { CardStampPlacements, CardStampSizes } from './card.types'
+
 	/**
 	 * if you want to change color of Stamp, use the color property
 	 */
-	export let color: Colors = undefined
+	export let color: Colors = 'default'
 
 	/**
 	 * you can change position of Stamp by changing placement property
 	 */
-	export let placement: 'top-start' | 'top-end' | 'bottom-start' | 'bottom-end' = 'top-end'
+	export let placement: CardStampPlacements = 'top-end'
 
 	/**
 	 * You can chnage size of Stamp by changing size property
 	 */
-	export let size: 'sm' | 'md' | 'lg' = 'md'
+	export let size: CardStampSizes = 'md'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
