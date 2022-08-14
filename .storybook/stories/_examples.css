@@ -47,6 +47,18 @@
 	margin-right: auto;
 }
 
+.example-radios {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -0.5rem !important;
+	margin-right: -0.5rem;
+	justify-content: center;
+}
+
+.example-radios > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
+
 .example-spinners {
 	display: flex;
 	flex-wrap: wrap;
@@ -54,6 +66,8 @@
 	margin-right: -0.5rem;
 	justify-content: center;
 }
+
 .example-spinners > * {
 	margin: 0 0.5rem 0.5rem 0 !important;
 }
+
