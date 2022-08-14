@@ -31,10 +31,9 @@
 	export let title: string | undefined = undefined
 
 	const context = getContext<Writable<string | undefined>>('ACCORDIONS:GROUP')
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	setContext('ACCORDION:ID', id)
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('accordion', undefined, $$props.class)
 

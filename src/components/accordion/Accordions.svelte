@@ -18,12 +18,12 @@
 	export let stayOpen: boolean = false
 
 	const context = writable<string | undefined>()
-	setContext('ACCORDIONS:GROUP', context)
-
-	$: $context = stayOpen ? undefined : '#' + id
-
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
+	setContext('ACCORDIONS:GROUP', context)
+
+	$: $context = stayOpen ? undefined : '#' + id	
+	
 	$: classes = classname('accordions', {}, $$props.class)
 </script>
 
