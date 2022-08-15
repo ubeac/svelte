@@ -8,7 +8,7 @@
 	import { CarouselButton, CarouselIndicator, CarouselIndicators } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
-import { CarouselContext, type CarouselTransitions } from './carousel.types';
+	import type { CarouselContext, CarouselTransitions } from './carousel.types';
 
 	/**
 	 * Shows next and previous buttons
