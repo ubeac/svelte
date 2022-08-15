@@ -10,25 +10,26 @@
 	/**
 	 * Id of Accordion group
 	 */
-	export let id: string = 'accordions-' + nanoid()
+	export let group: string = nanoid()
 
 	/**
 	 * Let more than one Accordion be open in same time
 	 */
-	export let stayOpen: boolean = false
+	export let persistent: boolean = false
 
-	const context = writable<string | undefined>()
-	setContext('ACCORDIONS:GROUP', context)
-
-	$: $context = stayOpen ? undefined : '#' + id
+	const context = writable({ group, persistent })
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('accordions', {}, $$props.class)
+	setContext('ACCORDIONS', context)
+
+	$: classes = classname('accordions', undefined, $$props.class)
+
+	$: context.set({ group, persistent })
 </script>
 
 {#if condition($$props)}
-	<div {id} use:forwardEvents {...$$restProps} class={classes}>
+	<div id={group} use:forwardEvents {...$$restProps} class={classes}>
 		<slot />
 	</div>
 {/if}
