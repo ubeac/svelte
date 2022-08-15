@@ -37,6 +37,25 @@
 
 	let value = tweened<number>(0, { duration })
 
+	$: if ($value > (max * 95) / 100) clearInterval(interval)
+
+	$: if (show) start()
+
+	$: max = MAX + total
+
+	$: width = ($value * 100) / max
+
+	$: classes = classname(
+		'app-loading-bar',
+		{
+			color,
+			fixed,
+			indeterminate,
+			show,
+		},
+		$$props.class
+	)
+
 	/**
 	 * Show component and start the loading animation
 	 */
@@ -78,25 +97,6 @@
 	function increment() {
 		$value += (MAX - $value) / 4
 	}
-
-	$: if ($value > (max * 95) / 100) clearInterval(interval)
-
-	$: if (show) start()
-
-	$: max = MAX + total
-
-	$: width = ($value * 100) / max
-
-	$: classes = classname(
-		'app-loading-bar',
-		{
-			color,
-			fixed,
-			indeterminate,
-			show,
-		},
-		$$props.class
-	)
 </script>
 
 <div class={classes}>
