@@ -1,12 +1,7 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Grid, GridItem } from '$lib/components'
-
-	const ALIGN_CONTENTS = ['start', 'center', 'end', 'stretch', 'between', 'around', 'evenly', undefined]
-	const ALIGN_ITEMS = ['start', 'center', 'end', 'stretch', undefined]
-	const GUTTERS = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl', undefined]
-	const JUSTIFY_CONTENTS = ['start', 'center', 'end', 'between', 'around', 'evenly', undefined]
+	import { Divider, Grid, GridItem, GRID_ALIGN_CONTENTS, GRID_ALIGN_ITEMS, GRID_GUTTERS, GRID_JUSTIFY_CONTENTS } from '$lib/components'
 
 	function control(type, options) {
 		return {
@@ -18,33 +13,33 @@
 	}
 
 	const argTypes = {
-		alignContent: control('select', ALIGN_CONTENTS),
-		alignContentXs: control('select', ALIGN_CONTENTS),
-		alignContentSm: control('select', ALIGN_CONTENTS),
-		alignContentMd: control('select', ALIGN_CONTENTS),
-		alignContentLg: control('select', ALIGN_CONTENTS),
-		alignContentXl: control('select', ALIGN_CONTENTS),
-		alignContentXxl: control('select', ALIGN_CONTENTS),
+		alignContent: control('select', GRID_ALIGN_CONTENTS),
+		alignContentXs: control('select', GRID_ALIGN_CONTENTS),
+		alignContentSm: control('select', GRID_ALIGN_CONTENTS),
+		alignContentMd: control('select', GRID_ALIGN_CONTENTS),
+		alignContentLg: control('select', GRID_ALIGN_CONTENTS),
+		alignContentXl: control('select', GRID_ALIGN_CONTENTS),
+		alignContentXxl: control('select', GRID_ALIGN_CONTENTS),
 
-		alignItems: control('select', ALIGN_ITEMS),
-		alignItemsXs: control('select', ALIGN_ITEMS),
-		alignItemsSm: control('select', ALIGN_ITEMS),
-		alignItemsMd: control('select', ALIGN_ITEMS),
-		alignItemsLg: control('select', ALIGN_ITEMS),
-		alignItemsXl: control('select', ALIGN_ITEMS),
-		alignItemsXxl: control('select', ALIGN_ITEMS),
+		alignItems: control('select', GRID_ALIGN_ITEMS),
+		alignItemsXs: control('select', GRID_ALIGN_ITEMS),
+		alignItemsSm: control('select', GRID_ALIGN_ITEMS),
+		alignItemsMd: control('select', GRID_ALIGN_ITEMS),
+		alignItemsLg: control('select', GRID_ALIGN_ITEMS),
+		alignItemsXl: control('select', GRID_ALIGN_ITEMS),
+		alignItemsXxl: control('select', GRID_ALIGN_ITEMS),
 
-		justifyContent: control('select', JUSTIFY_CONTENTS),
-		justifyContentXs: control('select', JUSTIFY_CONTENTS),
-		justifyContentSm: control('select', JUSTIFY_CONTENTS),
-		justifyContentMd: control('select', JUSTIFY_CONTENTS),
-		justifyContentLg: control('select', JUSTIFY_CONTENTS),
-		justifyContentXl: control('select', JUSTIFY_CONTENTS),
-		justifyContentXxl: control('select', JUSTIFY_CONTENTS),
+		justifyContent: control('select', GRID_JUSTIFY_CONTENTS),
+		justifyContentXs: control('select', GRID_JUSTIFY_CONTENTS),
+		justifyContentSm: control('select', GRID_JUSTIFY_CONTENTS),
+		justifyContentMd: control('select', GRID_JUSTIFY_CONTENTS),
+		justifyContentLg: control('select', GRID_JUSTIFY_CONTENTS),
+		justifyContentXl: control('select', GRID_JUSTIFY_CONTENTS),
+		justifyContentXxl: control('select', GRID_JUSTIFY_CONTENTS),
 
-		gutter: control('select', GUTTERS),
-		gutterX: control('select', GUTTERS),
-		gutterY: control('select', GUTTERS),
+		gutter: control('select', GRID_GUTTERS),
+		gutterX: control('select', GRID_GUTTERS),
+		gutterY: control('select', GRID_GUTTERS),
 		reverse: control('boolean'),
 		vertical: control('boolean'),
 		wrap: control('check', [false, true, 'reverse']),
@@ -59,23 +54,98 @@
 
 <Meta title="Grid" component={Grid} {argTypes} />
 
-<Template let:args>
-	<Grid class="h-5" {...args}>
-		<GridItem class="h-4 w-4 d-flex justify-content-center align-items-center bg-red">1</GridItem>
-		<GridItem class="h-4 w-4 d-flex justify-content-center align-items-center bg-yellow">2</GridItem>
-		<GridItem class="h-4 w-4 d-flex justify-content-center align-items-center bg-green">3</GridItem>
-		<GridItem class="h-4 w-4 d-flex justify-content-center align-items-center bg-blue">4</GridItem>
+<Story name="default" let:args>
+	<Grid {...args}>
+		<GridItem class="example-grid-item-text bg-red">1</GridItem>
+		<GridItem class="example-grid-item-text bg-yellow">2</GridItem>
+		<GridItem class="example-grid-item-text bg-green">3</GridItem>
+		<GridItem class="example-grid-item-text bg-blue">4</GridItem>
 	</Grid>
-</Template>
+</Story>
 
-<Story name="default" />
-<Story name="Align Content" args={{ alignContent: 'start' }} />
-<Story name="Align Content XS" args={{ alignContentXs: 'start' }} />
-<Story name="Align Content SM" args={{ alignContentSm: 'start' }} />
-<Story name="Align Content MD" args={{ alignContentMd: 'start' }} />
-<Story name="Align Content LG" args={{ alignContentLg: 'start' }} />
-<Story name="Align Content XL" args={{ alignContentXl: 'start' }} />
-<Story name="Align Content XXL" args={{ alignContentXxl: 'start' }} />
+<Story name="Align Content" let:args>
+	<div class="example-grid h-25">
+		{#each GRID_ALIGN_CONTENTS as alignContent}
+			<Grid {alignContent} {...args}>
+				<GridItem class="example-grid-item-text bg-red">{alignContent}</GridItem>
+				<GridItem class="example-grid-item-text bg-yellow">{alignContent}</GridItem>
+				<GridItem class="example-grid-item-text bg-green">{alignContent}</GridItem>
+				<GridItem class="example-grid-item-text bg-blue">{alignContent}</GridItem>
+			</Grid>
+		{/each}
+	</div>
+	
+	<Divider>Xs</Divider>
+	<div class="example-grid">
+
+		{#each GRID_ALIGN_CONTENTS as alignContentXs}
+			<Grid {alignContentXs}  {...args}>
+				<GridItem class="example-grid-item-text bg-red">{alignContentXs}</GridItem>
+				<GridItem class="example-grid-item-text bg-yellow">{alignContentXs}</GridItem>
+				<GridItem class="example-grid-item-text bg-green">{alignContentXs}</GridItem>
+				<GridItem class="example-grid-item-text bg-blue">{alignContentXs}</GridItem>
+			</Grid>
+		{/each}
+	</div>
+	
+	<Divider>Sm</Divider>
+	<div class="example-grid">
+		{#each GRID_ALIGN_CONTENTS as alignContentSm}
+			<Grid {alignContentSm}  {...args}>
+				<GridItem class="example-grid-item-text bg-red">{alignContentSm}</GridItem>
+				<GridItem class="example-grid-item-text bg-yellow">{alignContentSm}</GridItem>
+				<GridItem class="example-grid-item-text bg-green">{alignContentSm}</GridItem>
+				<GridItem class="example-grid-item-text bg-blue">{alignContentSm}</GridItem>
+			</Grid>
+		{/each}
+	</div>
+	<Divider>Md</Divider>
+	<div class="example-grid">
+		{#each GRID_ALIGN_CONTENTS as alignContentMd}
+			<Grid {alignContentMd}  {...args}>
+				<GridItem class="example-grid-item-text bg-red">{alignContentMd}</GridItem>
+				<GridItem class="example-grid-item-text bg-yellow">{alignContentMd}</GridItem>
+				<GridItem class="example-grid-item-text bg-green">{alignContentMd}</GridItem>
+				<GridItem class="example-grid-item-text bg-blue">{alignContentMd}</GridItem>
+			</Grid>
+		{/each}
+	</div>
+	<Divider>Lg</Divider>
+	<div class="example-grid">
+		{#each GRID_ALIGN_CONTENTS as alignContentLg}
+			<Grid {alignContentLg}  {...args}>
+				<GridItem class="example-grid-item-text bg-red">{alignContentLg}</GridItem>
+				<GridItem class="example-grid-item-text bg-yellow">{alignContentLg}</GridItem>
+				<GridItem class="example-grid-item-text bg-green">{alignContentLg}</GridItem>
+				<GridItem class="example-grid-item-text bg-blue">{alignContentLg}</GridItem>
+			</Grid>
+		{/each}
+	</div>
+	
+	<Divider>Xl</Divider>
+	<div class="example-grid">
+		{#each GRID_ALIGN_CONTENTS as alignContentXl}
+			<Grid {alignContentXl}  {...args}>
+				<GridItem class="example-grid-item-text bg-red">{alignContentXl}</GridItem>
+				<GridItem class="example-grid-item-text bg-yellow">{alignContentXl}</GridItem>
+				<GridItem class="example-grid-item-text bg-green">{alignContentXl}</GridItem>
+				<GridItem class="example-grid-item-text bg-blue">{alignContentXl}</GridItem>
+			</Grid>
+		{/each}
+	</div>
+		
+	<Divider>Xxl</Divider>
+	<div class="example-grid">
+		{#each GRID_ALIGN_CONTENTS as alignContentXxl}
+			<Grid {alignContentXxl}  {...args}>
+				<GridItem class="example-grid-item-text bg-red">{alignContentXxl}</GridItem>
+				<GridItem class="example-grid-item-text bg-yellow">{alignContentXxl}</GridItem>
+				<GridItem class="example-grid-item-text bg-green">{alignContentXxl}</GridItem>
+				<GridItem class="example-grid-item-text bg-blue">{alignContentXxl}</GridItem>
+			</Grid>
+		{/each}
+	</div>	
+</Story>
 
 <Story name="Justify Content" args={{ justifyContent: 'start' }} />
 <Story name="Justify Content XS" args={{ justifyContentXs: 'start' }} />

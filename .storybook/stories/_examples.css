@@ -40,6 +40,22 @@
 	margin: 0 0.5rem 0.5rem 0 !important;
 }
 
+.example-grid {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.example-grid-item-text {
+	height: 2rem;
+	border: 1px solid #20202050;
+	width: 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .example-tab {
 	height: 200px;
 	width: 80%;
