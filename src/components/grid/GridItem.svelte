@@ -4,100 +4,100 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
-	import type { GridItemAlignSelf, GridItemColumn, GridItemHide, GridItemOffset, GridItemOrder } from './GridItem.types'
+	import type { GridItemAlignSelfs, GridItemColumns, GridItemHide, GridItemOffset, GridItemOrder } from './GridItem.types'
 
 	/**
 	 * Aligns the grid-item vertically in its container (grid).
 	 * It overrides the align-items property of its parent.
 	 */
-	export let alignSelf: GridItemAlignSelf = undefined
+	export let alignSelf: GridItemAlignSelfs = 'default'
 
 	/**
 	 * Aligns the grid-item vertically in its container (grid) for extra-small display sizes.
 	 * It also applies to larger breakpoints and display sizes while they are not specified.
 	 * (It overrides the align-items property of its parent just for extra-small breakpoints).
 	 */
-	export let alignSelfXs: GridItemAlignSelf = undefined
+	export let alignSelfXs: GridItemAlignSelfs = 'default'
 
 	/**
 	 * Aligns the grid-item vertically in its container (grid) for small display sizes.
 	 * It also applies to larger breakpoints and display sizes while they are not specified.
 	 * (It overrides the align-items property of its parent just for small breakpoints).
 	 */
-	export let alignSelfSm: GridItemAlignSelf = undefined
+	export let alignSelfSm: GridItemAlignSelfs = 'default'
 
 	/**
 	 * Aligns the grid-item vertically in its container (grid) for medium display sizes.
 	 * It also applies to larger breakpoints and display sizes while they are not specified.
 	 * (It overrides the align-items property of its parent just for medium breakpoints).
 	 */
-	export let alignSelfMd: GridItemAlignSelf = undefined
+	export let alignSelfMd: GridItemAlignSelfs = 'default'
 
 	/**
 	 * Aligns the grid-item vertically in its container (grid) for large display sizes.
 	 * It also applies to larger breakpoints and display sizes while they are not specified.
 	 * (It overrides the align-items property of its parent just for large breakpoints).
 	 */
-	export let alignSelfLg: GridItemAlignSelf = undefined
+	export let alignSelfLg: GridItemAlignSelfs = 'default'
 
 	/**
 	 * Aligns the grid-item vertically in its container (grid) for extra-large display sizes.
 	 * It also applies to larger breakpoints and display sizes while they are not specified.
 	 * (It overrides the align-items property of its parent just for extra-large breakpoints).
 	 */
-	export let alignSelfXl: GridItemAlignSelf = undefined
+	export let alignSelfXl: GridItemAlignSelfs = 'default'
 
 	/**
 	 * Aligns the grid-item vertically in its container (grid) for extra-extra-large display sizes.
 	 * It also applies to larger breakpoints and display sizes while they are not specified.
 	 * (It overrides the align-items property of its parent just for extra-extra-large breakpoints).
 	 */
-	export let alignSelfXxl: GridItemAlignSelf = undefined
+	export let alignSelfXxl: GridItemAlignSelfs = 'default'
 
 	/**
 	 * TODO: same as xs
 	 */
-	export let col: GridItemColumn = undefined
+	export let col: GridItemColumns = 'default'
 
 	/**
 	 * Specifies the number of columns for extra-small viewports (portrait phones).
 	 * It also determines the number of columns for bigger display sizes when
 	 * other upper breakpoints (sm, md, lg, xl and xxl) are not specified.
 	 */
-	export let xs: GridItemColumn = undefined
+	export let xs: GridItemColumns = 'default'
 
 	/**
 	 * Specifies the number of columns for small viewports (landscape phones).
 	 * It also determines the number of columns for bigger display sizes when
 	 * other upper breakpoints (md, lg, xl and xxl) are not specified.
 	 */
-	export let sm: GridItemColumn = undefined
+	export let sm: GridItemColumns = 'default'
 
 	/**
 	 * Specifies the number of columns for medium viewports (tablets).
 	 * It also determines the number of columns for bigger display sizes when
 	 * other upper breakpoints (lg, xl and xxl) are not specified.
 	 */
-	export let md: GridItemColumn = undefined
+	export let md: GridItemColumns = 'default'
 
 	/**
 	 * Specifies the number of columns for large viewports (desktop).
 	 * It also determines the number of columns for bigger display sizes when
 	 * the upper breakpoint (xl and xxl) is not specified.
 	 */
-	export let lg: GridItemColumn = undefined
+	export let lg: GridItemColumns = 'default'
 
 	/**
 	 * Specifies the number of columns for large viewports (large desktops).
 	 * It also determines the number of columns for bigger display sizes when
 	 * the upper breakpoint (xxl) is not specified.
 	 */
-	export let xl: GridItemColumn = undefined
+	export let xl: GridItemColumns = 'default'
 
 	/**
 	 * Specifies the number of columns for extra-extra-large viewports (larger desktops).
 	 */
-	export let xxl: GridItemColumn = undefined
+	export let xxl: GridItemColumns = 'default'
 
 	/**
 	 * TODO: same as offsetXs

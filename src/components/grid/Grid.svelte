@@ -5,10 +5,10 @@
 	import { classname, condition } from '$lib/utils'
 
 	import type {
-		GridAlignContent,
+		GridAlignContents,
 		GridAlignItems,
-		GridGutter,
-		GridJustifyContent,
+		GridGutters,
+		GridJustifyContents,
 		GridReverse,
 		GridVertical,
 		GridWrap,
@@ -17,138 +17,138 @@
 	/**
 	 * Aligns contents vertically across all rows (It overrides alignItems).
 	 */
-	export let alignContent: GridAlignContent = undefined
+	export let alignContent: GridAlignContents = 'default'
 
 	/**
 	 * Aligns contents vertically across all rows for extra-small display sizes
 	 * (It overrides alignItemsXs).
 	 */
-	export let alignContentXs: GridAlignContent = undefined
+	export let alignContentXs: GridAlignContents = 'default'
 
 	/**
 	 * Aligns contents vertically across all rows for small display sizes
 	 * (It overrides alignItemsSm).
 	 */
-	export let alignContentSm: GridAlignContent = undefined
+	export let alignContentSm: GridAlignContents = 'default'
 
 	/**
 	 * Aligns contents vertically across all rows for medium display sizes
 	 * (It overrides alignItemsMd).
 	 */
-	export let alignContentMd: GridAlignContent = undefined
+	export let alignContentMd: GridAlignContents = 'default'
 
 	/**
 	 * Aligns contents vertically across all rows for large display sizes
 	 * (It overrides alignItemsLg).
 	 */
-	export let alignContentLg: GridAlignContent = undefined
+	export let alignContentLg: GridAlignContents = 'default'
 
 	/**
 	 * Aligns contents vertically across all rows for extra-large display sizes
 	 * (It overrides alignItemsXl).
 	 */
-	export let alignContentXl: GridAlignContent = undefined
+	export let alignContentXl: GridAlignContents = 'default'
 
 	/**
 	 * Aligns contents vertically across all rows for extra-extra-large display sizes
 	 * (It overrides alignItemsXXl).
 	 */
-	export let alignContentXxl: GridAlignContent = undefined
+	export let alignContentXxl: GridAlignContents = 'default'
 
 	/**
 	 * Aligns contents vertically inside their own row.
 	 */
-	export let alignItems: GridAlignItems = undefined
+	export let alignItems: GridAlignItems = 'default'
 
 	/**
 	 * Aligns contents vertically inside their own row for extra-small display sizes.
 	 */
-	export let alignItemsXs: GridAlignItems = undefined
+	export let alignItemsXs: GridAlignItems = 'default'
 
 	/**
 	 * Aligns contents vertically inside their own row for small display sizes.
 	 */
-	export let alignItemsSm: GridAlignItems = undefined
+	export let alignItemsSm: GridAlignItems = 'default'
 
 	/**
 	 * Aligns contents vertically inside their own row for medium display sizes.
 	 */
-	export let alignItemsMd: GridAlignItems = undefined
+	export let alignItemsMd: GridAlignItems = 'default'
 
 	/**
 	 * Aligns contents vertically inside their own row for large display sizes.
 	 */
-	export let alignItemsLg: GridAlignItems = undefined
+	export let alignItemsLg: GridAlignItems = 'default'
 
 	/**
 	 * Aligns contents vertically inside their own row for extra-large display sizes.
 	 */
-	export let alignItemsXl: GridAlignItems = undefined
+	export let alignItemsXl: GridAlignItems = 'default'
 
 	/**
 	 * Aligns contents vertically inside their own row for extra-extra-large display sizes.
 	 */
-	export let alignItemsXxl: GridAlignItems = undefined
+	export let alignItemsXxl: GridAlignItems = 'default'
 
 	/**
 	 * Adds a gap between contents to make space between them vertically and horizontally.
 	 */
-	export let gutter: GridGutter = undefined
+	export let gutter: GridGutters = 'none'
 
 	/**
 	 * Adds a gap between contents to make space between them horizontally.
 	 */
-	export let gutterX: GridGutter = undefined
+	export let gutterX: GridGutters = 'none'
 
 	/**
 	 * Adds a gap between contents to make space between them vertically.
 	 */
-	export let gutterY: GridGutter = undefined
+	export let gutterY: GridGutters = 'none'
 
 	/**
 	 * Justifies contents horizontally.
 	 */
-	export let justifyContent: GridJustifyContent = undefined
+	export let justifyContent: GridJustifyContents = 'default'
 
 	/**
 	 * Justifies contents horizontally for extra-small display sizes.
 	 */
-	export let justifyContentXs: GridJustifyContent = undefined
+	export let justifyContentXs: GridJustifyContents = 'default'
 
 	/**
 	 * Justifies contents horizontally for small display sizes.
 	 */
-	export let justifyContentSm: GridJustifyContent = undefined
+	export let justifyContentSm: GridJustifyContents = 'default'
 
 	/**
 	 * Justifies contents horizontally for medium display sizes.
 	 */
-	export let justifyContentMd: GridJustifyContent = undefined
+	export let justifyContentMd: GridJustifyContents = 'default'
 
 	/**
 	 * Justifies contents horizontally for large display sizes.
 	 */
-	export let justifyContentLg: GridJustifyContent = undefined
+	export let justifyContentLg: GridJustifyContents = 'default'
 
 	/**
 	 * Justifies contents horizontally for extra-large display sizes.
 	 */
-	export let justifyContentXl: GridJustifyContent = undefined
+	export let justifyContentXl: GridJustifyContents = 'default'
 
 	/**
 	 * Justifies contents horizontally for extra-extra-large display sizes.
 	 */
-	export let justifyContentXxl: GridJustifyContent = undefined
+	export let justifyContentXxl: GridJustifyContents = 'default'
 
 	/**
 	 * Reverses the flow of contents from left-to-right to right-to-left, or vice-versa.
 	 */
-	export let reverse: GridReverse = undefined
+	export let reverse: GridReverse = false
 
 	/**
 	 * Changes the flow of contents from left-to-right to top-to-down.
 	 */
-	export let vertical: GridVertical = undefined
+	export let vertical: GridVertical = false
 
 	/**
 	 * Controls allowing the container to wrap the content or not if the cumulative width
@@ -160,37 +160,37 @@
 	 * Controls allowing the container to wrap the content or not if the cumulative width
 	 * size of contents is more than the twelve-column width for extra-small screen devices.
 	 */
-	export let wrapXs: GridWrap = undefined
+	export let wrapXs: GridWrap = false
 
 	/**
 	 * Controls allowing the container to wrap the content or not if the cumulative width
 	 * size of contents is more than the twelve-column width for small screen devices.
 	 */
-	export let wrapSm: GridWrap = undefined
+	export let wrapSm: GridWrap = false
 
 	/**
 	 * Controls allowing the container to wrap the content or not if the cumulative width
 	 * size of contents is more than the twelve-column width for medium screen devices.
 	 */
-	export let wrapMd: GridWrap = undefined
+	export let wrapMd: GridWrap = false
 
 	/**
 	 * Controls allowing the container to wrap the content or not if the cumulative width
 	 * size of contents is more than the twelve-column width for large screen devices.
 	 */
-	export let wrapLg: GridWrap = undefined
+	export let wrapLg: GridWrap = false
 
 	/**
 	 * Controls allowing the container to wrap the content or not if the cumulative width
 	 * size of contents is more than the twelve-column width for extra-large screen devices.
 	 */
-	export let wrapXl: GridWrap = undefined
+	export let wrapXl: GridWrap = false
 
 	/**
 	 * Controls allowing the container to wrap the content or not if the cumulative width
 	 * size of contents is more than the twelve-column width for extra-extra-large screen devices.
 	 */
-	export let wrapXxl: GridWrap = undefined
+	export let wrapXxl: GridWrap = false
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
