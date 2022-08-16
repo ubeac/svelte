@@ -3,6 +3,7 @@
 <script lang="ts">
 	import { Button, Dialog, DialogBody, DialogContent } from '$lib/components'
 	import { classname, condition } from '$lib/utils'
+	import type { ConfirmTypes } from './confirm.types';
 
 	/**
 	 * Set Description of component
@@ -22,7 +23,7 @@
 	/**
 	 * Set type of component
 	 */
-	export let type: 'error' | 'info' | 'question' | 'success' | 'warning' | undefined = undefined
+	export let type: ConfirmTypes = undefined
 
 	$: icon = (() => {
 		switch (type) {

@@ -6,6 +6,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition, requestAnimationFrame } from '$lib/utils'
+	import type { DialogPlacements, DialogSizes } from './dialog.types';
 
 	/**
 	 * Make page's color Dimmer
@@ -25,7 +26,7 @@
 	/**
 	 * Set position of Dialog
 	 */
-	export let placement: 'top' | 'center' = 'top'
+	export let placement: DialogPlacements = 'top'
 
 	/**
 	 * Makes dialog's body scrollable
@@ -35,7 +36,7 @@
 	/**
 	 * Changes width of Dialog
 	 */
-	export let size: 'sm' | 'md' | 'lg' = 'md'
+	export let size: DialogSizes = 'md'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 

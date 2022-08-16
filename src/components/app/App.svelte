@@ -26,6 +26,8 @@
 	 */
 	export let sticky: AppStickies = []
 
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
 	$: areas = (() => {
 		;[body, footer, header]
 		return [
@@ -44,6 +46,12 @@
 			"'",
 		].join('')
 	})()
+
+	$: classes = classname(
+		'app',
+		sticky?.map((x) => `sticky-${x}`),
+		$$props.class
+	)
 
 	function area(key: string, position: string) {
 		const hasSlot = ($$slots as any)[`${key}-${position}`]
@@ -66,14 +74,6 @@
 
 		return `aside-${direction}`
 	}
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname(
-		'app',
-		sticky?.map((x) => `sticky-${x}`),
-		$$props.class
-	)
 </script>
 
 {#if condition($$props)}
