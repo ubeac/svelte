@@ -10,12 +10,12 @@
 	min-height: inherit;
 }
 
-.u-app-main-center {
+.u-app-body-center {
 	align-self: center;
 	justify-self: center;
 }
 
-@each $key in header-start, header, header-end, aside-start, main, aside-end, footer-start, footer, footer-end {
+@each $key in header-start, header, header-end, aside-start, body, aside-end, footer-start, footer, footer-end {
 	.u-app-#{$key} {
 		grid-area: #{$key};
 	}

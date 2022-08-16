@@ -1,5 +1,5 @@
-export let APP_CONTENTS = ['stretch', 'center'] as const
-export type AppContents = typeof APP_CONTENTS[number]
+export let APP_BODIES = ['stretch', 'center'] as const
+export type AppBodies = typeof APP_BODIES[number]
 
 export let APP_FOOTERS = ['grow', 'start', 'end', 'center'] as const
 export type AppFooters = typeof APP_FOOTERS[number]

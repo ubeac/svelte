@@ -4,12 +4,12 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
-	import type { AppContents, AppFooters, AppHeaders, AppStickies } from './app.types'
+	import type { AppBodies, AppFooters, AppHeaders, AppStickies } from './app.types'
 
 	/**
 	 * TODO
 	 */
-	export let content: AppContents = 'stretch'
+	export let body: AppBodies = 'stretch'
 
 	/**
 	 * TODO
@@ -27,16 +27,16 @@
 	export let sticky: AppStickies = []
 
 	$: areas = (() => {
-		;[content, footer, header]
+		;[body, footer, header]
 		return [
 			"'",
 			area('header', 'start'),
 			' header ',
 			area('header', 'end'),
 			"' '",
-			$$slots['aside-start'] ? 'aside-start' : 'main',
-			' main ',
-			$$slots['aside-end'] ? 'aside-end' : 'main',
+			$$slots['aside-start'] ? 'aside-start' : 'body',
+			' body ',
+			$$slots['aside-end'] ? 'aside-end' : 'body',
 			"' '",
 			area('footer', 'start'),
 			' footer ',
@@ -99,7 +99,7 @@
 					<slot name="aside-start" />
 				</div>
 			{/if}
-			<div class={classname('app-main', { content })}>
+			<div class={classname('app-body', { body })}>
 				<slot />
 			</div>
 			{#if $$slots['aside-end']}

@@ -1,17 +1,17 @@
 <script>
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
 
-	import { APP_CONTENTS, APP_FOOTERS, APP_HEADERS, APP_STICKIES, App } from '$lib/components'
+	import { APP_BODIES, APP_FOOTERS, APP_HEADERS, APP_STICKIES, App } from '$lib/components'
 </script>
 
 <Meta
 	title="App"
 	component={App}
 	argTypes={{
-		content: {
+		body: {
 			control: {
 				type: 'select',
-				options: APP_CONTENTS,
+				options: APP_BODIES,
 			},
 		},
 		footer: {
@@ -37,7 +37,7 @@
 <Story name="Default" let:args>
 	<App class="example-app" {...args}>
 		<div class="box" slot="header">Header</div>
-		<div class="box">Content</div>
+		<div class="box">Body</div>
 		<div class="box" slot="footer">Footer</div>
 	</App>
 </Story>
@@ -48,7 +48,7 @@
 		<div class="box" slot="header">Header</div>
 		<div class="box" slot="header-end">Header End</div>
 		<div class="box" slot="aside-start">Aside Start</div>
-		<div class="box">Content</div>
+		<div class="box">Body</div>
 		<div class="box" slot="aside-end">Aside End</div>
 		<div class="box" slot="footer-start">Footer Start</div>
 		<div class="box" slot="footer">Footer</div>
@@ -64,9 +64,9 @@
 	</App>
 </Story>
 
-<Story name="Contemt" let:args>
+<Story name="Body" let:args>
 	<App class="example-app" {...args}>
-		<div class="box">Content</div>
+		<div class="box">Body</div>
 	</App>
 </Story>
 
@@ -81,14 +81,14 @@
 <Story name="Sticky" let:args>
 	<App class="example-app" sticky={['header']} {...args}>
 		<div class="box" slot="header">Header</div>
-		<div class="box long">Content</div>
+		<div class="box long">Body</div>
 	</App>
 </Story>
 
 <Story name="Login" let:args>
-	<App class="example-app" content="center" {...args}>
+	<App class="example-app" body="center" {...args}>
 		<div class="box" slot="header">Header</div>
-		<div class="box">Content</div>
+		<div class="box">Body</div>
 	</App>
 </Story>
 
@@ -96,7 +96,7 @@
 	<App class="example-app" footer="end" {...args}>
 		<div class="box" slot="header">Header</div>
 		<div class="box" slot="aside-start">Aside Start</div>
-		<div class="box">Content</div>
+		<div class="box">Body</div>
 		<div class="box" slot="footer">Footer</div>
 	</App>
 </Story>
