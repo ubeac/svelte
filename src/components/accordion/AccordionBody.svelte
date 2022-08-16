@@ -15,13 +15,18 @@
 </script>
 
 {#if condition($$props)}
-	<Collapse
-		class={classname('collapse-accordion')}
-		group={$accordions?.persistent ? undefined : `#${$accordions?.group}`}
-		id={$accordion?.id}
-		open={$accordion?.open}>
-		<div use:forwardEvents {...$$restProps} class={classes}>
-			<slot />
-		</div>
-	</Collapse>
+	{#if $accordion}
+		<Collapse
+			class={classname('collapse-accordion')}
+			group={(!$accordions || ($accordions && $accordions.persistent)) ? undefined : `#${$accordions.group}`}
+			id={$accordion.id}
+			open={$accordion.open}>
+			<div use:forwardEvents {...$$restProps} class={classes}>
+				<slot />
+			</div>
+		</Collapse>
+	{:else}
+		<div>Cannot use AccordionBody outside of Accordion</div>
+	{/if}
+
 {/if}
