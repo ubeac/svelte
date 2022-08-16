@@ -12,15 +12,17 @@
 	const accordions = getContext<any>('ACCORDIONS')
 
 	$: classes = classname('accordion-body', undefined, $$props.class)
+
+	$: id = $accordion?.id
+
+	$: group = $accordions?.persistent ? undefined : `#${$accordions?.group}`
+
+	$: open = $accordion?.open
 </script>
 
 {#if condition($$props)}
 	{#if $accordion}
-		<Collapse
-			class={classname('collapse-accordion')}
-			group={(!$accordions || ($accordions && $accordions.persistent)) ? undefined : `#${$accordions.group}`}
-			id={$accordion.id}
-			open={$accordion.open}>
+		<Collapse class={classname('collapse-accordion')} {group} {id} {open}>
 			<div use:forwardEvents {...$$restProps} class={classes}>
 				<slot />
 			</div>
@@ -28,5 +30,4 @@
 	{:else}
 		<div>Cannot use AccordionBody outside of Accordion</div>
 	{/if}
-
 {/if}
