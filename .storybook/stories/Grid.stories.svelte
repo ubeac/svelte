@@ -1,7 +1,15 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Divider, Grid, GridItem, GRID_ALIGN_CONTENTS, GRID_ALIGN_ITEMS, GRID_GUTTERS, GRID_JUSTIFY_CONTENTS } from '$lib/components'
+	import {
+		Divider,
+		Grid,
+		GridItem,
+		GRID_ALIGN_CONTENTS,
+		GRID_ALIGN_ITEMS,
+		GRID_GUTTERS,
+		GRID_JUSTIFY_CONTENTS,
+	} from '$lib/components'
 
 	function control(type, options) {
 		return {
@@ -54,113 +62,118 @@
 
 <Meta title="Grid" component={Grid} {argTypes} />
 
-<Story name="default" let:args>
+<Template let:args>
+	{@const { values = [], key, ...rest } = args}
+	<div class="example-grid">
+		{#each ['', 'Xs', 'Sm', 'Md', 'Lg', 'Xl', 'Xxl'] as breakpoint}
+			<Divider>{breakpoint === '' ? 'default' : breakpoint}</Divider>
+			{#each values as value}
+				<Grid class="h-5 border" {...{ [args.key + breakpoint]: value }} {...rest}>
+					<GridItem>
+						<div class="example-grid-item-text  bg-blue">
+							{value}
+						</div>
+					</GridItem>
+					{#each Array.from({ length: 6 }, (_) => 0) as _, index}
+						<GridItem>
+							<div class="example-grid-item-text bg-red">
+								{index + 1}
+							</div>
+						</GridItem>
+					{/each}
+				</Grid>
+			{/each}
+		{/each}
+	</div>
+</Template>
+
+<Story name="Align Content" args={{ key: 'alignContent', values: GRID_ALIGN_CONTENTS }} />
+<Story name="Align Items" args={{ key: 'alignItems', values: GRID_ALIGN_ITEMS }} />
+<Story name="Justify Content" args={{ key: 'justifyContent', values: GRID_JUSTIFY_CONTENTS }} />
+<Story name="Wrap" args={{ key: 'wrap', values: [true, false, 'reverse'] }} />
+
+<Story name="Default" let:args>
 	<Grid {...args}>
-		<GridItem class="example-grid-item-text bg-red">1</GridItem>
-		<GridItem class="example-grid-item-text bg-yellow">2</GridItem>
-		<GridItem class="example-grid-item-text bg-green">3</GridItem>
-		<GridItem class="example-grid-item-text bg-blue">4</GridItem>
+		<GridItem>
+			<div class="example-grid-item-text bg-red">1</div>
+		</GridItem>
+		<GridItem>
+			<div class="example-grid-item-text bg-yellow">2</div>
+		</GridItem>
+		<GridItem>
+			<div class="example-grid-item-text bg-green">3</div>
+		</GridItem>
+		<GridItem>
+			<div class="example-grid-item-text bg-blue">4</div>
+		</GridItem>
 	</Grid>
 </Story>
 
-<Story name="Align Content" let:args>
-	<div class="example-grid h-25">
-		{#each GRID_ALIGN_CONTENTS as alignContent}
-			<Grid {alignContent} {...args}>
-				<GridItem class="example-grid-item-text bg-red">{alignContent}</GridItem>
-				<GridItem class="example-grid-item-text bg-yellow">{alignContent}</GridItem>
-				<GridItem class="example-grid-item-text bg-green">{alignContent}</GridItem>
-				<GridItem class="example-grid-item-text bg-blue">{alignContent}</GridItem>
-			</Grid>
-		{/each}
-	</div>
-	
-	<Divider>Xs</Divider>
-	<div class="example-grid">
-
-		{#each GRID_ALIGN_CONTENTS as alignContentXs}
-			<Grid {alignContentXs}  {...args}>
-				<GridItem class="example-grid-item-text bg-red">{alignContentXs}</GridItem>
-				<GridItem class="example-grid-item-text bg-yellow">{alignContentXs}</GridItem>
-				<GridItem class="example-grid-item-text bg-green">{alignContentXs}</GridItem>
-				<GridItem class="example-grid-item-text bg-blue">{alignContentXs}</GridItem>
-			</Grid>
-		{/each}
-	</div>
-	
-	<Divider>Sm</Divider>
-	<div class="example-grid">
-		{#each GRID_ALIGN_CONTENTS as alignContentSm}
-			<Grid {alignContentSm}  {...args}>
-				<GridItem class="example-grid-item-text bg-red">{alignContentSm}</GridItem>
-				<GridItem class="example-grid-item-text bg-yellow">{alignContentSm}</GridItem>
-				<GridItem class="example-grid-item-text bg-green">{alignContentSm}</GridItem>
-				<GridItem class="example-grid-item-text bg-blue">{alignContentSm}</GridItem>
-			</Grid>
-		{/each}
-	</div>
-	<Divider>Md</Divider>
-	<div class="example-grid">
-		{#each GRID_ALIGN_CONTENTS as alignContentMd}
-			<Grid {alignContentMd}  {...args}>
-				<GridItem class="example-grid-item-text bg-red">{alignContentMd}</GridItem>
-				<GridItem class="example-grid-item-text bg-yellow">{alignContentMd}</GridItem>
-				<GridItem class="example-grid-item-text bg-green">{alignContentMd}</GridItem>
-				<GridItem class="example-grid-item-text bg-blue">{alignContentMd}</GridItem>
-			</Grid>
-		{/each}
-	</div>
-	<Divider>Lg</Divider>
-	<div class="example-grid">
-		{#each GRID_ALIGN_CONTENTS as alignContentLg}
-			<Grid {alignContentLg}  {...args}>
-				<GridItem class="example-grid-item-text bg-red">{alignContentLg}</GridItem>
-				<GridItem class="example-grid-item-text bg-yellow">{alignContentLg}</GridItem>
-				<GridItem class="example-grid-item-text bg-green">{alignContentLg}</GridItem>
-				<GridItem class="example-grid-item-text bg-blue">{alignContentLg}</GridItem>
-			</Grid>
-		{/each}
-	</div>
-	
-	<Divider>Xl</Divider>
-	<div class="example-grid">
-		{#each GRID_ALIGN_CONTENTS as alignContentXl}
-			<Grid {alignContentXl}  {...args}>
-				<GridItem class="example-grid-item-text bg-red">{alignContentXl}</GridItem>
-				<GridItem class="example-grid-item-text bg-yellow">{alignContentXl}</GridItem>
-				<GridItem class="example-grid-item-text bg-green">{alignContentXl}</GridItem>
-				<GridItem class="example-grid-item-text bg-blue">{alignContentXl}</GridItem>
-			</Grid>
-		{/each}
-	</div>
-		
-	<Divider>Xxl</Divider>
-	<div class="example-grid">
-		{#each GRID_ALIGN_CONTENTS as alignContentXxl}
-			<Grid {alignContentXxl}  {...args}>
-				<GridItem class="example-grid-item-text bg-red">{alignContentXxl}</GridItem>
-				<GridItem class="example-grid-item-text bg-yellow">{alignContentXxl}</GridItem>
-				<GridItem class="example-grid-item-text bg-green">{alignContentXxl}</GridItem>
-				<GridItem class="example-grid-item-text bg-blue">{alignContentXxl}</GridItem>
-			</Grid>
-		{/each}
-	</div>	
+<Story name="Reverse" let:args>
+	<Grid reverse {...args}>
+		<GridItem>
+			<div class="example-grid-item-text bg-red">1</div>
+		</GridItem>
+		<GridItem>
+			<div class="example-grid-item-text bg-green">2</div>
+		</GridItem>
+		<GridItem>
+			<div class="example-grid-item-text bg-blue">3</div>
+		</GridItem>
+	</Grid>
 </Story>
 
-<Story name="Justify Content" args={{ justifyContent: 'start' }} />
-<Story name="Justify Content XS" args={{ justifyContentXs: 'start' }} />
-<Story name="Justify Content SM" args={{ justifyContentSm: 'start' }} />
-<Story name="Justify Content MD" args={{ justifyContentMd: 'start' }} />
-<Story name="Justify Content LG" args={{ justifyContentLg: 'start' }} />
-<Story name="Justify Content XL" args={{ justifyContentXl: 'start' }} />
-<Story name="Justify Content XXL" args={{ justifyContentXxl: 'start' }} />
+<Story name="Vertical" let:args>
+	<Grid vertical {...args}>
+		<GridItem>
+			<div class="example-grid-item-text bg-red">1</div>
+		</GridItem>
+		<GridItem>
+			<div class="example-grid-item-text bg-green">2</div>
+		</GridItem>
+		<GridItem>
+			<div class="example-grid-item-text bg-blue">3</div>
+		</GridItem>
+	</Grid>
+</Story>
 
-<Story name="Justify Items" args={{ justifyItems: 'start' }} />
-<Story name="Justify Items XS" args={{ justifyItemsXs: 'start' }} />
-<Story name="Justify Items SM" args={{ justifyItemsSm: 'start' }} />
-<Story name="Justify Items MD" args={{ justifyItemsMd: 'start' }} />
-<Story name="Justify Items LG" args={{ justifyItemsLg: 'start' }} />
-<Story name="Justify Items XL" args={{ justifyItemsXl: 'start' }} />
-<Story name="Justify Items XXL" args={{ justifyItemsXxl: 'start' }} />
+<Story name="Gutter" let:args>
+	<div class="example-grid">
+		{#each GRID_GUTTERS as gutter}
+			<Divider>Gutter {gutter}</Divider>
+			<Grid {gutter} {...args}>
+				{#each Array.from({ length: 36 }) as _, index}
+					<GridItem>
+						<div class="example-grid-item-text bg-red">{index + 1}</div>
+					</GridItem>
+				{/each}
+			</Grid>
+		{/each}
+	</div>
 
-<Story name="reverse" args={{ reverse: true }} />
+	<div class="example-grid">
+		{#each GRID_GUTTERS as gutterX}
+			<Divider>Gutter X {gutterX}</Divider>
+			<Grid {gutterX} {...args}>
+				{#each Array.from({ length: 36 }) as _, index}
+					<GridItem>
+						<div class="example-grid-item-text bg-red">{index + 1}</div>
+					</GridItem>
+				{/each}
+			</Grid>
+		{/each}
+	</div>
+
+	<div class="example-grid">
+		{#each GRID_GUTTERS as gutterY}
+			<Divider>Gutter Y {gutterY}</Divider>
+			<Grid {gutterY} {...args}>
+				{#each Array.from({ length: 36 }) as _, index}
+					<GridItem>
+						<div class="example-grid-item-text bg-red">{index + 1}</div>
+					</GridItem>
+				{/each}
+			</Grid>
+		{/each}
+	</div>
+</Story>

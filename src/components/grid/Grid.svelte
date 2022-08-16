@@ -17,78 +17,78 @@
 	/**
 	 * Aligns contents vertically across all rows (It overrides alignItems).
 	 */
-	export let alignContent: GridAlignContents = 'default'
+	export let alignContent: GridAlignContents = 'normal'
 
 	/**
 	 * Aligns contents vertically across all rows for extra-small display sizes
 	 * (It overrides alignItemsXs).
 	 */
-	export let alignContentXs: GridAlignContents = 'default'
+	export let alignContentXs: GridAlignContents = 'normal'
 
 	/**
 	 * Aligns contents vertically across all rows for small display sizes
 	 * (It overrides alignItemsSm).
 	 */
-	export let alignContentSm: GridAlignContents = 'default'
+	export let alignContentSm: GridAlignContents = 'normal'
 
 	/**
 	 * Aligns contents vertically across all rows for medium display sizes
 	 * (It overrides alignItemsMd).
 	 */
-	export let alignContentMd: GridAlignContents = 'default'
+	export let alignContentMd: GridAlignContents = 'normal'
 
 	/**
 	 * Aligns contents vertically across all rows for large display sizes
 	 * (It overrides alignItemsLg).
 	 */
-	export let alignContentLg: GridAlignContents = 'default'
+	export let alignContentLg: GridAlignContents = 'normal'
 
 	/**
 	 * Aligns contents vertically across all rows for extra-large display sizes
 	 * (It overrides alignItemsXl).
 	 */
-	export let alignContentXl: GridAlignContents = 'default'
+	export let alignContentXl: GridAlignContents = 'normal'
 
 	/**
 	 * Aligns contents vertically across all rows for extra-extra-large display sizes
 	 * (It overrides alignItemsXXl).
 	 */
-	export let alignContentXxl: GridAlignContents = 'default'
+	export let alignContentXxl: GridAlignContents = 'normal'
 
 	/**
 	 * Aligns contents vertically inside their own row.
 	 */
-	export let alignItems: GridAlignItems = 'default'
+	export let alignItems: GridAlignItems = 'normal'
 
 	/**
 	 * Aligns contents vertically inside their own row for extra-small display sizes.
 	 */
-	export let alignItemsXs: GridAlignItems = 'default'
+	export let alignItemsXs: GridAlignItems = 'normal'
 
 	/**
 	 * Aligns contents vertically inside their own row for small display sizes.
 	 */
-	export let alignItemsSm: GridAlignItems = 'default'
+	export let alignItemsSm: GridAlignItems = 'normal'
 
 	/**
 	 * Aligns contents vertically inside their own row for medium display sizes.
 	 */
-	export let alignItemsMd: GridAlignItems = 'default'
+	export let alignItemsMd: GridAlignItems = 'normal'
 
 	/**
 	 * Aligns contents vertically inside their own row for large display sizes.
 	 */
-	export let alignItemsLg: GridAlignItems = 'default'
+	export let alignItemsLg: GridAlignItems = 'normal'
 
 	/**
 	 * Aligns contents vertically inside their own row for extra-large display sizes.
 	 */
-	export let alignItemsXl: GridAlignItems = 'default'
+	export let alignItemsXl: GridAlignItems = 'normal'
 
 	/**
 	 * Aligns contents vertically inside their own row for extra-extra-large display sizes.
 	 */
-	export let alignItemsXxl: GridAlignItems = 'default'
+	export let alignItemsXxl: GridAlignItems = 'normal'
 
 	/**
 	 * Adds a gap between contents to make space between them vertically and horizontally.
@@ -108,37 +108,37 @@
 	/**
 	 * Justifies contents horizontally.
 	 */
-	export let justifyContent: GridJustifyContents = 'default'
+	export let justifyContent: GridJustifyContents = 'normal'
 
 	/**
 	 * Justifies contents horizontally for extra-small display sizes.
 	 */
-	export let justifyContentXs: GridJustifyContents = 'default'
+	export let justifyContentXs: GridJustifyContents = 'normal'
 
 	/**
 	 * Justifies contents horizontally for small display sizes.
 	 */
-	export let justifyContentSm: GridJustifyContents = 'default'
+	export let justifyContentSm: GridJustifyContents = 'normal'
 
 	/**
 	 * Justifies contents horizontally for medium display sizes.
 	 */
-	export let justifyContentMd: GridJustifyContents = 'default'
+	export let justifyContentMd: GridJustifyContents = 'normal'
 
 	/**
 	 * Justifies contents horizontally for large display sizes.
 	 */
-	export let justifyContentLg: GridJustifyContents = 'default'
+	export let justifyContentLg: GridJustifyContents = 'normal'
 
 	/**
 	 * Justifies contents horizontally for extra-large display sizes.
 	 */
-	export let justifyContentXl: GridJustifyContents = 'default'
+	export let justifyContentXl: GridJustifyContents = 'normal'
 
 	/**
 	 * Justifies contents horizontally for extra-extra-large display sizes.
 	 */
-	export let justifyContentXxl: GridJustifyContents = 'default'
+	export let justifyContentXxl: GridJustifyContents = 'normal'
 
 	/**
 	 * Reverses the flow of contents from left-to-right to right-to-left, or vice-versa.

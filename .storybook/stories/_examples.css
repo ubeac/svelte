@@ -47,10 +47,16 @@
 	gap: 0.25rem;
 }
 
+.example-grid-horizontal {
+	flex-direction: row;
+}
+
 .example-grid-item-text {
-	height: 2rem;
 	border: 1px solid #20202050;
-	width: 6rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	height: 100%;
+	width: 4rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
