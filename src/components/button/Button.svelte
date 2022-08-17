@@ -85,6 +85,7 @@
 {#if condition($$props)}
 	<svelte:element
 		this={href ? 'a' : 'button'}
+		{disabled}
 		{href}
 		bind:this={ref}
 		use:forwardEvents
