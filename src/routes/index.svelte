@@ -1,9 +1,20 @@
 <script lang="ts">
-	import { Button } from '$lib/components'
+	import { Tab, TabContent, TabHeader, Tabs } from '$lib/components'
+	let tabs = []
+	let stayOpen = false
+
+	let value = ['b']
 </script>
 
-<div>
-	<Button color="red">This is button</Button>
-	<Button block>This is another button</Button>
-	<Button color="primary" block elevation={0}>This is button 3</Button>
-</div>
+<Tabs shape="pills" vertical bind:tabs>
+	<TabHeader vertical {tabs} />
+	<TabContent>
+		<Tab name="p-1">Hello Page 1</Tab>
+		<Tab active name="p-2">Hello Page 2</Tab>
+		<Tab active name="p-2s">Hello dkljdPage 2</Tab>
+		<Tab active name="p-2d">Hello Page 2sdfsdklf</Tab>
+		<Tab active name="p-2io">Hellosdfsadjfk Page 2</Tab>
+		<Tab active name="p-2zcv">sdffHello Page 2</Tab>
+		<Tab disabled name="p-3">Hello Page 3</Tab>
+	</TabContent>
+</Tabs>

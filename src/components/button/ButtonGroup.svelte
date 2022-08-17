@@ -5,23 +5,29 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * Size of buttons
+	 * TODO
 	 */
-	export let size: 'sm' | 'md' | 'lg' = 'md'
+	export let compact: boolean = false
 
 	/**
 	 * Align Buttons vertically
 	 */
 	export let vertical: boolean = false
 
+	/**
+	 * TODO
+	 */
+	export let wrap: boolean = false
+
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname(
 		'button-group',
 		{
+			compact,
 			horizontal: !vertical,
-			size,
 			vertical,
+			wrap,
 		},
 		$$props.class
 	)

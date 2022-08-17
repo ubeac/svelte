@@ -1,0 +1,41 @@
+.u-dialog {
+	@extend .modal;
+}
+
+.u-dialog-center .u-dialog-container {
+	@extend .modal-dialog-centered;
+}
+
+.u-dialog-scrollable .u-dialog-container {
+	@extend .modal-dialog-scrollable;
+}
+
+@each $size in sm, lg, xl {
+	.u-dialog-#{$size} .u-dialog-container {
+		@extend .modal-#{$size};
+	}
+}
+
+.u-dialog-container {
+	@extend .modal-dialog;
+}
+
+.u-dialog-body {
+	@extend .modal-body;
+}
+
+.u-dialog-content {
+	@extend .modal-content;
+}
+
+.u-dialog-footer {
+	@extend .modal-footer;
+}
+
+.u-dialog-header {
+	@extend .modal-header;
+}
+
+.u-dialog-title {
+	@extend .modal-title;
+}

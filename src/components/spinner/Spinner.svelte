@@ -5,20 +5,22 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
-	/**
-	 * TODO
-	 */
-	export let color: Colors = undefined
+	import type { SpinnerSizes, SpinnerStyles } from './spinner.types'
 
 	/**
-	 * TODO
+	 * The color of spinner
 	 */
-	export let size: 'sm' | 'md' = 'sm'
+	export let color: Colors = 'default'
 
 	/**
-	 * TODO
+	 * Sets the size of component
 	 */
-	export let style: 'border' | 'grow' = 'border'
+	export let size: SpinnerSizes = 'sm'
+
+	/**
+	 * You can choose a style for spinner using style property
+	 */
+	export let style: SpinnerStyles = 'border'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -29,7 +31,8 @@
 			size,
 			style,
 		},
-		$$props.class
+		$$props.class,
+		true
 	)
 </script>
 

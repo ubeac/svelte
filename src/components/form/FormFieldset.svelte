@@ -8,18 +8,18 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Set id for HTML element
 	 */
 	export let id: string = nanoid(10)
 
 	/**
-	 * TODO
+	 * Set label for filedset
 	 */
 	export let label: string | undefined = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-fieldset', null, $$props.class)
+	$: classes = classname('form-fieldset', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

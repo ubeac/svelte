@@ -1,0 +1,73 @@
+.example-app .box {
+	height: 100%;
+	padding: 12px;
+	border-radius: 5px;
+	border: solid 2px white;
+	background-color: lightgray;
+}
+.example-app .long {
+	height: 200vh;
+}
+
+.example-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.example-avatars {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -0.5rem !important;
+	margin-right: -0.5rem;
+	justify-content: center;
+}
+
+.example-avatars > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
+
+.example-badges {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 0rem !important;
+	margin-right: -0.5rem;
+	justify-content: center;
+}
+.example-badges > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
+
+.example-tab {
+	height: 200px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.example-radios {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -0.5rem !important;
+	margin-right: -0.5rem;
+	justify-content: center;
+}
+
+.example-radios > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
+
+.example-spinners {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -0.5rem !important;
+	margin-right: -0.5rem;
+	justify-content: center;
+}
+
+.example-spinners > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
+

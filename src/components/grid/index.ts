@@ -1,6 +1,2 @@
-import Grid from './Grid.svelte'
-import GridItem from './GridItem.svelte'
-
-Grid.Item = GridItem
-
-export { Grid }
+export { default as Grid } from './Grid.svelte'
+export { default as GridItem } from './GridItem.svelte'

@@ -5,7 +5,7 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Show a required indicator *
 	 */
 	export let required: boolean = false
 

@@ -73,18 +73,10 @@
 	}
 }
 
-@each $breakpoint, $value in slice($breakpoints, 1, -2) {
-	@include media-breakpoint-up($breakpoint) {
-		.u-grid-item-hide-#{$breakpoint}-up {
-			display: none;
-		}
-	}
-}
-
 @each $breakpoint, $value in slice($breakpoints, 2, -2) {
 	$next: breakpoint-next($breakpoint);
 	@include media-breakpoint-down($next) {
-		.u-grid-item-hide-#{$breakpoint}-down {
+		.u-grid-item-#{$breakpoint}-hide-down {
 			display: none;
 		}
 	}
@@ -93,7 +85,15 @@
 @each $breakpoint, $value in $breakpoints {
 	$next: breakpoint-next($breakpoint);
 	@include media-breakpoint-between($breakpoint, $next) {
-		.u-grid-item-hide-#{$breakpoint} {
+		.u-grid-item-#{$breakpoint}-hide {
+			display: none;
+		}
+	}
+}
+
+@each $breakpoint, $value in slice($breakpoints, 1, -2) {
+	@include media-breakpoint-up($breakpoint) {
+		.u-grid-item-#{$breakpoint}-hide-up {
 			display: none;
 		}
 	}
