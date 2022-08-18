@@ -3,3 +3,15 @@
 	position: static;
 	display: block;
 }
+
+.u-menu-item {
+	@extend .dropdown-item;
+}
+
+.u-menu-item-active {
+	@extend .active;
+}
+
+.u-menu-item-disabled {
+	@extend .disabled;
+}
