@@ -8,17 +8,17 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Offset between Menu and target element
 	 */
 	export let offset: [number, number] = [0, 2]
 
 	/**
-	 * TODO
+	 * Do not close Menu when clicked outside
 	 */
 	export let persistence: boolean = false
 
 	/**
-	 * TODO
+	 * Set Menu position relative to target element
 	 */
 	export let placement: Placement = 'bottom-start'
 
