@@ -13,7 +13,7 @@
 	export let offset: [number, number] = [0, 2]
 
 	/**
-	 * Do not close Menu when clicked outside
+	 * Do not close Menu when clicked inside menu
 	 */
 	export let persistence: boolean = false
 
