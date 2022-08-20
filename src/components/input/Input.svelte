@@ -10,24 +10,13 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * Show value of input in Preview mode
-	 */
-	export let preview: boolean = false
-
-	/**
 	 * the text Value of input
 	 */
 	export let value: any = undefined
 
-	$: classes = classname('input', { preview }, $$props.class)
+	$: classes = classname('input', $$props.class)
 </script>
 
 {#if condition($$props)}
-	{#if preview}
-		<div use:forwardEvents {...$$restProps} class={classes}>
-			{value}
-		</div>
-	{:else}
-		<input bind:value use:forwardEvents {...$$restProps} class={classes} />
-	{/if}
+	<input bind:value use:forwardEvents {...$$restProps} class={classes} />
 {/if}

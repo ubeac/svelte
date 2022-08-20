@@ -6,9 +6,9 @@
 <Meta component={Checkbox} title="Checkbox" />
 
 <Template let:args>
-	<Checkbox {...args} />
+	<Checkbox {...args} label="checkbox1" />
 </Template>
 
 <Story name="default" />
 <Story name="disabled" args={{ disabled: true }} />
-<Story name="value" args={{ value: true }} />
+<Story name="model" args={{ model: true }} />

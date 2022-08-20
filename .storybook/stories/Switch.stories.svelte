@@ -9,6 +9,7 @@
 	<Switch {...args} />
 </Story>
 
+
 <Story name="Disabled" let:args>
 	<Switch disabled {...args} />
 </Story>
