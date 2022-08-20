@@ -7,22 +7,22 @@
 	import type { AppBodies, AppFooters, AppHeaders, AppStickies } from './app.types'
 
 	/**
-	 * TODO
+	 * Set Body's Vertical Grow strategy
 	 */
 	export let body: AppBodies = 'stretch'
 
 	/**
-	 * TODO
+	 * Set Footer's Horizontal grow strategy
 	 */
 	export let footer: AppFooters = 'grow'
 
 	/**
-	 * TODO
+	 * Set Header's Horizontal grow strategy
 	 */
 	export let header: AppHeaders = 'grow'
 
 	/**
-	 * TODO
+	 * Set Which parts should be sticky
 	 */
 	export let sticky: AppStickies = []
 
