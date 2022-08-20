@@ -4,39 +4,41 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
-	import type { AppContents, AppFooters, AppHeaders, AppStickies } from './app.types'
+	import type { AppBodies, AppFooters, AppHeaders, AppStickies } from './app.types'
 
 	/**
-	 * TODO
+	 * Set Body's Vertical Grow strategy
 	 */
-	export let content: AppContents = 'stretch'
+	export let body: AppBodies = 'stretch'
 
 	/**
-	 * TODO
+	 * Set Footer's Horizontal grow strategy
 	 */
 	export let footer: AppFooters = 'grow'
 
 	/**
-	 * TODO
+	 * Set Header's Horizontal grow strategy
 	 */
 	export let header: AppHeaders = 'grow'
 
 	/**
-	 * TODO
+	 * Set Which parts should be sticky
 	 */
 	export let sticky: AppStickies = []
 
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
 	$: areas = (() => {
-		;[content, footer, header]
+		;[body, footer, header]
 		return [
 			"'",
 			area('header', 'start'),
 			' header ',
 			area('header', 'end'),
 			"' '",
-			$$slots['aside-start'] ? 'aside-start' : 'main',
-			' main ',
-			$$slots['aside-end'] ? 'aside-end' : 'main',
+			$$slots['aside-start'] ? 'aside-start' : 'body',
+			' body ',
+			$$slots['aside-end'] ? 'aside-end' : 'body',
 			"' '",
 			area('footer', 'start'),
 			' footer ',
@@ -44,6 +46,12 @@
 			"'",
 		].join('')
 	})()
+
+	$: classes = classname(
+		'app',
+		sticky?.map((x) => `sticky-${x}`),
+		$$props.class
+	)
 
 	function area(key: string, position: string) {
 		const hasSlot = ($$slots as any)[`${key}-${position}`]
@@ -66,14 +74,6 @@
 
 		return `aside-${direction}`
 	}
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname(
-		'app',
-		sticky?.map((x) => `sticky-${x}`),
-		$$props.class
-	)
 </script>
 
 {#if condition($$props)}
@@ -99,7 +99,7 @@
 					<slot name="aside-start" />
 				</div>
 			{/if}
-			<div class={classname('app-main', { content })}>
+			<div class={classname('app-body', { body })}>
 				<slot />
 			</div>
 			{#if $$slots['aside-end']}

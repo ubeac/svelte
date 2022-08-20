@@ -43,10 +43,21 @@
 
 	const dispatch = createEventDispatcher()
 
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
 	let instance: Alert
 	let ref: HTMLElement
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	$: classes = classname(
+		'alert',
+		{
+			dismissible,
+			type,
+			variant,
+		},
+		['fade', 'show', $$props.class],
+		true
+	)
 
 	function close() {
 		instance && instance.close()
@@ -63,17 +74,6 @@
 	onDestroy(() => {
 		instance && instance.dispose()
 	})
-
-	$: classes = classname(
-		'alert',
-		{
-			dismissible,
-			type,
-			variant,
-		},
-		['fade', 'show', $$props.class],
-		true
-	)
 </script>
 
 {#if condition($$props)}

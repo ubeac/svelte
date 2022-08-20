@@ -151,6 +151,12 @@
 	</div>
 </Story>
 
+<Story name="Click Event" let:args>
+	<Button on:click={() => console.log('Button clicked')} {...args}>
+		Click Me and Check Console output
+	</Button>
+</Story>
+
 <Story name="Social Buttons" let:args>
 	<div class="example-buttons">
 		<Button class="btn-facebook" {...args}>
