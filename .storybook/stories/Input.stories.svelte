@@ -1,29 +1,34 @@
 <script>
-	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
+	import { Meta, Story } from '@storybook/addon-svelte-csf'
 	import { Input } from '$lib/components'
 </script>
 
 <Meta component={Input} title="Input" />
 
-<Template let:args>
+<Story name="Default" let:args>
 	<Input {...args} />
-</Template>
+</Story>
 
-<Story name="default">
-	<Input />
+<Story name="Disabled" let:args>
+	<Input disabled value="This is value" {...args} />
 </Story>
-<Story name="disabled">
-	<Input value="test" disabled />
+
+<Story name="Placeholder" let:args>
+	<Input placeholder="This is placeholder" {...args} />
 </Story>
-<Story name="readonly">
-	<Input value="test" readonly />
+
+<Story name="Preview" let:args>
+	<Input preview value="This is value" {...args} />
 </Story>
-<Story name="placeholder">
-	<Input placeholder="this is placeholder" />
+
+<Story name="Readonly" let:args>
+	<Input readonly value="This is value" {...args} />
 </Story>
-<Story name="value">
-	<Input value="test" />
+
+<Story name="Type" let:args>
+	<Input type="password" value="This is secret value" {...args} />
 </Story>
-<Story name="type">
-	<Input value="abcd" type="password" />
+
+<Story name="Value" let:args>
+	<Input value="This is changed value" {...args} />
 </Story>

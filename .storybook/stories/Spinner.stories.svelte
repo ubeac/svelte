@@ -2,10 +2,7 @@
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
 	import { COLORS } from '$lib/types'
-	import { Spinner } from '$lib/components'
-
-	const SIZES = ['sm', 'md']
-	const STYLES = ['border', 'grow']
+	import { Spinner, SPINNER_SIZES, SPINNER_STYLES } from '$lib/components'
 </script>
 
 <Meta
@@ -22,31 +19,42 @@
 			defaultValue: 'sm',
 			control: {
 				type: 'select',
-				options: SIZES,
+				options: SPINNER_SIZES,
 			},
 		},
 		style: {
 			defaultValue: 'border',
 			control: {
 				type: 'radio',
-				options: STYLES,
+				options: SPINNER_STYLES,
 			},
 		},
 	}} />
 
-<Template let:args>
+<Story name="Default" let:args>
 	<Spinner {...args} />
-</Template>
-
-<Story name="default" />
-<Story name="color" args={{ color: 'blue' }} />
-<Story name="size" let:args>
-	{#each SIZES as size}
-		<Spinner {...args} {size} />
-	{/each}
 </Story>
-<Story name="style" let:args>
-	{#each STYLES as style}
-		<Spinner {...args} {style} />
-	{/each}
+
+<Story name="Color" let:args>
+	<div class="example-spinners">
+		{#each COLORS as color}
+			<Spinner {color} {...args} />
+		{/each}
+	</div>
+</Story>
+
+<Story name="Size" let:args>
+	<div class="example-spinners">
+		{#each SPINNER_SIZES as size}
+			<Spinner {...args} {size} />
+		{/each}
+	</div>
+</Story>
+
+<Story name="Style" let:args>
+	<div class="example-spinners">
+		{#each SPINNER_STYLES as style}
+			<Spinner {...args} {style} />
+		{/each}
+	</div>
 </Story>

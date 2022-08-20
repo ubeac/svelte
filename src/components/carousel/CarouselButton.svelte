@@ -2,13 +2,14 @@
 	import { getContext } from 'svelte'
 
 	import { classname, condition } from '$lib/utils'
+	import type { CarouselButtonDirections, CarouselContext } from './carousel.types';
 
 	/**
 	 * Set button's direction
 	 */
-	export let direction: 'prev' | 'next' | undefined = undefined
+	export let direction: CarouselButtonDirections = 'next'
 
-	const { prev, next } = getContext<any>('CAROUSEL')
+	const { prev, next } = getContext<CarouselContext>('CAROUSEL')
 
 	$: action = direction === 'prev' ? prev : next
 	$: text = direction === 'prev' ? 'Previous' : 'Next'

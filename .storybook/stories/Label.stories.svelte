@@ -1,23 +1,27 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 
-	import { Label } from '$lib/components'
+	import { Input, Label } from '$lib/components'
 </script>
 
 <Meta title="Label" component={Label} />
 
-<Template let:args>
-	<Label {...args}>{args.slot}</Label>
-</Template>
-
-<Story name="default" args={{ slot: 'Label text' }} />
-<Story name="associated with input" args={{ slot: 'Click Me', for: 'input-1' }} let:args>
-	<Label {...args}>{args.slot}</Label>
-	<input class="form-control" id="input-1" />
+<Story name="Default" let:args>
+	<Label {...args}>Label text</Label>
 </Story>
-<Story name="associated with Checkbox" args={{ slot: 'Checkbox', for: 'check-1' }} let:args>
+
+<Story name="Associated with input" let:args>
+	<Label for="input-1" {...args}>Input</Label>
+	<Input class="form-control" id="input-1" />
+</Story>
+
+<Story name="Associated with Checkbox" let:args>
 	<div>
 		<input type="checkbox" class="form-check-input" id="check-1" />
-		<Label {...args}>{args.slot}</Label>
+		<Label for="check-1" {...args}>Checkbox</Label>
 	</div>
+</Story>
+
+<Story name="Required" let:args>
+	<Label required {...args}>Required</Label>
 </Story>

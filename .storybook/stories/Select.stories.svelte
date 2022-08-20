@@ -1,105 +1,52 @@
 <script>
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
-
-	import { AVATAR_SHAPES, AVATAR_SIZES, AvatarGroup, Badge, Icon, Select } from '$lib/components'
-	import { COLORS } from '$lib/types'
-
-	let items = [123, 213, 34, 451, 345, 392]
-	let items2 = [
-		{
-			text: 'option1',
-			value: 'value1',
-		},
-		{
-			text: 'option2',
-			value: 'value2',
-		},
-		{
-			text: 'option3',
-			value: 'value3',
-		},
-		{
-			text: 'option4',
-			value: 'value4',
-		},
-	]
-	let items3 = [
-		{
-			key: 'option1',
-			val: 'value1',
-		},
-		{
-			key: 'option2',
-			val: 'value2',
-		},
-		{
-			key: 'option3',
-			val: 'value3',
-		},
-		{
-			key: 'option4',
-			val: 'value4',
-		},
-	]
-	let model1 = ''
-	/**
-	 * @type {never[]}
-	 */
-	let model2 = []
+	import { Select } from '$lib/components'
 </script>
 
 <Meta
-	id="Select"
 	title="Select"
 	component={Select}
-	argTypes={{
-		color: {
-			defaultValue: 'default',
-			control: {
-				type: 'select',
-				options: COLORS,
-			},
-		},
-		shape: {
-			defaultValue: 'round',
-			control: {
-				type: 'radio',
-				options: AVATAR_SHAPES,
-			},
-		},
-		size: {
-			defaultValue: 'ep',
-			control: {
-				type: 'radio',
-				options: AVATAR_SIZES,
-			},
-		},
-		image: {
-			defaultValue: undefined,
-			control: {
-				type: 'text',
-			},
+	parameters={{
+		actions: {
+			handles: ['changed'],
 		},
 	}} />
 
-<Story name="default" let:args>
-	<Select placeholder="please choose ..." bind:model1 {items} {...args} />
+<Story name="Default" let:args>
+	<Select items={['item 1', 'item 2', 'item 3']} {...args} />
 </Story>
 
-<Story name="disable" let:args>
-	<Select disabled placeholder="please choose ..." bind:model1 {items} {...args} />
+<Story name="Items as array of Numbers" args={{ items: [123, 213, 34, 451, 345, 392] }} let:args>
+	<Select {...args} />
 </Story>
 
-<Story name="text&value" let:args>
-	<Select placeholder="please choose ..." bind:model1 items={items2} {...args} />
+<Story name="Items as array of Strings" args={{ items: ['a', 'b', 'c', 'd', 'e'] }} let:args>
+	<Select {...args} />
 </Story>
 
-<Story name="custom text&value" let:args>
-	<Select placeholder="please choose ..." bind:model1 items={items3} {...args} key="val" text="key" />
+<Story name="Items as Object" args={{ items: { first: 'FIRST', second: 'SECOND', third: 'THIRD' } }} let:args>
+	<Select {...args} />
 </Story>
 
-<Story name="multiple" let:args>
-	<div class="example-avatars">
-		<Select placeholder="please choose" bind:model2 {items} {...args} multiple />
-	</div>
+<Story
+	name="Items as array of Objects"
+	args={{
+		items: [
+			{ key: 'a', value: 'A' },
+			{ key: 'b', value: 'B' },
+			{ key: 'c', value: 'C' },
+		],
+		key: 'key',
+		text: 'value',
+	}}
+	let:args>
+	<Select {...args} />
+</Story>
+
+<Story name="Preview" args={{ value: 'c', items: ['a', 'b', 'c'] }} let:args>
+	<Select preview {...args} />
+</Story>
+
+<Story name="Value" args={{ value: 'b', items: ['a', 'b', 'c'] }} let:args>
+	<Select {...args} />
 </Story>

@@ -1,6 +1,9 @@
 <script lang="ts">
-	import { Divider } from '$lib/components'
-	import { Checkbox, CheckboxGroup, RadioGroup, Select, Switch, Textarea } from '$lib/components'
+
+	import { Tab, TabContent, TabHeader, Tabs } from '$lib/components'
+	let tabs = []
+	let stayOpen = false
+
 
 	let TextareaModel = ''
 	let selectMultipleModel: any[] = ['1']
@@ -17,48 +20,17 @@
 	]
 </script>
 
-<h1>Textarea</h1>
-<h2>model : {TextareaModel}</h2>
-<Textarea bind:value={TextareaModel} placeholder="Write somthing ..." rows="6" />
-<Divider />
 
-<h1>Select Multiple</h1>
-<h2>model : {selectMultipleModel}</h2>
-<Select items={[1, 2, 3]} multiple bind:value={selectMultipleModel} placeholder="choose ..." />
-<Divider />
+<Tabs shape="pills" vertical bind:tabs>
+	<TabHeader vertical {tabs} />
+	<TabContent>
+		<Tab name="p-1">Hello Page 1</Tab>
+		<Tab active name="p-2">Hello Page 2</Tab>
+		<Tab active name="p-2s">Hello dkljdPage 2</Tab>
+		<Tab active name="p-2d">Hello Page 2sdfsdklf</Tab>
+		<Tab active name="p-2io">Hellosdfsadjfk Page 2</Tab>
+		<Tab active name="p-2zcv">sdffHello Page 2</Tab>
+		<Tab disabled name="p-3">Hello Page 3</Tab>
+	</TabContent>
+</Tabs>
 
-<h1>Select</h1>
-<h2>model : {selectModel}</h2>
-<Select {items} bind:value={selectModel} key="value" text="label" placeholder="choose ..." />
-<Divider />
-
-<h1>Button Group</h1>
-<h2>model : {radiobuttonModel}</h2>
-<RadioGroup {items} bind:value={radiobuttonModel} />
-<Divider />
-
-<h1>Button Group inline</h1>
-<h2>model : {radiobuttonModel}</h2>
-<RadioGroup row {items} bind:value={radiobuttonModel} />
-<Divider />
-
-<h1>switch</h1>
-<h2>model : {switchModel}</h2>
-<Switch bind:value={switchModel} label="Are you sure?" />
-<Divider />
-
-<h1>checkbox</h1>
-<h2>model : {singleCheckboxModel}</h2>
-<Checkbox bind:model={singleCheckboxModel} label="Are you sure?" />
-<Divider />
-
-<h1>checkbox</h1>
-<h2>model : {multiCheckboxModel}</h2>
-<CheckboxGroup {items} bind:value={multiCheckboxModel} />
-
-<Divider />
-<h1>checkbox inline</h1>
-<h2>model : {multiCheckboxModel}</h2>
-<CheckboxGroup row {items} bind:value={multiCheckboxModel} />
-
-<Divider />
