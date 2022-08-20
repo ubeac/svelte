@@ -2,6 +2,7 @@
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Items } from '$lib/types'
 	import { classname, condition, createOptions } from '$lib/utils'
 
 	/**
@@ -12,7 +13,7 @@
 	/**
 	 * TODO
 	 */
-	export let items: Array<any> | Object | undefined = undefined
+	export let items: Items = undefined
 
 	/**
 	 * TODO

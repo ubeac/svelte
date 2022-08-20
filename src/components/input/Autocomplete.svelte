@@ -6,6 +6,7 @@
 	import type { TomSettings } from 'tom-select/dist/types/types'
 
 	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Items } from '$lib/types'
 	import { classname, condition, createOptions, requestAnimationFrame } from '$lib/utils'
 
 	/**
@@ -21,7 +22,7 @@
 	/**
 	 * TODO
 	 */
-	export let items: Array<any> | object | undefined = undefined
+	export let items: Items = undefined
 
 	/**
 	 * an existing field in object (if item is array of object)
