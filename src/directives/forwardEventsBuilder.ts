@@ -16,7 +16,7 @@ export const forwardEventsBuilder = (component: SvelteComponent) => {
 	const natives: { [key: string]: EventCallback[] } = {}
 
 	component.$on = (eventType: string, callback: EventCallback) => {
-		const isNative = `on${eventType}`.split(':').at(0)!.toLowerCase() in document
+		const isNative = `on${eventType}`.split(':')[0]!.toLowerCase() in document
 
 		if (isNative) {
 			const callbacks = natives[eventType] || (natives[eventType] = [])

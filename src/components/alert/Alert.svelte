@@ -6,10 +6,10 @@
 
 	import { Icon } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
-	import type { Colors } from '$lib/types';
-	import type { AlertVariants } from './alert.types';
+	import type { AlertVariants } from './alert.types'
 
 	/**
 	 * Show close button at the end of alert
@@ -39,14 +39,25 @@
 	/**
 	 * Set Alert's variant
 	 */
-	export let variant: AlertVariants = 'default'
+	export let variant: AlertVariants = 'outlined'
 
 	const dispatch = createEventDispatcher()
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	let instance: Alert
 	let ref: HTMLElement
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	$: classes = classname(
+		'alert',
+		{
+			dismissible,
+			type,
+			variant,
+		},
+		['fade', 'show', $$props.class],
+		true
+	)
 
 	function close() {
 		instance && instance.close()
@@ -63,17 +74,6 @@
 	onDestroy(() => {
 		instance && instance.dispose()
 	})
-
-	$: classes = classname(
-		'alert',
-		{
-			dismissible,
-			type,
-			variant,
-		},
-		['fade', 'show', $$props.class],
-		true
-	)
 </script>
 
 {#if condition($$props)}

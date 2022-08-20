@@ -1,11 +1,20 @@
 <script lang="ts">
-	import { Divider } from '$lib/components'
-	import FormCheckboxGroup from '$lib/components/form/FormCheckboxGroup.svelte'
+	import { Tab, TabContent, TabHeader, Tabs } from '$lib/components'
+	let tabs = []
+	let stayOpen = false
 
 	let value = ['b']
 </script>
 
-{value}
-<Divider />
-
-<FormCheckboxGroup on:click={console.log} bind:value items={{ a: 1, b: 2, c: 3 }} />
+<Tabs shape="pills" vertical bind:tabs>
+	<TabHeader vertical {tabs} />
+	<TabContent>
+		<Tab name="p-1">Hello Page 1</Tab>
+		<Tab active name="p-2">Hello Page 2</Tab>
+		<Tab active name="p-2s">Hello dkljdPage 2</Tab>
+		<Tab active name="p-2d">Hello Page 2sdfsdklf</Tab>
+		<Tab active name="p-2io">Hellosdfsadjfk Page 2</Tab>
+		<Tab active name="p-2zcv">sdffHello Page 2</Tab>
+		<Tab disabled name="p-3">Hello Page 3</Tab>
+	</TabContent>
+</Tabs>

@@ -4,6 +4,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
+	import type { CarouselContext } from './carousel.types';
 
 	/**
 	 * Id of related carousel item
@@ -12,7 +13,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	let { activeItem, to } = getContext<any>('CAROUSEL')
+	let { activeItem, to } = getContext<CarouselContext>('CAROUSEL')
 
 	$: active = $activeItem === item
 
