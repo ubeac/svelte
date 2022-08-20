@@ -1,7 +1,5 @@
+@import 'bootstrap/scss/forms/form-control';
+@import '@tabler/core/src/scss/ui/forms/form-check';
 .u-textarea {
 	@extend .form-control;
-}
-
-.u-textarea-preview {
-	@extend .form-control-plaintext;
 }

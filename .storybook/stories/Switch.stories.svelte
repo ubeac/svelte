@@ -1,14 +1,19 @@
 <script>
-	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
+	import { Meta, Story } from '@storybook/addon-svelte-csf'
 	import { Switch } from '$lib/components'
 </script>
 
 <Meta component={Switch} title="Switch" argTypes={{ value: { control: 'boolean' } }} />
 
-<Template let:args>
+<Story name="Default" let:args>
 	<Switch {...args} />
-</Template>
+</Story>
 
-<Story name="default" />
-<Story name="disabled" args={{ disabled: true }} />
-<Story name="value" args={{ value: true }} />
+
+<Story name="Disabled" let:args>
+	<Switch disabled {...args} />
+</Story>
+
+<Story name="Value" let:args>
+	<Switch value {...args} />
+</Story>

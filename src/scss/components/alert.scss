@@ -32,12 +32,9 @@
 	@extend .alert-important;
 }
 
-.u-alert-variant-outlined {
-	// TODO
-}
-
 .u-alert-icon {
-	@extend .alert-icon;
+	color: var(--tblr-alert-color);
+	margin: -0.125rem 1rem -0.125rem 0;
 }
 
 .u-alert-title {

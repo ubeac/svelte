@@ -1,6 +1,6 @@
 {
 	"name": "@ubeac/svelte",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"type": "module",
 	"svelte": "index.js",
 	"publishConfig": {
@@ -19,8 +19,8 @@
 		"start": "npm run style && svelte-kit dev",
 		"sb": "npm run storybook:start",
 		"sb:build": "storybook:build",
-		"storybook:start": "set NODE_OPTIONS=--openssl-legacy-provider && npm run style && start-storybook -p 6006",
-		"storybook:build": "set NODE_OPTIONS=--openssl-legacy-provider && npm run style && build-storybook -o ./.storybook/build",
+		"storybook:start": "npm run style && start-storybook -p 6006",
+		"storybook:build": "npm run style && build-storybook -o ./.storybook/build",
 		"style": "node scripts/styles.generator.js"
 	},
 	"dependencies": {
@@ -33,6 +33,7 @@
 		"change-case": "^4.1.2",
 		"litepicker": "^2.0.12",
 		"luxon": "^2.4.0",
+		"moment": "^2.29.4",
 		"nanoid": "^3.3.4",
 		"tom-select": "^2.0.3"
 	},
@@ -48,6 +49,7 @@
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "1.0.0-next.405",
 		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
+		"@tsconfig/svelte": "^3.0.0",
 		"@types/bootstrap": "^5.1.10",
 		"@types/cookie": "^0.5.1",
 		"@types/google.maps": "^3.49.2",

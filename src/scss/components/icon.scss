@@ -26,7 +26,7 @@ $sizes: (
 }
 
 @each $key, $value in $sizes {
-	.u-icon-#{$key} {
+	.u-icon-size-#{$key} {
 		width: #{$value} !important;
 		height: #{$value} !important;
 	}

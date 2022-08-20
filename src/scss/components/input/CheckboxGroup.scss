@@ -1,0 +1,7 @@
+.u-checkbox-group {
+	&-row {
+		.u-checkbox {
+			@extend .form-check-inline;
+		}
+	}
+}

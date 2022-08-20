@@ -10,18 +10,13 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * The Selected radio button's value
+	 * The text content of Textarea
 	 */
-	export let group: any = undefined
+	export let value: string | undefined = undefined
 
-	/**
-	 * The value of radio button
-	 */
-	export let value: any = undefined
-
-	$: classes = classname('radio', undefined, $$props.class)
+	$: classes = classname('textarea', $$props.class)
 </script>
 
 {#if condition($$props)}
-	<input bind:group {value} use:forwardEvents {...$$restProps} class={classes} type="radio" />
+	<textarea bind:value use:forwardEvents {...$$restProps} class={classes} />
 {/if}

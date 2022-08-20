@@ -1,0 +1,7 @@
+.u-radio-group {
+	&-row {
+		.u-radio {
+			@extend .form-check-inline;
+		}
+	}
+}
