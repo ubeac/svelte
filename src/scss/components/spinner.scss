@@ -1,4 +1,4 @@
-@each $key, $value in theme-colors() {
+@each $key, $value in $theme-colors {
 	.u-spinner-#{$key} {
 		@extend .text-#{$key};
 	}

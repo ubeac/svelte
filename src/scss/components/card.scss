@@ -90,7 +90,7 @@
 			--stamp-size: #{$value};
 		}
 	}
-	@each $key, $value in theme-colors() {
+	@each $key, $value in $theme-colors {
 		&.u-card-stamp-#{$key} .u-card-stamp-icon {
 			@extend .bg-#{$key};
 		}
@@ -99,7 +99,7 @@
 
 // Card Status
 .u-card-status {
-	@each $key, $value in theme-colors() {
+	@each $key, $value in $theme-colors {
 		&.u-card-status-#{$key} {
 			@extend .bg-#{$key};
 		}

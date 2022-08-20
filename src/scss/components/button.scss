@@ -70,7 +70,7 @@ $sizes-ratio: (
 	@extend .btn-lg;
 }
 
-@each $key, $value in theme-colors() {
+@each $key, $value in $theme-colors {
 	.u-button-color-#{$key} {
 		@extend .btn-#{$key};
 	}

@@ -20,7 +20,7 @@
 	// SEE: https://stackoverflow.com/questions/29677792/set-width-according-to-height
 }
 
-@each $color, $value in theme-colors() {
+@each $color, $value in $theme-colors {
 	.u-badge-#{$color}:not(.u-badge-outline):not(.u-badge-ghost) {
 		@extend .bg-#{$color};
 	}
