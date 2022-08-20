@@ -5,6 +5,7 @@
 
 	import { FormCheckbox, Label } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Items } from '$lib/types'
 	import { classname, condition, createOptions } from '$lib/utils'
 
 	/**
@@ -20,7 +21,7 @@
 	/**
 	 * TODO
 	 */
-	export let items: Array<any> | object | undefined = undefined
+	export let items: Items = undefined
 
 	/**
 	 * TODO

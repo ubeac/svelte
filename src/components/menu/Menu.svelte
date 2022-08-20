@@ -1,26 +1,26 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import type { Placement } from '@popperjs/core'
-
 	import { Popup } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
+	import type { MenuPlacements } from './menu.types'
+
 	/**
-	 * TODO
+	 * Offset between Menu and target element
 	 */
 	export let offset: [number, number] = [0, 2]
 
 	/**
-	 * TODO
+	 * Do not close Menu when clicked inside menu
 	 */
 	export let persistence: boolean = false
 
 	/**
-	 * TODO
+	 * Set Menu position relative to target element
 	 */
-	export let placement: Placement = 'bottom-start'
+	export let placement: MenuPlacements = 'bottom-start'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
