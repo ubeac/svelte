@@ -1,24 +1,6 @@
 <script>
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
-	import { Menu, Button } from '$lib/components'
-
-	const PLACEMENTS = [
-		'auto',
-		'auto-start',
-		'auto-end',
-		'right',
-		'right-start',
-		'right-end',
-		'left',
-		'left-start',
-		'left-end',
-		'top',
-		'top-start',
-		'top-end',
-		'bottom',
-		'bottom-start',
-		'bottom-end',
-	]
+	import { Menu, Button, MENU_PLACEMENTS } from '$lib/components'
 </script>
 
 <Meta title="Menu" component={Menu} />
@@ -52,7 +34,7 @@
 
 <Story name="Placement" let:args>
 	<div class="example-menu">
-		{#each PLACEMENTS as placement}
+		{#each MENU_PLACEMENTS as placement}
 			<Button>{placement}</Button>
 			<Menu {placement} {...args}>
 				<li class="nav-link">Item 1</li>
