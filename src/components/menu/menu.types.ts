@@ -1,6 +1,3 @@
-// import type { Placement } from '@popperjs/core'
-// export type MenuPlacements = Placement
-
 export const MENU_PLACEMENTS = [
 	'auto',
 	'auto-start',
