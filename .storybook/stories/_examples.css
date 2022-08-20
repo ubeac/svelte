@@ -40,6 +40,18 @@
 	margin: 0 0.5rem 0.5rem 0 !important;
 }
 
+.example-menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	padding: 8rem;
+}
+.example-menu > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
+
 .example-tab {
 	height: 200px;
 	width: 80%;
@@ -70,4 +82,3 @@
 .example-spinners > * {
 	margin: 0 0.5rem 0.5rem 0 !important;
 }
-
