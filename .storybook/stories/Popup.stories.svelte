@@ -1,24 +1,6 @@
 <script>
-	import { Button, Popup } from '$lib/components'
+	import { Button, Popup, POPUP_PLACEMENTS } from '$lib/components'
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
-
-	const POPUP_PLACEMENTS = [
-		'auto',
-		'auto-start',
-		'auto-end',
-		'top',
-		'top-start',
-		'top-end',
-		'bottom',
-		'bottom-start',
-		'bottom-end',
-		'left',
-		'left-start',
-		'left-end',
-		'right',
-		'right-start',
-		'right-end',
-	]
 </script>
 
 <Meta title="Popup" component={Popup} />

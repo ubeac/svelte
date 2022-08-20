@@ -2,10 +2,12 @@
 	import { get_current_component, onDestroy, onMount } from 'svelte/internal'
 
 	import { createPopper } from '@popperjs/core'
-	import type { Instance, Placement } from '@popperjs/core'
+	import type { Instance } from '@popperjs/core'
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { condition } from '$lib/utils'
+
+	import type { PopupPlacements } from './popup.types'
 
 	/**
 	 * Disable Popup's functionality
@@ -35,7 +37,7 @@
 	/**
 	 * Set where the Popup should be opened (relative to target element)
 	 */
-	export let placement: Placement = 'auto'
+	export let placement: PopupPlacements = 'auto'
 
 	/**
 	 * Set which actions should be responsible for opening/closing the Popup
