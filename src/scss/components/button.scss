@@ -80,7 +80,7 @@ $sizes-ratio: (
 	@extend .gap-3;
 }
 
-@each $key, $value in theme-colors() {
+@each $key, $value in $theme-colors {
 	.u-button-color-#{$key} {
 		@extend .btn-#{$key};
 	}

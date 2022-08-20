@@ -19,8 +19,8 @@ $sizes: (
 	@extend .icon;
 }
 
-@each $key, $value in theme-colors() {
-	.u-icon-color-#{$key} {
+@each $key, $value in $theme-colors {
+	.u-icon-#{$key} {
 		@extend .text-#{$key};
 	}
 }

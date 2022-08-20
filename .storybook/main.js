@@ -11,6 +11,7 @@ module.exports = {
 		'@storybook/addon-essentials',
 		'@storybook/addon-links',
 		'@storybook/addon-svelte-csf',
+		'@storybook/addon-postcss',
 	],
 	framework: '@storybook/svelte',
 	// svelteOptions: svelteConfig,

@@ -9,3 +9,4 @@ package
 !.env.example
 src/styles.css
 package
+yarn-error.log

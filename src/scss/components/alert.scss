@@ -5,8 +5,7 @@
 .u-alert-body {
 	display: flex;
 }
-
-@each $key, $value in theme-colors() {
+@each $key, $value in $theme-colors {
 	.u-alert-type-#{$key} {
 		--#{$variable-prefix}alert-color: #{$value};
 	}
