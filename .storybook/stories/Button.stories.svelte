@@ -1,6 +1,5 @@
 <script>
-	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
-	import { action } from '@storybook/addon-actions'
+	import { Meta, Story } from '@storybook/addon-svelte-csf'
 	import { COLORS } from '$lib/types'
 	import { BUTTON_SHAPES, BUTTON_SIZES, Avatar, Button, ButtonGroup, Icon, Grid, GridItem } from '$lib/components'
 	const title = 'Button'
