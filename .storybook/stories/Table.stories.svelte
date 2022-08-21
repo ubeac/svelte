@@ -34,3 +34,4 @@
 <Story name="hover" args={{ hover: true }} />
 <Story name="striped" args={{ striped: true }} />
 <Story name="wrap" args={{ wrap: true }} />
+<Story name="size-sm" args={{ size: "sm" }} />

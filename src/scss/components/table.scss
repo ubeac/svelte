@@ -23,3 +23,11 @@
 .u-table-wrap > :not(caption) > * > * {
 	white-space: unset;
 }
+
+.u-table-sm {
+	@extend .table-sm !optional;
+}
+
+.u-table-md {
+	@extend .table-md !optional;
+}
