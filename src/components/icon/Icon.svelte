@@ -12,7 +12,7 @@
 	/**
 	 * Set color of the Icon
 	 */
-	export let color: Colors = undefined
+	export let color: Colors = 'default'
 
 	/**
 	 * Name of the Icon, see https://icon-sets.iconify.design/ for list of icon names and packs

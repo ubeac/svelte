@@ -30,7 +30,7 @@
 	}} />
 
 <Story name="Default" let:args>
-	<Icon {...args} name="ghost" />
+	<Icon {...args} name="ghost"/>
 	<Icon {...args} name="star" />
 	<Icon {...args} name="bike" />
 	<Icon {...args} name="heart" />
