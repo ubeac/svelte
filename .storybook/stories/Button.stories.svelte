@@ -24,7 +24,9 @@
 `
 
 	const parameters = {
-		actions: { argTypesRegex: '^on:*' },
+		actions: {
+			handles: ['click'],
+		},
 	}
 	const argTypes = {
 		color: {
@@ -64,7 +66,7 @@
 
 <Story name="Default" let:args>
 	<div class="example-buttons">
-		<Button {...args} on:click={action('button-click')}>Button</Button>
+		<Button {...args}>Button</Button>
 	</div>
 </Story>
 
