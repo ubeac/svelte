@@ -1,5 +1,3 @@
-// const svelteConfig = import('../svelte.config.js')
-
 const preprocess = require('svelte-preprocess')
 const path = require('path')
 
@@ -11,10 +9,10 @@ module.exports = {
 		'@storybook/addon-essentials',
 		'@storybook/addon-links',
 		'@storybook/addon-svelte-csf',
+		'@storybook/addon-storysource',
 		'@storybook/addon-postcss',
 	],
 	framework: '@storybook/svelte',
-	// svelteOptions: svelteConfig,
 	svelteOptions: {
 		preprocess: preprocess({
 			scss: {

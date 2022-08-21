@@ -28,7 +28,7 @@
 	</div>
 </Story>
 
-<Story name="Compact (Vertical)" let:args>
+<Story name="Compact Vertical" let:args>
 	<div class="example-buttons">
 		<ButtonGroup compact {...args}>
 			<Button>Button</Button>
@@ -38,7 +38,7 @@
 	</div>
 </Story>
 
-<Story name="Compact (Horizontal" let:args>
+<Story name="Compact Horizontal" let:args>
 	<div class="example-buttons">
 		<ButtonGroup compact vertical {...args}>
 			<Button>Button</Button>

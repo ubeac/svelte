@@ -18,7 +18,7 @@
 		column-gap: 8px;
 		position: relative;
 
-		& > *:not(.input):first-child {
+		& > *:not(.input):first-of-type {
 			margin-left: 10px;
 		}
 
@@ -42,7 +42,7 @@
 			box-shadow: 0 0 0 0.25rem rgb(32 107 196 / 25%);
 		}
 
-		&:not(:first-child) > *:not(.u-form-group-focus) {
+		&:not(:first-of-type) > *:not(.u-form-group-focus) {
 			padding-right: 0;
 			padding-left: 0;
 		}

@@ -38,7 +38,7 @@
 <Story name="value" args={{ value: { latitude: 30, longitude: 30 } }} />
 
 <Story
-	name="value(multiple)"
+	name="value multiple"
 	args={{
 		multiple: true,
 		value: [
