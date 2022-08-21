@@ -8,6 +8,7 @@
 - Breadcrumbs
 - Button
 - Button Group
+- CardHeader
 - Confirm
 - Divider
 - FormAutocomplete
@@ -16,6 +17,7 @@
 - FormInput
 - FormRadio
 - FormSelect
+- FormTextarea
 - Input
 - Input Autocomplete
 - Input DatePicker
@@ -34,6 +36,8 @@
 - BreadcrumbItem
 - CardBody
 - CardMedia
+- CardStamp
+- CardStatus
 - CardSubtitle
 - CardTitle
 - Collapse
@@ -56,9 +60,7 @@
 - Card
 - CardActions
 - CardFooter
-- CardHeader
-- CardStamp
-- CardStatus
+  CardRibbon
 - Carousel
 - CarouselButton
 - CarouselIndicator
@@ -72,7 +74,6 @@
 - FormFieldset
 - FormGroup
 - FormSwitch
-- FormTextarea
 - GoogleMapAutocomplete
 - Input Switch
 - Menu
