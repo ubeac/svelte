@@ -1,5 +1,5 @@
 @each $key, $value in $theme-colors {
-	.u-spinner-#{$key} {
+	.u-spinner-color-#{$key} {
 		@extend .text-#{$key};
 	}
 }
