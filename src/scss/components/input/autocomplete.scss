@@ -3,8 +3,13 @@
 .u-autocomplete-items {
 	@extend .dropdown-menu;
 	@extend .w-100;
+	top: 36px;
 }
 
 .u-autocomplete-item {
 	@extend .dropdown-item;
+}
+
+.no-results{
+	padding-left: 5px;
 }
