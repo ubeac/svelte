@@ -86,12 +86,11 @@
 
 	onMount(bind)
 
-	onDestroy(unbind)
+	// onDestroy(unbind)
 </script>
 
 {#if condition($$props)}
 	{#if preview}
-		<!-- TODO -->
 		<div use:forwardEvents {...$$restProps} class={classes}>
 			{value}
 		</div>
