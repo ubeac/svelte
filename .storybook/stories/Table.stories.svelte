@@ -3,7 +3,19 @@
 	import { Table, TableBody, TableCell, TableHead, TableRow } from '$lib/components'
 </script>
 
-<Meta title="Table" component={Table} />
+<Meta
+	title="Table"
+	argTypes={{
+		size: {
+			defaultValue: 'auto',
+			control: {
+				type: 'select',
+				default: 'md',
+				options: ['sm', 'md'],
+			},
+		},
+	}}
+	component={Table} />
 
 <Template let:args>
 	<Table {...args}>
@@ -34,4 +46,4 @@
 <Story name="hover" args={{ hover: true }} />
 <Story name="striped" args={{ striped: true }} />
 <Story name="wrap" args={{ wrap: true }} />
-<Story name="size-sm" args={{ size: "sm" }} />
+<Story name="size-sm" args={{ size: 'sm' }} />
