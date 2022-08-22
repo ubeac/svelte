@@ -51,6 +51,10 @@
 	 * Shape of button
 	 */
 	export let shape: ButtonShapes = 'default'
+	/**
+	 * type of button
+	 */
+	export let link: boolean = false
 
 	/**
 	 * Set the size of button
@@ -76,6 +80,7 @@
 			outline,
 			shape,
 			size,
+			link
 		},
 		$$props.class,
 		true

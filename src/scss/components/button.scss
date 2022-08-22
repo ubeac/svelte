@@ -49,16 +49,16 @@ $sizes-ratio: (
 	}
 }
 
-.u-button-shape-link {
+.u-button-link {
 	@extend .u-button-ghost;
 	padding: 0;
 	border: none;
 	background: none;
-	color: inherit;
+	color:  var(--tblr-btn-color);
 	text-decoration: none !important;
 }
 
-.u-button-shape-link:hover {
+.u-button-link:hover {
 	color: var(--tblr-btn-color) !important;
 	background-color: transparent !important;
 	text-decoration: underline !important;
@@ -96,7 +96,7 @@ $sizes-ratio: (
 		@extend .btn-ghost-#{$key};
 		--tblr-btn-color: #{$value};
 		--tblr-btn-hover-color: #{$value};
-		--tblr-btn-bg: transparent;
+		--tblr-btn-bg: #{color.adjust($value, $alpha: -0.9)};
 		--tblr-btn-hover-bg: #{color.adjust($value, $alpha: -0.9)};
 		--tblr-btn-hover-border-color: transparent;
 	}
