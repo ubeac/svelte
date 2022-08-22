@@ -4,6 +4,7 @@
 	import { Radio } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
+import type { Colors } from '$lib/types';
 
 	/**
 	 * Description for Radio button
@@ -24,6 +25,10 @@
 	 * Label of Radio button
 	 */
 	export let label: string | undefined = undefined
+	/**
+	 * Color of Radio button
+	 */
+	export let color: Colors = "default"
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -33,7 +38,7 @@
 {#if condition($$props)}
 	<!-- svelte-ignore a11y-label-has-associated-control -->
 	<label class={classes}>
-		<Radio bind:group {forwardEvents} {...$$restProps} />
+		<Radio bind:group {forwardEvents} {...$$restProps} {color} />
 		{#if label}
 			<span class={classname('form-radio-label')}>{label}</span>
 		{/if}

@@ -3,8 +3,8 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
+import type { Colors } from '$lib/types';
 
-	import { Label } from '../label'
 
 	/**
 	 * Forward all native Events
@@ -18,8 +18,10 @@
 	export let label: string | undefined = undefined
 	export let name: string | undefined = undefined
 	export let checked: boolean | undefined = undefined
+	export let color: Colors = "default"
+
 	$: radioClasses = classname('radio', { checked }, $$props.class)
-	$: inputClasses = classname('radio-input', undefined, $$props.class)
+	$: inputClasses = classname('radio-input', {color}, $$props.class)
 	$: labelClasses = classname('radio-label', undefined, $$props.class)
 </script>
 
