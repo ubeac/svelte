@@ -230,7 +230,7 @@
 <Story name="Link" let:args>
 	<div class="example-buttons">
 		{#each COLORS as color}
-			<Button {color} href="https://www.google.com" shape="link" target="_blank" {...args}>Google</Button>
+			<Button {color} href="https://www.google.com" link target="_blank" {...args}>Google</Button>
 		{/each}
 	</div>
 </Story>
