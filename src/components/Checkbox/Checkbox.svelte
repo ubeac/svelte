@@ -4,7 +4,6 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
-	import { Label } from '../label'
 	import type { Colors } from '$lib/types';
 
 	let forwardEvents = forwardEventsBuilder(get_current_component())
