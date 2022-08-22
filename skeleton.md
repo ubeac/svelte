@@ -8,6 +8,7 @@
 - Breadcrumbs
 - Button
 - Button Group
+- CardFooter
 - CardHeader
 - Confirm
 - Divider
@@ -22,7 +23,9 @@
 - Input Autocomplete
 - Input DatePicker
 - Input Select
+- Input Switch
 - Input Textarea
+- Menu
 - Tooltip
 
 # No Need
@@ -36,6 +39,7 @@
 - BreadcrumbItem
 - CardBody
 - CardMedia
+  CardRibbon
 - CardStamp
 - CardStatus
 - CardSubtitle
@@ -53,14 +57,16 @@
 - Label
 - Spinner
 
-# Raw
+# Complex
 
 - AccordionActions
 - Alert
+- FormSwitch
+
+# Raw
+
 - Card
 - CardActions
-- CardFooter
-  CardRibbon
 - Carousel
 - CarouselButton
 - CarouselIndicator
@@ -73,10 +79,7 @@
 - FormCheckboxGroup
 - FormFieldset
 - FormGroup
-- FormSwitch
 - GoogleMapAutocomplete
-- Input Switch
-- Menu
 - Popup
 - Tab
 - TabHeader
@@ -89,3 +92,7 @@
 - TableFoot
 - TableHead
 - TableRow
+
+# New
+
+- FormSwitch
