@@ -5,6 +5,7 @@
 	import { classname, condition } from '$lib/utils'
 
 	import { Label } from '../label'
+	import type { Colors } from '$lib/types';
 
 	let forwardEvents = forwardEventsBuilder(get_current_component())
 	const dispatch = createEventDispatcher()
@@ -13,9 +14,10 @@
 	export let model: any[] | boolean | undefined = undefined
 	export let value: string | number | undefined = undefined
 	export let inline: boolean = false
+	export let color: Colors = "primary"
 
 	$: checkboxClasses = classname('checkbox', { checked, inline }, $$props.class)
-	$: inputClasses = classname('checkbox-input', undefined, $$props.class)
+	$: inputClasses = classname('checkbox-input', {color} , $$props.class)
 	$: labelClasses = classname('checkbox-label', undefined, $$props.class)
 	$: checked = Array.isArray(model) ? model.some((x) => x == value) : model
 	function toggle(e: any) {
