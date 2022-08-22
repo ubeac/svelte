@@ -17,7 +17,7 @@
 		</AvatarGroup>
 	</div>
 </Story>
-<Story name="Avatar group (stacked)" let:args>
+<Story name="Avatar group stacked" let:args>
 	<div class="example-avatars">
 		<AvatarGroup stacked {...args}>
 			<Avatar shape="circle">EB</Avatar>

@@ -137,7 +137,7 @@
 	</div>
 </Story>
 
-<Story name="Avatar group (stacked)">
+<Story name="Avatar group stacked">
 	<div class="example-avatars">
 		<AvatarGroup stacked>
 			<Avatar shape="circle">EB</Avatar>

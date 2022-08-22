@@ -93,7 +93,7 @@
 	</div>
 </Story>
 
-<Story name="Buttons With Icons (start)" let:args>
+<Story name="Buttons With Icons start" let:args>
 	<div class="example-buttons">
 		<Button color="default" {...args}>
 			<Icon name="send" />
@@ -122,7 +122,7 @@
 	</div>
 </Story>
 
-<Story name="Buttons With Icons (end)" let:args>
+<Story name="Buttons With Icons end" let:args>
 	<div class="example-buttons">
 		<Button color="default" {...args}>
 			Send
@@ -152,9 +152,7 @@
 </Story>
 
 <Story name="Click Event" let:args>
-	<Button on:click={() => console.log('Button clicked')} {...args}>
-		Click Me and Check Console output
-	</Button>
+	<Button on:click={() => console.log('Button clicked')} {...args}>Click Me and Check Console output</Button>
 </Story>
 
 <Story name="Social Buttons" let:args>
