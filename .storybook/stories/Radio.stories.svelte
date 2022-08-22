@@ -1,6 +1,6 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
-	import { RadioGroup } from '$lib/components'
+	import { Radio, RadioGroup } from '$lib/components'
 	let items = [
 		{ label: 'apple', value: 'apple' },
 		{ label: 'banana', value: 'banana' },
