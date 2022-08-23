@@ -2,10 +2,16 @@
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 	import { CheckboxGroup } from '$lib/components'
 	let items = [
-		{ label: 'apple', value: 'apple' },
-		{ label: 'banana', value: 'banana' },
-		{ label: 'orange', value: 'orange' },
-		{ label: 'plum', value: 'plum' },
+		{ label: 'apple', value: 'apple', color:"default" },
+		{ label: 'banana', value: 'banana', color:"default" },
+		{ label: 'orange', value: 'orange', color:"default" },
+		{ label: 'plum', value: 'plum', color:"default" },
+	]
+	let itemsDanger = [
+		{ label: 'apple', value: 'apple', color:"danger" },
+		{ label: 'banana', value: 'banana', color:"danger" },
+		{ label: 'orange', value: 'orange', color:"danger" },
+		{ label: 'plum', value: 'plum', color:"danger" },
 	]
 	let items2 = [
 		{ label: 'apple', value: 'apple' },
@@ -21,11 +27,14 @@
 	argTypes={{
 		group: {
 			control: 'text',
-		},
+		}
 	}} />
 
 <Story name="default">
 	<CheckboxGroup {items} />
+</Story>
+<Story name="color:danger">
+	<CheckboxGroup items={itemsDanger} />
 </Story>
 <Story name="inline">
 	<CheckboxGroup row {items} />

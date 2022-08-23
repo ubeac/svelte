@@ -1,6 +1,7 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
 	import { FormRadio } from '$lib/components'
+	import { COLORS } from '$lib/types';
 
 	let group = ''
 </script>
@@ -17,6 +18,14 @@
 		},
 		group: {
 			control: 'text',
+		},
+		color: {
+			defaultValue: 'auto',
+			control: {
+				type: 'select',
+				default: 'default',
+				options: COLORS,
+			},
 		},
 	}} />
 

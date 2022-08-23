@@ -7,6 +7,7 @@
 		label: string
 		value: string
 		disabled?: boolean
+		color: 'default'
 	}
 
 	export let items: Item[] = []
@@ -31,7 +32,9 @@
 					on:click={onClick}
 					value={item.value}
 					name={slugName}
-					label={item.label} />
+					label={item.label} 
+					color={item.color} 
+					/>
 			{/each}
 		</slot>
 	</div>

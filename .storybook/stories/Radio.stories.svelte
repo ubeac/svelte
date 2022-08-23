@@ -1,6 +1,6 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
-	import { RadioGroup } from '$lib/components'
+	import { Radio, RadioGroup } from '$lib/components'
 	let items = [
 		{ label: 'apple', value: 'apple' },
 		{ label: 'banana', value: 'banana' },
@@ -40,6 +40,12 @@
 	<Radio name="radio" value="radio1" {...args} />
 	<Radio name="radio" value="radio2" {...args} />
 	<Radio name="radio" value="radio3" {...args} />
+</Story>
+
+<Story name="color:danger" args={{ group: 'radio2' }} let:args>
+	<Radio name="radio" value="radio1" {...args} color="danger" />
+	<Radio name="radio" value="radio2" {...args} color="danger" />
+	<Radio name="radio" value="radio3" {...args} color="danger" />
 </Story>
 
 <Story name="Value">

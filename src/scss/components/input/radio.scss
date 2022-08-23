@@ -12,6 +12,12 @@
 		@extend .form-check-input;
 	}
 
+	@each $key, $value in $theme-colors {
+		&-input-#{$key}:checked {
+			background-color: #{$value} !important;
+		}
+	}
+
 	&-label {
 		@extend .form-check-label;
 	}
