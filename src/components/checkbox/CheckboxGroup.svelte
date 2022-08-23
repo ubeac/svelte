@@ -8,6 +8,7 @@
 	export let name: string | undefined = undefined
 	export let column: boolean = false
 	export let row: boolean = false
+
 	$: checkboxGroupClasses = classname('checkbox-group', { column, row }, $$props.class)
 	$: slugName = name || 'checkbox-group' + Math.random()
 	function onClick(e) {
@@ -33,7 +34,9 @@
 					on:click={onClick}
 					value={item.value}
 					name={slugName}
-					label={item.label} />
+					label={item.label}
+					color={item.color}
+					/>
 			{/each}
 		</slot>
 	</div>
