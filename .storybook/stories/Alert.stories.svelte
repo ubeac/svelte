@@ -51,16 +51,16 @@
 
 <Story name="Link" let:args>
 	<Alert type="success" {...args}>
-		This is a success alert — <Button color="success" shape="link">check it out</Button>!
+		This is a success alert — <Button color="success" link>check it out</Button>!
 	</Alert>
 	<Alert type="info" {...args}>
-		This is a info alert — <Button color="info" shape="link">check it out</Button>!
+		This is a info alert — <Button color="info" link>check it out</Button>!
 	</Alert>
 	<Alert type="warning" {...args}>
-		This is a warning alert — <Button color="warning" shape="link">check it out</Button>!
+		This is a warning alert — <Button color="warning" link>check it out</Button>!
 	</Alert>
 	<Alert type="danger" {...args}>
-		This is a danger alert — <Button color="danger" shape="link">check it out</Button>!
+		This is a danger alert — <Button color="danger" link>check it out</Button>!
 	</Alert>
 </Story>
 
@@ -114,7 +114,7 @@
 	<Alert dismissible type="purple" {...args}>
 		<Avatar slot="icon" image="https://picsum.photos/id/1005/90/90" />
 		<AlertTitle>Title</AlertTitle>
-		<p>This is Alert's content — <Button color="purple" shape="link">check it out</Button></p>
+		<p>This is Alert's content — <Button color="purple" link>check it out</Button></p>
 		<div slot="actions">
 			<Button color="purple">Ok</Button>
 			<Button>Cancel</Button>
