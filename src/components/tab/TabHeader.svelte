@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
-	import { element, get_current_component } from 'svelte/internal'
+	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
