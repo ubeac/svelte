@@ -9,7 +9,7 @@
 	/**
 	 * Index of active Tab pane
 	 */
-	export let activeIndex = 0
+	export let activeIndex: number = 0
 
 	/**
 	 * list of Tab panes
