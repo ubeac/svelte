@@ -7,7 +7,8 @@
 }
 @each $key, $value in $theme-colors {
 	.u-alert-type-#{$key} {
-		--#{$variable-prefix}alert-color: #{$value};
+		--#{$variable-prefix}-alert-color: #{$value};
+		border-left-color: #{$value};
 	}
 }
 
