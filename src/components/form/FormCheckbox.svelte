@@ -4,6 +4,7 @@
 	import { Checkbox } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
+	import type { Colors } from '$lib/types';
 
 	/**
 	 * Description of checkbox
@@ -29,6 +30,10 @@
 	 * Show checked state of checkbox
 	 */
 	export let value: boolean | undefined = undefined
+	/**
+	 * set color of checkbox
+	 */
+	export let color: Colors = "default"
 
 	$: classes = classname('form-checkbox', { inline }, $$props.class)
 </script>
@@ -36,7 +41,7 @@
 {#if condition($$props)}
 	<!-- svelte-ignore a11y-label-has-associated-control -->
 	<label class={classes}>
-		<Checkbox bind:value {forwardEvents} {...$$restProps} on:changed />
+		<Checkbox bind:value {forwardEvents} {...$$restProps} on:changed {color} />
 		{#if label}
 			<span class={classname('form-checkbox-label')}>{label}</span>
 		{/if}

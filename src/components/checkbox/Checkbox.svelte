@@ -11,7 +11,7 @@
 
 	export let label: string | undefined = undefined
 	export let model: any[] | boolean | undefined = undefined
-	export let value: string | number | undefined = undefined
+	export let value: string | number | boolean | undefined = undefined
 	export let inline: boolean = false
 	export let color: Colors = "primary"
 
