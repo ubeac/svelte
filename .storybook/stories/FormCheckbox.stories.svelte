@@ -1,6 +1,7 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
 	import { FormCheckbox } from '$lib/components'
+	import { COLORS } from '$lib/types';
 </script>
 
 <Meta
@@ -15,6 +16,14 @@
 		},
 		value: {
 			control: 'boolean',
+		},
+		color: {
+			defaultValue: 'auto',
+			control: {
+				type: 'select',
+				default: 'primary',
+				options: COLORS,
+			},
 		},
 	}} />
 <Template let:args>
