@@ -105,8 +105,8 @@
 </Story>
 
 <Story name="Variant" let:args>
-	{#each ALERT_VARIANTS as variant}
-		<Alert {variant} {...args}>Alert - {variant}</Alert>
+	{#each ALERT_VARIANTS as variant , i}
+		<Alert {variant} {...args} type={i+1 === ALERT_VARIANTS.length && "primary"} >Alert - {variant}</Alert>
 	{/each}
 </Story>
 
@@ -118,6 +118,18 @@
 		<div slot="actions">
 			<Button color="purple">Ok</Button>
 			<Button>Cancel</Button>
+		</div>
+	</Alert>
+</Story>
+
+<Story name="Complex" let:args>
+	<Alert dismissible type="success" variant="ghost" {...args}>
+		<Avatar slot="icon" image="https://picsum.photos/id/1005/90/90" />
+		<AlertTitle>Title</AlertTitle>
+		<p>This is Alert's content — <Button color="success" link>check it out</Button></p>
+		<div slot="actions">
+			<Button color="success">Ok</Button>
+			<Button ghost color="danger" >Cancel</Button>
 		</div>
 	</Alert>
 </Story>

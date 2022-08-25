@@ -71,9 +71,9 @@
 		})
 	})
 
-	onDestroy(() => {
-		instance && instance.dispose()
-	})
+	// onDestroy(() => {
+	// 	instance && instance.dispose()
+	// })
 </script>
 
 {#if condition($$props)}
