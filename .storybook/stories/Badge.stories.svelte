@@ -1,8 +1,8 @@
 <script>
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
 
+	import { Badge, BADGE_SHAPES, Button } from '$lib/components'
 	import { COLORS } from '$lib/types'
-	import { Badge, Button, BADGE_SHAPES } from '$lib/components'
 </script>
 
 <Meta
@@ -69,9 +69,9 @@
 
 <Story name="Shapes" let:args>
 	<div class="example-badges">
-		<Badge color="green">default</Badge>
-		<Badge shape="round" color="azure">Round</Badge>
-		<Badge shape="tile" color="blue">Tile</Badge>
+		{#each BADGE_SHAPES as shape}
+			<Badge {shape}>{shape}</Badge>
+		{/each}
 	</div>
 </Story>
 
