@@ -5,17 +5,17 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Stick buttons to each other
 	 */
 	export let compact: boolean = false
 
 	/**
-	 * Align Buttons vertically
+	 * Align buttons vertically, default is horizontal
 	 */
 	export let vertical: boolean = false
 
 	/**
-	 * TODO
+	 * Set buttons to be wrapped if needed
 	 */
 	export let wrap: boolean = false
 

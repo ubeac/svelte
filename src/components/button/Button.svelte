@@ -8,6 +8,11 @@
 	import type { ButtonShapes, ButtonSizes } from './button.types'
 
 	/**
+	 * Make the button state to active
+	 */
+	export let active: boolean = false
+
+	/**
 	 * Make the button fit to its parent width
 	 */
 	export let block: boolean = false
@@ -18,14 +23,9 @@
 	export let color: Colors = 'default'
 
 	/**
-	 * Set disabled state of button
+	 * Make the button state to disabled
 	 */
 	export let disabled: boolean = false
-
-	/**
-	 * TODO: Set elevation level of button (not implemented yet!). Eleveation is not supported in Tabler.
-	 */
-	export let elevation: number = 0
 
 	/**
 	 * Only show text of button with trasnparent background and border
@@ -51,10 +51,6 @@
 	 * Shape of button
 	 */
 	export let shape: ButtonShapes = 'default'
-	/**
-	 * type of button
-	 */
-	export let link: boolean = false
 
 	/**
 	 * Set the size of button
@@ -70,17 +66,16 @@
 	$: classes = classname(
 		'button',
 		{
+			active,
 			block,
 			color,
 			disabled,
-			elevation,
 			ghost,
 			icon,
 			loading,
 			outline,
 			shape,
 			size,
-			link
 		},
 		$$props.class,
 		true
