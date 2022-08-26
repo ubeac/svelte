@@ -1,35 +1,34 @@
-.u-badge {
+$prefix-badge: $prefix + "badge";
+
+.#{$prefix-badge} {
 	@extend .badge;
-}
 
-.u-badge-outline {
-	@extend .badge-outline;
-}
-
-.u-badge-shape-round {
-	@extend .badge-pill;
-}
-
-.u-badge-shape-tile {
-	border-radius: 0;
-}
-
-// TODO: set width of badge based on it's height
-.u-badge-circle {
-	border-radius: 999px;
-	// SEE: https://stackoverflow.com/questions/29677792/set-width-according-to-height
-}
-
-@each $color, $value in $theme-colors {
-	.u-badge-#{$color}:not(.u-badge-outline):not(.u-badge-ghost) {
-		@extend .bg-#{$color};
+	&.#{$prefix-badge}-outline {
+		@extend .badge-outline;
 	}
 
-	.u-badge-#{$color}.u-badge-outline:not(.u-badge-ghost) {
-		@extend .text-#{$color};
+	&.#{$prefix-badge}-shape {
+		&-round {
+			@extend .badge-pill;
+		}
+
+		&-tile {
+			border-radius: 0;
+		}
 	}
 
-	.u-badge-#{$color}.u-badge-ghost:not(.u-badge-outline) {
-		@extend .bg-#{$color}-lt;
+	@each $color,
+	$value in $theme-colors {
+		&-#{$color}:not(.#{$prefix-badge}-outline):not(.#{$prefix-badge}-ghost) {
+			@extend .bg-#{$color};
+		}
+
+		&-#{$color}.#{$prefix-badge}-outline:not(.#{$prefix-badge}-ghost) {
+			@extend .text-#{$color};
+		}
+
+		&-#{$color}.#{$prefix-badge}-ghost:not(.#{$prefix-badge}-outline) {
+			@extend .bg-#{$color}-lt;
+		}
 	}
 }
