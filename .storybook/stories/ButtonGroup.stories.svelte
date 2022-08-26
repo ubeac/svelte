@@ -1,9 +1,7 @@
 <script>
-	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
+	import { Meta, Story } from '@storybook/addon-svelte-csf'
 
 	import { Button, ButtonGroup, Icon } from '$lib/components'
-
-	const SIZES = ['sm', 'md', 'lg']
 </script>
 
 <Meta title="ButtonGroup" component={ButtonGroup} argTypes={{}} />
@@ -11,6 +9,16 @@
 <Story name="Default" let:args>
 	<div class="example-buttons">
 		<ButtonGroup {...args}>
+			<Button>Button</Button>
+			<Button>Button</Button>
+			<Button>Button</Button>
+		</ButtonGroup>
+	</div>
+</Story>
+
+<Story name="Compact" let:args>
+	<div class="example-buttons">
+		<ButtonGroup compact {...args}>
 			<Button>Button</Button>
 			<Button>Button</Button>
 			<Button>Button</Button>
@@ -30,17 +38,7 @@
 
 <Story name="Compact Vertical" let:args>
 	<div class="example-buttons">
-		<ButtonGroup compact {...args}>
-			<Button>Button</Button>
-			<Button>Button</Button>
-			<Button>Button</Button>
-		</ButtonGroup>
-	</div>
-</Story>
-
-<Story name="Compact Horizontal" let:args>
-	<div class="example-buttons">
-		<ButtonGroup compact vertical {...args}>
+		<ButtonGroup vertical compact {...args}>
 			<Button>Button</Button>
 			<Button>Button</Button>
 			<Button>Button</Button>

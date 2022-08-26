@@ -61,6 +61,14 @@
 	</div>
 </Story>
 
+<Story name="Active" let:args>
+	<div class="example-buttons">
+		{#each COLORS as color}
+			<Button {color} active {...args}>{color}</Button>
+		{/each}
+	</div>
+</Story>
+
 <Story name="Outline" let:args>
 	<div class="example-buttons">
 		{#each COLORS as color}
@@ -93,12 +101,40 @@
 	</div>
 </Story>
 
-<Story name="Buttons With Icons start" let:args>
+<Story name="Icon Buttons" let:args>
 	<div class="example-buttons">
 		<Button color="default" {...args}>
 			<Icon name="send" />
-			Send
 		</Button>
+		<Button color="warning" {...args}>
+			<Icon name="upload" />
+		</Button>
+		<Button color="success" {...args}>
+			<Icon name="plus" />
+		</Button>
+		<Button color="primary" {...args}>
+			<Icon name="heart" />
+		</Button>
+		<Button color="red" {...args}>
+			<Icon name="link" />
+		</Button>
+		<Button color="info" {...args}>
+			<Icon name="edit" />
+		</Button>
+		<Button color="purple" {...args}>
+			<Icon name="activity" />
+		</Button>
+		<Button color="dark" {...args}>
+			<Icon name="brand-github" />
+		</Button>
+		<Button color="azure" {...args}>
+			<Icon name="bell" />
+		</Button>
+	</div>
+</Story>
+
+<Story name="Icons" let:args>
+	<div class="example-buttons">
 		<Button color="warning" {...args}>
 			<Icon name="upload" />
 			Upload
@@ -110,24 +146,11 @@
 		<Button color="primary" {...args}>
 			<Icon name="heart" />
 			Like
-		</Button>
-		<Button color="red" {...args}>
-			<Icon name="link" />
-			Link
 		</Button>
 		<Button color="info" {...args}>
 			<Icon name="edit" />
 			Edit
 		</Button>
-	</div>
-</Story>
-
-<Story name="Buttons With Icons end" let:args>
-	<div class="example-buttons">
-		<Button color="default" {...args}>
-			Send
-			<Icon name="send" />
-		</Button>
 		<Button color="warning" {...args}>
 			Upload
 			<Icon name="upload" />
@@ -139,10 +162,6 @@
 		<Button color="primary" {...args}>
 			Like
 			<Icon name="heart" />
-		</Button>
-		<Button color="red" {...args}>
-			Link
-			<Icon name="link" />
 		</Button>
 		<Button color="info" {...args}>
 			Edit
@@ -227,38 +246,6 @@
 	<Button block {...args}>Button</Button>
 </Story>
 
-<Story name="Link" let:args>
-	<div class="example-buttons">
-		{#each COLORS as color}
-			<Button {color} href="https://www.google.com" link target="_blank" {...args}>Google</Button>
-		{/each}
-	</div>
-</Story>
-
-<Story name="TODO2" let:args>
-	<div class="example-buttons">
-		<Button {...args}>One</Button>
-		<Button {...args}>Two</Button>
-		<Button {...args}>Three</Button>
-		<Button {...args}>Four</Button>
-		<Button {...args}>Five</Button>
-		<Button {...args}>Six</Button>
-		<Button {...args}>Seven</Button>
-		<Button {...args}>Eight</Button>
-		<Button {...args}>Nine</Button>
-		<Button {...args}>Ten</Button>
-		<Button {...args}>Eleven</Button>
-		<Button {...args}>Twelve</Button>
-		<Button {...args}>Thirteen</Button>
-		<Button {...args}>Fourteen</Button>
-		<Button {...args}>Fifteen</Button>
-		<Button {...args}>Sixteen</Button>
-		<Button {...args}>Seventeen</Button>
-		<Button {...args}>Eighteen</Button>
-		<Button {...args}>Nineteen</Button>
-	</div>
-</Story>
-
 <Story name="Button With Avatar" let:args>
 	<div class="example-buttons">
 		<Button {...args}>
@@ -305,38 +292,6 @@
 			</ButtonGroup>
 		</GridItem>
 	</Grid>
-</Story>
-
-<Story name="Icon Buttons" let:args>
-	<div class="example-buttons">
-		<Button color="default" {...args}>
-			<Icon name="send" />
-		</Button>
-		<Button color="warning" {...args}>
-			<Icon name="upload" />
-		</Button>
-		<Button color="success" {...args}>
-			<Icon name="plus" />
-		</Button>
-		<Button color="primary" {...args}>
-			<Icon name="heart" />
-		</Button>
-		<Button color="red" {...args}>
-			<Icon name="link" />
-		</Button>
-		<Button color="info" {...args}>
-			<Icon name="edit" />
-		</Button>
-		<Button color="purple" {...args}>
-			<Icon name="activity" />
-		</Button>
-		<Button color="dark" {...args}>
-			<Icon name="brand-github" />
-		</Button>
-		<Button color="azure" {...args}>
-			<Icon name="bell" />
-		</Button>
-	</div>
 </Story>
 
 <Story name="Type" let:args>

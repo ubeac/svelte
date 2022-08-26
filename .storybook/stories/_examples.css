@@ -17,6 +17,14 @@
 	align-items: center;
 }
 
+.example-icons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+}
+
 .example-avatars {
 	display: flex;
 	flex-wrap: wrap;
@@ -70,4 +78,3 @@
 .example-spinners > * {
 	margin: 0 0.5rem 0.5rem 0 !important;
 }
-
