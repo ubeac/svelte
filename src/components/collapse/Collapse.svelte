@@ -26,7 +26,7 @@
 	/**
 	 * Controls open/close state of Collapse
 	 */
-	export let open = false
+	export let open: boolean = false
 
 	const dispatch = createEventDispatcher()
 

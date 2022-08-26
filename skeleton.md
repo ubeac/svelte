@@ -8,8 +8,24 @@
 - Breadcrumbs
 - Button
 - Button Group
+- CardFooter
+- CardHeader
 - Confirm
 - Divider
+- FormAutocomplete
+- FormCheckbox
+- FormDatePicker
+- FormInput
+- FormRadio
+- FormSelect
+- FormTextarea
+- Input
+- Input Autocomplete
+- Input DatePicker
+- Input Select
+- Input Switch
+- Input Textarea
+- Menu
 - Tooltip
 
 # No Need
@@ -23,27 +39,34 @@
 - BreadcrumbItem
 - CardBody
 - CardMedia
+  CardRibbon
+- CardStamp
+- CardStatus
 - CardSubtitle
 - CardTitle
+- Collapse
+- CollapseToggler
 - DialogBody
 - DialogTitle
 - GoogleMap
 - Grid
 - GridItem
 - Icon
+- Input Checkbox
+- Input Radio
 - Label
 - Spinner
 
-# Raw
+# Complex
 
 - AccordionActions
 - Alert
+- FormSwitch
+
+# Raw
+
 - Card
 - CardActions
-- CardFooter
-- CardHeader
-- CardStamp
-- CardStatus
 - Carousel
 - CarouselButton
 - CarouselIndicator
@@ -53,27 +76,10 @@
 - DialogContent
 - DialogFooter
 - DialogHeader
-- FormAutocomplete
-- FormCheckbox
 - FormCheckboxGroup
-- FormDatePicker
 - FormFieldset
 - FormGroup
-- FormInput
-- FormRadio
-- FormSelect
-- FormSwitch
-- FormTextarea
 - GoogleMapAutocomplete
-- Input Autocomplete
-- Input Checkbox
-- Input DatePicker
-- Input
-- Input Radio
-- Input Select
-- Input Switch
-- Input Textarea
-- Menu
 - Popup
 - Tab
 - TabHeader
@@ -86,3 +92,7 @@
 - TableFoot
 - TableHead
 - TableRow
+
+# New
+
+- FormSwitch

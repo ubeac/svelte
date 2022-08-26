@@ -48,6 +48,18 @@
 	margin: 0 0.5rem 0.5rem 0 !important;
 }
 
+.example-menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	padding: 8rem;
+}
+.example-menu > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
+
 .example-tab {
 	height: 200px;
 	width: 80%;
@@ -76,5 +88,32 @@
 }
 
 .example-spinners > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
+
+.example-popup {
+	background-color: antiquewhite;
+	width: 400px;
+	height: 200px;
+}
+
+.example-popup-fixed {
+	background-color: lightsalmon;
+	top: 0;
+	left: 0;
+}
+
+.example-popup-small {
+	background-color: azure;
+	width: 200px;
+	height: 100px;
+	border: 1px solid blue;
+}
+
+.example-popups {
+	padding: 8rem;
+}
+
+.example-popups > * {
 	margin: 0 0.5rem 0.5rem 0 !important;
 }

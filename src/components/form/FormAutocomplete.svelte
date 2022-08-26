@@ -20,7 +20,7 @@
 	/**
 	 * Sets id for HTML element
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let id: string = nanoid(10)
 
 	/**
 	 * Sets label for Autocomplete
