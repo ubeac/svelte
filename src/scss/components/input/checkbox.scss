@@ -1,5 +1,8 @@
-.u-checkbox {
+$prefix-checkbox: $prefix + 'checkbox';
+
+.#{$prefix-checkbox} {
 	@extend .form-check;
+
 	&-description {
 		@extend .form-check-description;
 	}
@@ -11,13 +14,14 @@
 	&-input {
 		@extend .form-check-input;
 	}
-	
-	@each $key, $value in $theme-colors {
+
+	@each $key,
+	$value in $theme-colors {
 		&-input-#{$key}:checked {
 			background-color: #{$value} !important;
 		}
 	}
-			
+
 	&-label {
 		@extend .form-check-label;
 	}

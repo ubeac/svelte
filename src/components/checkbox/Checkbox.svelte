@@ -2,51 +2,42 @@
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
-
-	import type { Colors } from '$lib/types';
 
 	let forwardEvents = forwardEventsBuilder(get_current_component())
 	const dispatch = createEventDispatcher()
 
-	export let label: string | undefined = undefined
-	export let model: any[] | boolean | undefined = undefined
-	export let value: string | number | boolean | undefined = undefined
-	export let inline: boolean = false
-	export let color: Colors = "primary"
+	/**
+	 * Set color of checkbox when it is checked
+	 */
+	export let color: Colors = 'primary'
 
-	$: checkboxClasses = classname('checkbox', { checked, inline }, $$props.class)
-	$: inputClasses = classname('checkbox-input', {color} , $$props.class)
+	/**
+	 * Set label value of checkbox
+	 */
+	export let label: string | undefined = undefined
+
+	/**
+	 * Set checkbox value
+	 */
+	export let value: boolean = false
+
+	$: checkboxClasses = classname('checkbox', {}, $$props.class)
+	$: inputClasses = classname('checkbox-input', { color }, $$props.class)
 	$: labelClasses = classname('checkbox-label', undefined, $$props.class)
-	$: checked = Array.isArray(model) ? model.some((x) => x == value) : model
-	function toggle(e: any) {
-		checked = e.target.checked
-		// if (checked) {
-		// 	// if (Array.isArray(model)) {
-		// 	// 	if (!model.some((x) => x == value)) {
-		// 	// 		model = [...model, value]
-		// 	// 	}
-		// 	// } else {
-		// 	// }
-		// 	model = true
-		// }
-		// if (!checked) {
-		// 	// if (Array.isArray(model)) {
-		// 	// 	model = model.filter((item) => item != value)
-		// 	// } else {
-		// 	// }
-		// 	model = false
-		// }
-		model = checked
-		dispatch('changed', model)
+
+	function change(event: any) {
+		value = event.target.checked
+		dispatch('change', value)
 	}
 </script>
 
 {#if condition($$props)}
 	<label class={checkboxClasses}>
 		<input
-			on:click={toggle}
-			{checked}
+			on:change={change}
+			bind:checked={value}
 			{value}
 			use:forwardEvents
 			{...$$restProps}
