@@ -3,10 +3,6 @@
 
 	import { COLORS } from '$lib/types'
 	import { Icon, ICON_SIZES } from '$lib/components'
-
-	const MATERIAL_ICONS = ['bell', 'brightness', 'volume', 'account-plus', 'camera-plus', 'data-matrix-remove']
-
-	// TODO: why we should have x in numbered values
 </script>
 
 <Meta
@@ -17,6 +13,11 @@
 			control: {
 				type: 'select',
 				options: COLORS,
+			},
+		},
+		name: {
+			control: {
+				type: 'text',
 			},
 		},
 		size: {
@@ -39,26 +40,38 @@
 	<Icon {...args} name="user" />
 </Story>
 
-<Story name="Icon colors" let:args>
-	<div>
+<Story name="Colors" let:args>
+	<div class="example-icons">
 		{#each COLORS as color}
-			<Icon {...args} name="user" {color} />
+			<Icon {color} name="user" {...args} />
 		{/each}
 	</div>
 </Story>
-<Story name="Icon sizes" let:args>
-	{#each ICON_SIZES as size}
-		<div style="margin: 5px;">
-			<Icon {...args} name="star" {size} />{size}
-		</div>
-	{/each}
+<Story name="Sizes" let:args>
+	<div class="example-icons">
+		{#each ICON_SIZES as size}
+			<div style="margin: 5px;">
+				<Icon {...args} name="star" {size} />{size}
+			</div>
+		{/each}
+	</div>
+</Story>
+
+<Story name="Filled" let:args>
+	<div class="example-icons">
+		{#each ['heart', 'star', 'circle', 'square'] as name}
+			<Icon {...args} {name} color="primary" filled />
+		{/each}
+	</div>
 </Story>
 
 <Story name="Material Icons" args={{ size: '2x' }} let:args>
-	{#each MATERIAL_ICONS as name}
-		<div style="display: flex; align-items: center; gap: 0.5rem;">
-			<Icon {...args} pack="mdi" {name} />
-			{name}
-		</div>
-	{/each}
+	<div class="example-icons">
+		{#each ['bell', 'brightness', 'volume', 'account-plus', 'camera-plus', 'data-matrix-remove'] as name}
+			<div style="display: flex; align-items: center; gap: 0.5rem;">
+				<Icon {...args} color="red" pack="mdi" {name} />
+				{name}
+			</div>
+		{/each}
+	</div>
 </Story>

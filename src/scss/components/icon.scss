@@ -1,4 +1,9 @@
-$sizes: (
+//
+// Icon
+//
+$prefix-icon : $prefix +'icon';
+
+$icon-sizes: (
 	xs: 0.75rem,
 	sm: 0.875rem,
 	md: 1rem,
@@ -15,23 +20,25 @@ $sizes: (
 	9x: 9rem,
 );
 
-.u-icon {
+.#{$prefix-icon} {
 	@extend .icon;
-}
 
-@each $key, $value in $theme-colors {
-	.u-icon-color-#{$key} {
-		@extend .text-#{$key};
+	@each $key,
+	$value in $theme-colors {
+		&-color-#{$key} {
+			@extend .text-#{$key};
+		}
 	}
-}
 
-@each $key, $value in $sizes {
-	.u-icon-size-#{$key} {
-		width: #{$value} !important;
-		height: #{$value} !important;
+	@each $key,
+	$value in $icon-sizes {
+		&-size-#{$key} {
+			width: #{$value} !important;
+			height: #{$value} !important;
+		}
 	}
-}
 
-.u-icon path {
-	stroke-width: 1.5;
+	&-filled {
+		@extend .icon-filled;
+	}
 }

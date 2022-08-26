@@ -15,6 +15,11 @@
 	export let color: Colors = 'default'
 
 	/**
+	 * Set color of the Icon
+	 */
+	export let filled: boolean = false
+
+	/**
 	 * Name of the Icon, see https://icon-sets.iconify.design/ for list of icon names and packs
 	 */
 	export let name: string | undefined = undefined
@@ -36,6 +41,7 @@
 		'icon',
 		{
 			color,
+			filled,
 			size,
 		},
 		$$props.class,

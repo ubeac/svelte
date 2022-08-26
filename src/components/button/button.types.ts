@@ -1,4 +1,4 @@
-export const BUTTON_SHAPES = ['default', 'round', 'tile', 'circle'] as const
+export const BUTTON_SHAPES = ['default', 'round', 'tile'] as const
 export type ButtonShapes = typeof BUTTON_SHAPES[number]
 
 export const BUTTON_SIZES = ['sm', 'md', 'lg'] as const
