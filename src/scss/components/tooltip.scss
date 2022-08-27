@@ -5,38 +5,38 @@
 	padding: 4px 8px;
 	font-size: 13px;
 	border-radius: 4px;
-}
 
-.u-tooltip-arrow {
-	visibility: hidden;
-}
+	&-arrow {
+		visibility: hidden;
+	}
 
-.u-tooltip-arrow,
-.u-tooltip-arrow::before {
-	position: absolute;
-	width: 8px;
-	height: 8px;
-	background: inherit;
-}
+	&-arrow,
+	&-arrow::before {
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		background: inherit;
+	}
 
-.u-tooltip-arrow::before {
-	visibility: visible;
-	content: '';
-	transform: rotate(45deg);
-}
+	&-arrow::before {
+		visibility: visible;
+		content: '';
+		transform: rotate(45deg);
+	}
 
-.u-tooltip[data-popper-placement^='top'] > .u-tooltip-arrow {
-	bottom: -4px;
-}
+	&[data-popper-placement^='top']>.u-tooltip-arrow {
+		bottom: -4px;
+	}
 
-.u-tooltip[data-popper-placement^='bottom'] > .u-tooltip-arrow {
-	top: -4px;
-}
+	&[data-popper-placement^='bottom']>.u-tooltip-arrow {
+		top: -4px;
+	}
 
-.u-tooltip[data-popper-placement^='left'] > .u-tooltip-arrow {
-	right: -4px;
-}
+	&[data-popper-placement^='left']>.u-tooltip-arrow {
+		right: -4px;
+	}
 
-.u-tooltip[data-popper-placement^='right'] > .u-tooltip-arrow {
-	left: -4px;
+	&[data-popper-placement^='right']>.u-tooltip-arrow {
+		left: -4px;
+	}
 }
