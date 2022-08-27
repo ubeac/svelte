@@ -1,11 +1,15 @@
 .u-accordion {
-	@extend .accordion-item;
-}
+	@extend .accordion;
 
-.u-accordion-body {
-	@extend .accordion-body;
-}
+	&-item {
+		@extend .accordion-item;
+	}
 
-.u-accordion-header {
-	@extend .accordion-header;
+	&-header {
+		@extend .accordion-header;
+	}
+
+	&-body {
+		@extend .accordion-body;
+	}
 }
