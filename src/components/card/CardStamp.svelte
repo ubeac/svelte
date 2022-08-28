@@ -44,6 +44,10 @@
 
 {#if condition($$props)}
 	<div use:forwardEvents {...$$restProps} class={classes}>
-		<slot><Icon name={icon} /></slot>
+		<slot>
+			<div class={classname('card-stamp-icon')}>
+				<Icon name={icon} />
+			</div>
+		</slot>
 	</div>
 {/if}

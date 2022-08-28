@@ -50,20 +50,20 @@ $prefix-icon : $prefix +'icon';
 	&-stamp {
 		@extend .card-stamp;
 
-		.#{$prefix-icon} {
+		&-icon {
 			@extend .card-stamp-icon;
 		}
 
 		@each $key,
 		$value in $card-stamp-sizes {
-			&-#{$key} {
+			&-size-#{$key} {
 				--stamp-size: #{$value};
 			}
 		}
 
 		@each $key,
 		$value in $theme-colors {
-			&-color-#{$key} .#{$prefix-icon} {
+			&-color-#{$key} &-icon {
 				@extend .bg-#{$key};
 			}
 		}
