@@ -2,6 +2,7 @@
 // Card
 //
 $prefix-card : $prefix +'card';
+$prefix-icon : $prefix +'icon';
 
 .#{$prefix-card} {
 	@extend .card;
@@ -49,7 +50,7 @@ $prefix-card : $prefix +'card';
 	&-stamp {
 		@extend .card-stamp;
 
-		&-icon {
+		.#{$prefix-icon} {
 			@extend .card-stamp-icon;
 		}
 
@@ -62,7 +63,7 @@ $prefix-card : $prefix +'card';
 
 		@each $key,
 		$value in $theme-colors {
-			&#{$key} .u-card-stamp-icon {
+			&-color-#{$key} .#{$prefix-icon} {
 				@extend .bg-#{$key};
 			}
 		}
