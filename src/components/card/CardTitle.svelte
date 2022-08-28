@@ -6,11 +6,11 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('card-title', undefined, $$props.class)
+	$: classes = classname('card-title', undefined, $$props.class, true)
 </script>
 
 {#if condition($$props)}
-	<h3 use:forwardEvents {...$$restProps} class={classes}>
+	<div use:forwardEvents {...$$restProps} class={classes}>
 		<slot />
-	</h3>
+	</div>
 {/if}

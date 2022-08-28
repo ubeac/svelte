@@ -5,17 +5,13 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * If you want the card to have shadow, use the elevation property
-	 */
-	export let elevation: number | undefined = undefined
-
-	/**
 	 * If you want the card to have border, use the outline property
 	 */
 	export let outline: boolean = false
 
 	/**
 	 * Use tile property to neutralize border-radius
+	 * TODO: do we need this prop? Isn't it better to user shape prop (tile|default|rounded)?
 	 */
 	export let tile: boolean = false
 
@@ -24,7 +20,6 @@
 	$: classes = classname(
 		'card',
 		{
-			elevation,
 			outline,
 			tile,
 		},

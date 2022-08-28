@@ -1,278 +1,365 @@
 <script>
-	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
+	import { Meta, Story } from '@storybook/addon-svelte-csf'
 
 	import {
 		Button,
-		ButtonGroup,
 		Card,
 		CardBody,
 		CardActions,
 		CardFooter,
 		CardHeader,
-		CardMedia,
 		CardStamp,
 		CardStatus,
 		CardSubtitle,
 		CardTitle,
 		Icon,
 	} from '$lib/components'
+	import { COLORS } from '$lib/types'
 </script>
 
-<Meta title="Card" component={Card} argTypes={{}} />
+<Meta
+	title="Card"
+	component={Card}
+	argTypes={{
+		// color: {
+		// 	control: {
+		// 		type: 'select',
+		// 		options: COLORS,
+		// 	},
+		// },
+		// size: {
+		// 	control: {
+		// 		type: 'select',
+		// 		options: BUTTON_SIZES,
+		// 	},
+		// },
+		// shape: {
+		// 	control: {
+		// 		type: 'select',
+		// 		options: BUTTON_SHAPES,
+		// 	},
+		// },
+	}} />
+<Story name="default">
+	<div class="container-xl">
+		<div class="row">
+			<div class="col">
+				<Card>
+					<CardStatus color="red" position="top" />
+					<CardHeader>
+						<CardTitle>Card title</CardTitle>
+					</CardHeader>
+					<CardBody>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+						industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+						scrambled it to make a type specimen book.
+					</CardBody>
+					<CardFooter>This is standard card footer</CardFooter>
+				</Card>
+			</div>
+			<div class="col">
+				<Card>
+					<CardStatus color="primary" position="start" />
+					<CardBody>
+						<CardTitle>Card title</CardTitle>
+						<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+							scrambled it to make a type specimen book.
+						</p>
+					</CardBody>
+					<CardFooter>This is standard card footer</CardFooter>
+				</Card>
+			</div>
+			<div class="col">
+				<Card>
+					<CardStatus color="green" position="bottom" />
+					<CardHeader>
+						<CardTitle>Card title</CardTitle>
+					</CardHeader>
+					<CardBody>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+						industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+						scrambled it to make a type specimen book.
+					</CardBody>
+					<CardFooter transparent>This is transparent card footer</CardFooter>
+				</Card>
+			</div>
+		</div>
+	</div>
+</Story>
 
-<Template let:args>
-	<Card {...args}>
-		<CardBody>Body</CardBody>
-	</Card>
-</Template>
+<Story name="Header actions"
+	><div class="container-xl">
+		<div class="row">
+			<div class="col">
+				<Card>
+					<CardHeader>
+						<CardTitle>Button in header</CardTitle><CardActions>
+							<Button color="warning">Upload</Button>
+						</CardActions>
+					</CardHeader>
+					<CardBody>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+						industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+						scrambled it to make a type specimen book.
+					</CardBody>
+					<CardFooter>This is standard card footer</CardFooter>
+				</Card>
+			</div>
+			<div class="col">
+				<Card>
+					<CardHeader>
+						<CardTitle>Icon button in header</CardTitle><CardActions>
+							<Button color="primary">
+								<Icon name="upload" />
+							</Button>
+						</CardActions>
+					</CardHeader>
+					<CardBody>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+						industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+						scrambled it to make a type specimen book.
+					</CardBody>
+					<CardFooter>This is standard card footer</CardFooter>
+				</Card>
+			</div>
+			<div class="col">
+				<Card>
+					<CardHeader>
+						<CardTitle>Icon buttons</CardTitle>
+						<CardActions>
+							<Button><Icon name="user" /></Button>
+							<Button><Icon name="refresh" /></Button>
+						</CardActions>
+					</CardHeader>
+					<CardBody>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+						industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+						scrambled it to make a type specimen book.
+					</CardBody>
+					<CardFooter>This is standard card footer</CardFooter>
+				</Card>
+			</div>
+		</div>
+	</div>
+</Story>
 
-<Story name="default" />
-<Story name="empty">
-	<Card>Empty Content</Card>
-</Story>
-<Story name="body">
-	<Card>
-		<CardBody>Body</CardBody>
-	</Card>
-</Story>
-<Story name="flat">
-	<Card>
-		<CardBody>With Elevation</CardBody>
-	</Card>
-	<br />
-	<Card elevation={0}>
-		<CardBody>Without Elevation</CardBody>
-	</Card>
-</Story>
-<Story name="tile">
-	<Card tile>
-		<CardBody>With Tile</CardBody>
-	</Card>
-	<br />
-	<Card>
-		<CardBody>Without Tile</CardBody>
-	</Card>
-</Story>
-<Story name="header">
-	<Card>
-		<CardHeader>Header</CardHeader>
-		<CardBody>Body</CardBody>
-	</Card>
-</Story>
-<Story name="footer">
-	<Card>
-		<CardBody>Body</CardBody>
-		<CardFooter>Footer</CardFooter>
-	</Card>
-</Story>
-<Story name="header & footer">
-	<Card>
-		<CardHeader>Header</CardHeader>
-		<CardBody>Body</CardBody>
-		<CardFooter>Footer</CardFooter>
-	</Card>
-</Story>
-<Story name="title">
-	<Card>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			<p>Body</p>
-		</CardBody>
-	</Card>
-	<br />
-	<Card>
-		<CardHeader>
-			<CardTitle>Title</CardTitle>
-		</CardHeader>
-		<CardBody>Body</CardBody>
-	</Card>
-</Story>
-<Story name="media">
-	<Card>
-		<CardMedia placement="top">
-			<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
-		</CardMedia>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			<p>Body</p>
-		</CardBody>
-	</Card>
-	<br />
-	<Card>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			<p>Body</p>
-		</CardBody>
-		<CardMedia placement="middle">
-			<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
-		</CardMedia>
-		<CardBody>
-			<p>Body</p>
-		</CardBody>
-	</Card>
-	<br />
-	<Card>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			<p>Body</p>
-		</CardBody>
-		<CardMedia placement="bottom">
-			<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
-		</CardMedia>
-	</Card>
-</Story>
-<Story name="actions">
-	<Card>
-		<CardHeader>
-			<CardTitle>Title</CardTitle>
-			<CardActions>
-				<Button color="primary">Test</Button>
-			</CardActions>
-		</CardHeader>
-		<CardBody>Body</CardBody>
-	</Card>
-</Story>
-<Story name="actions icon">
-	<Card>
-		<CardHeader>
-			<CardTitle>Title</CardTitle>
-			<CardActions>
-				<Button><Icon name="user" /></Button>
-				<Button><Icon name="refresh" /></Button>
-			</CardActions>
-		</CardHeader>
-		<CardBody>Body</CardBody>
-	</Card>
-</Story>
-<Story name="actions group">
-	<Card>
-		<CardHeader>
-			<CardTitle>Title</CardTitle>
-			<CardActions>
-				<ButtonGroup>
-					<Button><Icon name="user" /></Button>
-					<Button><Icon name="refresh" /></Button>
-				</ButtonGroup>
-			</CardActions>
-		</CardHeader>
-		<CardBody>Body</CardBody>
-	</Card>
-</Story>
-<Story name="subtitle">
+<Story name="Subtitle">
 	<Card>
 		<CardHeader>
 			<div>
-				<CardTitle>Title</CardTitle>
-				<CardSubtitle>Subtitle</CardSubtitle>
+				<CardTitle>Card Title</CardTitle>
+				<CardSubtitle>Card Subtitle</CardSubtitle>
 			</div>
-			<CardActions>
-				<Button color="primary">Test</Button>
-			</CardActions>
 		</CardHeader>
-		<CardBody>Body</CardBody>
+		<CardBody>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+				standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+				a type specimen book.
+			</p>
+		</CardBody>
 	</Card>
 </Story>
-<Story name="footer transparent">
+
+<Story name="Status color">
+	<div class="container-xl">
+		<div class="row">
+			{#each COLORS as color}
+				<div class="col-4 mb-3">
+					<Card>
+						<CardBody>
+							<CardTitle>Status color: {color}</CardTitle>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						</CardBody>
+						<CardStatus {color} position="start" />
+					</Card>
+				</div>
+			{/each}
+		</div>
+	</div>
+</Story>
+
+<Story name="Status size">
+	<div class="container-xl">
+		<div class="row">
+			{#each ['sm', 'md', 'lg'] as size}
+				<div class="col">
+					<Card>
+						<CardBody>
+							<CardTitle>Status size: {size}</CardTitle>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+								industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+								scrambled it to make a type specimen book.
+							</p>
+						</CardBody>
+						<CardStatus color="red" position="top" {size} />
+					</Card>
+				</div>
+			{/each}
+		</div>
+	</div>
+</Story>
+
+<Story name="Status position">
+	<div class="container-xl">
+		<div class="row">
+			{#each ['top', 'bottom', 'start', 'end'] as position}
+				<div class="col-3">
+					<Card>
+						<CardBody>
+							<CardTitle>Status position: {position}</CardTitle>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+								industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+								scrambled it to make a type specimen book.
+							</p>
+						</CardBody>
+						<CardStatus color="red" {position} />
+					</Card>
+				</div>
+			{/each}
+		</div>
+	</div>
+</Story>
+
+<Story name="Stamp color">
+	<div class="container-xl">
+		<div class="row">
+			{#each ['primary', 'secondary', 'warning'] as color}
+				<div class="col mb-3">
+					<Card>
+						<CardBody>
+							<CardTitle>Stamp color: {color}</CardTitle>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+								industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+								scrambled it to make a type specimen book.
+							</p>
+						</CardBody>
+						<CardStamp {color} icon="bell" />
+					</Card>
+				</div>
+			{/each}
+		</div>
+	</div>
+</Story>
+
+<Story name="Stamp size">
+	<div class="container-xl">
+		<div class="row">
+			{#each ['sm', 'md', 'lg'] as size}
+				<div class="col">
+					<Card>
+						<CardBody>
+							<CardTitle>Stamp size: {size}</CardTitle>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+								industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+								scrambled it to make a type specimen book.
+							</p>
+						</CardBody>
+						<CardStamp {size} position="top-end" color="yellow" icon="bell" />
+					</Card>
+				</div>
+			{/each}
+		</div>
+	</div>
+</Story>
+
+<Story name="Stamp position">
+	<div class="container-xl">
+		<div class="row">
+			{#each ['top-start', 'top-end', 'bottom-start', 'bottom-end'] as position}
+				<div class="col-6 mb-3">
+					<Card>
+						<CardBody>
+							<CardTitle>Stamp position: {position}</CardTitle>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+								industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+								scrambled it to make a type specimen book.
+							</p>
+						</CardBody>
+						<CardStamp {position} color="primary" icon="bell" />
+					</Card>
+				</div>
+			{/each}
+		</div>
+	</div>
+</Story>
+
+<Story name="Footer transparent">
 	<Card>
 		<CardHeader>
-			<CardTitle>Title</CardTitle>
+			<CardTitle>Transparent footer</CardTitle>
 		</CardHeader>
-		<CardBody>Body</CardBody>
-		<CardFooter transparent>This is transparent card footer</CardFooter>
+		<CardBody>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+				standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+				a type specimen book.
+			</p>
+		</CardBody>
+		<CardFooter transparent><i>This is transparent card footer</i></CardFooter>
 	</Card>
 </Story>
-<Story name="status">
-	<Card>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			Body
-		</CardBody>
-		<CardStatus color="red" placement="top" />
-	</Card>
-	<br />
-	<Card>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			Body
-		</CardBody>
-		<CardStatus color="green" placement="start" />
-	</Card>
-	<br />
-	<Card>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			Body
-		</CardBody>
-		<CardStatus color="blue" placement="bottom" />
-	</Card>
-</Story>
-<Story name="stamp">
-	<Card>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-			<br />
-			Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum recusandae reiciendis saepe.
-		</CardBody>
-		<CardStamp size="sm" placement="top-end" color="yellow">
-			<Icon name="bell" />
-		</CardStamp>
-	</Card>
-	<br />
-	<Card>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-			<br />
-			Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum recusandae reiciendis saepe.
-		</CardBody>
-		<CardStamp size="md" placement="top-end" color="yellow">
-			<Icon name="bell" />
-		</CardStamp>
-	</Card>
-	<br />
-	<Card>
-		<CardBody>
-			<CardTitle>Title</CardTitle>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-			<br />
-			Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum recusandae reiciendis saepe.
-		</CardBody>
-		<CardStamp size="lg" placement="top-end" color="yellow">
-			<Icon name="bell" />
-		</CardStamp>
-	</Card>
-</Story>
-<Story name="footer actions">
+
+<Story name="Footer text with actions">
 	<Card>
 		<CardHeader>
-			<CardTitle>Title</CardTitle>
+			<CardTitle>Footer text with actions</CardTitle>
 		</CardHeader>
-		<CardBody>Body</CardBody>
-		<CardFooter>
-			<CardActions>
-				<Button>Test</Button>
-				<Button color="primary">Test</Button>
-			</CardActions>
-		</CardFooter>
-	</Card>
-</Story>
-<Story name="footer text with actions">
-	<Card>
-		<CardHeader>
-			<CardTitle>Title</CardTitle>
-			<CardActions>
-				<Button>Test</Button>
-				<Button color="primary">Test</Button>
-			</CardActions>
-		</CardHeader>
-		<CardBody>Body</CardBody>
+		<CardBody>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+				standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+				a type specimen book.
+			</p>
+		</CardBody>
 		<CardFooter>
 			Footer text
 			<CardActions>
-				<Button>Test</Button>
-				<Button color="primary">Test</Button>
+				<Button color="danger"><Icon name="trash" />Remove</Button>
+				<Button color="primary">Continue</Button>
 			</CardActions>
 		</CardFooter>
 	</Card>
 </Story>
+<!-- 
+<Story name="media">
+	<Card>
+		<CardMedia position="top">
+			<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
+		</CardMedia>
+		<CardBody>
+			<CardTitle>Title</CardTitle>
+			<p>Body</p>
+		</CardBody>
+	</Card>
+	<br />
+	<Card>
+		<CardBody>
+			<CardTitle>Title</CardTitle>
+			<p>Body</p>
+		</CardBody>
+		<CardMedia position="middle">
+			<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
+		</CardMedia>
+		<CardBody>
+			<p>Body</p>
+		</CardBody>
+	</Card>
+	<br />
+	<Card>
+		<CardBody>
+			<CardTitle>Title</CardTitle>
+			<p>Body</p>
+		</CardBody>
+		<CardMedia position="bottom">
+			<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
+		</CardMedia>
+	</Card>
+</Story> -->
