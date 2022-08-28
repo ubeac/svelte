@@ -13,6 +13,7 @@
 		"sourceMap": true,
 		"strict": true,
 		"target": "es2019",
+		"types": ["jest"],
 		"paths": {
 			"$lib": ["src"],
 			"$lib/*": ["src/*"]
