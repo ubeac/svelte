@@ -23,7 +23,7 @@
 
 	setContext('ACCORDIONS', context)
 
-	$: classes = classname('accordions', undefined, $$props.class)
+	$: classes = classname('accordion', undefined, $$props.class)
 
 	$: context.set({ group, persistent })
 </script>
