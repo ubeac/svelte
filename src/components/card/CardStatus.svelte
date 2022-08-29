@@ -31,7 +31,8 @@
 			position,
 			size,
 		},
-		$$props.class
+		$$props.class,
+		true
 	)
 </script>
 
