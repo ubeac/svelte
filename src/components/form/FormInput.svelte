@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { get_current_component, getContext, onDestroy, onMount } from 'svelte/internal'
 
 	import { nanoid } from 'nanoid'
 
@@ -33,14 +33,56 @@
 	export let loading: boolean = false
 
 	/**
+	 * Name of input
+	 */
+	export let name: string = nanoid(5)
+
+	/**
 	 * Mark this as required field in form
 	 */
 	export let required: boolean = false
 
 	/**
+	 * Schema of this field
+	 */
+	export let schema: any | undefined = undefined
+
+	/**
 	 * The content of input
 	 */
 	export let value: any = undefined
+
+	/**
+	 * Message below input
+	 */
+	export let message: string | undefined = undefined
+
+	export async function validate(schem: any) {
+		try {
+			if (!schem) return false
+			const cleanValue = await schem.validate(value)
+
+			message = undefined
+			return cleanValue
+		} catch (err: any) {
+			message = err.message
+		}
+	}
+
+	let ref = get_current_component()
+	const formContext = getContext<any>('FORM')
+
+	onMount(() => {
+		if (formContext) {
+			formContext.register(name, ref, schema)
+		}
+	})
+
+	onDestroy(() => {
+		if (formContext) {
+			formContext.unregister(name)
+		}
+	})
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -71,5 +113,18 @@
 		</svelte:fragment>
 		<slot name="middle:end" slot="middle:end" />
 		<slot name="outer:end" slot="outer:end" />
+		<svelte:fragment slot="message">
+			{#if message}
+				<div class={classname('form-group-message')}>{message}</div>
+			{/if}
+		</svelte:fragment>
 	</FormGroup>
 {/if}
+
+<style lang="scss">
+	.u-form-group-message {
+		padding: 4px 0 8px 0;
+		opacity: 0.9;
+		color: red;
+	}
+</style>

@@ -32,7 +32,8 @@
 		"litepicker": "^2.0.12",
 		"luxon": "^2.4.0",
 		"nanoid": "^3.3.4",
-		"tom-select": "^2.0.3"
+		"tom-select": "^2.0.3",
+		"yup": "^0.32.11"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.9",

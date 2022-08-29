@@ -27,6 +27,7 @@
 				</div>
 				<slot name="outer:end" />
 			</div>
+			<slot name="message" />
 		</div>
 	</GridItem>
 {/if}
