@@ -1,25 +1,34 @@
 <script lang="ts">
+	import { Radio } from '$lib/components'
+	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
-
-	import Radio from './Radio.svelte'
 
 	interface Item {
 		label: string
-		value: string
+		value: boolean
 		disabled?: boolean
-		color: 'default'
+		checked?: boolean
 	}
 
+	/**
+	 * Set Color of RadioGroup
+	 */
+	export let color: Colors = 'default'
+	/**
+	 * Set View of RadioGroup
+	 */
+	export let inline: boolean = false
+	/**
+	 * Set List of Items
+	 */
 	export let items: Item[] = []
-	export let value: string | number | undefined = undefined
+	/**
+	 * Set name of RadioGroup
+	 */
 	export let name: string | undefined = undefined
-	export let column: boolean = false
-	export let row: boolean = false
-	$: radioGroupClasses = classname('radio-group', { column, row }, $$props.class)
-	$: slugName = name || 'radio-group' + Math.random()
-	function onClick(e: any) {
-		value = e.target.value
-	}
+
+	$: radioGroupClasses = classname('radio-group', { inline }, $$props.class)
+	$: slugName = name ?? 'radio-group' + Math.random()
 </script>
 
 {#if condition($$props)}
@@ -28,13 +37,11 @@
 			{#each items as item}
 				<Radio
 					disabled={item.disabled}
-					checked={value == item.value}
-					on:click={onClick}
+					checked={item.checked}
 					value={item.value}
 					name={slugName}
-					label={item.label} 
-					color={item.color} 
-					/>
+					label={item.label}
+					{color} />
 			{/each}
 		</slot>
 	</div>
