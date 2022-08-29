@@ -1,0 +1,19 @@
+.u-status {
+    @extend .status;
+
+    &-dot {
+        @extend .status-dot;
+        padding: 0 !important;
+    }
+
+    &-animated {
+        @extend .status-dot-animated;
+    }
+
+    @each $key,
+    $value in $theme-colors {
+        &-color-#{$key} {
+            @extend .status-#{$key};
+        }
+    }
+}
