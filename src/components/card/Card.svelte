@@ -4,31 +4,23 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
-	/**
-	 * If you want the card to have border, use the outline property
-	 */
-	export let outline: boolean = false
+	import { CardHeader, CardTitle } from '.'
 
 	/**
-	 * Use tile property to neutralize border-radius
-	 * TODO: do we need this prop? Isn't it better to user shape prop (tile|default|rounded)?
+	 * Set title in card hesder section
 	 */
-	export let tile: boolean = false
+	export let title: string | undefined = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname(
-		'card',
-		{
-			outline,
-			tile,
-		},
-		$$props.class
-	)
+	$: classes = classname('card', {}, $$props.class, true)
 </script>
 
 {#if condition($$props)}
 	<div use:forwardEvents {...$$restProps} class={classes}>
+		{#if title}
+			<CardHeader><CardTitle>{title}</CardTitle></CardHeader>
+		{/if}
 		<slot />
 	</div>
 {/if}
