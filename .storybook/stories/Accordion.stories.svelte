@@ -32,16 +32,18 @@
 </Story>
 
 <Story name="Open" let:args>
-	<Accordion open {...args}>
-		<AccordionHeader>
-			This is open By default
-		</AccordionHeader>
-		<AccordionBody>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus omnis quidem mollitia voluptatem culpa,
-			veritatis tenetur eveniet. Voluptatem nihil autem perferendis dolorum eligendi sapiente nobis consequatur repellat
-			voluptate. Explicabo, molestias.
-		</AccordionBody>
-	</Accordion>
+	<Accordions>
+		<Accordion open {...args}>
+			<AccordionHeader>
+				This is open By default
+			</AccordionHeader>
+			<AccordionBody>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus omnis quidem mollitia voluptatem culpa,
+				veritatis tenetur eveniet. Voluptatem nihil autem perferendis dolorum eligendi sapiente nobis consequatur repellat
+				voluptate. Explicabo, molestias.
+			</AccordionBody>
+		</Accordion>
+	</Accordions>
 </Story>
 
 <Story name="Persistent" let:args>

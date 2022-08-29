@@ -23,7 +23,7 @@
 
 	setContext('ACCORDION', context)
 
-	$: classes = classname('accordion', undefined, $$props.class)
+	$: classes = classname('accordion-item', undefined, $$props.class)
 
 	$: context.set({ id, open })
 </script>

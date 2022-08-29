@@ -1,41 +1,43 @@
 .u-dialog {
 	@extend .modal;
-}
 
-.u-dialog-center .u-dialog-container {
-	@extend .modal-dialog-centered;
-}
-
-.u-dialog-scrollable .u-dialog-container {
-	@extend .modal-dialog-scrollable;
-}
-
-@each $size in sm, lg, xl {
-	.u-dialog-#{$size} .u-dialog-container {
-		@extend .modal-#{$size};
+	&-center .u-dialog-container {
+		@extend .modal-dialog-centered;
 	}
-}
 
-.u-dialog-container {
-	@extend .modal-dialog;
-}
+	&-scrollable .u-dialog-container {
+		@extend .modal-dialog-scrollable;
+	}
 
-.u-dialog-body {
-	@extend .modal-body;
-}
+	&-container {
+		@extend .modal-dialog;
+	}
 
-.u-dialog-content {
-	@extend .modal-content;
-}
+	&-body {
+		@extend .modal-body;
+	}
 
-.u-dialog-footer {
-	@extend .modal-footer;
-}
+	&-content {
+		@extend .modal-content;
+	}
 
-.u-dialog-header {
-	@extend .modal-header;
-}
+	&-footer {
+		@extend .modal-footer;
+	}
 
-.u-dialog-title {
-	@extend .modal-title;
+	&-header {
+		@extend .modal-header;
+	}
+
+	&-title {
+		@extend .modal-title;
+	}
+
+	@each $size in sm,
+	lg,
+	xl {
+		&-#{$size} .u-dialog-container {
+			@extend .modal-#{$size};
+		}
+	}
 }
