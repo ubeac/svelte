@@ -4,36 +4,23 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname, condition } from '$lib/utils'
 
-	/**
-	 * If you want the card to have shadow, use the elevation property
-	 */
-	export let elevation: number | undefined = undefined
+	import { CardHeader, CardTitle } from '.'
 
 	/**
-	 * If you want the card to have border, use the outline property
+	 * Set title in card hesder section
 	 */
-	export let outline: boolean = false
-
-	/**
-	 * Use tile property to neutralize border-radius
-	 */
-	export let tile: boolean = false
+	export let title: string | undefined = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname(
-		'card',
-		{
-			elevation,
-			outline,
-			tile,
-		},
-		$$props.class
-	)
+	$: classes = classname('card', {}, $$props.class, true)
 </script>
 
 {#if condition($$props)}
 	<div use:forwardEvents {...$$restProps} class={classes}>
+		{#if title}
+			<CardHeader><CardTitle>{title}</CardTitle></CardHeader>
+		{/if}
 		<slot />
 	</div>
 {/if}

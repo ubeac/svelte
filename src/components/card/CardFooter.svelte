@@ -11,7 +11,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('card-footer', { transparent }, $$props.class)
+	$: classes = classname('card-footer', { transparent }, $$props.class, true)
 </script>
 
 {#if condition($$props)}
