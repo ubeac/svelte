@@ -93,7 +93,18 @@ $prefix-card-status : $prefix-card +'-status';
 	$value in $card-status-sizes {
 
 		&-size-#{$key} {
-			height: $value;
+
+			&.#{$prefix-card-status}-position-top,
+			&.#{$prefix-card-status}-position-bottom {
+				height: $value;
+			}
 		}
+
+		&-size-#{$key} {
+			&.#{$prefix-card-status}-position-start {
+				width: $value;
+			}
+		}
+
 	}
 }

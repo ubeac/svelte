@@ -196,8 +196,8 @@
 <Story name="Status position" let:args>
 	<div class="container-xl">
 		<div class="row">
-			{#each ['top', 'bottom', 'start', 'end'] as position}
-				<div class="col-3">
+			{#each ['top', 'bottom', 'start'] as position}
+				<div class="col-4">
 					<Card title="Status position: {position}">
 						<CardBody>
 							<p>
