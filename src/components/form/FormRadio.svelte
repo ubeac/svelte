@@ -1,18 +1,26 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Radio, Label } from '$lib/components'
+	import { Radio } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
-	import type { Colors } from '$lib/types';
 
+	/**
+	 * Color of Radio button
+	 */
+	export let color: Colors = 'default'
 	/**
 	 * Description for Radio button
 	 */
 	export let description: string | undefined = undefined
+	/**
+	 * Description Color for Radio button
+	 */
+	export let descriptionColor: Colors = 'default'
 
 	/**
-	 * value of Selected radio button
+	 * Group of radio buttons
 	 */
 	export let group: any = undefined
 
@@ -25,10 +33,6 @@
 	 * Label of Radio button
 	 */
 	export let label: string | undefined = undefined
-	/**
-	 * Color of Radio button
-	 */
-	export let color: Colors = "default"
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -36,15 +40,14 @@
 </script>
 
 {#if condition($$props)}
-	<Label class={classes}>
-		<Radio bind:group {forwardEvents} {...$$restProps} {color} />
-		{#if label}
-			<span class={classname('form-radio-label')}>{label}</span>
-		{/if}
+	<div class={classes}>
+		<Radio bind:group {forwardEvents} {...$$restProps} {color} {label} />
 		{#if description}
-			<span class={classname('form-radio-description')}>
+			<span class={classname('form-radio-description', { descriptionColor })}>
 				{description}
 			</span>
+		{:else}
+			<slot />
 		{/if}
-	</Label>
+	</div>
 {/if}
