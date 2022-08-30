@@ -2,6 +2,7 @@
 	import { get_current_component, getContext, onDestroy, onMount } from 'svelte/internal'
 
 	import { nanoid } from 'nanoid'
+	import * as yup from 'yup'
 
 	import { FormGroup, Icon, Input, Label, Spinner } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
@@ -33,9 +34,24 @@
 	export let loading: boolean = false
 
 	/**
+	 * Maximum length (or maximum value for numbers) of value
+	 */
+	export let max: number | undefined = undefined
+
+	/**
+	 * Minimum length (or minimum value for numbers) of value
+	 */
+	export let min: number | undefined = undefined
+
+	/**
 	 * Name of input
 	 */
 	export let name: string = nanoid(5)
+
+	/**
+	 * Pattern for validate input's value
+	 */
+	export let pattern: RegExp | undefined = undefined
 
 	/**
 	 * Mark this as required field in form
@@ -43,9 +59,9 @@
 	export let required: boolean = false
 
 	/**
-	 * Schema of this field
+	 * Type of input
 	 */
-	export let schema: any | undefined = undefined
+	export let type: string | undefined = undefined
 
 	/**
 	 * The content of input
@@ -57,10 +73,23 @@
 	 */
 	export let message: string | undefined = undefined
 
-	export async function validate(schem: any) {
+	export async function validate(schema: any) {
 		try {
-			if (!schem) return false
-			const cleanValue = await schem.validate(value)
+			if (!schema) {
+				if (type == 'number') schema = yup.number()
+				else if (type === 'email') schema = yup.string().email()
+				else if (type === 'url') schema = yup.string().url()
+				else schema = yup.string()
+
+				if (required) schema = schema.required()
+
+				if (min) schema = schema.min(min)
+
+				if (max) schema = schema.max(max)
+
+				if (pattern) schema = schema.matches(pattern)
+			}
+			const cleanValue = await schema.validate(value)
 
 			message = undefined
 			return cleanValue
@@ -74,7 +103,7 @@
 
 	onMount(() => {
 		if (formContext) {
-			formContext.register(name, ref, schema)
+			formContext.register(name, ref)
 		}
 	})
 
@@ -104,7 +133,7 @@
 			{/if}
 			<slot name="inner:start" />
 		</svelte:fragment>
-		<Input bind:value {id} {forwardEvents} {...$$restProps} />
+		<Input bind:value {id} {type} {forwardEvents} {...$$restProps} />
 		<svelte:fragment slot="inner:end">
 			{#if loading}
 				<Spinner />

@@ -49,19 +49,9 @@
 				<FormInput col="12" label="Email" name="email" />
 
 				<!-- schema for input component -->
-				<FormInput
-					bind:this={ageEl}
-					schema={yup
-						.number()
-						.min(10, 'You are too young')
-						.max(100, 'You are too old')
-						.required('You should fill this field')}
-					col="10"
-					type="number"
-					label="Age"
-					name="age" />
+				<FormInput bind:this={ageEl} col="10" required min={10} max={100} type="number" label="Age" name="age" />
 				<GridItem col="2">
-					<Button block on:click={validageAge}>Validate</Button>
+					<Button type="button" block on:click={validageAge}>Validate</Button>
 				</GridItem>
 
 				<Button>Validate</Button>

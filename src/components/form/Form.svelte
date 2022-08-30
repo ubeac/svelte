@@ -6,11 +6,8 @@
 
 	export let schema: Record<string, any> = {}
 
-	function register(name: string, element: any, schem: any) {
-		context[name] = {
-			element,
-			schema: schem ?? schema[name],
-		}
+	function register(name: string, element: any) {
+		context[name] = element
 	}
 
 	function unregister(name: string) {
@@ -33,7 +30,7 @@
 		for (let key in context) {
 			const input = context[key]
 
-			values[key] = await input.element.validate(input.schema)
+			values[key] = await input.validate(schema[key])
 			if (typeof values[key] === 'undefined') {
 				isValid = false
 			}
