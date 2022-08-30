@@ -1,4 +1,7 @@
-.u-breadcrumb {
+$prefix-breadcrumb : $prefix +'breadcrumb';
+$breadcrumb-types: 'arrows', 'bullets', 'dots';
+
+.#{$prefix-breadcrumb} {
 	@extend .breadcrumb;
 
 	&-item {
@@ -9,9 +12,7 @@
 		@extend .active;
 	}
 
-	@each $key in 'arrows',
-	'bullets',
-	'dots' {
+	@each $key in $breadcrumb-types {
 		&-#{$key} {
 			@extend .breadcrumb-#{$key};
 		}
