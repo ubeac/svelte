@@ -1,17 +1,14 @@
 <script>
-	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
+	import { Meta, Story } from '@storybook/addon-svelte-csf'
+
 	import { Radio, RadioGroup } from '$lib/components'
+	import { COLORS } from '$lib/types'
+
 	let items = [
-		{ label: 'apple', value: 'apple' },
-		{ label: 'banana', value: 'banana' },
-		{ label: 'orange', value: 'orange' },
-		{ label: 'plum', value: 'plum' },
-	]
-	let items2 = [
-		{ label: 'apple', value: 'apple' },
-		{ label: 'banana', value: 'banana' },
-		{ label: 'orange', value: 'orange', disabled: true },
-		{ label: 'plum', value: 'plum', disabled: true },
+		{ label: 'apple', value: false },
+		{ label: 'banana', value: true },
+		{ label: 'orange', value: false },
+		{ label: 'plum', value: false },
 	]
 </script>
 
@@ -22,6 +19,14 @@
 		group: {
 			control: 'text',
 		},
+		color: {
+			defaultValue: 'auto',
+			control: {
+				type: 'select',
+				default: 'primary',
+				options: COLORS,
+			},
+		},
 	}}
 	parameters={{
 		actions: {
@@ -29,35 +34,18 @@
 		},
 	}} />
 
-
 <Story name="Default" let:args>
-	<Radio name="radio" value="radio1" {...args} />
-	<Radio name="radio" value="radio2" {...args} />
-	<Radio name="radio" value="radio3" {...args} />
+	<RadioGroup {items} {...args} />
 </Story>
 
-<Story name="Group" args={{ group: 'radio2' }} let:args>
-	<Radio name="radio" value="radio1" {...args} />
-	<Radio name="radio" value="radio2" {...args} />
-	<Radio name="radio" value="radio3" {...args} />
-</Story>
-
-<Story name="color:danger" args={{ group: 'radio2' }} let:args>
-	<Radio name="radio" value="radio1" {...args} color="danger" />
-	<Radio name="radio" value="radio2" {...args} color="danger" />
-	<Radio name="radio" value="radio3" {...args} color="danger" />
+<Story name="Group" let:args>
+	<RadioGroup {items} {...args} />
 </Story>
 
 <Story name="Value">
-	<div class="example-radios">
-		<Radio />
-		<Radio value />
-	</div>
+	<Radio value label="checkbox1" />
 </Story>
 
 <Story name="Disabled">
-	<div class="example-radios">
-		<Radio disabled />
-		<Radio value disabled />
-	</div>
+	<Radio label="disabled" disabled />
 </Story>

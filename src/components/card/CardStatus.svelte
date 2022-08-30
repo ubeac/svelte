@@ -5,7 +5,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
-	import type { CardStatusPlacements, CardStatusSizes } from './card.types'
+	import type { CardStatusPositions, CardStatusSizes } from './card.types'
 
 	/**
 	 * You can use color property to change status's border color
@@ -13,9 +13,9 @@
 	export let color: Colors = 'default'
 
 	/**
-	 * You can set position of status using placement property
+	 * You can set position of status using position property
 	 */
-	export let placement: CardStatusPlacements = undefined
+	export let position: CardStatusPositions = undefined
 
 	/**
 	 * If you want to change size of Status, use size property
@@ -28,10 +28,11 @@
 		'card-status',
 		{
 			color,
-			placement,
+			position,
 			size,
 		},
-		$$props.class
+		$$props.class,
+		true
 	)
 </script>
 

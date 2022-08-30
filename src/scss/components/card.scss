@@ -1,149 +1,110 @@
+//
 // Card
+//
+$prefix-card : $prefix +'card';
+$prefix-card-status : $prefix-card +'-status';
 
-.u-card {
+.#{$prefix-card} {
 	@extend .card;
-	border: none;
-
-	&-elevation-0 {
-		box-shadow: none;
-	}
-
-	&-outline {
-		border: 1px solid rgba(98, 105, 118, 0.16);
-	}
-
-	&-tile {
-		border-radius: 0;
-	}
-
-	// Card Actions
-
-	&-actions {
-		@extend .card-actions;
-	}
 
 	// Card Body
-
 	&-body {
 		@extend .card-body;
 	}
 
-	// Card Footer
+	// Card Header
+	&-header {
+		@extend .card-header;
+	}
 
+	// Card Title
+	&-title {
+		@extend .card-title;
+	}
+
+	// Card Subtitle
+	&-subtitle {
+		@extend .card-subtitle;
+	}
+
+	// Card Footer
 	&-footer {
 		@extend .card-footer;
 		color: inherit;
 		display: flex;
 		align-items: center;
 
-		&.u-card-footer-transparent {
+		&.#{$prefix-card}-footer-transparent {
 			@extend .card-footer-transparent;
 		}
 	}
 
-	// Card Header
-
-	&-header {
-		@extend .card-header;
+	&-tile {
+		border-radius: 0;
 	}
 
-	// Card Media
-
-	&-media {
-		&>* {
-			border-radius: var(--tblr-card-border-radius);
-		}
-
-		& .u-card-media-top>* {
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 0;
-		}
-
-		&.u-card-media-start>* {
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
-		}
-
-		&.u-card-media-middle>* {
-			border-radius: 0;
-		}
-
-		&.u-card-media-end>* {
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-		}
-
-		&.u-card-media-bottom>* {
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
-		}
+	&-actions {
+		@extend .card-actions;
 	}
 
-	// Card Stamp
 	&-stamp {
 		@extend .card-stamp;
 
-		.u-card-stamp-icon {
+		&-icon {
 			@extend .card-stamp-icon;
 		}
 
 		@each $key,
 		$value in $card-stamp-sizes {
-			&.u-card-stamp-#{$key} {
+			&-size-#{$key} {
 				--stamp-size: #{$value};
 			}
 		}
 
 		@each $key,
 		$value in $theme-colors {
-			&.u-card-stamp-#{$key} .u-card-stamp-icon {
+			&-color-#{$key} &-icon {
 				@extend .bg-#{$key};
 			}
 		}
 	}
 
-	// Card Status
-	&-status {
+}
 
-		@each $key,
-		$value in $theme-colors {
-			&.u-card-status-#{$key} {
-				@extend .bg-#{$key};
-			}
+// Card Status
+.#{$prefix-card-status} {
+
+	@each $key,
+	$value in $theme-colors {
+		&-color-#{$key} {
+			@extend .bg-#{$key};
 		}
+	}
 
-		@each $key in top,
-		start,
-		bottom {
-			&.u-card-status-#{$key} {
-				@extend .card-status-#{$key};
-			}
+	@each $key in top,
+	start,
+	bottom {
+		&-position-#{$key} {
+			@extend .card-status-#{$key};
 		}
+	}
 
-		@each $key,
-		$value in $card-status-sizes {
+	@each $key,
+	$value in $card-status-sizes {
 
-			&.u-card-status-#{$key}.u-card-status-top,
-			&.u-card-status-#{$key}.u-card-status-bottom {
+		&-size-#{$key} {
+
+			&.#{$prefix-card-status}-position-top,
+			&.#{$prefix-card-status}-position-bottom {
 				height: $value;
 			}
+		}
 
-			&.u-card-status-#{$key}.u-card-status-start,
-			&.u-card-status-#{$key}.u-card-status-end {
+		&-size-#{$key} {
+			&.#{$prefix-card-status}-position-start {
 				width: $value;
 			}
 		}
-	}
 
-	// Card Subtitle
-
-	&-subtitle {
-		@extend .card-subtitle;
-	}
-
-	// Card Title
-
-	&-title {
-		@extend .card-title;
 	}
 }

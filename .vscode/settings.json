@@ -3,5 +3,8 @@
 	"editor.formatOnSave": true,
 	"[scss]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
 	}
 }
