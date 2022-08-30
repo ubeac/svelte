@@ -70,14 +70,14 @@
 			justifyLg="between"
 			noGutters
 			dense>
-			<Col>
+			<Col cols="4" lg="12">
 				<Card style="max-width: 200px;height:100px">
 					<CardBody>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 					</CardBody>
 				</Card>
 			</Col>
-			<Col>
+			<Col cols="8">
 				<Card style="max-width: 200px;height:200px">
 					<CardBody>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>

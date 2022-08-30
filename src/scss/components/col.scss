@@ -4,25 +4,24 @@
 $prefix-col : $prefix +'col';
 
 
-$aligns: start, center, end, baseline, stretch;
-$justifies: start, center, end, between, around;
+$cols: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 $breakpoints: sm, md, lg, xl;
 
 .#{$prefix-col} {
     @extend .col;
 
-    // @each $align in $aligns {
-    //     &-align-#{$align} {
-    //         @extend .align-items-#{$align};
-    //     }
+    @each $col in $cols {
+        &-cols-#{$col} {
+            @extend .col-#{$col};
+        }
 
-    //     @each $size in $breakpoints {
-    //         &-align-#{$size}-#{$align} {
-    //             @extend .align-items-#{$size}-#{$align};
-    //         }
+        @each $size in $breakpoints {
+            &-#{$size}-#{$col} {
+                @extend .col-#{$size}-#{$col};
+            }
 
-    //     }
-    // }
+        }
+    }
 
     // @each $justify in $justifies {
     //     &-justify-#{$justify} {
