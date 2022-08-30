@@ -1,4 +1,6 @@
-.u-status {
+$prefix-status : $prefix +'status';
+
+.#{$prefix-status} {
     @extend .status;
 
     &-dot {
