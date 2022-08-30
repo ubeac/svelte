@@ -1,23 +1,26 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf'
 	import { CheckboxGroup } from '$lib/components'
+	import { COLORS } from '$lib/types'
+
+	let selectedValues = ['apple', 'banana']
 	let items = [
-		{ label: 'apple', value: 'apple', color:"default" },
-		{ label: 'banana', value: 'banana', color:"default" },
-		{ label: 'orange', value: 'orange', color:"default" },
-		{ label: 'plum', value: 'plum', color:"default" },
+		{ text: 'apple', key: 'apple' },
+		{ text: 'banana', key: 'banana' },
+		{ text: 'orange', key: 'orange' },
+		{ text: 'plum', key: 'plum' },
 	]
 	let itemsDanger = [
-		{ label: 'apple', value: 'apple', color:"danger" },
-		{ label: 'banana', value: 'banana', color:"danger" },
-		{ label: 'orange', value: 'orange', color:"danger" },
-		{ label: 'plum', value: 'plum', color:"danger" },
+		{ text: 'apple', key: 'apple' },
+		{ text: 'banana', key: 'banana' },
+		{ text: 'orange', key: 'orange' },
+		{ text: 'plum', key: 'plum' },
 	]
-	let items2 = [
-		{ label: 'apple', value: 'apple' },
-		{ label: 'banana', value: 'banana' },
-		{ label: 'orange', value: 'orange', disabled: true },
-		{ label: 'plum', value: 'plum', disabled: true },
+	let itemsDisabled = [
+		{ text: 'apple', key: 'apple', disabled: 'true' },
+		{ text: 'banana', key: 'banana' },
+		{ text: 'orange', key: 'orange' },
+		{ text: 'plum', key: 'plum' },
 	]
 </script>
 
@@ -25,20 +28,56 @@
 	title="CheckboxGroup"
 	component={CheckboxGroup}
 	argTypes={{
-		group: {
-			control: 'text',
-		}
+		color: {
+			defaultValue: 'auto',
+			control: {
+				type: 'select',
+				default: 'primary',
+				options: COLORS,
+			},
+		},
 	}} />
 
-<Story name="default">
-	<CheckboxGroup {items} />
+<Story name="default" let:args>
+	<CheckboxGroup {...args} {items} value={selectedValues} />
 </Story>
-<Story name="color:danger">
-	<CheckboxGroup items={itemsDanger} />
+
+<Story name="Colors">
+	<div class="d-flex">
+		<div class="mx-2">
+			<CheckboxGroup items={itemsDanger} color="blue" value={selectedValues} inline={true} />
+		</div>
+		<div class="mx-2">
+			<CheckboxGroup items={itemsDanger} color="azure" value={selectedValues} inline={true} />
+		</div>
+		<div class="mx-2">
+			<CheckboxGroup items={itemsDanger} color="indigo" value={selectedValues} inline={true} />
+		</div>
+		<div class="mx-2">
+			<CheckboxGroup items={itemsDanger} color="purple" value={selectedValues} inline={true} />
+		</div>
+		<div class="mx-2">
+			<CheckboxGroup items={itemsDanger} color="pink" value={selectedValues} inline={true} />
+		</div>
+		<div class="mx-2">
+			<CheckboxGroup items={itemsDanger} color="red" value={selectedValues} inline={true} />
+		</div>
+		<div class="mx-2">
+			<CheckboxGroup items={itemsDanger} color="orange" value={selectedValues} inline={true} />
+		</div>
+		<div class="mx-2">
+			<CheckboxGroup items={itemsDanger} color="yellow" value={selectedValues} inline={true} />
+		</div>
+		<div class="mx-2">
+			<CheckboxGroup items={itemsDanger} color="lime" value={selectedValues} inline={true} />
+		</div>
+	</div>
 </Story>
-<Story name="inline">
-	<CheckboxGroup row {items} />
+
+<Story name="Inline">
+	<CheckboxGroup inline {items} value={selectedValues} />
 </Story>
-<Story name="disable">
-	<CheckboxGroup row items={items2} />
+
+<Story name="Disabled">
+	<CheckboxGroup inline items={itemsDisabled} value={selectedValues} />
 </Story>
