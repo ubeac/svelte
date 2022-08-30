@@ -1,11 +1,9 @@
 <script lang="ts">
-	import { createEventDispatcher, get_current_component } from 'svelte/internal'
+	import { createEventDispatcher } from 'svelte/internal'
 
-	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
-	let forwardEvents = forwardEventsBuilder(get_current_component())
 	const dispatch = createEventDispatcher()
 
 	/**
@@ -35,14 +33,7 @@
 
 {#if condition($$props)}
 	<label class={checkboxClasses}>
-		<input
-			on:change={change}
-			bind:checked={value}
-			{value}
-			use:forwardEvents
-			{...$$restProps}
-			class={inputClasses}
-			type="checkbox" />
+		<input on:change={change} bind:checked={value} {value} {...$$restProps} class={inputClasses} type="checkbox" />
 		<span class={labelClasses}>
 			{#if label}
 				{label}

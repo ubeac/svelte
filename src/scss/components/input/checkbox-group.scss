@@ -1,6 +1,8 @@
-.u-checkbox-group {
-	&-row {
-		.u-checkbox {
+$prefix-checkbox: $prefix + 'checkbox';
+
+.#{$prefix-checkbox}-group {
+	&-inline {
+		.#{$prefix-checkbox} {
 			@extend .form-check-inline;
 		}
 	}
