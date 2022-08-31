@@ -1,13 +1,13 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
 	import { FormRadio } from '$lib/components'
-	import { COLORS } from '$lib/types';
+	import { COLORS } from '$lib/types'
 
 	let group = ''
 </script>
 
 <Meta
-	title="FormRadio"
+	title="Form/FormRadio"
 	component={FormRadio}
 	argTypes={{
 		description: {

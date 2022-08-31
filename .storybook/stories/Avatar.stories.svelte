@@ -7,7 +7,7 @@
 
 <Meta
 	id="Avatar"
-	title="Avatar"
+	title="Elements/Avatar"
 	component={Avatar}
 	argTypes={{
 		color: {

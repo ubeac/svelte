@@ -22,7 +22,7 @@
 </script>
 
 <Meta
-	title="FormAutocomplete"
+	title="Form/FormAutocomplete"
 	component={FormAutocomplete}
 	argTypes={{
 		col: {

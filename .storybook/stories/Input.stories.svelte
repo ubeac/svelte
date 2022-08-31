@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="Input"
+	title="Inputs/Input"
 	component={Input}
 	argTypes={{
 		size: {

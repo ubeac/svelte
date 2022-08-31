@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="Breadcrumb"
+	title="Elements/Breadcrumb"
 	component={Breadcrumb}
 	argTypes={{
 		separator: {

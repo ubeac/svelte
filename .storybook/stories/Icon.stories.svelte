@@ -6,7 +6,7 @@
 </script>
 
 <Meta
-	title="Icon"
+	title="Elements/Icon"
 	component={Icon}
 	argTypes={{
 		color: {

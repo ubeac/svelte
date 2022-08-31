@@ -7,7 +7,7 @@
 
 <Meta
 	component={Confirm}
-	title="Confirm"
+	title="Elements/Confirm"
 	argTypes={{
 		type: {
 			control: {
@@ -15,8 +15,7 @@
 				options: TYPES,
 			},
 		},
-	}}
-/>
+	}} />
 
 <Template let:args>
 	<Confirm open title="default title" description="default description" {...args} />

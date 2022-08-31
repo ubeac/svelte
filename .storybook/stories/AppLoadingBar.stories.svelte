@@ -6,7 +6,7 @@
 </script>
 
 <Meta
-	title="AppLoadingBar"
+	title="Layout/AppLoadingBar"
 	component={AppLoadingBar}
 	argTypes={{
 		color: {

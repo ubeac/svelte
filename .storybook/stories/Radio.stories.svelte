@@ -13,7 +13,7 @@
 </script>
 
 <Meta
-	title="RadioGroup"
+	title="Inputs/RadioGroup"
 	component={RadioGroup}
 	argTypes={{
 		group: {

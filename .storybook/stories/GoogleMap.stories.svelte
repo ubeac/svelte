@@ -17,7 +17,7 @@
 	}
 </script>
 
-<Meta title="GoogleMap" component={GoogleMap} {argTypes} />
+<Meta title="Map/GoogleMap" component={GoogleMap} {argTypes} />
 
 <Template let:args>
 	<GoogleMap apiKey={api_Key} {...args} />

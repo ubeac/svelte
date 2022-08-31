@@ -6,7 +6,7 @@
 </script>
 
 <Meta
-	title="Alert"
+	title="Containers/Alert"
 	component={Alert}
 	argTypes={{
 		dismissible: {
@@ -105,8 +105,8 @@
 </Story>
 
 <Story name="Variant" let:args>
-	{#each ALERT_VARIANTS as variant , i}
-		<Alert {variant} {...args} type={i+1 === ALERT_VARIANTS.length && "primary"} >Alert - {variant}</Alert>
+	{#each ALERT_VARIANTS as variant, i}
+		<Alert {variant} {...args} type={i + 1 === ALERT_VARIANTS.length && 'primary'}>Alert - {variant}</Alert>
 	{/each}
 </Story>
 
@@ -129,7 +129,7 @@
 		<p>This is Alert's content — <Button color="success" link>check it out</Button></p>
 		<div slot="actions">
 			<Button color="success">Ok</Button>
-			<Button ghost color="danger" >Cancel</Button>
+			<Button ghost color="danger">Cancel</Button>
 		</div>
 	</Alert>
 </Story>

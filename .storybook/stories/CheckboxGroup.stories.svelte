@@ -25,7 +25,7 @@
 </script>
 
 <Meta
-	title="CheckboxGroup"
+	title="Inputs/CheckboxGroup"
 	component={CheckboxGroup}
 	argTypes={{
 		color: {

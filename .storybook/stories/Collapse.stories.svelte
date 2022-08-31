@@ -3,7 +3,7 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
 </script>
 
-<Meta title="Collapse" component={Collapse} />
+<Meta title="Elements/Collapse" component={Collapse} />
 
 <Story name="Default" let:args>
 	<CollapseToggler id="c-1">Toggler</CollapseToggler>

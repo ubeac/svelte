@@ -1,22 +1,27 @@
 <script>
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
 	import { Switch } from '$lib/components'
-	import { COLORS } from '$lib/types';
+	import { COLORS } from '$lib/types'
 </script>
 
-<Meta component={Switch} title="Switch" argTypes={{ value: { control: 'boolean' } , color: {
-	defaultValue: 'auto',
-	control: {
-		type: 'select',
-		default: 'primary',
-		options: COLORS,
-	},
-}, }} />
+<Meta
+	component={Switch}
+	title="Inputs/Switch"
+	argTypes={{
+		value: { control: 'boolean' },
+		color: {
+			defaultValue: 'auto',
+			control: {
+				type: 'select',
+				default: 'primary',
+				options: COLORS,
+			},
+		},
+	}} />
 
 <Story name="Default" let:args>
 	<Switch {...args} />
 </Story>
-
 
 <Story name="Disabled" let:args>
 	<Switch disabled {...args} />

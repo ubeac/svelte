@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="Table"
+	title="Data Tables/Table"
 	argTypes={{
 		size: {
 			defaultValue: 'auto',

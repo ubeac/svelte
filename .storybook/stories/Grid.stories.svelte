@@ -57,7 +57,7 @@
 	}
 </script>
 
-<Meta title="Grid" component={Grid} {argTypes} />
+<Meta title="Grid System/Grid" component={Grid} {argTypes} />
 
 <Template let:args>
 	<Grid class="h-5" {...args}>

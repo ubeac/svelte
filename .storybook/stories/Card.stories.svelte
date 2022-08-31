@@ -18,7 +18,7 @@
 </script>
 
 <Meta
-	title="Card"
+	title="Containers/Card"
 	component={Card}
 	argTypes={{
 		color: {
