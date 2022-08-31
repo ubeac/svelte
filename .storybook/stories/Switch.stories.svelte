@@ -27,15 +27,13 @@
 </Story>
 
 <Story name="Colors" let:args>
-	{#each COLORS as color}
-		<Switch {...args} {color} label={color} value />
-	{/each}
+	<div class="example-switch">
+		{#each COLORS as color}
+			<Switch {...args} {color} label={color} value />
+		{/each}
+	</div>
 </Story>
 
 <Story name="Disabled" let:args>
 	<Switch disabled {...args} />
-</Story>
-
-<Story name="Value" let:args>
-	<Switch value {...args} />
 </Story>
