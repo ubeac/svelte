@@ -6,6 +6,7 @@ $prefix-col : $prefix +'col';
 
 $cols: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 $breakpoints: sm, md, lg, xl;
+$aligns: start, center, end, baseline, stretch;
 
 .#{$prefix-col} {
     @extend .col;
@@ -15,7 +16,19 @@ $breakpoints: sm, md, lg, xl;
             @extend .col-#{$col};
         }
 
+        &-offset-#{$col} {
+            @if $col  !=12 {
+                @extend .offset-#{$col};
+            }
+        }
+
         @each $size in $breakpoints {
+            @if $col  !=12 {
+                &-offset-#{$size}-#{$col} {
+                    @extend .offset-#{$size}-#{$col};
+                }
+            }
+
             &-#{$size}-#{$col} {
                 @extend .col-#{$size}-#{$col};
             }
@@ -23,15 +36,11 @@ $breakpoints: sm, md, lg, xl;
         }
     }
 
-    // @each $justify in $justifies {
-    //     &-justify-#{$justify} {
-    //         @extend .justify-content-#{$justify};
-    //     }
+    @each $align in $aligns {
 
-    //     @each $size in $breakpoints {
-    //         &-justify-#{$size}-#{$justify} {
-    //             @extend .justify-content-#{$size}-#{$justify};
-    //         }
-    //     }
-    // }
+        &-align-self-#{$align} {
+            align-self: #{$align};
+        }
+    }
+
 }
