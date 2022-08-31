@@ -21,7 +21,7 @@
 	}
 </script>
 
-<Meta title="Autocomplete" component={Autocomplete} />
+<Meta title="Inputs/Autocomplete" component={Autocomplete} />
 
 <Template let:args>
 	<Autocomplete items={items1} {...args} />

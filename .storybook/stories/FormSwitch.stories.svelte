@@ -3,7 +3,7 @@
 	import { FormSwitch } from '$lib/components'
 </script>
 
-<Meta title="FormSwitch" component={FormSwitch} />
+<Meta title="Form/FormSwitch" component={FormSwitch} />
 
 <Story name="Default" let:args>
 	<FormSwitch {...args} />

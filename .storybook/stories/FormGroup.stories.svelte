@@ -5,7 +5,7 @@
 	import { classname } from '$lib/utils'
 </script>
 
-<Meta title="FormGroup" component={FormGroup} />
+<Meta title="Form/FormGroup" component={FormGroup} />
 
 <Template let:args>
 	<FormGroup {...args}>

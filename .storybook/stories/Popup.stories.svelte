@@ -3,7 +3,7 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf'
 </script>
 
-<Meta title="Popup" component={Popup} />
+<Meta title="Elements/Popup" component={Popup} />
 
 <Story name="Defualt" let:args>
 	<div>Target Element</div>

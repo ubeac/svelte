@@ -6,7 +6,7 @@
 
 <Meta
 	component={Checkbox}
-	title="Checkbox"
+	title="Inputs/Checkbox"
 	argTypes={{
 		color: {
 			defaultValue: 'auto',

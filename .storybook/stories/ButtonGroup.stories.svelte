@@ -4,7 +4,7 @@
 	import { Button, ButtonGroup, Icon } from '$lib/components'
 </script>
 
-<Meta title="ButtonGroup" component={ButtonGroup} argTypes={{}} />
+<Meta title="Buttons/ButtonGroup" component={ButtonGroup} argTypes={{}} />
 
 <Story name="Default" let:args>
 	<div class="example-buttons">

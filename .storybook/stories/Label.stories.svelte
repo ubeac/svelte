@@ -4,7 +4,7 @@
 	import { Input, Label } from '$lib/components'
 </script>
 
-<Meta title="Label" component={Label} />
+<Meta title="Inputs/Label" component={Label} />
 
 <Story name="Default" let:args>
 	<Label {...args}>Label text</Label>

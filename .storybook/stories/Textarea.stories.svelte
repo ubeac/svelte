@@ -5,7 +5,7 @@
 </script>
 
 <Meta
-	title="Textarea"
+	title="Inputs/Textarea"
 	component={Textarea}
 	parameters={{
 		actions: {

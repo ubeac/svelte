@@ -1,11 +1,11 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
 	import { FormCheckbox } from '$lib/components'
-	import { COLORS } from '$lib/types';
+	import { COLORS } from '$lib/types'
 </script>
 
 <Meta
-	title="FormCheckbox"
+	title="Form/FormCheckbox"
 	component={FormCheckbox}
 	argTypes={{
 		description: {

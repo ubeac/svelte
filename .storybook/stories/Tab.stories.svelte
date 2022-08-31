@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="Tab"
+	title="Containers/Tab"
 	component={Tabs}
 	argTypes={{
 		shape: {

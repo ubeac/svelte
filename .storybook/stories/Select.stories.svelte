@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="Select"
+	title="Inputs/Select"
 	component={Select}
 	parameters={{
 		actions: {

@@ -5,7 +5,7 @@
 </script>
 
 <Meta
-	title="App"
+	title="Layout/App"
 	component={App}
 	argTypes={{
 		body: {
