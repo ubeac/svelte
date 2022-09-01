@@ -1,4 +1,7 @@
-.u-table {
+$prefix-table: $prefix + "table";
+$table-size: "sm", "md";
+
+.#{$prefix-table} {
 	@extend .table;
 	@extend .table-nowrap;
 	@extend .table-vcenter;
@@ -23,11 +26,9 @@
 		white-space: unset;
 	}
 
-	&-sm {
-		@extend .table-sm !optional;
-	}
-
-	&-md {
-		@extend .table-md !optional;
+	@each $size in $table-size {
+		&-#{$size} {
+			@extend .table-#{$size} !optional;
+		}
 	}
 }

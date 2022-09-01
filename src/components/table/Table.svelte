@@ -15,6 +15,11 @@
 	export let hover: boolean = false
 
 	/**
+	 * Set table size
+	 */
+	export let size: 'sm' | 'md' = 'md'
+
+	/**
 	 * Set different background color for even and odd rows.
 	 */
 	export let striped: boolean = false
@@ -23,10 +28,6 @@
 	 * Disable wraping text inside Cells.
 	 */
 	export let wrap: boolean = false
-	/**
-	 * Set table size
-	 */
-	export let size: "sm" | "md" = 'md'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -37,7 +38,7 @@
 			hover,
 			striped,
 			wrap,
-			size
+			size,
 		},
 		$$props.class
 	)
