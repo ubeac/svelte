@@ -38,24 +38,22 @@
 	}} />
 
 <Template let:args>
-	<FormRadio value="radio1" label="form-radio 1" bind:group {...args} />
-	<FormRadio value="radio2" label="form-radio 2" bind:group {...args} />
-	<FormRadio value="radio3" label="form-radio 3" bind:group {...args} />
-	<FormRadio value="radio4" label="form-radio 4" bind:group {...args} />
+	<FormRadio label="form-radio 1" bind:group {...args} />
 </Template>
 
-<Story name="default" />
+<Story name="default" let:args>
+	<FormRadio label="form-radio 1" bind:group {...args} />
+</Story>
 <Story name="description" args={{ description: 'this is description' }} />
 <Story name="description:color" args={{ description: 'this is description', descriptionColor: 'danger' }}>
 	{#each COLORS as color, i}
 		<FormRadio
-			value={`radio${i + 1}`}
-			label={`form-radio ${i + 1}`}
+			label={`form-radio ${color}`}
+			{color}
 			bind:group
 			descriptionColor={color}
-			description="this is description" />
+			description={`this is description by ${color} color`} />
 	{/each}
 </Story>
 <Story name="group" args={{ group: 'radio2' }} />
-<Story name="inline" args={{ inline: true }} />
 <Story name="label" args={{ label: 'label' }} />

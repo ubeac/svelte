@@ -5,10 +5,17 @@
 	import { COLORS } from '$lib/types'
 
 	let items = [
-		{ label: 'apple', value: false },
-		{ label: 'banana', value: true },
-		{ label: 'orange', value: false },
-		{ label: 'plum', value: false },
+		{ text: 'apple', key: 'apple' },
+		{ text: 'banana', key: 'banana' },
+		{ text: 'orange', key: 'orange' },
+		{ text: 'plum', key: 'plum' },
+	]
+
+	let itemsRelatedName = [
+		{ label: 'apple', value: 'apple' },
+		{ label: 'banana', value: 'banana' },
+		{ label: 'orange', value: 'orange' },
+		{ label: 'plum', value: 'plum' },
 	]
 </script>
 
@@ -35,11 +42,15 @@
 	}} />
 
 <Story name="Default" let:args>
-	<RadioGroup {items} {...args} />
+	<RadioGroup {items} {...args} inline />
+</Story>
+
+<Story name="Custom Related Item Name" let:args>
+	<RadioGroup items={itemsRelatedName} {...args} inline text="label" key="value" />
 </Story>
 
 <Story name="Group" let:args>
-	<RadioGroup {items} {...args} />
+	<RadioGroup {items} {...args} inline />
 </Story>
 
 <Story name="Value">

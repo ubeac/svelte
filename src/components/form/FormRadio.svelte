@@ -25,18 +25,13 @@
 	export let group: any = undefined
 
 	/**
-	 * Align multiple Radio buttons in a single horizontal line
-	 */
-	export let inline: boolean = false
-
-	/**
 	 * Label of Radio button
 	 */
 	export let label: string | undefined = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-radio', { inline }, $$props.class)
+	$: classes = classname('form-radio', undefined, $$props.class)
 </script>
 
 {#if condition($$props)}

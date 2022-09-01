@@ -6,10 +6,6 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
-	/**
-	 * Forward all native Events
-	 */
-	let forwardEvents = forwardEventsBuilder(get_current_component())
 	const dispatch = createEventDispatcher()
 
 	/**
@@ -20,6 +16,12 @@
 	 * Radio color
 	 */
 	export let color: Colors = 'default'
+
+	/**
+	 * Forward all native Events
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
 	/**
 	 * Radio label
 	 */
@@ -38,7 +40,7 @@
 	$: labelClasses = classname('radio-label', undefined, $$props.class)
 
 	function change(event: any) {
-		value = event.target.value
+		value = event.target.checked
 		dispatch('change', value)
 	}
 </script>

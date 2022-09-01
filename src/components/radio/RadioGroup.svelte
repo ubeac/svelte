@@ -1,48 +1,60 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte'
+
 	import { Radio } from '$lib/components'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
-
-	interface Item {
-		label: string
-		value: boolean
-		disabled?: boolean
-		checked?: boolean
-	}
+	import { classname, condition, createOptions } from '$lib/utils'
 
 	/**
-	 * Set Color of RadioGroup
+	 * Set the color of Radios when it is checked
 	 */
-	export let color: Colors = 'default'
+	export let color: Colors = 'primary'
+
 	/**
-	 * Set View of RadioGroup
+	 * Set RadioGroup group to show in a row
 	 */
 	export let inline: boolean = false
-	/**
-	 * Set List of Items
-	 */
-	export let items: Item[] = []
-	/**
-	 * Set name of RadioGroup
-	 */
-	export let name: string | undefined = undefined
 
-	$: radioGroupClasses = classname('radio-group', { inline }, $$props.class)
-	$: slugName = name ?? 'radio-group' + Math.random()
+	/**
+	 * RadioGroup group items
+	 */
+	export let items: any[] | Object = []
+	/**
+	 * The key in the items that each radiogroup is related to
+	 */
+	export let key: string = 'key'
+	/**
+	 * Set the field that should be used as each radiogroup label
+	 */
+	export let text: string = 'text'
+
+	/**
+	 * Value that selected RadioGroup is bound to
+	 */
+	export let value: any = undefined
+
+	const dispatch = createEventDispatcher()
+
+	$: ({ options, getKey, getText, isSelected } = createOptions({ items, key, text }))
+
+	function change(option: any) {
+		value = getKey(option)
+		dispatch('change', value)
+	}
+
+	$: classes = classname('radio-group', { inline }, $$props.class, true)
 </script>
 
 {#if condition($$props)}
-	<div class={radioGroupClasses}>
-		<slot>
-			{#each items as item}
-				<Radio
-					disabled={item.disabled}
-					checked={item.checked}
-					value={item.value}
-					name={slugName}
-					label={item.label}
-					{color} />
-			{/each}
-		</slot>
+	<div class={classes}>
+		{#each $options as option}
+			<Radio
+				label={getText(option)}
+				value={isSelected(option, value)}
+				checked={isSelected(option, value)}
+				disabled={option.disabled}
+				{color}
+				on:change={() => change(option)} />
+		{/each}
 	</div>
 {/if}
