@@ -27,6 +27,14 @@
 				options: COLORS,
 			},
 		},
+		descriptionColor: {
+			defaultValue: 'auto',
+			control: {
+				type: 'select',
+				default: 'default',
+				options: COLORS,
+			},
+		},
 	}} />
 
 <Template let:args>
@@ -38,6 +46,16 @@
 
 <Story name="default" />
 <Story name="description" args={{ description: 'this is description' }} />
+<Story name="description:color" args={{ description: 'this is description', descriptionColor: 'danger' }}>
+	{#each COLORS as color, i}
+		<FormRadio
+			value={`radio${i + 1}`}
+			label={`form-radio ${i + 1}`}
+			bind:group
+			descriptionColor={color}
+			description="this is description" />
+	{/each}
+</Story>
 <Story name="group" args={{ group: 'radio2' }} />
 <Story name="inline" args={{ inline: true }} />
 <Story name="label" args={{ label: 'label' }} />
