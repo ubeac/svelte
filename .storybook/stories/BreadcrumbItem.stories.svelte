@@ -4,7 +4,7 @@
 </script>
 
 <Meta
-	title="BreadcrumbItem"
+	title="Elements/BreadcrumbItem"
 	component={BreadcrumbItem}
 	argTypes={{
 		href: {

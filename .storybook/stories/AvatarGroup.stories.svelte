@@ -3,7 +3,7 @@
 	import { Avatar, AvatarGroup, Badge, Icon } from '$lib/components'
 </script>
 
-<Meta id="Avatar Group" component={AvatarGroup} />
+<Meta id="Avatar Group" title="Elements/AvatarGroup" component={AvatarGroup} />
 
 <Story name="default" let:args>
 	<div class="example-avatars">

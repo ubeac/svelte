@@ -5,7 +5,7 @@
 </script>
 
 <Meta
-	title="Status"
+	title="Elements/Status"
 	component={Status}
 	argTypes={{
 		color: {

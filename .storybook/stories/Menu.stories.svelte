@@ -3,7 +3,7 @@
 	import { Menu, Button, MENU_PLACEMENTS } from '$lib/components'
 </script>
 
-<Meta title="Menu" component={Menu} />
+<Meta title="Elements/Menu" component={Menu} />
 
 <Story name="Default" let:args>
 	<Button>Dropdown</Button>

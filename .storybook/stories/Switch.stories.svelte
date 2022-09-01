@@ -6,7 +6,7 @@
 
 <Meta
 	component={Switch}
-	title="Switch"
+	title="Inputs/Switch"
 	argTypes={{
 		value: { control: 'boolean' },
 		label: {

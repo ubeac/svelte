@@ -4,13 +4,13 @@
 </script>
 
 <Meta
-	title="Breadcrumb"
+	title="Elements/Breadcrumb"
 	component={Breadcrumb}
 	argTypes={{
 		separator: {
 			control: {
 				type: 'radio',
-				options: ['dots', 'arrows', 'bullets', undefined],
+				options: ['dots', 'arrows', 'bullets', 'default'],
 			},
 		},
 	}} />
@@ -24,4 +24,7 @@
 </Template>
 
 <Story name="default" />
-<Story name="separator" args={{ separator: 'dots' }} />
+<Story name="separator:arrows" args={{ separator: 'arrows' }} />
+<Story name="separator:bullets" args={{ separator: 'bullets' }} />
+<Story name="separator:default" args={{ separator: 'default' }} />
+<Story name="separator:dots" args={{ separator: 'dots' }} />

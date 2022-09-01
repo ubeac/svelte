@@ -8,7 +8,7 @@
 </script>
 
 <Meta
-	title="Dialog"
+	title="Containers/Dialog"
 	component={Dialog}
 	argTypes={{
 		open: {

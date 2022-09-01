@@ -6,7 +6,7 @@
 </script>
 
 <Meta
-	title="Badge"
+	title="Elements/Badge"
 	component={Badge}
 	argTypes={{
 		color: {
