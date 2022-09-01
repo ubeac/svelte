@@ -9,6 +9,9 @@
 	title="Inputs/Switch"
 	argTypes={{
 		value: { control: 'boolean' },
+		label: {
+			control: 'text',
+		},
 		color: {
 			defaultValue: 'auto',
 			control: {
@@ -23,14 +26,14 @@
 	<Switch {...args} />
 </Story>
 
+<Story name="Colors" let:args>
+	<div class="example-switch">
+		{#each COLORS as color}
+			<Switch {...args} {color} label={color} value />
+		{/each}
+	</div>
+</Story>
+
 <Story name="Disabled" let:args>
 	<Switch disabled {...args} />
-</Story>
-
-<Story name="Value" let:args>
-	<Switch value {...args} />
-</Story>
-
-<Story name="color:dagner" let:args>
-	<Switch value {...args} color="danger" />
 </Story>

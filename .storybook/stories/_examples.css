@@ -117,3 +117,15 @@
 .example-popups > * {
 	margin: 0 0.5rem 0.5rem 0 !important;
 }
+
+.example-switch {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -0.5rem !important;
+	margin-right: -0.5rem;
+	justify-content: center;
+}
+
+.example-switch > * {
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
