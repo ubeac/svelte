@@ -42,15 +42,15 @@
 	}} />
 
 <Story name="Default" let:args>
-	<RadioGroup {items} {...args} inline />
+	<RadioGroup {items} {...args} />
 </Story>
 
 <Story name="Custom Related Item Name" let:args>
-	<RadioGroup items={itemsRelatedName} {...args} inline text="label" key="value" />
+	<RadioGroup items={itemsRelatedName} {...args} text="label" key="value" />
 </Story>
 
 <Story name="Group" let:args>
-	<RadioGroup {items} {...args} inline />
+	<RadioGroup {items} {...args} />
 </Story>
 
 <Story name="Value">
