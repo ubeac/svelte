@@ -1,20 +1,20 @@
 name: Publish pre Release package version
 
-on: 
+on:
   push:
     branches:
       - next
-  
+
 jobs:
-  commit: 
+  commit:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-        with: 
+        with:
           node-version: 16
 
-      # setup git user 
+      # setup git user
       - run: git config user.name "$GITHUB_ACTOR"
       - run: git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
@@ -22,14 +22,12 @@ jobs:
       - run: npm version prerelease --preid=next -m "Release %s"
 
       # push commit
-      # - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" 
+      # - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
 
-      - name: Push to protected branch
-          uses: CasperWA/push-protected@v2
-          with:
-            token: ${{ secrets.PUSH_ON_NEXT_BRANCH_TOKEN }}
-            branch: next
-
+      - uses: CasperWA/push-protected@v2
+        with:
+          token: ${{ secrets.PUSH_ON_NEXT_BRANCH_TOKEN }}
+          branch: next
 
   publish-npm:
     needs: commit
