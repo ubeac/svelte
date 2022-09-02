@@ -67,8 +67,38 @@ $prefix-card-status : $prefix-card +'-status';
 				@extend .bg-#{$key};
 			}
 		}
-	}
 
+		&-position-top-start {
+			top: 0;
+			left: 0;
+
+			.#{$prefix-card}-stamp-icon {
+				transform: rotate(-10deg);
+				right: calc(var(--stamp-size) * 0.25);
+			}
+		}
+
+		&-position-bottom-start {
+			bottom: 0;
+			left: 0;
+			top: auto;
+
+			.#{$prefix-card}-stamp-icon {
+				top: calc(var(--stamp-size) * 0.25);
+				right: calc(var(--stamp-size) * 0.25);
+			}
+		}
+
+		&-position-bottom-end {
+			bottom: 0;
+			top: auto;
+
+			.#{$prefix-card}-stamp-icon {
+				transform: rotate(-10deg);
+				top: calc(var(--stamp-size) * 0.25);
+			}
+		}
+	}
 }
 
 // Card Status
