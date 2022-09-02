@@ -2,6 +2,7 @@
 // row
 //
 $prefix-row : $prefix +'row';
+$prefix-col : $prefix +'col';
 
 
 $aligns: start, center, end, baseline, stretch;
@@ -39,6 +40,11 @@ $breakpoints: sm, md, lg, xl;
     &-no-gutters {
         --#{$prefix}gutter-y: 0;
         --#{$prefix}gutter-x: 0;
+
+        &>.#{$prefix-col},
+        &>[class*=#{$prefix-col}-] {
+            padding: 0;
+        }
     }
 
     &-dense {

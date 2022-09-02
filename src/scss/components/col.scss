@@ -11,6 +11,16 @@ $aligns: start, center, end, baseline, stretch;
 .#{$prefix-col} {
     @extend .col;
 
+    &-order {
+        &-last {
+            @extend .order-last;
+        }
+
+        &-first {
+            @extend .order-first;
+        }
+    }
+
     @each $col in $cols {
         &-cols-#{$col} {
             @extend .col-#{$col};
@@ -22,11 +32,21 @@ $aligns: start, center, end, baseline, stretch;
             }
         }
 
+        &-order-#{$col} {
+            @if $col < 6 {
+                @extend .order-#{$col};
+            }
+        }
+
         @each $size in $breakpoints {
             @if $col  !=12 {
                 &-offset-#{$size}-#{$col} {
                     @extend .offset-#{$size}-#{$col};
                 }
+            }
+
+            &-cols-#{$size} {
+                @extend .col-#{$size};
             }
 
             &-#{$size}-#{$col} {
