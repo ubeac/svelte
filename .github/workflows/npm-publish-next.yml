@@ -22,7 +22,13 @@ jobs:
       - run: npm version prerelease --preid=next -m "Release %s"
 
       # push commit
-      - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" 
+      # - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" 
+
+      - name: Push to protected branch
+          uses: CasperWA/push-protected@v2
+          with:
+            token: ${{ secrets.PUSH_ON_NEXT_BRANCH_TOKEN }}
+            branch: next
 
 
   publish-npm:
