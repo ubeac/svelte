@@ -22,11 +22,6 @@ $prefix-card-status : $prefix-card +'-status';
 		@extend .card-title;
 	}
 
-	// Card Subtitle
-	&-subtitle {
-		@extend .card-subtitle;
-	}
-
 	// Card Footer
 	&-footer {
 		@extend .card-footer;
@@ -37,10 +32,6 @@ $prefix-card-status : $prefix-card +'-status';
 		&.#{$prefix-card}-footer-transparent {
 			@extend .card-footer-transparent;
 		}
-	}
-
-	&-tile {
-		border-radius: 0;
 	}
 
 	&-actions {
