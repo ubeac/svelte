@@ -50,7 +50,7 @@
 			</div>
 			<div class="col">
 				<Card>
-					<CardStatus color="primary" position="start" let:args />
+					<CardStatus color="primary" position="start"/>
 					<CardBody>
 						<CardTitle>Card Title</CardTitle>
 						<p>
@@ -64,7 +64,7 @@
 			</div>
 			<div class="col">
 				<Card>
-					<CardStatus color="green" position="bottom" let:args />
+					<CardStatus color="green" position="bottom"/>
 					<CardHeader>
 						<CardTitle>Card Title</CardTitle>
 					</CardHeader>
