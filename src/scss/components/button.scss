@@ -62,4 +62,22 @@ $prefix-button : $prefix +'button';
 	&-icon {
 		@extend .btn-icon;
 	}
+
+	.#{$prefix}icon:last-child {
+		@extend .icon-right;
+	}
+
+	.#{$prefix}avatar:last-child {
+		@extend .icon-right;
+	}
+
+	.#{$prefix}badge {
+
+		&:first-child {
+			@extend .me-2;
+		}
+		&:last-child {
+			@extend .ms-2;
+		}
+	}
 }

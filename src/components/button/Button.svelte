@@ -61,7 +61,24 @@
 
 	let ref: HTMLElement
 
+	function replaceAllTextsWithSpan(element: HTMLElement) {
+		const childNodes = element.childNodes
+		childNodes.forEach((child) => {
+			const text = child.textContent?.trim() ?? ''
+			if (child.nodeType === 3 && text !== '') {
+				const span = document.createElement('span')
+				span.textContent = text
+
+				element.replaceChild(span, child)
+			}
+		})
+	}
+
 	$: icon = ref && (!ref.textContent || !ref.textContent.trim())
+
+	$: if (ref) {
+		replaceAllTextsWithSpan(ref)
+	}
 
 	$: classes = classname(
 		'button',
