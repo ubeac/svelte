@@ -77,7 +77,6 @@
 	$: icon = ref && (!ref.textContent || !ref.textContent.trim())
 
 	$: if (ref) {
-		console.log('update button')
 		replaceAllTextsWithSpan(ref)
 	}
 
