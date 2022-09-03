@@ -26,6 +26,7 @@
 - Input Switch
 - Input Textarea
 - Menu
+- Popup
 - Tooltip
 
 # No Need
@@ -61,7 +62,6 @@
 
 - AccordionActions
 - Alert
-- FormSwitch
 
 # Raw
 
@@ -80,7 +80,6 @@
 - FormFieldset
 - FormGroup
 - GoogleMapAutocomplete
-- Popup
 - Tab
 - TabHeader
 - TabContent
