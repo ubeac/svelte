@@ -17,10 +17,6 @@
 		"preview": "svelte-kit preview",
 		"publish": "npm run package && npm publish ./package",
 		"start": "npm run style && svelte-kit dev",
-		"sb": "npm run storybook:start",
-		"sb:build": "storybook:build",
-		"storybook:start": "npm run style && start-storybook -p 6006",
-		"storybook:build": "npm run style && build-storybook -o ./.storybook/build",
 		"style": "node scripts/styles.generator.js"
 	},
 	"dependencies": {
@@ -36,20 +32,11 @@
 		"tom-select": "^2.1.0"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.17.9",
-		"@storybook/addon-actions": "^6.4.22",
-		"@storybook/addon-essentials": "^6.4.22",
-		"@storybook/addon-links": "^6.4.22",
-		"@storybook/addon-storysource": "^6.5.10",
-		"@storybook/addon-svelte-csf": "^2.0.3",
-		"@storybook/builder-vite": "^0.1.30",
-		"@storybook/svelte": "^6.4.22",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
 		"@types/bootstrap": "^5.1.10",
 		"@types/luxon": "^2.3.2",
-		"babel-loader": "^8.2.5",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
 		"sass": "^1.51.0",
