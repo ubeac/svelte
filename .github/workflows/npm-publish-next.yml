@@ -20,7 +20,8 @@ jobs:
       - run: git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       # incremnet package version and create a commit
-      - run: npm version prerelease --preid=next -m "Release %s"
+      - run: VERSION=$(node -p "require('./package.json').version")
+      - run: npm version prerelease --preid=next -m "Release $VERSION"
 
       # push commit
       # - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
