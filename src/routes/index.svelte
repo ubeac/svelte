@@ -1,9 +1,10 @@
 <script lang="ts">
+	import { Avatar, Badge, Tab, TabContent, TabHeader, Tabs } from '$lib/components'
+	import Button from '$lib/components/button/Button.svelte'
+	import Icon from '$lib/components/icon/Icon.svelte'
 
-	import { Tab, TabContent, TabHeader, Tabs } from '$lib/components'
 	let tabs = []
 	let stayOpen = false
-
 
 	let TextareaModel = ''
 	let selectMultipleModel: any[] = ['1']
@@ -20,7 +21,44 @@
 	]
 </script>
 
-
+<Button>Text</Button>
+<br />
+<Button>
+	Text
+	<Icon name="package" />
+</Button>
+<br />
+<Button>
+	<Icon name="package" />
+	Text
+</Button>
+<br />
+<Button>
+	<Icon name="package" />
+	Text
+	<Badge>New</Badge>
+</Button>
+<br />
+<Button>
+	Text
+	<Badge>New</Badge>
+</Button>
+<br />
+<Button>
+	<Badge>New</Badge>
+	Text
+</Button>
+<br />
+<Button>
+	<Avatar>AV</Avatar>
+	Text
+</Button>
+<br />
+<Button>
+	Text
+	<Avatar>AV</Avatar>
+</Button>
+<br />
 <Tabs shape="pills" vertical bind:tabs>
 	<TabHeader vertical {tabs} />
 	<TabContent>
@@ -33,4 +71,3 @@
 		<Tab disabled name="p-3">Hello Page 3</Tab>
 	</TabContent>
 </Tabs>
-
