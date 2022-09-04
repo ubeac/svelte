@@ -59,6 +59,19 @@
 	<Avatar>AV</Avatar>
 </Button>
 <br />
+<Button>
+	<Avatar>AV</Avatar>
+</Button>
+<br />
+<Button>
+	<Badge>New</Badge>
+</Button>
+<br />
+
+<Button>
+	<Icon name="user" />
+</Button>
+
 <Tabs shape="pills" vertical bind:tabs>
 	<TabHeader vertical {tabs} />
 	<TabContent>
