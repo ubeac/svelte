@@ -63,20 +63,21 @@ $prefix-button : $prefix +'button';
 		@extend .btn-icon;
 	}
 
-	.#{$prefix}icon:last-child {
+	.#{$prefix}icon:last-child:not(:first-child) {
 		@extend .icon-right;
 	}
 
-	.#{$prefix}avatar:last-child {
+	.#{$prefix}avatar:last-child:not(:first-child) {
 		@extend .icon-right;
 	}
 
 	.#{$prefix}badge {
 
-		&:first-child {
+		&:first-child:not(:last-child) {
 			@extend .me-2;
 		}
-		&:last-child {
+
+		&:last-child:not(:first-child) {
 			@extend .ms-2;
 		}
 	}
