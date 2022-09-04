@@ -25,38 +25,38 @@
 <br />
 <Button>
 	Text
-	<Icon name="package" />
+	<Icon slot="end" name="package" />
 </Button>
 <br />
 <Button>
-	<Icon name="package" />
+	<Icon slot="start" name="package" />
 	Text
 </Button>
 <br />
 <Button>
-	<Icon name="package" />
+	<Icon slot="start" name="package" />
 	Text
-	<Badge>New</Badge>
+	<Badge slot="end">New</Badge>
 </Button>
 <br />
 <Button>
 	Text
-	<Badge>New</Badge>
+	<Badge slot="end">New</Badge>
 </Button>
 <br />
 <Button>
-	<Badge>New</Badge>
+	<Badge slot="start">New</Badge>
 	Text
 </Button>
 <br />
 <Button>
-	<Avatar>AV</Avatar>
+	<Avatar slot="start">AV</Avatar>
 	Text
 </Button>
 <br />
 <Button>
 	Text
-	<Avatar>AV</Avatar>
+	<Avatar slot="end">AV</Avatar>
 </Button>
 <br />
 <Button>
