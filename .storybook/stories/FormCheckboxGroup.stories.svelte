@@ -32,7 +32,7 @@
 	}} />
 
 <Story name="Default" let:args>
-	<FormCheckboxGroup {items} {...args} on:change={(e) => console.log(e.detail)} />
+	<FormCheckboxGroup {items} {...args} />
 </Story>
 
 <Story name="Group">

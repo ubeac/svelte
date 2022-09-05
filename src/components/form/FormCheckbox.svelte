@@ -41,7 +41,7 @@
 
 	const dispatch = createEventDispatcher()
 
-	$: classes = classname('form-checkbox', { inline }, $$props.class)
+	$: classes = classname('form-checkbox', { inline }, $$props.class, true)
 </script>
 
 {#if condition($$props)}
@@ -52,7 +52,7 @@
 			{...$$restProps}
 			{color}
 			{label}
-			on:change={(event) => dispatch('change', event.detail)} />
+			on:change={(event) => dispatch('changed', event.detail)} />
 		{#if description}
 			<span class={classname('form-checkbox-description', { descriptionColor })}>
 				{description}

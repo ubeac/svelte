@@ -44,7 +44,7 @@
 
 	$: ({ options, getKey, getText, isSelected } = createOptions({ items, key, text }))
 
-	$: classes = classname('form-checkbox-group', undefined, $$props.class)
+	$: classes = classname('form-checkbox-group', undefined, $$props.class, true)
 
 	function change(checked: any, option: any) {
 		const filtered = value?.filter((key) => key !== getKey(option)) ?? []
@@ -53,7 +53,7 @@
 		} else {
 			value = filtered
 		}
-		dispatch('change', value)
+		dispatch('changed', value)
 	}
 </script>
 
@@ -68,6 +68,6 @@
 			value={isSelected(option, value)}
 			disabled={option.disabled}
 			{...$$restProps}
-			on:change={(event) => change(event.detail, option)} />
+			on:changed={(event) => change(event.detail, option)} />
 	{/each}
 {/if}

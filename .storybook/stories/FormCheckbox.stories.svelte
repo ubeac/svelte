@@ -35,7 +35,7 @@
 		},
 	}} />
 <Template let:args>
-	<FormCheckbox label="checkbox" {...args} on:change={(e) => console.log(e.detail)} />
+	<FormCheckbox label="checkbox" {...args} />
 	<FormCheckbox label="checkbox" {...args} />
 </Template>
 
