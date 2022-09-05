@@ -5,39 +5,38 @@
 	import { classname, condition, createOptions } from '$lib/utils'
 
 	/**
-	 * Forward all native Events
+	 * Select items
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
-
+	export let items: any[] = []
 	/**
-	 * TODO
-	 */
-	export let items: Array<any> = []
-
-	/**
-	 * TODO
+	 * Value that selected options are bound to
 	 */
 	export let key: string = 'value'
-	/**
-	 * TODO
-	 */
-	export let text: string = 'text'
 	/**
 	 * Selected option's value
 	 */
 	export let multiple: boolean = false
+	/**
+	 * Set the field that should be used as each option label
+	 */
+	export let text: string = 'text'
+	/**
+	 * Value that selected checkboxes are bound to
+	 */
 	export let value: any = multiple ? [] : ''
 
 	const dispatch = createEventDispatcher()
 
-	$: classes = classname('select', $$props.class)
+	let forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: ({ fromValue, getKey, getText, toValue } = createOptions({ items, key, text }))
+	$: classes = classname('select', undefined, $$props.class, true)
+
+	$: ({ getKey, getText, toValue } = createOptions({ items, key, text }))
+
 	function change(event: any) {
 		let selectedItems = []
 		let selectedList = event.target.selectedOptions
 		for (const item of selectedList) {
-			debugger
 			selectedItems.push(toValue(item.value))
 		}
 		if (multiple) {
@@ -45,8 +44,7 @@
 		} else {
 			value = selectedItems[0]
 		}
-		// 	value = [...value,val]
-		dispatch('change', value)
+		dispatch('changed', value)
 	}
 </script>
 
