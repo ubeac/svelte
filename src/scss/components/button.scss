@@ -5,6 +5,7 @@ $prefix-button : $prefix +'button';
 
 .#{$prefix-button} {
 	@extend .btn;
+	@extend .gap-2;
 
 	@each $key,
 	$value in $theme-colors {
@@ -56,6 +57,7 @@ $prefix-button : $prefix +'button';
 
 		&-lg {
 			@extend .btn-lg;
+			@extend .gap-3;
 		}
 	}
 
@@ -63,22 +65,10 @@ $prefix-button : $prefix +'button';
 		@extend .btn-icon;
 	}
 
-	.#{$prefix}icon:last-child:not(:first-child) {
-		@extend .icon-right;
+	& > .#{$prefix}icon {
+		margin: 0 !important;
 	}
-
-	.#{$prefix}avatar:last-child:not(:first-child) {
-		@extend .icon-right;
-	}
-
-	.#{$prefix}badge {
-
-		&:first-child:not(:last-child) {
-			@extend .me-2;
-		}
-
-		&:last-child:not(:first-child) {
-			@extend .ms-2;
-		}
+	& > .#{$prefix}avatar {
+		margin: 0 !important;
 	}
 }
