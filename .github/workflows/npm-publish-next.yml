@@ -1,0 +1,46 @@
+name: Publish pre Release package version
+
+on:
+  push:
+    branches:
+      - next
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    if: ${{ !startsWith(github.event.head_commit.message, 'Release') }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      # setup git user
+      - run: git config user.name "$GITHUB_ACTOR"
+      - run: git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      # incremnet package version and create a commit
+      - run: VERSION=$(node -p "require('./package.json').version")
+      - run: npm version prerelease --preid=next -m "Release $VERSION"
+
+      # push commit
+      # - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+
+      - uses: CasperWA/push-protected@v2
+        with:
+          token: ${{ secrets.PUSH_ON_NEXT_BRANCH_TOKEN }}
+          branch: next
+
+  publish-npm:
+    needs: commit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm run publish -- --tag next
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

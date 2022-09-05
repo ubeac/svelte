@@ -7,7 +7,7 @@
 	/**
 	 * Change separator Icon between items
 	 */
-	export let separator: 'arrows' | 'bullets' | 'dots' | undefined = undefined
+	export let separator: 'arrows' | 'bullets' | 'dots' | 'defalut' = 'defalut'
 
 	const forwardEevnts = forwardEventsBuilder(get_current_component())
 

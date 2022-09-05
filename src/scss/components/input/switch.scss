@@ -1,6 +1,10 @@
-.u-switch {
+$prefix-switch: $prefix + 'switch';
+
+.#{$prefix-switch} {
 	@extend .form-check;
 	@extend .form-switch;
+	width: fit-content !important;
+
 	&-description {
 		@extend .form-check-description;
 	}
@@ -13,13 +17,14 @@
 		@extend .form-check-input;
 	}
 
-	@each $key, $value in $theme-colors {
+	&-label {
+		@extend .form-check-label;
+	}
+
+	@each $key,
+	$value in $theme-colors {
 		&-input-#{$key}:checked {
 			background-color: #{$value} !important;
 		}
-	}
-	
-	&-label {
-		@extend .form-check-label;
 	}
 }

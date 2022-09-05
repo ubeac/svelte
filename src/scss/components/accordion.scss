@@ -1,4 +1,6 @@
-.u-accordion {
+$prefix-accordion : $prefix +'accordion';
+
+.#{$prefix-accordion} {
 	@extend .accordion;
 
 	&-item {

@@ -1,0 +1,19 @@
+$prefix-form-radio : $prefix +'form-radio';
+
+.#{$prefix-form-radio} {
+
+    &-description {
+        padding-left: 23px;
+    }
+
+    &-inline {
+        @extend .form-check-inline;
+    }
+
+    @each $key,
+    $value in $theme-colors {
+        &-description-#{$key} {
+            color: #{$value} !important;
+        }
+    }
+}

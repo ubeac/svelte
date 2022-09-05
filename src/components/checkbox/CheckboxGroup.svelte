@@ -1,43 +1,68 @@
 <script lang="ts">
-	import { classname, condition } from '$lib/utils'
+	import { createEventDispatcher } from 'svelte'
+
+	import type { Colors } from '$lib/types'
+	import { classname, condition, createOptions } from '$lib/utils'
 
 	import Checkbox from './Checkbox.svelte'
 
-	export let items: any[] = []
-	export let value: any[] = []
-	export let name: string | undefined = undefined
-	export let column: boolean = false
-	export let row: boolean = false
+	/**
+	 * Set the color of checkbox when it is checked
+	 */
+	export let color: Colors = 'primary'
 
-	$: checkboxGroupClasses = classname('checkbox-group', { column, row }, $$props.class)
-	$: slugName = name || 'checkbox-group' + Math.random()
-	function onClick(e) {
-		let val = e.target.value
-		let checked = e.target.checked
+	/**
+	 * Set checkbox group to show in a row
+	 */
+	export let inline: boolean = false
+
+	/**
+	 * The key in the items that each checkbox is related to
+	 */
+	export let key: string = 'key'
+
+	/**
+	 * Checkbox group items
+	 */
+	export let items: Array<any> | Object = undefined
+
+	/**
+	 * Set the field that should be used as each checkbox label
+	 */
+	export let text: string = 'text'
+
+	/**
+	 * Value that selected checkboxes are bound to
+	 */
+	export let value: Array<any> = undefined
+
+	const dispatch = createEventDispatcher()
+
+	function change(checked: any, option: any) {
+		const filtered = value?.filter((key) => key !== getKey(option)) ?? []
 		if (checked) {
-			if (!value.some((x) => x == val)) {
-				value = [...value, val]
-			}
+			value = filtered.concat([getKey(option)])
 		} else {
-			value = value.filter((item) => item != val)
+			value = filtered
 		}
+		dispatch('change', value)
 	}
+
+	$: ({ options, getKey, getText, isSelected } = createOptions({ items, key, text }))
+	$: classes = classname('checkbox-group', { inline }, $$props.class, true)
 </script>
 
 {#if condition($$props)}
-	<div class={checkboxGroupClasses}>
-		<slot>
-			{#each items as item}
-				<Checkbox
-					checked={value.some((x) => x == item.value)}
-					disabled={item.disabled}
-					on:click={onClick}
-					value={item.value}
-					name={slugName}
-					label={item.label}
-					color={item.color}
-					/>
-			{/each}
-		</slot>
+	<div class={classes}>
+		{#each $options as option}
+			<Checkbox
+				label={getText(option)}
+				value={isSelected(option, value)}
+				disabled={option.disabled}
+				{color}
+				on:change={(x) => {
+					change(x.detail, option)
+				}} />
+		{/each}
 	</div>
 {/if}
