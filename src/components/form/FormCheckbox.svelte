@@ -1,15 +1,23 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
 	import { Checkbox } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
-	import type { Colors } from '$lib/types';
 
+	/**
+	 * set color of checkbox
+	 */
+	export let color: Colors = 'default'
 	/**
 	 * Description of checkbox
 	 */
 	export let description: string | undefined = undefined
+	/**
+	 * Description of checkbox
+	 */
+	export let descriptionColor: Colors = 'default'
 
 	/**
 	 * Forward all native Events
@@ -29,26 +37,26 @@
 	/**
 	 * Show checked state of checkbox
 	 */
-	export let value: boolean | undefined = undefined
-	/**
-	 * set color of checkbox
-	 */
-	export let color: Colors = "default"
+	export let value: boolean = false
+
+	const dispatch = createEventDispatcher()
 
 	$: classes = classname('form-checkbox', { inline }, $$props.class)
 </script>
 
 {#if condition($$props)}
-	<!-- svelte-ignore a11y-label-has-associated-control -->
-	<label class={classes}>
-		<Checkbox bind:value {forwardEvents} {...$$restProps} on:changed {color} />
-		{#if label}
-			<span class={classname('form-checkbox-label')}>{label}</span>
-		{/if}
+	<div class={classes}>
+		<Checkbox
+			bind:value
+			{forwardEvents}
+			{...$$restProps}
+			{color}
+			{label}
+			on:change={(event) => dispatch('change', event.detail)} />
 		{#if description}
-			<span class={classname('form-checkbox-description')}>
+			<span class={classname('form-checkbox-description', { descriptionColor })}>
 				{description}
 			</span>
 		{/if}
-	</label>
+	</div>
 {/if}

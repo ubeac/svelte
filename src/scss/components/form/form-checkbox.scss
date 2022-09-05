@@ -1,0 +1,19 @@
+$prefix-form-checkbox : $prefix +'form-checkbox';
+
+.#{$prefix-form-checkbox} {
+
+    &-description {
+        padding-left: 23px;
+    }
+
+    &-inline {
+        @extend .form-check-inline;
+    }
+
+    @each $key,
+    $value in $theme-colors {
+        &-description-#{$key} {
+            color: #{$value} !important;
+        }
+    }
+}

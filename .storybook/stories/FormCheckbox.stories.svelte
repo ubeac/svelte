@@ -25,15 +25,34 @@
 				options: COLORS,
 			},
 		},
+		descriptionColor: {
+			defaultValue: 'auto',
+			control: {
+				type: 'select',
+				default: 'primary',
+				options: COLORS,
+			},
+		},
 	}} />
 <Template let:args>
-	<FormCheckbox label="checkbox" {...args} />
-	<FormCheckbox label="checkbox" {...args} />
+	<FormCheckbox label="checkbox" {...args} on:change={(e) => console.log(e.detail)} />
 	<FormCheckbox label="checkbox" {...args} />
 </Template>
 
 <Story name="default" />
 <Story name="description" args={{ description: 'this is description' }} />
-<Story name="inline" args={{ inline: true }} />
+<Story name="description:color" args={{ description: 'this is description', descriptionColor: 'danger' }}>
+	{#each COLORS as color, i}
+		<FormCheckbox
+			label={`form-checkbox ${color}`}
+			{color}
+			descriptionColor={color}
+			description={`this is description by ${color} color`} />
+	{/each}
+</Story>
+<Story name="inline">
+	<FormCheckbox label="checkbox 1" inline />
+	<FormCheckbox label="checkbox 2" inline />
+</Story>
 <Story name="label" args={{ label: 'label' }} />
 <Story name="value" args={{ value: true }} />
