@@ -43,13 +43,19 @@
 	<Dropdown>
 		<DropdownToggle>Components</DropdownToggle>
 		<DropdownMenu>
-			<DropdownItem icon="user" href="/components/badges">Badges</DropdownItem>
-			<DropdownItem icon="user" href="/components/buttons">Buttons</DropdownItem>
-			<DropdownItem icon="user" href="/components/cards">Cards</DropdownItem>
+			<DropdownItem icon="star" href="/components/avatars">Avatars</DropdownItem>
+			<DropdownItem icon="star" href="/components/badges">Badges</DropdownItem>
+			<DropdownItem icon="star" href="/components/buttons">Buttons</DropdownItem>
+			<DropdownItem icon="star" href="/components/cards">Cards</DropdownItem>
 		</DropdownMenu>
 	</Dropdown>
-
-	<SidebarItem icon="user" href="/components/badges">Badges</SidebarItem>
-	<SidebarItem icon="user" href="/components/buttons">Buttons</SidebarItem>
-	<SidebarItem icon="user" href="/components/cards">Cards</SidebarItem>
+	<Dropdown>
+		<DropdownToggle>Pages</DropdownToggle>
+		<DropdownMenu>
+			<DropdownItem icon="package" href="/components/">(TODO) Login</DropdownItem>
+			<DropdownItem icon="package" href="/components/">(TODO) Signup</DropdownItem>
+			<DropdownItem icon="package" href="/components/">(TODO) Dashboard</DropdownItem>
+			<DropdownItem icon="package" href="/components/">(TODO) Email</DropdownItem>
+		</DropdownMenu>
+	</Dropdown>
 </Nav>
