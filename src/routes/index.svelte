@@ -22,55 +22,109 @@
 </script>
 
 <Button>Text</Button>
+<button class="btn">Tabler</button>
 <br />
 <Button>
 	Text
 	<Icon name="package" />
 </Button>
+<button class="btn">
+	Tabler
+	<Icon name="package" class="icon-right" />
+</button>
+
 <br />
 <Button>
 	<Icon name="package" />
 	Text
 </Button>
+<button class="btn">
+	<Icon name="package" class="icon-right" />
+	Tabler
+</button>
 <br />
 <Button>
 	<Icon name="package" />
 	Text
 	<Badge>New</Badge>
 </Button>
+<button class="btn">
+	<Icon name="package" class="icon" />
+	Tabler
+	<span class="badge ms-2">new</span>
+</button>
+
 <br />
 <Button>
 	Text
 	<Badge>New</Badge>
 </Button>
+<button class="btn">
+	Tabler
+	<span class="badge ms-2">new</span>
+</button>
+
 <br />
 <Button>
 	<Badge>New</Badge>
 	Text
 </Button>
+<button class="btn">
+	<span class="badge ms-2">new</span>
+	Tabler
+</button>
+
 <br />
 <Button>
 	<Avatar>AV</Avatar>
 	Text
 </Button>
+<button class="btn">
+	<Avatar>AV</Avatar>
+	Tabler
+</button>
+
 <br />
 <Button>
 	Text
 	<Avatar>AV</Avatar>
 </Button>
+<div>No tabler equivalent</div>
 <br />
 <Button>
 	<Avatar>AV</Avatar>
 </Button>
+<button class="btn">
+	<Avatar>AV</Avatar>
+</button>
 <br />
 <Button>
 	<Badge>New</Badge>
 </Button>
+<button class="btn">
+	<span class="badge">New</span>
+</button>
 <br />
 
 <Button>
 	<Icon name="user" />
 </Button>
+<button class="btn">
+	<Icon class="icon" name="user" />
+</button>
+
+<br />
+<br />
+<br />
+<br />
+<Button size="lg">
+	<Icon name="user" />
+	Large Button
+</Button>
+<button class="btn btn-lg">
+	<Icon class="icon" name="user" />
+	Tabler Button
+</button>
 
 <Tabs shape="pills" vertical bind:tabs>
 	<TabHeader vertical {tabs} />
