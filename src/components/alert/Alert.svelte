@@ -101,7 +101,7 @@
 			</div>
 		{/if}
 
-		<div>
+		<div class={classname('alert-body')}>
 			{#if title}
 				<AlertTitle>
 					{title}
@@ -111,7 +111,9 @@
 		</div>
 		<!-- </div> -->
 		{#if dismissible}
-			<button type="button" on:click={close} class={classname('alert-close')} aria-label="close" />
+			<!-- svelte-ignore a11y-missing-attribute -->
+			<!-- svelte-ignore a11y-missing-content -->
+			<a on:click={close} class={classname('alert-close')} aria-label="close" />
 		{/if}
 	</div>
 {/if}
