@@ -8,3 +8,9 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
+
+declare namespace svelte.JSX {
+	interface HTMLProps<T> {
+		if?: boolean
+	}
+}
