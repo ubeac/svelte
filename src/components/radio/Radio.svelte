@@ -4,7 +4,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Forward all native Events
@@ -43,23 +43,21 @@
 	}
 </script>
 
-{#if condition($$props)}
-	<label class={radioClasses}>
-		<input
-			{checked}
-			type="radio"
-			{name}
-			{value}
-			use:forwardEvents
-			{...$$restProps}
-			class={inputClasses}
-			on:change={change} />
-		<span class={labelClasses}>
-			{#if label}
-				{label}
-			{:else}
-				<slot />
-			{/if}
-		</span>
-	</label>
-{/if}
+<label class={radioClasses}>
+	<input
+		{checked}
+		type="radio"
+		{name}
+		{value}
+		use:forwardEvents
+		{...$$restProps}
+		class={inputClasses}
+		on:change={change} />
+	<span class={labelClasses}>
+		{#if label}
+			{label}
+		{:else}
+			<slot />
+		{/if}
+	</span>
+</label>

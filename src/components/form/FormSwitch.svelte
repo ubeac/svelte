@@ -3,7 +3,7 @@
 
 	import { Switch } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Description of checkbox
@@ -30,17 +30,15 @@
 	$: classes = classname('form-switch', { inline }, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<!-- svelte-ignore a11y-label-has-associated-control -->
-	<label class={classes}>
-		<Switch bind:value {forwardEvents} {...$$restProps} />
-		{#if label}
-			<span class={classname('form-switch-label')}>{label}</span>
-		{/if}
-		{#if description}
-			<span class={classname('form-switch-description')}>
-				{description}
-			</span>
-		{/if}
-	</label>
-{/if}
+<!-- svelte-ignore a11y-label-has-associated-control -->
+<label class={classes}>
+	<Switch bind:value {forwardEvents} {...$$restProps} />
+	{#if label}
+		<span class={classname('form-switch-label')}>{label}</span>
+	{/if}
+	{#if description}
+		<span class={classname('form-switch-description')}>
+			{description}
+		</span>
+	{/if}
+</label>

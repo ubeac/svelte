@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Radio } from '$lib/components'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	interface Item {
 		label: string
@@ -31,18 +31,16 @@
 	$: slugName = name ?? 'radio-group' + Math.random()
 </script>
 
-{#if condition($$props)}
-	<div class={radioGroupClasses}>
-		<slot>
-			{#each items as item}
-				<Radio
-					disabled={item.disabled}
-					checked={item.checked}
-					value={item.value}
-					name={slugName}
-					label={item.label}
-					{color} />
-			{/each}
-		</slot>
-	</div>
-{/if}
+<div class={radioGroupClasses}>
+	<slot>
+		{#each items as item}
+			<Radio
+				disabled={item.disabled}
+				checked={item.checked}
+				value={item.value}
+				name={slugName}
+				label={item.label}
+				{color} />
+		{/each}
+	</slot>
+</div>

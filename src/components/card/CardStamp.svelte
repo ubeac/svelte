@@ -4,7 +4,7 @@
 	import { Icon } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { CardStampPositions, CardStampSizes } from './card.types'
 
@@ -42,12 +42,10 @@
 	)
 </script>
 
-{#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		<slot>
-			<div class={classname('card-stamp-icon')}>
-				<Icon name={icon} />
-			</div>
-		</slot>
-	</div>
-{/if}
+<div use:forwardEvents {...$$restProps} class={classes}>
+	<slot>
+		<div class={classname('card-stamp-icon')}>
+			<Icon name={icon} />
+		</div>
+	</slot>
+</div>

@@ -2,15 +2,13 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('alert-title', undefined, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<h4 use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</h4>
-{/if}
+<h4 use:forwardEvents {...$$restProps} class={classes}>
+	<slot />
+</h4>

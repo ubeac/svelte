@@ -6,7 +6,7 @@
 	import { FormCheckbox, Label } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Items } from '$lib/types'
-	import { classname, condition, createOptions } from '$lib/utils'
+	import { classname, createOptions } from '$lib/utils'
 
 	/**
 	 * Set id for HTML element
@@ -63,26 +63,24 @@
 	}
 </script>
 
-{#if condition($$props)}
-	{#if label}
-		<Label for={id}>{label}</Label>
-	{/if}
-	{#if preview}
-		<ul {...$$restProps} class={classname('form-checkbox-group-preview')} use:forwardEvents>
-			{#each value as item}
-				<li>{item}</li>
-			{/each}
-		</ul>
-	{:else}
-		{#each $options as option}
-			<FormCheckbox
-				class={classes}
-				{inline}
-				{forwardEvents}
-				label={getText(option)}
-				value={isSelected(option, value)}
-				{...$$restProps}
-				on:changed={(event) => onChange(event, option)} />
+{#if label}
+	<Label for={id}>{label}</Label>
+{/if}
+{#if preview}
+	<ul {...$$restProps} class={classname('form-checkbox-group-preview')} use:forwardEvents>
+		{#each value as item}
+			<li>{item}</li>
 		{/each}
-	{/if}
+	</ul>
+{:else}
+	{#each $options as option}
+		<FormCheckbox
+			class={classes}
+			{inline}
+			{forwardEvents}
+			label={getText(option)}
+			value={isSelected(option, value)}
+			{...$$restProps}
+			on:changed={(event) => onChange(event, option)} />
+	{/each}
 {/if}

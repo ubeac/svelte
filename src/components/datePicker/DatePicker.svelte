@@ -5,7 +5,7 @@
 	import moment from 'moment'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Changes display format of the date
@@ -75,6 +75,4 @@
 	})
 </script>
 
-{#if condition($$props)}
-	<input bind:value bind:this={element} use:forwardEvents {...$$restProps} class={classes} />
-{/if}
+<input bind:value bind:this={element} use:forwardEvents {...$$restProps} class={classes} />

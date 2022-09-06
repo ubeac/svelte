@@ -2,7 +2,7 @@
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition, createOptions } from '$lib/utils'
+	import { classname, createOptions } from '$lib/utils'
 
 	/**
 	 * Forward all native Events
@@ -50,25 +50,23 @@
 	}
 </script>
 
-{#if condition($$props)}
-	{#if multiple}
-		<select {value} on:change={change} multiple use:forwardEvents {...$$restProps} class={classes}>
-			{#each items as item}
-				<option value={getKey(item)}>
-					{getText(item)}
-				</option>
-			{/each}
-		</select>
-	{:else}
-		<select bind:value on:change={change} use:forwardEvents {...$$restProps} class={classes}>
-			{#if $$props.placeholder}
-				<option disabled selected value="">{$$props.placeholder}</option>
-			{/if}
-			{#each items as item}
-				<option value={getKey(item)}>
-					{getText(item)}
-				</option>
-			{/each}
-		</select>
-	{/if}
+{#if multiple}
+	<select {value} on:change={change} multiple use:forwardEvents {...$$restProps} class={classes}>
+		{#each items as item}
+			<option value={getKey(item)}>
+				{getText(item)}
+			</option>
+		{/each}
+	</select>
+{:else}
+	<select bind:value on:change={change} use:forwardEvents {...$$restProps} class={classes}>
+		{#if $$props.placeholder}
+			<option disabled selected value="">{$$props.placeholder}</option>
+		{/if}
+		{#each items as item}
+			<option value={getKey(item)}>
+				{getText(item)}
+			</option>
+		{/each}
+	</select>
 {/if}

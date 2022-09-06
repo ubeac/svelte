@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte'
 
 	import type { Colors } from '$lib/types'
-	import { classname, condition, createOptions } from '$lib/utils'
+	import { classname, createOptions } from '$lib/utils'
 
 	import Checkbox from './Checkbox.svelte'
 
@@ -52,17 +52,15 @@
 	$: classes = classname('checkbox-group', { inline }, $$props.class, true)
 </script>
 
-{#if condition($$props)}
-	<div class={classes}>
-		{#each $options as option}
-			<Checkbox
-				label={getText(option)}
-				value={isSelected(option, value)}
-				disabled={option.disabled}
-				{color}
-				on:change={(x) => {
-					change(x.detail, option)
-				}} />
-		{/each}
-	</div>
-{/if}
+<div class={classes}>
+	{#each $options as option}
+		<Checkbox
+			label={getText(option)}
+			value={isSelected(option, value)}
+			disabled={option.disabled}
+			{color}
+			on:change={(x) => {
+				change(x.detail, option)
+			}} />
+	{/each}
+</div>

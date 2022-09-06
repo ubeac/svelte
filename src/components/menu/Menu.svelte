@@ -3,7 +3,7 @@
 
 	import { Popup } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { MenuPlacements } from './menu.types'
 
@@ -27,8 +27,6 @@
 	$: classes = classname('menu', undefined, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<Popup {forwardEvents} trigger={['click']} {offset} {persistence} {placement} {...$$restProps} class={classes}>
-		<slot />
-	</Popup>
-{/if}
+<Popup {forwardEvents} trigger={['click']} {offset} {persistence} {placement} {...$$restProps} class={classes}>
+	<slot />
+</Popup>
