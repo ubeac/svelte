@@ -13,9 +13,9 @@ export default function ifProcessor() {
 			const style = content.match(styleRegex)?.join('')
 			const markup = content.replace(styleRegex, '').replace(scriptRegex, '')
 
-			const hasIfAttributeRegex = /\sif=\{/g
+			const hasIfAttributeRegex = /<[^>]+\sif={[^>]*>/g
 			const hasIfAttribute = markup.match(hasIfAttributeRegex)
-			if (!hasIfAttribute) return;
+			if (!hasIfAttribute) return
 
 			const s = new magicString(markup)
 
