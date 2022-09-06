@@ -5,6 +5,7 @@ import magicString from 'magic-string'
 const styleRegex = /<!--[^]*?-->|<style(\s[^]*?)?>([^]*?)<\/style>/gi
 const scriptRegex = /<!--[^]*?-->|<script(\s[^]*?)?>([^]*?)<\/script>/gi
 
+/** @return {import('svelte-preprocess/dist/types').PreprocessorGroup} */
 export default function ifProcessor() {
 	return {
 		markup({ content, filename }) {
