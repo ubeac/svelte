@@ -9,7 +9,13 @@
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
 
+	import { AlertTitle } from '.'
 	import type { AlertVariants } from './alert.types'
+
+	/**
+	 * Set Alert's color
+	 */
+	export let color: Colors = 'default'
 
 	/**
 	 * Show close button at the end of alert
@@ -32,9 +38,9 @@
 	export let open: boolean = true
 
 	/**
-	 * Set Alert's color
+	 * Title of Alert
 	 */
-	export let type: Colors = 'default'
+	export let title: string | undefined = undefined
 
 	/**
 	 * Set Alert's variant
@@ -47,15 +53,16 @@
 
 	let instance: Alert
 	let ref: HTMLElement
+	let timer: any
 
 	$: classes = classname(
 		'alert',
 		{
 			dismissible,
-			type,
+			color,
 			variant,
 		},
-		['fade', 'show', $$props.class],
+		['fade', open ? 'show' : 'd-none', $$props.class],
 		true
 	)
 
@@ -67,40 +74,44 @@
 	onMount(() => {
 		import('bootstrap').then(({ Alert }) => {
 			instance = new Alert(ref)
-			if (duration >= 0) setTimeout(close, duration)
+			if (duration >= 0) timer = setTimeout(close, duration)
 		})
 	})
 
-	// onDestroy(() => {
-	// 	instance && instance.dispose()
-	// })
+	onDestroy(() => {
+		clearTimeout(timer)
+		instance && instance.dispose()
+	})
 </script>
 
 {#if condition($$props)}
-	{#if open}
-		<div bind:this={ref} use:forwardEvents {...$$restProps} class={classes}>
-			<div class={classname('alert-body')}>
-				{#if $$slots['icon'] || icon}
-					<div class={classname('alert-icon')}>
-						{#if icon}
-							<Icon name={icon} />
-						{:else}
-							<slot name="icon" />
-						{/if}
-					</div>
+	<div bind:this={ref} use:forwardEvents {...$$restProps} class={classes}>
+		<!-- <div class={classname('alert-body')}> -->
+		{#if $$slots['icon'] || icon}
+			<div class={classname('alert-icon')}>
+				{#if icon}
+					<Icon name={icon} />
+				{:else}
+					<slot name="icon" />
 				{/if}
-				<div>
-					<slot />
-				</div>
 			</div>
-			{#if dismissible}
-				<button type="button" on:click={close} class={classname('alert-close')} aria-label="close" />
+		{:else if $$slots['start']}
+			<div class={classname('alert-start')}>
+				<slot name="start" />
+			</div>
+		{/if}
+
+		<div>
+			{#if title}
+				<AlertTitle>
+					{title}
+				</AlertTitle>
 			{/if}
-			{#if $$slots['actions']}
-				<div class={classname('alert-actions')}>
-					<slot name="actions" />
-				</div>
-			{/if}
+			<slot />
 		</div>
-	{/if}
+		<!-- </div> -->
+		{#if dismissible}
+			<button type="button" on:click={close} class={classname('alert-close')} aria-label="close" />
+		{/if}
+	</div>
 {/if}

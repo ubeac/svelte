@@ -1,23 +1,27 @@
 @use 'sass:color';
+$prefix-alert: $prefix + "alert";
 
-.u-alert {
+.#{$prefix-alert} {
 	@extend .alert;
+	display: flex;
 
-	&-body {
-		display: flex;
+	&:not(.#{$prefix-alert}-variant-filled) {
+		.#{$prefix-alert}-body {
+			@extend .text-muted;
+		}
+	}
+
+	&-start {
+		@extend .me-3;
 	}
 
 	&-actions {
 		@extend .btn-list;
+		@extend .mt-2;
 	}
 
 	&-close {
 		@extend .btn-close;
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 2;
-		padding: 1.25rem 1rem;
 	}
 
 	&-dismissible {
@@ -26,11 +30,14 @@
 
 	&-variant-filled {
 		@extend .alert-important;
+
+		.#{$prefix-alert}-title {
+			color: white;
+		}
 	}
 
 	&-icon {
-		color: var(--tblr-alert-color);
-		margin: -0.125rem 1rem -0.125rem 0;
+		@extend .alert-icon;
 	}
 
 	&-title {
@@ -39,12 +46,12 @@
 
 	@each $key,
 	$value in $theme-colors {
-		&-type-#{$key} {
-			border-left-color: #{$value};
-		}
+		&-color-#{$key} {
+			--#{$prefix-alert}-color: #{$value};
 
-		&-type-#{$key}.u-alert-variant-ghost {
-			background-color: #{color.adjust($value, $alpha: -0.9)} !important;
+			&.#{$prefix-alert}-variant-ghost {
+				background-color: #{color.adjust($value, $alpha: -0.9)} !important;
+			}
 		}
 	}
 }
