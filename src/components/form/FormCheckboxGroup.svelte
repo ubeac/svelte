@@ -1,17 +1,19 @@
 <script lang="ts">
 	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
-	import { nanoid } from 'nanoid'
-
-	import { FormCheckbox, Label } from '$lib/components'
+	import { FormCheckbox } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Items } from '$lib/types'
+	import type { Colors, Items } from '$lib/types'
 	import { classname, condition, createOptions } from '$lib/utils'
 
 	/**
-	 * Set id for HTML element
+	 * set color of checkbox
 	 */
-	export let id: string = nanoid(10)
+	export let color: Colors = 'default'
+	/**
+	 * Forward all native Events
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Show Checkboxes in horizontal line
@@ -26,63 +28,46 @@
 	/**
 	 * TODO
 	 */
-	export let key: string | undefined = undefined
-
-	/**
-	 * Set Label for Checkbox groups
-	 */
-	export let label: string | undefined = undefined
-
-	/**
-	 * Show Checked values in Preview mode
-	 */
-	export let preview: boolean = false
+	export let key: string | undefined = 'key'
 
 	/**
 	 * If items is array of objects, you should set text prop to an existing field in objects
 	 */
-	export let text: string | undefined = undefined
+	export let text: string | undefined = 'text'
 
 	/**
 	 * Values of checked items
 	 */
-	export let value: Array<any> = []
+	export let value: any[] = []
 
 	const dispatch = createEventDispatcher()
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	$: ({ options, getKey, getText, isSelected } = createOptions({ items, key, text }))
 
-	$: ({ options, getKey, toValue, getText, isSelected } = createOptions({ items, key, text }))
+	$: classes = classname('form-checkbox-group', undefined, $$props.class, true)
 
-	$: classes = classname('form-checkbox-group', undefined, $$props.class)
-
-	function onChange(event: any, option: any) {
-		value = value?.filter((key) => key !== toValue(getKey(option))) ?? []
-		if (event.detail) value = value.concat([toValue(getKey(option))])
+	function change(checked: any, option: any) {
+		const filtered = value?.filter((key) => key !== getKey(option)) ?? []
+		if (checked) {
+			value = filtered.concat([getKey(option)])
+		} else {
+			value = filtered
+		}
 		dispatch('changed', value)
 	}
 </script>
 
 {#if condition($$props)}
-	{#if label}
-		<Label for={id}>{label}</Label>
-	{/if}
-	{#if preview}
-		<ul {...$$restProps} class={classname('form-checkbox-group-preview')} use:forwardEvents>
-			{#each value as item}
-				<li>{item}</li>
-			{/each}
-		</ul>
-	{:else}
-		{#each $options as option}
-			<FormCheckbox
-				class={classes}
-				{inline}
-				{forwardEvents}
-				label={getText(option)}
-				value={isSelected(option, value)}
-				{...$$restProps}
-				on:changed={(event) => onChange(event, option)} />
-		{/each}
-	{/if}
+	{#each $options as option}
+		<FormCheckbox
+			class={classes}
+			{inline}
+			{color}
+			{forwardEvents}
+			label={getText(option)}
+			value={isSelected(option, value)}
+			disabled={option.disabled}
+			{...$$restProps}
+			on:changed={(event) => change(event.detail, option)} />
+	{/each}
 {/if}
