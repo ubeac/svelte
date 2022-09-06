@@ -1,60 +1,44 @@
 import { parse, walk } from 'svelte/compiler'
 
-function insertAt(string, index, text) {
-	return string.substring(0, index) + text + string.substring(index)
-}
+import magicString from 'magic-string'
 
-function removeAt(string, from, to) {
-	return string.substring(0, from) + string.substring(to)
-}
-
-function replaceAt(string, index, text) {
-	return string.substring(0, index) + text + string.substring(index + text.length)
-}
-
-// we can also use prettier to generate svelte code
-//  https://gist.github.com/mizchi/d9be0ec969203f32f66e5f6eda9decb9
+const styleRegex = /<!--[^]*?-->|<style(\s[^]*?)?>([^]*?)<\/style>/gi
+const scriptRegex = /<!--[^]*?-->|<script(\s[^]*?)?>([^]*?)<\/script>/gi
 
 export default function ifProcessor() {
 	return {
-		markup: ({ content }) => {
-			let result = content
+		markup({ content, filename }) {
+			// split markup, scripts and styles
+			const script = content.match(scriptRegex)?.join('')
+			const style = content.match(styleRegex)?.join('')
+			const markup = content.replace(styleRegex, '').replace(scriptRegex, '')
 
-			const ast = parse(content)
+			const s = new magicString(markup)
+
+			const ast = parse(markup)
 
 			walk(ast.html, {
 				enter(node, parent) {
-
 					if (node.type === 'Attribute' && node.name === 'if') {
-						const value = `{#if ${content.substring(node.start + 4, node.end - 1)}}`
+						const openTag = `{#if ${markup.substring(node.start + 4, node.end - 1)}}`
+						const closeTag = `{/if}`
 
-                        /**
-                         * <div if={something}>...</div> =====> <div>...</div>
-                         */
-						result = removeAt(result, node.start - 1, node.end)
+						s.prependLeft(parent.start, openTag)
 
-                        /**
-                         * <div>...</div> =====> {#if something}<div>...</div>
-                         */
-						result = insertAt(result, parent.start, value)
+						s.remove(node.start - 1, node.end)
 
-						// TODO find better solution 
-                        // '»' is a special character which we later replace all of '»' with something else
-                        /**
-                         * {#if something}<div>...</div> ====> {#if something}<div>...</div»
-                         */
-						result = replaceAt(result, parent.end - 1, '»')
+						s.appendRight(parent.end, closeTag)
 					}
 				},
 			})
 
-            /**
-             *  {#if something}<div>...</div» =====> {#if something}<div>...</div>{/if}
-             */
-			result = result.replace(/»/g, '>{/if}')
+			// attach script and style tags
+			if (script) s.prependLeft(0, script)
+			if (style) s.appendRight(s.length(), style)
 
 			return {
-				code: result,
+				code: s.toString(),
+				map: s.generateMap({ hires: true, file: filename }),
 			}
 		},
 	}

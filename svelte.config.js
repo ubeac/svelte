@@ -2,7 +2,8 @@ import preprocess from 'svelte-preprocess'
 
 import adapter from '@sveltejs/adapter-auto'
 import path from 'path'
-import ifProcessor from 'scripts/if.processor'
+
+import ifProcessor from './scripts/if.processor.js'
 
 /**
  * @type {import('@sveltejs/kit').Config}
