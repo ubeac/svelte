@@ -32,7 +32,7 @@ const config = {
 		},
 		package: {
 			files(file) {
-				const items = ['index.ts', 'styles.css', 'components', 'directives', 'scss', 'types', 'utils']
+				const items = ['index.d.ts', 'index.ts', 'styles.css', 'components', 'directives', 'scss', 'types', 'utils']
 				return items.some((item) => file.startsWith(item))
 			},
 		},
