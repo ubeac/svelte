@@ -5,8 +5,9 @@
 	import type { Modal } from 'bootstrap'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition, requestAnimationFrame } from '$lib/utils'
-	import type { DialogPlacements, DialogSizes } from './dialog.types';
+	import { classname, requestAnimationFrame } from '$lib/utils'
+
+	import type { DialogPlacements, DialogSizes } from './dialog.types'
 
 	/**
 	 * Make page's color Dimmer
@@ -78,11 +79,9 @@
 	onDestroy(unbind)
 </script>
 
-{#if condition($$props)}
-	<div bind:this={element} use:forwardEvents {...$$restProps} class={classes}>
-		<!-- TODO: remove .modal-dialog -->
-		<div class={classname('dialog-container', undefined, 'modal-dialog')}>
-			<slot />
-		</div>
+<div bind:this={element} use:forwardEvents {...$$restProps} class={classes}>
+	<!-- TODO: remove .modal-dialog -->
+	<div class={classname('dialog-container', undefined, 'modal-dialog')}>
+		<slot />
 	</div>
-{/if}
+</div>

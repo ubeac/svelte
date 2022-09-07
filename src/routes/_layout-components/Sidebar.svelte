@@ -64,4 +64,10 @@
 			<DropdownItem icon="package" href="/components/">(TODO) Email</DropdownItem>
 		</DropdownMenu>
 	</Dropdown>
+	<Dropdown>
+		<DropdownToggle>Common</DropdownToggle>
+		<DropdownMenu>
+			<DropdownItem href="/common/if">if</DropdownItem>
+		</DropdownMenu>
+	</Dropdown>
 </Nav>

@@ -7,8 +7,9 @@
 
 	import { CarouselButton, CarouselIndicator, CarouselIndicators } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
-	import type { CarouselContext, CarouselTransitions } from './carousel.types';
+	import { classname } from '$lib/utils'
+
+	import type { CarouselContext, CarouselTransitions } from './carousel.types'
 
 	/**
 	 * Shows next and previous buttons
@@ -123,21 +124,19 @@
 	onDestroy(unbind)
 </script>
 
-{#if condition($$props)}
-	<div bind:this={element} use:forwardEvents {...$$restProps} class={classes}>
-		{#if buttons}
-			<CarouselButton direction="prev" />
-			<CarouselButton direction="next" />
-		{/if}
-		{#if indicators}
-			<CarouselIndicators>
-				{#each items as item (item)}
-					<CarouselIndicator {item} />
-				{/each}
-			</CarouselIndicators>
-		{/if}
-		<div class={classname('carousel-body')}>
-			<slot />
-		</div>
+<div bind:this={element} use:forwardEvents {...$$restProps} class={classes}>
+	{#if buttons}
+		<CarouselButton direction="prev" />
+		<CarouselButton direction="next" />
+	{/if}
+	{#if indicators}
+		<CarouselIndicators>
+			{#each items as item (item)}
+				<CarouselIndicator {item} />
+			{/each}
+		</CarouselIndicators>
+	{/if}
+	<div class={classname('carousel-body')}>
+		<slot />
 	</div>
-{/if}
+</div>

@@ -6,9 +6,9 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('card-title', undefined, $$props.class, true)
+	$: classes = classname('alert-actions', undefined, $$props.class)
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<h4 use:forwardEvents {...$$restProps} class={classes}>
 	<slot />
-</div>
+</h4>

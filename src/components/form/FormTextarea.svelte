@@ -5,7 +5,7 @@
 
 	import { FormGroup, Icon, Label, Spinner, Textarea } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Set column width of Textarea
@@ -47,25 +47,23 @@
 	$: classes = classname('form-textarea', undefined, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<FormGroup {col} class={classes}>
-		<svelte:fragment slot="label">
-			{#if label}
-				<Label for={id} {required}>{label}</Label>
-			{/if}
-		</svelte:fragment>
-		<svelte:fragment slot="inner:start">
-			{#if icon}
-				<Icon name={icon} />
-			{/if}
-			<slot name="inner:start" />
-		</svelte:fragment>
-		<Textarea bind:value {id} {forwardEvents} {...$$restProps} />
-		<svelte:fragment slot="inner:end">
-			{#if loading}
-				<Spinner />
-			{/if}
-			<slot name="inner:end" />
-		</svelte:fragment>
-	</FormGroup>
-{/if}
+<FormGroup {col} class={classes}>
+	<svelte:fragment slot="label">
+		{#if label}
+			<Label for={id} {required}>{label}</Label>
+		{/if}
+	</svelte:fragment>
+	<svelte:fragment slot="inner:start">
+		{#if icon}
+			<Icon name={icon} />
+		{/if}
+		<slot name="inner:start" />
+	</svelte:fragment>
+	<Textarea bind:value {id} {forwardEvents} {...$$restProps} />
+	<svelte:fragment slot="inner:end">
+		{#if loading}
+			<Spinner />
+		{/if}
+		<slot name="inner:end" />
+	</svelte:fragment>
+</FormGroup>

@@ -3,7 +3,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -32,8 +32,6 @@
 	)
 </script>
 
-{#if condition($$props)}
-	<span use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</span>
-{/if}
+<span use:forwardEvents {...$$restProps} class={classes}>
+	<slot />
+</span>

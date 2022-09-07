@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Mark this as an active Breadcrumb item
@@ -19,10 +19,8 @@
 	$: classes = classname('breadcrumb-item', { active }, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<li use:forwardEevnts {...$$restProps} class={classes}>
-		<a {href}>
-			<slot />
-		</a>
-	</li>
-{/if}
+<li use:forwardEevnts {...$$restProps} class={classes}>
+	<a {href}>
+		<slot />
+	</a>
+</li>

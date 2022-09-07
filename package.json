@@ -1,6 +1,6 @@
 {
 	"name": "@ubeac/svelte",
-	"version": "0.0.3-next.9",
+	"version": "0.0.3-next.11",
 	"type": "module",
 	"svelte": "index.js",
 	"publishConfig": {
@@ -37,6 +37,7 @@
 		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
 		"@types/bootstrap": "^5.1.10",
 		"@types/luxon": "^2.3.2",
+		"magic-string": "^0.26.3",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
 		"sass": "^1.51.0",
