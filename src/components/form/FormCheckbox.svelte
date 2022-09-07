@@ -1,10 +1,15 @@
 <script lang="ts">
-	import { createEventDispatcher, get_current_component } from 'svelte/internal'
+	import { get_current_component } from 'svelte/internal'
 
 	import { Checkbox } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname, condition } from '$lib/utils'
+
+	/**
+	 * TODO
+	 */
+	export let checked: boolean = false
 
 	/**
 	 * set color of checkbox
@@ -25,6 +30,11 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
+	 * TODO
+	 */
+	export let group: any = []
+
+	/**
 	 * Show multiple Checkboxes in same horozontal line
 	 */
 	export let inline: boolean = false
@@ -39,20 +49,12 @@
 	 */
 	export let value: boolean = false
 
-	const dispatch = createEventDispatcher()
-
 	$: classes = classname('form-checkbox', { inline }, $$props.class, true)
 </script>
 
 {#if condition($$props)}
 	<div class={classes}>
-		<Checkbox
-			bind:value
-			{forwardEvents}
-			{...$$restProps}
-			{color}
-			{label}
-			on:change={(event) => dispatch('changed', event.detail)} />
+		<Checkbox bind:group bind:checked {forwardEvents} {label} {value} {color} />
 		{#if description}
 			<span class={classname('form-checkbox-description', { descriptionColor })}>
 				{description}
