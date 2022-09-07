@@ -3,7 +3,7 @@ import preprocess from 'svelte-preprocess'
 import adapter from '@sveltejs/adapter-auto'
 import path from 'path'
 
-import ifProcessor from './scripts/if.processor.js'
+import ifProcessor from './src/preprocessors/if.js'
 
 /**
  * @type {import('@sveltejs/kit').Config}
@@ -32,7 +32,17 @@ const config = {
 		},
 		package: {
 			files(file) {
-				const items = ['index.d.ts', 'index.ts', 'styles.css', 'components', 'directives', 'scss', 'types', 'utils']
+				const items = [
+					'index.d.ts',
+					'index.ts',
+					'styles.css',
+					'components',
+					'preprocessors',
+					'directives',
+					'scss',
+					'types',
+					'utils',
+				]
 				return items.some((item) => file.startsWith(item))
 			},
 		},

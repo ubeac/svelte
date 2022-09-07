@@ -14,36 +14,34 @@ export default function ifProcessor() {
 			const style = content.match(styleRegex)?.join('')
 			const markup = content.replace(styleRegex, '').replace(scriptRegex, '')
 
-			const hasIfAttributeRegex = /<[^>]+\sif={[^>]*>/g
-			const hasIfAttribute = markup.match(hasIfAttributeRegex)
-			if (!hasIfAttribute) return
+			const hasAttributeRegex = /<[^>]+\sif={[^>]*>/g
+			const hasAttribute = markup.match(hasAttributeRegex)
+			if (!hasAttribute) return
 
-			const s = new magicString(markup)
+			const result = new magicString(markup)
 
 			const ast = parse(markup)
 
 			walk(ast.html, {
 				enter(node, parent) {
-					if (node.type === 'Attribute' && node.name === 'if') {
-						const openTag = `{#if ${markup.substring(node.start + 4, node.end - 1)}}`
-						const closeTag = `{/if}`
+					if (node.type !== 'Attribute' || node.name !== 'if') return
 
-						s.prependLeft(parent.start, openTag)
+					const openTag = `{#if ${markup.substring(node.start + 4, node.end - 1)}}`
+					const closeTag = `{/if}`
 
-						s.remove(node.start - 1, node.end)
-
-						s.appendRight(parent.end, closeTag)
-					}
+					result.prependLeft(parent.start, openTag)
+					result.remove(node.start - 1, node.end)
+					result.appendRight(parent.end, closeTag)
 				},
 			})
 
 			// attach script and style tags
-			if (script) s.prependLeft(0, script)
-			if (style) s.appendRight(s.length(), style)
+			if (script) result.prependLeft(0, script)
+			if (style) result.appendRight(result.length(), style)
 
 			return {
-				code: s.toString(),
-				map: s.generateMap({ hires: true, file: filename }),
+				code: result.toString(),
+				map: result.generateMap({ hires: true, file: filename }),
 			}
 		},
 	}
