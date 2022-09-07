@@ -4,7 +4,7 @@
 	import { Label } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Color of Switch
@@ -28,15 +28,13 @@
 	$: labelClasses = classname('switch-label', undefined, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<Label class={switchClasses}>
-		<input type="checkbox" bind:checked={value} use:forwardEvents {...$$restProps} class={inputClasses} />
-		<span class={labelClasses}>
-			{#if label}
-				{label}
-			{:else}
-				<slot />
-			{/if}
-		</span>
-	</Label>
-{/if}
+<Label class={switchClasses}>
+	<input type="checkbox" bind:checked={value} use:forwardEvents {...$$restProps} class={inputClasses} />
+	<span class={labelClasses}>
+		{#if label}
+			{label}
+		{:else}
+			<slot />
+		{/if}
+	</span>
+</Label>

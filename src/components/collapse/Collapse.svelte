@@ -6,7 +6,7 @@
 	import { nanoid } from 'nanoid'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Forward all native events
@@ -87,14 +87,12 @@
 	})
 </script>
 
-{#if condition($$props)}
-	<div
-		aria-labelledby="#collapse-{id}-toggler"
-		bind:this={element}
-		id="collapse-{id}"
-		use:forwardEvents
-		{...$$restProps}
-		class={classes}>
-		<slot />
-	</div>
-{/if}
+<div
+	aria-labelledby="#collapse-{id}-toggler"
+	bind:this={element}
+	id="collapse-{id}"
+	use:forwardEvents
+	{...$$restProps}
+	class={classes}>
+	<slot />
+</div>

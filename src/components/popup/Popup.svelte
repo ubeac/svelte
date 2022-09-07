@@ -5,7 +5,6 @@
 	import type { Instance } from '@popperjs/core'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { condition } from '$lib/utils'
 
 	import type { PopupPlacements } from './popup.types'
 
@@ -134,8 +133,6 @@
 	onDestroy(unbind)
 </script>
 
-{#if condition($$props)}
-	<div bind:this={ref} hidden use:forwardEvents {...$$restProps}>
-		<slot />
-	</div>
-{/if}
+<div bind:this={ref} hidden use:forwardEvents {...$$restProps}>
+	<slot />
+</div>

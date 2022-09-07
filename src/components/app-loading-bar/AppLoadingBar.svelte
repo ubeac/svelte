@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { tweened } from 'svelte/motion'
 	import { get_current_component } from 'svelte/internal'
+	import { tweened } from 'svelte/motion'
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname,condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * The Color of loading bar
@@ -103,8 +103,6 @@
 	}
 </script>
 
-{#if condition($$props)}
-	<div class={classes} use:forwardEvents>
-		<div style="width: {width}%;" class={classname('app-loading-bar-body')} />
-	</div>
-{/if}
+<div class={classes} use:forwardEvents>
+	<div style="width: {width}%;" class={classname('app-loading-bar-body')} />
+</div>

@@ -5,7 +5,7 @@
 	import { nanoid } from 'nanoid'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Id of Accordion
@@ -28,8 +28,6 @@
 	$: context.set({ id, open })
 </script>
 
-{#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</div>
-{/if}
+<div use:forwardEvents {...$$restProps} class={classes}>
+	<slot />
+</div>

@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { InputSizes } from './input.types'
 
@@ -39,6 +39,4 @@
 	$: classes = classname('input', { size, disabled, readOnly }, $$props.class, true)
 </script>
 
-{#if condition($$props)}
-	<input bind:value use:forwardEvents {...$$restProps} class={classes} {placeholder} {readOnly} {disabled} />
-{/if}
+<input bind:value use:forwardEvents {...$$restProps} class={classes} {placeholder} {readOnly} {disabled} />

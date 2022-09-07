@@ -5,7 +5,7 @@
 	import type { Tab } from 'bootstrap'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import { Icon } from '../icon'
 	import type { TabType } from './tab.types'
@@ -47,21 +47,19 @@
 	$: classes = classname('tab-item', {}, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<li use:forwardEvents {...$$restProps} class={classes}>
-		<button
-			bind:this={element}
-			on:click={show}
-			data-bs-target="#{tab.id}"
-			class={classname('tab-item-link', null, { active: tab.active, disabled: tab.disabled })}>
-			{#if tab.icon}
-				<div class={classname('tab-item-icon')}>
-					<Icon name={tab.icon} />
-				</div>
-			{/if}
-			{#if tab.name}
-				{tab.name}
-			{/if}
-		</button>
-	</li>
-{/if}
+<li use:forwardEvents {...$$restProps} class={classes}>
+	<button
+		bind:this={element}
+		on:click={show}
+		data-bs-target="#{tab.id}"
+		class={classname('tab-item-link', null, { active: tab.active, disabled: tab.disabled })}>
+		{#if tab.icon}
+			<div class={classname('tab-item-icon')}>
+				<Icon name={tab.icon} />
+			</div>
+		{/if}
+		{#if tab.name}
+			{tab.name}
+		{/if}
+	</button>
+</li>

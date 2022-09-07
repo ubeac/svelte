@@ -120,4 +120,5 @@
 		You should add the script tag for google map in head section of your html
 	</div>
 {/if}
+
 <input bind:this={element} use:forwardEvents bind:value={title} {...$$restProps} class={classes} />
