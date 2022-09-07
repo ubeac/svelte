@@ -6,7 +6,6 @@ import path from 'path'
 import ifProcessor from './src/preprocessors/if.js'
 import previewProcessor from './src/preprocessors/preview.js'
 
-
 /**
  * @type {import('@sveltejs/kit').Config}
  */
@@ -17,15 +16,15 @@ const config = {
 		ifProcessor(),
 		previewProcessor(),
 		preprocess({
-				scss: {
-					importer(url) {
-						if (url[0] === '~') {
-							url = path.resolve('node_modules', url.substr(1))
-						}
-						return { file: url }
-					},
+			scss: {
+				importer(url) {
+					if (url[0] === '~') {
+						url = path.resolve('node_modules', url.substr(1))
+					}
+					return { file: url }
 				},
-			}),
+			},
+		}),
 	],
 
 	kit: {
