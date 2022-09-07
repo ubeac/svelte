@@ -10,8 +10,9 @@
 	 * Set the color of checkbox when it is checked
 	 */
 	export let color: Colors = 'primary'
+
 	/**
-	 * TODO
+	 * Binding result of selected items
 	 */
 	export let group: any = []
 
@@ -21,14 +22,14 @@
 	export let inline: boolean = false
 
 	/**
-	 * The key in the items that each checkbox is related to
-	 */
-	export let key: string = 'key'
-
-	/**
 	 * Checkbox group items
 	 */
 	export let items: any[] = []
+
+	/**
+	 * The key in the items that each checkbox is related to
+	 */
+	export let key: string = 'key'
 
 	/**
 	 * Set the field that should be used as each checkbox label

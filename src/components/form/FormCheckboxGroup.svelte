@@ -10,13 +10,14 @@
 	 * set color of checkbox
 	 */
 	export let color: Colors = 'default'
+
 	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * TODO
+	 * Binding result of selected items
 	 */
 	export let group: any = []
 
@@ -26,12 +27,12 @@
 	export let inline: boolean = false
 
 	/**
-	 * TODO
+	 * Checkbox group items
 	 */
 	export let items: Items = undefined
 
 	/**
-	 * TODO
+	 * The key in the items that each checkbox is related to
 	 */
 	export let key: string | undefined = 'key'
 

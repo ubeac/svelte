@@ -4,6 +4,8 @@ $prefix-form-checkbox : $prefix +'form-checkbox';
 
     &-description {
         padding-left: 23px;
+        position: relative;
+        top: -6px;
     }
 
     &-inline {

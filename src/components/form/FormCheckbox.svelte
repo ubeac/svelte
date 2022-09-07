@@ -7,18 +7,20 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 *  Checked status of checkbox
 	 */
 	export let checked: boolean = false
 
 	/**
-	 * set color of checkbox
+	 * Set color of checkbox
 	 */
 	export let color: Colors = 'default'
+
 	/**
 	 * Description of checkbox
 	 */
 	export let description: string | undefined = undefined
+
 	/**
 	 * Description of checkbox
 	 */
@@ -30,7 +32,7 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * TODO
+	 *  Binding result of selected items
 	 */
 	export let group: any = []
 

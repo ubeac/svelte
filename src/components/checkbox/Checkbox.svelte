@@ -6,7 +6,7 @@
 	import { classname, condition } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Checked status of checkbox
 	 */
 	export let checked: boolean = false
 
@@ -16,12 +16,12 @@
 	export let color: Colors = 'primary'
 
 	/**
-	 * TODO
+	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * TODO
+	 * Binding result of selected items
 	 */
 	export let group: any = []
 
@@ -35,9 +35,9 @@
 	 */
 	export let value: any
 
-	$: checkboxClasses = classname('checkbox', undefined, $$props.class)
-	$: inputClasses = classname('checkbox-input', { color }, $$props.class)
-	$: labelClasses = classname('checkbox-label', undefined, $$props.class)
+	$: checkboxClasses = classname('checkbox', undefined, $$props.class, true)
+	$: inputClasses = classname('checkbox-input', { color }, $$props.class, true)
+	$: labelClasses = classname('checkbox-label', undefined, $$props.class, true)
 
 	$: updateChekbox(group)
 	$: updateGroup(checked)
