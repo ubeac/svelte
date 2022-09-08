@@ -3,6 +3,7 @@
 
 	import InputDefault from './InputDefault.svelte'
 	import InputDisabled from './InputDisabled.svelte'
+	import InputPlaceholder from './InputPlaceholder.svelte'
 	import InputReadOnly from './InputReadOnly.svelte'
 	import InputSizes from './InputSizes.svelte'
 	import InputTypes from './InputTypes.svelte'
@@ -41,8 +42,8 @@
 
 <h2>Placeholder</h2>
 <p>Inputs can have placeholders</p>
-<Preview src="./InputValue.svelte">
-	<InputValue />
+<Preview src="./InputPlaceholder.svelte">
+	<InputPlaceholder />
 </Preview>
 
 <h2>ReadOnly</h2>
