@@ -1,14 +1,16 @@
 <script lang="ts">
-	import { Button, Card } from '$lib/components'
+	import { Alert, Button, Card } from '$lib/components'
 
 	let show: boolean = false
 	let count: number = 0
+	let showAlert: boolean = false
 
 	function toggle() {
 		show = !show
 	}
 </script>
 
+<Button on:click={() => (showAlert = !showAlert)}>Toggle Alert</Button>
 <Button on:click={toggle}>Toggle</Button>
 <h1 if={2 + 2 == 4}>Hello World!</h1>
 <h1 if={2 + 2 == 4}>
@@ -26,3 +28,8 @@
 	Hello World!
 </h1>
 <h1 if={2 + 2 == 4}>Hello World!</h1>
+
+<Alert if={showAlert}>
+	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat ratione quo modi rerum quod quaerat voluptatibus vero
+	consequuntur provident, minus similique neque id! Atque necessitatibus ex vero, tenetur quibusdam officia?
+</Alert>
