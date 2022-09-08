@@ -67,7 +67,7 @@ export default function previewProcessor() {
 					result.appendRight(index, ' markup={`' + previewMarkup + '`}')
 
 					if (previewScript) {
-						const escaped = previewScript.replace(/\$/g, '\\$').replace(/\`/g, '\\`')
+						const escaped = previewScript.replace(/\$\{/g, '\\${').replace(/\`/g, '\\`')
 
 						result.appendRight(index, ' script={`' + escaped + '`}')
 					}
