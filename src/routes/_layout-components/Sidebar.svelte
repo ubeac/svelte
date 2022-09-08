@@ -47,6 +47,7 @@
 			<DropdownItem icon="star" href="/components/badges">Badges</DropdownItem>
 			<DropdownItem icon="star" href="/components/buttons">Buttons</DropdownItem>
 			<DropdownItem icon="star" href="/components/cards">Cards</DropdownItem>
+			<DropdownItem icon="star" href="/components/inputs">Inputs</DropdownItem>
 		</DropdownMenu>
 	</Dropdown>
 	<Dropdown>
