@@ -1,6 +1,6 @@
 import preprocess from 'svelte-preprocess'
 
-import adapter from '@sveltejs/adapter-auto'
+import adapter from '@sveltejs/adapter-static'
 import path from 'path'
 
 import ifProcessor from './src/preprocessors/if.js'
@@ -32,21 +32,21 @@ const config = {
 		files: {
 			lib: 'src',
 		},
-		package: {
-			files(file) {
-				const items = [
-					'index.d.ts',
-					'index.ts',
-					'styles.css',
-					'components',
-					'preprocessors',
-					'directives',
-					'scss',
-					'types',
-					'utils',
-				]
-				return items.some((item) => file.startsWith(item))
-			},
+	},
+	package: {
+		files(file) {
+			const items = [
+				'index.d.ts',
+				'index.ts',
+				'styles.css',
+				'components',
+				'preprocessors',
+				'directives',
+				'scss',
+				'types',
+				'utils',
+			]
+			return items.some((item) => file.startsWith(item))
 		},
 	},
 }

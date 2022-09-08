@@ -1,5 +1,5 @@
 <script>
-	import Example from '../_layout-components/Example.svelte'
+	import Example from '../../_layout-components/Example.svelte'
 
 	import { Alert, Badge, Button, Card } from '$lib/components'
 
