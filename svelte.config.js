@@ -32,6 +32,7 @@ const config = {
 		files: {
 			lib: 'src',
 		},
+		trailingSlash: 'always',
 	},
 	package: {
 		files(file) {
