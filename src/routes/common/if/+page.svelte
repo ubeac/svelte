@@ -22,8 +22,8 @@ You can show or hide a Component/Element using if prop, it works on all Componen
 </Preview>
 
 <h2>Using with DOM Elements</h2>
+<p>You can also use it with all native HTML elements</p>
 
-You can also use it with all native HTML elements
 <Preview src="./IfNative.svelte">
 	<div class="example-if">
 		<IfNative />
