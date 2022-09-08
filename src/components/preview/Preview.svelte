@@ -29,9 +29,12 @@
 	export let style: string | undefined = undefined
 
 	/**
-	 * address of example file
+	 * (Required) relative address of example file
+	 * @example
+	 *	src="./exampleFile.svelte"
+	 *	src="../lib/testFile.svelte"
 	 */
-	export let src: string | undefined = undefined
+	export let src: string
 
 	// TODO: add github link support
 	// $: githubURL = github_prefix + path.substring(path.indexOf('src/routes'))
@@ -41,7 +44,7 @@
 
 	function setChecked() {
 		copyIcon = 'check'
-		setTimeout(() => (copyIcon = 'copy'), 1000)
+		setTimeout(() => (copyIcon = 'copy'), 2000)
 	}
 
 	$: markupHighlighted = Prism.highlight(markup ?? '', Prism.languages.svelte, 'svelte')
