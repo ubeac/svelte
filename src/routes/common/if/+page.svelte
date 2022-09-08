@@ -1,14 +1,9 @@
 <script>
-	import Example from '../../_layout-components/Example.svelte'
-
-	import { Badge, Button, Preview } from '$lib/components'
+	import { Preview } from '$lib/components'
 	import IfNative from './IfNative.svelte'
 	import IfComponents from './IfComponents.svelte'
 	import IfMultiline from './IfMultiline.svelte'
 
-	let show = false
-	let show2 = false
-	let show3 = false
 </script>
 
 <h1>If prop</h1>
