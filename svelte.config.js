@@ -4,6 +4,7 @@ import adapter from '@sveltejs/adapter-auto'
 import path from 'path'
 
 import ifProcessor from './src/preprocessors/if.js'
+import previewProcessor from './src/preprocessors/preview.js'
 
 /**
  * @type {import('@sveltejs/kit').Config}
@@ -13,6 +14,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		ifProcessor(),
+		previewProcessor(),
 		preprocess({
 			scss: {
 				importer(url) {
