@@ -1,7 +1,7 @@
 <script>
 	import { Button, Icon } from '$lib/components'
 	import { onMount } from 'svelte'
-	import Example from '../_layout-components/Example.svelte'
+	import Example from '../../_layout-components/Example.svelte'
 
 	let counter = 0
 

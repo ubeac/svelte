@@ -1,11 +1,9 @@
 <script>
-	import { App, Avatar, Collapse, CollapseToggler, Icon } from '$lib/components'
+	import { Avatar, Collapse, CollapseToggler, Icon } from '$lib/components'
 	import '../styles.css'
 	import Nav from './_layout-components/Nav.svelte'
 	import Sidebar from './_layout-components/Sidebar.svelte'
 
-	let alignItems = 'center'
-	let show = false
 </script>
 
 <div class="page">
