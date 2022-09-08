@@ -62,6 +62,8 @@ export default function previewProcessor() {
 					result.remove(srcAttribute.start - 1, srcAttribute.end)
 
 					const index = node.start + node.name.length + 1
+
+					result.appendRight(index, ` src="${absoluteSrc}"`)
 					result.appendRight(index, ' markup={`' + previewMarkup + '`}')
 
 					if (previewScript) {
