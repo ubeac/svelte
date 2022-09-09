@@ -5,7 +5,6 @@
 	import DropdownMenu from './DropdownMenu.svelte'
 	import DropdownToggle from './DropdownToggle.svelte'
 	import Nav from './Nav.svelte'
-
 </script>
 
 <Nav>
@@ -18,6 +17,7 @@
 			<DropdownItem icon="star" href="/components/buttons">Buttons</DropdownItem>
 			<DropdownItem icon="star" href="/components/cards">Cards</DropdownItem>
 			<DropdownItem icon="star" href="/components/datepickers">DatePickers</DropdownItem>
+			<DropdownItem icon="star" href="/components/grid">Grid</DropdownItem>
 			<DropdownItem icon="star" href="/components/inputs">Inputs</DropdownItem>
 		</DropdownMenu>
 	</Dropdown>
