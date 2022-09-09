@@ -1,35 +1,52 @@
 <script lang="ts">
-	import { Alert, Button, Card } from '$lib/components'
+	import { FormRadio, Radio, RadioGroup } from '$lib/components'
 
-	let show: boolean = false
-	let count: number = 0
-	let showAlert: boolean = false
+	let items = [
+		{
+			label: 'apple',
+			value: 'apple',
+		},
+		{
+			label: 'banana',
+			value: 'banana',
+		},
+		{
+			label: 'melon',
+			value: 'melon',
+		},
+		{
+			label: 'orange',
+			value: 'orange',
+		},
+	]
 
-	function toggle() {
-		show = !show
+	let groupSelected: any = null
+	let singleSelected: any = null
+	let formSelected: any = null
+
+	function changeGroup(e: any) {
+		const { value } = e.target
+		groupSelected = value
+	}
+
+	function changeSingle(e: any) {
+		const { value } = e.target
+		singleSelected = value
+	}
+	function changeForm(e: any) {
+		const { value } = e.target
+		formSelected = value
 	}
 </script>
 
-<Button on:click={() => (showAlert = !showAlert)}>Toggle Alert</Button>
-<Button on:click={toggle}>Toggle</Button>
-<h1 if={2 + 2 == 4}>Hello World!</h1>
-<h1 if={2 + 2 == 4}>
-	<div if={show}>
-		click button
+<h2>RadioGroup: {groupSelected}</h2>
+<RadioGroup {items} on:change={changeGroup} />
 
-		<Button on:click={() => (count = count + 1)}>count {count}</Button>
-		<Card if={count > 'abc'.length}>
-			it Wroks (reset button will appear if count > 5)
-			<Button if={count > 5} on:click={() => (count = 0)}>Reset</Button>
-		</Card>
+<h2>Single Radio: {singleSelected}</h2>
+<Radio label="radio-1" on:change={changeSingle} value="radio-1" checked={singleSelected === 'radio-1'} />
+<Radio label="radio-2" on:change={changeSingle} value="radio-2" checked={singleSelected === 'radio-2'} />
 
-		test
-	</div>
-	Hello World!
-</h1>
-<h1 if={2 + 2 == 4}>Hello World!</h1>
-
-<Alert if={showAlert}>
-	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat ratione quo modi rerum quod quaerat voluptatibus vero
-	consequuntur provident, minus similique neque id! Atque necessitatibus ex vero, tenetur quibusdam officia?
-</Alert>
+<h2>FormRadio: {formSelected}</h2>
+<FormRadio label="form-radio-1" value="form-radio-1" on:change={changeForm} checked={formSelected === 'form-radio-1'} />
+<FormRadio label="form-radio-2" value="form-radio-2" on:change={changeForm} checked={formSelected === 'form-radio-2'} />
+<FormRadio label="form-radio-3" value="form-radio-3" on:change={changeForm} checked={formSelected === 'form-radio-3'} />

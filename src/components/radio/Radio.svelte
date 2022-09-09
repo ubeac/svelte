@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte'
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
@@ -9,50 +8,40 @@
 	/**
 	 * Forward all native Events
 	 */
-	let forwardEvents = forwardEventsBuilder(get_current_component())
-	const dispatch = createEventDispatcher()
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Radio checked status
 	 */
 	export let checked: boolean | undefined = undefined
+
 	/**
 	 * Radio color
 	 */
 	export let color: Colors = 'default'
+
 	/**
 	 * Radio label
 	 */
 	export let label: string | undefined = undefined
+
 	/**
 	 * Radio name
 	 */
 	export let name: string | undefined = undefined
+
 	/**
 	 * Radio value
 	 */
-	export let value: boolean = false
+	export let value: any = false
 
-	$: radioClasses = classname('radio', { checked }, $$props.class)
-	$: inputClasses = classname('radio-input', { color }, $$props.class)
-	$: labelClasses = classname('radio-label', undefined, $$props.class)
-
-	function change(event: any) {
-		value = event.target.value
-		dispatch('change', value)
-	}
+	$: radioClasses = classname('radio', { checked }, $$props.class, true)
+	$: inputClasses = classname('radio-input', { color }, $$props.class, true)
+	$: labelClasses = classname('radio-label', undefined, $$props.class, true)
 </script>
 
 <label class={radioClasses}>
-	<input
-		{checked}
-		type="radio"
-		{name}
-		{value}
-		use:forwardEvents
-		{...$$restProps}
-		class={inputClasses}
-		on:change={change} />
+	<input {checked} type="radio" {label} {name} {value} use:forwardEvents {...$$restProps} class={inputClasses} />
 	<span class={labelClasses}>
 		{#if label}
 			{label}

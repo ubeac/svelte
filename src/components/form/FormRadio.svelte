@@ -10,10 +10,12 @@
 	 * Color of Radio button
 	 */
 	export let color: Colors = 'default'
+
 	/**
 	 * Description for Radio button
 	 */
 	export let description: string | undefined = undefined
+
 	/**
 	 * Description Color for Radio button
 	 */
@@ -34,13 +36,18 @@
 	 */
 	export let label: string | undefined = undefined
 
+	/**
+	 * Radio value
+	 */
+	export let value: any = false
+
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-radio', { inline }, $$props.class)
+	$: classes = classname('form-radio', { inline }, $$props.class, true)
 </script>
 
 <div class={classes}>
-	<Radio bind:group {forwardEvents} {...$$restProps} {color} {label} />
+	<Radio bind:group {forwardEvents} {...$$restProps} {color} {label} {value} />
 	{#if description}
 		<span class={classname('form-radio-description', { descriptionColor })}>
 			{description}
