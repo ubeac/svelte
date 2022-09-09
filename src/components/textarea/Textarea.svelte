@@ -5,16 +5,55 @@
 	import { classname } from '$lib/utils'
 
 	/**
+	 * Set number of columns
+	 */
+	export let cols: number | undefined = undefined
+
+	/**
+	 * Disables Textarea
+	 */
+	export let disabled: boolean = false
+
+	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
+	/**
+	 * Set placeholder of Textarea
+	 */
+	export let placeholder: string | undefined = undefined
+
+	/**
+	 * Makes value unchangable
+	 */
+	export let readOnly: boolean = false
+
+	/**
+	 * Set Textarea resizable
+	 */
+	export let resizable: boolean = false
+
+	/**
+	 * Set number of rows
+	 */
+	export let rows: number | undefined = undefined
 
 	/**
 	 * The text content of Textarea
 	 */
 	export let value: string | undefined = undefined
 
-	$: classes = classname('textarea', $$props.class)
+	$: classes = classname('textarea', { resizable }, $$props.class)
 </script>
 
-<textarea bind:value use:forwardEvents {...$$restProps} class={classes} />
+<textarea
+	bind:value
+	use:forwardEvents
+	{cols}
+	{disabled}
+	{placeholder}
+	{readOnly}
+	{rows}
+	{...$$restProps}
+	class={classes} />
