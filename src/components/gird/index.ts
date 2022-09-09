@@ -1,6 +1,6 @@
+import Col from './Col.svelte'
 import Container from './Container.svelte'
-import Row from './Grid.svelte'
-import Col from './GridItem.svelte'
+import Row from './Row.svelte'
 
 export { Container, Row, Col }
 export default {
