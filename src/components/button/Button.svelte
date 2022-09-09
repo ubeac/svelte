@@ -3,7 +3,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { ButtonShapes, ButtonSizes } from './button.types'
 
@@ -82,15 +82,13 @@
 	)
 </script>
 
-{#if condition($$props)}
-	<svelte:element
-		this={href ? 'a' : 'button'}
-		{disabled}
-		{href}
-		bind:this={ref}
-		use:forwardEvents
-		{...$$restProps}
-		class={classes}>
-		<slot />
-	</svelte:element>
-{/if}
+<svelte:element
+	this={href ? 'a' : 'button'}
+	{disabled}
+	{href}
+	bind:this={ref}
+	use:forwardEvents
+	{...$$restProps}
+	class={classes}>
+	<slot />
+</svelte:element>

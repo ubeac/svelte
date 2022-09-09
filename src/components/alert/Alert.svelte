@@ -7,7 +7,7 @@
 	import { Icon } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { AlertVariants } from './alert.types'
 
@@ -76,31 +76,29 @@
 	// })
 </script>
 
-{#if condition($$props)}
-	{#if open}
-		<div bind:this={ref} use:forwardEvents {...$$restProps} class={classes}>
-			<div class={classname('alert-body')}>
-				{#if $$slots['icon'] || icon}
-					<div class={classname('alert-icon')}>
-						{#if icon}
-							<Icon name={icon} />
-						{:else}
-							<slot name="icon" />
-						{/if}
-					</div>
-				{/if}
-				<div>
-					<slot />
+{#if open}
+	<div bind:this={ref} use:forwardEvents {...$$restProps} class={classes}>
+		<div class={classname('alert-body')}>
+			{#if $$slots['icon'] || icon}
+				<div class={classname('alert-icon')}>
+					{#if icon}
+						<Icon name={icon} />
+					{:else}
+						<slot name="icon" />
+					{/if}
 				</div>
+			{/if}
+			<div>
+				<slot />
 			</div>
-			{#if dismissible}
-				<button type="button" on:click={close} class={classname('alert-close')} aria-label="close" />
-			{/if}
-			{#if $$slots['actions']}
-				<div class={classname('alert-actions')}>
-					<slot name="actions" />
-				</div>
-			{/if}
 		</div>
-	{/if}
+		{#if dismissible}
+			<button type="button" on:click={close} class={classname('alert-close')} aria-label="close" />
+		{/if}
+		{#if $$slots['actions']}
+			<div class={classname('alert-actions')}>
+				<slot name="actions" />
+			</div>
+		{/if}
+	</div>
 {/if}

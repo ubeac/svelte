@@ -4,7 +4,7 @@
 	import { Radio } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Color of Radio button
@@ -39,15 +39,13 @@
 	$: classes = classname('form-radio', { inline }, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<div class={classes}>
-		<Radio bind:group {forwardEvents} {...$$restProps} {color} {label} />
-		{#if description}
-			<span class={classname('form-radio-description', { descriptionColor })}>
-				{description}
-			</span>
-		{:else}
-			<slot />
-		{/if}
-	</div>
-{/if}
+<div class={classes}>
+	<Radio bind:group {forwardEvents} {...$$restProps} {color} {label} />
+	{#if description}
+		<span class={classname('form-radio-description', { descriptionColor })}>
+			{description}
+		</span>
+	{:else}
+		<slot />
+	{/if}
+</div>

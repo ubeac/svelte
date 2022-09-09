@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Forward all native Events
@@ -17,6 +17,4 @@
 	$: classes = classname('textarea', $$props.class)
 </script>
 
-{#if condition($$props)}
-	<textarea bind:value use:forwardEvents {...$$restProps} class={classes} />
-{/if}
+<textarea bind:value use:forwardEvents {...$$restProps} class={classes} />
