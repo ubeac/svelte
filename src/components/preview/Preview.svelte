@@ -112,33 +112,3 @@
 		</TabsPanels>
 	</Tabs>
 </Card>
-
-<style global>
-	.u-preview-body {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		padding: 2rem;
-		gap: 8px;
-	}
-
-	.u-preview-body-vertical {
-		flex-direction: column;
-	}
-
-	.u-preview-code {
-		position: relative;
-	}
-
-	.u-preview-copy-button {
-		position: absolute;
-		right: 0;
-		top: 0;
-		border: none !important;
-	}
-	.u-preview-code pre {
-		margin: 0;
-		border: transparent;
-	}
-</style>
