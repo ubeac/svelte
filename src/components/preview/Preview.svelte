@@ -112,13 +112,13 @@
 </Card>
 
 <style global>
-	.u-preview-body {
+	/* .u-preview-body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 2rem;
 		gap: 8px;
-	}
+	} */
 
 	.u-preview-code {
 		position: relative;
