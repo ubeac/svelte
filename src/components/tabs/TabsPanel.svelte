@@ -9,6 +9,11 @@
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
+	/**
+	 * TODO
+	 */
+	export let value: any
+
 	$: classes = classname('tabs-panel', undefined, $$props.class, true)
 </script>
 

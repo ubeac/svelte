@@ -9,6 +9,16 @@
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
+	/**
+	 * TODO
+	 */
+	export let value: any
+
+	/**
+	 * TODO
+	 */
+	export let vertical: boolean = false
+
 	$: classes = classname('tabs', undefined, $$props.class, true)
 </script>
 

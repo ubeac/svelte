@@ -9,6 +9,16 @@
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
+	/**
+	 * TODO
+	 */
+	export let grow: boolean = false
+
+	/**
+	 * TODO
+	 */
+	export let justify: 'start' | 'center' | 'end' = 'start'
+
 	$: classes = classname('tabs-items', undefined, $$props.class, true)
 </script>
 
