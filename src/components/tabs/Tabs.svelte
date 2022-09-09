@@ -22,23 +22,19 @@
 
 	const active = writable<any>()
 
-	const tabs = new Set()
-
 	$: classes = classname('tabs', { vertical }, $$props.class, true)
 
 	function change(value: any) {
 		active.set(value)
 	}
 
-	function register(value: any) {
-		tabs.add(value)
+	function update(value: any, prev: any) {
+		if (typeof prev == 'undefined') return
+		if ($active !== prev) return
+		active.set(value)
 	}
 
-	function unregister(value: any) {
-		tabs.delete(value)
-	}
-
-	setContext('TABS', { active, change, register, unregister })
+	setContext('TABS', { active, change, update })
 </script>
 
 <div use:forwardEvents {...$$restProps} class={classes}>

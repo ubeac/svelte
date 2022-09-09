@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { get_current_component, getContext, onDestroy } from 'svelte/internal'
+	import { get_current_component, getContext } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
@@ -19,16 +19,15 @@
 	 */
 	export let value: any
 
-	const { active, change, register, unregister } = getContext('TABS')
+	const { active, change, update } = getContext('TABS')
 
-	let before: any
+	let prev: any
 
 	$: classes = classname('tabs-item', { active: $active === value, disabled }, $$props.class, true)
 
 	$: (() => {
-		unregister(before)
-		register(value)
-		before = value
+		update(value, prev)
+		prev = value
 	})()
 
 	function onClick(event: MouseEvent) {
@@ -43,10 +42,8 @@
 		event.preventDefault()
 		change(value)
 	}
-
-	onDestroy(() => unregister(value))
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes} on:click={onClick} on:keydown={onKeyDown}>
+<button use:forwardEvents {...$$restProps} class={classes} on:click={onClick} on:keydown={onKeyDown}>
 	<slot />
-</div>
+</button>
