@@ -1,15 +1,29 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte/internal'
+	import { get_current_component } from 'svelte/internal'
 
+	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	const dispatch = createEventDispatcher()
+	/**
+	 * Checked status of checkbox
+	 */
+	export let checked: boolean = false
 
 	/**
 	 * Set color of checkbox when it is checked
 	 */
 	export let color: Colors = 'primary'
+
+	/**
+	 * Forward all native Events
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
+	/**
+	 * Binding result of selected items
+	 */
+	export let group: any = []
 
 	/**
 	 * Set label value of checkbox
@@ -19,20 +33,37 @@
 	/**
 	 * Set checkbox value
 	 */
-	export let value: boolean = false
+	export let value: any
 
-	$: checkboxClasses = classname('checkbox', {}, $$props.class)
-	$: inputClasses = classname('checkbox-input', { color }, $$props.class)
-	$: labelClasses = classname('checkbox-label', undefined, $$props.class)
+	$: checkboxClasses = classname('checkbox', undefined, $$props.class, true)
+	$: inputClasses = classname('checkbox-input', { color }, $$props.class, true)
+	$: labelClasses = classname('checkbox-label', undefined, $$props.class, true)
 
-	function change(event: any) {
-		value = event.target.checked
-		dispatch('change', value)
+	$: updateChekbox(group)
+	$: updateGroup(checked)
+
+	function updateChekbox(group: any) {
+		checked = group.indexOf(value) >= 0
+	}
+
+	function updateGroup(checked: boolean) {
+		const index = group.indexOf(value)
+		if (checked) {
+			if (index < 0) {
+				group.push(value)
+				group = group
+			}
+		} else {
+			if (index >= 0) {
+				group.splice(index, 1)
+				group = group
+			}
+		}
 	}
 </script>
 
 <label class={checkboxClasses}>
-	<input on:change={change} bind:checked={value} {value} {...$$restProps} class={inputClasses} type="checkbox" />
+	<input type="checkbox" bind:checked {value} class={inputClasses} use:forwardEvents {...$$restProps} />
 	<span class={labelClasses}>
 		{#if label}
 			{label}

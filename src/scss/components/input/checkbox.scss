@@ -17,7 +17,7 @@ $prefix-checkbox: $prefix + 'checkbox';
 
 	@each $key,
 	$value in $theme-colors {
-		&-input-#{$key}:checked {
+		&-input-color-#{$key}:checked {
 			background-color: #{$value} !important;
 		}
 	}
