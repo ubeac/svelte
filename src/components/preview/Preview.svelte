@@ -42,9 +42,13 @@
 	 */
 	export let src: string
 
+	/**
+	 * Set it's direction to column
+	 */
+	export let vertical: boolean = false
+
 	// TODO: add github link support
 	// $: githubURL = github_prefix + path.substring(path.indexOf('src/routes'))
-	let id: string = nanoid(5)
 
 	let copyIcon = 'copy'
 
@@ -53,7 +57,8 @@
 		setTimeout(() => (copyIcon = 'copy'), 2000)
 	}
 
-	$: console.log({ script })
+	$: classes = classname('preview-body', { vertical }, $$props.class)
+
 	$: script = isTypescript ? script?.replace(/^\<script\>/g, '<script lang="ts">') : script
 
 	$: markupHighlighted = Prism.highlight(markup ?? '', Prism.languages.svelte, 'svelte')
@@ -71,7 +76,7 @@
 		</TabsItems>
 		<TabsPanels>
 			<TabsPanel value="1">
-				<div class={classname('preview-body')}>
+				<div class={classes}>
 					<slot />
 				</div>
 			</TabsPanel>
@@ -113,8 +118,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-wrap: wrap;
 		padding: 2rem;
 		gap: 8px;
+	}
+
+	.u-preview-body-vertical {
+		flex-direction: column;
 	}
 
 	.u-preview-code {

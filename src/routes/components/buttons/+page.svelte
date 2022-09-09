@@ -30,7 +30,7 @@
 	inventore mollitia quam harum facilis? Repellendus explicabo maxime exercitationem recusandae quo dolorem itaque at
 	dignissimos.
 </p>
-<Preview src="./ButtonColors.svelte">
+<Preview vertical src="./ButtonColors.svelte">
 	<ButtonColors />
 </Preview>
 
