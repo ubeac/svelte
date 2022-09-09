@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte/internal'
 
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	const dispatch = createEventDispatcher()
 
@@ -31,15 +31,13 @@
 	}
 </script>
 
-{#if condition($$props)}
-	<label class={checkboxClasses}>
-		<input on:change={change} bind:checked={value} {value} {...$$restProps} class={inputClasses} type="checkbox" />
-		<span class={labelClasses}>
-			{#if label}
-				{label}
-			{:else}
-				<slot />
-			{/if}
-		</span>
-	</label>
-{/if}
+<label class={checkboxClasses}>
+	<input on:change={change} bind:checked={value} {value} {...$$restProps} class={inputClasses} type="checkbox" />
+	<span class={labelClasses}>
+		{#if label}
+			{label}
+		{:else}
+			<slot />
+		{/if}
+	</span>
+</label>

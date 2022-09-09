@@ -7,7 +7,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Items } from '$lib/types'
-	import { classname, condition, createOptions, requestAnimationFrame } from '$lib/utils'
+	import { classname, createOptions, requestAnimationFrame } from '$lib/utils'
 
 	/**
 	 * Forward all native Events
@@ -90,18 +90,16 @@
 	// onDestroy(unbind)
 </script>
 
-{#if condition($$props)}
-	{#if preview}
-		<div use:forwardEvents {...$$restProps} class={classes}>
-			{value}
-		</div>
-	{:else}
-		<select bind:this={element} value="" use:forwardEvents {...$$restProps} class={classes}>
-			{#each $options as option}
-				<option value={getKey(option)}>
-					{getText(option)}
-				</option>
-			{/each}
-		</select>
-	{/if}
+{#if preview}
+	<div use:forwardEvents {...$$restProps} class={classes}>
+		{value}
+	</div>
+{:else}
+	<select bind:this={element} value="" use:forwardEvents {...$$restProps} class={classes}>
+		{#each $options as option}
+			<option value={getKey(option)}>
+				{getText(option)}
+			</option>
+		{/each}
+	</select>
 {/if}
