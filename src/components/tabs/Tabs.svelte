@@ -20,18 +20,20 @@
 	 */
 	export let vertical: boolean = false
 
-	const active = writable<any>()
+	const active = writable<any>(value)
+
+	$: active.set(value)
 
 	$: classes = classname('tabs', { vertical }, $$props.class, true)
 
-	function change(value: any) {
-		active.set(value)
+	function change(next: any) {
+		value = next
 	}
 
-	function update(value: any, prev: any) {
+	function update(next: any, prev: any) {
 		if (typeof prev == 'undefined') return
 		if ($active !== prev) return
-		active.set(value)
+		change(next)
 	}
 
 	setContext('TABS', { active, change, update })

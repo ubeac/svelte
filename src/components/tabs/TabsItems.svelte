@@ -22,6 +22,6 @@
 	$: classes = classname('tabs-items', undefined, $$props.class, true)
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<div role="tablist" use:forwardEvents {...$$restProps} class={classes}>
 	<slot />
 </div>

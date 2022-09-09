@@ -1,35 +1,21 @@
 <script lang="ts">
-	import { Alert, Button, Card } from '$lib/components'
+	import { Tabs, TabsItem, TabsItems, TabsPanel, TabsPanels } from '$lib/components/tabs'
 
-	let show: boolean = false
-	let count: number = 0
-	let showAlert: boolean = false
+	let value = '1'
 
-	function toggle() {
-		show = !show
-	}
+	let v = '3'
 </script>
 
-<Button on:click={() => (showAlert = !showAlert)}>Toggle Alert</Button>
-<Button on:click={toggle}>Toggle</Button>
-<h1 if={2 + 2 == 4}>Hello World!</h1>
-<h1 if={2 + 2 == 4}>
-	<div if={show}>
-		click button
-
-		<Button on:click={() => (count = count + 1)}>count {count}</Button>
-		<Card if={count > 'abc'.length}>
-			it Wroks (reset button will appear if count > 5)
-			<Button if={count > 5} on:click={() => (count = 0)}>Reset</Button>
-		</Card>
-
-		test
-	</div>
-	Hello World!
-</h1>
-<h1 if={2 + 2 == 4}>Hello World!</h1>
-
-<Alert if={showAlert}>
-	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat ratione quo modi rerum quod quaerat voluptatibus vero
-	consequuntur provident, minus similique neque id! Atque necessitatibus ex vero, tenetur quibusdam officia?
-</Alert>
+<button on:click={() => (value = '5')}>change</button>
+<Tabs value="3">
+	<TabsItems>
+		<TabsItem {value}>Button 1</TabsItem>
+		<TabsItem value="2">Button 2</TabsItem>
+		<TabsItem value="3">Button 3</TabsItem>
+	</TabsItems>
+	<TabsPanels>
+		<TabsPanel {value}>Panel 1</TabsPanel>
+		<TabsPanel value="2">Panel 2</TabsPanel>
+		<TabsPanel value="3">Panel 3</TabsPanel>
+	</TabsPanels>
+</Tabs>

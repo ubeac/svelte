@@ -16,7 +16,9 @@
 
 	const { active } = getContext('TABS')
 
-	$: classes = classname('tabs-panel', { active: $active === value }, $$props.class, true)
+	$: selected = $active === value
+
+	$: classes = classname('tabs-panel', { active: selected }, $$props.class, true)
 </script>
 
 <div use:forwardEvents {...$$restProps} class={classes}>

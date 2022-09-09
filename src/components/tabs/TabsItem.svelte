@@ -23,7 +23,9 @@
 
 	let prev: any
 
-	$: classes = classname('tabs-item', { active: $active === value, disabled }, $$props.class, true)
+	$: selected = $active === value
+
+	$: classes = classname('tabs-item', { active: selected, disabled }, $$props.class, true)
 
 	$: (() => {
 		update(value, prev)
@@ -44,6 +46,15 @@
 	}
 </script>
 
-<button use:forwardEvents {...$$restProps} class={classes} on:click={onClick} on:keydown={onKeyDown}>
+<button
+	type="button"
+	role="tab"
+	aria-controls="TODO"
+	aria-selected={selected.toString()}
+	use:forwardEvents
+	{...$$restProps}
+	class={classes}
+	on:click={onClick}
+	on:keydown={onKeyDown}>
 	<slot />
 </button>
