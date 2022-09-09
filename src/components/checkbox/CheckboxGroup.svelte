@@ -4,7 +4,7 @@
 	import { Checkbox } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition, createOptions } from '$lib/utils'
+	import { classname, createOptions } from '$lib/utils'
 
 	/**
 	 * Set the color of checkbox when it is checked
@@ -42,16 +42,14 @@
 	$: classes = classname('checkbox-group', { inline }, $$props.class, true)
 </script>
 
-{#if condition($$props)}
-	<div class={classes}>
-		{#each $options as option}
-			<Checkbox
-				bind:group
-				{forwardEvents}
-				label={getText(option)}
-				value={getKey(option)}
-				checked={isSelected(option, group)}
-				{color} />
-		{/each}
-	</div>
-{/if}
+<div class={classes}>
+	{#each $options as option}
+		<Checkbox
+			bind:group
+			{forwardEvents}
+			label={getText(option)}
+			value={getKey(option)}
+			checked={isSelected(option, group)}
+			{color} />
+	{/each}
+</div>

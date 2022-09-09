@@ -3,7 +3,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Checked status of checkbox
@@ -62,15 +62,13 @@
 	}
 </script>
 
-{#if condition($$props)}
-	<label class={checkboxClasses}>
-		<input type="checkbox" bind:checked {value} class={inputClasses} use:forwardEvents {...$$restProps} />
-		<span class={labelClasses}>
-			{#if label}
-				{label}
-			{:else}
-				<slot />
-			{/if}
-		</span>
-	</label>
-{/if}
+<label class={checkboxClasses}>
+	<input type="checkbox" bind:checked {value} class={inputClasses} use:forwardEvents {...$$restProps} />
+	<span class={labelClasses}>
+		{#if label}
+			{label}
+		{:else}
+			<slot />
+		{/if}
+	</span>
+</label>

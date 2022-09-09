@@ -4,7 +4,7 @@
 	import { Checkbox } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 *  Checked status of checkbox
@@ -54,13 +54,11 @@
 	$: classes = classname('form-checkbox', { inline }, $$props.class, true)
 </script>
 
-{#if condition($$props)}
-	<div class={classes}>
-		<Checkbox bind:group bind:checked {forwardEvents} {label} {value} {color} />
-		{#if description}
-			<span class={classname('form-checkbox-description', { descriptionColor })}>
-				{description}
-			</span>
-		{/if}
-	</div>
-{/if}
+<div class={classes}>
+	<Checkbox bind:group bind:checked {forwardEvents} {label} {value} {color} />
+	{#if description}
+		<span class={classname('form-checkbox-description', { descriptionColor })}>
+			{description}
+		</span>
+	{/if}
+</div>
