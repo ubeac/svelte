@@ -1,6 +1,8 @@
-.u-radio-group {
-	&-row {
-		.u-radio {
+$prefix-radio : $prefix +'radio';
+
+.#{$prefix-radio}-group {
+	&-inline {
+		.#{$prefix-radio} {
 			@extend .form-check-inline;
 		}
 	}

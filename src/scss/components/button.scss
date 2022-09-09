@@ -5,6 +5,7 @@ $prefix-button : $prefix +'button';
 
 .#{$prefix-button} {
 	@extend .btn;
+	@extend .gap-2;
 
 	@each $key,
 	$value in $theme-colors {
@@ -56,10 +57,18 @@ $prefix-button : $prefix +'button';
 
 		&-lg {
 			@extend .btn-lg;
+			@extend .gap-3;
 		}
 	}
 
 	&-icon {
 		@extend .btn-icon;
+	}
+
+	& > .#{$prefix}icon {
+		margin: 0 !important;
+	}
+	& > .#{$prefix}avatar {
+		margin: 0 !important;
 	}
 }

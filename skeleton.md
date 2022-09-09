@@ -42,7 +42,6 @@
   CardRibbon
 - CardStamp
 - CardStatus
-- CardSubtitle
 - CardTitle
 - Collapse
 - CollapseToggler

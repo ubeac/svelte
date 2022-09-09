@@ -17,5 +17,4 @@ const { css } = sass.compile('./src/scss/index.scss', {
 	loadPaths: ['node_modules'],
 })
 
-fs.writeFileSync('./.storybook/styles.css', css)
 fs.writeFileSync('./src/styles.css', css)
