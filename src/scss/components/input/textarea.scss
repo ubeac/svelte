@@ -1,5 +1,10 @@
-@import 'bootstrap/scss/forms/form-control';
-@import '@tabler/core/src/scss/ui/forms/form-check';
-.u-textarea {
+$prefix-textarea : $prefix +'textarea';
+
+.#{$prefix-textarea} {
 	@extend .form-control;
+	resize: none;
+
+	&-resizable {
+		resize: both;
+	}
 }
