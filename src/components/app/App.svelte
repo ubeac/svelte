@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { AppBodies, AppFooters, AppHeaders, AppStickies } from './app.types'
 
@@ -76,52 +76,50 @@
 	}
 </script>
 
-{#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		<div class={classname('app-wrapper')} style={`grid-template-areas: ${areas}`}>
-			{#if $$slots['header-start']}
-				<div class={classname('app-header-start')}>
-					<slot name="header-start" />
-				</div>
-			{/if}
-			{#if $$slots['header']}
-				<div class={classname('app-header')}>
-					<slot name="header" />
-				</div>
-			{/if}
-			{#if $$slots['header-end']}
-				<div class={classname('app-header-end')}>
-					<slot name="header-end" />
-				</div>
-			{/if}
-			{#if $$slots['aside-start']}
-				<div class={classname('app-aside-start')}>
-					<slot name="aside-start" />
-				</div>
-			{/if}
-			<div class={classname('app-body', { body })}>
-				<slot />
+<div use:forwardEvents {...$$restProps} class={classes}>
+	<div class={classname('app-wrapper')} style={`grid-template-areas: ${areas}`}>
+		{#if $$slots['header-start']}
+			<div class={classname('app-header-start')}>
+				<slot name="header-start" />
 			</div>
-			{#if $$slots['aside-end']}
-				<div class={classname('app-aside-end')}>
-					<slot name="aside-end" />
-				</div>
-			{/if}
-			{#if $$slots['footer-start']}
-				<div class={classname('app-footer-start')}>
-					<slot name="footer-start" />
-				</div>
-			{/if}
-			{#if $$slots['footer']}
-				<div class={classname('app-footer')}>
-					<slot name="footer" />
-				</div>
-			{/if}
-			{#if $$slots['footer-end']}
-				<div class={classname('app-footer-end')}>
-					<slot name="footer-end" />
-				</div>
-			{/if}
+		{/if}
+		{#if $$slots['header']}
+			<div class={classname('app-header')}>
+				<slot name="header" />
+			</div>
+		{/if}
+		{#if $$slots['header-end']}
+			<div class={classname('app-header-end')}>
+				<slot name="header-end" />
+			</div>
+		{/if}
+		{#if $$slots['aside-start']}
+			<div class={classname('app-aside-start')}>
+				<slot name="aside-start" />
+			</div>
+		{/if}
+		<div class={classname('app-body', { body })}>
+			<slot />
 		</div>
+		{#if $$slots['aside-end']}
+			<div class={classname('app-aside-end')}>
+				<slot name="aside-end" />
+			</div>
+		{/if}
+		{#if $$slots['footer-start']}
+			<div class={classname('app-footer-start')}>
+				<slot name="footer-start" />
+			</div>
+		{/if}
+		{#if $$slots['footer']}
+			<div class={classname('app-footer')}>
+				<slot name="footer" />
+			</div>
+		{/if}
+		{#if $$slots['footer-end']}
+			<div class={classname('app-footer-end')}>
+				<slot name="footer-end" />
+			</div>
+		{/if}
 	</div>
-{/if}
+</div>

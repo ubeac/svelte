@@ -3,7 +3,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { SpinnerSizes, SpinnerStyles } from './spinner.types'
 
@@ -36,8 +36,6 @@
 	)
 </script>
 
-{#if condition($$props)}
-	<div role="status" use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</div>
-{/if}
+<div role="status" use:forwardEvents {...$$restProps} class={classes}>
+	<slot />
+</div>
