@@ -1,0 +1,13 @@
+//
+// Container
+//
+$prefix-container : $prefix +'container';
+
+
+.#{$prefix-container} {
+    @extend .container;
+
+    &-fluid {
+        @extend .container-fluid;
+    }
+}
