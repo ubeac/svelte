@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte'
+	import { get_current_component } from 'svelte/internal'
 
+	import { Checkbox } from '$lib/components'
+	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname, createOptions } from '$lib/utils'
-
-	import Checkbox from './Checkbox.svelte'
 
 	/**
 	 * Set the color of checkbox when it is checked
@@ -12,9 +12,19 @@
 	export let color: Colors = 'primary'
 
 	/**
+	 * Binding result of selected items
+	 */
+	export let group: any = []
+
+	/**
 	 * Set checkbox group to show in a row
 	 */
 	export let inline: boolean = false
+
+	/**
+	 * Checkbox group items
+	 */
+	export let items: any[] = []
 
 	/**
 	 * The key in the items that each checkbox is related to
@@ -22,31 +32,11 @@
 	export let key: string = 'key'
 
 	/**
-	 * Checkbox group items
-	 */
-	export let items: Array<any> | Object = undefined
-
-	/**
 	 * Set the field that should be used as each checkbox label
 	 */
 	export let text: string = 'text'
 
-	/**
-	 * Value that selected checkboxes are bound to
-	 */
-	export let value: Array<any> = undefined
-
-	const dispatch = createEventDispatcher()
-
-	function change(checked: any, option: any) {
-		const filtered = value?.filter((key) => key !== getKey(option)) ?? []
-		if (checked) {
-			value = filtered.concat([getKey(option)])
-		} else {
-			value = filtered
-		}
-		dispatch('change', value)
-	}
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: ({ options, getKey, getText, isSelected } = createOptions({ items, key, text }))
 	$: classes = classname('checkbox-group', { inline }, $$props.class, true)
@@ -55,12 +45,11 @@
 <div class={classes}>
 	{#each $options as option}
 		<Checkbox
+			bind:group
+			{forwardEvents}
 			label={getText(option)}
-			value={isSelected(option, value)}
-			disabled={option.disabled}
-			{color}
-			on:change={(x) => {
-				change(x.detail, option)
-			}} />
+			value={getKey(option)}
+			checked={isSelected(option, group)}
+			{color} />
 	{/each}
 </div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { GridItem } from '$lib/components'
+	import { Col } from '$lib/components/gird'
 	import { classname } from '$lib/utils'
 
 	$: classes = classname('form-group', undefined, $$props.class)
@@ -7,7 +7,7 @@
 	$: col = $$props.col ?? '6'
 </script>
 
-<GridItem {col}>
+<Col {col}>
 	<div class={classes}>
 		<slot name="label" />
 		<div class="outer">
@@ -27,4 +27,4 @@
 			<slot name="outer:end" />
 		</div>
 	</div>
-</GridItem>
+</Col>
