@@ -5,6 +5,6 @@
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
 	"[svelte]": {
-		"editor.defaultFormatter": "svelte.svelte-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	}
 }

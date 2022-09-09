@@ -2,7 +2,7 @@
 	import { Icon, ICON_SIZES } from '$lib/components'
 	import { COLORS } from '$lib/types'
 
-	import Example from '../_layout-components/Example.svelte'
+	import Example from '../../_layout-components/Example.svelte'
 </script>
 
 <h1>Icons</h1>

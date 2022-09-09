@@ -1,6 +1,6 @@
 <script>
 	import { Card, CardBody, CardHeader, CardTitle } from '$lib/components'
-	import Example from '../_layout-components/Example.svelte'
+	import Example from '../../_layout-components/Example.svelte'
 </script>
 
 <h1>Cards</h1>

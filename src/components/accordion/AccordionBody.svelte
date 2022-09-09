@@ -3,7 +3,7 @@
 
 	import { Collapse } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -20,14 +20,12 @@
 	$: open = $accordion?.open
 </script>
 
-{#if condition($$props)}
-	{#if $accordion}
-		<Collapse class={classname('collapse-accordion')} {group} {id} {open}>
-			<div use:forwardEvents {...$$restProps} class={classes}>
-				<slot />
-			</div>
-		</Collapse>
-	{:else}
-		<div>Cannot use AccordionBody outside of Accordion</div>
-	{/if}
+{#if $accordion}
+	<Collapse class={classname('collapse-accordion')} {group} {id} {open}>
+		<div use:forwardEvents {...$$restProps} class={classes}>
+			<slot />
+		</div>
+	</Collapse>
+{:else}
+	<div>Cannot use AccordionBody outside of Accordion</div>
 {/if}

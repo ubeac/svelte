@@ -50,6 +50,13 @@
 		</DropdownMenu>
 	</Dropdown>
 	<Dropdown>
+		<DropdownToggle>Common</DropdownToggle>
+		<DropdownMenu>
+			<DropdownItem icon="package" href="/common/if">if</DropdownItem>
+			<DropdownItem icon="package" href="/common/preview">Preview</DropdownItem>
+		</DropdownMenu>
+	</Dropdown>
+	<Dropdown>
 		<DropdownToggle>Pages</DropdownToggle>
 		<DropdownMenu>
 			<DropdownItem icon="package" href="/components/">(TODO) Login</DropdownItem>

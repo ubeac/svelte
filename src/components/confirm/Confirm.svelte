@@ -2,8 +2,9 @@
 
 <script lang="ts">
 	import { Button, Dialog, DialogBody, DialogContent } from '$lib/components'
-	import { classname, condition } from '$lib/utils'
-	import type { ConfirmTypes } from './confirm.types';
+	import { classname } from '$lib/utils'
+
+	import type { ConfirmTypes } from './confirm.types'
 
 	/**
 	 * Set Description of component
@@ -41,35 +42,33 @@
 	})()
 </script>
 
-{#if condition($$props)}
-	<Dialog bind:open size="sm" persistent placement="center">
-		<DialogContent>
-			<DialogBody>
-				{#if icon}
-					<div class={classname('confirm-icon', { type })}>
-						<div>{icon}</div>
-					</div>
-				{/if}
-				<slot name="title">
-					{#if title}
-						<h2 class={classname('confirm-title')}>
-							{title}
-						</h2>
-					{/if}
-				</slot>
-				<slot name="description">
-					{#if description}
-						<p class={classname('confirm-description')}>
-							{description}
-						</p>
-					{/if}
-				</slot>
-				<div class={classname('confirm-actions')}>
-					<slot>
-						<Button color="primary" on:click={() => (open = !open)}>OK</Button>
-					</slot>
+<Dialog bind:open size="sm" persistent placement="center">
+	<DialogContent>
+		<DialogBody>
+			{#if icon}
+				<div class={classname('confirm-icon', { type })}>
+					<div>{icon}</div>
 				</div>
-			</DialogBody>
-		</DialogContent>
-	</Dialog>
-{/if}
+			{/if}
+			<slot name="title">
+				{#if title}
+					<h2 class={classname('confirm-title')}>
+						{title}
+					</h2>
+				{/if}
+			</slot>
+			<slot name="description">
+				{#if description}
+					<p class={classname('confirm-description')}>
+						{description}
+					</p>
+				{/if}
+			</slot>
+			<div class={classname('confirm-actions')}>
+				<slot>
+					<Button color="primary" on:click={() => (open = !open)}>OK</Button>
+				</slot>
+			</div>
+		</DialogBody>
+	</DialogContent>
+</Dialog>
