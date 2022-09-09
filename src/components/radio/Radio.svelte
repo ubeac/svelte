@@ -6,11 +6,6 @@
 	import { classname } from '$lib/utils'
 
 	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
-
-	/**
 	 * Radio checked status
 	 */
 	export let checked: boolean | undefined = undefined
@@ -19,6 +14,11 @@
 	 * Radio color
 	 */
 	export let color: Colors = 'default'
+
+	/**
+	 * Forward all native Events
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Radio label
