@@ -39,7 +39,7 @@
 	<header class="navbar navbar-expand-md navbar-light d-none d-lg-flex">
 		<div class="container-fluid">
 			<div />
-			<Avatar>PR</Avatar>
+			<Avatar>PN</Avatar>
 		</div>
 	</header>
 
