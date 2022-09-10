@@ -5,11 +5,6 @@
 	import { classname } from '$lib/utils'
 
 	/**
-	 * Set number of columns
-	 */
-	export let cols: number | undefined = undefined
-
-	/**
 	 * Disables Textarea
 	 */
 	export let disabled: boolean = false
@@ -30,30 +25,16 @@
 	export let readOnly: boolean = false
 
 	/**
-	 * Set Textarea resizable
-	 */
-	export let resizable: boolean = false
-
-	/**
 	 * Set number of rows
 	 */
-	export let rows: number | undefined = undefined
+	export let rows: number | string | undefined = undefined
 
 	/**
 	 * The text content of Textarea
 	 */
 	export let value: string | undefined = undefined
 
-	$: classes = classname('textarea', { resizable }, $$props.class)
+	$: classes = classname('textarea', {}, $$props.class)
 </script>
 
-<textarea
-	bind:value
-	use:forwardEvents
-	{cols}
-	{disabled}
-	{placeholder}
-	{readOnly}
-	{rows}
-	{...$$restProps}
-	class={classes} />
+<textarea bind:value use:forwardEvents {disabled} {placeholder} {readOnly} {rows} {...$$restProps} class={classes} />

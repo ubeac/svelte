@@ -35,8 +35,8 @@
 	</div>
 </Preview>
 
-<h2>row and columns</h2>
-<p>You can set size of Textarea using <code>rows</code> and <code>cols</code> props.</p>
+<h2>row</h2>
+<p>You can set size of Textarea using <code>rows</code> props.</p>
 
 <Preview src="./TextareaRowCol.svelte">
 	<div class="example-textarea-row-col">
