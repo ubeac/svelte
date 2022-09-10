@@ -78,4 +78,7 @@
 		flex-direction: column;
 		gap: 0.5rem;
 	}
+	p.preview {
+		white-space: pre-line;
+	}
 </style>
