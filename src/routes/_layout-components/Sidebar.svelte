@@ -20,6 +20,7 @@
 			<DropdownItem icon="star" href="/components/grid">Grid</DropdownItem>
 			<DropdownItem icon="star" href="/components/inputs">Inputs</DropdownItem>
 			<DropdownItem icon="star" href="/components/select">Select</DropdownItem>
+			<DropdownItem icon="star" href="/components/page">page</DropdownItem>
 			<DropdownItem icon="star" href="/components/textarea">Textarea</DropdownItem>
 		</DropdownMenu>
 	</Dropdown>

@@ -75,12 +75,12 @@
 			<TabsItem value="4" if={!!style}>Style</TabsItem>
 		</TabsItems>
 		<TabsPanels>
-			<TabsPanel value="1">
+			<TabsPanel value="1" style="background: #f5f7fb;">
 				<div class={classes}>
 					<slot />
 				</div>
 			</TabsPanel>
-			<TabsPanel value="2">
+			<TabsPanel value="2" style="background: #f5f7fb;">
 				<div class={classname('preview-code')}>
 					<PreviewCopyButton on:success={setChecked} value={markup}>
 						<Icon name={copyIcon} />
@@ -89,7 +89,7 @@
 				</div>
 			</TabsPanel>
 			{#if script}
-				<TabsPanel value="3">
+				<TabsPanel value="3" style="background: #f5f7fb;">
 					<div class={classname('preview-code')}>
 						<PreviewCopyButton on:success={setChecked} value={script}>
 							<Icon name={copyIcon} />
@@ -99,7 +99,7 @@
 				</TabsPanel>
 			{/if}
 			{#if script}
-				<TabsPanel value="4">
+				<TabsPanel value="4" style="background: #f5f7fb;">
 					<div class={classname('preview-code')}>
 						<PreviewCopyButton on:success={setChecked} value={style}>
 							<Icon name={copyIcon} />

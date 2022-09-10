@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components/preview'
+	import { Preview } from '@ubeac/svelte'
 	import CardBody from './CardBody.svelte'
 	import CardTitle from './CardTitle.svelte'
 	import CardImage from './CardImage.svelte'

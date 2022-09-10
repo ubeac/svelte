@@ -11,6 +11,10 @@ $aligns: start, center, end, baseline, stretch;
 .#{$prefix-col} {
     @extend .col;
 
+    &-auto {
+        @extend .col-auto;
+    }
+
     &-order {
         &-last {
             @extend .order-last;
@@ -62,5 +66,7 @@ $aligns: start, center, end, baseline, stretch;
             align-self: #{$align};
         }
     }
+
+
 
 }
