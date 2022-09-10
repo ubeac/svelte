@@ -4,6 +4,7 @@
 	import FormSelectIcon from './FormSelectIcon.svelte'
 	import FormSelectLoading from './FormSelectLoading.svelte'
 	import SelectDefault from './SelectDefault.svelte'
+	import SelectItems from './SelectItems.svelte'
 	import SelectMultiple from './SelectMultiple.svelte'
 	import SelectPlaceholder from './SelectPlaceholder.svelte'
 </script>
@@ -12,6 +13,12 @@
 <p>Add one of the available selects a dropdown select - to let users choose from a predefined set of options.</p>
 <Preview src="./SelectDefault.svelte">
 	<SelectDefault />
+</Preview>
+
+<h1>Select Items</h1>
+<p>Select can have custom item names.</p>
+<Preview src="./SelectItems.svelte">
+	<SelectItems />
 </Preview>
 
 <h1>Select Placeholder</h1>
