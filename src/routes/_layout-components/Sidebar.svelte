@@ -21,6 +21,7 @@
 			<DropdownItem icon="star" href="/components/inputs">Inputs</DropdownItem>
 			<DropdownItem icon="star" href="/components/page">page</DropdownItem>
 			<DropdownItem icon="star" href="/components/textarea">Textarea</DropdownItem>
+			<DropdownItem icon="star" href="/components/checkbox">Checkbox</DropdownItem>
 		</DropdownMenu>
 	</Dropdown>
 	<Dropdown>
