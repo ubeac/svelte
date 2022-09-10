@@ -26,14 +26,14 @@
 	</div>
 </Preview>
 
-<h2>resizable</h2>
+<!-- <h2>resizable</h2>
 <p>Textarea is not resizable by default, you can make it resizable by passing <code>resizable</code> prop.</p>
 
 <Preview src="./TextareaResizable.svelte">
 	<div class="example-textarea">
 		<TextareaResizable />
 	</div>
-</Preview>
+</Preview> -->
 
 <h2>row</h2>
 <p>You can set size of Textarea using <code>rows</code> props.</p>
