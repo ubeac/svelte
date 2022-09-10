@@ -15,6 +15,10 @@
 	 * Applies the align-items css property. Available options are start, center, end, auto, baseline and stretch.
 	 */
 	export let alignSelf: GridAlignItems | undefined = undefined
+	/**
+	 * Applies the align-items css property. Available options are start, center, end, auto, baseline and stretch.
+	 */
+	export let auto: boolean = false
 
 	/**
 	 * Sets the default number of columns the component extends. Available options are 1 -> 12 and auto.
@@ -99,6 +103,7 @@
 	$: classes = classname(
 		'col',
 		{
+			auto,
 			alignSelf,
 			cols,
 			lg,
