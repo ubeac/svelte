@@ -1,6 +1,6 @@
 <script>
-	import { Container, Row, Col } from '$lib/components/gird'
-	import { Card, CardBody } from '$lib/components/card'
+	import { Container, Row, Col } from '@ubeac/svelte/components/gird'
+	import { Card, CardBody } from '@ubeac/svelte/components/card'
 </script>
 
 <Container class="container-example">

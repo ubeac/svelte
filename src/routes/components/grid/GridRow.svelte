@@ -1,6 +1,6 @@
 <script>
-	import { Container, Row, Col } from '$lib/components/gird'
-	import { Card, CardBody } from '$lib/components/card'
+	import { Container, Row, Col } from '@ubeac/svelte/components/gird'
+	import { Card, CardBody } from '@ubeac/svelte/components/card'
 
 	let innerWidth = 0
 	$: cols = innerWidth > 1200 && innerWidth < 1400 ? [3, 9] : innerWidth < 992 && innerWidth > 576 ? [9, 3] : [6, 6]

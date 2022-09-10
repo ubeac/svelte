@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '@ubeac/svelte/components'
 
 	import GridAlign from './GridAlign.svelte'
 	import GridAlignSelf from './GridAlignSelf.svelte'
@@ -120,9 +120,6 @@
 <style global>
 	h2 {
 		margin-top: 3rem !important;
-	}
-	.u-preview-body {
-		flex-direction: column;
 	}
 	.container-example {
 		min-height: 150px;
