@@ -1,5 +1,5 @@
 <script>
-	import { Avatar, Collapse, CollapseToggler, Icon } from '$lib/components'
+	import { Avatar, Collapse, CollapseToggler, Icon, Card, CardBody } from '$lib/components'
 	import '../styles.css'
 	import Nav from './_layout-components/Nav.svelte'
 	import Sidebar from './_layout-components/Sidebar.svelte'
@@ -45,8 +45,14 @@
 
 	<div class="page-wrapper">
 		<div class="page-body">
-			<div class="container-fluid px-4">
-				<slot />
+			<div class="container-xl">
+				<div class="mx-2 row row-deck row-cards">
+					<Card>
+						<CardBody class="">
+							<slot />
+						</CardBody>
+					</Card>
+				</div>
 			</div>
 		</div>
 	</div>
