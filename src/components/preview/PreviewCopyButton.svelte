@@ -27,7 +27,7 @@
 </script>
 
 <!-- TODO: forwardEvents -->
-<Button ghost on:click={onClick} class={classname('preview-copy-button')}>
+<Button ghost on:click={onClick} class={classname('preview-code-copy-button')}>
 	<slot>
 		<Icon name="copy" />
 	</slot>

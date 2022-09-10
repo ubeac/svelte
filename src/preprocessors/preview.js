@@ -67,9 +67,18 @@ export default function previewProcessor() {
 					result.appendRight(index, ' markup={`' + previewMarkup + '`}')
 
 					if (previewScript) {
-						const escaped = previewScript.replace(/\$\{/g, '\\${').replace(/\`/g, '\\`')
+						let escaped = previewScript.replace(/\$\{/g, '\\${').replace(/\`/g, '\\`')
+						let isTypescript = false
+
+						if (escaped.match(/^\<script\slang=\"ts\"\>/)) {
+							escaped = escaped.replace(/\<script\slang=\"ts\"\>/, '<script>')
+							isTypescript = true
+						}
 
 						result.appendRight(index, ' script={`' + escaped + '`}')
+						if (isTypescript) {
+							result.appendRight(index, ' isTypescript')
+						}
 					}
 
 					if (previewStyle) result.appendRight(index, ' style={`' + previewStyle + '`}')

@@ -1,0 +1,23 @@
+.u-tabs-items {
+	@extend .nav, .nav-tabs;
+}
+
+.u-tabs-item {
+	@extend .nav-link;
+}
+
+.u-tabs-item-active {
+	@extend .active;
+}
+
+.u-tabs-panels {
+	@extend .tab-content;
+}
+
+.u-tabs-panel {
+	@extend .tab-pane;
+}
+
+.u-tabs-panel-active {
+	@extend .active;
+}
