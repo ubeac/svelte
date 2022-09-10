@@ -10,7 +10,13 @@
 
 	import { Card, CardBody } from '../card'
 	import { Icon } from '../icon'
+	import { Tabs, TabsItem, TabsItems, TabsPanel, TabsPanels } from '../tabs'
 	import PreviewCopyButton from './PreviewCopyButton.svelte'
+
+	/**
+	 * is script written in typescript language?
+	 */
+	export let isTypescript: boolean = false
 
 	/**
 	 * content of Example's markup section
@@ -36,9 +42,13 @@
 	 */
 	export let src: string
 
+	/**
+	 * Set it's direction to column
+	 */
+	export let vertical: boolean = false
+
 	// TODO: add github link support
 	// $: githubURL = github_prefix + path.substring(path.indexOf('src/routes'))
-	let id: string = nanoid(5)
 
 	let copyIcon = 'copy'
 
@@ -47,57 +57,49 @@
 		setTimeout(() => (copyIcon = 'copy'), 2000)
 	}
 
+	$: classes = classname('preview-body', { vertical }, $$props.class)
+
+	$: script = isTypescript ? script?.replace(/^\<script\>/g, '<script lang="ts">') : script
+
 	$: markupHighlighted = Prism.highlight(markup ?? '', Prism.languages.svelte, 'svelte')
 	$: styleHighlighted = Prism.highlight(style ?? '', Prism.languages.svelte, 'svelte')
 	$: scriptHighlighted = Prism.highlight(script ?? '', Prism.languages.svelte, 'svelte')
 </script>
 
 <Card>
-	<ul class="nav nav-tabs" data-bs-toggle="tabs">
-		<li class="nav-item">
-			<a href="#tabs-{id}-preview" class="nav-link active" data-bs-toggle="tab">Preview</a>
-		</li>
-		<li class="nav-item">
-			<a href="#tabs-{id}-markup" class="nav-link" data-bs-toggle="tab">Markup</a>
-		</li>
-		{#if script}
-			<li class="nav-item">
-				<a href="#tabs-{id}-script" class="nav-link" data-bs-toggle="tab">Script</a>
-			</li>
-		{/if}
-		{#if style}
-			<li class="nav-item">
-				<a href="#tabs-{id}-style" class="nav-link" data-bs-toggle="tab">Style</a>
-			</li>
-		{/if}
-	</ul>
-	<CardBody>
-		<div class="tab-content">
-			<div class="tab-pane active show" id="tabs-{id}-preview">
-				<div class={classname('preview-body')}>
+	<Tabs value="1">
+		<TabsItems>
+			<TabsItem value="1">Preview</TabsItem>
+			<TabsItem value="2">Markup</TabsItem>
+			<TabsItem value="3" if={!!script}>Script</TabsItem>
+			<TabsItem value="4" if={!!style}>Style</TabsItem>
+		</TabsItems>
+		<TabsPanels>
+			<TabsPanel value="1">
+				<div class={classes}>
 					<slot />
 				</div>
-			</div>
-			<div class="tab-pane" id="tabs-{id}-markup">
+			</TabsPanel>
+			<TabsPanel value="2">
 				<div class={classname('preview-code')}>
 					<PreviewCopyButton on:success={setChecked} value={markup}>
 						<Icon name={copyIcon} />
 					</PreviewCopyButton>
 					<pre><code class="language-svelte">{@html markupHighlighted}</code></pre>
 				</div>
-			</div>
+			</TabsPanel>
 			{#if script}
-				<div class="tab-pane" id="tabs-{id}-script">
+				<TabsPanel value="3">
 					<div class={classname('preview-code')}>
 						<PreviewCopyButton on:success={setChecked} value={script}>
 							<Icon name={copyIcon} />
 						</PreviewCopyButton>
 						<pre><code class="language-svelte">{@html scriptHighlighted}</code></pre>
 					</div>
-				</div>
+				</TabsPanel>
 			{/if}
 			{#if script}
-				<div class="tab-pane" id="tabs-{id}-style">
+				<TabsPanel value="4">
 					<div class={classname('preview-code')}>
 						<PreviewCopyButton on:success={setChecked} value={style}>
 							<Icon name={copyIcon} />
@@ -105,33 +107,8 @@
 
 						<pre><code class="language-svelte">{@html styleHighlighted}</code></pre>
 					</div>
-				</div>
+				</TabsPanel>
 			{/if}
-		</div>
-	</CardBody>
+		</TabsPanels>
+	</Tabs>
 </Card>
-
-<style global>
-	.u-preview-body {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 2rem;
-		gap: 8px;
-	}
-
-	.u-preview-code {
-		position: relative;
-		margin: -1rem -1.25rem;
-	}
-
-	.u-preview-copy-button {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	.u-preview-code pre {
-		margin: 0;
-		border: transparent;
-	}
-</style>

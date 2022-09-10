@@ -2,7 +2,7 @@
 	import { Button, Icon, Preview } from '$lib/components'
 	import { onMount } from 'svelte'
 	import Example from '../../_layout-components/Example.svelte'
-import ButtonColors from './ButtonColors.svelte';
+	import ButtonColors from './ButtonColors.svelte'
 
 	let counter = 0
 
@@ -30,8 +30,8 @@ import ButtonColors from './ButtonColors.svelte';
 	inventore mollitia quam harum facilis? Repellendus explicabo maxime exercitationem recusandae quo dolorem itaque at
 	dignissimos.
 </p>
-<Preview src="./ButtonColors.svelte">
-	<ButtonColors/>
+<Preview vertical src="./ButtonColors.svelte">
+	<ButtonColors />
 </Preview>
 
 <h2>Outline Buttons</h2>

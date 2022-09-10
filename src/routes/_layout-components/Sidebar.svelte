@@ -17,8 +17,10 @@
 			<DropdownItem icon="star" href="/components/buttons">Buttons</DropdownItem>
 			<DropdownItem icon="star" href="/components/cards">Cards</DropdownItem>
 			<DropdownItem icon="star" href="/components/datepickers">DatePickers</DropdownItem>
+			<DropdownItem icon="star" href="/components/grid">Grid</DropdownItem>
 			<DropdownItem icon="star" href="/components/inputs">Inputs</DropdownItem>
 			<DropdownItem icon="star" href="/components/select">Select</DropdownItem>
+			<DropdownItem icon="star" href="/components/textarea">Textarea</DropdownItem>
 		</DropdownMenu>
 	</Dropdown>
 	<Dropdown>

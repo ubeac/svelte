@@ -1,47 +1,53 @@
 <script>
-	import Example from '../../_layout-components/Example.svelte'
-
-	import { Alert, Badge, Button, Card } from '$lib/components'
-
-	let show = false
-	let show2 = false
-	let show3 = false
+	import { Preview } from '$lib/components'
+	import IfNative from './IfNative.svelte'
+	import IfComponents from './IfComponents.svelte'
+	import IfMultiline from './IfMultiline.svelte'
 </script>
 
 <h1>If prop</h1>
-<Alert>
-	<p>Please check source code to see example code</p>
-</Alert>
+You can show or hide a Component/Element using if prop, it works on all Components and DOM Elements
 
-<h2>Test 1</h2>
+<h2>Using with Components</h2>
 <p>
-	you can use if={'{'}expression{'}'} prop for all HTML elements and Svelte components and if expression is false the component
-	or element will not render
+	You can use if prop in all components whether it is from @ubeac/svelte or other libraries or even your own component
+	:)
 </p>
 
-<Example>
-	<Button on:click={() => (show = !show)}>Toggle</Button>
+<Preview src="./IfComponents.svelte">
+	<div class="example-if">
+		<IfComponents />
+	</div>
+</Preview>
 
-	<Card if={show}>This is Card</Card>
-</Example>
+<h2>Using with DOM Elements</h2>
+<p>You can also use it with all native HTML elements</p>
 
-<h2>Test 2</h2>
-You can also use with native HTML elements
+<Preview src="./IfNative.svelte">
+	<div class="example-if">
+		<IfNative />
+	</div>
+</Preview>
 
-<Example>
-	<Button on:click={() => (show2 = !show2)}>Toggle</Button>
-	<h1 if={show2}>this is h1</h1>
-</Example>
+<h2>Use alongside other props</h2>
+<p>you can also use it alongside other props (multiline)</p>
 
-<h2>Test 2</h2>
-Multi line props
+<Preview src="./IfMultiline.svelte">
+	<div class="example-if">
+		<IfMultiline />
+	</div>
+</Preview>
 
-<Example>
-	<Button on:click={() => (show3 = !show3)}>Toggle</Button>
-	<Badge
-		shape="tile"
-		color="secondary"
-		href="/components/badges"
-		class="customized-badge-class-for-test long class name"
-		if={show3}>badge</Badge>
-</Example>
+<style>
+	h2 {
+		margin-top: 2rem;
+	}
+
+	.example-if {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+</style>

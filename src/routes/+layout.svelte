@@ -3,7 +3,6 @@
 	import '../styles.css'
 	import Nav from './_layout-components/Nav.svelte'
 	import Sidebar from './_layout-components/Sidebar.svelte'
-
 </script>
 
 <div class="page">
@@ -40,13 +39,13 @@
 	<header class="navbar navbar-expand-md navbar-light d-none d-lg-flex">
 		<div class="container-fluid">
 			<div />
-			<Avatar>PR</Avatar>
+			<Avatar>PN</Avatar>
 		</div>
 	</header>
 
 	<div class="page-wrapper">
 		<div class="page-body">
-			<div class="container-lg px-4">
+			<div class="container-fluid px-4">
 				<slot />
 			</div>
 		</div>
