@@ -3,7 +3,6 @@
 	import IfNative from './IfNative.svelte'
 	import IfComponents from './IfComponents.svelte'
 	import IfMultiline from './IfMultiline.svelte'
-
 </script>
 
 <h1>If prop</h1>
@@ -45,6 +44,7 @@ You can show or hide a Component/Element using if prop, it works on all Componen
 	}
 
 	.example-if {
+		width: 50%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
