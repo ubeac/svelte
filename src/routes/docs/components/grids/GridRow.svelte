@@ -1,5 +1,5 @@
 <script>
-	import { Container, Row, Col } from '@ubeac/svelte/components/gird'
+	import { Container, Row, Col } from '@ubeac/svelte/components/grid'
 	import { Card, CardBody } from '@ubeac/svelte/components/card'
 
 	let innerWidth = 0

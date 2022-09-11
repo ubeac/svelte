@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Col, Row } from '$lib/components/gird'
+	import { Col, Row } from '$lib/components/grid'
 	import { classname } from '$lib/utils'
 
 	/**
