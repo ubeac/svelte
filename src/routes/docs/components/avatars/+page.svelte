@@ -1,8 +1,7 @@
 <script>
-	import { Avatar, AVATAR_SHAPES } from '$lib/components'
-	import { COLORS } from '$lib/types'
-
-	import Example from '../../_layout-components/Example.svelte'
+	import { Preview } from '$lib/components'
+	import AvatarColors from './AvatarColors.svelte'
+	import AvatarShapes from './AvatarShapes.svelte'
 </script>
 
 <h1>Avatars</h1>
@@ -17,21 +16,15 @@
 	facilis incidunt.
 </p>
 
-<Example>
-	<Avatar>AV</Avatar>
-</Example>
-
 <h2>Colors</h2>
 <p>
 	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi eligendi ab, maxime minima repellendus labore ipsum
 	quas exercitationem tempore recusandae eveniet id animi voluptate vitae nisi aliquam saepe hic similique!
 </p>
 
-<Example>
-	{#each COLORS as color}
-		<Avatar {color}>{color.substring(0, 2)}</Avatar>
-	{/each}
-</Example>
+<Preview src="./AvatarColors.svelte">
+	<AvatarColors />
+</Preview>
 
 <h2>Shapes</h2>
 <p>
@@ -39,8 +32,6 @@
 	quas exercitationem tempore recusandae eveniet id animi voluptate vitae nisi aliquam saepe hic similique!
 </p>
 
-<Example>
-	{#each AVATAR_SHAPES as shape}
-		<Avatar {shape}>{shape.substring(0, 2)}</Avatar>
-	{/each}
-</Example>
+<Preview src="./AvatarShapes.svelte">
+	<AvatarShapes />
+</Preview>
