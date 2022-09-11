@@ -1,5 +1,5 @@
 <script>
-	import { Card, CardBody, CardHeader, CardTitle, CardMedia } from '@ubeac/svelte/components/card'
+	import { Card, CardBody, CardHeader, CardTitle, CardMedia } from '@ubeac/svelte'
 </script>
 
 <div class="example-column example-column-1">

@@ -1,6 +1,6 @@
 <script>
 	import { Input } from '@ubeac/svelte'
-	import { Card, CardBody } from '@ubeac/svelte/components/card'
+	import { Card, CardBody } from '@ubeac/svelte'
 
 	/** @type {string} */
 	let value
