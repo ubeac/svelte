@@ -24,8 +24,8 @@ export * from './page'
 export * from './popup'
 export * from './preview'
 export * from './spinner'
-export * from './tab'
 export * from './table'
+export * from './tabs'
 export * from './tooltip'
 
 // Form Elements
