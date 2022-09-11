@@ -1,14 +1,16 @@
 <script lang="ts">
 	import { classname } from '$lib/utils'
 
+	import { Col } from '../grid'
+
 	/**
-	 * Specify a custom tag used on the root element.
+	 * Set Column width
 	 */
-	export let tag: string = 'div'
+	export let cols: string | number | boolean = false
 
 	$: classes = classname('form-field', {}, $$props.class, true)
 </script>
 
-<svelte:element this={tag} {...$$restProps} class={classes}>
+<Col {cols} class={classes} {...$$restProps}>
 	<slot />
-</svelte:element>
+</Col>

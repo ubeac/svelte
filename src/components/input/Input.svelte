@@ -9,7 +9,7 @@
 	/**
 	 * Forward all native Events
 	 */
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Set the input disabled

@@ -1,0 +1,13 @@
+$prefix-form-input: $prefix + 'form-input';
+
+.#{$prefix-form-input} {
+    @extend .mb-3;
+
+    &-icon {
+        @extend .input-icon;
+
+        &>.#{$prefix-form-input}-icon-addon {
+            @extend .input-icon-addon;
+        }
+    }
+}

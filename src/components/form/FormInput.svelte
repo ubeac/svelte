@@ -7,15 +7,22 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
+	import FormField from './FormField.svelte'
+
 	/**
 	 * Set Column width
 	 */
-	export let col: string | undefined = undefined
+	export let cols: string | number | boolean = '12'
 
 	/**
 	 * Sets an icon inside component
 	 */
 	export let icon: string | undefined = undefined
+
+	/**
+	 * Sets an icon inside component
+	 */
+	export let iconEnd: string | undefined = undefined
 
 	/**
 	 * Set id for HTML element
@@ -47,27 +54,30 @@
 	$: classes = classname('form-input', undefined, $$props.class)
 </script>
 
-<FormGroup {col} class={classes}>
-	<svelte:fragment slot="label">
-		{#if label}
-			<Label for={id} {required}>{label}</Label>
-		{/if}
-	</svelte:fragment>
-	<slot name="outer:start" slot="outer:start" />
-	<slot name="middle:start" slot="middle:start" />
-	<svelte:fragment slot="inner:start">
-		{#if icon}
-			<Icon name={icon} />
-		{/if}
-		<slot name="inner:start" />
-	</svelte:fragment>
-	<Input bind:value {id} {forwardEvents} {...$$restProps} />
-	<svelte:fragment slot="inner:end">
-		{#if loading}
-			<Spinner />
-		{/if}
-		<slot name="inner:end" />
-	</svelte:fragment>
-	<slot name="middle:end" slot="middle:end" />
-	<slot name="outer:end" slot="outer:end" />
-</FormGroup>
+<FormField {cols} class={classes}>
+	{#if label}
+		<Label for="form-input-{id}" {required}>{label}</Label>
+	{/if}
+	<div class={classname('form-input-icon')}>
+		<slot name="start">
+			{#if icon}
+				<span class={classname('form-input-icon-addon')}>
+					<Icon name={icon} />
+				</span>
+			{/if}
+		</slot>
+		<Input id="form-input-{id}" {required} {forwardEvents} {...$$restProps} bind:value />
+		<slot name="end">
+			{#if iconEnd && !loading}
+				<span class={classname('form-input-icon-addon')}>
+					<Icon name={iconEnd} />
+				</span>
+			{/if}
+			{#if loading}
+				<span class={classname('form-input-icon-addon')}>
+					<Spinner />
+				</span>
+			{/if}
+		</slot>
+	</div>
+</FormField>
