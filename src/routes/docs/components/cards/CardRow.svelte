@@ -1,6 +1,6 @@
 <script>
 	import { Card, CardBody, CardHeader, CardTitle } from '@ubeac/svelte/components/card'
-	import { Row, Col } from '@ubeac/svelte/components/gird'
+	import { Row, Col } from '@ubeac/svelte/components/grid'
 </script>
 
 <Row class="row-deck">

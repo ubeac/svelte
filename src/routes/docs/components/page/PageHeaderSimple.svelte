@@ -1,6 +1,6 @@
 <script>
 	import { Page } from '@ubeac/svelte/components/page'
-	import { Col, Row } from '@ubeac/svelte/components/gird'
+	import { Col, Row } from '@ubeac/svelte/components/grid'
 	import CardBlog from '../cards/CardBlog.svelte'
 </script>
 
