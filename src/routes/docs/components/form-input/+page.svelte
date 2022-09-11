@@ -50,9 +50,3 @@
 <Preview vertical class="align-items-stretch" src="./FormInputIcon.svelte">
 	<FormInputIcon />
 </Preview>
-
-<style>
-	h2 {
-		margin-top: 2rem;
-	}
-</style>

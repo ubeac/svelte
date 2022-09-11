@@ -42,9 +42,3 @@
 <Preview vertical class="align-items-stretch" src="./FormTextareaDisabledLoading.svelte">
 	<FormTextareaDisabledLoading />
 </Preview>
-
-<style>
-	h2 {
-		margin-top: 2rem;
-	}
-</style>

@@ -79,10 +79,6 @@
 </Preview>
 
 <style>
-	h2 {
-		margin-top: 2rem;
-	}
-
 	.example-autocomplete {
 		display: flex;
 		flex-direction: column;

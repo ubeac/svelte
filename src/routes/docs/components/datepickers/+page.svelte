@@ -37,8 +37,4 @@
 	.example-datepicker {
 		display: flex;
 	}
-
-	h2 {
-		margin-top: 2rem;
-	}
 </style>
