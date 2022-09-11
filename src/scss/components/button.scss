@@ -11,7 +11,13 @@ $prefix-button : $prefix +'button';
 	$value in $theme-colors {
 		&-color-#{$key} {
 			@extend .btn-#{$key};
+
+			&.#{$prefix-button}-ghost {
+				@extend .btn-ghost-#{$key};
+			}
 		}
+
+
 
 		&-color-#{$key}.#{$prefix-button}-outline {
 			@extend .btn-outline-#{$key};
@@ -23,6 +29,7 @@ $prefix-button : $prefix +'button';
 			--#{$prefix}btn-bg: transparent;
 		}
 	}
+
 
 	&-block {
 		width: 100%;
@@ -65,10 +72,11 @@ $prefix-button : $prefix +'button';
 		@extend .btn-icon;
 	}
 
-	& > .#{$prefix}icon {
+	&>.#{$prefix}icon {
 		margin: 0 !important;
 	}
-	& > .#{$prefix}avatar {
+
+	&>.#{$prefix}avatar {
 		margin: 0 !important;
 	}
 }

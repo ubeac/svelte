@@ -7,6 +7,11 @@ export const navigations = [
 		title: 'Components',
 		children: [
 			{
+				route: base_component_path + 'alert',
+				title: 'Alert',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'autocomplete',
 				title: 'Autocomplete',
 				icon: 'star',
