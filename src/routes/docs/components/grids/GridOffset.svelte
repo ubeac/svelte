@@ -1,6 +1,5 @@
 <script>
-	import { Container, Row, Col } from '@ubeac/svelte/components/grid'
-	import { Card, CardBody } from '@ubeac/svelte/components/card'
+	import { Container, Row, Col, Card } from '@ubeac/svelte'
 </script>
 
 <Container class="container-example">

@@ -1,6 +1,6 @@
 <script>
-	import { Card, CardBody, CardHeader, CardTitle, CardMedia } from '@ubeac/svelte/components/card'
-	import { Row, Col } from '@ubeac/svelte/components/grid'
+	import { Card, CardBody, CardHeader, CardTitle, CardMedia } from '@ubeac/svelte'
+	import { Row, Col } from '@ubeac/svelte'
 	import { Avatar } from '@ubeac/svelte/components/avatar'
 	import { Icon } from '@ubeac/svelte/components/icon'
 </script>

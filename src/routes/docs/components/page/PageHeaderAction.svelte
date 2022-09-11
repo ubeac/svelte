@@ -1,6 +1,5 @@
 <script>
-	import { Page } from '@ubeac/svelte/components/page'
-	import { Button } from '@ubeac/svelte/components/button'
+	import { Page, Button } from '@ubeac/svelte'
 </script>
 
 <Page>
