@@ -1,8 +1,6 @@
 <script>
 	import { Icon, ICON_SIZES } from '$lib/components'
 	import { COLORS } from '$lib/types'
-
-	import Example from '../../_layout-components/Example.svelte'
 </script>
 
 <h1>Icons</h1>
@@ -17,28 +15,28 @@
 	dolores accusantium quos nisi eveniet tempora, nemo tenetur perspiciatis accusamus natus dolorem perferendis
 	architecto aut.
 </p>
-<Example>
+<!-- <Example>
 	<Icon name="user" />
-</Example>
+</Example> -->
 
 <h2>Size</h2>
 <p>
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ab illum labore consequatur accusamus ut eveniet eius
 	asperiores, impedit placeat officia dolorem modi, maxime nostrum provident veritatis amet expedita dolores!
 </p>
-<Example>
+<!-- <Example>
 	{#each ICON_SIZES as size}
 		<Icon {size} name="sun" />
 	{/each}
-</Example>
+</Example> -->
 
 <h2>Icon Colors</h2>
 <p>
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ab illum labore consequatur accusamus ut eveniet eius
 	asperiores, impedit placeat officia dolorem modi, maxime nostrum provident veritatis amet expedita dolores!
 </p>
-<Example>
+<!-- <Example>
 	{#each COLORS as color}
 		<Icon size="3x" {color} name="book" />
 	{/each}
-</Example>
+</Example> -->
