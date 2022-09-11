@@ -77,7 +77,7 @@ export const navigations = [
 		title: 'Pages',
 		children: [
 			{
-				route: base_component_path + 'login',
+				route: base_path + '', // removed '/docs/components/login' to prevent error in prerender step
 				title: '(TODO) Login',
 				icon: 'package',
 			},
