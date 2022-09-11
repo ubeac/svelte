@@ -19,7 +19,7 @@
 	 */
 	export let justify: 'start' | 'center' | 'end' = 'start'
 
-	$: classes = classname('tabs-items', undefined, $$props.class, true)
+	$: classes = classname('tabs-items', { grow, justify }, $$props.class, true)
 </script>
 
 <div role="tablist" use:forwardEvents {...$$restProps} class={classes}>
