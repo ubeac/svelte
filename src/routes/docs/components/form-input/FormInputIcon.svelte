@@ -8,9 +8,3 @@
 <FormInput label="Icon right" iconEnd="package" />
 
 <FormInput placeholder="You can set icons in both side" label="Both" icon="package" iconEnd="check" />
-
-<FormInput placeholder="Loading in left side">
-	<span slot="start">
-		<Spinner />
-	</span>
-</FormInput>
