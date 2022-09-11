@@ -9,7 +9,7 @@
 </script>
 
 <h1>Form DatePicker</h1>
-<p>FormDatePicker supports all props and events of DatePicker and also have some additional features</p>
+<p>FormDatePicker supports all props and events of <a href="/docs/components/datepickers">DatePicker</a> and also have some additional features</p>
 
 <h2>Label</h2>
 <p>You can set a label for FormDatePicker.</p>

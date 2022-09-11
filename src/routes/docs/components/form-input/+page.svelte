@@ -9,7 +9,7 @@
 </script>
 
 <h1>Form Input</h1>
-<p>FormInput supports all props and events of Input and also have some additional features</p>
+<p>FormInput supports all props and events of <a href="/docs/components/inputs">Input</a> and also have some additional features</p>
 
 <h2>Label</h2>
 <p>You can set a label for FormInput.</p>
