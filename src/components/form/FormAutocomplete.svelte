@@ -64,10 +64,10 @@
 			<Label for="form-autocomplete-{id}" {required}>{label}</Label>
 		{/if}
 	</slot>
-	<div class={classname('form-input-icon')}>
+	<div class={classname('form-field-body')}>
 		<slot name="start">
 			{#if icon}
-				<span class={classname('form-input-icon-addon')}>
+				<span class={classname('form-field-icon')}>
 					<Icon name={icon} />
 				</span>
 			{/if}
@@ -75,12 +75,12 @@
 		<Autocomplete bind:value id="form-autocomplete-{id}" {required} {forwardEvents} {...$$restProps} on:changed />
 		<slot name="end">
 			{#if iconEnd && !loading}
-				<span class={classname('form-input-icon-addon')}>
+				<span class={classname('form-field-icon')}>
 					<Icon name={iconEnd} />
 				</span>
 			{/if}
 			{#if loading}
-				<span class={classname('form-input-icon-addon')}>
+				<span class={classname('form-field-icon')}>
 					<Spinner />
 				</span>
 			{/if}

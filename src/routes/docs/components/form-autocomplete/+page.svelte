@@ -2,7 +2,6 @@
 	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
 	import FormAutocompleteDisabledLoading from './FormAutocompleteDisabledLoading.svelte'
-	import FormAutocompleteIcon from './FormAutocompleteIcon.svelte'
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'
 	import FormAutocompleteMessage from './FormAutocompleteMessage.svelte'
 	import FormAutocompleteRequired from './FormAutocompleteRequired.svelte'

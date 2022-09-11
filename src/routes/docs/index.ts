@@ -42,13 +42,18 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'form-datepicker',
+				title: 'FormDatePicker',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'form-input',
 				title: 'Form Input',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'form-datepicker',
-				title: 'FormDatePicker',
+				route: base_component_path + 'form-textarea',
+				title: 'FormTextarea',
 				icon: 'star',
 			},
 			{

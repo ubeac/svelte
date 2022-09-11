@@ -54,7 +54,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-input', undefined, $$props.class)
+	$: classes = classname('form-datepicker', undefined, $$props.class)
 </script>
 
 <FormField {cols} class={classes}>
@@ -63,22 +63,24 @@
 			<Label for="form-datepicker-{id}" {required}>{label}</Label>
 		{/if}
 	</slot>
-	<div class={classname('form-input-icon')}>
+	<div class={classname('form-field-body')}>
 		<slot name="start">
 			{#if icon}
+			<span class={classname('form-field-icon')}>
 				<Icon name={icon} />
+			</span>
 			{/if}
 		</slot>
 		<DatePicker bind:value id="form-datepicker-{id}" {required} {forwardEvents} {...$$restProps} />
 		<slot name="end">
 			{#if iconEnd}
-				<span class={classname('form-input-icon-addon')}>
+				<span class={classname('form-field-icon')}>
 					<Icon name={iconEnd} />
 				</span>
 			{/if}
 
 			{#if loading}
-				<span class={classname('form-input-icon-addon')}>
+				<span class={classname('form-field-icon')}>
 					<Spinner />
 				</span>
 			{/if}
