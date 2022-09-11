@@ -7,6 +7,7 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
+	import { FormHint } from '.'
 	import FormField from './FormField.svelte'
 
 	/**
@@ -40,6 +41,11 @@
 	export let loading: boolean = false
 
 	/**
+	 * Show Message at bottom of Input
+	 */
+	export let message: string | undefined = undefined
+
+	/**
 	 * Mark this as required field in form
 	 */
 	export let required: boolean = false
@@ -55,9 +61,11 @@
 </script>
 
 <FormField {cols} class={classes}>
-	{#if label}
-		<Label for="form-input-{id}" {required}>{label}</Label>
-	{/if}
+	<slot name="label">
+		{#if label}
+			<Label for="form-input-{id}" {required}>{label}</Label>
+		{/if}
+	</slot>
 	<div class={classname('form-input-icon')}>
 		<slot name="start">
 			{#if icon}
@@ -80,4 +88,9 @@
 			{/if}
 		</slot>
 	</div>
+	<slot name="message">
+		{#if message}
+			<FormHint>{message}</FormHint>
+		{/if}
+	</slot>
 </FormField>

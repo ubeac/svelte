@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 	import { FormHint, FormInput } from '@ubeac/svelte/components'
 </script>
 
@@ -12,4 +12,4 @@
 
 <FormInput type="email" label="valid Email:" value="test@gmail.com">
 	<FormHint state="valid" slot="message">Your Email is valid.</FormHint>
-</FormInput> -->
+</FormInput>
