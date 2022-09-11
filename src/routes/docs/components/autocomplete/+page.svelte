@@ -1,6 +1,5 @@
 <script>
 	import { Alert, Preview } from '@ubeac/svelte'
-	import { AlertTitle } from '@ubeac/svelte/components'
 
 	import AutocompleteDefault from './AutocompleteDefault.svelte'
 	import AutocompleteDisabledLoading from './AutocompleteDisabledLoading.svelte'
@@ -48,8 +47,7 @@
 	</div>
 </Preview>
 <br />
-<Alert type="success">
-	<AlertTitle>Note</AlertTitle>
+<Alert type="success" title="Note">
 	All @ubeac/svelte components support native DOM events like on:click, on:focus, on:blur, etc.
 </Alert>
 
