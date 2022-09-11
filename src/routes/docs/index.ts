@@ -42,6 +42,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'form-datepicker',
+				title: 'FormDatePicker',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'grids',
 				title: 'Grid',
 				icon: 'star',
