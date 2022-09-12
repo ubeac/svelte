@@ -10,31 +10,34 @@
 	 * Color of Switch
 	 */
 	export let color: Colors = 'default'
+
 	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
 	/**
 	 * Label of Switch
 	 */
 	export let label: string | undefined = undefined
+
 	/**
 	 * Value of Switch
 	 */
 	export let value: boolean | undefined = undefined
 
 	$: switchClasses = classname('switch', undefined, $$props.class)
-	$: inputClasses = classname('switch-input', { color }, $$props.class)
-	$: labelClasses = classname('switch-label', undefined, $$props.class)
+	$: inputClasses = classname('switch-input', { color })
+	$: labelClasses = classname('switch-label')
 </script>
 
 <Label class={switchClasses}>
 	<input type="checkbox" bind:checked={value} use:forwardEvents {...$$restProps} class={inputClasses} />
-	<span class={labelClasses}>
-		{#if label}
+	{#if label}
+		<span class={labelClasses}>
 			{label}
-		{:else}
-			<slot />
-		{/if}
-	</span>
+		</span>
+	{:else}
+		<slot />
+	{/if}
 </Label>

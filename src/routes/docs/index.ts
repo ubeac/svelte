@@ -62,6 +62,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'form-switch',
+				title: 'FormSwitch',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'form-textarea',
 				title: 'FormTextarea',
 				icon: 'star',
@@ -84,6 +89,11 @@ export const navigations = [
 			{
 				route: base_component_path + 'select',
 				title: 'Select',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'switch',
+				title: 'Switch',
 				icon: 'star',
 			},
 			{
