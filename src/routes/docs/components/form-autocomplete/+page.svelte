@@ -42,9 +42,3 @@
 <Preview vertical class="align-items-stretch" src="./FormAutocompleteDisabledLoading.svelte">
 	<FormAutocompleteDisabledLoading />
 </Preview>
-
-<style>
-	h2 {
-		margin-top: 2rem;
-	}
-</style>

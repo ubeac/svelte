@@ -105,9 +105,6 @@
 </Preview>
 
 <style global>
-	h2 {
-		margin-top: 3rem !important;
-	}
 	.example-column {
 		margin: 0 auto;
 	}

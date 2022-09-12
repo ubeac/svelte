@@ -67,4 +67,11 @@
 		justify-content: center;
 		margin-bottom: 2rem;
 	}
+
+	.page-body p {
+		font-size: 16px;
+	}
+	.page-body h2 {
+		margin-top: 3rem;
+	}
 </style>

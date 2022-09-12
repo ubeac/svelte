@@ -63,9 +63,6 @@
 </Preview>
 
 <style>
-	h2 {
-		margin-top: 2rem;
-	}
 
 	.example-textarea {
 		display: flex;

@@ -20,18 +20,14 @@
 <h2>Types</h2>
 <p>You can also change type of input</p>
 
-<Preview src="./InputTypes.svelte">
-	<div class="example-inputs">
-		<InputTypes />
-	</div>
+<Preview vertical src="./InputTypes.svelte">
+	<InputTypes />
 </Preview>
 
 <h2>Sizes</h2>
 <p>Use size prop to change size of input</p>
-<Preview src="./InputSizes.svelte">
-	<div class="example-inputs">
-		<InputSizes />
-	</div>
+<Preview vertical src="./InputSizes.svelte">
+	<InputSizes />
 </Preview>
 
 <h2>Disabled</h2>
@@ -54,20 +50,6 @@
 
 <h2>Value</h2>
 <p>You can get and set input value using bind:value</p>
-<Preview src="./InputValue.svelte">
-	<div class="example-inputs">
-		<InputValue />
-	</div>
+<Preview vertical src="./InputValue.svelte">
+	<InputValue />
 </Preview>
-
-<style>
-	.example-inputs {
-		display: flex;
-		flex-direction: column;
-		gap: 4px;
-	}
-
-	h2 {
-		margin-top: 2rem;
-	}
-</style>

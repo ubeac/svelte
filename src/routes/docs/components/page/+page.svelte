@@ -12,9 +12,3 @@
 <Preview vertical src="./PageHeaderAction.svelte">
 	<PageHeaderAction />
 </Preview>
-
-<style>
-	h2 {
-		margin-top: 3rem;
-	}
-</style>

@@ -97,9 +97,6 @@
 </Preview>
 
 <style global>
-	h2 {
-		margin-top: 2rem;
-	}
 	.u-alert {
 		width: 80%;
 		font-size: 0.875rem;

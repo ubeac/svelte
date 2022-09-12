@@ -118,9 +118,6 @@
 </Preview>
 
 <style global>
-	h2 {
-		margin-top: 3rem !important;
-	}
 	.container-example {
 		min-height: 150px;
 		background: #fafafa;

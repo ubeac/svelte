@@ -57,7 +57,7 @@
 		setTimeout(() => (copyIcon = 'copy'), 2000)
 	}
 
-	$: classes = classname('preview-body', { vertical }, $$props.class)
+	$: classes = classname('preview', { vertical }, $$props.class)
 
 	$: script = isTypescript ? script?.replace(/^\<script\>/g, '<script lang="ts">') : script
 
@@ -66,7 +66,7 @@
 	$: scriptHighlighted = Prism.highlight(script ?? '', Prism.languages.svelte, 'svelte')
 </script>
 
-<Card>
+<Card class={classes}>
 	<Tabs value="1">
 		<TabsItems>
 			<TabsItem value="1">Preview</TabsItem>
@@ -76,7 +76,7 @@
 		</TabsItems>
 		<TabsPanels>
 			<TabsPanel value="1">
-				<div class={classes}>
+				<div class={classname('preview-body')}>
 					<slot />
 				</div>
 			</TabsPanel>

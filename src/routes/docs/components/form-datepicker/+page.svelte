@@ -50,9 +50,3 @@
 <Preview vertical class="align-items-stretch" src="./FormDatePickerIcon.svelte">
 	<FormDatePickerIcon />
 </Preview>
-
-<style>
-	h2 {
-		margin-top: 2rem;
-	}
-</style>
