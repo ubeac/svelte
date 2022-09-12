@@ -1,28 +1,12 @@
 $prefix-radio : $prefix +'radio';
 
 .#{$prefix-radio} {
-	@extend .form-check;
-
-	&-description {
-		@extend .form-check-description;
-	}
-
-	&-inline {
-		@extend .form-check-inline;
-	}
-
-	&-input {
-		@extend .form-check-input;
-	}
+	@extend .form-check-input;
 
 	@each $key,
 	$value in $theme-colors {
-		&-input-#{$key}:checked {
+		&-color-#{$key}:checked {
 			background-color: #{$value} !important;
 		}
-	}
-
-	&-label {
-		@extend .form-check-label;
 	}
 }

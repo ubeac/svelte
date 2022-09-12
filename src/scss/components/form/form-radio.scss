@@ -1,9 +1,14 @@
 $prefix-form-radio : $prefix +'form-radio';
 
 .#{$prefix-form-radio} {
+    @extend .form-check;
 
     &-description {
-        padding-left: 23px;
+        @extend .form-check-description;
+    }
+
+    &-label {
+        @extend .form-check-label;
     }
 
     &-inline {
