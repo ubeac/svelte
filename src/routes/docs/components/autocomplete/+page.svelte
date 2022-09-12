@@ -47,7 +47,7 @@
 	</div>
 </Preview>
 <br />
-<Alert title="Note" type="success">
+<Alert type="success" title="Note">
 	All @ubeac/svelte components support native DOM events like on:click, on:focus, on:blur, etc.
 </Alert>
 

@@ -47,6 +47,26 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'form-autocomplete',
+				title: 'Form Autocomplete',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'form-datepicker',
+				title: 'FormDatePicker',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'form-input',
+				title: 'Form Input',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'form-textarea',
+				title: 'FormTextarea',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'grids',
 				title: 'Grid',
 				icon: 'star',
