@@ -1,50 +1,64 @@
 @use 'sass:color';
+$prefix-alert: $prefix + "alert";
 
-.u-alert {
+.#{$prefix-alert} {
 	@extend .alert;
-
-	&-body {
-		display: flex;
-	}
-
-	&-actions {
-		@extend .btn-list;
-	}
-
-	&-close {
-		@extend .btn-close;
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 2;
-		padding: 1.25rem 1rem;
-	}
-
-	&-dismissible {
-		@extend .alert-dismissible;
-	}
-
-	&-variant-filled {
-		@extend .alert-important;
-	}
-
-	&-icon {
-		color: var(--tblr-alert-color);
-		margin: -0.125rem 1rem -0.125rem 0;
-	}
 
 	&-title {
 		@extend .alert-title;
 	}
 
+	&-dismissible {
+		@extend .alert-dismissible;
+
+	}
+
+	&-close {
+		@extend .btn-close;
+	}
+
 	@each $key,
 	$value in $theme-colors {
-		&-type-#{$key} {
-			border-left-color: #{$value};
-		}
-
-		&-type-#{$key}.u-alert-variant-ghost {
-			background-color: #{color.adjust($value, $alpha: -0.9)} !important;
+		&-color-#{$key} {
+			@extend .alert-#{$key};
 		}
 	}
+
+
+	&-variant-filled {
+		@extend .alert-important;
+
+		.#{$prefix-alert}-title {
+			color: #fff;
+		}
+
+		.#{$prefix-alert}-close {
+			@extend .btn-close-white;
+		}
+	}
+
+	&-icon {
+		padding-left: 3rem;
+
+		& & {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			padding: 1rem;
+		}
+	}
+
+
+
+	// @each $key,
+	// $value in $theme-colors {
+	// 	&-type-#{$key} {
+	// 		border-left-color: #{$value};
+	// 	}
+
+	// 	&-type-#{$key}.u-alert-variant-ghost {
+	// 		background-color: #{color.adjust($value, $alpha: -0.9)} !important;
+	// 	}
+	// }
 }

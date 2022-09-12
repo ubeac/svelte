@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Col } from '$lib/components/gird'
+	import { Col } from '$lib/components/grid'
 	import { classname } from '$lib/utils'
 
 	$: classes = classname('form-group', undefined, $$props.class)

@@ -1,11 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte'
-	import { get_current_component, onDestroy, onMount } from 'svelte/internal'
-
-	import type { Alert } from 'bootstrap'
 
 	import { Icon } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
@@ -17,42 +13,38 @@
 	export let dismissible: boolean = false
 
 	/**
-	 * Set a timeout to close Alert automatically
-	 */
-	export let duration: number = -1
-
-	/**
 	 * Set an Icon at the start side of alert
 	 */
 	export let icon: string | undefined = undefined
 
 	/**
-	 * Control open/close state of Alert
+	 * Set Alert's title
 	 */
-	export let open: boolean = true
+	export let title: string | undefined = ''
 
 	/**
 	 * Set Alert's color
 	 */
-	export let type: Colors = 'default'
+	export let color: Colors = 'default'
 
 	/**
 	 * Set Alert's variant
 	 */
 	export let variant: AlertVariants = 'outlined'
 
+	/**
+	 * Set Alert's variant
+	 */
+	export let value: boolean = true
+
 	const dispatch = createEventDispatcher()
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	let instance: Alert
-	let ref: HTMLElement
 
 	$: classes = classname(
 		'alert',
 		{
+			color,
+			icon: Boolean(icon),
 			dismissible,
-			type,
 			variant,
 		},
 		['fade', 'show', $$props.class],
@@ -60,44 +52,25 @@
 	)
 
 	function close() {
-		instance && instance.close()
+		value = false
 		dispatch('close')
 	}
-
-	onMount(() => {
-		import('bootstrap').then(({ Alert }) => {
-			instance = new Alert(ref)
-			if (duration >= 0) setTimeout(close, duration)
-		})
-	})
-
-	// onDestroy(() => {
-	// 	instance && instance.dispose()
-	// })
 </script>
 
-{#if open}
-	<div bind:this={ref} use:forwardEvents {...$$restProps} class={classes}>
-		<div class={classname('alert-body')}>
-			{#if $$slots['icon'] || icon}
-				<div class={classname('alert-icon')}>
-					{#if icon}
-						<Icon name={icon} />
-					{:else}
-						<slot name="icon" />
-					{/if}
-				</div>
-			{/if}
-			<div>
-				<slot />
-			</div>
+{#if value}
+	<div {...$$restProps} class={classes}>
+		<div class={classname('alert-icon')}>
+			<slot name="icon">
+				<Icon name={icon} />
+			</slot>
 		</div>
+		<div class={classname('alert-title')}>
+			<slot name="title">{title}</slot>
+		</div>
+		<slot />
 		{#if dismissible}
-			<button type="button" on:click={close} class={classname('alert-close')} aria-label="close" />
-		{/if}
-		{#if $$slots['actions']}
-			<div class={classname('alert-actions')}>
-				<slot name="actions" />
+			<div class={classname('alert-close')} on:click={close}>
+				<slot name="close" />
 			</div>
 		{/if}
 	</div>
