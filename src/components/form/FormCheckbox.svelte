@@ -7,11 +7,6 @@
 	import { classname } from '$lib/utils'
 
 	/**
-	 *  Checked status of checkbox
-	 */
-	export let checked: boolean = false
-
-	/**
 	 * Set color of checkbox
 	 */
 	export let color: Colors = 'default'
@@ -42,6 +37,11 @@
 	export let inline: boolean = false
 
 	/**
+	 * Value of checkbox in group
+	 */
+	export let key: string | undefined = false
+
+	/**
 	 * label for checkbox
 	 */
 	export let label: string | undefined = undefined
@@ -54,11 +54,17 @@
 	$: classes = classname('form-checkbox', { inline }, $$props.class, true)
 </script>
 
-<div class={classes}>
-	<Checkbox bind:group bind:checked {forwardEvents} {label} {value} {color} />
+<!-- svelte-ignore a11y-label-has-associated-control -->
+<label class={classes}>
+	<Checkbox bind:group bind:value {forwardEvents} {label} {key} {color} />
+	{#if label}
+		<span class={classname('form-checkbox-label')}>
+			{label}
+		</span>
+	{/if}
 	{#if description}
-		<span class={classname('form-checkbox-description', { descriptionColor })}>
+		<span class={classname('form-checkbox-description', { color: descriptionColor })}>
 			{description}
 		</span>
 	{/if}
-</div>
+</label>

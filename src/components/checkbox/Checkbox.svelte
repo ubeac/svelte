@@ -6,11 +6,6 @@
 	import { classname } from '$lib/utils'
 
 	/**
-	 * Checked status of checkbox
-	 */
-	export let checked: boolean = false
-
-	/**
 	 * Set color of checkbox when it is checked
 	 */
 	export let color: Colors = 'primary'
@@ -26,32 +21,29 @@
 	export let group: any = []
 
 	/**
-	 * Set label value of checkbox
+	 * Set checkbox's key
 	 */
-	export let label: string | undefined = undefined
+	export let key: string | undefined = undefined
 
 	/**
-	 * Set checkbox value
+	 * Checked status of checkbox
 	 */
-	export let value: any
+	export let value: boolean = false
 
-	$: checkboxClasses = classname('checkbox', undefined, $$props.class, true)
-	$: inputClasses = classname('checkbox-input', { color }, $$props.class, true)
-	$: labelClasses = classname('checkbox-label', undefined, $$props.class, true)
+	$: classes = classname('checkbox', { color }, $$props.class, true)
 
+	$: updateGroup(value)
 	$: updateChekbox(group)
-	$: updateGroup(checked)
 
 	function updateChekbox(group: any) {
-		checked = group.indexOf(value) >= 0
+		value = group.indexOf(key) >= 0
 	}
 
-	function updateGroup(checked: boolean) {
-		const index = group.indexOf(value)
-		if (checked) {
+	function updateGroup(value: boolean) {
+		const index = group.indexOf(key)
+		if (value) {
 			if (index < 0) {
-				group.push(value)
-				group = group
+				group = [...group, key]
 			}
 		} else {
 			if (index >= 0) {
@@ -62,13 +54,4 @@
 	}
 </script>
 
-<label class={checkboxClasses}>
-	<input type="checkbox" bind:checked {value} class={inputClasses} use:forwardEvents {...$$restProps} />
-	<span class={labelClasses}>
-		{#if label}
-			{label}
-		{:else}
-			<slot />
-		{/if}
-	</span>
-</label>
+<input type="checkbox" bind:checked={value} value={key} use:forwardEvents {...$$restProps} class={classes} />

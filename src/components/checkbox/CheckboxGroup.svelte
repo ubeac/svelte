@@ -1,20 +1,16 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Checkbox } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
+	import type { Colors, Items } from '$lib/types'
 	import { classname, createOptions } from '$lib/utils'
+
+	import { FormCheckbox } from '../form'
 
 	/**
 	 * Set the color of checkbox when it is checked
 	 */
 	export let color: Colors = 'primary'
-
-	/**
-	 * Binding result of selected items
-	 */
-	export let group: any = []
 
 	/**
 	 * Set checkbox group to show in a row
@@ -24,7 +20,7 @@
 	/**
 	 * Checkbox group items
 	 */
-	export let items: any[] = []
+	export let items: Items = []
 
 	/**
 	 * The key in the items that each checkbox is related to
@@ -36,20 +32,19 @@
 	 */
 	export let text: string = 'text'
 
+	/**
+	 * Binding result of selected items
+	 */
+	export let value: any = []
+
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: ({ options, getKey, getText, isSelected } = createOptions({ items, key, text }))
-	$: classes = classname('checkbox-group', { inline }, $$props.class, true)
+	$: ({ options, getKey, getText } = createOptions({ items, key, text }))
+	$: classes = classname('checkbox-group', $$props.class, true)
 </script>
 
 <div class={classes}>
 	{#each $options as option}
-		<Checkbox
-			bind:group
-			{forwardEvents}
-			label={getText(option)}
-			value={getKey(option)}
-			checked={isSelected(option, group)}
-			{color} />
+		<FormCheckbox bind:group={value} {inline} {forwardEvents} label={getText(option)} key={getKey(option)} {color} />
 	{/each}
 </div>
