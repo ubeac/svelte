@@ -61,7 +61,7 @@
 		{/if}
 		<slot name="inner:start" />
 	</svelte:fragment>
-	<Select bind:value {id} {forwardEvents} {...$$restProps} on:changed />
+	<Select bind:value {id} {forwardEvents} {...$$restProps} />
 	<svelte:fragment slot="inner:end">
 		{#if loading}
 			<Spinner />

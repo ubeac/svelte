@@ -27,7 +27,7 @@
 	/**
 	 * Value that selected checkboxes are bound to
 	 */
-	export let value: any[]
+	export let value: any[] | string
 
 	let forwardEvents = forwardEventsBuilder(get_current_component())
 

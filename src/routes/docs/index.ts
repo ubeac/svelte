@@ -82,6 +82,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'select',
+				title: 'Select',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'textarea',
 				title: 'Textarea',
 				icon: 'star',
