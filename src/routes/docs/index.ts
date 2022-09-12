@@ -37,6 +37,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'checkbox',
+				title: 'Checkbox',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'datepickers',
 				title: 'Datepicker',
 				icon: 'star',
