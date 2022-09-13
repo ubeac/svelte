@@ -55,19 +55,15 @@
 	</slot>
 	<slot name="outer:start" slot="outer:start" />
 	<slot name="middle:start" slot="middle:start" />
-	<svelte:fragment slot="inner:start">
-		{#if icon}
-			<Icon name={icon} />
-		{/if}
-		<slot name="inner:start" />
-	</svelte:fragment>
+	{#if icon}
+		<Icon name={icon} />
+	{/if}
+	<slot name="inner:start" />
 	<Select bind:value {id} {forwardEvents} {...$$restProps} />
-	<svelte:fragment slot="inner:end">
-		{#if loading}
-			<Spinner />
-		{/if}
-		<slot name="inner:end" />
-	</svelte:fragment>
+	{#if loading}
+		<Spinner />
+	{/if}
+	<slot name="inner:end" />
 	<slot name="middle:end" slot="middle:end" />
 	<slot name="outer:end" slot="outer:end" />
 </FormField>
