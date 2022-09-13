@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { tweened } from 'svelte/motion'
 
+	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
@@ -28,6 +30,8 @@
 	 * Show and start the loading when component mounted
 	 */
 	export let show: boolean = false
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	let MAX: number = 100
 
@@ -99,6 +103,6 @@
 	}
 </script>
 
-<div class={classes}>
+<div class={classes} use:forwardEvents>
 	<div style="width: {width}%;" class={classname('app-loading-bar-body')} />
 </div>

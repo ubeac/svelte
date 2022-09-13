@@ -6,7 +6,7 @@
 	width: 100%;
 }
 
-@each $color, $value in theme-colors() {
+@each $color, $value in $theme-colors {
 	.u-app-loading-bar-#{$color} {
 		@extend .bg-#{$color}-lt;
 		.u-app-loading-bar-body {

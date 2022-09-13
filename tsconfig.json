@@ -13,9 +13,6 @@
 		"sourceMap": true,
 		"strict": true,
 		"target": "es2019",
-		"paths": {
-			"$lib": ["src"],
-			"$lib/*": ["src/*"]
-		}
+		
 	}
 }

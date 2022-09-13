@@ -2,18 +2,19 @@
 	import { get_current_component, onDestroy, onMount } from 'svelte/internal'
 
 	import { createPopper } from '@popperjs/core'
-	import type { Instance, Placement } from '@popperjs/core'
+	import type { Instance } from '@popperjs/core'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { condition } from '$lib/utils'
+
+	import type { PopupPlacements } from './popup.types'
 
 	/**
-	 * TODO
+	 * Disable Popup's functionality
 	 */
 	export let disabled: boolean = false
 
 	/**
-	 * TODO
+	 * Open Popup in Fixed position of the page
 	 */
 	export let fixed: boolean = false
 
@@ -23,22 +24,22 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * TODO
+	 * Distance between Popup and target element
 	 */
 	export let offset: [number, number] = [0, 8]
 
 	/**
-	 * TODO
+	 * Do not close popup when user clicked inside of it
 	 */
 	export let persistence: boolean = false
 
 	/**
-	 * TODO
+	 * Set where the Popup should be opened (relative to target element)
 	 */
-	export let placement: Placement = 'auto'
+	export let placement: PopupPlacements = 'auto'
 
 	/**
-	 * TODO
+	 * Set which actions should be responsible for opening/closing the Popup
 	 */
 	export let trigger: Array<'click' | 'focus' | 'hover'> = ['focus', 'hover']
 
@@ -132,8 +133,6 @@
 	onDestroy(unbind)
 </script>
 
-{#if condition($$props)}
-	<div bind:this={ref} hidden use:forwardEvents {...$$restProps}>
-		<slot />
-	</div>
-{/if}
+<div bind:this={ref} hidden use:forwardEvents {...$$restProps}>
+	<slot />
+</div>

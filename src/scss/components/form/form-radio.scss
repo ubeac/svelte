@@ -1,15 +1,24 @@
-.u-form-radio {
-	@extend .form-check;
-}
+$prefix-form-radio : $prefix +'form-radio';
 
-.u-form-radio-description {
-	@extend .form-check-description;
-}
+.#{$prefix-form-radio} {
+    @extend .form-check;
 
-.u-form-radio-inline {
-	@extend .form-check-inline;
-}
+    &-description {
+        @extend .form-check-description;
+    }
 
-.u-form-radio-label {
-	@extend .form-check-label;
+    &-label {
+        @extend .form-check-label;
+    }
+
+    &-inline {
+        @extend .form-check-inline;
+    }
+
+    @each $key,
+    $value in $theme-colors {
+        &-description-#{$key} {
+            color: #{$value} !important;
+        }
+    }
 }

@@ -5,7 +5,7 @@
 
 	import { Label } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Set id for HTML element
@@ -22,13 +22,11 @@
 	$: classes = classname('form-fieldset', undefined, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		{#if label}
-			<Label for={id}>{label}</Label>
-		{/if}
-		<fieldset>
-			<slot />
-		</fieldset>
-	</div>
-{/if}
+<div use:forwardEvents {...$$restProps} class={classes}>
+	{#if label}
+		<Label for={id}>{label}</Label>
+	{/if}
+	<fieldset>
+		<slot />
+	</fieldset>
+</div>

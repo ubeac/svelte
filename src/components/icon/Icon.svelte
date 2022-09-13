@@ -5,14 +5,19 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { IconPacks, IconSizes } from './icon.types'
 
 	/**
 	 * Set color of the Icon
 	 */
-	export let color: Colors = undefined
+	export let color: Colors = 'default'
+
+	/**
+	 * Set color of the Icon
+	 */
+	export let filled: boolean = false
 
 	/**
 	 * Name of the Icon, see https://icon-sets.iconify.design/ for list of icon names and packs
@@ -36,6 +41,7 @@
 		'icon',
 		{
 			color,
+			filled,
 			size,
 		},
 		$$props.class,
@@ -43,6 +49,4 @@
 	)
 </script>
 
-{#if condition($$props)}
-	<Icon icon="{pack}:{name}" width="auto" height="auto" {...$$restProps} class={classes} />
-{/if}
+<Icon icon="{pack}:{name}" width="auto" height="auto" {...$$restProps} class={classes} />

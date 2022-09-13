@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Show a required indicator *
@@ -14,8 +14,6 @@
 	$: classes = classname('label', { required }, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<label use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</label>
-{/if}
+<label use:forwardEvents {...$$restProps} class={classes}>
+	<slot />
+</label>

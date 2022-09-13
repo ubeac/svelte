@@ -2,24 +2,32 @@
 	@extend .table;
 	@extend .table-nowrap;
 	@extend .table-vcenter;
-}
 
-.u-table-border {
-	@extend .table-bordered;
-}
+	&-border {
+		@extend .table-bordered;
+	}
 
-.u-table-hover {
-	@extend .table-hover;
-}
+	&-hover {
+		@extend .table-hover;
+	}
 
-.u-table-parent {
-	@extend .table-responsive;
-}
+	&-parent {
+		@extend .table-responsive;
+	}
 
-.u-table-striped {
-	@extend .table-striped;
-}
+	&-striped {
+		@extend .table-striped;
+	}
 
-.u-table-wrap > :not(caption) > * > * {
-	white-space: unset;
+	&-wrap> :not(caption)>*>* {
+		white-space: unset;
+	}
+
+	&-sm {
+		@extend .table-sm !optional;
+	}
+
+	&-md {
+		@extend .table-md !optional;
+	}
 }

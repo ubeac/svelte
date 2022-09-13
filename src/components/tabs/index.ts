@@ -1,0 +1,5 @@
+export { default as Tabs } from './Tabs.svelte'
+export { default as TabsItem } from './TabsItem.svelte'
+export { default as TabsItems } from './TabsItems.svelte'
+export { default as TabsPanel } from './TabsPanel.svelte'
+export { default as TabsPanels } from './TabsPanels.svelte'

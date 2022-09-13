@@ -1,5 +1,5 @@
 import type { SvelteComponent } from 'svelte'
-import { listen, prevent_default, stop_propagation } from 'svelte/internal'
+import { get_current_component, listen, prevent_default, stop_propagation } from 'svelte/internal'
 
 type EventCallback = (event: any) => void
 

@@ -1,0 +1,13 @@
+$prefix-form-field: $prefix + 'form-field';
+
+.#{$prefix-form-field} {
+    @extend .mb-3;
+
+    &-body {
+        @extend .input-icon;
+
+        &>.#{$prefix-form-field}-icon {
+            @extend .input-icon-addon;
+        }
+    }
+}

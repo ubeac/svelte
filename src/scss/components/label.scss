@@ -1,7 +1,9 @@
-.u-label {
-	@extend .form-label;
-}
+$prefix-label: $prefix + 'label';
 
-.u-label-required {
-	@extend .required;
+.#{$prefix-label} {
+	@extend .form-label;
+
+	&-required {
+		@extend .required;
+	}
 }

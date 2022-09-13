@@ -1,134 +1,131 @@
+//
 // Card
+//
+$prefix-card : $prefix +'card';
+$prefix-card-status : $prefix-card +'-status';
 
-.u-card {
+.#{$prefix-card} {
 	@extend .card;
-	border: none;
-}
 
-.u-card-elevation-0 {
-	box-shadow: none;
-}
-
-.u-card-outline {
-	border: 1px solid rgba(98, 105, 118, 0.16);
-}
-
-.u-card-tile {
-	border-radius: 0;
-}
-
-// Card Actions
-
-.u-card-actions {
-	@extend .card-actions;
-}
-
-// Card Body
-
-.u-card-body {
-	@extend .card-body;
-}
-
-// Card Footer
-
-.u-card-footer {
-	@extend .card-footer;
-	color: inherit;
-	display: flex;
-	align-items: center;
-	&.u-card-footer-transparent {
-		@extend .card-footer-transparent;
-	}
-}
-
-// Card Header
-
-.u-card-header {
-	@extend .card-header;
-}
-
-// Card Media
-
-.u-card-media {
-	& > * {
-		border-radius: var(--tblr-card-border-radius);
+	// Card Body
+	&-body {
+		@extend .card-body;
 	}
 
-	& .u-card-media-top > * {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
+	// Card Header
+	&-header {
+		@extend .card-header;
 	}
 
-	&.u-card-media-start > * {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
+	// Card Title
+	&-title {
+		@extend .card-title;
 	}
 
-	&.u-card-media-middle > * {
-		border-radius: 0;
-	}
+	// Card Footer
+	&-footer {
+		@extend .card-footer;
+		color: inherit;
+		display: flex;
+		align-items: center;
 
-	&.u-card-media-end > * {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-	}
-
-	&.u-card-media-bottom > * {
-		border-top-left-radius: 0;
-		border-top-right-radius: 0;
-	}
-}
-
-// Card Stamp
-.u-card-stamp {
-	@extend .card-stamp;
-	.u-card-stamp-icon {
-		@extend .card-stamp-icon;
-	}
-	@each $key, $value in $card-stamp-sizes {
-		&.u-card-stamp-#{$key} {
-			--stamp-size: #{$value};
+		&.#{$prefix-card}-footer-transparent {
+			@extend .card-footer-transparent;
 		}
 	}
-	@each $key, $value in theme-colors() {
-		&.u-card-stamp-#{$key} .u-card-stamp-icon {
-			@extend .bg-#{$key};
+
+	&-actions {
+		@extend .card-actions;
+	}
+
+	&-stamp {
+		@extend .card-stamp;
+
+		&-icon {
+			@extend .card-stamp-icon;
+		}
+
+		@each $key,
+		$value in $card-stamp-sizes {
+			&-size-#{$key} {
+				--stamp-size: #{$value};
+			}
+		}
+
+		@each $key,
+		$value in $theme-colors {
+			&-color-#{$key} &-icon {
+				@extend .bg-#{$key};
+			}
+		}
+
+		&-position-top-start {
+			top: 0;
+			left: 0;
+
+			.#{$prefix-card}-stamp-icon {
+				transform: rotate(-10deg);
+				right: calc(var(--stamp-size) * 0.25);
+			}
+		}
+
+		&-position-bottom-start {
+			bottom: 0;
+			left: 0;
+			top: auto;
+
+			.#{$prefix-card}-stamp-icon {
+				top: calc(var(--stamp-size) * 0.25);
+				right: calc(var(--stamp-size) * 0.25);
+			}
+		}
+
+		&-position-bottom-end {
+			bottom: 0;
+			top: auto;
+
+			.#{$prefix-card}-stamp-icon {
+				transform: rotate(-10deg);
+				top: calc(var(--stamp-size) * 0.25);
+			}
 		}
 	}
 }
 
 // Card Status
-.u-card-status {
-	@each $key, $value in theme-colors() {
-		&.u-card-status-#{$key} {
+.#{$prefix-card-status} {
+
+	@each $key,
+	$value in $theme-colors {
+		&-color-#{$key} {
 			@extend .bg-#{$key};
 		}
 	}
-	@each $key in top, start, bottom {
-		&.u-card-status-#{$key} {
+
+	@each $key in top,
+	start,
+	bottom {
+		&-position-#{$key} {
 			@extend .card-status-#{$key};
 		}
 	}
-	@each $key, $value in $card-status-sizes {
-		&.u-card-status-#{$key}.u-card-status-top,
-		&.u-card-status-#{$key}.u-card-status-bottom {
-			height: $value;
+
+	@each $key,
+	$value in $card-status-sizes {
+
+		&-size-#{$key} {
+
+			&.#{$prefix-card-status}-position-top,
+			&.#{$prefix-card-status}-position-bottom {
+				height: $value;
+			}
 		}
-		&.u-card-status-#{$key}.u-card-status-start,
-		&.u-card-status-#{$key}.u-card-status-end {
-			width: $value;
+
+		&-size-#{$key} {
+			&.#{$prefix-card-status}-position-start {
+				width: $value;
+			}
 		}
+
 	}
-}
-
-// Card Subtitle
-
-.u-card-subtitle {
-	@extend .card-subtitle;
-}
-
-// Card Title
-
-.u-card-title {
-	@extend .card-title;
 }

@@ -3,17 +3,22 @@
 
 	import { Radio } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import type { Colors } from '$lib/types'
+	import { classname } from '$lib/utils'
 
+	/**
+	 * Color of Radio button
+	 */
+	export let color: Colors = 'default'
 	/**
 	 * Description for Radio button
 	 */
 	export let description: string | undefined = undefined
 
 	/**
-	 * value of Selected radio button
+	 * Description Color for Radio button
 	 */
-	export let group: any = undefined
+	export let descriptionColor: Colors = 'default'
 
 	/**
 	 * Align multiple Radio buttons in a single horizontal line
@@ -25,22 +30,30 @@
 	 */
 	export let label: string | undefined = undefined
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * Forwards All native events.
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
+	/**
+	 * Value of Radio
+	 */
+	export let value: boolean = false
 
 	$: classes = classname('form-radio', { inline }, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<!-- svelte-ignore a11y-label-has-associated-control -->
-	<label class={classes}>
-		<Radio bind:group {forwardEvents} {...$$restProps} />
-		{#if label}
-			<span class={classname('form-radio-label')}>{label}</span>
-		{/if}
-		{#if description}
-			<span class={classname('form-radio-description')}>
-				{description}
-			</span>
-		{/if}
-	</label>
-{/if}
+<!-- svelte-ignore a11y-label-has-associated-control -->
+<label class={classes}>
+	<Radio bind:value {forwardEvents} {...$$restProps} {inline} {color} on:changed />
+	{#if label}
+		<span class={classname('form-radio-label')}>
+			{label}
+		</span>
+	{/if}
+	{#if description}
+		<span class={classname('form-radio-description', { color: descriptionColor })}>
+			{description}
+		</span>
+	{/if}
+</label>

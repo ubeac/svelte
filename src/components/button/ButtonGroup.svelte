@@ -2,20 +2,20 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
-	 * TODO
+	 * Stick buttons to each other
 	 */
 	export let compact: boolean = false
 
 	/**
-	 * Align Buttons vertically
+	 * Align buttons vertically, default is horizontal
 	 */
 	export let vertical: boolean = false
 
 	/**
-	 * TODO
+	 * Set buttons to be wrapped if needed
 	 */
 	export let wrap: boolean = false
 
@@ -33,8 +33,6 @@
 	)
 </script>
 
-{#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</div>
-{/if}
+<div use:forwardEvents {...$$restProps} class={classes}>
+	<slot />
+</div>

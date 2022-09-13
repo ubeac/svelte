@@ -1,43 +1,64 @@
-.u-alert {
+@use 'sass:color';
+$prefix-alert: $prefix + "alert";
+
+.#{$prefix-alert} {
 	@extend .alert;
-}
 
-.u-alert-body {
-	display: flex;
-}
-
-@each $key, $value in theme-colors() {
-	.u-alert-type-#{$key} {
-		--#{$variable-prefix}alert-color: #{$value};
+	&-title {
+		@extend .alert-title;
 	}
-}
 
-.u-alert-actions {
-	@extend .btn-list;
-}
+	&-dismissible {
+		@extend .alert-dismissible;
 
-.u-alert-close {
-	@extend .btn-close;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 2;
-	padding: 1.25rem 1rem;
-}
+	}
 
-.u-alert-dismissible {
-	@extend .alert-dismissible;
-}
+	&-close {
+		@extend .btn-close;
+	}
 
-.u-alert-variant-filled {
-	@extend .alert-important;
-}
+	@each $key,
+	$value in $theme-colors {
+		&-color-#{$key} {
+			@extend .alert-#{$key};
+		}
+	}
 
-.u-alert-icon {
-	color: var(--tblr-alert-color);
-	margin: -0.125rem 1rem -0.125rem 0;
-}
 
-.u-alert-title {
-	@extend .alert-title;
+	&-variant-filled {
+		@extend .alert-important;
+
+		.#{$prefix-alert}-title {
+			color: #fff;
+		}
+
+		.#{$prefix-alert}-close {
+			@extend .btn-close-white;
+		}
+	}
+
+	&-icon {
+		padding-left: 3rem;
+
+		& & {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			padding: 1rem;
+		}
+	}
+
+
+
+	// @each $key,
+	// $value in $theme-colors {
+	// 	&-type-#{$key} {
+	// 		border-left-color: #{$value};
+	// 	}
+
+	// 	&-type-#{$key}.u-alert-variant-ghost {
+	// 		background-color: #{color.adjust($value, $alpha: -0.9)} !important;
+	// 	}
+	// }
 }

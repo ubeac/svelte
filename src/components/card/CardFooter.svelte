@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * If you want to set Card footer's color same as card's body, use the transparent property
@@ -11,11 +11,9 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('card-footer', { transparent }, $$props.class)
+	$: classes = classname('card-footer', { transparent }, $$props.class, true)
 </script>
 
-{#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</div>
-{/if}
+<div use:forwardEvents {...$$restProps} class={classes}>
+	<slot />
+</div>

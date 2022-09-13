@@ -3,14 +3,13 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { FormGroup, Icon, Label, Spinner, Textarea } from '$lib/components'
+	import { FormField, FormHint, Icon, Label, Spinner, Textarea } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
-
-	/**
-	 * Set column width of Textarea
+	import { classname } from '$lib/utils'
+		/**
+	 * Set Column width
 	 */
-	export let col: string | undefined = undefined
+	 export let cols: string | number | boolean = '12'
 
 	/**
 	 * Show an icon inside component
@@ -22,6 +21,12 @@
 	 */
 	export let id: string | undefined = nanoid(10)
 
+
+/**
+ * Sets an icon inside component
+ */
+export let iconEnd: string | undefined = undefined
+
 	/**
 	 * Set label for Textarea
 	 */
@@ -32,6 +37,10 @@
 	 */
 	export let loading: boolean = false
 
+/**
+ * Show Message at bottom of Input
+ */
+export let message: string | undefined = undefined
 	/**
 	 * Mark this as required field in form
 	 */
@@ -47,25 +56,37 @@
 	$: classes = classname('form-textarea', undefined, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<FormGroup {col} class={classes}>
-		<svelte:fragment slot="label">
-			{#if label}
-				<Label for={id} {required}>{label}</Label>
-			{/if}
-		</svelte:fragment>
-		<svelte:fragment slot="inner:start">
+<FormField {cols} class={classes}>
+	<slot name="label">
+		{#if label}
+			<Label for="form-input-{id}" {required}>{label}</Label>
+		{/if}
+	</slot>
+	<div class={classname('form-field-body')}>
+		<slot name="start">
 			{#if icon}
-				<Icon name={icon} />
+				<span class={classname('form-field-icon')}>
+					<Icon name={icon} />
+				</span>
 			{/if}
-			<slot name="inner:start" />
-		</svelte:fragment>
-		<Textarea bind:value {id} {forwardEvents} {...$$restProps} />
-		<svelte:fragment slot="inner:end">
+		</slot>
+		<Textarea bind:value id="form-textarea-{id}" {required} {forwardEvents} {...$$restProps} />
+		<slot name="end">
+			{#if iconEnd && !loading}
+				<span class={classname('form-field-icon')}>
+					<Icon name={iconEnd} />
+				</span>
+			{/if}
 			{#if loading}
-				<Spinner />
+				<span class={classname('form-field-icon')}>
+					<Spinner />
+				</span>
 			{/if}
-			<slot name="inner:end" />
-		</svelte:fragment>
-	</FormGroup>
-{/if}
+		</slot>
+	</div>
+	<slot name="message">
+		{#if message}
+			<FormHint>{message}</FormHint>
+		{/if}
+	</slot>
+</FormField>

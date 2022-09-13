@@ -2,38 +2,23 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
+
+	import { CardHeader, CardTitle } from '.'
 
 	/**
-	 * If you want the card to have shadow, use the elevation property
+	 * Set title in card hesder section
 	 */
-	export let elevation: number | undefined = undefined
-
-	/**
-	 * If you want the card to have border, use the outline property
-	 */
-	export let outline: boolean = false
-
-	/**
-	 * Use tile property to neutralize border-radius
-	 */
-	export let tile: boolean = false
+	export let title: string | undefined = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname(
-		'card',
-		{
-			elevation,
-			outline,
-			tile,
-		},
-		$$props.class
-	)
+	$: classes = classname('card', {}, $$props.class, true)
 </script>
 
-{#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</div>
-{/if}
+<div use:forwardEvents {...$$restProps} class={classes}>
+	{#if title}
+		<CardHeader><CardTitle>{title}</CardTitle></CardHeader>
+	{/if}
+	<slot />
+</div>
