@@ -48,11 +48,11 @@
 </script>
 
 <FormField {cols} class={classes}>
-	<svelte:fragment slot="label">
+	<slot name="label">
 		{#if label}
 			<Label for={id} {required}>{label}</Label>
 		{/if}
-	</svelte:fragment>
+	</slot>
 	<slot name="outer:start" slot="outer:start" />
 	<slot name="middle:start" slot="middle:start" />
 	<svelte:fragment slot="inner:start">
