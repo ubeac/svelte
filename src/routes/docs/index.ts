@@ -42,6 +42,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'checkbox-group',
+				title: 'CheckboxGroup',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'datepickers',
 				title: 'Datepicker',
 				icon: 'star',
@@ -49,6 +54,16 @@ export const navigations = [
 			{
 				route: base_component_path + 'form-autocomplete',
 				title: 'Form Autocomplete',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'form-checkbox',
+				title: 'FormCheckbox',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'form-checkbox-group',
+				title: 'FormCheckboxGroup',
 				icon: 'star',
 			},
 			{
@@ -84,6 +99,11 @@ export const navigations = [
 			{
 				route: base_component_path + 'inputs',
 				title: 'Input',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'label',
+				title: 'Label',
 				icon: 'star',
 			},
 			{

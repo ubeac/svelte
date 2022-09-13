@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { CheckboxGroup } from '@ubeac/svelte'
 
 	let items = [
@@ -23,7 +23,9 @@
 			value: 'Apricot',
 		},
 	]
-	let group = []
+	let value: string[] = []
 </script>
 
-<CheckboxGroup {items} bind:group text="name" key="value" />
+<CheckboxGroup {items} bind:value text="name" key="value" />
+
+<span>{value}</span>
