@@ -1,15 +1,19 @@
 $prefix-form-checkbox : $prefix +'form-checkbox';
 
 .#{$prefix-form-checkbox} {
-
-    &-description {
-        padding-left: 23px;
-        position: relative;
-        top: -6px;
-    }
+    @extend .form-check;
 
     &-inline {
         @extend .form-check-inline;
+    }
+
+    &-label {
+        @extend .form-check-label;
+    }
+
+    &-description {
+        @extend .form-check-label;
+
     }
 
     @each $key,

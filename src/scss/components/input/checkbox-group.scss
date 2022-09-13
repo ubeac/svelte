@@ -1,9 +1,3 @@
-$prefix-checkbox: $prefix + 'checkbox';
+$prefix-checkbox-group: $prefix + 'checkbox-group';
 
-.#{$prefix-checkbox}-group {
-	&-inline {
-		.#{$prefix-checkbox} {
-			@extend .form-check-inline;
-		}
-	}
-}
+.#{$prefix-checkbox-group} {}
