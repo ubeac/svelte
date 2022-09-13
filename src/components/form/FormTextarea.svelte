@@ -6,10 +6,11 @@
 	import { FormField, FormHint, Icon, Label, Spinner, Textarea } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
-		/**
+
+	/**
 	 * Set Column width
 	 */
-	 export let cols: string | number | boolean = '12'
+	export let cols: string | number | boolean = '12'
 
 	/**
 	 * Show an icon inside component
@@ -21,11 +22,10 @@
 	 */
 	export let id: string | undefined = nanoid(10)
 
-
-/**
- * Sets an icon inside component
- */
-export let iconEnd: string | undefined = undefined
+	/**
+	 * Sets an icon inside component
+	 */
+	export let iconEnd: string | undefined = undefined
 
 	/**
 	 * Set label for Textarea
@@ -37,10 +37,11 @@ export let iconEnd: string | undefined = undefined
 	 */
 	export let loading: boolean = false
 
-/**
- * Show Message at bottom of Input
- */
-export let message: string | undefined = undefined
+	/**
+	 * Show Message at bottom of Input
+	 */
+	export let message: string | undefined = undefined
+	
 	/**
 	 * Mark this as required field in form
 	 */

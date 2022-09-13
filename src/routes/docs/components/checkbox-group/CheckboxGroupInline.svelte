@@ -6,3 +6,5 @@
 </script>
 
 <CheckboxGroup {items} bind:value inline />
+
+<span>{value}</span>

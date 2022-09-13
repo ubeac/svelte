@@ -55,5 +55,5 @@
 
 <FormField {cols} class={classes}>
 	<Label if={!!label}>{label}</Label>
-	<CheckboxGroup {inline} {items} {key} {text} {forwardEvents} {...$$restProps} />
+	<CheckboxGroup bind:value {inline} {items} {key} {text} {forwardEvents} {...$$restProps} />
 </FormField>

@@ -30,7 +30,7 @@
 
 <h2>Column width</h2>
 <p>
-	You can set column width using <code>cols</code> prop
+	You can set column width using <code>cols</code> prop.
 </p>
 <Preview vertical src="./FormRadioGroupColumns.svelte">
 	<FormRadioGroupColumns />

@@ -4,6 +4,9 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
+	/**
+	 * Set state of the hint message.
+	 */
 	export let state: 'valid' | 'invalid' | 'normal' = 'normal'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())

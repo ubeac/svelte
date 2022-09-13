@@ -18,16 +18,16 @@ import CheckboxGroupItems from './CheckboxGroupItems.svelte';
 <h1>Checkbox Group Inline</h1>
 <p>CheckboxGroup can have inline property for all items to be in one horizontal line.</p>
 
-<Preview src="./CheckboxGroupInline.svelte">
+<Preview vertical src="./CheckboxGroupInline.svelte">
 	<CheckboxGroupInline />
 </Preview>
 
 <h1>Checkbox Group Items</h1>
 <p>
 	CheckboxGroup items can have custom items property name, for convenience in displaying items in the checkbox, this
-	feature is for other components like ( FormCheckboxGroup ).
+	feature is also available for other components like RadioGroup, Select and Autocomplete.
 </p>
 
-<Preview src="./CheckboxGroupItems.svelte">
+<Preview vertical src="./CheckboxGroupItems.svelte">
 	<CheckboxGroupItems />
 </Preview>

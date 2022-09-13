@@ -3,7 +3,7 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { DatePicker, FormField, FormGroup, Icon, Label, Spinner } from '$lib/components'
+	import { DatePicker, FormField, FormHint, Icon, Label, Spinner } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
@@ -66,14 +66,14 @@
 	<div class={classname('form-field-body')}>
 		<slot name="start">
 			{#if icon}
-			<span class={classname('form-field-icon')}>
-				<Icon name={icon} />
-			</span>
+				<span class={classname('form-field-icon')}>
+					<Icon name={icon} />
+				</span>
 			{/if}
 		</slot>
 		<DatePicker bind:value id="form-datepicker-{id}" {required} {forwardEvents} {...$$restProps} />
 		<slot name="end">
-			{#if iconEnd}
+			{#if iconEnd && !loading}
 				<span class={classname('form-field-icon')}>
 					<Icon name={iconEnd} />
 				</span>

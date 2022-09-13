@@ -33,5 +33,5 @@
 		<Label>{label}</Label>
 	{/if}
 
-	<RadioGroup {forwardEvents} {...$$restProps} bind:value />
+	<RadioGroup {forwardEvents} {...$$restProps} bind:value on:changed />
 </FormField>
