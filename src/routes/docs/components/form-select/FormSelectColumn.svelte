@@ -1,8 +1,18 @@
 <script>
-	import { FormSelect } from '@ubeac/svelte'
+	import { FormSelect, Container, Row, Col, Button } from '@ubeac/svelte'
 
-	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value = ''
+	let items=['Red', 'Green', 'Blue', 'Yellow', 'Cyan', 'Magenta', 'Black', 'White']
 </script>
 
-<FormSelect bind:value {items} label="col-5" cols="5" />
+<Container xs>
+	<Row>
+		<FormSelect {items} label="First"/>
+		<FormSelect {items} label="Second"/>
+
+		<FormSelect {items} cols=6 label="Third"/>
+		<FormSelect {items} cols=6 label="Fourth"/>
+		<Col class="mt-3" offset="9" cols="3">
+			<Button block color="primary">Submit</Button>
+		</Col>
+	</Row>
+</Container>

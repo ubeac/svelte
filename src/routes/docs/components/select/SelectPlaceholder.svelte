@@ -6,3 +6,4 @@
 </script>
 
 <Select bind:value {items} placeholder="this is placeholder" />
+<span>{value}</span>

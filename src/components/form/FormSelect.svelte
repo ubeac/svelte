@@ -49,7 +49,7 @@
 		{/if}
 	</slot>
 	<div class={classname('form-field-body')}>
-		<Select id="form-input-{id}" {forwardEvents} {...$$restProps} bind:value />
+		<Select id="form-select-{id}" {forwardEvents} {...$$restProps} bind:value />
 	</div>
 	<slot name="message">
 		{#if message}

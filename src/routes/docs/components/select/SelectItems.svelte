@@ -27,3 +27,4 @@
 </script>
 
 <Select bind:value {items} text="name" key="value" />
+<span>{value}</span>
