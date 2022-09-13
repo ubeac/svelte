@@ -1,8 +1,8 @@
 //
 // Card
 //
-$prefix-card : $prefix +'card';
-$prefix-card-status : $prefix-card +'-status';
+$prefix-card: $prefix + 'card';
+$prefix-card-status: $prefix-card + '-status';
 
 .#{$prefix-card} {
 	@extend .card;
@@ -45,15 +45,13 @@ $prefix-card-status : $prefix-card +'-status';
 			@extend .card-stamp-icon;
 		}
 
-		@each $key,
-		$value in $card-stamp-sizes {
+		@each $key, $value in $card-stamp-sizes {
 			&-size-#{$key} {
 				--stamp-size: #{$value};
 			}
 		}
 
-		@each $key,
-		$value in $theme-colors {
+		@each $key, $value in $theme-colors {
 			&-color-#{$key} &-icon {
 				@extend .bg-#{$key};
 			}
@@ -94,27 +92,20 @@ $prefix-card-status : $prefix-card +'-status';
 
 // Card Status
 .#{$prefix-card-status} {
-
-	@each $key,
-	$value in $theme-colors {
+	@each $key, $value in $theme-colors {
 		&-color-#{$key} {
 			@extend .bg-#{$key};
 		}
 	}
 
-	@each $key in top,
-	start,
-	bottom {
+	@each $key in top, start, bottom {
 		&-position-#{$key} {
 			@extend .card-status-#{$key};
 		}
 	}
 
-	@each $key,
-	$value in $card-status-sizes {
-
+	@each $key, $value in $card-status-sizes {
 		&-size-#{$key} {
-
 			&.#{$prefix-card-status}-position-top,
 			&.#{$prefix-card-status}-position-bottom {
 				height: $value;
@@ -126,6 +117,5 @@ $prefix-card-status : $prefix-card +'-status';
 				width: $value;
 			}
 		}
-
 	}
 }

@@ -89,6 +89,7 @@
 	bind:this={ref}
 	use:forwardEvents
 	{...$$restProps}
-	class={classes}>
+	class={classes}
+>
 	<slot />
 </svelte:element>

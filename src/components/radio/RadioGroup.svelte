@@ -70,6 +70,7 @@
 			{inline}
 			value={isSelected(option, value)}
 			label={getText(option)}
-			on:changed={({ detail }) => onChange(detail, option)} />
+			on:changed={({ detail }) => onChange(detail, option)}
+		/>
 	{/each}
 </div>

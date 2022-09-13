@@ -8,7 +8,10 @@
 </script>
 
 <h1>Form Textarea</h1>
-<p>FormTextarea supports all props and events of <a href="/docs/components/textarea">Textarea</a> and also have some additional features</p>
+<p>
+	FormTextarea supports all props and events of <a href="/docs/components/textarea">Textarea</a> and also have some additional
+	features
+</p>
 
 <h2>Label</h2>
 <p>You can set a label for FormTextarea.</p>

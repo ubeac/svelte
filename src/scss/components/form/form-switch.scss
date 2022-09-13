@@ -1,20 +1,19 @@
 $prefix-form-switch: $prefix + 'form-switch';
 
 .#{$prefix-form-switch} {
-    @extend .form-check;
+	@extend .form-check;
 
-    &-label {
-        @extend .form-check-label;
-    }
+	&-label {
+		@extend .form-check-label;
+	}
 
-    &-description {
-        @extend .form-check-description;
-    }
+	&-description {
+		@extend .form-check-description;
+	}
 
-    @each $key,
-    $value in $theme-colors {
-        &-description-#{$key} {
-            color: #{$value} !important;
-        }
-    }
+	@each $key, $value in $theme-colors {
+		&-description-#{$key} {
+			color: #{$value} !important;
+		}
+	}
 }

@@ -1,13 +1,13 @@
 @function slice($list, $start: 1, $end: length($list)) {
-  $result: ();
-  @if $start < 0 {
-    $start: length($list) - abs($start) + 1; 
-  }
-  @if $end < 0 {
-    $end: length($list) - abs($end) + 1; 
-  }
-  @for $i from $start through $end {
-    $result: append($result, nth($list, $i));
-  }
-  @return $result;
+	$result: ();
+	@if $start < 0 {
+		$start: length($list) - abs($start) + 1;
+	}
+	@if $end < 0 {
+		$end: length($list) - abs($end) + 1;
+	}
+	@for $i from $start through $end {
+		$result: append($result, nth($list, $i));
+	}
+	@return $result;
 }

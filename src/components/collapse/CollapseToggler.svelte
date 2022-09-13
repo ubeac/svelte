@@ -27,6 +27,7 @@
 	type="button"
 	use:forwardEvents
 	{...$$restProps}
-	class={classes}>
+	class={classes}
+>
 	<slot />
 </button>

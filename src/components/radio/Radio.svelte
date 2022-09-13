@@ -44,4 +44,5 @@
 	use:forwardEvents
 	{...$$restProps}
 	class={classes}
-	on:change={change} />
+	on:change={change}
+/>

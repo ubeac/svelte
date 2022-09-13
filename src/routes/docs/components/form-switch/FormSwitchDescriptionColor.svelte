@@ -9,4 +9,5 @@
 	color="red"
 	label="Form Switch: {checked}"
 	description="This is description of switch"
-	descriptionColor="red" />
+	descriptionColor="red"
+/>

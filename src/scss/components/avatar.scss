@@ -13,7 +13,6 @@
 		border-radius: 0;
 	}
 
-
 	&-group {
 		@extend .avatar-list;
 	}
@@ -28,18 +27,13 @@
 		border-radius: inherit;
 	}
 
-	@each $key,
-	$value in $theme-colors {
+	@each $key, $value in $theme-colors {
 		&-#{ $key + ''} {
 			@extend .bg-#{$key + ''}-lt;
 		}
 	}
 
-	@each $size in xs,
-	sm,
-	md,
-	lg,
-	xl {
+	@each $size in xs, sm, md, lg, xl {
 		&-size-#{$size} {
 			@extend .avatar-#{$size};
 		}

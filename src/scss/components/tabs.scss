@@ -17,9 +17,7 @@
 	.u-tabs-items {
 		@extend .nav, .nav-tabs;
 
-		@each $key in start,
-		center,
-		end {
+		@each $key in start, center, end {
 			&-justify-#{$key} {
 				justify-content: #{$key};
 			}

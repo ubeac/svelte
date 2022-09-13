@@ -1,35 +1,34 @@
 //
 // Container
 //
-$prefix-container : $prefix +'container';
-
+$prefix-container: $prefix + 'container';
 
 .#{$prefix-container} {
-    &:not(&-sm):not(&-md):not(&-lg):not(&-xl):not(&-xxl):not(&-fluid) {
-        @extend .container;
-    }
+	&:not(&-sm):not(&-md):not(&-lg):not(&-xl):not(&-xxl):not(&-fluid) {
+		@extend .container;
+	}
 
-    &-sm {
-        @extend .container-sm;
-    }
+	&-sm {
+		@extend .container-sm;
+	}
 
-    &-md {
-        @extend .container-md;
-    }
+	&-md {
+		@extend .container-md;
+	}
 
-    &-lg {
-        @extend .container-lg;
-    }
+	&-lg {
+		@extend .container-lg;
+	}
 
-    &-xl {
-        @extend .container-xl;
-    }
+	&-xl {
+		@extend .container-xl;
+	}
 
-    &-xxl {
-        @extend .container-xxl;
-    }
+	&-xxl {
+		@extend .container-xxl;
+	}
 
-    &-fluid {
-        @extend .container-fluid;
-    }
+	&-fluid {
+		@extend .container-fluid;
+	}
 }

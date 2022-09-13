@@ -1,6 +1,6 @@
 <script>
 	import { FormAutocomplete } from '@ubeac/svelte'
-	let items=['Red', 'Green', 'Blue', 'Yellow', 'Cyan', 'Magenta', 'Black', 'White']
+	let items = ['Red', 'Green', 'Blue', 'Yellow', 'Cyan', 'Magenta', 'Black', 'White']
 </script>
 
 <FormAutocomplete readOnly label="readonly" {items} value="a" />

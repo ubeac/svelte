@@ -1,4 +1,4 @@
-$prefix-accordion : $prefix +'accordion';
+$prefix-accordion: $prefix + 'accordion';
 
 .#{$prefix-accordion} {
 	@extend .accordion;

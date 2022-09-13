@@ -1,25 +1,23 @@
-$prefix-form-checkbox : $prefix +'form-checkbox';
+$prefix-form-checkbox: $prefix + 'form-checkbox';
 
 .#{$prefix-form-checkbox} {
-    @extend .form-check;
+	@extend .form-check;
 
-    &-inline {
-        @extend .form-check-inline;
-    }
+	&-inline {
+		@extend .form-check-inline;
+	}
 
-    &-label {
-        @extend .form-check-label;
-    }
+	&-label {
+		@extend .form-check-label;
+	}
 
-    &-description {
-        @extend .form-check-label;
+	&-description {
+		@extend .form-check-label;
+	}
 
-    }
-
-    @each $key,
-    $value in $theme-colors {
-        &-description-#{$key} {
-            color: #{$value} !important;
-        }
-    }
+	@each $key, $value in $theme-colors {
+		&-description-#{$key} {
+			color: #{$value} !important;
+		}
+	}
 }
