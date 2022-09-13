@@ -3,7 +3,7 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { FormField, Icon, Label, Select, Spinner } from '$lib/components'
+	import { FormField, FormHint, Label, Select } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
@@ -11,11 +11,6 @@
 	 * Set column width of component
 	 */
 	export let cols: string | number | boolean = '12'
-
-	/**
-	 * Show an icon inside Select component
-	 */
-	export let icon: string | undefined = undefined
 
 	/**
 	 * Sets id for HTML component
@@ -28,9 +23,9 @@
 	export let label: string | undefined = undefined
 
 	/**
-	 * Show a loading indicator
+	 * Show Message at bottom of Input
 	 */
-	export let loading: boolean = false
+	export let message: string | undefined = undefined
 
 	/**
 	 * Mark this as required field in form
@@ -44,26 +39,21 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-input', undefined, $$props.class, true)
+	$: classes = classname('form-select', undefined, $$props.class, true)
 </script>
 
 <FormField {cols} class={classes}>
 	<slot name="label">
 		{#if label}
-			<Label for={id} {required}>{label}</Label>
+			<Label for="form-select-{id}" {required}>{label}</Label>
 		{/if}
 	</slot>
-	<slot name="outer:start" slot="outer:start" />
-	<slot name="middle:start" slot="middle:start" />
-	{#if icon}
-		<Icon name={icon} />
-	{/if}
-	<slot name="inner:start" />
-	<Select bind:value {id} {forwardEvents} {...$$restProps} />
-	{#if loading}
-		<Spinner />
-	{/if}
-	<slot name="inner:end" />
-	<slot name="middle:end" slot="middle:end" />
-	<slot name="outer:end" slot="outer:end" />
+	<div class={classname('form-field-body')}>
+		<Select id="form-input-{id}" {forwardEvents} {...$$restProps} bind:value />
+	</div>
+	<slot name="message">
+		{#if message}
+			<FormHint>{message}</FormHint>
+		{/if}
+	</slot>
 </FormField>

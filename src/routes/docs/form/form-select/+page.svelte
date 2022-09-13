@@ -1,7 +1,5 @@
 <script>
 	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
-	import FormSelectIcon from './FormSelectIcon.svelte'
-	import FormSelectLoading from './FormSelectLoading.svelte'
 	import FormSelectLabel from './FormSelectLabel.svelte'
 	import FormSelectColumn from './FormSelectColumn.svelte'
 	import FormSelectRequired from './FormSelectRequired.svelte'
@@ -30,22 +28,6 @@
 <p>You can set a col for FormSelect.</p>
 <Preview src="./FormSelectColumn.svelte">
 	<FormSelectColumn />
-</Preview>
-
-<h2>FormSelect Loading</h2>
-<p>Select can have loading.</p>
-<Preview src="./FormSelectLoading.svelte">
-	<div class="example-formselect">
-		<FormSelectLoading />
-	</div>
-</Preview>
-
-<h2>FormSelect Icon</h2>
-<p>Select can have icon.</p>
-<Preview src="./FormSelectIcon.svelte">
-	<div class="example-formselect">
-		<FormSelectIcon />
-	</div>
 </Preview>
 
 <style>
