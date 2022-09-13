@@ -1,6 +1,7 @@
 export const base_path: string = '/docs/'
 export const base_component_path: string = base_path + 'components/'
 export const base_common_path: string = base_path + 'common/'
+export const base_form_path: string = base_path + 'form/'
 
 export const navigations = [
 	{
@@ -51,51 +52,7 @@ export const navigations = [
 				title: 'Datepicker',
 				icon: 'star',
 			},
-			{
-				route: base_component_path + 'form-autocomplete',
-				title: 'Form Autocomplete',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-checkbox',
-				title: 'FormCheckbox',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-checkbox-group',
-				title: 'FormCheckboxGroup',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-datepicker',
-				title: 'FormDatePicker',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-input',
-				title: 'Form Input',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-radio',
-				title: 'FormRadio',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-radio-group',
-				title: 'FormRadioGroup',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-switch',
-				title: 'FormSwitch',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-textarea',
-				title: 'FormTextarea',
-				icon: 'star',
-			},
+
 			{
 				route: base_component_path + 'grids',
 				title: 'Grid',
@@ -155,6 +112,61 @@ export const navigations = [
 				route: base_common_path + 'preview',
 				title: 'Preview',
 				icon: 'package',
+			},
+		],
+	},
+	{
+		title: 'Form',
+		children: [
+			{
+				route: base_form_path + 'form-autocomplete',
+				title: 'Form Autocomplete',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-checkbox',
+				title: 'FormCheckbox',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-checkbox-group',
+				title: 'FormCheckboxGroup',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-datepicker',
+				title: 'FormDatePicker',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-input',
+				title: 'Form Input',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-radio',
+				title: 'FormRadio',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-radio-group',
+				title: 'FormRadioGroup',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-select',
+				title: 'FormSelect',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-switch',
+				title: 'FormSwitch',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-textarea',
+				title: 'FormTextarea',
+				icon: 'star',
 			},
 		],
 	},
