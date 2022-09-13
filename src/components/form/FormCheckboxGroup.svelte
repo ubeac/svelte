@@ -6,20 +6,19 @@
 	import type { Colors, Items } from '$lib/types'
 	import { classname, createOptions } from '$lib/utils'
 
+	import { FormField } from '.'
+	import { CheckboxGroup } from '../checkbox'
+	import { Label } from '../label'
+
 	/**
-	 * set color of checkbox
+	 * set column width
 	 */
-	export let color: Colors = 'default'
+	export let cols: number | string | boolean = false
 
 	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
-
-	/**
-	 * Binding result of selected items
-	 */
-	export let group: any = []
 
 	/**
 	 * Show Checkboxes in horizontal line
@@ -37,26 +36,24 @@
 	export let key: string | undefined = 'key'
 
 	/**
+	 * Label of the Checkbox group
+	 */
+	export let label: string | undefined = undefined
+
+	/**
 	 * If items is array of objects, you should set text prop to an existing field in objects
 	 */
 	export let text: string | undefined = 'text'
 
-	$: ({ options, getKey, getText } = createOptions({ items, key, text }))
+	/**
+	 * Binding result of selected items
+	 */
+	export let value: any[] = []
 
 	$: classes = classname('form-checkbox-group', undefined, $$props.class, true)
 </script>
 
-{#each $options as option}
-	<FormCheckbox
-		class={classes}
-		bind:group
-		{inline}
-		{color}
-		{forwardEvents}
-		label={getText(option)}
-		value={getKey(option)}
-		disabled={option.disabled}
-		description={option.description ?? undefined}
-		descriptionColor={option.descriptionColor ?? 'default'}
-		{...$$restProps} />
-{/each}
+<FormField {cols} class={classes}>
+	<Label if={!!label}>{label}</Label>
+	<CheckboxGroup {inline} {items} {key} {text} {forwardEvents} {...$$restProps} />
+</FormField>

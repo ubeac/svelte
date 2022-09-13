@@ -14,15 +14,11 @@
 	 * Description for Radio button
 	 */
 	export let description: string | undefined = undefined
+
 	/**
 	 * Description Color for Radio button
 	 */
 	export let descriptionColor: Colors = 'default'
-
-	/**
-	 * Group of radio buttons
-	 */
-	export let group: any = undefined
 
 	/**
 	 * Align multiple Radio buttons in a single horizontal line
@@ -34,18 +30,30 @@
 	 */
 	export let label: string | undefined = undefined
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * Forwards All native events.
+	 */
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
+	/**
+	 * Value of Radio
+	 */
+	export let value: boolean = false
 
 	$: classes = classname('form-radio', { inline }, $$props.class)
 </script>
 
-<div class={classes}>
-	<Radio bind:group {forwardEvents} {...$$restProps} {color} {label} />
+<!-- svelte-ignore a11y-label-has-associated-control -->
+<label class={classes}>
+	<Radio bind:value {forwardEvents} {...$$restProps} {inline} {color} on:changed />
+	{#if label}
+		<span class={classname('form-radio-label')}>
+			{label}
+		</span>
+	{/if}
 	{#if description}
-		<span class={classname('form-radio-description', { descriptionColor })}>
+		<span class={classname('form-radio-description', { color: descriptionColor })}>
 			{description}
 		</span>
-	{:else}
-		<slot />
 	{/if}
-</div>
+</label>

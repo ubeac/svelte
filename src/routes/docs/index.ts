@@ -42,6 +42,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'checkbox-group',
+				title: 'CheckboxGroup',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'datepickers',
 				title: 'Datepicker',
 				icon: 'star',
@@ -52,6 +57,16 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'form-checkbox',
+				title: 'FormCheckbox',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'form-checkbox-group',
+				title: 'FormCheckboxGroup',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'form-datepicker',
 				title: 'FormDatePicker',
 				icon: 'star',
@@ -59,6 +74,16 @@ export const navigations = [
 			{
 				route: base_component_path + 'form-input',
 				title: 'Form Input',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'form-radio',
+				title: 'FormRadio',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'form-radio-group',
+				title: 'FormRadioGroup',
 				icon: 'star',
 			},
 			{
@@ -82,8 +107,23 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'label',
+				title: 'Label',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'page',
 				title: 'Page',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'radio',
+				title: 'Radio',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'radio-group',
+				title: 'RadioGroup',
 				icon: 'star',
 			},
 			{
