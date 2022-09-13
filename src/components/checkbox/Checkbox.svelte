@@ -11,6 +11,16 @@
 	export let color: Colors = 'primary'
 
 	/**
+	 * Description of checkbox
+	 */
+	export let description: string | undefined = undefined
+
+	/**
+	 * Description of checkbox
+	 */
+	export let descriptionColor: Colors = 'default'
+
+	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
@@ -26,11 +36,16 @@
 	export let key: string | undefined = undefined
 
 	/**
+	 * Set text of checkbox
+	 */
+	export let text: string | undefined = undefined
+
+	/**
 	 * Checked status of checkbox
 	 */
 	export let value: boolean = false
 
-	$: classes = classname('checkbox', { color }, $$props.class, true)
+	$: classes = classname('checkbox', undefined, $$props.class, true)
 
 	$: updateGroup(value)
 	$: updateChekbox(group)
@@ -54,4 +69,24 @@
 	}
 </script>
 
-<input type="checkbox" bind:checked={value} value={key} use:forwardEvents {...$$restProps} class={classes} />
+<label class={classes}>
+	<input
+		type="checkbox"
+		bind:checked={value}
+		value={key}
+		use:forwardEvents
+		{...$$restProps}
+		class={classname('checkbox-input', { color }, undefined, true)} />
+	<slot>
+		{#if text}
+			<span class={classname('checkbox-text')}>
+				{text}
+			</span>
+		{/if}
+		{#if description}
+			<span class={classname('checkbox-description', { color: descriptionColor }, undefined, true)}>
+				{description}
+			</span>
+		{/if}
+	</slot>
+</label>

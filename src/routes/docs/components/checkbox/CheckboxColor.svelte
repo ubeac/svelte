@@ -2,9 +2,9 @@
 	import { Checkbox } from '@ubeac/svelte'
 	import { COLORS } from '@ubeac/svelte/types'
 
-	let checked = false
+	let checked = true
 </script>
 
 {#each COLORS as color}
-	<Checkbox value={checked} bind:checked label={color} {color} />
+	<Checkbox bind:value={checked} text={color} {color} />
 {/each}

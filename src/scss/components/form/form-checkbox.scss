@@ -1,25 +1,3 @@
 $prefix-form-checkbox : $prefix +'form-checkbox';
 
-.#{$prefix-form-checkbox} {
-    @extend .form-check;
-
-    &-inline {
-        @extend .form-check-inline;
-    }
-
-    &-label {
-        @extend .form-check-label;
-    }
-
-    &-description {
-        @extend .form-check-label;
-
-    }
-
-    @each $key,
-    $value in $theme-colors {
-        &-description-#{$key} {
-            color: #{$value} !important;
-        }
-    }
-}
+.#{$prefix-form-checkbox} {}
