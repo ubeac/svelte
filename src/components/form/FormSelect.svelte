@@ -3,14 +3,14 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { FormGroup, Icon, Label, Select, Spinner } from '$lib/components'
+	import { FormField, Icon, Label, Select, Spinner } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
 	/**
 	 * Set column width of component
 	 */
-	export let col: string | undefined = undefined
+	export let cols: string | number | boolean = '12'
 
 	/**
 	 * Show an icon inside Select component
@@ -44,10 +44,10 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-input', undefined, $$props.class)
+	$: classes = classname('form-input', undefined, $$props.class, true)
 </script>
 
-<FormGroup {col} class={classes}>
+<FormField {cols} class={classes}>
 	<svelte:fragment slot="label">
 		{#if label}
 			<Label for={id} {required}>{label}</Label>
@@ -70,4 +70,4 @@
 	</svelte:fragment>
 	<slot name="middle:end" slot="middle:end" />
 	<slot name="outer:end" slot="outer:end" />
-</FormGroup>
+</FormField>

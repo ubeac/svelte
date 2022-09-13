@@ -87,6 +87,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'form-select',
+				title: 'FormSelect',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'form-switch',
 				title: 'FormSwitch',
 				icon: 'star',
