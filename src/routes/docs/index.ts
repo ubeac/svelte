@@ -77,6 +77,16 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'form-radio',
+				title: 'FormRadio',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'form-radio-group',
+				title: 'FormRadioGroup',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'form-textarea',
 				title: 'FormTextarea',
 				icon: 'star',
@@ -99,6 +109,16 @@ export const navigations = [
 			{
 				route: base_component_path + 'page',
 				title: 'Page',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'radio',
+				title: 'Radio',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'radio-group',
+				title: 'RadioGroup',
 				icon: 'star',
 			},
 			{

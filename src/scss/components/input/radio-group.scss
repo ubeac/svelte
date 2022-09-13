@@ -1,9 +1,3 @@
-$prefix-radio : $prefix +'radio';
+$prefix-radio-group : $prefix +'radio-group';
 
-.#{$prefix-radio}-group {
-	&-inline {
-		.#{$prefix-radio} {
-			@extend .form-check-inline;
-		}
-	}
-}
+.#{$prefix-radio-group} {}

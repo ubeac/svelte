@@ -8,7 +8,10 @@
 	 */
 	export let cols: string | number | boolean = false
 
-	$: classes = classname('form-field', {}, $$props.class, true)
+	let klass = ''
+	export { klass as class }
+
+	$: classes = classname('form-field', {}, klass, true)
 </script>
 
 <Col {cols} class={classes} {...$$restProps}>
