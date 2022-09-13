@@ -17,14 +17,29 @@
 	export let color: Colors = 'default'
 
 	/**
-	 * Radio checked status
+	 * Description for Radio button
 	 */
-	export let value: boolean | undefined = undefined
+	export let description: string | undefined = undefined
+
+	/**
+	 * Description Color for Radio button
+	 */
+	export let descriptionColor: Colors = 'default'
 
 	/**
 	 * Radio name
 	 */
 	export let name: string | undefined = undefined
+
+	/**
+	 * Set text of radio
+	 */
+	export let text: string | undefined = undefined
+
+	/**
+	 * Radio checked status
+	 */
+	export let value: boolean | undefined = undefined
 
 	const dispatch = createEventDispatcher()
 
@@ -33,15 +48,29 @@
 		dispatch('changed', value)
 	}
 
-	$: classes = classname('radio', { color }, $$props.class, true)
+	$: classes = classname('radio', undefined, $$props.class, true)
 </script>
 
-<input
-	type="radio"
-	{name}
-	{value}
-	checked={value}
-	use:forwardEvents
-	{...$$restProps}
-	class={classes}
-	on:change={change} />
+<label class={classes}>
+	<input
+		type="radio"
+		{name}
+		{value}
+		checked={value}
+		use:forwardEvents
+		{...$$restProps}
+		class={classname('radio-input', { color }, undefined, true)}
+		on:change={change} />
+	<slot>
+		{#if text}
+			<span class={classname('radio-text')}>
+				{text}
+			</span>
+		{/if}
+		{#if description}
+			<span class={classname('radio-description', { color: descriptionColor }, undefined, true)}>
+				{description}
+			</span>
+		{/if}
+	</slot>
+</label>

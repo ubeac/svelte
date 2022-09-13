@@ -1,24 +1,3 @@
 $prefix-form-radio : $prefix +'form-radio';
 
-.#{$prefix-form-radio} {
-    @extend .form-check;
-
-    &-description {
-        @extend .form-check-description;
-    }
-
-    &-label {
-        @extend .form-check-label;
-    }
-
-    &-inline {
-        @extend .form-check-inline;
-    }
-
-    @each $key,
-    $value in $theme-colors {
-        &-description-#{$key} {
-            color: #{$value} !important;
-        }
-    }
-}
+.#{$prefix-form-radio} {}
