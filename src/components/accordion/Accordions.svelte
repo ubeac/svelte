@@ -5,7 +5,7 @@
 	import { nanoid } from 'nanoid'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Id of Accordion group
@@ -23,13 +23,11 @@
 
 	setContext('ACCORDIONS', context)
 
-	$: classes = classname('accordions', undefined, $$props.class)
+	$: classes = classname('accordion', undefined, $$props.class)
 
 	$: context.set({ group, persistent })
 </script>
 
-{#if condition($$props)}
-	<div id={group} use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</div>
-{/if}
+<div id={group} use:forwardEvents {...$$restProps} class={classes}>
+	<slot />
+</div>

@@ -2,7 +2,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Removes border between Rows.
@@ -23,6 +23,10 @@
 	 * Disable wraping text inside Cells.
 	 */
 	export let wrap: boolean = false
+	/**
+	 * Set table size
+	 */
+	export let size: 'sm' | 'md' = 'md'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -33,15 +37,14 @@
 			hover,
 			striped,
 			wrap,
+			size,
 		},
 		$$props.class
 	)
 </script>
 
-{#if condition($$props)}
-	<div class={classname('table-parent')}>
-		<table use:forwardEvents {...$$restProps} class={classes}>
-			<slot />
-		</table>
-	</div>
-{/if}
+<div class={classname('table-parent')}>
+	<table use:forwardEvents {...$$restProps} class={classes}>
+		<slot />
+	</table>
+</div>

@@ -1,7 +1,5 @@
-.u-select {
-	@extend .form-select;
-}
+$prefix-select: $prefix + "select";
 
-.u-select-preview {
-	@extend .form-control-plaintext;
+.#{$prefix-select} {
+	@extend .form-select;
 }

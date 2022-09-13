@@ -1,41 +1,47 @@
 .u-avatar {
 	@extend .avatar;
-}
 
-.u-avatar-shape-circle {
-	@extend .rounded-circle;
-}
-
-.u-avatar-shape-round {
-	@extend .rounded;
-}
-
-.u-avatar-shape-tile {
-	border-radius: 0;
-}
-
-@each $key, $value in theme-colors() {
-	.u-avatar-#{ $key + ''} {
-		@extend .bg-#{$key + ''}-lt;
+	&-shape-circle {
+		@extend .rounded-circle;
 	}
-}
 
-@each $size in xs, sm, md, lg, xl {
-	.u-avatar-size-#{$size} {
-		@extend .avatar-#{$size};
+	&-shape-round {
+		@extend .rounded;
 	}
-}
 
-.u-avatar img {
-	width: 100%;
-	height: 100%;
-	border-radius: inherit;
-}
+	&-shape-tile {
+		border-radius: 0;
+	}
 
-.u-avatar-group {
-	@extend .avatar-list;
-}
 
-.u-avatar-group-stacked {
-	@extend .avatar-list-stacked;
+	&-group {
+		@extend .avatar-list;
+	}
+
+	&-group-stacked {
+		@extend .avatar-list-stacked;
+	}
+
+	& img {
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+	}
+
+	@each $key,
+	$value in $theme-colors {
+		&-#{ $key + ''} {
+			@extend .bg-#{$key + ''}-lt;
+		}
+	}
+
+	@each $size in xs,
+	sm,
+	md,
+	lg,
+	xl {
+		&-size-#{$size} {
+			@extend .avatar-#{$size};
+		}
+	}
 }

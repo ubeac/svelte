@@ -1,15 +1,25 @@
-.u-form-checkbox {
-	@extend .form-check;
-}
+$prefix-form-checkbox : $prefix +'form-checkbox';
 
-.u-form-checkbox-description {
-	@extend .form-check-description;
-}
+.#{$prefix-form-checkbox} {
+    @extend .form-check;
 
-.u-form-checkbox-inline {
-	@extend .form-check-inline;
-}
+    &-inline {
+        @extend .form-check-inline;
+    }
 
-.u-form-checkbox-label {
-	@extend .form-check-label;
+    &-label {
+        @extend .form-check-label;
+    }
+
+    &-description {
+        @extend .form-check-label;
+
+    }
+
+    @each $key,
+    $value in $theme-colors {
+        &-description-#{$key} {
+            color: #{$value} !important;
+        }
+    }
 }

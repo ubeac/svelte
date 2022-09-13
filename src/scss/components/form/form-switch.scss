@@ -1,20 +1,20 @@
-.u-form-switch {
-	@extend .form-check;
-	padding: 0;
-}
+$prefix-form-switch: $prefix + 'form-switch';
 
-.u-form-switch-description {
-	@extend .form-check-description;
-	padding-left: 2.3rem;
-}
+.#{$prefix-form-switch} {
+    @extend .form-check;
 
-.u-form-switch-inline {
-	@extend .form-check-inline;
-}
+    &-label {
+        @extend .form-check-label;
+    }
 
-.u-form-switch-label {
-	@extend .form-check-label;
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 0.25rem;
+    &-description {
+        @extend .form-check-description;
+    }
+
+    @each $key,
+    $value in $theme-colors {
+        &-description-#{$key} {
+            color: #{$value} !important;
+        }
+    }
 }

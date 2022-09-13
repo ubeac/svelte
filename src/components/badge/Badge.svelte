@@ -3,7 +3,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { BadgeShapes } from './badge.types'
 
@@ -53,10 +53,8 @@
 	)
 </script>
 
-{#if condition($$props)}
-	<svelte:element this={href ? 'a' : 'span'} {href} use:forwardEvents {...$$restProps} class={classes}>
-		{#if !dot}
-			<slot />
-		{/if}
-	</svelte:element>
-{/if}
+<svelte:element this={href ? 'a' : 'span'} {href} use:forwardEvents {...$$restProps} class={classes}>
+	{#if !dot}
+		<slot />
+	{/if}
+</svelte:element>

@@ -3,14 +3,14 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { Autocomplete, FormGroup, Icon, Label, Spinner } from '$lib/components'
+	import { Autocomplete, FormField, FormHint, Icon, Label, Spinner } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
-	 * Set Column width of component between 1 - 12 columns
+	 * Set Column width
 	 */
-	export let col: string | undefined = undefined
+	 export let cols: string | number | boolean = '12'
 
 	/**
 	 * Sets an icon for the Component
@@ -18,9 +18,14 @@
 	export let icon: string | undefined = undefined
 
 	/**
+	 * Sets an icon inside component
+	 */
+	 export let iconEnd: string | undefined = undefined
+
+	/**
 	 * Sets id for HTML element
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let id: string = nanoid(10)
 
 	/**
 	 * Sets label for Autocomplete
@@ -31,6 +36,11 @@
 	 * Show loading indicator inside component
 	 */
 	export let loading: boolean = false
+
+	/**
+	 * Show Message at bottom of Input
+	 */
+	 export let message: string | undefined = undefined
 
 	/**
 	 * Marks this as required field in form
@@ -47,29 +57,38 @@
 	$: classes = classname('form-autocomplete', undefined, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<FormGroup {col} class={classes}>
-		<svelte:fragment slot="label">
-			{#if label}
-				<Label for={id} {required}>{label}</Label>
-			{/if}
-		</svelte:fragment>
-		<slot name="outer:start" slot="outer:start" />
-		<slot name="middle:start" slot="middle:start" />
-		<svelte:fragment slot="inner:start">
+
+<FormField {cols} class={classes}>
+	<slot name="label">
+		{#if label}
+			<Label for="form-autocomplete-{id}" {required}>{label}</Label>
+		{/if}
+	</slot>
+	<div class={classname('form-field-body')}>
+		<slot name="start">
 			{#if icon}
-				<Icon name={icon} />
+				<span class={classname('form-field-icon')}>
+					<Icon name={icon} />
+				</span>
 			{/if}
-			<slot name="inner:start" />
-		</svelte:fragment>
-		<Autocomplete bind:value {id} {forwardEvents} {...$$restProps} on:changed />
-		<svelte:fragment slot="inner:end">
+		</slot>
+		<Autocomplete bind:value id="form-autocomplete-{id}" {required} {forwardEvents} {...$$restProps} on:changed />
+		<slot name="end">
+			{#if iconEnd && !loading}
+				<span class={classname('form-field-icon')}>
+					<Icon name={iconEnd} />
+				</span>
+			{/if}
 			{#if loading}
-				<Spinner />
+				<span class={classname('form-field-icon')}>
+					<Spinner />
+				</span>
 			{/if}
-			<slot name="inner:end" />
-		</svelte:fragment>
-		<slot name="middle:end" slot="middle:end" />
-		<slot name="outer:end" slot="outer:end" />
-	</FormGroup>
-{/if}
+		</slot>
+	</div>
+	<slot name="message">
+		{#if message}
+			<FormHint>{message}</FormHint>
+		{/if}
+	</slot>
+</FormField>

@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { getContext } from 'svelte'
 
-	import { classname, condition } from '$lib/utils'
-	import type { CarouselButtonDirections, CarouselContext } from './carousel.types';
+	import { classname } from '$lib/utils'
+
+	import type { CarouselButtonDirections, CarouselContext } from './carousel.types'
 
 	/**
 	 * Set button's direction
@@ -16,7 +17,7 @@
 	$: classes = classname('carousel-button', { direction }, $$props.class)
 </script>
 
-{#if condition($$props) && direction}
+{#if direction}
 	<button on:click={action} {...$$restProps} class={classes}>
 		<span class={classname(`carousel-button-icon`, { direction })} aria-hidden="true" />
 		<span class={classname('carousel-button-text')}>{text}</span>

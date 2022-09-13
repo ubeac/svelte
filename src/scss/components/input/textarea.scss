@@ -1,7 +1,5 @@
-.u-textarea {
-	@extend .form-control;
-}
+$prefix-textarea : $prefix +'textarea';
 
-.u-textarea-preview {
-	@extend .form-control-plaintext;
+.#{$prefix-textarea} {
+	@extend .form-control;
 }

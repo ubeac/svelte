@@ -3,25 +3,30 @@
 
 	import { Switch } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
-	 * Description of checkbox
+	 * Description of Switch
 	 */
 	export let description: string | undefined = undefined
 
 	/**
-	 * Show multiple Checkboxes in same horozontal line
+	 * The color of escription
+	 */
+	export let descriptionColor: string | undefined = undefined
+
+	/**
+	 * Show multiple Switches in same horozontal line
 	 */
 	export let inline: boolean = false
 
 	/**
-	 * label for checkbox
+	 * label for switch
 	 */
 	export let label: string | undefined = undefined
 
 	/**
-	 * Show checked state of checkbox
+	 * Set checked state of Switch
 	 */
 	export let value: boolean | undefined = undefined
 
@@ -30,17 +35,13 @@
 	$: classes = classname('form-switch', { inline }, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<!-- svelte-ignore a11y-label-has-associated-control -->
-	<label class={classes}>
-		<Switch bind:value {forwardEvents} {...$$restProps} />
-		{#if label}
-			<span class={classname('form-switch-label')}>{label}</span>
-		{/if}
-		{#if description}
-			<span class={classname('form-switch-description')}>
-				{description}
-			</span>
-		{/if}
-	</label>
-{/if}
+<Switch bind:value {forwardEvents} {...$$restProps} class={classes}>
+	{#if label}
+		<span class={classname('form-switch-label')}>{label}</span>
+	{/if}
+	{#if description}
+		<span class={classname('form-switch-description', { color: descriptionColor })}>
+			{description}
+		</span>
+	{/if}
+</Switch>

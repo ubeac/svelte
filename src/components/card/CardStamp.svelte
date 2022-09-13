@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
+	import { Icon } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
-	import type { CardStampPlacements, CardStampSizes } from './card.types'
+	import type { CardStampPositions, CardStampSizes } from './card.types'
 
 	/**
 	 * if you want to change color of Stamp, use the color property
@@ -13,9 +14,14 @@
 	export let color: Colors = 'default'
 
 	/**
+	 * Icon name for the stamp
+	 */
+	export let icon: string
+
+	/**
 	 * you can change position of Stamp by changing placement property
 	 */
-	export let placement: CardStampPlacements = 'top-end'
+	export let position: CardStampPositions = 'top-end'
 
 	/**
 	 * You can chnage size of Stamp by changing size property
@@ -28,17 +34,18 @@
 		'card-stamp',
 		{
 			color,
-			placement,
+			position,
 			size,
 		},
-		$$props.class
+		$$props.class,
+		true
 	)
 </script>
 
-{#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
+<div use:forwardEvents {...$$restProps} class={classes}>
+	<slot>
 		<div class={classname('card-stamp-icon')}>
-			<slot />
+			<Icon name={icon} />
 		</div>
-	</div>
-{/if}
+	</slot>
+</div>

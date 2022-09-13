@@ -1,11 +1,17 @@
-.u-accordion {
-	@extend .accordion-item;
-}
+$prefix-accordion : $prefix +'accordion';
 
-.u-accordion-body {
-	@extend .accordion-body;
-}
+.#{$prefix-accordion} {
+	@extend .accordion;
 
-.u-accordion-header {
-	@extend .accordion-header;
+	&-item {
+		@extend .accordion-item;
+	}
+
+	&-header {
+		@extend .accordion-header;
+	}
+
+	&-body {
+		@extend .accordion-body;
+	}
 }

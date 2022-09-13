@@ -2,20 +2,18 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Change separator Icon between items
 	 */
-	export let separator: 'arrows' | 'bullets' | 'dots' | undefined = undefined
+	export let separator: 'arrows' | 'bullets' | 'dots' | 'defalut' = 'defalut'
 
 	const forwardEevnts = forwardEventsBuilder(get_current_component())
 
 	$: classes = classname('breadcrumb', { separator }, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<ol use:forwardEevnts {...$$restProps} class={classes}>
-		<slot />
-	</ol>
-{/if}
+<ol use:forwardEevnts {...$$restProps} class={classes}>
+	<slot />
+</ol>

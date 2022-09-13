@@ -3,7 +3,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	import type { AvatarShapes, AvatarSizes } from './avatar.types'
 
@@ -43,8 +43,6 @@
 	)
 </script>
 
-{#if condition($$props)}
-	<span use:forwardEvents {...$$restProps} class={classes} {style}>
-		<slot />
-	</span>
-{/if}
+<span use:forwardEvents {...$$restProps} class={classes} {style}>
+	<slot />
+</span>

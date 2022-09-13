@@ -62,7 +62,7 @@ export const createOptions = ({ items = [], key = 'key', text = 'text' }: Create
 	const toKey = (input: any) => {
 		switch (getType(input)) {
 			case 'number':
-				return `${input}:number`
+				return `${input}`
 			default:
 				return input
 		}

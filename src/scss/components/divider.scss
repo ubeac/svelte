@@ -1,4 +1,8 @@
-$types: (dashed, solid, dotted);
+$types: (
+	dashed,
+	solid,
+	dotted
+);
 $widths: (
 	thin: 1px,
 	medium: 2px,
@@ -26,94 +30,95 @@ $widths: (
 	&.u-divider-end::after {
 		content: none;
 	}
-}
 
-@each $key in $types {
-	.u-divider-#{$key} {
-		--u-divider-type: #{$key};
-	}
-}
+	&-horizontal {
+		flex-direction: row;
 
-@each $key, $value in $widths {
-	.u-divider-#{$key} {
-		--u-divider-width: #{$value};
-	}
-}
+		&:before,
+		&:after {
+			border-top-color: var(--u-divider-color);
+			border-top-style: var(--u-divider-type);
+			border-top-width: var(--u-divider-width);
+		}
 
-.u-divider-horizontal {
-	flex-direction: row;
+		&:before {
+			margin-inline-end: var(--u-divider-gutter);
+		}
 
-	&:before,
-	&:after {
-		border-top-color: var(--u-divider-color);
-		border-top-style: var(--u-divider-type);
-		border-top-width: var(--u-divider-width);
-	}
+		&:after {
+			margin-inline-start: var(--u-divider-gutter);
+		}
 
-	&:before {
-		margin-inline-end: var(--u-divider-gutter);
-	}
+		&.u-divider-empty:before,
+		&.u-divider-empty:after {
+			margin-inline: 0;
+		}
 
-	&:after {
-		margin-inline-start: var(--u-divider-gutter);
-	}
+		&.u-divider-middle:before {
+			margin-inline-start: 1rem;
+		}
 
-	&.u-divider-empty:before,
-	&.u-divider-empty:after {
-		margin-inline: 0;
-	}
+		&.u-divider-middle:after {
+			margin-inline-end: 1rem;
+		}
 
-	&.u-divider-middle:before {
-		margin-inline-start: 1rem;
+		&.u-divider-inset:before {
+			margin-inline-start: 5rem;
+		}
 	}
 
-	&.u-divider-middle:after {
-		margin-inline-end: 1rem;
+	&-vertical {
+		flex-direction: column;
+
+		// TODO
+		// min-width: auto;
+		height: auto;
+		min-height: 100%;
+		align-self: stretch;
+
+		&:before,
+		&:after {
+			border-left-color: var(--u-divider-color);
+			border-left-style: var(--u-divider-type);
+			border-left-width: var(--u-divider-width);
+		}
+
+		&:before {
+			margin-block-end: var(--u-divider-gutter);
+		}
+
+		&:after {
+			margin-block-start: var(--u-divider-gutter);
+		}
+
+		&.u-divider-empty:before,
+		&.u-divider-empty:after {
+			margin-block: 0;
+		}
+
+		&.u-divider-middle:before {
+			margin-block-start: 1rem;
+		}
+
+		&.u-divider-middle:after {
+			margin-block-end: 1rem;
+		}
+
+		&.u-divider-inset:before {
+			margin-block-start: 5rem;
+		}
 	}
 
-	&.u-divider-inset:before {
-		margin-inline-start: 5rem;
-	}
-}
-
-.u-divider-vertical {
-	flex-direction: column;
-
-	// TODO
-	// min-width: auto;
-	height: auto;
-	min-height: 100%;
-	align-self: stretch;
-
-	&:before,
-	&:after {
-		border-left-color: var(--u-divider-color);
-		border-left-style: var(--u-divider-type);
-		border-left-width: var(--u-divider-width);
+	@each $key in $types {
+		&-#{$key} {
+			--u-divider-type: #{$key};
+		}
 	}
 
-	&:before {
-		margin-block-end: var(--u-divider-gutter);
-	}
-
-	&:after {
-		margin-block-start: var(--u-divider-gutter);
-	}
-
-	&.u-divider-empty:before,
-	&.u-divider-empty:after {
-		margin-block: 0;
-	}
-
-	&.u-divider-middle:before {
-		margin-block-start: 1rem;
-	}
-
-	&.u-divider-middle:after {
-		margin-block-end: 1rem;
-	}
-
-	&.u-divider-inset:before {
-		margin-block-start: 5rem;
+	@each $key,
+	$value in $widths {
+		&-#{$key} {
+			--u-divider-width: #{$value};
+		}
 	}
 }

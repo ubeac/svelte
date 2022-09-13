@@ -1,7 +1,16 @@
-.u-input {
-	@extend .form-control;
-}
+//
+// Input
+//
+$prefix-input : $prefix +'input';
 
-.u-input-preview {
-	@extend .form-control-plaintext;
+.#{$prefix-input} {
+	@extend .form-control;
+
+	&.#{$prefix-input}-size-sm {
+		@extend .form-control-sm;
+	}
+
+	&.#{$prefix-input}-size-lg {
+		@extend .form-control-lg;
+	}
 }

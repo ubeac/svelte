@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { getContext, onDestroy, onMount } from 'svelte'
-	import { nanoid } from 'nanoid'
-	import { classname, condition } from '$lib/utils'
-	import { forwardEventsBuilder } from '$lib/directives'
 	import { get_current_component } from 'svelte/internal'
-	import type { CarouselContext } from './carousel.types';
+
+	import { nanoid } from 'nanoid'
+
+	import { forwardEventsBuilder } from '$lib/directives'
+	import { classname } from '$lib/utils'
+
+	import type { CarouselContext } from './carousel.types'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -28,8 +31,6 @@
 	})
 </script>
 
-{#if condition($$props)}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		<slot />
-	</div>
-{/if}
+<div use:forwardEvents {...$$restProps} class={classes}>
+	<slot />
+</div>

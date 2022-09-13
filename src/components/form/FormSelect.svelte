@@ -3,14 +3,14 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { FormGroup, Icon, Label, Select, Spinner } from '$lib/components'
+	import { FormField, Icon, Label, Select, Spinner } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * Set column width of component
 	 */
-	export let col: string | undefined = undefined
+	export let cols: string | number | boolean = '12'
 
 	/**
 	 * Show an icon inside Select component
@@ -44,32 +44,26 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-input', undefined, $$props.class)
+	$: classes = classname('form-input', undefined, $$props.class, true)
 </script>
 
-{#if condition($$props)}
-	<FormGroup {col} class={classes}>
-		<svelte:fragment slot="label">
-			{#if label}
-				<Label for={id} {required}>{label}</Label>
-			{/if}
-		</svelte:fragment>
-		<slot name="outer:start" slot="outer:start" />
-		<slot name="middle:start" slot="middle:start" />
-		<svelte:fragment slot="inner:start">
-			{#if icon}
-				<Icon name={icon} />
-			{/if}
-			<slot name="inner:start" />
-		</svelte:fragment>
-		<Select bind:value {id} {forwardEvents} {...$$restProps} on:changed />
-		<svelte:fragment slot="inner:end">
-			{#if loading}
-				<Spinner />
-			{/if}
-			<slot name="inner:end" />
-		</svelte:fragment>
-		<slot name="middle:end" slot="middle:end" />
-		<slot name="outer:end" slot="outer:end" />
-	</FormGroup>
-{/if}
+<FormField {cols} class={classes}>
+	<slot name="label">
+		{#if label}
+			<Label for={id} {required}>{label}</Label>
+		{/if}
+	</slot>
+	<slot name="outer:start" slot="outer:start" />
+	<slot name="middle:start" slot="middle:start" />
+	{#if icon}
+		<Icon name={icon} />
+	{/if}
+	<slot name="inner:start" />
+	<Select bind:value {id} {forwardEvents} {...$$restProps} />
+	{#if loading}
+		<Spinner />
+	{/if}
+	<slot name="inner:end" />
+	<slot name="middle:end" slot="middle:end" />
+	<slot name="outer:end" slot="outer:end" />
+</FormField>

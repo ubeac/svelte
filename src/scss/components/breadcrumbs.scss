@@ -1,17 +1,20 @@
-.u-breadcrumb {
+$prefix-breadcrumb : $prefix +'breadcrumb';
+$breadcrumb-types: 'arrows', 'bullets', 'dots';
+
+.#{$prefix-breadcrumb} {
 	@extend .breadcrumb;
-}
 
-@each $key in 'arrows', 'bullets', 'dots' {
-	.u-breadcrumb-#{$key} {
-		@extend .breadcrumb-#{$key};
+	&-item {
+		@extend .breadcrumb-item;
 	}
-}
 
-.u-breadcrumb-item {
-	@extend .breadcrumb-item;
-}
+	&-item-active {
+		@extend .active;
+	}
 
-.u-breadcrumb-item-active {
-	@extend .active;
+	@each $key in $breadcrumb-types {
+		&-#{$key} {
+			@extend .breadcrumb-#{$key};
+		}
+	}
 }

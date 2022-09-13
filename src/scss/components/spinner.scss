@@ -1,17 +1,22 @@
-@each $key, $value in theme-colors() {
-	.u-spinner-color-#{$key} {
-		@extend .text-#{$key};
+.u-spinner {
+	&-size-sm {
+		@extend .spinner-border-sm;
+		width: 1rem !important;
+		height: 1rem !important;
 	}
-}
 
-@each $key in border, grow {
-	.u-spinner-style-#{$key} {
-		@extend .spinner-#{$key};
+	@each $key,
+	$value in $theme-colors {
+		&-color-#{$key} {
+			@extend .text-#{$key};
+		}
 	}
-}
 
-.u-spinner-size-sm {
-	@extend .spinner-border-sm;
-	width: 1rem !important;
-	height: 1rem !important;
+	@each $key in border,
+	grow {
+		&-style-#{$key} {
+			@extend .spinner-#{$key};
+		}
+	}
+
 }

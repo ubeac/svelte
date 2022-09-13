@@ -3,7 +3,13 @@
 
 	import { Checkbox } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
+	import type { Colors } from '$lib/types'
+	import { classname } from '$lib/utils'
+
+	/**
+	 * Set color of checkbox
+	 */
+	export let color: Colors = 'default'
 
 	/**
 	 * Description of checkbox
@@ -11,14 +17,29 @@
 	export let description: string | undefined = undefined
 
 	/**
+	 * Description of checkbox
+	 */
+	export let descriptionColor: Colors = 'default'
+
+	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
+	 *  Binding result of selected items
+	 */
+	export let group: any = []
+
+	/**
 	 * Show multiple Checkboxes in same horozontal line
 	 */
 	export let inline: boolean = false
+
+	/**
+	 * Value of checkbox in group
+	 */
+	export let key: string | undefined = false
 
 	/**
 	 * label for checkbox
@@ -28,22 +49,22 @@
 	/**
 	 * Show checked state of checkbox
 	 */
-	export let value: boolean | undefined = undefined
+	export let value: boolean = false
 
-	$: classes = classname('form-checkbox', { inline }, $$props.class)
+	$: classes = classname('form-checkbox', { inline }, $$props.class, true)
 </script>
 
-{#if condition($$props)}
-	<!-- svelte-ignore a11y-label-has-associated-control -->
-	<label class={classes}>
-		<Checkbox bind:value {forwardEvents} {...$$restProps} on:changed />
-		{#if label}
-			<span class={classname('form-checkbox-label')}>{label}</span>
-		{/if}
-		{#if description}
-			<span class={classname('form-checkbox-description')}>
-				{description}
-			</span>
-		{/if}
-	</label>
-{/if}
+<!-- svelte-ignore a11y-label-has-associated-control -->
+<label class={classes}>
+	<Checkbox bind:group bind:value {forwardEvents} {label} {key} {color} />
+	{#if label}
+		<span class={classname('form-checkbox-label')}>
+			{label}
+		</span>
+	{/if}
+	{#if description}
+		<span class={classname('form-checkbox-description', { color: descriptionColor })}>
+			{description}
+		</span>
+	{/if}
+</label>

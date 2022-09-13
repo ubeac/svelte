@@ -3,8 +3,9 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, condition } from '$lib/utils'
-	import type { CarouselContext } from './carousel.types';
+	import { classname } from '$lib/utils'
+
+	import type { CarouselContext } from './carousel.types'
 
 	/**
 	 * Id of related carousel item
@@ -20,6 +21,4 @@
 	$: classes = classname('carousel-indicator', { active }, $$props.class)
 </script>
 
-{#if condition($$props)}
-	<li data-bs-target use:forwardEvents on:click={() => to(item)} {...$$restProps} class={classes} />
-{/if}
+<li data-bs-target use:forwardEvents on:click={() => to(item)} {...$$restProps} class={classes} />
