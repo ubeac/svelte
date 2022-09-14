@@ -1,18 +1,23 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
+	import { get_current_component, setContext } from 'svelte/internal'
 
-	import type { Modal } from 'bootstrap'
-
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, requestAnimationFrame } from '$lib/utils'
+	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
+	import { classname } from '@ubeac/svelte/utils'
 
 	import type { DialogPlacements, DialogSizes } from './dialog.types'
+  import { browser } from '$app/environment'
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Make page's color Dimmer
 	 */
 	export let backdrop: boolean = true
+
+	/**
+	 * set position relative to it's parent (instead of entire screen)
+	 */
+	export let absolute: boolean = false
 
 	/**
 	 * Controls open/close state of Dialog
@@ -39,49 +44,32 @@
 	 */
 	export let size: DialogSizes = 'md'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('dialog', { placement, scrollable, size }, `fade ${$$props.class || ''}`)
-
-	let element: HTMLElement
-	let instance: Modal
-
-	$: if (open !== true) requestAnimationFrame(() => instance?.hide())
-	$: if (open === true) requestAnimationFrame(() => instance?.show())
-
-	function hide() {
+	function hide(force = false) {
+		if (!force && persistent) return
 		open = false
 	}
 
-	function show() {
-		open = true
+	setContext('DIALOG', { hide })
+
+	$: if(browser) {
+		if(open) {
+		document.body.classList.add(classname('body-dialog-open') ?? '');
+	} else {
+		if(document.body.classList.contains(classname('body-dialog-open') ?? '')) {
+			document.body.classList.remove(classname('body-dialog-open') ?? '')
+		}
 	}
+}
 
-	function bind() {
-		import('bootstrap').then(({ Modal }) => {
-			element.addEventListener('hidden.bs.modal', hide)
-			element.addEventListener('shown.bs.modal', show)
-			instance = new Modal(element, {
-				backdrop: backdrop ? (persistent ? 'static' : true) : false,
-				keyboard: true,
-			})
-		})
-	}
-
-	function unbind() {
-		element?.removeEventListener('hidden.bs.modal', hide)
-		element?.removeEventListener('shown.bs.modal', show)
-		instance?.dispose()
-	}
-
-	onMount(bind)
-
-	onDestroy(unbind)
+	$: classes = classname('dialog', { placement, scrollable, size, open, absolute }, $$props.class, true)
 </script>
 
-<div bind:this={element} use:forwardEvents {...$$restProps} class={classes}>
-	<!-- TODO: remove .modal-dialog -->
-	<div class={classname('dialog-container', undefined, 'modal-dialog')}>
+<div on:click={() => hide()} use:forwardEvents {...$$restProps} class={classes}>
+	<div class={classname('dialog-container')}>
 		<slot />
 	</div>
 </div>
+
+{#if backdrop}
+	<div class={classname('dialog-backdrop', { open, absolute })} />
+{/if}

@@ -9,6 +9,6 @@
 	$: classes = classname('dialog-content')
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<div use:forwardEvents on:click|stopPropagation {...$$restProps} class={classes}>
 	<slot />
 </div>

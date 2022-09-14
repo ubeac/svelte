@@ -52,7 +52,11 @@ export const navigations = [
 				title: 'Datepicker',
 				icon: 'star',
 			},
-
+			{
+				route: base_component_path + 'dialog',
+				title: 'Dialog',
+				icon: 'star',
+			},
 			{
 				route: base_component_path + 'grids',
 				title: 'Grid',
