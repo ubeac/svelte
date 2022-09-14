@@ -1,5 +1,5 @@
 <script>
-	import { Avatar } from '$lib/components'
+	import { Avatar } from '@ubeac/svelte'
 </script>
 
 <Avatar>DE</Avatar>

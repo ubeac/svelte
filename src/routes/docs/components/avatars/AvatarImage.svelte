@@ -1,5 +1,5 @@
 <script>
-	import { Avatar } from '$lib/components'
+	import { Avatar } from '@ubeac/svelte'
 </script>
 
 <Avatar image="https://preview.tabler.io/static/avatars/000m.jpg" />
