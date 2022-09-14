@@ -1,6 +1,5 @@
 <script>
 	import { FormCheckbox } from '@ubeac/svelte'
-
 	let value = false
 </script>
 
