@@ -14,28 +14,28 @@
 </script>
 
 <h1>Badges</h1>
-<h2>Default</h2>
 <p>
-	Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque natus odio, culpa expedita nulla fugit aliquid minus,
-	dolores, obcaecati laborum distinctio in sequi odit! Minima omnis ullam quis dolor itaque!
+	Badges are small count and labeling components, which are used to add extra information to an interface element. You
+	can use them to draw users' attention to a new element, notify about unread messages or provide any kind of additional
+	info.
 </p>
+
+<h2>Default</h2>
+<p>The default badges are square and come in the basic set of colors.</p>
 <Preview src="./BadgeDefault.svelte">
 	<BadgeDefault />
 </Preview>
 
 <h2>Colors</h2>
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam maiores non voluptatibus saepe tempora? Illum pariatur,
-	suscipit natus fugiat ex laudantium corrupti a velit expedita corporis praesentium odit! Expedita, in.
-</p>
+<p>You can create a soft colour variant of a corresponding contextual badge variation, to make it look more subtle.</p>
 <Preview src="./BadgeColors.svelte">
 	<BadgeColors />
 </Preview>
 
 <h2>Outline</h2>
 <p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolores in a iure officia impedit animi hic praesentium
-	debitis facilis. Nemo rerum assumenda earum quibusdam? Sunt temporibus ut in inventore?
+	Use the <code>outline</code> prop if you want to remove the color and the background of your badge and give it a more subtle
+	look.
 </p>
 <Preview src="./BadgeOutlines.svelte">
 	<BadgeOutlines />
@@ -43,8 +43,7 @@
 
 <h2>Ghost</h2>
 <p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolores in a iure officia impedit animi hic praesentium
-	debitis facilis. Nemo rerum assumenda earum quibusdam? Sunt temporibus ut in inventore?
+	Use the <code>ghost</code> prop to make your badge look simple yet aesthetically appealing.
 </p>
 <Preview src="./BadgeGhosts.svelte">
 	<BadgeGhosts />
@@ -52,35 +51,26 @@
 
 <h2>Badge Shapes</h2>
 <p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita distinctio quo rem accusamus placeat, eum iusto
-	temporibus esse dolor tenetur consectetur quaerat iste id unde doloremque labore sunt nulla!
+	Use the <code>shape</code> prop to change your badge shape.
 </p>
 <Preview src="./BadgeShapes.svelte">
 	<BadgeShapes />
 </Preview>
 
 <h2>Badge with headings</h2>
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita distinctio quo rem accusamus placeat, eum iusto
-	temporibus esse dolor tenetur consectetur quaerat iste id unde doloremque labore sunt nulla!
-</p>
+<p>Badges can be used as part of heading element.</p>
 <Preview src="./BadgeHeadings.svelte">
 	<BadgeHeadings />
 </Preview>
 
 <h2>Numbers and shapes</h2>
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita distinctio quo rem accusamus placeat, eum iusto
-	temporibus esse dolor tenetur consectetur quaerat iste id unde doloremque labore sunt nulla!
-</p>
 <Preview src="./BadgeNumbers.svelte">
 	<BadgeNumbers />
 </Preview>
 
 <h2>Badge as dot</h2>
 <p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita distinctio quo rem accusamus placeat, eum iusto
-	temporibus esse dolor tenetur consectetur quaerat iste id unde doloremque labore sunt nulla!
+	Use the <code>dot</code> prop if you want to create a badge with rounded corners. Its width will adjust to the label text.
 </p>
 <Preview src="./BadgeDots.svelte">
 	<BadgeDots />
@@ -88,18 +78,14 @@
 
 <h2>Badge links</h2>
 <p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita distinctio quo rem accusamus placeat, eum iusto
-	temporibus esse dolor tenetur consectetur quaerat iste id unde doloremque labore sunt nulla!
+	Place the link at badge <code>href</code> prop if you want it to perform the function of a link and make it clickable.
 </p>
 <Preview src="./BadgeLinks.svelte">
 	<BadgeLinks />
 </Preview>
 
 <h2>Badge inside Button</h2>
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita distinctio quo rem accusamus placeat, eum iusto
-	temporibus esse dolor tenetur consectetur quaerat iste id unde doloremque labore sunt nulla!
-</p>
+<p>Badges can be used as part of links or buttons to provide a counter.</p>
 <Preview src="./BadgeButtons.svelte">
 	<BadgeButtons />
 </Preview>
