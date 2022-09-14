@@ -98,6 +98,11 @@ export const navigations = [
 				title: 'Textarea',
 				icon: 'star',
 			},
+			{
+				route: base_component_path + 'tables',
+				title: 'Tables',
+				icon: 'star',
+			},
 		],
 	},
 	{
