@@ -2,6 +2,7 @@
 	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
 	import SwitchColor from './SwitchColor.svelte'
 	import SwitchDefault from './SwitchDefault.svelte'
+	import SwitchDescription from './SwitchDescription.svelte'
 </script>
 
 <h1>Switch</h1>
@@ -19,4 +20,11 @@
 
 <Preview src="./SwitchColor.svelte">
 	<SwitchColor />
+</Preview>
+
+<h1>Switch Description</h1>
+<p>Switch components (Switch and FormSwitch) can have description.</p>
+
+<Preview src="./SwitchDescription.svelte">
+	<SwitchDescription />
 </Preview>
