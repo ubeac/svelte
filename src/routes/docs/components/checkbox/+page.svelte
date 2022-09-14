@@ -2,6 +2,7 @@
 	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
 	import CheckboxColor from './CheckboxColor.svelte'
 	import CheckboxDefault from './CheckboxDefault.svelte'
+	import CheckboxDescription from './CheckboxDescription.svelte'
 </script>
 
 <h1>Checkbox</h1>
@@ -19,4 +20,11 @@
 
 <Preview src="./CheckboxColor.svelte">
 	<CheckboxColor />
+</Preview>
+
+<h1>Description</h1>
+<p>Checkbox can have description, to display the description below the checkbox. description can have custom color.</p>
+
+<Preview src="./CheckboxDescription.svelte">
+	<CheckboxDescription />
 </Preview>
