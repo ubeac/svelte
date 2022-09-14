@@ -5,7 +5,7 @@
 	import type { Colors, Items } from '$lib/types'
 	import { classname, createOptions } from '$lib/utils'
 
-	import { FormCheckbox } from '../form'
+	import Checkbox from './Checkbox.svelte'
 
 	/**
 	 * Set the color of checkbox when it is checked
@@ -45,6 +45,6 @@
 
 <div class={classes}>
 	{#each $options as option}
-		<FormCheckbox bind:group={value} {inline} {forwardEvents} label={getText(option)} key={getKey(option)} {color} />
+		<Checkbox bind:group={value} {inline} {forwardEvents} text={getText(option)} key={getKey(option)} {color} />
 	{/each}
 </div>

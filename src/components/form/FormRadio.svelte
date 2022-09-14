@@ -1,24 +1,40 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
+	import { nanoid } from 'nanoid'
+
 	import { Radio } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
+	import { FormField, FormHint } from '.'
+	import { Label } from '../label'
+
+	/**
+	 * Set Column width
+	 */
+	export let cols: string | number | boolean = '12'
+
+	/**
+	 * Set id for HTML element
+	 */
+	export let id: string | undefined = nanoid(10)
+
+	/**
+	 * Show Message at bottom of Input
+	 */
+	export let message: string | undefined = undefined
+
+	/**
+	 * Mark this as required field in form
+	 */
+	export let required: boolean = false
+
 	/**
 	 * Color of Radio button
 	 */
 	export let color: Colors = 'default'
-	/**
-	 * Description for Radio button
-	 */
-	export let description: string | undefined = undefined
-
-	/**
-	 * Description Color for Radio button
-	 */
-	export let descriptionColor: Colors = 'default'
 
 	/**
 	 * Align multiple Radio buttons in a single horizontal line
@@ -36,6 +52,11 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
+	 * Set text of radio
+	 */
+	export let text: string | undefined = undefined
+
+	/**
 	 * Value of Radio
 	 */
 	export let value: boolean = false
@@ -43,17 +64,16 @@
 	$: classes = classname('form-radio', { inline }, $$props.class)
 </script>
 
-<!-- svelte-ignore a11y-label-has-associated-control -->
-<label class={classes}>
-	<Radio bind:value {forwardEvents} {...$$restProps} {inline} {color} on:changed />
-	{#if label}
-		<span class={classname('form-radio-label')}>
-			{label}
-		</span>
-	{/if}
-	{#if description}
-		<span class={classname('form-radio-description', { color: descriptionColor })}>
-			{description}
-		</span>
-	{/if}
-</label>
+<FormField {cols} class={classes}>
+	<slot name="label">
+		{#if label}
+			<Label for="form-radio-{id}" {required}>{label}</Label>
+		{/if}
+	</slot>
+	<Radio bind:value id="form-radio-{id}" {forwardEvents} {color} {text} {...$$restProps} />
+	<slot name="message">
+		{#if message}
+			<FormHint>{message}</FormHint>
+		{/if}
+	</slot>
+</FormField>

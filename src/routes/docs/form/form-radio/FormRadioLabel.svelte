@@ -6,4 +6,4 @@
 
 <Button on:click={() => (value = false)}>Reset</Button>
 
-<FormRadio label="With Label" bind:value />
+<FormRadio label="With Label" text="radio 1" bind:value />

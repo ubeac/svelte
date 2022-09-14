@@ -1,6 +1,6 @@
 <script>
 	import { Preview } from '@ubeac/svelte/components'
-	import FormRadioColors from './FormRadioColors.svelte'
+	import FormRadioColumns from './FormRadioColumns.svelte'
 
 	import FormRadioLabel from './FormRadioLabel.svelte'
 	import FormRadioDescription from './FormRadioDescription.svelte'
@@ -19,8 +19,8 @@
 
 <h2>Colors</h2>
 <p>You can Change color of FormRadio component using <code>color</code> prop</p>
-<Preview src="./FormRadioColors.svelte">
-	<FormRadioColors />
+<Preview src="./FormRadioColumns.svelte">
+	<FormRadioColumns />
 </Preview>
 
 <h2>Description</h2>

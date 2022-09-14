@@ -1,5 +1,5 @@
 <script>
-	import { Avatar, AVATAR_SHAPES } from '$lib/components'
+	import { Avatar, AVATAR_SHAPES } from '@ubeac/svelte'
 </script>
 
 {#each AVATAR_SHAPES as shape}

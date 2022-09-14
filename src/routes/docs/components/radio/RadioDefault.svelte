@@ -6,4 +6,5 @@
 
 <Button on:click={() => (value = false)}>Reset</Button>
 
-<Radio bind:value />
+<Radio bind:value text="radio 1" />
+<Radio bind:value>Radio 2</Radio>

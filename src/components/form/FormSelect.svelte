@@ -3,19 +3,14 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { FormGroup, Icon, Label, Select, Spinner } from '$lib/components'
+	import { FormField, FormHint, Label, Select } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
 	/**
 	 * Set column width of component
 	 */
-	export let col: string | undefined = undefined
-
-	/**
-	 * Show an icon inside Select component
-	 */
-	export let icon: string | undefined = undefined
+	export let cols: string | number | boolean = '12'
 
 	/**
 	 * Sets id for HTML component
@@ -28,9 +23,9 @@
 	export let label: string | undefined = undefined
 
 	/**
-	 * Show a loading indicator
+	 * Show Message at bottom of Input
 	 */
-	export let loading: boolean = false
+	export let message: string | undefined = undefined
 
 	/**
 	 * Mark this as required field in form
@@ -44,30 +39,21 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-input', undefined, $$props.class)
+	$: classes = classname('form-select', undefined, $$props.class, true)
 </script>
 
-<FormGroup {col} class={classes}>
-	<svelte:fragment slot="label">
+<FormField {cols} class={classes}>
+	<slot name="label">
 		{#if label}
-			<Label for={id} {required}>{label}</Label>
+			<Label for="form-select-{id}" {required}>{label}</Label>
 		{/if}
-	</svelte:fragment>
-	<slot name="outer:start" slot="outer:start" />
-	<slot name="middle:start" slot="middle:start" />
-	<svelte:fragment slot="inner:start">
-		{#if icon}
-			<Icon name={icon} />
+	</slot>
+	<div class={classname('form-field-body')}>
+		<Select id="form-select-{id}" {forwardEvents} {...$$restProps} bind:value />
+	</div>
+	<slot name="message">
+		{#if message}
+			<FormHint>{message}</FormHint>
 		{/if}
-		<slot name="inner:start" />
-	</svelte:fragment>
-	<Select bind:value {id} {forwardEvents} {...$$restProps} />
-	<svelte:fragment slot="inner:end">
-		{#if loading}
-			<Spinner />
-		{/if}
-		<slot name="inner:end" />
-	</svelte:fragment>
-	<slot name="middle:end" slot="middle:end" />
-	<slot name="outer:end" slot="outer:end" />
-</FormGroup>
+	</slot>
+</FormField>
