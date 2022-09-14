@@ -22,7 +22,7 @@
 </Preview>
 
 <h2>Avatar Colors</h2>
-<p>Customize the color of the avatars</p>
+<p>Customize the color of the avatars.</p>
 
 <Preview src="./AvatarColors.svelte">
 	<AvatarColors />
@@ -43,7 +43,7 @@
 </Preview>
 
 <h2>Avatar Image</h2>
-<p>Set an image as the background to make users easy to indentify and create a personalised experience.</p>
+<p>Set an <code>image</code> as the background to make users easy to indentify and create a personalised experience.</p>
 
 <Preview src="./AvatarImage.svelte">
 	<AvatarImage />
