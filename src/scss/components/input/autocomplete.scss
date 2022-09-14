@@ -2,14 +2,14 @@
 
 .u-autocomplete {
 	&-items {
-	  @extend .dropdown-menu;
-	  @extend .w-100;
-	  top: 36px;
+		@extend .dropdown-menu;
+		@extend .w-100;
+		top: 36px;
 	}
 	&-item {
-	  @extend .dropdown-item;
+		@extend .dropdown-item;
 	}
 	.no-results {
-	  padding-left: 6px;
+		padding-left: 6px;
 	}
-  }
+}

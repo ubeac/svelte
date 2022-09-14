@@ -16,7 +16,8 @@
 					width="110"
 					height="32"
 					src="https://preview.tabler.io/static/logo-white.svg"
-					alt="logo" />
+					alt="logo"
+				/>
 			</h1>
 
 			<div class="navbar-nav flex-row d-lg-none">

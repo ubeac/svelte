@@ -1,5 +1,5 @@
 @use 'sass:color';
-$prefix-alert: $prefix + "alert";
+$prefix-alert: $prefix + 'alert';
 
 .#{$prefix-alert} {
 	@extend .alert;
@@ -10,20 +10,17 @@ $prefix-alert: $prefix + "alert";
 
 	&-dismissible {
 		@extend .alert-dismissible;
-
 	}
 
 	&-close {
 		@extend .btn-close;
 	}
 
-	@each $key,
-	$value in $theme-colors {
+	@each $key, $value in $theme-colors {
 		&-color-#{$key} {
 			@extend .alert-#{$key};
 		}
 	}
-
 
 	&-variant-filled {
 		@extend .alert-important;
@@ -48,8 +45,6 @@ $prefix-alert: $prefix + "alert";
 			padding: 1rem;
 		}
 	}
-
-
 
 	// @each $key,
 	// $value in $theme-colors {

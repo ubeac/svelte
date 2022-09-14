@@ -1,21 +1,20 @@
-$prefix-status : $prefix +'status';
+$prefix-status: $prefix + 'status';
 
 .#{$prefix-status} {
-    @extend .status;
+	@extend .status;
 
-    &-dot {
-        @extend .status-dot;
-        padding: 0 !important;
-    }
+	&-dot {
+		@extend .status-dot;
+		padding: 0 !important;
+	}
 
-    &-animated {
-        @extend .status-dot-animated;
-    }
+	&-animated {
+		@extend .status-dot-animated;
+	}
 
-    @each $key,
-    $value in $theme-colors {
-        &-color-#{$key} {
-            @extend .status-#{$key};
-        }
-    }
+	@each $key, $value in $theme-colors {
+		&-color-#{$key} {
+			@extend .status-#{$key};
+		}
+	}
 }

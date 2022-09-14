@@ -21,8 +21,7 @@ $prefix-switch: $prefix + 'switch';
 		@extend .form-check-label;
 	}
 
-	@each $key,
-	$value in $theme-colors {
+	@each $key, $value in $theme-colors {
 		&-input-#{$key}:checked {
 			background-color: #{$value} !important;
 		}

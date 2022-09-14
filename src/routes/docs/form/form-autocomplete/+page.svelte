@@ -8,7 +8,10 @@
 </script>
 
 <h1>Form Autocomplete</h1>
-<p>FormAutocomplete supports all props and events of <a href="/docs/components/autocomplete">Autocomplete</a> and also have some additional features</p>
+<p>
+	FormAutocomplete supports all props and events of <a href="/docs/components/autocomplete">Autocomplete</a> and also have
+	some additional features
+</p>
 
 <h2>Label</h2>
 <p>You can set a label for FormAutocomplete.</p>

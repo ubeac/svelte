@@ -10,7 +10,7 @@
 	/**
 	 * Set Column width
 	 */
-	 export let cols: string | number | boolean = '12'
+	export let cols: string | number | boolean = '12'
 
 	/**
 	 * Sets an icon for the Component
@@ -20,7 +20,7 @@
 	/**
 	 * Sets an icon inside component
 	 */
-	 export let iconEnd: string | undefined = undefined
+	export let iconEnd: string | undefined = undefined
 
 	/**
 	 * Sets id for HTML element
@@ -40,7 +40,7 @@
 	/**
 	 * Show Message at bottom of Input
 	 */
-	 export let message: string | undefined = undefined
+	export let message: string | undefined = undefined
 
 	/**
 	 * Marks this as required field in form
@@ -56,7 +56,6 @@
 
 	$: classes = classname('form-autocomplete', undefined, $$props.class)
 </script>
-
 
 <FormField {cols} class={classes}>
 	<slot name="label">

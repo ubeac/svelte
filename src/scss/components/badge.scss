@@ -1,4 +1,4 @@
-$prefix-badge: $prefix + "badge";
+$prefix-badge: $prefix + 'badge';
 
 .#{$prefix-badge} {
 	@extend .badge;
@@ -17,8 +17,7 @@ $prefix-badge: $prefix + "badge";
 		}
 	}
 
-	@each $color,
-	$value in $theme-colors {
+	@each $color, $value in $theme-colors {
 		&-#{$color}:not(.#{$prefix-badge}-outline):not(.#{$prefix-badge}-ghost) {
 			@extend .bg-#{$color};
 		}

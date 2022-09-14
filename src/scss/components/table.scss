@@ -19,7 +19,7 @@
 		@extend .table-striped;
 	}
 
-	&-wrap> :not(caption)>*>* {
+	&-wrap > :not(caption) > * > * {
 		white-space: unset;
 	}
 

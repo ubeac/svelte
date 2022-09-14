@@ -63,7 +63,6 @@
 </Preview>
 
 <style>
-
 	.example-textarea {
 		display: flex;
 		flex-direction: column;

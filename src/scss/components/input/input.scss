@@ -1,7 +1,7 @@
 //
 // Input
 //
-$prefix-input : $prefix +'input';
+$prefix-input: $prefix + 'input';
 
 .#{$prefix-input} {
 	@extend .form-control;
