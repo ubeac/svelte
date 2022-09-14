@@ -9,6 +9,8 @@
 	import type { Colors } from '$lib/types'
 	import { classname, createOptions } from '$lib/utils'
 
+	import Radio from './Radio.svelte'
+
 	/**
 	 * Set Color of RadioGroup
 	 */
@@ -63,13 +65,13 @@
 
 <div class={classes} role="radiogroup">
 	{#each $options as option}
-		<FormRadio
+		<Radio
 			{forwardEvents}
 			{name}
 			{color}
 			{inline}
 			value={isSelected(option, value)}
-			label={getText(option)}
+			text={getText(option)}
 			on:changed={({ detail }) => onChange(detail, option)} />
 	{/each}
 </div>
