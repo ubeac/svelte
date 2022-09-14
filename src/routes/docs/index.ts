@@ -171,6 +171,16 @@ export const navigations = [
 		],
 	},
 	{
+		title: 'Icons',
+		children: [
+			{
+				route: base_path + 'icons',
+				title: 'Icons',
+				icon: 'icons',
+			},
+		],
+	},
+	{
 		title: 'Pages',
 		children: [
 			{
