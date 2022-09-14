@@ -55,6 +55,7 @@
 	{...$$restProps}
 	class={classes}
 	on:click={onClick}
-	on:keydown={onKeyDown}>
+	on:keydown={onKeyDown}
+>
 	<slot />
 </button>

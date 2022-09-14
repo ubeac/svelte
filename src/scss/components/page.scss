@@ -2,13 +2,13 @@ $prefix-page: $prefix + 'page';
 $prefix-page-hedaer: $prefix + 'page-header';
 
 .#{$prefix-page} {
-    width: 100%;
+	width: 100%;
 }
 
 .#{$prefix-page-hedaer} {
-    @extend .page-header;
+	@extend .page-header;
 
-    &-title {
-        @extend .page-title;
-    }
+	&-title {
+		@extend .page-title;
+	}
 }

@@ -8,4 +8,5 @@
 	bind:value
 	label="Form Checkbox"
 	description="this is description by danger color"
-	descriptionColor="danger" />
+	descriptionColor="danger"
+/>

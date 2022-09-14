@@ -4,7 +4,7 @@
 
 	export let href = '/'
 
-	export let icon = ""
+	export let icon = ''
 
 	setContext('NAVITEM', true)
 </script>
@@ -12,8 +12,6 @@
 <li class="nav-item">
 	{#if href}
 		<NavLink {icon} {href}>
-
-			
 			<slot />
 		</NavLink>
 	{:else}

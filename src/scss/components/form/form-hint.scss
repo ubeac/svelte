@@ -1,19 +1,18 @@
 $prefix-form-hint: $prefix + 'form-hint';
 
 .#{$prefix-form-hint} {
+	display: block;
 
-    display: block;
+	&-state-normal {
+		@extend .form-hint;
+		margin-top: 0.5rem;
+	}
 
-    &-state-normal {
-        @extend .form-hint;
-        margin-top: 0.5rem;
-    }
+	&-state-valid {
+		@extend .valid-feedback;
+	}
 
-    &-state-valid {
-        @extend .valid-feedback;
-    }
-
-    &-state-invalid {
-        @extend .invalid-feedback;
-    }
+	&-state-invalid {
+		@extend .invalid-feedback;
+	}
 }

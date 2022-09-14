@@ -5,18 +5,15 @@
 		height: 1rem !important;
 	}
 
-	@each $key,
-	$value in $theme-colors {
+	@each $key, $value in $theme-colors {
 		&-color-#{$key} {
 			@extend .text-#{$key};
 		}
 	}
 
-	@each $key in border,
-	grow {
+	@each $key in border, grow {
 		&-style-#{$key} {
 			@extend .spinner-#{$key};
 		}
 	}
-
 }

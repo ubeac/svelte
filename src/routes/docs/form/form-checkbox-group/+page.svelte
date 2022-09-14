@@ -1,9 +1,8 @@
 <script>
-
-import { Preview } from "@ubeac/svelte/components";
-import FormCheckboxGroupDefault from "./FormCheckboxGroupDefault.svelte";
-
+	import { Preview } from '@ubeac/svelte/components'
+	import FormCheckboxGroupDefault from './FormCheckboxGroupDefault.svelte'
 </script>
+
 <h1>FormCheckboxGroup</h1>
 <p>FormCheckboxGroup is similar to <a href="">CheckboxGroup</a> component with some additional features</p>
 

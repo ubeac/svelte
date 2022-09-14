@@ -1,8 +1,4 @@
-$types: (
-	dashed,
-	solid,
-	dotted
-);
+$types: (dashed, solid, dotted);
 $widths: (
 	thin: 1px,
 	medium: 2px,
@@ -115,8 +111,7 @@ $widths: (
 		}
 	}
 
-	@each $key,
-	$value in $widths {
+	@each $key, $value in $widths {
 		&-#{$key} {
 			--u-divider-width: #{$value};
 		}

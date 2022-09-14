@@ -93,6 +93,7 @@
 	id="collapse-{id}"
 	use:forwardEvents
 	{...$$restProps}
-	class={classes}>
+	class={classes}
+>
 	<slot />
 </div>

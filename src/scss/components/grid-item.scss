@@ -17,26 +17,21 @@
 		max-width: 100%;
 	}
 
-	@each $key,
-	$value in $align-self {
+	@each $key, $value in $align-self {
 		&-align-self-#{$key} {
 			align-self: $value;
 		}
 	}
 
-	@each $breakpoint,
-	$value in $breakpoints {
+	@each $breakpoint, $value in $breakpoints {
 		@include media-breakpoint-up($breakpoint) {
-
-			@each $key,
-			$value in $align-self {
+			@each $key, $value in $align-self {
 				&-align-self-#{$breakpoint}-#{$key} {
 					align-self: $value;
 				}
 			}
 		}
 	}
-
 
 	@for $number from 1 through $column {
 		&-col-#{$number} {
@@ -53,8 +48,7 @@
 		}
 	}
 
-	@each $breakpoint,
-	$value in $breakpoints {
+	@each $breakpoint, $value in $breakpoints {
 		@include media-breakpoint-up($breakpoint) {
 			&-#{$breakpoint}-auto {
 				flex-basis: auto;
@@ -84,8 +78,7 @@
 		}
 	}
 
-	@each $breakpoint,
-	$value in slice($breakpoints, 2, -2) {
+	@each $breakpoint, $value in slice($breakpoints, 2, -2) {
 		$next: breakpoint-next($breakpoint);
 
 		@include media-breakpoint-down($next) {
@@ -95,8 +88,7 @@
 		}
 	}
 
-	@each $breakpoint,
-	$value in $breakpoints {
+	@each $breakpoint, $value in $breakpoints {
 		$next: breakpoint-next($breakpoint);
 
 		@include media-breakpoint-between($breakpoint, $next) {
@@ -106,8 +98,7 @@
 		}
 	}
 
-	@each $breakpoint,
-	$value in slice($breakpoints, 1, -2) {
+	@each $breakpoint, $value in slice($breakpoints, 1, -2) {
 		@include media-breakpoint-up($breakpoint) {
 			&-#{$breakpoint}-hide-up {
 				display: none;

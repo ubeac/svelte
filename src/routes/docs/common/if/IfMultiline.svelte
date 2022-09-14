@@ -11,4 +11,5 @@
 	color="secondary"
 	href="/components/badges"
 	class="customized-badge-class-for-test long class name"
-	if={show}>badge</Badge>
+	if={show}>badge</Badge
+>
