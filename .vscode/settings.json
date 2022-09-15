@@ -2,7 +2,7 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 	"[scss]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"

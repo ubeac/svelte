@@ -1,16 +1,48 @@
-.u-dialog {
+$prefix-dialog: $prefix + 'dialog';
+$prefix-dialog-container: $prefix + 'dialog-container';
+
+.#{$prefix-dialog} {
 	@extend .modal;
 
-	&-center .u-dialog-container {
+	&-placement-center .#{$prefix-dialog-container} {
 		@extend .modal-dialog-centered;
 	}
 
-	&-scrollable .u-dialog-container {
+	&-scrollable .#{$prefix-dialog-container} {
 		@extend .modal-dialog-scrollable;
 	}
 
 	&-container {
 		@extend .modal-dialog;
+	}
+
+	&-open {
+		@extend .d-block;
+	}
+
+	&-backdrop {
+		@extend .modal-backdrop;
+		@extend .fade;
+		display: none;
+
+		&-open {
+			display: block;
+			@extend .show;
+			width: 100%;
+			height: 100%;
+		}
+
+		&-absolute {
+			@extend .position-absolute;
+		}
+	}
+
+	&-close {
+		@extend .btn-close;
+	}
+
+	&-absolute {
+		@extend .position-absolute;
 	}
 
 	&-body {
@@ -34,8 +66,12 @@
 	}
 
 	@each $size in sm, lg, xl {
-		&-#{$size} .u-dialog-container {
+		&-size-#{$size} .#{$prefix-dialog-container} {
 			@extend .modal-#{$size};
 		}
 	}
+}
+
+.u-body-dialog-open {
+	overflow: hidden;
 }
