@@ -28,6 +28,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'breadcrumb',
+				title: 'Bredcrumb',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'buttons',
 				title: 'Button',
 				icon: 'star',
