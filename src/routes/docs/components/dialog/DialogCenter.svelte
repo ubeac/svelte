@@ -15,7 +15,7 @@
 
 <Button on:click={() => (open = true)} color="primary">Open Centered Dialog</Button>
 
-<Dialog absolute placement="center" bind:open>
+<Dialog placement="center" bind:open>
 	<DialogContent>
 		<DialogHeader>
 			<DialogTitle>Dialog title</DialogTitle>
