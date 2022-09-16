@@ -7,8 +7,7 @@ $prefix-switch: $prefix + 'switch';
 	&-description {
 		@extend .form-check-description;
 
-		@each $key,
-		$value in $theme-colors {
+		@each $key, $value in $theme-colors {
 			&-description-#{$key} {
 				color: #{$value} !important;
 			}
@@ -22,8 +21,7 @@ $prefix-switch: $prefix + 'switch';
 	&-input {
 		@extend .form-check-input;
 
-		@each $key,
-		$value in $theme-colors {
+		@each $key, $value in $theme-colors {
 			&-color-#{$key}:checked {
 				background-color: #{$value} !important;
 			}
