@@ -4,4 +4,4 @@
 	let checked = false
 </script>
 
-<FormSwitch bind:value={checked} label="Form Switch: {checked}" description="This is description of switch" />
+<FormSwitch bind:value={checked} text="Switch {checked}" label="Form Switch" />

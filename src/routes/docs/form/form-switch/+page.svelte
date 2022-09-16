@@ -1,7 +1,7 @@
 <script>
 	import { Preview } from '@ubeac/svelte/components'
 	import FormSwitchDefault from './FormSwitchDefault.svelte'
-	import FormSwitchDescriptionColor from './FormSwitchDescriptionColor.svelte'
+	import FormSwitchColumns from './FormSwitchColumns.svelte'
 </script>
 
 <h1>FormSwitch</h1>
@@ -11,9 +11,9 @@
 	<FormSwitchDefault />
 </Preview>
 
-<h1>Description Color</h1>
-<p>You can change color of description of Switch.</p>
+<h2>Column width</h2>
+<p>You can set Column width of FormSwitch using <code>cols</code> prop.</p>
 
-<Preview src="./FormSwitchDescriptionColor.svelte">
-	<FormSwitchDescriptionColor />
+<Preview src="./FormSwitchColumns.svelte">
+	<FormSwitchColumns />
 </Preview>
