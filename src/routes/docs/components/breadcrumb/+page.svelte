@@ -1,9 +1,7 @@
 <script>
 	import { Preview } from '@ubeac/svelte'
-	import BreadcrumbArrow from './BreadcrumbArrow.svelte'
-	import BreadcrumbBullet from './BreadcrumbBullet.svelte'
 	import BreadcrumbDefault from './BreadcrumbDefault.svelte'
-	import BreadcrumbDots from './BreadcrumbDots.svelte'
+	import BreadcrumbSeperator from './BreadcrumbSeperator.svelte'
 </script>
 
 <h1>Breadcrumb</h1>
@@ -22,12 +20,14 @@
 	If you wish to use different separators, set the <code>separator</code> prop. Depending on the aesthetics of your design,
 	you can choose dots, bullets or arrows.
 </p>
-<Preview src="./BreadcrumbDots.svelte">
-	<BreadcrumbDots />
+<Preview vertical src="./BreadcrumbDots.svelte">
+	<div class="example-breadcrumbs">
+		<BreadcrumbSeperator />
+	</div>
 </Preview>
-<Preview src="./BreadcrumbBullet.svelte">
-	<BreadcrumbBullet />
-</Preview>
-<Preview src="./BreadcrumbArrow.svelte">
-	<BreadcrumbArrow />
-</Preview>
+
+<style lang="scss">
+	.example-breadcrumbs {
+		width: 100%;
+	}
+</style>
