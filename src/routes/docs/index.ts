@@ -58,6 +58,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'file-uploader',
+				title: 'FileUploader',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'grids',
 				title: 'Grid',
 				icon: 'star',
