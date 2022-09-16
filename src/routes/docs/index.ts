@@ -98,6 +98,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'status',
+				title: 'Status',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'switch',
 				title: 'Switch',
 				icon: 'star',
