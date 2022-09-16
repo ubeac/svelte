@@ -16,3 +16,5 @@ export const POPUP_PLACEMENTS = [
 	'right-end',
 ] as const
 export type PopupPlacements = typeof POPUP_PLACEMENTS[number]
+
+export type PopupTriggers = Array<'click' | 'focus' | 'hover'> | 'click' | 'focus' | 'hover'
