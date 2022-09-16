@@ -107,6 +107,11 @@ export const navigations = [
 				title: 'Tables',
 				icon: 'star',
 			},
+			{
+				route: base_component_path + 'tooltip',
+				title: 'Tooltip',
+				icon: 'star',
+			},
 		],
 	},
 	{
