@@ -27,6 +27,7 @@ export * from './preview'
 export * from './spinner'
 export * from './table'
 export * from './tabs'
+export * from './toast'
 export * from './tooltip'
 
 // Form Elements

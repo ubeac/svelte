@@ -113,13 +113,18 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'tables',
+				title: 'Tables',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'textarea',
 				title: 'Textarea',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'tables',
-				title: 'Tables',
+				route: base_component_path + 'toast',
+				title: 'Toast',
 				icon: 'star',
 			},
 		],
