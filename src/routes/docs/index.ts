@@ -43,6 +43,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'carousel',
+				title: 'Carousel',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'checkbox',
 				title: 'Checkbox',
 				icon: 'star',
