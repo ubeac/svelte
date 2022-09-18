@@ -1,0 +1,23 @@
+$prefix-toast: $prefix + "toast";
+
+.#{$prefix-toast} {
+    & {
+        @extend .toast;
+    }
+
+    &-body {
+        @extend .toast-body;
+    }
+
+    &-header {
+        @extend .toast-header;
+    }
+
+    &-show {
+        @extend .show;
+    }
+
+    &-container {
+        @extend .toast-container;
+    }
+}
