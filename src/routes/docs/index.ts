@@ -93,6 +93,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'popover',
+				title: 'Popover',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'radio',
 				title: 'Radio',
 				icon: 'star',
