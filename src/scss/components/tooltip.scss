@@ -1,4 +1,6 @@
-.u-tooltip {
+$prefix-tooltip: $prefix + 'tooltip';
+
+.#{$prefix-tooltip} {
 	background: #333;
 	color: white;
 	font-weight: bold;
