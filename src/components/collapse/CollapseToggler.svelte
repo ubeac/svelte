@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 
 	import { nanoid } from 'nanoid'
 
@@ -10,24 +10,19 @@
 	 * Forward all native events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
-
+	const dispatch = createEventDispatcher()
 	/**
 	 * Id of target Collapse component
 	 */
 	export let id: string = nanoid()
 
+	function onClick() {
+		dispatch('click', id)
+	}
+
 	$: classes = classname('collapse-toggler', undefined, $$props.class)
 </script>
 
-<button
-	aria-controls="#collapse-{id}"
-	data-bs-target="#collapse-{id}"
-	data-bs-toggle="collapse"
-	id="collapse-{id}-toggler"
-	type="button"
-	use:forwardEvents
-	{...$$restProps}
-	class={classes}
->
+<button on:click={onClick} use:forwardEvents {...$$restProps} class={classes}>
 	<slot />
 </button>
