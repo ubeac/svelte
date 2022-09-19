@@ -20,7 +20,7 @@
 	If you wish to use different separators, set the <code>separator</code> prop. Depending on the aesthetics of your design,
 	you can choose dots, bullets or arrows.
 </p>
-<Preview vertical src="./BreadcrumbSeparator.svelte">
+<Preview vertical src="./BreadcrumbSeperator.svelte">
 	<div class="example-breadcrumbs">
 		<BreadcrumbSeperator />
 	</div>
