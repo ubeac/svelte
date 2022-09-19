@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { getContext, onDestroy, onMount } from 'svelte'
+	import { get_current_component } from 'svelte/internal'
 
+	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
 	import { classname } from '@ubeac/svelte/utils'
 	import { nanoid } from 'nanoid'
 
@@ -21,20 +23,18 @@
 	export let right: boolean = false
 
 	let ref: HTMLElement
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 	const { headerMode, footerMode, headerSize, footerSize, addElement, removeElement, updateElement } =
 		getContext<any>('APP')
 
 	onMount(() => {
-		// register side bar
 		addElement(id, ref, 'sidebar', { right, mode, open })
 	})
 
 	onDestroy(() => {
-		// remove sidebar
 		removeElement(id)
 	})
-
-	$: classes = classname('sidebar', { open, mode, right }, $$props.class, true)
 
 	function calculateTop(deps?: any) {
 		if (mode === 'temporary') return 0
@@ -51,16 +51,13 @@
 		return ['end', 'center'].includes($footerMode) ? 0 : $footerSize
 	}
 
-	$: updateElement(id, { mode, right })
+	$: classes = classname('app-sidebar', { open, mode, right }, $$props.class, true)
+	$: updateElement(id, { mode, right, open })
 	$: styles = `
     top: ${calculateTop({ mode, right, $footerMode, $footerSize, $headerMode, $headerSize })}px; 
     bottom: ${calculateBottom({ mode, right, $footerMode, $footerSize, $headerMode, $headerSize })}px;`
 </script>
 
-<nav bind:this={ref} style={styles} class={classes}>
+<nav bind:this={ref} use:forwardEvents {...$$restProps} style={styles} class={classes}>
 	<slot />
 </nav>
-
-<style lang="scss">
-	
-</style>
