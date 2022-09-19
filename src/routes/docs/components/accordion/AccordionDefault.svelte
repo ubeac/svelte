@@ -1,5 +1,5 @@
 <script>
-	import { Accordions, Accordion, AccordionTitle, AccordionBody, AccordionHeader } from '@ubeac/svelte'
+	import { Accordions, Accordion, AccordionBody, AccordionHeader } from '@ubeac/svelte'
 </script>
 
 <Accordions>
