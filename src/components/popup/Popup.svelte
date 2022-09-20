@@ -6,7 +6,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 
-	import type { PopupPlacements } from './popup.types'
+	import type { PopupPlacements, PopupTriggers } from './popup.types'
 
 	/**
 	 * Disable Popup's functionality
@@ -41,10 +41,12 @@
 	/**
 	 * Set which actions should be responsible for opening/closing the Popup
 	 */
-	export let trigger: Array<'click' | 'focus' | 'hover'> = ['focus', 'hover']
+	export let trigger: PopupTriggers = ['focus', 'hover']
 
 	let instance: Instance
 	let ref: HTMLElement
+
+	$: if (typeof trigger === 'string') trigger = [trigger]
 
 	$: options = {
 		placement,
@@ -70,7 +72,7 @@
 	function eventsName() {
 		const events = []
 
-		if (trigger.includes('click')) events.push(['blur', 'click'])
+		if (trigger.includes('click')) events.push(['', 'click'])
 
 		if (trigger.includes('focus')) events.push(['blur', 'focus'])
 

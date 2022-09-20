@@ -1,0 +1,16 @@
+//
+// File Uploader
+//
+$prefix-file-uploader: $prefix + 'file-uploader';
+
+.#{$prefix-file-uploader} {
+	@extend .form-control;
+
+	&.#{$prefix-file-uploader}-size-sm {
+		@extend .form-control-sm;
+	}
+
+	&.#{$prefix-file-uploader}-size-lg {
+		@extend .form-control-lg;
+	}
+}

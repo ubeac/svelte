@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
+	import { nanoid } from 'nanoid'
+
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
@@ -13,7 +15,7 @@
 	/**
 	 * Description of checkbox
 	 */
-	export let description: string | undefined = undefined
+	export let description: string | undefined = ''
 
 	/**
 	 * Description of checkbox
@@ -29,6 +31,8 @@
 	 * Binding result of selected items
 	 */
 	export let group: any = []
+
+	let id: string = nanoid()
 
 	/**
 	 * Set checkbox's key
@@ -69,24 +73,25 @@
 	}
 </script>
 
-<label class={classes}>
+<div class={classes}>
 	<input
 		type="checkbox"
+		{id}
 		bind:checked={value}
 		value={key}
 		use:forwardEvents
 		{...$$restProps}
 		class={classname('checkbox-input', { color }, undefined, true)} />
-	<slot>
-		{#if text}
-			<span class={classname('checkbox-text')}>
-				{text}
-			</span>
-		{/if}
-		{#if description}
-			<span class={classname('checkbox-description', { color: descriptionColor }, undefined, true)}>
+	<label for={id} class={classname('checkbox-label')}>
+		<slot>
+			{text}
+		</slot>
+	</label>
+	{#if description || $$slots['description']}
+		<div class={classname('checkbox-description')}>
+			<slot name="description">
 				{description}
-			</span>
-		{/if}
-	</slot>
-</label>
+			</slot>
+		</div>
+	{/if}
+</div>

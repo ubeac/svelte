@@ -8,6 +8,11 @@ export const navigations = [
 		title: 'Components',
 		children: [
 			{
+				route: base_component_path + 'accordion',
+				title: 'Accordion',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'app',
 				title: 'App',
 				icon: 'star',
@@ -33,6 +38,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'breadcrumb',
+				title: 'Bredcrumb',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'buttons',
 				title: 'Button',
 				icon: 'star',
@@ -40,6 +50,11 @@ export const navigations = [
 			{
 				route: base_component_path + 'cards',
 				title: 'Card',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'carousel',
+				title: 'Carousel',
 				icon: 'star',
 			},
 			{
@@ -63,6 +78,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'file-uploader',
+				title: 'FileUploader',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'grids',
 				title: 'Grid',
 				icon: 'star',
@@ -83,6 +103,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'popover',
+				title: 'Popover',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'radio',
 				title: 'Radio',
 				icon: 'star',
@@ -98,8 +123,18 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'status',
+				title: 'Status',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'switch',
 				title: 'Switch',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'tables',
+				title: 'Tables',
 				icon: 'star',
 			},
 			{
@@ -108,8 +143,13 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'tables',
-				title: 'Tables',
+				route: base_component_path + 'toast',
+				title: 'Toast',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'tooltip',
+				title: 'Tooltip',
 				icon: 'star',
 			},
 		],

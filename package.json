@@ -1,6 +1,6 @@
 {
 	"name": "@ubeac/svelte",
-	"version": "0.0.3-next.68",
+	"version": "0.0.3-next.79",
 	"type": "module",
 	"svelte": "index.js",
 	"publishConfig": {
@@ -31,6 +31,7 @@
 		"nanoid": "^3.3.4",
 		"prism-svelte": "^0.5.0",
 		"prismjs": "^1.29.0",
+		"swiper": "^8.4.2",
 		"tom-select": "^2.1.0"
 	},
 	"devDependencies": {

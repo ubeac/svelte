@@ -2,6 +2,8 @@
 	import { createEventDispatcher } from 'svelte'
 	import { get_current_component } from 'svelte/internal'
 
+	import { nanoid } from 'nanoid'
+
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
@@ -25,6 +27,8 @@
 	 * Description Color for Radio button
 	 */
 	export let descriptionColor: Colors = 'default'
+
+	let id: string = nanoid()
 
 	/**
 	 * Radio name
@@ -51,26 +55,27 @@
 	$: classes = classname('radio', undefined, $$props.class, true)
 </script>
 
-<label class={classes}>
+<div class={classes}>
 	<input
 		type="radio"
 		{name}
 		{value}
+		{id}
 		checked={value}
 		use:forwardEvents
 		{...$$restProps}
 		class={classname('radio-input', { color }, undefined, true)}
 		on:change={change} />
-	<slot>
-		{#if text}
-			<span class={classname('radio-text')}>
-				{text}
-			</span>
-		{/if}
-		{#if description}
-			<span class={classname('radio-description', { color: descriptionColor }, undefined, true)}>
+	<label for={id} class={classname('radio-label')}>
+		<slot>
+			{text}
+		</slot>
+	</label>
+	{#if description || $$slots['description']}
+		<div class={classname('radio-description')}>
+			<slot name="description">
 				{description}
-			</span>
-		{/if}
-	</slot>
-</label>
+			</slot>
+		</div>
+	{/if}
+</div>

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Label } from '$lib/components'
+	import { nanoid } from 'nanoid'
+
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
@@ -12,32 +13,52 @@
 	export let color: Colors = 'default'
 
 	/**
+	 * Description of Switch
+	 */
+	export let description: string | undefined = undefined
+
+	/**
+	 * The color of escription
+	 */
+	export let descriptionColor: string | undefined = undefined
+
+	let id: string = nanoid()
+	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 * Label of Switch
+	 * Sets text of Switch
 	 */
-	export let label: string | undefined = undefined
+	export let text: string | undefined = undefined
 
 	/**
 	 * Value of Switch
 	 */
 	export let value: boolean | undefined = undefined
 
-	$: switchClasses = classname('switch', undefined, $$props.class)
-	$: inputClasses = classname('switch-input', { color })
-	$: labelClasses = classname('switch-label')
+	$: classes = classname('switch', undefined, $$props.class)
 </script>
 
-<Label class={switchClasses}>
-	<input type="checkbox" bind:checked={value} use:forwardEvents {...$$restProps} class={inputClasses} />
-	{#if label}
-		<span class={labelClasses}>
-			{label}
-		</span>
-	{:else}
-		<slot />
+<div class={classes}>
+	<input
+		type="checkbox"
+		{id}
+		bind:checked={value}
+		use:forwardEvents
+		{...$$restProps}
+		class={classname('switch-input', { color }, undefined, true)} />
+	<label for={id} class={classname('switch-label')}>
+		<slot>
+			{text}
+		</slot>
+	</label>
+	{#if description || $$slots['description']}
+		<div class={classname('switch-description')}>
+			<slot name="description">
+				{description}
+			</slot>
+		</div>
 	{/if}
-</Label>
+</div>

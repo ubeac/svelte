@@ -31,9 +31,11 @@ const config = {
 		adapter: adapter(),
 		files: {
 			lib: 'src',
+			assets: "static"
 		},
 		alias: {
 			'@ubeac/svelte': path.resolve('./src'),
+			'@ubeac/static': path.resolve('./static'),
 		},
 		trailingSlash: 'always',
 	},

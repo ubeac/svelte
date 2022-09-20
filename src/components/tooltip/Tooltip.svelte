@@ -11,6 +11,6 @@
 </script>
 
 <Popup {forwardEvents} {...$$restProps} class={classes}>
-	<div class={classname('tooltip-arrow')} data-popper-arrow />
+		<div class={classname('tooltip-arrow')} data-popper-arrow />
 	<slot />
 </Popup>

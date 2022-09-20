@@ -1,31 +1,17 @@
 <script lang="ts">
-	import { get_current_component, getContext } from 'svelte/internal'
+	import { getContext } from 'svelte/internal'
 
-	import { Collapse } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	const accordion = getContext<any>('ACCORDION')
 
-	const accordions = getContext<any>('ACCORDIONS')
-
-	$: classes = classname('accordion-body', undefined, $$props.class)
-
-	$: id = $accordion?.id
-
-	$: group = $accordions?.persistent ? undefined : `#${$accordions?.group}`
-
-	$: open = $accordion?.open
+	$: classes = classname('accordion-body', { open: $accordion.open }, $$props.class)
 </script>
 
 {#if $accordion}
-	<Collapse class={classname('collapse-accordion')} {group} {id} {open}>
-		<div use:forwardEvents {...$$restProps} class={classes}>
-			<slot />
-		</div>
-	</Collapse>
+	<div {...$$restProps} class={classes}>
+		<slot />
+	</div>
 {:else}
 	<div>Cannot use AccordionBody outside of Accordion</div>
 {/if}
