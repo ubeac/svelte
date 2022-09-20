@@ -13,6 +13,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'app',
+				title: 'App',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'alert',
 				title: 'Alert',
 				icon: 'star',

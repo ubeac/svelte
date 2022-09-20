@@ -1,26 +1,8 @@
 <script lang="ts">
 	import { setContext } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
 	import { writable } from 'svelte/store'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	/**
-	 * Fit app to it's parent instead of entire screen
-	 */
-	export let absolute: boolean = false
-
-	/**
-	 * Set header growth mode
-	 */
 	export let headerMode: 'start' | 'center' | 'end' | 'grow' = 'grow'
-
-	/**
-	 * Set footer growth mode
-	 */
 	export let footerMode: 'start' | 'center' | 'end' | 'grow' = 'grow'
 
 	let elements: any[] = []
@@ -41,8 +23,7 @@
 
 	function calculateSidebarWidth(elements: any[]) {
 		let result = elements.reduce((width, current) => {
-			const sidebarWidth = current.open ? (current.mode === 'temporary' ? 0 : current.element.clientWidth) : 0
-			return width + sidebarWidth
+			return width + (current.mode === 'temporary' ? 0 : current.element.clientWidth)
 		}, 0)
 		return result
 	}
@@ -62,6 +43,13 @@
 		})
 	}
 
+	$: headerSize.set(calculateHeight(elements.filter((element) => element.type === 'header')))
+	$: leftSize.set(calculateSidebarWidth(elements.filter((element) => element.type === 'sidebar' && !element.right)))
+	$: rightSize.set(calculateSidebarWidth(elements.filter((element) => element.type === 'sidebar' && element.right)))
+	$: footerSize.set(calculateHeight(elements.filter((element) => element.type === 'footer')))
+	$: headerModeStore.set(headerMode)
+	$: footerModeStore.set(footerMode)
+
 	setContext('APP', {
 		headerMode: headerModeStore,
 		footerMode: footerModeStore,
@@ -73,20 +61,17 @@
 		removeElement,
 		updateElement,
 	})
-
-	$: headerSize.set(calculateHeight(elements.filter((element) => element.type === 'header')))
-	$: leftSize.set(calculateSidebarWidth(elements.filter((element) => element.type === 'sidebar' && !element.right)))
-	$: rightSize.set(calculateSidebarWidth(elements.filter((element) => element.type === 'sidebar' && element.right)))
-	$: footerSize.set(calculateHeight(elements.filter((element) => element.type === 'footer')))
-	$: headerModeStore.set(headerMode)
-	$: footerModeStore.set(footerMode)
-
-	$: classes = classname('app', { absolute }, $$props.class, true)
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<div class="u-app">
 	<slot />
 </div>
 
 <style lang="scss">
+	.u-app {
+		display: flex;
+		flex-direction: column;
+		background-color: #fefefe;
+		height: 100vh;
+	}
 </style>
