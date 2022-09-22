@@ -28,6 +28,11 @@
 	 */
 	export let descriptionColor: Colors = 'default'
 
+	/**
+	 * Show Multiple radio buttons in same line
+	 */
+	export let inline: boolean = false
+
 	let id: string = nanoid()
 
 	/**
@@ -52,7 +57,7 @@
 		dispatch('changed', value)
 	}
 
-	$: classes = classname('radio', undefined, $$props.class, true)
+	$: classes = classname('radio', { inline }, $$props.class, true)
 </script>
 
 <div class={classes}>
@@ -72,7 +77,7 @@
 		</slot>
 	</label>
 	{#if description || $$slots['description']}
-		<div class={classname('radio-description')}>
+		<div class={classname('radio-description', { color: descriptionColor })}>
 			<slot name="description">
 				{description}
 			</slot>

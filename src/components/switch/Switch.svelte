@@ -22,6 +22,11 @@
 	 */
 	export let descriptionColor: string | undefined = undefined
 
+	/**
+	 * Show Multiple switch buttons in same line
+	 */
+	export let inline: boolean = false
+
 	let id: string = nanoid()
 	/**
 	 * Forward all native Events
@@ -38,7 +43,7 @@
 	 */
 	export let value: boolean | undefined = undefined
 
-	$: classes = classname('switch', undefined, $$props.class)
+	$: classes = classname('switch', { inline }, $$props.class)
 </script>
 
 <div class={classes}>
@@ -55,7 +60,7 @@
 		</slot>
 	</label>
 	{#if description || $$slots['description']}
-		<div class={classname('switch-description')}>
+		<div class={classname('switch-description', { color: descriptionColor })}>
 			<slot name="description">
 				{description}
 			</slot>
