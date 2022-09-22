@@ -5,6 +5,7 @@
 
 	import { Switch } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
+	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
 	import { FormField, FormHint } from '.'
@@ -66,7 +67,7 @@
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('form-switch', { inline }, $$props.class)
+	$: classes = classname('form-switch', {}, $$props.class)
 </script>
 
 <FormField {cols} class={classes}>
@@ -75,7 +76,9 @@
 			<Label for="form-switch-{id}" {required}>{label}</Label>
 		{/if}
 	</slot>
-	<Switch bind:value {text} {color} {description} {descriptionColor} {forwardEvents} {...$$restProps} />
+	<Switch id="form-switch-{id}" bind:value {text} {color} {inline} {description} {descriptionColor} {forwardEvents} {...$$restProps}>
+		<slot />
+	</Switch>
 	<slot name="message">
 		{#if message}
 			<FormHint>{message}</FormHint>

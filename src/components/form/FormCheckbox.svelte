@@ -71,7 +71,7 @@
 	 */
 	export let value: boolean = false
 
-	$: classes = classname('form-checkbox', { inline }, $$props.class, true)
+	$: classes = classname('form-checkbox', {}, $$props.class, true)
 </script>
 
 <FormField {cols} class={classes}>
@@ -80,7 +80,9 @@
 			<Label for="form-checkbox-{id}" {required}>{label}</Label>
 		{/if}
 	</slot>
-	<Checkbox bind:value id="form-checkbox-{id}" {forwardEvents} {key} {color} {text} {...$$restProps} />
+	<Checkbox bind:value id="form-checkbox-{id}" {forwardEvents} {inline} {key} {color} {text} {...$$restProps}>
+		<slot />
+	</Checkbox>
 	<slot name="message">
 		{#if message}
 			<FormHint>{message}</FormHint>

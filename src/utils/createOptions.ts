@@ -56,7 +56,7 @@ export const createOptions = ({ items = [], key = 'key', text = 'text' }: Create
 	const isSelected = (option: any, value: any) => {
 		const { key } = extract(option)
 		if (Array.isArray(value)) return value?.includes(key)
-		return key === value
+		return key == value
 	}
 
 	const toKey = (input: any) => {

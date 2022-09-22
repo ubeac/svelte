@@ -61,7 +61,7 @@
 	 */
 	export let value: boolean = false
 
-	$: classes = classname('form-radio', { inline }, $$props.class)
+	$: classes = classname('form-radio', {}, $$props.class)
 </script>
 
 <FormField {cols} class={classes}>
@@ -70,7 +70,9 @@
 			<Label for="form-radio-{id}" {required}>{label}</Label>
 		{/if}
 	</slot>
-	<Radio bind:value id="form-radio-{id}" {forwardEvents} {color} {text} {...$$restProps} />
+	<Radio bind:value id="form-radio-{id}" {forwardEvents} {color} {inline} {text} {...$$restProps}>
+		<slot />
+	</Radio>
 	<slot name="message">
 		{#if message}
 			<FormHint>{message}</FormHint>
