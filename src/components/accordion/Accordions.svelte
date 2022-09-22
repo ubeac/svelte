@@ -17,7 +17,7 @@
 	 */
 	export let persistent: boolean = false
 
-	const context = writable({ group, persistent })
+	const context = writable({ group, persistent, children: [] })
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
@@ -25,7 +25,11 @@
 
 	$: classes = classname('accordion', undefined, $$props.class)
 
-	$: context.set({ group, persistent })
+	$: context.update((item) => {
+		item.group = group
+		item.persistent = persistent
+		return item
+	})
 </script>
 
 <div id={group} use:forwardEvents {...$$restProps} class={classes}>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { get_current_component, setContext } from 'svelte/internal'
+	import { get_current_component, getContext, setContext } from 'svelte/internal'
 	import { writable } from 'svelte/store'
 
 	import { nanoid } from 'nanoid'
@@ -22,6 +22,13 @@
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	setContext('ACCORDION', context)
+
+	const acccordions = getContext<any>('ACCORDIONS')
+
+	acccordions.update((item: any) => {
+		item.children.push(context)
+		return item
+	})
 
 	$: classes = classname('accordion-item', undefined, $$props.class)
 

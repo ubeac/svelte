@@ -11,7 +11,27 @@ $prefix-accordion: $prefix + 'accordion';
 		@extend .accordion-header;
 	}
 
+	&-button {
+		@extend .accordion-button;
+
+		&-collapsed {
+			@extend .collapsed;
+		}
+	}
+
 	&-body {
 		@extend .accordion-body;
+		overflow: hidden;
+		transition: height 0.3s 0ms cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s 0ms cubic-bezier(0.4, 0, 0.2, 1);
+		box-sizing: border-box;
+		height: 0;
+		padding: 16px 24px;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		&-open {
+			height: auto;
+			padding: 16px 24px;
+		}
 	}
 }

@@ -35,6 +35,11 @@
 	let id: string = nanoid()
 
 	/**
+	 * Show multiple items in same line
+	*/
+	export let inline: boolean = false;
+
+	/**
 	 * Set checkbox's key
 	 */
 	export let key: string | undefined = undefined
@@ -49,7 +54,7 @@
 	 */
 	export let value: boolean = false
 
-	$: classes = classname('checkbox', undefined, $$props.class, true)
+	$: classes = classname('checkbox', {inline}, $$props.class, true)
 
 	$: updateGroup(value)
 	$: updateChekbox(group)

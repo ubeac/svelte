@@ -1,46 +1,60 @@
-.u-app {
-	display: block;
-	min-height: 100vh;
-}
+$prefix-app: $prefix + 'app';
+$transition: all 0.4s ease;
 
-.u-app-wrapper {
-	display: grid;
-	grid-template-columns: auto 1fr auto;
-	grid-template-rows: auto 1fr auto;
-	min-height: inherit;
-}
+.#{$prefix-app} {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
 
-.u-app-body-center {
-	align-self: center;
-	justify-self: center;
-}
-
-@each $key in header-start, header, header-end, aside-start, body, aside-end, footer-start, footer, footer-end {
-	.u-app-#{$key} {
-		grid-area: #{$key};
-	}
-}
-
-@each $key in header-start, header, header-end {
-	.u-app-sticky-#{$key} .u-app-#{$key} {
-		position: sticky;
-		top: 0;
-		z-index: 1002;
-	}
-}
-
-@each $key in aside-start, aside-end {
-	.u-app-sticky-#{$key} .u-app-#{$key} {
-		position: sticky;
-		top: 0;
-		z-index: 1001;
-	}
-}
-
-@each $key in footer-start, footer, footer-end {
-	.u-app-sticky-#{$key} .u-app-#{$key} {
-		position: sticky;
+	&-footer {
+		position: absolute;
+		display: flex;
 		bottom: 0;
-		z-index: 1000;
+
+		transition: $transition;
+	}
+
+	&-header {
+		position: absolute;
+		display: flex;
+		top: 0;
+		transition: $transition;
+	}
+
+	&-body {
+		overflow: auto;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		transition: $transition;
+	}
+
+	&-sidebar {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		transition: $transition;
+		z-index: 1;
+		opacity: 0;
+		transform: translateX(-100%);
+
+		&-right {
+			right: 0;
+		}
+
+		&.#{$prefix-app}-sidebar-right {
+			transform: translateX(100%);
+		}
+
+		&.#{$prefix-app}-sidebar-open {
+			transform: translateX(0);
+			opacity: 1;
+		}
 	}
 }
