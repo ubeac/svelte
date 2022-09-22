@@ -1,2 +1,2 @@
-export { default as ifPreprocessor } from './if'
-export { default as previewPreprocessor } from './preview'
+export { default as ifProcessor } from './if'
+export { default as previewProcessor } from './preview'
