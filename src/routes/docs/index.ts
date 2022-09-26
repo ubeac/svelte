@@ -158,6 +158,11 @@ export const navigations = [
 		title: 'Common',
 		children: [
 			{
+				route: base_common_path + 'each',
+				title: 'Each',
+				icon: 'package',
+			},
+			{
 				route: base_common_path + 'if',
 				title: 'If',
 				icon: 'package',

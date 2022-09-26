@@ -38,10 +38,8 @@ export default function eachProcessor() {
 			function isKey(attribute) {
 				return attribute.type === 'Attribute' && attribute.name.startsWith('(') && attribute.name.endsWith(')')
 			}
-			console.log(ast)
 			walk(ast.html, {
 				enter(node, parent) {
-					console.log('node', node, parent)
 					if (node.type !== 'Attribute' || node.name !== 'each') return
 
 					let item = 'item',
@@ -49,8 +47,13 @@ export default function eachProcessor() {
 						key = ''
 
 					const itemAttr = parent.attributes.find(isLetItem)
-					if (itemAttr) {
-						item = itemAttr.expression?.name ?? item
+					if (itemAttr && itemAttr.expression) {
+						if (itemAttr.expression?.type === 'ObjectExpression') {
+							item = result.slice(itemAttr.expression.start, itemAttr.expression.end)
+						} else if (itemAttr.expression.type === 'Identifier') {
+							item = itemAttr.expression.name
+						}
+
 						result.remove(itemAttr.start - 1, itemAttr.end)
 					}
 
