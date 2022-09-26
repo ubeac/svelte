@@ -3,6 +3,7 @@ import preprocess from 'svelte-preprocess'
 import adapter from '@sveltejs/adapter-static'
 import path from 'path'
 
+import eachProcessor from './src/preprocessors/each.js'
 import ifProcessor from './src/preprocessors/if.js'
 import previewProcessor from './src/preprocessors/preview.js'
 
@@ -14,6 +15,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		ifProcessor(),
+		eachProcessor(),
 		previewProcessor(),
 		preprocess({
 			scss: {
@@ -31,7 +33,7 @@ const config = {
 		adapter: adapter(),
 		files: {
 			lib: 'src',
-			assets: "static"
+			assets: 'static',
 		},
 		alias: {
 			'@ubeac/svelte': path.resolve('./src'),
