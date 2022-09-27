@@ -33,7 +33,10 @@
 	 */
 	export let inline: boolean = false
 
-	let id: string = nanoid()
+	/**
+	 * Set id of radio element
+	 */
+	export let id: string = 'radio-' + nanoid(10)
 
 	/**
 	 * Radio name
