@@ -19,7 +19,7 @@
 	/**
 	 * Set id for HTML element
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let id: string = 'form-radio-' + nanoid(10)
 
 	/**
 	 * Show Message at bottom of Input
@@ -67,12 +67,10 @@
 <FormField {cols} class={classes}>
 	<slot name="label">
 		{#if label}
-			<Label for="form-radio-{id}" {required}>{label}</Label>
+			<Label for={id} {required}>{label}</Label>
 		{/if}
 	</slot>
-	<Radio bind:value id="form-radio-{id}" {forwardEvents} {color} {inline} {text} {...$$restProps}>
-		<slot />
-	</Radio>
+	<Radio bind:value {id} {forwardEvents} {color} {inline} {text} {...$$restProps} />
 	<slot name="message">
 		{#if message}
 			<FormHint>{message}</FormHint>

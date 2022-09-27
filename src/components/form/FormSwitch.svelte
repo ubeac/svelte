@@ -19,7 +19,7 @@
 	/**
 	 * Set id for HTML element
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let id: string = 'form-switch-' + nanoid(10)
 
 	/**
 	 * Show Message at bottom of Input
@@ -73,12 +73,10 @@
 <FormField {cols} class={classes}>
 	<slot name="label">
 		{#if label}
-			<Label for="form-switch-{id}" {required}>{label}</Label>
+			<Label for={id} {required}>{label}</Label>
 		{/if}
 	</slot>
-	<Switch id="form-switch-{id}" bind:value {text} {color} {inline} {description} {descriptionColor} {forwardEvents} {...$$restProps}>
-		<slot />
-	</Switch>
+	<Switch {id} bind:value {text} {color} {inline} {description} {descriptionColor} {forwardEvents} {...$$restProps} />
 	<slot name="message">
 		{#if message}
 			<FormHint>{message}</FormHint>

@@ -32,7 +32,10 @@
 	 */
 	export let group: any = []
 
-	let id: string = nanoid()
+	/**
+	 * Set id for Checkbox element
+	*/
+	export let id: string = 'checkbox-' + nanoid(10)
 
 	/**
 	 * Show multiple items in same line

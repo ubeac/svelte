@@ -27,7 +27,11 @@
 	 */
 	export let inline: boolean = false
 
-	let id: string = nanoid()
+	/**
+	 * Set id for Switch element.
+	 */
+	export let id: string = 'switch-' + nanoid(10);
+
 	/**
 	 * Forward all native Events
 	 */

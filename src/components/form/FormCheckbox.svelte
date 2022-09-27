@@ -34,12 +34,7 @@
 	/**
 	 * Set id for HTML element
 	 */
-	export let id: string | undefined = nanoid(10)
-
-	/**
-	 * Show multiple Checkboxes in same horozontal line
-	 */
-	export let inline: boolean = false
+	export let id: string = 'form-checkbox-' + nanoid(10)
 
 	/**
 	 * Value of checkbox in group
@@ -77,12 +72,10 @@
 <FormField {cols} class={classes}>
 	<slot name="label">
 		{#if label}
-			<Label for="form-checkbox-{id}" {required}>{label}</Label>
+			<Label for={id} {required}>{label}</Label>
 		{/if}
 	</slot>
-	<Checkbox bind:value id="form-checkbox-{id}" {forwardEvents} {inline} {key} {color} {text} {...$$restProps}>
-		<slot />
-	</Checkbox>
+	<Checkbox bind:value {id} {forwardEvents} {key} {color} {text} {...$$restProps} />
 	<slot name="message">
 		{#if message}
 			<FormHint>{message}</FormHint>
