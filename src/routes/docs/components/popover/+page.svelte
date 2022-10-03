@@ -1,8 +1,8 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 	import PopoverDefault from './PopoverDefault.svelte'
 	import PopoverDirections from './PopoverDirections.svelte'
-  import PopoverHover from './PopoverHover.svelte'
+	import PopoverHover from './PopoverHover.svelte'
 </script>
 
 <h1>Popover</h1>

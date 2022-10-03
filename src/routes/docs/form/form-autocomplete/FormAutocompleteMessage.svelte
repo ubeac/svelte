@@ -1,5 +1,5 @@
 <script>
-	import { FormHint, FormAutocomplete } from '@ubeac/svelte/components'
+	import { FormHint, FormAutocomplete } from '@ubeac/svelte'
 
 	let items = ['Red', 'Green', 'Blue', 'GHI', 'Cyan', 'DEF', 'Black', 'ABC']
 </script>

@@ -1,5 +1,5 @@
 <script>
-	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
+	import { Preview } from '@ubeac/svelte'
 	import CheckboxColor from './CheckboxColor.svelte'
 	import CheckboxDefault from './CheckboxDefault.svelte'
 	import CheckboxDescription from './CheckboxDescription.svelte'

@@ -1,5 +1,5 @@
 <script>
-	import { Col, Container, Input, Label, Row } from '@ubeac/svelte/components'
+	import { Col, Container, Input, Label, Row } from '@ubeac/svelte'
 </script>
 
 <Container>

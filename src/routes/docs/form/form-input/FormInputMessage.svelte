@@ -1,5 +1,5 @@
 <script>
-	import { FormHint, FormInput } from '@ubeac/svelte/components'
+	import { FormHint, FormInput } from '@ubeac/svelte'
 </script>
 
 <FormInput type="email" label="Email:">

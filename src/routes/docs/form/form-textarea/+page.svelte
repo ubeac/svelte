@@ -1,5 +1,5 @@
 <script>
-	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
+	import { Preview } from '@ubeac/svelte'
 	import FormTextareaColumn from './FormTextareaColumn.svelte'
 	import FormTextareaDisabledLoading from './FormTextareaDisabledLoading.svelte'
 	import FormTextareaLabel from './FormTextareaLabel.svelte'

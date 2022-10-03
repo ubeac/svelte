@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components/preview'
+	import { Preview } from '@ubeac/svelte'
 	import PageHeaderSimple from './PageHeaderSimple.svelte'
 	import PageHeaderAction from './PageHeaderAction.svelte'
 </script>

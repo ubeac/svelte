@@ -1,7 +1,7 @@
 <script>
-	import { Button, Preview, Tooltip } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 	import TooltipDefault from './TooltipDefault.svelte'
-  import TooltipHtml from './TooltipHTML.svelte'
+	import TooltipHtml from './TooltipHTML.svelte'
 </script>
 
 <h1>Tooltip</h1>
@@ -21,9 +21,11 @@
 	<TooltipDefault />
 </Preview>
 
-
 <h2>Tooltip with HTML</h2>
-<p>you can write HTML code inside Tooltip to highlight particular bits of information and make the content more attractive.</p>
+<p>
+	you can write HTML code inside Tooltip to highlight particular bits of information and make the content more
+	attractive.
+</p>
 
 <Preview src="./TooltipHTML.svelte">
 	<TooltipHtml />

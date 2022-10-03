@@ -1,5 +1,5 @@
 <script>
-	import { Container, FormRadioGroup, RadioGroup, Row } from '@ubeac/svelte/components'
+	import { Container, FormRadioGroup, Row } from '@ubeac/svelte'
 </script>
 
 <Container>
@@ -10,7 +10,6 @@
 			cols="3"
 			label="3 cols:"
 			inline
-			items={['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5']}
-		/>
+			items={['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5']} />
 	</Row>
 </Container>

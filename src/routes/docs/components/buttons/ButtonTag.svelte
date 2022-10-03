@@ -1,5 +1,5 @@
 <script>
-	import { Button } from '@ubeac/svelte/components'
+	import { Button } from '@ubeac/svelte'
 </script>
 
 <Button>Button</Button>

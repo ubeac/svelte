@@ -1,5 +1,5 @@
 <script>
-	import { DatePicker } from '@ubeac/svelte/components'
+	import { DatePicker } from '@ubeac/svelte'
 </script>
 
 <DatePicker value="1900/04/24" />

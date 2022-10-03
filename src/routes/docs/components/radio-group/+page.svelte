@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 	import RadioGroupColor from './RadioGroupColor.svelte'
 	import RadioGroupComplexObject from './RadioGroupComplexObject.svelte'
 	import RadioGroupDefault from './RadioGroupDefault.svelte'

@@ -1,5 +1,5 @@
 <script>
-	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
+	import { Preview } from '@ubeac/svelte'
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
 	import FormAutocompleteDisabledLoading from './FormAutocompleteDisabledLoading.svelte'
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'

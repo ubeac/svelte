@@ -1,5 +1,5 @@
 <script>
-	import { FormHint, FormDatePicker } from '@ubeac/svelte/components'
+	import { FormHint, FormDatePicker } from '@ubeac/svelte'
 </script>
 
 <FormDatePicker label="Start from:">

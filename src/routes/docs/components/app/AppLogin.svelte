@@ -1,5 +1,5 @@
 <script>
-	import { App, Button, Card, CardBody, Col, Container, FormInput, Row } from '@ubeac/svelte/components'
+	import { App, Button, Card, CardBody, Col, Container, FormInput, Row } from '@ubeac/svelte'
 </script>
 
 <App class="centered">

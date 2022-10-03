@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 	import FormSwitchDefault from './FormSwitchDefault.svelte'
 	import FormSwitchColumns from './FormSwitchColumns.svelte'
 </script>

@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 	import FormRadioColumns from './FormRadioColumns.svelte'
 
 	import FormRadioLabel from './FormRadioLabel.svelte'

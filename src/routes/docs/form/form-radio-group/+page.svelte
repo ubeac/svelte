@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 	import FormRadioGroupColor from './FormRadioGroupColor.svelte'
 	import FormRadioGroupLabel from './FormRadioGroupLabel.svelte'
 	import FormRadioGroupInlineLabel from './FormRadioGroupInlineLabel.svelte'

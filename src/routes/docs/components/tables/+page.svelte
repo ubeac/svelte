@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 	import TableBorder from './TableBorder.svelte'
 	import TableDefault from './TableDefault.svelte'
 	import TableHover from './TableHover.svelte'

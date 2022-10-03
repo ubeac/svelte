@@ -1,5 +1,5 @@
 <script>
-	import { FormInput, Container, Row, Col, Button } from '@ubeac/svelte/components'
+	import { FormInput, Container, Row, Col, Button } from '@ubeac/svelte'
 </script>
 
 <Container xs>

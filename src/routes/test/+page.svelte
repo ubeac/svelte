@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FormCheckbox, FormRadioGroup, PageHeader, Switch } from '@ubeac/svelte/components'
+	import { FormCheckbox, FormRadioGroup, PageHeader, Switch } from '@ubeac/svelte'
 
 	import App from './App.svelte'
 	import AppFooter from './AppFooter.svelte'

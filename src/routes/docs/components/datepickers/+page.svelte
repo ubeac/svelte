@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 
 	import DatepickerDefault from './DatepickerDefault.svelte'
 	import DatepickerFormat from './DatepickerFormat.svelte'
