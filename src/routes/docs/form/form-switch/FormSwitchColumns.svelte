@@ -1,6 +1,5 @@
 <script>
-	import { FormSwitch } from '@ubeac/svelte'
-	import { Button, Col, Container, FormFieldset, FormHint, Row } from '@ubeac/svelte/components'
+	import { FormSwitch, Button, Col, Container, FormFieldset, FormHint, Row } from '@ubeac/svelte'
 </script>
 
 <Container>

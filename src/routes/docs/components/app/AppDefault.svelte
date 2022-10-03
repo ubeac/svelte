@@ -1,5 +1,5 @@
 <script>
-	import { App, AppBody, AppFooter, AppHeader, AppSidebar, Button, Icon, Page } from '@ubeac/svelte/components'
+	import { App, AppBody, AppFooter, AppHeader, AppSidebar, Button, Icon, Page } from '@ubeac/svelte'
 
 	let leftSidebar = true
 	let rightSidebar = true

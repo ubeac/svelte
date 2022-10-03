@@ -8,7 +8,7 @@
 		DialogFooter,
 		DialogHeader,
 		DialogTitle,
-	} from '@ubeac/svelte/components'
+	} from '@ubeac/svelte'
 
 	let open = false
 </script>

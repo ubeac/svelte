@@ -1,5 +1,5 @@
 <script>
-	import { Button, Popover, PopoverBody } from '@ubeac/svelte/components'
+	import { Button, Popover, PopoverBody } from '@ubeac/svelte'
 </script>
 
 <Button color="secondary">Popover auto</Button>

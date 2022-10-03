@@ -1,14 +1,14 @@
 <script>
-	import { FormHint, FormAutocomplete } from '@ubeac/svelte/components'
+	import { FormHint, FormAutocomplete } from '@ubeac/svelte'
 
-	let items=['Red', 'Green', 'Blue', 'GHI', 'Cyan', 'DEF', 'Black', 'ABC']
+	let items = ['Red', 'Green', 'Blue', 'GHI', 'Cyan', 'DEF', 'Black', 'ABC']
 </script>
 
 <FormAutocomplete {items} label="First Color:">
 	<FormHint slot="message">choose your favorite color</FormHint>
 </FormAutocomplete>
 
-<FormAutocomplete {items} label="invalid:" value='GHI'>
+<FormAutocomplete {items} label="invalid:" value="GHI">
 	<FormHint state="invalid" slot="message">GHI is not a valid color name.</FormHint>
 </FormAutocomplete>
 

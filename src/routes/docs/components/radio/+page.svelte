@@ -1,7 +1,6 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 	import RadioColors from './RadioColors.svelte'
-
 	import RadioDefault from './RadioDefault.svelte'
 	import RadioName from './RadioName.svelte'
 </script>

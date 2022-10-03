@@ -1,5 +1,5 @@
 <script>
-	import { Avatar, Button } from '@ubeac/svelte/components'
+	import { Avatar, Button } from '@ubeac/svelte'
 </script>
 
 <Button>

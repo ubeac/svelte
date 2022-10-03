@@ -1,5 +1,5 @@
 <script>
-	import { Button, ButtonGroup } from '@ubeac/svelte/components'
+	import { Button, ButtonGroup } from '@ubeac/svelte'
 </script>
 
 <ButtonGroup>

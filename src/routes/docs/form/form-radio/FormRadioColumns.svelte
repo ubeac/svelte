@@ -1,6 +1,5 @@
 <script>
-	import { FormRadio } from '@ubeac/svelte'
-	import { Button, Col, Container, FormFieldset, FormHint, Row } from '@ubeac/svelte/components'
+	import { FormRadio, Button, Col, Container, FormFieldset, FormHint, Row } from '@ubeac/svelte'
 </script>
 
 <Container>

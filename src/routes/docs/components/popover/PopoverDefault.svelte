@@ -1,9 +1,8 @@
 <script>
-
-  import { Button, Popover, PopoverBody, PopoverHeader } from "@ubeac/svelte/components"
-
+	import { Button, Popover, PopoverBody, PopoverHeader } from '@ubeac/svelte'
 </script>
-<Button size=lg color=danger>Click to trigger popover</Button>
+
+<Button size="lg" color="danger">Click to trigger popover</Button>
 
 <Popover trigger="click">
 	<PopoverHeader>Popover title</PopoverHeader>

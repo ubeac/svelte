@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 	import FormCheckboxDefault from './FormCheckboxDefault.svelte'
 	import FormCheckboxColumn from './FormCheckboxColumn.svelte'
 </script>

@@ -1,6 +1,5 @@
 <script>
-	import { FormCheckbox } from '@ubeac/svelte'
-	import { Button, Col, Container, FormFieldset, FormHint, Row } from '@ubeac/svelte/components'
+	import { Button, Col, Container, FormFieldset, FormHint, Row, FormCheckbox } from '@ubeac/svelte'
 	let value = false
 </script>
 

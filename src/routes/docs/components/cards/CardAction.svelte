@@ -1,7 +1,5 @@
 <script>
-	import { Card, CardBody, CardHeader, CardTitle, CardActions, CardFooter } from '@ubeac/svelte'
-	import { Button } from '@ubeac/svelte/components/button'
-	import { Icon } from '@ubeac/svelte/components/icon'
+	import { Button, Icon, Card, CardBody, CardActions, CardFooter } from '@ubeac/svelte'
 </script>
 
 <Card title="Footer text with actions">

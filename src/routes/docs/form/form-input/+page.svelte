@@ -1,5 +1,5 @@
 <script>
-	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
+	import { Preview } from '@ubeac/svelte'
 	import FormInputColumn from './FormInputColumn.svelte'
 	import FormInputDisabledLoading from './FormInputDisabledLoading.svelte'
 	import FormInputIcon from './FormInputIcon.svelte'

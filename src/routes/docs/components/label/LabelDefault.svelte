@@ -1,5 +1,5 @@
 <script>
-	import { Label } from '@ubeac/svelte/components'
+	import { Label } from '@ubeac/svelte'
 </script>
 
 <Label>Label text</Label>

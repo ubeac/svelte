@@ -1,5 +1,5 @@
 <script>
-	import { Switch } from '@ubeac/svelte/components'
+	import { Switch } from '@ubeac/svelte'
 	import * as Layout from '..'
 	import Content from './Content.svelte'
 

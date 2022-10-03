@@ -1,5 +1,5 @@
 <script>
-	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
+	import { Preview } from '@ubeac/svelte'
 	import FormDatePickerColumn from './FormDatePickerColumn.svelte'
 	import FormDatePickerDisabledLoading from './FormDatePickerDisabledLoading.svelte'
 	import FormDatePickerIcon from './FormDatePickerIcon.svelte'

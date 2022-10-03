@@ -1,5 +1,5 @@
 <script>
-	import { Button, Tooltip } from '@ubeac/svelte/components'
+	import { Button, Tooltip } from '@ubeac/svelte'
 </script>
 
 <Button>Tooltip on top</Button>

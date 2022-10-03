@@ -1,5 +1,5 @@
 <script>
-	import { RadioGroup } from '@ubeac/svelte/components'
+	import { RadioGroup } from '@ubeac/svelte'
 </script>
 
 <RadioGroup inline name="gender" items={{ m: 'Male', f: 'Female' }} />

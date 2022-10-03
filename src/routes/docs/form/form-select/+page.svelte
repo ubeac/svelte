@@ -1,5 +1,5 @@
 <script>
-	import Preview from '@ubeac/svelte/components/preview/Preview.svelte'
+	import { Preview } from '@ubeac/svelte'
 	import FormSelectLabel from './FormSelectLabel.svelte'
 	import FormSelectColumn from './FormSelectColumn.svelte'
 	import FormSelectRequired from './FormSelectRequired.svelte'
