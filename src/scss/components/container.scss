@@ -4,31 +4,33 @@
 $prefix-container: $prefix + 'container';
 
 .#{$prefix-container} {
-	&:not(&-sm):not(&-md):not(&-lg):not(&-xl):not(&-xxl):not(&-fluid) {
-		@extend .container;
-	}
-
-	&-sm {
-		@extend .container-sm;
-	}
-
-	&-md {
-		@extend .container-md;
-	}
-
-	&-lg {
-		@extend .container-lg;
-	}
-
-	&-xl {
-		@extend .container-xl;
-	}
-
-	&-xxl {
-		@extend .container-xxl;
-	}
-
 	&-fluid {
-		@extend .container-fluid;
+		&-none {
+			@extend .container;
+		}
+
+		&-sm {
+			@extend .container-sm;
+		}
+
+		&-md {
+			@extend .container-md;
+		}
+
+		&-lg {
+			@extend .container-lg;
+		}
+
+		&-xl {
+			@extend .container-xl;
+		}
+
+		&-xxl {
+			@extend .container-xxl;
+		}
+
+		&-fluid {
+			@extend .container-fluid;
+		}
 	}
 }

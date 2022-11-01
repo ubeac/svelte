@@ -1,9 +1,15 @@
 $prefix-page: $prefix + 'page';
+$prefix-page-body: $prefix + 'page-body';
 $prefix-page-hedaer: $prefix + 'page-header';
 
 .#{$prefix-page} {
-	width: 100%;
+	@extend .page-wrapper;
 }
+
+.#{$prefix-page-body} {
+	@extend .page-body;
+}
+
 
 .#{$prefix-page-hedaer} {
 	@extend .page-header;

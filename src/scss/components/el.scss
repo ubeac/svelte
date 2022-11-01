@@ -1,0 +1,285 @@
+//
+// Box
+//
+$prefix-box: $prefix + 'el';
+
+$opacities: (
+    '10',
+    '25',
+    '50',
+    '75'
+);
+
+$box-display-sizes: (
+    'print':'d-print',
+    'display':'d',
+    'display-sm':'d-sm',
+    'display-md':'d-md',
+    'display-lg':'d-lg',
+    'display-xl':'d-xl',
+    'display-xxl':'d-xxl'
+);
+
+$box-display-types: (
+    'none',
+    'inline',
+    'inline-block',
+    'block',
+    'grid',
+    'table-cell',
+    'table-row',
+    'flex',
+    'inline-flex',
+    'table'
+);
+
+$box-ratio: (
+    '1x1',
+    '4x3',
+    '16x9',
+    '21x9'
+);
+
+$box-sticky: (
+    'top',
+    'sm-top',
+    'md-top',
+    'lg-top',
+    'xl-top'
+);
+
+$box-fixed: (
+    'top',
+    'bottom'
+);
+
+$box-shadows: (
+    'none',
+    'sm',
+    'lg'
+);
+
+$box-width-sizes: (
+    '25':'w-25',
+    '50':'w-50',
+    '75':'w-75',
+    '100':'w-100',
+    '100vp': 'vw-100',
+    'auto':'w-auto'
+);
+
+$box-height-sizes: (
+    '25':'h-25',
+    '50':'h-50',
+    '75':'h-75',
+    '100':'h-100',
+    '100vp': 'vh-100',
+    'auto':'h-auto'
+);
+
+$box-positions: (
+    'static',
+    'relative',
+    'absolute',
+    'fixed',
+    'sticky'
+);
+
+$box-position-values: (
+    '0',
+    '50',
+    '100'
+);
+
+$box-border-values: (
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5'
+);
+
+$box-border-keys: (
+    'top',
+    'bottom',
+    'start',
+    'end'
+);
+
+$border-radiuses: (
+    'top',
+    'end',
+    'bottom',
+    'start',
+    'circle',
+    'pill'
+);
+
+
+$border-round-sizes: (
+    '0',
+    '1',
+    '2',
+    '3'
+);
+
+.#{$prefix-box} {
+    &-clearfix {
+        @extend .clearfix;
+    }
+
+    @each $key,
+    $value in $box-display-sizes {
+        @each $display-type in $box-display-types {
+            &-#{$key}-#{$display-type} {
+                @extend .#{$value}-#{$display-type};
+            }
+        }
+    }
+
+    @each $ratio in $box-ratio {
+        &-ratio-#{$ratio} {
+            @extend .ratio;
+            @extend .ratio-#{$ratio};
+        }
+    }
+
+    @each $sticky in $box-sticky {
+        &-sticky-#{$sticky} {
+            @extend .sticky-#{$sticky};
+        }
+    }
+
+    @each $fixed in $box-fixed {
+        &-fixed-#{$fixed} {
+            @extend .fixed-#{$fixed};
+        }
+    }
+
+    @each $shadow in $box-shadows {
+        &-shadow-#{$shadow} {
+            @extend .shadow-#{$shadow};
+        }
+    }
+
+    @each $key,
+    $value in $box-width-sizes {
+        &-width-#{$key} {
+            @extend .#{$value};
+        }
+    }
+
+    @each $key,
+    $value in $box-height-sizes {
+        &-height-#{$key} {
+            @extend .#{$value};
+        }
+    }
+
+    @each $position in $box-positions {
+        &-position-#{$position} {
+            @extend .position-#{$position};
+        }
+    }
+
+    @each $opacity in $opacities {
+        &-bg-opacity-#{$opacity} {
+            @extend .opacity-#{$opacity};
+        }
+    }
+
+    @each $key in $box-border-keys {
+        &-border-#{$key} {
+            @extend .border-#{$key};
+
+
+        }
+    }
+
+    &-border {
+        @extend .border;
+
+        &-top-0 {
+            @extend .border-top-0;
+        }
+
+        &-bottom-0 {
+            @extend .border-bottom-0;
+        }
+
+        &-start-0 {
+            @extend .border-start-0;
+        }
+
+        &-end-0 {
+            @extend .border-end-0;
+        }
+
+        @each $size in $box-border-values {
+            &-#{$size} {
+                @extend .border;
+                @extend .border-#{$size};
+                // tabler's issue for border !important
+                border-width: #{$size}px !important
+            }
+        }
+
+        @each $key,
+        $value in $theme-colors {
+            &-color-#{$key} {
+                @extend .border-#{$key};
+            }
+        }
+
+        &-radius {
+            @extend .rounded;
+
+            @each $radius in $border-radiuses {
+                &-#{$radius} {
+                    @extend .rounded-#{$radius};
+                }
+            }
+        }
+
+        &-round-size {
+
+            @each $size in $border-round-sizes {
+                &-#{$size} {
+                    @extend .rounded-#{$size};
+                }
+            }
+        }
+    }
+
+
+
+    @each $value in $box-position-values {
+        &-top-#{$value} {
+            @extend .top-#{$value};
+        }
+
+        &-start-#{$value} {
+            @extend .start-#{$value};
+        }
+
+        &-end-#{$value} {
+            @extend .end-#{$value};
+        }
+
+        &-bottom-#{$value} {
+            @extend .bottom-#{$value};
+        }
+    }
+
+    @each $color,
+    $value in $theme-colors {
+        &-bg-color-#{$color} {
+            @extend .bg-#{$color};
+        }
+    }
+
+    &-bg-gradient {
+        @extend .bg-gradient
+    }
+}

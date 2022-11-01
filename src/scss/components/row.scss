@@ -2,51 +2,7 @@
 // row
 //
 $prefix-row: $prefix + 'row';
-$prefix-col: $prefix + 'col';
-
-$aligns: start, center, end, baseline, stretch;
-$justifies: start, center, end, between, around;
-$breakpoints: sm, md, lg, xl;
 
 .#{$prefix-row} {
 	@extend .row;
-
-	@each $align in $aligns {
-		&-align-#{$align} {
-			@extend .align-items-#{$align};
-		}
-
-		@each $size in $breakpoints {
-			&-align-#{$size}-#{$align} {
-				@extend .align-items-#{$size}-#{$align};
-			}
-		}
-	}
-
-	@each $justify in $justifies {
-		&-justify-#{$justify} {
-			@extend .justify-content-#{$justify};
-		}
-
-		@each $size in $breakpoints {
-			&-justify-#{$size}-#{$justify} {
-				@extend .justify-content-#{$size}-#{$justify};
-			}
-		}
-	}
-
-	&-no-gutters {
-		--#{$prefix}gutter-y: 0;
-		--#{$prefix}gutter-x: 0;
-
-		& > .#{$prefix-col},
-		& > [class*='#{$prefix-col}-'] {
-			padding: 0;
-		}
-	}
-
-	&-dense {
-		--#{$prefix}gutter-y: 0.5rem;
-		--#{$prefix}gutter-x: 0.5rem;
-	}
 }
