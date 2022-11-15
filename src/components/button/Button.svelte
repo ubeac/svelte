@@ -1,95 +1,43 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	import type { ButtonProps } from './button.types'
 
-	import type { ButtonShapes, ButtonSizes } from './button.types'
+	interface $$Props extends ButtonProps {
+		[x: string]: any
+	}
+	export let outline: $$Props['outline'] = undefined
+	export let link: $$Props['link'] = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'button'
+	export let tag: $$Props['tag'] = 'button'
+	export let type: $$Props['type'] = 'button'
+	export let value: $$Props['value'] = undefined
+	export let size: $$Props['size'] = undefined
+	export let state: $$Props['state'] = undefined
+	export let toggle: $$Props['toggle'] = undefined
+	export let color: $$Props['color'] = undefined
 
-	/**
-	 * Make the button state to active
-	 */
-	export let active: boolean = false
-
-	/**
-	 * Make the button fit to its parent width
-	 */
-	export let block: boolean = false
-
-	/**
-	 * Set color of button
-	 */
-	export let color: Colors = 'default'
-
-	/**
-	 * Make the button state to disabled
-	 */
-	export let disabled: boolean = false
-
-	/**
-	 * Only show text of button with trasnparent background and border
-	 */
-	export let ghost: boolean = false
-
-	/**
-	 * Set redirect url for link button
-	 */
-	export let href: undefined | string = undefined
-
-	/**
-	 * Show loading spinner inside button
-	 */
-	export let loading: boolean = false
-
-	/**
-	 * Draws outlined Buttons with transparent background
-	 */
-	export let outline: boolean = false
-
-	/**
-	 * Shape of button
-	 */
-	export let shape: ButtonShapes = 'default'
-
-	/**
-	 * Set the size of button
-	 */
-	export let size: ButtonSizes = 'md'
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	let ref: HTMLElement
-
-	$: icon = ref && (!ref.textContent || !ref.textContent.trim())
-
-	$: classes = classname(
-		'button',
-		{
-			active,
-			block,
+	let cssProps: any = {}
+	let otherProps: any = {}
+	$: {
+		cssProps = {
 			color,
-			disabled,
-			ghost,
-			icon,
-			loading,
 			outline,
-			shape,
 			size,
-		},
-		$$props.class,
-		true
-	)
+			toggle,
+			state,
+			link,
+		}
+		otherProps = {
+			tag,
+			cssPrefix,
+			role: tag === 'a' ? 'button' : undefined,
+			type: type ?? 'button',
+			disabled: state === 'disable',
+		}
+	}
 </script>
 
-<svelte:element
-	this={href ? 'a' : 'button'}
-	{disabled}
-	{href}
-	bind:this={ref}
-	use:forwardEvents
-	{...$$restProps}
-	class={classes}
->
-	<slot />
-</svelte:element>
+<El {...$$restProps} {cssProps} {...otherProps} on:click>
+	<slot>{value}</slot>
+</El>

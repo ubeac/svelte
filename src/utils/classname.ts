@@ -1,6 +1,18 @@
 import { paramCase } from 'change-case'
 
-const prefix = `u`
+const prefix = 'u'
+
+export const classname = (root?: string, scoped?: any | any[], global?: any | any[], includeName?: boolean) => {
+	root = paramCase(root || '')
+	scoped = [scoped].flat()
+	global = [global].flat()
+	const classes = parse(scoped, includeName)
+		.map((input) => (root ? `${prefix}-${root}-${input}` : `${prefix}-${input}`))
+		.concat(...parse(global))
+		.filter((input) => input)
+	if (root) classes.unshift(`${prefix}-${root}`)
+	return classes.join(' ') || undefined
+}
 
 const parse = (inputs: any | any[], includeName?: boolean) => {
 	const result: Array<string> = []
@@ -32,16 +44,4 @@ const parse = (inputs: any | any[], includeName?: boolean) => {
 		}
 	}
 	return result
-}
-
-export const classname = (root?: string, scoped?: any | any[], global?: any | any[], includeName?: boolean) => {
-	root = paramCase(root || '')
-	scoped = [scoped].flat()
-	global = [global].flat()
-	const classes = parse(scoped, includeName)
-		.map((input) => (root ? `${prefix}-${root}-${input}` : `${prefix}-${input}`))
-		.concat(...parse(global))
-		.filter((input) => input)
-	if (root) classes.unshift(`${prefix}-${root}`)
-	return classes.join(' ') || undefined
 }

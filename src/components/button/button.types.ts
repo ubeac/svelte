@@ -1,5 +1,13 @@
-export const BUTTON_SHAPES = ['default', 'round', 'tile'] as const
-export type ButtonShapes = typeof BUTTON_SHAPES[number]
+import type { SharedProps } from '../base/El.type'
 
-export const BUTTON_SIZES = ['sm', 'md', 'lg'] as const
-export type ButtonSizes = typeof BUTTON_SIZES[number]
+export interface ButtonProps extends SharedProps {
+	color?: Colors
+	tag?: ButtonTags
+	outline?: BooleanValues
+	link?: BooleanValues
+	type?: ButtonTypes
+	value?: ButtonValues
+	size?: ButtonSizes
+	state?: ButtonStates
+	toggle?: BooleanValues
+}

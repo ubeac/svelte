@@ -1,4 +1,5 @@
 export * from './_internal'
+export * from './base'
 export * from './accordion'
 export * from './alert'
 export * from './app'
