@@ -1,17 +1,32 @@
 <script lang="ts">
-	import { getContext } from 'svelte/internal'
+	import { get_current_component, getContext } from 'svelte/internal'
 
-	import { classname } from '$lib/utils'
+	import { forwardEventsBuilder } from '$lib/directives'
 
-	const accordion = getContext<any>('ACCORDION')
+	import { El } from '../base'
+	import type { SharedProps } from '../base/El.type'
+	import type { AccordionBodyProps, AccordionContext } from './Accordion.types'
 
-	$: classes = classname('accordion-body', { open: $accordion.open }, $$props.class)
+	type $$Props = AccordionBodyProps
+
+	const accordion: AccordionContext = getContext('ACCORDION')
+
+	let props: SharedProps = {}
+	$: props = {
+		...$$restProps,
+		cssPrefix: 'accordion-body',
+		forwardEvents: forwardEventsBuilder(get_current_component()),
+		tag: 'div',
+		cssProps: {
+			open: $accordion.open,
+		},
+	}
 </script>
 
-{#if $accordion}
-	<div {...$$restProps} class={classes}>
+<El {...props}>
+	{#if $accordion}
 		<slot />
-	</div>
-{:else}
-	<div>Cannot use AccordionBody outside of Accordion</div>
-{/if}
+	{:else}
+		Cannot use AccordionBody outside of Accordion
+	{/if}
+</El>

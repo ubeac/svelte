@@ -1,13 +1,16 @@
 <script lang="ts">
-	import { get_current_component, getAllContexts, getContext } from 'svelte/internal'
+	import { get_current_component, getContext } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+
+	import { El } from '../base'
+	import type { SharedProps } from '../base/El.type'
 
 	const context = getContext<any>('ACCORDION')
 	const acccordions = getContext<any>('ACCORDIONS')
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+
 	function onClick() {
+		console.log('onClick')
 		acccordions.update((item: any) => {
 			if ($acccordions.persistent) {
 				for (const children of item.children) {
@@ -25,14 +28,33 @@
 		})
 		context.set({ id: $context.id, open: !$context.open })
 	}
-	$: classes = classname('accordion-header', undefined, $$props.class)
-	$: buttonClass = classname('accordion-button', {
-		collapsed: !$context.open,
-	})
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	let props: SharedProps = {}
+	$: props = {
+		...$$restProps,
+		forwardEvents,
+		tag: 'div',
+		cssPrefix: 'accordion-header',
+		cssProps: {},
+	}
+
+	let buttonProps: SharedProps = {}
+
+	$: buttonProps = {
+		...$$restProps,
+		forwardEvents,
+		tag: 'button',
+		cssPrefix: 'accordion-button',
+		cssProps: {
+			collapsed: !$context.open,
+		},
+	}
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
-	<button on:click={onClick} use:forwardEvents {...$$restProps} class={buttonClass}>
+<El on:click={console.log} {...props} {forwardEvents}>
+	<El {...buttonProps} on:click={onClick} {forwardEvents}>
 		<slot />
-	</button>
-</div>
+	</El>
+</El>
