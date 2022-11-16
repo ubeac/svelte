@@ -1,2 +1,2 @@
 export { default as Icon } from './Icon.svelte'
-export * from './icon.types'
+export * from './Icon.types'

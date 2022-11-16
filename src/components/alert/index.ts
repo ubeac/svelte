@@ -1,5 +1,2 @@
-import Alert from './Alert.svelte'
-
-export { Alert }
-
-export default Alert
+export { default as Alert } from './Alert.svelte'
+export * from './Alert.types'

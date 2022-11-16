@@ -5,7 +5,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	import type { CardStatusPositions, CardStatusSizes } from './card.types'
+	import type { CardStatusPositions, CardStatusSizes } from './Card.types'
 
 	/**
 	 * You can use color property to change status's border color

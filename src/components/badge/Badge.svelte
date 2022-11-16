@@ -5,7 +5,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	import type { BadgeShapes } from './badge.types'
+	import type { BadgeShapes } from './Badge.types'
 
 	/**
 	 * Set color of Badge

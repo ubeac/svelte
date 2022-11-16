@@ -7,7 +7,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	import type { IconPacks, IconSizes } from './icon.types'
+	import type { IconPacks, IconSizes } from './Icon.types'
 
 	/**
 	 * Set color of the Icon

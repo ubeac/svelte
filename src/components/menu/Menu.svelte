@@ -5,7 +5,7 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
-	import type { MenuPlacements } from './menu.types'
+	import type { MenuPlacements } from './Menu.types'
 
 	/**
 	 * Offset between Menu and target element

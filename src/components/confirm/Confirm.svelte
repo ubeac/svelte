@@ -4,7 +4,7 @@
 	import { Button, Dialog, DialogBody, DialogContent } from '$lib/components'
 	import { classname } from '$lib/utils'
 
-	import type { ConfirmTypes } from './confirm.types'
+	import type { ConfirmTypes } from './Confirm.types'
 
 	/**
 	 * Set Description of component

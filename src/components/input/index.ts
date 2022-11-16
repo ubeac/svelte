@@ -1,6 +1,6 @@
 import Input from './Input.svelte'
 
-export * from './input.types'
+export * from './Input.types'
 export { Input }
 
 export default Input

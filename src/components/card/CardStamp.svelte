@@ -6,7 +6,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	import type { CardStampPositions, CardStampSizes } from './card.types'
+	import type { CardStampPositions, CardStampSizes } from './Card.types'
 
 	/**
 	 * if you want to change color of Stamp, use the color property

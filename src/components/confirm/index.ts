@@ -1,2 +1,2 @@
 export { default as Confirm } from './Confirm.svelte'
-export * from './confirm.types'
+export * from './Confirm.types'

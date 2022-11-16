@@ -6,7 +6,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 
-	import type { PopupPlacements, PopupTriggers } from './popup.types'
+	import type { PopupPlacements, PopupTriggers } from './Popup.types'
 
 	/**
 	 * Disable Popup's functionality

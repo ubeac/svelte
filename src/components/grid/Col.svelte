@@ -4,7 +4,7 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
-	import type { GridAlignContent, GridAlignItems, GridJustify } from './grid.types'
+	import type { GridAlignContent, GridAlignItems, GridJustify } from './Grid.types'
 
 	/**
 	 * Forward all native Events

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { El } from '$lib/components'
 
-	import type { ButtonProps } from './button.types'
+	import type { ButtonProps } from './Button.types'
 
 	interface $$Props extends ButtonProps {
 		[x: string]: any

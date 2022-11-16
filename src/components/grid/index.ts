@@ -1,10 +1,3 @@
-import Col from './Col.svelte'
-import Container from './Container.svelte'
-import Row from './Row.svelte'
-
-export { Container, Row, Col }
-export default {
-	Container,
-	Row,
-	Col,
-}
+export { default as Col } from './Col.svelte'
+export { default as Container } from './Container.svelte'
+export { default as Row } from './Row.svelte'

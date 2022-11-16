@@ -4,7 +4,7 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
-	import type { InputSizes } from './input.types'
+	import type { InputSizes } from './Input.types'
 
 	/**
 	 * Forward all native Events

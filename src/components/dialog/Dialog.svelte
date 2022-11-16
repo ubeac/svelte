@@ -4,7 +4,7 @@
 	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
 	import { classname } from '@ubeac/svelte/utils'
 
-	import type { DialogPlacements, DialogSizes } from './dialog.types'
+	import type { DialogPlacements, DialogSizes } from './Dialog.types'
   import { browser } from '$app/environment'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())

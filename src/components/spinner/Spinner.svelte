@@ -5,7 +5,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	import type { SpinnerSizes, SpinnerStyles } from './spinner.types'
+	import type { SpinnerSizes, SpinnerStyles } from './Spinner.types'
 
 	/**
 	 * The color of spinner

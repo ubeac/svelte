@@ -4,7 +4,7 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
-	import type { CardMediaPlacements } from './card.types'
+	import type { CardMediaPlacements } from './Card.types'
 
 	/**
 	 * You can change border radius of Media using placement property

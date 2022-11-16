@@ -5,7 +5,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	import type { AvatarShapes, AvatarSizes } from './avatar.types'
+	import type { AvatarShapes, AvatarSizes } from './Avatar.types'
 
 	/**
 	 * Set color for Avatar
