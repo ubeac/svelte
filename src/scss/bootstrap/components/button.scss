@@ -1,0 +1,81 @@
+//
+// Button
+//
+$prefix-button: $prefix + 'button';
+
+.#{$prefix-button} {
+    @extend .btn;
+    @extend .gap-2;
+    @extend .d-inline-flex;
+    @extend .align-items-center;
+
+    @each $key,
+    $value in $theme-colors {
+        &-color-#{$key} {
+            @extend .btn-#{$key};
+
+            // &.#{$prefix-button}-ghost {
+            // 	@extend .btn-ghost-#{$key};
+            // }
+        }
+
+        &-color-#{$key}.#{$prefix-button}-outline {
+            @extend .btn-outline-#{$key};
+            --#{$prefix}btn-bg: transparent;
+        }
+
+        // &-color-#{$key}.#{$prefix-button}-ghost {
+        // 	@extend .btn-ghost-#{$key};
+        // 	--#{$prefix}btn-bg: transparent;
+        // }
+    }
+
+    &-block {
+        width: 100%;
+    }
+
+    &-active {
+        @extend .active;
+    }
+
+    &-disabled {
+        @extend .disabled;
+    }
+
+    // &-loading {
+    // 	@extend .btn-loading;
+    // }
+
+    &-shape {
+        // &-round {
+        // 	@extend .btn-pill;
+        // }
+
+        // &-tile {
+        // 	@extend .btn-square;
+        // }
+    }
+
+    &-size {
+        &-sm {
+            @extend .btn-sm;
+        }
+
+        &-lg {
+            @extend .btn-lg;
+            @extend .gap-3;
+        }
+    }
+
+    // &-icon {
+    // 	@extend .btn-icon;
+    // }
+
+    &>.#{$prefix}icon {
+        margin: -4px !important;
+    }
+
+    &>.#{$prefix}avatar {
+        margin: -4px !important;
+    }
+}

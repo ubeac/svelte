@@ -1,0 +1,34 @@
+@use 'sass:color';
+$prefix-alert: $prefix + 'alert';
+
+$mapping: (
+    title: "alert-heading",
+    dismissible: 'alert-dismissible',
+    // close: 'alert-close',
+    color: (
+        values: $theme-colors,
+        prefix: 'alert'
+    ),
+    // filled: 'alert-important',
+    filled-title: 'text-light',
+    filled-close: 'btn-close-white',
+
+
+);
+
+.#{$prefix-alert} {
+	@extend .alert;
+    @include apply-mappings($mapping);
+
+	&-icon {
+		padding-left: 3rem;
+
+		& & {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			padding: 1rem;
+		}
+    }
+}

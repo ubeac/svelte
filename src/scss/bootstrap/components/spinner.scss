@@ -1,0 +1,17 @@
+$prefix-spinner: $prefix + 'spinner';
+
+$mapping: (
+    style: (
+        values: ("border", "grow"),
+        prefix: "spinner"
+    ),
+    color: (
+        values: $theme-colors,
+        prefix: 'text'
+    ),
+    size-sm: 'spinner-border-sm'
+);
+
+.#{$prefix-spinner} {
+    @include apply-mappings($mapping);
+}
