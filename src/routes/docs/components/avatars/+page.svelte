@@ -1,11 +1,13 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Avatar, Preview } from '$lib/components'
 	import AvatarColors from './AvatarColors.svelte'
 	import AvatarDefault from './AvatarDefault.svelte'
 	import AvatarImage from './AvatarImage.svelte'
 	import AvatarShapes from './AvatarShapes.svelte'
 	import AvatarSize from './AvatarSize.svelte'
 </script>
+
+<Avatar data-bs-dismiss="true" size="md" shape="circle" color="indigo" bgColor="primary">test</Avatar>
 
 <h1>Avatars</h1>
 <p>

@@ -104,7 +104,13 @@ export type ElInternal<
 	props: ElProps<T>
 }
 
-export interface SharedProps extends Partial<ElProps<HTMLTags>> {
-	class?: string
-	[key: string]: any // used when we pass props to DOM Elements using ...$$restProps
-}
+type Props = Record<string, any>
+
+type Merge<K, L> = Omit<K, keyof L> & L
+
+export type SharedProps<T extends Props = {}> = Partial<
+	Merge<ElProps<HTMLTags>, T> & {
+		class?: string
+		[key: string]: any
+	}
+>

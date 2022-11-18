@@ -2,47 +2,38 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
 
-	import type { AvatarShapes, AvatarSizes } from './avatar.types'
+	import { El } from '../base'
+	import type { SharedProps } from '../base/El.type'
+	import type { AvatarProps } from './avatar.types'
 
-	/**
-	 * Set color for Avatar
-	 */
-	export let color: Colors = 'default'
+	type $$Props = AvatarProps & {
+		[k: string]: any
+	}
 
-	/**
-	 * Set image for Avatar
-	 */
-	export let image: string | undefined = undefined
+	export let color: $$Props['color'] = 'default'
 
-	/**
-	 * Set shape for Avatar: 'circle', 'round', 'tile'
-	 */
-	export let shape: AvatarShapes = 'round'
+	export let image: $$Props['image'] = undefined
+	export let shape: $$Props['shape'] = 'round'
 
-	/**
-	 * Set size for Avatar: 'xs', 'sm', 'ep', 'md', 'lg', 'xl'
-	 */
-	export let size: AvatarSizes = 'ep'
+	export let size: $$Props['size'] = 'ep'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: style = image ? `background-image: url(${image})` : null
-
-	$: classes = classname(
-		'avatar',
-		{
-			[color!]: !!color,
+	let props: SharedProps
+	$: props = {
+		...$$restProps,
+		tag: 'span',
+		cssPrefix: 'avatar',
+		cssProps: {
+			color,
 			shape,
 			size,
 		},
-		$$props.class,
-		true
-	)
+		style: image ? `background-image:url(${image})` : null,
+	}
 </script>
 
-<span use:forwardEvents {...$$restProps} class={classes} {style}>
+<El {forwardEvents} {...props}>
 	<slot />
-</span>
+</El>
