@@ -1,8 +1,0 @@
-export { default as App } from './App.svelte'
-export { default as AppHeader } from './AppHeader.svelte'
-export { default as AppFooter } from './AppFooter.svelte'
-export { default as Page } from './Page.svelte'
-export { default as PageBody } from './PageBody.svelte'
-export { default as PageFooter } from './PageFooter.svelte'
-export { default as PageHeader } from './PageHeader.svelte'
-export { default as Sidebar } from './Sidebar.svelte'
