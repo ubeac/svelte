@@ -8,5 +8,7 @@ package
 .env.*
 !.env.example
 src/styles.css
+src/tabler.css
+src/bootstrap.css
 package
 yarn-error.log
