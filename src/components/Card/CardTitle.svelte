@@ -4,20 +4,9 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
-	/**
-	 * Moves items closer to each other
-	 */
-	export let stacked: boolean = false
-
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname(
-		'avatar-group',
-		{
-			stacked,
-		},
-		$$props.class
-	)
+	$: classes = classname('card-title', undefined, $$props.class, true)
 </script>
 
 <div use:forwardEvents {...$$restProps} class={classes}>
