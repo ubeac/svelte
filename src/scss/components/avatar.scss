@@ -28,7 +28,7 @@
 	}
 
 	@each $key, $value in $theme-colors {
-		&-#{ $key + ''} {
+		&-color-#{$key} {
 			@extend .bg-#{$key + ''}-lt;
 		}
 	}
