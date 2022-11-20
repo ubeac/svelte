@@ -2,63 +2,67 @@
 	import { createEventDispatcher } from 'svelte'
 
 	import { Icon } from '$lib/components'
-	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	import type { AlertVariants } from './alert.types'
+	import { El } from '../base'
+	import type { SharedProps } from '../base/El.type'
+	import type { AlertProps } from './alert.types'
+
+	type $$Props = AlertProps
 
 	/**
 	 * Show close button at the end of alert
 	 */
-	export let dismissible: boolean = false
+	export let dismissible: $$Props['boolean'] = false
 
 	/**
 	 * Set an Icon at the start side of alert
 	 */
-	export let icon: string | undefined = undefined
+	export let icon: $$Props['icon'] = undefined
 
 	/**
 	 * Set Alert's title
 	 */
-	export let title: string | undefined = ''
+	export let title: $$Props['title'] = ''
 
 	/**
 	 * Set Alert's color
 	 */
-	export let color: Colors = 'default'
+	export let color: $$Props['color'] = 'default'
 
 	/**
 	 * Set Alert's variant
 	 */
-	export let variant: AlertVariants = 'outlined'
+	export let variant: $$Props['variant'] = 'outlined'
 
 	/**
 	 * Set Alert's variant
 	 */
-	export let value: boolean = true
+	export let value: $$Props['value'] = true
 
 	const dispatch = createEventDispatcher()
-
-	$: classes = classname(
-		'alert',
-		{
-			color,
-			icon: Boolean(icon),
-			dismissible,
-			variant,
-		},
-		['fade', 'show', $$props.class],
-		true
-	)
 
 	function close() {
 		value = false
 		dispatch('close')
 	}
+
+	let props: SharedProps
+	$: props = {
+		tag: 'div',
+		cssPrefix: 'alert',
+		cssProps: {
+			color,
+			icon: Boolean(icon),
+			dismissible,
+			variant,
+		},
+		class: ['fade', 'show', $$props.class].join(' '),
+	}
 </script>
 
 {#if value}
-	<div {...$$restProps} class={classes}>
+	<El {...props}>
 		<div class={classname('alert-icon')}>
 			<slot name="icon">
 				<Icon name={icon} />
@@ -73,5 +77,5 @@
 				<slot name="close" />
 			</div>
 		{/if}
-	</div>
+	</El>
 {/if}
