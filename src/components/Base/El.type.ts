@@ -66,7 +66,7 @@ export interface CssProps {
 	vAlign: VerticalAligns
 
 	// text
-	color: TextColors
+	textColor: TextColors
 	textAlign: TextAligns
 	textAlignSm: TextAligns
 	textAlignMd: TextAligns
@@ -135,9 +135,9 @@ export interface CssProps {
 	gy: RowGutterSizes
 }
 
-export interface ElProps<T extends keyof HTMLElementTagNameMap = 'div'> extends Partial<CssProps> {
+export interface ElProps extends CssProps {
 	class?: string
-	tag: T
+	tag: keyof HTMLElementTagNameMap
 	element: any // TODO: this should be something like SvelteComponent or C
 	cssPrefix?: string
 	cssProps?: any

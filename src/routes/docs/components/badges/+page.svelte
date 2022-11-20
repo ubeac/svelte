@@ -11,6 +11,7 @@
 	import BadgeNumbers from './BadgeNumbers.svelte'
 	import BadgeOutlines from './BadgeOutlines.svelte'
 	import BadgeShapes from './BadgeShapes.svelte'
+	import BadgeBlink from './BadgeBlink.svelte'
 </script>
 
 <h1>Badges</h1>
@@ -88,4 +89,10 @@
 <p>Badges can be used as part of links or buttons to provide a counter.</p>
 <Preview src="./BadgeButtons.svelte">
 	<BadgeButtons />
+</Preview>
+
+<h2>Badge with blinking effect</h2>
+<p />
+<Preview src="./BadgeBlink.svelte">
+	<BadgeBlink />
 </Preview>

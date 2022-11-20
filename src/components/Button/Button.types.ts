@@ -1,8 +1,7 @@
-import type { SharedProps } from '../Base/El.type'
+import type { ElProps } from '../Base/El.type'
 
-export interface ButtonProps extends SharedProps {
+export interface ButtonProps extends Partial<ElProps> {
 	color?: Colors
-	tag?: ButtonTags
 	outline?: BooleanValues
 	link?: BooleanValues
 	type?: ButtonTypes
