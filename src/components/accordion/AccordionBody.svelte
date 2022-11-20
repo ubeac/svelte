@@ -3,8 +3,8 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 
-	import { El } from '../base'
-	import type { SharedProps } from '../base/El.type'
+	import { El } from '../Base'
+	import type { SharedProps } from '../Base/El.type'
 	import type { AccordionBodyProps, AccordionContext } from './Accordion.types'
 
 	type $$Props = AccordionBodyProps

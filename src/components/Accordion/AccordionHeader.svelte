@@ -3,8 +3,8 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 
-	import { El } from '../base'
-	import type { SharedProps } from '../base/El.type'
+	import { El } from '../Base'
+	import type { SharedProps } from '../Base/El.type'
 
 	const context = getContext<any>('ACCORDION')
 	const acccordions = getContext<any>('ACCORDIONS')

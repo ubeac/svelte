@@ -1,4 +1,4 @@
-import type { SharedProps } from '../base/El.type'
+import type { SharedProps } from '../Base/El.type'
 
 export interface ButtonProps extends SharedProps {
 	color?: Colors

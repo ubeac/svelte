@@ -8,8 +8,8 @@
 
 	import { classname } from '$lib/utils'
 
-	import { Card, CardBody } from '../card'
-	import { Icon } from '../icon'
+	import { Card, CardBody } from '../Card'
+	import { Icon } from '../Icon'
 	import { Tabs, TabsItem, TabsItems, TabsPanel, TabsPanels } from '../Tabs'
 	import PreviewCopyButton from './PreviewCopyButton.svelte'
 

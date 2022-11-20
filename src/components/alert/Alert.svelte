@@ -4,8 +4,8 @@
 	import { Icon } from '$lib/components'
 	import { classname } from '$lib/utils'
 
-	import { El } from '../base'
-	import type { SharedProps } from '../base/El.type'
+	import { El } from '../Base'
+	import type { SharedProps } from '../Base/El.type'
 	import type { AlertProps } from './alert.types'
 
 	type $$Props = AlertProps

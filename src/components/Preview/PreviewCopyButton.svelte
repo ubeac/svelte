@@ -4,8 +4,8 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
-	import { Button } from '../button'
-	import { Icon } from '../icon'
+	import { Button } from '../Button'
+	import { Icon } from '../Icon'
 
 	/**
 	 * Value to copy if button clicked

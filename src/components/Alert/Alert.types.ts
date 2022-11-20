@@ -1,6 +1,6 @@
 import type { Colors } from '$lib/types'
 
-import type { SharedProps } from '../base/El.type'
+import type { SharedProps } from '../Base/El.type'
 
 export const ALERT_VARIANTS = ['outlined', 'filled', 'ghost'] as const
 export type AlertVariants = typeof ALERT_VARIANTS[number]
