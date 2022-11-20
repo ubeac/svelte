@@ -44,7 +44,8 @@ const config = {
 			const items = [
 				'index.d.ts',
 				'index.ts',
-				'styles.css',
+				'bootstrap.css',
+				'tabler.css',
 				'components',
 				'preprocessors',
 				'directives',
