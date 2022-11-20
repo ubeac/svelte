@@ -2,19 +2,28 @@ import fs from 'fs'
 import path from 'path'
 import sass from 'sass'
 
-const { css } = sass.compile('./src/scss/index.scss', {
-	/** @type {import ('sass').FileImporter<'sync'>[]} */
-	importers: [
-		{
-			findFileUrl(url, options) {
-				if (url.startsWith('@') || url.startsWith('~')) {
-					url = path.resolve('node_modules', url.substr(1))
-				}
-				return new URL('file://' + url)
-			},
-		},
-	],
-	loadPaths: ['node_modules'],
-})
+// TODO: Optimize (only compile one)
+const files = ['tabler', 'bootstrap']
 
-fs.writeFileSync('./src/styles.css', css)
+function compile(file) {
+	const { css } = sass.compile(`./src/scss/${file}/index.scss`, {
+		/** @type {import ('sass').FileImporter<'sync'>[]} */
+		importers: [
+			{
+				findFileUrl(url) {
+					if (url.startsWith('@') || url.startsWith('~')) {
+						url = path.resolve('node_modules', url.substr(1))
+					}
+					return new URL('file://' + url)
+				},
+			},
+		],
+		loadPaths: ['node_modules'],
+	})
+	return css
+}
+
+for (const file of files) {
+	const css = compile(file)
+	fs.writeFileSync(`./src/${file}.css`, css)
+}

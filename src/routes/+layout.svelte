@@ -1,5 +1,6 @@
 <slot />
 
 <style lang="scss" global>
-	@import '../styles.css';
+	@import '../tabler.css';
+	// @import '../bootstrap.css';
 </style>
