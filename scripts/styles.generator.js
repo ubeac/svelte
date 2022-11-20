@@ -25,5 +25,5 @@ function compile(file) {
 
 for (const file of files) {
 	const css = compile(file)
-	fs.writeFileSync(`./src/${file}.css`, css)
+	fs.writeFileSync(`./static/css/${file}.css`, css)
 }
