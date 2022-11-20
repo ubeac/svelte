@@ -1,6 +1,7 @@
 <script lang="ts">
-	import type { Action } from '@sveltejs/kit'
+	import { get_current_component } from 'svelte/internal'
 
+	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
 	import { DefaultCssPrefix, DefaultCssProps, DefualtTagName } from './El.props'
@@ -100,7 +101,7 @@
 	export let fontStyle: FontStyles = undefined
 
 	// forward events
-	export let forwardEvents: (node: HTMLElement) => any = () => ({})
+	export let forwardEvents: (node: HTMLElement) => any = forwardEventsBuilder(get_current_component())
 
 	let classes: string | undefined
 	let defaultCssProps: CssProps
@@ -190,6 +191,6 @@
 	}
 </script>
 
-<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes}>
+<svelte:element this={tag} use:forwardEvents on:click bind:this={element} {...$$restProps} class={classes}>
 	<slot />
 </svelte:element>
