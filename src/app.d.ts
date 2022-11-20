@@ -62,6 +62,7 @@ declare type TextColors = Colors
 declare type BackgroundColors = ThemeColors | NamedColors | 'body'
 
 declare type Opacities = '10' | '25' | '50' | '75' | undefined
+declare type TextOpacities = '25' | '50' | '75' | undefined
 
 // Display
 declare type DisplayRatioTypes = '1x1' | '4x3' | '16x9' | '21x9' | undefined
@@ -107,6 +108,8 @@ declare type MarginPositions = 'top' | 'end' | 'bottom' | 'start' | 'x' | 'y' | 
 // Font
 declare type FontSizes = '1' | '2' | '3' | '4' | '5' | '6' | undefined
 declare type FontStyles = 'italic' | 'normal' | undefined
+declare type HeadingDisplaySizes = '1' | '2' | '3' | '4' | '5' | '6' | undefined
+
 declare type FontWeights = 'light' | 'lighter' | 'normal' | 'bold' | 'semibold' | 'bolder' | undefined
 
 // Text
@@ -116,9 +119,40 @@ declare type TextLineHeights = '1' | 'sm' | 'base' | 'lg' | undefined
 declare type TextDecorations = 'none' | 'underline' | 'line-through' | undefined
 declare type TextTransforms = 'lowercase' | 'uppercase' | 'capitalize' | undefined
 declare type TextHeadings = '1' | '2' | '3' | '4' | '5' | '6' | undefined
+declare type OverflowTypes = 'auto' | 'hidden' | 'visible' | 'scroll' | undefined
+declare type TranslateMiddleTypes = 'x' | 'y' | 'xy' | undefined
+declare type FloatPositions =
+	| 'start'
+	| 'end'
+	| 'none'
+	| 'sm-start'
+	| 'sm-end'
+	| 'sm-none'
+	| 'md-start'
+	| 'md-end'
+	| 'md-none'
+	| 'lg-start'
+	| 'lg-end'
+	| 'lg-none'
+	| 'xl-start'
+	| 'xl-end'
+	| 'xl-none'
+	| 'xxl-start'
+	| 'xxl-end'
+	| 'xxl-none'
+	| undefined
 
 // Vertical align
 declare type VerticalAligns = 'baseline' | 'top' | 'middle' | 'bottom' | 'text-bottom' | 'text-top' | undefined
+
+// Col Sizes and settings
+type ColSizes = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | 'auto' | undefined
+
+type ColOrders = '1' | '2' | '3' | '4' | '5' | 'first' | 'last' | undefined
+
+// Row sizes and settings
+type RowColSizes = '1' | '2' | '3' | '4' | '5' | undefined
+type RowGutterSizes = '0' | '1' | '2' | '3' | '4' | '5' | undefined
 
 declare type HTMLTags =
 	| 'a'

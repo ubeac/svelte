@@ -1,22 +1,21 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
-
-	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
-	import { DefaultCssPrefix, DefaultCssProps, DefualtTagName } from './El.props'
 	import type { CssProps } from './El.type'
 
 	// default properties
 	export let element: any = undefined
-	export let cssPrefix: string | undefined = undefined
-	export let tag: keyof HTMLElementTagNameMap | undefined = DefualtTagName
-	export let cssProps: any = undefined
+	export let cssPrefix: string | undefined = 'el'
+	export let tag: keyof HTMLElementTagNameMap | undefined = 'div'
+	export let cssProps: Partial<CssProps> = {}
 
 	// background properties
 	export let bgColor: BackgroundColors = undefined
 	export let bgGradient: BooleanValues = undefined
 	export let bgOpacity: Opacities = undefined
+
+	//text
+	export let textOpacity: TextOpacities = undefined
 
 	// border properties
 	export let border: BorderSizes = undefined
@@ -99,16 +98,61 @@
 	export let fontSize: FontSizes = undefined
 	export let fontWeight: FontWeights = undefined
 	export let fontStyle: FontStyles = undefined
+	export let hidden: BooleanValues = undefined
 
 	// forward events
-	export let forwardEvents: (node: HTMLElement) => any = forwardEventsBuilder(get_current_component())
+	export let forwardEvents: (node: HTMLElement) => any = () => ({})
+	export let float: FloatPositions = undefined
+
+	// max widths
+	export let col: ColSizes = undefined
+	export let colSm: ColSizes = undefined
+	export let colMd: ColSizes = undefined
+	export let colLg: ColSizes = undefined
+	export let colXl: ColSizes = undefined
+	export let colXxl: ColSizes = undefined
+
+	// order
+	export let order: ColOrders = undefined
+	export let orderSm: ColOrders = undefined
+	export let orderMd: ColOrders = undefined
+	export let orderLg: ColOrders = undefined
+	export let orderXl: ColOrders = undefined
+	export let orderXxl: ColOrders = undefined
+
+	// offset
+	export let offset: ColSizes = undefined
+	export let offsetSm: ColSizes = undefined
+	export let offsetMd: ColSizes = undefined
+	export let offsetLg: ColSizes = undefined
+	export let offsetXl: ColSizes = undefined
+	export let offsetXxl: ColSizes = undefined
+
+	// Row
+	export let row: BooleanValues = undefined
+	export let rowCol: RowColSizes = undefined
+	export let rowColSm: RowColSizes = undefined
+	export let rowColMd: RowColSizes = undefined
+	export let rowColLg: RowColSizes = undefined
+	export let rowColXl: RowColSizes = undefined
+	export let rowColXxl: RowColSizes = undefined
+
+	// Row gutters
+	export let g: RowGutterSizes = undefined
+	export let gSm: RowGutterSizes = undefined
+	export let gMd: RowGutterSizes = undefined
+	export let gLg: RowGutterSizes = undefined
+	export let gXl: RowGutterSizes = undefined
+	export let gXxl: RowGutterSizes = undefined
+	export let gx: RowGutterSizes = undefined
+	export let gy: RowGutterSizes = undefined
 
 	let classes: string | undefined
 	let defaultCssProps: CssProps
+	let defaultCssPrefix: string = 'el'
 
 	$: {
 		defaultCssProps = {
-			...DefaultCssProps,
 			// background properties
 			bgColor,
 			bgGradient,
@@ -181,16 +225,57 @@
 			textLead,
 			textHeading,
 			textTruncate,
+			textOpacity,
 			// fonts
 			fontSize,
 			fontWeight,
 			fontStyle,
+			hidden,
+			float,
+			// col layout
+			col,
+			colSm,
+			colMd,
+			colLg,
+			colXl,
+			colXxl,
+			// Col Order
+			order,
+			orderSm,
+			orderMd,
+			orderLg,
+			orderXl,
+			orderXxl,
+			// Col Offset
+			offset,
+			offsetSm,
+			offsetMd,
+			offsetLg,
+			offsetXl,
+			offsetXxl,
+			//Row
+			row,
+			rowCol,
+			rowColSm,
+			rowColMd,
+			rowColLg,
+			rowColXl,
+			rowColXxl,
+			// gutter
+			g,
+			gSm,
+			gMd,
+			gLg,
+			gXl,
+			gXxl,
+			gx,
+			gy,
 		}
-		classes = classname(DefaultCssPrefix, defaultCssProps, '', true)
+		classes = classname(defaultCssPrefix, defaultCssProps, '', true)
 		if (cssPrefix) classes += ' ' + classname(cssPrefix, cssProps, $$props.class, true)
 	}
 </script>
 
-<svelte:element this={tag} use:forwardEvents on:click bind:this={element} {...$$restProps} class={classes}>
+<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes}>
 	<slot />
 </svelte:element>
