@@ -22,12 +22,12 @@
 	/**
 	 * Show badge as small dot. If true, default slot will be ignored.
 	 */
-	export let dot: $$Props['dot'] = false
+	export let dot: $$Props['dot'] = undefined
 
 	/**
 	 * reduce background color's opacity
 	 */
-	export let ghost: $$Props['ghost'] = false
+	export let ghost: $$Props['ghost'] = undefined
 
 	/**
 	 * Set a redirect url for badge
@@ -37,31 +37,38 @@
 	/**
 	 * Draws outlined badge
 	 */
-	export let outline: $$Props['outline'] = false
+	export let outline: $$Props['outline'] = undefined
 
 	/**
-	 * You can change shape of badge using round property
+	 * You can change shape of badge to pill
 	 */
-	export let shape: $$Props['shape'] = 'default'
+	export let pill: $$Props['pill'] = undefined
+
+	/**
+	 * You can change shape of badge to square
+	 */
+	export let tile: $$Props['tile'] = undefined
 
 	/**
 	 * Blinking badge
 	 */
-	export let blink: $$Props['blink'] = false
+	export let blink: $$Props['blink'] = undefined
 
 	/**
 	 * Badge position as notification
 	 */
-	export let notification: $$Props['notification'] = false
+	export let notification: $$Props['notification'] = undefined
 
 	$: cssProps = {
 		notification,
-		shape,
+		tile,
+		pill,
 		outline,
 		ghost,
 		dot,
 		color,
 		blink,
+		href,
 	}
 	$: otherProps = { href, tag, cssPrefix }
 </script>

@@ -10,16 +10,7 @@ declare namespace App {
 	// interface Platform {}
 }
 
-// Button Types
-declare type ButtonTypes = 'submit' | 'button' | 'reset' | undefined
-declare type ButtonTags = 'button' | 'a' | 'input' | undefined
 declare type BooleanValues = boolean | undefined
-declare type ButtonSizes = 'small' | 'large' | undefined
-declare type ButtonStates = 'normal' | 'loading' | 'active' | 'disable' | undefined
-declare type ButtonValues = string | undefined
-
-// Badge Types
-declare type BadgeShapes = 'circle' | 'pill' | undefined
 
 // Spinner
 declare type SpinnerSizes = 'small' | 'large' | undefined

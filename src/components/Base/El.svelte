@@ -10,7 +10,7 @@
 	export let element: any = undefined
 	export let cssPrefix: string | undefined = 'el'
 	export let tag: keyof HTMLElementTagNameMap | undefined = 'div'
-	export let cssProps: Partial<CssProps> = {}
+	export let cssProps: any = {}
 
 	// background properties
 	export let bgColor: BackgroundColors = undefined
