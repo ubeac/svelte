@@ -1,60 +1,73 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '../Base'
+	import type { BadgeProps } from './Badge.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	type $$Props = BadgeProps
 
-	import type { BadgeShapes } from './Badge.types'
+	/**
+	 * Set Css Prefix for the Badge
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'badge'
+
+	/**
+	 * Set Html tag for the Badge
+	 */
+	export let tag: $$Props['tag'] = 'span'
 
 	/**
 	 * Set color of Badge
 	 */
-	export let color: Colors = 'default'
+	export let color: $$Props['color'] = undefined
 
 	/**
 	 * Show badge as small dot. If true, default slot will be ignored.
 	 */
-	export let dot: boolean = false
+	export let dot: $$Props['dot'] = false
 
 	/**
 	 * reduce background color's opacity
 	 */
-	export let ghost: boolean = false
+	export let ghost: $$Props['ghost'] = false
 
 	/**
 	 * Set a redirect url for badge
 	 */
-	export let href: string | undefined = undefined
+	export let href: $$Props['href'] = undefined
 
 	/**
 	 * Draws outlined badge
 	 */
-	export let outline: boolean = false
+	export let outline: $$Props['outline'] = false
 
 	/**
 	 * You can change shape of badge using round property
 	 */
-	export let shape: BadgeShapes = 'default'
+	export let shape: $$Props['shape'] = 'default'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * Blinking badge
+	 */
+	export let blink: $$Props['blink'] = false
 
-	$: classes = classname(
-		'badge',
-		{
-			[color!]: !!color,
-			dot,
-			ghost,
-			outline,
-			shape,
-		},
-		$$props.class,
-		true
-	)
+	/**
+	 * Badge position as notification
+	 */
+	export let notification: $$Props['notification'] = false
+
+	$: cssProps = {
+		notification,
+		shape,
+		outline,
+		ghost,
+		dot,
+		color,
+		blink,
+	}
+	$: otherProps = { href, tag, cssPrefix }
 </script>
 
-<svelte:element this={href ? 'a' : 'span'} {href} use:forwardEvents {...$$restProps} class={classes}>
+<El this={href ? 'a' : 'span'} {...$$restProps} {cssProps} {...otherProps}>
 	{#if !dot}
 		<slot />
 	{/if}
-</svelte:element>
+</El>

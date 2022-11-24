@@ -16,7 +16,8 @@ $prefix-alert: $prefix + 'alert';
 		@extend .btn-close;
 	}
 
-	@each $key, $value in $theme-colors {
+	@each $key,
+	$value in $theme-colors {
 		&-color-#{$key} {
 			@extend .alert-#{$key};
 		}

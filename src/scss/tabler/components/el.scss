@@ -1,26 +1,99 @@
-//
-// Box
-//
-$prefix-box: $prefix + 'el';
+$prefix-el: $prefix + 'el';
 
 $opacities: (
-    '10',
+    10: .1,
+    25: .25,
+    50: .5,
+    75: .75,
+    100: 1) !default;
+$text-opacities: (
+    25: .25,
+    50: .5,
+    75: .75,
+    100: 1) !default;
+$border-sizes: (
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5') !default;
+$border-round-sizes: (
+    '0',
+    '1',
+    '2',
+    '3') !default;
+$border-positions: (
+    'top',
+    'start',
+    'end',
+    'bottom') !default;
+$border-radius-positions: (
+    'top',
+    'start',
+    'end',
+    'bottom',
+    'circle',
+    'pill') !default;
+$padding-sizes: (
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5') !default;
+$top-position: (
+    '0',
+    '50',
+    '100') !default;
+$bottom-position: (
+    '0',
+    '50',
+    '100') !default;
+$start-position: (
+    '0',
+    '50',
+    '100') !default;
+$end-position: (
+    '0',
+    '50',
+    '100') !default;
+$padding-positions: (
+    't': 't',
+    's': 's',
+    'e': 'e',
+    'b': 'b',
+    'x': 'x',
+    'y': 'y'
+    ) !default;
+$margin-sizes: (
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5') !default;
+$margin-positions: (
+    't': 't',
+    's': 's',
+    'e': 'e',
+    'b': 'b',
+    'x': 'x',
+    'y': 'y'
+    ) !default;
+$shadow-sizes: (
+    'none',
+    'sm',
+    'lg') !default;
+
+$width-height-sizes: (
     '25',
     '50',
-    '75'
-);
+    '75',
+    '100',
+    'auto') !default;
 
-$box-display-sizes: (
-    'print':'d-print',
-    'display':'d',
-    'display-sm':'d-sm',
-    'display-md':'d-md',
-    'display-lg':'d-lg',
-    'display-xl':'d-xl',
-    'display-xxl':'d-xxl'
-);
-
-$box-display-types: (
+$displays: (
     'none',
     'inline',
     'inline-block',
@@ -31,255 +104,300 @@ $box-display-types: (
     'flex',
     'inline-flex',
     'table'
-);
+    ) !default;
 
-$box-ratio: (
-    '1x1',
-    '4x3',
-    '16x9',
-    '21x9'
-);
-
-$box-sticky: (
-    'top',
-    'sm-top',
-    'md-top',
-    'lg-top',
-    'xl-top'
-);
-
-$box-fixed: (
-    'top',
-    'bottom'
-);
-
-$box-shadows: (
-    'none',
+$displays-sizes: (
     'sm',
-    'lg'
-);
+    'md',
+    'lg',
+    'xl',
+    'xxl') !default;
 
-$box-width-sizes: (
-    '25':'w-25',
-    '50':'w-50',
-    '75':'w-75',
-    '100':'w-100',
-    '100vp': 'vw-100',
-    'auto':'w-auto'
-);
-
-$box-height-sizes: (
-    '25':'h-25',
-    '50':'h-50',
-    '75':'h-75',
-    '100':'h-100',
-    '100vp': 'vh-100',
-    'auto':'h-auto'
-);
-
-$box-positions: (
-    'static',
-    'relative',
-    'absolute',
-    'fixed',
-    'sticky'
-);
-
-$box-position-values: (
-    '0',
-    '50',
-    '100'
-);
-
-$box-border-values: (
-    '0',
+$col-sizes: (
     '1',
     '2',
     '3',
     '4',
-    '5'
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12',
+    'auto'
+);
+$breakpoints: (
+    'sm',
+    'md',
+    'lg',
+    'xl',
+    'xxl'
 );
 
-$box-border-keys: (
-    'top',
-    'bottom',
+$props: (
+    'bg-gradient': '.bg-gradient',
+    'border': '.border',
+    'max-width-100': '.mw-100',
+    'max-height-100': '.mh-100',
+    'row': '.row',
+    'show': '.show',
+    'lead': '.lead',
+    'blockquote': '.blockquote'
+);
+
+$positions: (
+    'static',
+    'relative',
+    'absolute',
+    'fixed',
+    'sticky') !default;
+
+$overflow-types: (
+    'auto',
+    'hidden',
+    'visible',
+    'scroll') !default;
+
+$translate-middle-types: (
+    'x',
+    'y') !default;
+
+$float-positions: (
     'start',
-    'end'
-);
-
-$border-radiuses: (
-    'top',
     'end',
-    'bottom',
-    'start',
-    'circle',
-    'pill'
-);
+    'none') !default;
 
-
-$border-round-sizes: (
-    '0',
+$heading-display-sizes: (
     '1',
     '2',
-    '3'
-);
+    '3',
+    '4',
+    '5',
+    '6') !default;
 
-.#{$prefix-box} {
-    &-clearfix {
-        @extend .clearfix;
-    }
+.border {
+    border-width: var(--#{$prefix}border-width) !important;
+}
 
-    @each $key,
-    $value in $box-display-sizes {
-        @each $display-type in $box-display-types {
-            &-#{$key}-#{$display-type} {
-                @extend .#{$value}-#{$display-type};
+.#{$prefix-el} {
+    &-col {
+        @extend .col;
+
+        @each $size in $col-sizes {
+            &-#{$size} {
+                @extend .col-#{$size};
+            }
+
+            @each $breakpoint in $breakpoints {
+                &-#{$breakpoint}-#{$size} {
+                    @extend .col-#{$breakpoint}-#{$size};
+                }
             }
         }
     }
 
-    @each $ratio in $box-ratio {
-        &-ratio-#{$ratio} {
-            @extend .ratio;
-            @extend .ratio-#{$ratio};
-        }
-    }
-
-    @each $sticky in $box-sticky {
-        &-sticky-#{$sticky} {
-            @extend .sticky-#{$sticky};
-        }
-    }
-
-    @each $fixed in $box-fixed {
-        &-fixed-#{$fixed} {
-            @extend .fixed-#{$fixed};
-        }
-    }
-
-    @each $shadow in $box-shadows {
-        &-shadow-#{$shadow} {
-            @extend .shadow-#{$shadow};
+    @each $size in $heading-display-sizes {
+        &-heading-display-size-#{$size} {
+            @extend .display-#{$size};
         }
     }
 
     @each $key,
-    $value in $box-width-sizes {
-        &-width-#{$key} {
-            @extend .#{$value};
+    $value in $theme_colors {
+        &-bg-color-#{$key} {
+            @extend .bg-#{$key};
+        }
+
+        &-border-color-#{$key} {
+            @extend .border-#{$key};
         }
     }
 
     @each $key,
-    $value in $box-height-sizes {
-        &-height-#{$key} {
-            @extend .#{$value};
+    $value in $theme_colors {
+        &-color-#{$key} {
+            @extend .text-#{$key};
         }
     }
 
-    @each $position in $box-positions {
+    @each $key,
+    $value in $opacities {
+        &-bg-opacity-#{$key} {
+            --#{$prefix}bg-opacity: #{$value};
+            @extend .bg-opacity-#{$key};
+        }
+
+        &-bg-border-opacity-#{$key} {
+            @extend .border;
+            @extend .border-opacity-#{$key};
+        }
+    }
+
+    @each $key,
+    $value in $text-opacities {
+        &-text-opacity-#{$key} {
+            @extend .text-opacity-#{$key};
+        }
+    }
+
+    @each $display in $displays {
+        @each $size in $displays-sizes {
+            &-display-#{$size}-#{$display} {
+                @extend .d-#{$size}-#{$display};
+            }
+        }
+
+        &-display-#{$display} {
+            @extend .d-#{$display};
+        }
+
+        &-print-#{$display} {
+            @extend .d-print-#{$display};
+        }
+    }
+
+    @each $size in $border-sizes {
+        &-border-#{$size} {
+            --#{$prefix}border-width: #{$size}px;
+            @extend .border;
+            @extend .border-#{$size};
+        }
+    }
+
+    @each $position in $border-positions {
+        &-border-#{$position} {
+            @extend .border-#{$position};
+        }
+
+        @each $size in $border-sizes {
+            &-border-#{$position}-#{$size} {
+                @extend .border-#{$position}-0;
+            }
+        }
+
+        &-border-#{$position}-0 {
+            @extend .border-#{$position}-0;
+        }
+    }
+
+    @each $position in $border-radius-positions {
+        &-border-radius-#{$position} {
+            @extend .rounded-#{$position};
+        }
+    }
+
+    @each $size in $border-round-sizes {
+        &-border-round-size-#{$size} {
+            @extend .rounded-#{$size};
+        }
+    }
+
+    @each $size in $width-height-sizes {
+        &-w-#{$size} {
+            @extend .w-#{$size};
+        }
+
+        &-h-#{$size} {
+            @extend .h-#{$size};
+        }
+    }
+
+    @each $size in $padding-sizes {
+        &-p-#{$size} {
+            @extend .p-#{$size};
+        }
+
+        @each $position,
+        $value in $padding-positions {
+            &-p#{$position}-#{$size} {
+                @extend .p#{$value}-#{$size};
+            }
+        }
+    }
+
+    @each $size in $margin-sizes {
+        &-m-#{$size} {
+            @extend .m-#{$size};
+        }
+
+        @each $position,
+        $value in $margin-positions {
+            &-m#{$position}-#{$size} {
+                @extend .m#{$value}-#{$size};
+            }
+        }
+    }
+
+    @each $size in $shadow-sizes {
+        &-shadow-#{$size} {
+            @extend .shadow-#{$size};
+        }
+    }
+
+    @each $overflow in $overflow-types {
+        &-overflow-#{$overflow} {
+            @extend .overflow-#{$overflow};
+        }
+    }
+
+    @each $position in $top-position {
+        &-top-#{$position} {
+            @extend .top-#{$position};
+        }
+    }
+
+    @each $position in $bottom-position {
+        &-bottom-#{$position} {
+            @extend .bottom-#{$position};
+        }
+    }
+
+    @each $position in $start-position {
+        &-start-#{$position} {
+            @extend .start-#{$position};
+        }
+    }
+
+    @each $position in $end-position {
+        &-end-#{$position} {
+            @extend .end-#{$position};
+        }
+    }
+
+    @each $position in $positions {
         &-position-#{$position} {
             @extend .position-#{$position};
         }
     }
 
-    @each $opacity in $opacities {
-        &-bg-opacity-#{$opacity} {
-            @extend .opacity-#{$opacity};
+    @each $translate in $translate-middle-types {
+        &-translate-middle-xy {
+            @extend .translate-middle;
+        }
+
+        &-translate-middle-#{$translate} {
+            @extend .translate-middle-#{$translate};
         }
     }
 
-    @each $key in $box-border-keys {
-        &-border-#{$key} {
-            @extend .border-#{$key};
-
-
-        }
+    &-hidden {
+        @extend .invisible;
     }
 
-    &-border {
-        @extend .border;
-
-        &-top-0 {
-            @extend .border-top-0;
+    @each $position in $float-positions {
+        &-float-#{$position} {
+            @extend .float-#{$position};
         }
 
-        &-bottom-0 {
-            @extend .border-bottom-0;
-        }
-
-        &-start-0 {
-            @extend .border-start-0;
-        }
-
-        &-end-0 {
-            @extend .border-end-0;
-        }
-
-        @each $size in $box-border-values {
-            &-#{$size} {
-                @extend .border;
-                @extend .border-#{$size};
-                // tabler's issue for border !important
-                border-width: #{$size}px !important
-            }
-        }
-
-        @each $key,
-        $value in $theme-colors {
-            &-color-#{$key} {
-                @extend .border-#{$key};
-            }
-        }
-
-        &-radius {
-            @extend .rounded;
-
-            @each $radius in $border-radiuses {
-                &-#{$radius} {
-                    @extend .rounded-#{$radius};
-                }
-            }
-        }
-
-        &-round-size {
-
-            @each $size in $border-round-sizes {
-                &-#{$size} {
-                    @extend .rounded-#{$size};
-                }
+        @each $size in $displays-sizes {
+            &-float-#{$size}-#{$position} {
+                @extend .float-#{$size}-#{$position};
             }
         }
     }
 
-
-
-    @each $value in $box-position-values {
-        &-top-#{$value} {
-            @extend .top-#{$value};
-        }
-
-        &-start-#{$value} {
-            @extend .start-#{$value};
-        }
-
-        &-end-#{$value} {
-            @extend .end-#{$value};
-        }
-
-        &-bottom-#{$value} {
-            @extend .bottom-#{$value};
-        }
-    }
-
-    @each $color,
-    $value in $theme-colors {
-        &-bg-color-#{$color} {
-            @extend .bg-#{$color};
-        }
-    }
-
-    &-bg-gradient {
-        @extend .bg-gradient
-    }
+    @include apply-props($props
+);
 }

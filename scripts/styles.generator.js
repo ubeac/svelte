@@ -3,7 +3,7 @@ import path from 'path'
 import sass from 'sass'
 
 // TODO: Optimize (only compile one)
-const files = ['tabler', 'bootstrap']
+const files = ['tabler']
 
 function compile(file) {
 	const { css } = sass.compile(`./src/scss/${file}/index.scss`, {
@@ -25,5 +25,5 @@ function compile(file) {
 
 for (const file of files) {
 	const css = compile(file)
-	fs.writeFileSync(`./src/${file}.css`, css)
+	fs.writeFileSync(`./static/css/${file}.css`, css)
 }

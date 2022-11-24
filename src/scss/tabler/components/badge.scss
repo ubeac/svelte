@@ -1,32 +1,33 @@
 $prefix-badge: $prefix + 'badge';
 
+$props: (
+	'':'.badge',
+	'outline':'.badge-outline',
+	'notification':'.badge-notification',
+	'blink':'.badge-blink',
+	'shape': ('pill': '.badge-pill'
+	),
+	// 'color': generate_props($theme_colors, ('.bg-', '.text-bg-'))
+);
+
 .#{$prefix-badge} {
-	@extend .badge;
+	@include apply-props($props);
 
-	&.#{$prefix-badge}-outline {
-		@extend .badge-outline;
+	&.#{$prefix-badge}-shape-tile {
+		border-radius: 0;
 	}
 
-	&.#{$prefix-badge}-shape {
-		&-round {
-			@extend .badge-pill;
-		}
-
-		&-tile {
-			border-radius: 0;
-		}
-	}
-
-	@each $color, $value in $theme-colors {
-		&-#{$color}:not(.#{$prefix-badge}-outline):not(.#{$prefix-badge}-ghost) {
+	@each $color,
+	$value in $theme-colors {
+		&-color-#{$color}:not(.#{$prefix-badge}-outline):not(.#{$prefix-badge}-ghost) {
 			@extend .bg-#{$color};
 		}
 
-		&-#{$color}.#{$prefix-badge}-outline:not(.#{$prefix-badge}-ghost) {
+		&-color-#{$color}.#{$prefix-badge}-outline:not(.#{$prefix-badge}-ghost) {
 			@extend .text-#{$color};
 		}
 
-		&-#{$color}.#{$prefix-badge}-ghost:not(.#{$prefix-badge}-outline) {
+		&-color-#{$color}.#{$prefix-badge}-ghost:not(.#{$prefix-badge}-outline) {
 			@extend .bg-#{$color}-lt;
 		}
 	}

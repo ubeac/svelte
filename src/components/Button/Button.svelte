@@ -3,9 +3,8 @@
 
 	import type { ButtonProps } from './Button.types'
 
-	interface $$Props extends ButtonProps {
-		[x: string]: any
-	}
+	type $$Props = ButtonProps
+
 	export let outline: $$Props['outline'] = undefined
 	export let link: $$Props['link'] = undefined
 	export let cssPrefix: $$Props['cssPrefix'] = 'button'

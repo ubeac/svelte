@@ -1,5 +1,3 @@
-import type { ComponentType, SvelteComponent } from 'svelte'
-
 export interface CssProps {
 	// background properties
 	bgColor: BackgroundColors
@@ -68,7 +66,7 @@ export interface CssProps {
 	vAlign: VerticalAligns
 
 	// text
-	color: TextColors
+	textColor: TextColors
 	textAlign: TextAligns
 	textAlignSm: TextAligns
 	textAlignMd: TextAligns
@@ -82,35 +80,72 @@ export interface CssProps {
 	textLead: BooleanValues
 	textHeading: TextHeadings
 	textTruncate: BooleanValues
+	textOpacity: TextOpacities
 
 	// font
 	fontSize: FontSizes
 	fontWeight: FontWeights
 	fontStyle: FontStyles
+
+	//Visibility
+	hidden: BooleanValues
+	// Float
+	float: FloatPositions
+	floatSm: FloatPositions
+	floatMd: FloatPositions
+	floatLg: FloatPositions
+	floatXl: FloatPositions
+	floatXxl: FloatPositions
+
+	// Col
+	col: ColSizes
+	colSm: ColSizes
+	colMd: ColSizes
+	colLg: ColSizes
+	colXl: ColSizes
+	colXxl: ColSizes
+
+	// Col Order
+	order: ColOrders
+	orderSm: ColOrders
+	orderMd: ColOrders
+	orderLg: ColOrders
+	orderXl: ColOrders
+	orderXxl: ColOrders
+
+	//Col Offset
+	offset: ColSizes
+	offsetSm: ColSizes
+	offsetMd: ColSizes
+	offsetLg: ColSizes
+	offsetXl: ColSizes
+	offsetXxl: ColSizes
+
+	// Row
+	row: BooleanValues
+	rowCol: RowColSizes
+	rowColSm: RowColSizes
+	rowColMd: RowColSizes
+	rowColLg: RowColSizes
+	rowColXl: RowColSizes
+	rowColXxl: RowColSizes
+
+	// Gutter
+	g: RowGutterSizes
+	gSm: RowGutterSizes
+	gMd: RowGutterSizes
+	gLg: RowGutterSizes
+	gXl: RowGutterSizes
+	gXxl: RowGutterSizes
+	gx: RowGutterSizes
+	gy: RowGutterSizes
 }
 
-export interface ElProps<T extends keyof HTMLElementTagNameMap = 'div'> extends CssProps {
-	tag: T
+export interface ElProps extends CssProps {
+	class?: string
+	tag: keyof HTMLElementTagNameMap
 	element: any // TODO: this should be something like SvelteComponent or C
 	cssPrefix?: string
 	cssProps?: any
+	[key: string]: any // used when we pass props to DOM Elements using ...$$restProps
 }
-
-export type ElInternal<
-	T extends keyof HTMLElementTagNameMap = 'div',
-	C extends ComponentType<SvelteComponent> = ComponentType<SvelteComponent>
-> = {
-	component: C
-	props: ElProps<T>
-}
-
-type Props = Record<string, any>
-
-type Merge<K, L> = Omit<K, keyof L> & L
-
-export type SharedProps<T extends Props = {}> = Partial<
-	Merge<ElProps<HTMLTags>, T> & {
-		class?: string
-		[key: string]: any
-	}
->

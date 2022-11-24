@@ -1,5 +1,5 @@
 $prefix: 'u-' !default;
-@import '@tabler/core/src/scss/core';
 @import './mixins';
 @import './variables';
+@import '@tabler/core/src/scss/core';
 @import './components';
