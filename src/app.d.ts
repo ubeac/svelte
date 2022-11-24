@@ -121,26 +121,7 @@ declare type TextTransforms = 'lowercase' | 'uppercase' | 'capitalize' | undefin
 declare type TextHeadings = '1' | '2' | '3' | '4' | '5' | '6' | undefined
 declare type OverflowTypes = 'auto' | 'hidden' | 'visible' | 'scroll' | undefined
 declare type TranslateMiddleTypes = 'x' | 'y' | 'xy' | undefined
-declare type FloatPositions =
-	| 'start'
-	| 'end'
-	| 'none'
-	| 'sm-start'
-	| 'sm-end'
-	| 'sm-none'
-	| 'md-start'
-	| 'md-end'
-	| 'md-none'
-	| 'lg-start'
-	| 'lg-end'
-	| 'lg-none'
-	| 'xl-start'
-	| 'xl-end'
-	| 'xl-none'
-	| 'xxl-start'
-	| 'xxl-end'
-	| 'xxl-none'
-	| undefined
+declare type FloatPositions = 'start' | 'end' | 'none' | undefined
 
 // Vertical align
 declare type VerticalAligns = 'baseline' | 'top' | 'middle' | 'bottom' | 'text-bottom' | 'text-top' | undefined

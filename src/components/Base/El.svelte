@@ -82,7 +82,7 @@
 	export let vAlign: VerticalAligns = undefined
 
 	// text
-	export let color: TextColors = undefined
+	export let textColor: TextColors = undefined
 	export let textAlign: TextAligns = undefined
 	export let textAlignSm: TextAligns = undefined
 	export let textAlignMd: TextAligns = undefined
@@ -105,7 +105,14 @@
 
 	// forward events
 	export let forwardEvents: (node: HTMLElement) => any = () => ({})
+
+	// float
 	export let float: FloatPositions = undefined
+	export let floatSm: FloatPositions = undefined
+	export let floatMd: FloatPositions = undefined
+	export let floatLg: FloatPositions = undefined
+	export let floatXl: FloatPositions = undefined
+	export let floatXxl: FloatPositions = undefined
 
 	// max widths
 	export let col: ColSizes = undefined
@@ -215,7 +222,7 @@
 			// vertical align
 			vAlign,
 			// text
-			color,
+			textColor,
 			textAlign,
 			textAlignSm,
 			textAlignMd,
@@ -236,6 +243,11 @@
 			fontStyle,
 			hidden,
 			float,
+			floatSm,
+			floatMd,
+			floatLg,
+			floatXl,
+			floatXxl,
 			// col layout
 			col,
 			colSm,

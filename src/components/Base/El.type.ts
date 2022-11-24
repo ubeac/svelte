@@ -89,7 +89,13 @@ export interface CssProps {
 
 	//Visibility
 	hidden: BooleanValues
+	// Float
 	float: FloatPositions
+	floatSm: FloatPositions
+	floatMd: FloatPositions
+	floatLg: FloatPositions
+	floatXl: FloatPositions
+	floatXxl: FloatPositions
 
 	// Col
 	col: ColSizes
