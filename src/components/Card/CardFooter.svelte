@@ -1,19 +1,19 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	import type { CardFooterProps } from './Card.types'
 
+	type $$Props = CardFooterProps
+
+	export let cssPrefix: $$Props['cssPrefix'] = 'card-footer'
 	/**
 	 * If you want to set Card footer's color same as card's body, use the transparent property
 	 */
-	export let transparent: boolean = false
+	export let transparent: $$Props['transparent'] = undefined
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('card-footer', { transparent }, $$props.class, true)
+	$: cssProps = { transparent }
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssProps} {cssPrefix}>
 	<slot />
-</div>
+</El>

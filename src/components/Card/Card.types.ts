@@ -1,3 +1,13 @@
+import type { ElProps } from '../Base/El.type'
+
+export interface CardProps extends Partial<ElProps> {
+	title?: string
+}
+
+export interface CardFooterProps extends Partial<ElProps> {
+	transparent?: boolean
+}
+
 export const CARD_MEDIA_PLACEMENTS = ['top', 'start', 'middle', 'end', 'bottom'] as const
 export type CardMediaPlacements = typeof CARD_MEDIA_PLACEMENTS[number]
 

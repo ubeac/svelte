@@ -25,9 +25,7 @@
 </p>
 
 <Preview src="./AlertColor.svelte">
-	<div class="example-alert-wrapper">
-		<AlertColor />
-	</div>
+	<AlertColor />
 </Preview>
 
 <h2>Alert links</h2>
@@ -37,9 +35,7 @@
 </p>
 
 <Preview src="./AlertLink.svelte">
-	<div class="example-alert-wrapper">
-		<AlertLink />
-	</div>
+	<AlertLink />
 </Preview>
 
 <h2>Dismissible alerts</h2>
@@ -48,25 +44,19 @@
 	only once the user closes it.
 </p>
 <Preview src="./AlertDismissible.svelte">
-	<div class="example-alert-wrapper">
-		<AlertDismissible />
-	</div>
+	<AlertDismissible />
 </Preview>
 
 <h2>Alerts with icons</h2>
 <p>Add an icon to your alert modal to make it more user-friendly and help users easily identify the message.</p>
 <Preview src="./AlertIcon.svelte">
-	<div class="example-alert-wrapper">
-		<AlertIcon />
-	</div>
+	<AlertIcon />
 </Preview>
 
 <h2>Alert with avatar</h2>
 <p>Add an avatar to your alert modal to make it more personalized.</p>
 <Preview src="./AlertAvatar.svelte">
-	<div class="example-alert-wrapper">
-		<AlertAvatar />
-	</div>
+	<AlertAvatar />
 </Preview>
 
 <h2>Alert with buttons</h2>
@@ -75,36 +65,17 @@
 	information included in the modal message.
 </p>
 <Preview src="./AlertButton.svelte">
-	<div class="example-alert-wrapper">
-		<AlertButton />
-	</div>
+	<AlertButton />
 </Preview>
 
 <h2>Important alerts</h2>
 <p>If you want your alert to be really eye-catching, you can add a class <code>alert-important</code>.</p>
 <Preview src="./AlertImportant.svelte">
-	<div class="example-alert-wrapper">
-		<AlertImportant />
-	</div>
+	<AlertImportant />
 </Preview>
 
 <h2>Alret Show/Hide</h2>
 <p>If you want show or hide your alert you can do it with if property.</p>
 <Preview src="./AlertShow.svelte">
-	<div class="example-alert-wrapper">
-		<AlertShow />
-	</div>
+	<AlertShow />
 </Preview>
-
-<style global>
-	.u-alert {
-		width: 80%;
-		font-size: 0.875rem;
-	}
-	.example-alert-wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
-		gap: 0.5rem;
-	}
-</style>

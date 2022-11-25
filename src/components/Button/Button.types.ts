@@ -3,7 +3,7 @@ import type { ElProps } from '../Base/El.type'
 // Button Types
 declare type ButtonTypes = 'submit' | 'button' | 'reset' | undefined
 declare type ButtonTags = 'button' | 'a' | 'input' | undefined
-declare type ButtonSizes = 'small' | 'large' | undefined
+declare type ButtonSizes = 'sm' | 'lg' | undefined
 declare type ButtonValues = string | undefined
 export interface ButtonProps extends Partial<ElProps> {
 	color?: Colors

@@ -1,5 +1,5 @@
 <script>
-	import { Page, App, AppHeader, AppFooter, PageBody, Container, Row, Col } from '@ubeac/svelte'
+	import { Page, App, AppHeader, AppFooter, PageBody, Container, Row, Col, Card, CardBody } from '@ubeac/svelte'
 </script>
 
 <App theme="light">
@@ -14,7 +14,7 @@
 		<PageBody>
 			<Container fluid="md">
 				<Row>
-					<Col><slot /></Col>
+					<Col><Card><CardBody><slot /></CardBody></Card></Col>
 				</Row>
 			</Container>
 		</PageBody>
