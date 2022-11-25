@@ -72,15 +72,25 @@ $margin-sizes: (
     '2',
     '3',
     '4',
-    '5') !default;
+    '5',
+    'auto') !default;
 $margin-positions: (
     't': 't',
     's': 's',
     'e': 'e',
     'b': 'b',
     'x': 'x',
-    'y': 'y'
+    'y': 'y',
     ) !default;
+
+$gap-sizes: (
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5') !default;
+
 $shadow-sizes: (
     'none',
     'sm',
@@ -217,7 +227,7 @@ $heading-display-sizes: (
 
     @each $key,
     $value in $theme_colors {
-        &-color-#{$key} {
+        &-text-color-#{$key} {
             @extend .text-#{$key};
         }
     }
@@ -329,6 +339,14 @@ $heading-display-sizes: (
             }
         }
     }
+
+
+    @each $size in $gap-sizes {
+        &-gap-#{$size} {
+            @extend .gap-#{$size};
+        }
+    }
+
 
     @each $size in $shadow-sizes {
         &-shadow-#{$size} {
