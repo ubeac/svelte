@@ -2,10 +2,10 @@ $prefix-badge: $prefix + 'badge';
 
 $props: (
 	'':'.badge',
-	'outline':'.badge-outline',
-	'notification':'.badge-notification',
-	'blink':'.badge-blink',
-	'pill': '.badge-pill'
+	outline:'.badge-outline',
+	notification:'.badge-notification',
+	blink:'.badge-blink',
+	pill: '.badge-pill'
 	// 'color': generate_props($theme_colors, ('.bg-', '.text-bg-'))
 );
 

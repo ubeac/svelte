@@ -8,7 +8,7 @@
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	import type { AlertVariants } from './alert.types'
+	import type { AlertVariants } from './alertOld.types'
 
 	/**
 	 * Show close button at the end of alert
