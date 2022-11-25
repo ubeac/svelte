@@ -1,7 +1,7 @@
 <script>
-	import { Avatar, AVATAR_SHAPES } from '@ubeac/svelte'
+	import { Avatar } from '@ubeac/svelte'
 </script>
 
-{#each AVATAR_SHAPES as shape}
-	<Avatar {shape}>{shape.substring(0, 2)}</Avatar>
-{/each}
+<Avatar pill>{'pill'.substring(0, 2)}</Avatar>
+<Avatar rounded>{'rounded'.substring(0, 2)}</Avatar>
+<Avatar tile>{'tile'.substring(0, 2)}</Avatar>
