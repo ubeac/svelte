@@ -1,50 +1,23 @@
 <script lang="ts">
-	import { get_current_component, getContext, setContext } from 'svelte/internal'
-	import { writable } from 'svelte/store'
+	import { setContext } from 'svelte'
 
-	import { nanoid } from 'nanoid'
-
-	import { forwardEventsBuilder } from '$lib/directives'
-
-	import { El } from '../Base'
-	import type { SharedProps } from '../Base/El.type'
-	import type { AccordionContext, AccordionProps, AccordionsContext } from './Accordion.types'
+	import { El } from '$lib/components'
+	import type { AccordionProps } from '$lib/components'
 
 	type $$Props = AccordionProps
 
-	/**
-	 * Id of Accordion
-	 */
-	export let id: $$Props['id'] = nanoid()
+	export let cssPrefix: $$Props['cssPrefix'] = 'accordion'
+	export let open: $$Props['open'] = undefined
+	export let tag: $$Props['tag'] = 'div'
 
-	/**
-	 * Controls open/close state of Accordion Item
-	 */
-	export let open: $$Props['open'] = false
-
-	const context: AccordionContext = writable({ id, open })
-
-	setContext('ACCORDION', context)
-
-	const acccordions: AccordionsContext = getContext('ACCORDIONS')
-
-	acccordions.update((item: any) => {
-		item.children.push(context)
-		return item
-	})
-
-	let props: SharedProps = {}
-	$: props = {
-		...$$restProps,
-		forwardEvents: forwardEventsBuilder(get_current_component()),
-		cssPrefix: 'accordion-item',
-		tag: 'div',
-		cssProps: {},
+	$: otherProps = {
+		cssPrefix,
+		tag,
 	}
 
-	$: context.set({ id, open })
+	setContext('ACCORDION', { open })
 </script>
 
-<El {...props}>
+<El {...$$restProps} {...otherProps}>
 	<slot />
 </El>

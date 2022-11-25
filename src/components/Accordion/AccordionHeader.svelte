@@ -1,60 +1,35 @@
 <script lang="ts">
-	import { get_current_component, getContext } from 'svelte/internal'
+	import { createEventDispatcher, getContext, setContext } from 'svelte'
 
-	import { forwardEventsBuilder } from '$lib/directives'
+	import { El } from '$lib/components'
+	import type { AccordionHeaderProps } from '$lib/components'
 
-	import { El } from '../Base'
-	import type { SharedProps } from '../Base/El.type'
+	const dispatch = createEventDispatcher()
 
-	const context = getContext<any>('ACCORDION')
-	const acccordions = getContext<any>('ACCORDIONS')
+	type $$Props = AccordionHeaderProps
 
-	function onClick() {
-		console.log('onClick')
-		acccordions.update((item: any) => {
-			if ($acccordions.persistent) {
-				for (const children of item.children) {
-					children.update((x: any) => {
-						if (x.id == $context.id) {
-							x.open = x.open
-						} else {
-							x.open = false
-						}
-						return x
-					})
-				}
-			}
-			return item
-		})
-		context.set({ id: $context.id, open: !$context.open })
+	export let cssPrefix: $$Props['cssPrefix'] = 'accordion-header'
+	export let buttonCssPrefix: $$Props['cssPrefix'] = 'accordion-button'
+	export let tag: $$Props['tag'] = 'h2'
+
+	$: otherProps = {
+		cssPrefix,
+		tag,
 	}
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	const context = getContext('ACCORDION')
 
-	let props: SharedProps = {}
-	$: props = {
-		...$$restProps,
-		forwardEvents,
-		tag: 'div',
-		cssPrefix: 'accordion-header',
-		cssProps: {},
-	}
-
-	let buttonProps: SharedProps = {}
-
-	$: buttonProps = {
-		...$$restProps,
-		forwardEvents,
-		tag: 'button',
-		cssPrefix: 'accordion-button',
-		cssProps: {
-			collapsed: !$context.open,
-		},
+	const onClick = () => {
+		console.log('dispatching')
+		// dispatch('click')
+		console.log($context.open)
+		// setContext('ACCORDION', !getContext('ACCORDION')?.open)
+		// console.log(getContext('ACCORDION'))
 	}
 </script>
 
-<El on:click={console.log} {...props} {forwardEvents}>
-	<El {...buttonProps} on:click={onClick} {forwardEvents}>
+<El {...$$restProps} {...otherProps}>
+	<El tag="button" cssPrefix={buttonCssPrefix} on:click={onClick}>
 		<slot />
 	</El>
 </El>
