@@ -7,7 +7,7 @@
 	import { classname, createOptions } from '$lib/utils'
 
 	import { FormField } from '.'
-	import { CheckboxGroup } from '../checkbox'
+	import { CheckboxGroup } from '../Checkbox'
 	import { Label } from '../Label'
 
 	/**

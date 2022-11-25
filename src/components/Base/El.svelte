@@ -49,6 +49,9 @@
 	export let mx: MarginSizes = undefined
 	export let my: MarginSizes = undefined
 
+	// gap properties
+	export let gap: GapSizes = undefined
+
 	// display properties
 	export let clearfix: BooleanValues = undefined
 	export let ratio: DisplayRatioTypes = undefined
@@ -194,6 +197,8 @@
 			me,
 			mx,
 			my,
+			// gap properties
+			gap,
 			// display properties
 			clearfix,
 			ratio,

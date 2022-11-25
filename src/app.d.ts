@@ -102,8 +102,11 @@ declare type PaddingSizes = '0' | '1' | '2' | '3' | '4' | '5' | undefined
 declare type PaddingPositions = 'top' | 'end' | 'bottom' | 'start' | 'x' | 'y' | undefined
 
 // margin
-declare type MarginSizes = '0' | '1' | '2' | '3' | '4' | '5' | undefined
+declare type MarginSizes = '0' | '1' | '2' | '3' | '4' | '5' | 'auto' | undefined
 declare type MarginPositions = 'top' | 'end' | 'bottom' | 'start' | 'x' | 'y' | undefined
+
+// gap
+declare type GapSizes = '0' | '1' | '2' | '3' | '4' | '5' | undefined
 
 // Font
 declare type FontSizes = '1' | '2' | '3' | '4' | '5' | '6' | undefined
