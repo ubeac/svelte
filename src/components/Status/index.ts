@@ -1,5 +1,2 @@
-import Status from './Status.svelte'
+export {default as Status} from './Status.svelte'
 
-export { Status }
-
-export default Status
