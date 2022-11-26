@@ -1,4 +1,4 @@
-import type { ElProps } from '../Base/El.type'
+import type { ElProps } from '$lib/components'
 
 export interface BadgeProps extends Partial<ElProps> {
 	color?: Colors

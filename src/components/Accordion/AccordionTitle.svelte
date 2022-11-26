@@ -1,21 +1,18 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
+	import type { AccordionTitleProps } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
+	type $$Props = AccordionTitleProps
 
-	import { El } from '../Base'
-	import type { SharedProps } from '../Base/El.type'
+	export let cssPrefix: $$Props['cssPrefix'] = 'accordion-title'
+	export let tag: $$Props['tag'] = 'div'
 
-	let props: SharedProps = {}
-	$: props = {
-		...$$restProps,
-		tag: 'div',
-		cssPrefix: 'accordion-title',
-		forwardEvents: forwardEventsBuilder(get_current_component()),
-		cssProps: {},
+	$: otherProps = {
+		cssPrefix,
+		tag,
 	}
 </script>
 
-<El {...props}>
+<El {...$$restProps} {...otherProps}>
 	<slot />
 </El>

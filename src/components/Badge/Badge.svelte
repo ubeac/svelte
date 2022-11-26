@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { El } from '../Base'
-	import type { BadgeProps } from './Badge.types'
+	import { El } from '$lib/components'
+	import type { BadgeProps } from '$lib/components'
 
 	type $$Props = BadgeProps
 

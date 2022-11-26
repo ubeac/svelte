@@ -1,3 +1,2 @@
-import El from './El.svelte'
-
-export { El }
+export { default as El } from './El.svelte'
+export * from './El.types'

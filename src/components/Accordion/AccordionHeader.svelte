@@ -1,60 +1,42 @@
 <script lang="ts">
-	import { get_current_component, getContext } from 'svelte/internal'
+	import { createEventDispatcher, getContext } from 'svelte'
 
-	import { forwardEventsBuilder } from '$lib/directives'
+	import { El } from '$lib/components'
+	import type { AccordionContext, AccordionHeaderProps, AccordionsContext } from '$lib/components'
 
-	import { El } from '../Base'
-	import type { SharedProps } from '../Base/El.type'
+	const dispatch = createEventDispatcher()
 
-	const context = getContext<any>('ACCORDION')
-	const acccordions = getContext<any>('ACCORDIONS')
+	type $$Props = AccordionHeaderProps
 
-	function onClick() {
-		console.log('onClick')
-		acccordions.update((item: any) => {
-			if ($acccordions.persistent) {
-				for (const children of item.children) {
-					children.update((x: any) => {
-						if (x.id == $context.id) {
-							x.open = x.open
-						} else {
-							x.open = false
-						}
-						return x
-					})
-				}
-			}
-			return item
-		})
-		context.set({ id: $context.id, open: !$context.open })
+	export let cssPrefix: $$Props['cssPrefix'] = 'accordion-header'
+	export let buttonCssPrefix: $$Props['cssPrefix'] = 'accordion-button'
+	export let tag: $$Props['tag'] = 'h2'
+
+	const parentCtx = getContext<AccordionsContext>('ACCORDIONS')
+	const ctx = getContext<AccordionContext>('ACCORDION')
+
+	$: otherProps = {
+		cssPrefix,
+		tag,
 	}
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	let props: SharedProps = {}
-	$: props = {
-		...$$restProps,
-		forwardEvents,
-		tag: 'div',
-		cssPrefix: 'accordion-header',
-		cssProps: {},
+	$: cssProps = {
+		collapsed: !$ctx.open,
 	}
 
-	let buttonProps: SharedProps = {}
-
-	$: buttonProps = {
-		...$$restProps,
-		forwardEvents,
-		tag: 'button',
-		cssPrefix: 'accordion-button',
-		cssProps: {
-			collapsed: !$context.open,
-		},
+	const onClick = () => {
+		dispatch('click')
+		if ($parentCtx.persistent) {
+			$parentCtx.children.forEach((childCtx) => {
+				childCtx.set({ open: false })
+			})
+		}
+		$ctx.open = !$ctx.open
 	}
 </script>
 
-<El on:click={console.log} {...props} {forwardEvents}>
-	<El {...buttonProps} on:click={onClick} {forwardEvents}>
+<El {...$$restProps} {...otherProps}>
+	<El tag="button" cssPrefix={buttonCssPrefix} on:click={onClick} {cssProps}>
 		<slot />
 	</El>
 </El>
