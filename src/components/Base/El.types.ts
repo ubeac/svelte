@@ -184,3 +184,5 @@ export const NAMED_COLOR_TYPES: NamedColors[] = [
 ]
 
 export const BACKGROUND_COLOR_TYPES: BackgroundColors[] = [...THEME_COLOR_TYPES, ...NAMED_COLOR_TYPES, 'body']
+
+export const OPACITY_TYPES: Opacities[] = ["10", "25", "50", "75"]
