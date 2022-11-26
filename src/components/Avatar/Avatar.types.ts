@@ -1,13 +1,9 @@
-import type { SharedProps } from '$lib/co/Base/El.type'
-import type { Colors } from '$lib/types'
-
-export const AVATAR_SHAPES = ['circle', 'round', 'tile'] as const
-export type AvatarShapes = typeof AVATAR_SHAPES[number]
+import type { ElProps } from '../Base/El.type'
 
 export const AVATAR_SIZES = ['xs', 'sm', 'ep', 'md', 'lg', 'xl'] as const
 export type AvatarSizes = typeof AVATAR_SIZES[number]
 
-export type AvatarProps = SharedProps<{
+export interface AvatarProps extends Partial<ElProps> {
 	/**
 	 * Set color for Avatar
 	 */
@@ -19,12 +15,22 @@ export type AvatarProps = SharedProps<{
 	image?: string | undefined
 
 	/**
-	 * Set shape for Avatar: 'circle', 'round', 'tile'
+	 * Set Avatar shape to: 'pill'
 	 */
-	shape?: AvatarShapes
+	pill?: boolean
+
+	/**
+	 * Set Avatar shape to: 'rounded corners'
+	 */
+	rounded?: boolean
+
+	/**
+	 * Set Avatar shape to: 'tile'
+	 */
+	tile?: boolean
 
 	/**
 	 * Set size for Avatar: 'xs', 'sm', 'ep', 'md', 'lg', 'xl'
 	 */
 	size?: AvatarSizes
-}>
+}

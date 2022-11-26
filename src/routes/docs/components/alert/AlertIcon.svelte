@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Alert, COLORS } from '@ubeac/svelte'
+	import { Alert } from '@ubeac/svelte'
 </script>
 
 <Alert title="Wow! Everything worked!" color="success" icon="check">

@@ -1,3 +1,3 @@
-export { default as Alert } from './Alert.svelte'
+export { default as Alert } from './AlertOld.svelte'
 export { default as AlertTitle } from './AlertTitle.svelte'
-export * from './alert.types'
+export * from './alertOld.types'

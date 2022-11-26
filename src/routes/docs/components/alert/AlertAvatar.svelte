@@ -1,13 +1,11 @@
 <script lang="ts">
-	import { Alert, Avatar, Col, Row } from '@ubeac/svelte'
+	import { Alert, Avatar, Col, El, Row } from '@ubeac/svelte'
 </script>
 
 <Alert color="success">
 	<Row>
 		<Col auto>
-			<Avatar>
-				<img src="https://preview.tabler.io/static/avatars/000m.jpg" alt="" />
-			</Avatar>
+			<Avatar><img src="https://preview.tabler.io/static/avatars/000m.jpg" alt="" /></Avatar>
 		</Col>
 		<Col>
 			<div>

@@ -5,10 +5,15 @@
 	import { classname } from '$lib/utils'
 
 	import { El } from '../Base'
-	import type { SharedProps } from '../Base/El.type'
-	import type { AlertProps } from './alert.types'
+	import Col from '../Grid/Col.svelte'
+	import type { AlertProps } from './Alert.types'
 
 	type $$Props = AlertProps
+
+	/**
+	 * Set Css Prefix for the Badge
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'alert'
 
 	/**
 	 * Show close button at the end of alert
@@ -28,12 +33,12 @@
 	/**
 	 * Set Alert's color
 	 */
-	export let color: $$Props['color'] = 'default'
+	export let color: $$Props['color'] = 'primary'
 
 	/**
-	 * Set Alert's variant
+	 * Set Alert filled
 	 */
-	export let variant: $$Props['variant'] = 'outlined'
+	export let filled: $$Props['filled'] = undefined
 
 	/**
 	 * Set Alert's variant
@@ -42,40 +47,41 @@
 
 	const dispatch = createEventDispatcher()
 
-	function close() {
+	let close = () => {
 		value = false
 		dispatch('close')
 	}
 
-	let props: SharedProps
-	$: props = {
-		tag: 'div',
-		cssPrefix: 'alert',
-		cssProps: {
-			color,
-			icon: Boolean(icon),
-			dismissible,
-			variant,
-		},
-		class: ['fade', 'show', $$props.class].join(' '),
+	$: cssProps = {
+		color,
+		icon,
+		dismissible,
+		filled,
 	}
+	$: otherProps = { cssPrefix }
 </script>
 
 {#if value}
-	<El {...props}>
-		<div class={classname('alert-icon')}>
-			<slot name="icon">
-				<Icon name={icon} />
-			</slot>
-		</div>
-		<div class={classname('alert-title')}>
-			<slot name="title">{title}</slot>
-		</div>
-		<slot />
-		{#if dismissible}
-			<div class={classname('alert-close')} on:click={close}>
-				<slot name="close" />
+	<El {...$$restProps} {cssProps} {...otherProps} role="alert">
+		{#if icon || $$slots.start}
+			<div class={classname(cssPrefix + '-start')}>
+				<slot name="start">
+					<Icon size="xl" name={icon} />
+				</slot>
 			</div>
+		{/if}
+		<div class={classname('alert-body')}>
+			<div class={classname('alert-title')}>
+				<slot name="title">{title}</slot>
+			</div>
+			<div>
+				<slot />
+			</div>
+		</div>
+		{#if dismissible}
+			<El class={classname(cssPrefix + '-end')} on:click={close}>
+				<slot name="end" />
+			</El>
 		{/if}
 	</El>
 {/if}

@@ -1,6 +1,12 @@
 <script>
-	import { Avatar } from '@ubeac/svelte'
+	import { Avatar, Icon } from '@ubeac/svelte'
 </script>
 
-<Avatar image="https://preview.tabler.io/static/avatars/000m.jpg" />
-<Avatar image="https://preview.tabler.io/static/avatars/002f.jpg" />
+<Avatar><img src="https://preview.tabler.io/static/avatars/000m.jpg" alt="" /></Avatar>
+<Avatar>
+	<Icon name="user" />
+</Avatar>
+<Avatar><img src="https://preview.tabler.io/static/avatars/002f.jpg" alt="" /></Avatar>
+<Avatar>
+	<Icon name="plus" />
+</Avatar>

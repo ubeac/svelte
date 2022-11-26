@@ -1,14 +1,13 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	import type { ElProps } from '../Base/El.type'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	type $$Props = Partial<ElProps>
 
-	$: classes = classname('card-body', undefined, $$props.class)
+	export let cssPrefix: $$Props['cssPrefix'] = 'card-body'
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssPrefix}>
 	<slot />
-</div>
+</El>

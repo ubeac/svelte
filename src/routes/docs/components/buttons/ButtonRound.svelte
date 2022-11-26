@@ -3,5 +3,5 @@
 </script>
 
 {#each COLORS as color}
-	<Button shape="round" {color}>{color}</Button>
+	<Button pill {color}>{color}</Button>
 {/each}

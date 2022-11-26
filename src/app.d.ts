@@ -10,16 +10,7 @@ declare namespace App {
 	// interface Platform {}
 }
 
-// Button Types
-declare type ButtonTypes = 'submit' | 'button' | 'reset' | undefined
-declare type ButtonTags = 'button' | 'a' | 'input' | undefined
 declare type BooleanValues = boolean | undefined
-declare type ButtonSizes = 'small' | 'large' | undefined
-declare type ButtonStates = 'normal' | 'loading' | 'active' | 'disable' | undefined
-declare type ButtonValues = string | undefined
-
-// Badge Types
-declare type BadgeShapes = 'circle' | 'pill' | undefined
 
 // Spinner
 declare type SpinnerSizes = 'small' | 'large' | undefined
@@ -130,7 +121,7 @@ declare type FloatPositions = 'start' | 'end' | 'none' | undefined
 declare type VerticalAligns = 'baseline' | 'top' | 'middle' | 'bottom' | 'text-bottom' | 'text-top' | undefined
 
 // Col Sizes and settings
-type ColSizes = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | 'auto' | undefined
+type ColSizes = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | 'auto' | undefined | boolean
 
 type ColOrders = '1' | '2' | '3' | '4' | '5' | 'first' | 'last' | undefined
 

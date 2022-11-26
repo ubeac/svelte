@@ -1,50 +1,34 @@
 <script lang="ts">
-	import { get_current_component, getContext, setContext } from 'svelte/internal'
+	import { getContext, setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 
-	import { nanoid } from 'nanoid'
+	import { El } from '$lib/components'
+	import type { AccordionContext, AccordionProps, AccordionsContext } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-
-	import { El } from '../Base'
-	import type { SharedProps } from '../Base/El.type'
-	import type { AccordionContext, AccordionProps, AccordionsContext } from './Accordion.types'
+	import AccordionHeader from './AccordionHeader.svelte'
 
 	type $$Props = AccordionProps
 
-	/**
-	 * Id of Accordion
-	 */
-	export let id: $$Props['id'] = nanoid()
-
-	/**
-	 * Controls open/close state of Accordion Item
-	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'accordion'
 	export let open: $$Props['open'] = false
+	export let title: $$Props['title'] = undefined
 
-	const context: AccordionContext = writable({ id, open })
+	const ctx: AccordionContext = writable({ open })
+	setContext('ACCORDION', ctx)
 
-	setContext('ACCORDION', context)
+	const parentCtx = getContext<AccordionsContext>('ACCORDIONS')
 
-	const acccordions: AccordionsContext = getContext('ACCORDIONS')
-
-	acccordions.update((item: any) => {
-		item.children.push(context)
+	parentCtx.update((item: any) => {
+		item.children.push(ctx)
 		return item
 	})
-
-	let props: SharedProps = {}
-	$: props = {
-		...$$restProps,
-		forwardEvents: forwardEventsBuilder(get_current_component()),
-		cssPrefix: 'accordion-item',
-		tag: 'div',
-		cssProps: {},
-	}
-
-	$: context.set({ id, open })
 </script>
 
-<El {...props}>
+<El {...$$restProps} {cssPrefix}>
+	{#if title}
+		<AccordionHeader>
+			{title}
+		</AccordionHeader>
+	{/if}
 	<slot />
 </El>
