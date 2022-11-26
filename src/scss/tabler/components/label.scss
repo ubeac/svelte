@@ -1,9 +1,0 @@
-$prefix-label: $prefix + 'label';
-
-.#{$prefix-label} {
-	@extend .form-label;
-
-	&-required {
-		@extend .required;
-	}
-}

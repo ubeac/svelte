@@ -1,19 +1,24 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '../Base'
+	import type { LabelProps } from './Label.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = LabelProps
 
-	/**
-	 * Show a required indicator *
-	 */
-	export let required: boolean = false
+	export let tag: $$Props['tag'] = 'label'
+	export let cssPrefix: $$Props['cssPrefix'] = 'label'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	export let required: $$Props['required'] = false
 
-	$: classes = classname('label', { required }, $$props.class)
+	$: cssProps = {
+		required,
+	}
+
+	$: otherProps = {
+		tag,
+		cssPrefix,
+	}
 </script>
 
-<label use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssProps} {...otherProps}>
 	<slot />
-</label>
+</El>
