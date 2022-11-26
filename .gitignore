@@ -8,4 +8,5 @@ package
 .env.*
 !.env.example
 package
+static/css
 yarn-error.log
