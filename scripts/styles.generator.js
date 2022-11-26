@@ -23,7 +23,8 @@ function compile(file) {
 	return css
 }
 
+fs.mkdirSync('./static/css', { recursive: true})
 for (const file of files) {
 	const css = compile(file)
-	fs.writeFileSync(`./static/css/${file}.css`, css)
+	fs.writeFileSync(`./static/css/${file}.css`, css, {})
 }
