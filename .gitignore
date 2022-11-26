@@ -7,6 +7,5 @@ package
 .env
 .env.*
 !.env.example
-static/css
 package
 yarn-error.log

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { BaseHtmlElement } from '$lib/components'
+	import { El } from '$lib/components'
 </script>
 
-<BaseHtmlElement {...$$restProps} cssPrefix="row">
+<El {...$$restProps} cssPrefix="row">
 	<slot />
-</BaseHtmlElement>
+</El>

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { El } from '$lib/components'
-
-	import type { ButtonProps } from './Button.types'
+	import type { ButtonProps } from '$lib/components'
 
 	type $$Props = ButtonProps
 
@@ -12,9 +11,14 @@
 	export let type: $$Props['type'] = 'button'
 	export let value: $$Props['value'] = undefined
 	export let size: $$Props['size'] = undefined
-	export let state: $$Props['state'] = undefined
 	export let toggle: $$Props['toggle'] = undefined
 	export let color: $$Props['color'] = undefined
+	export let ghost: $$Props['ghost'] = undefined
+	export let loading: $$Props['loading'] = undefined
+	export let active: $$Props['active'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let pill: $$Props['pill'] = undefined
+	export let tile: $$Props['tile'] = undefined
 
 	let cssProps: any = {}
 	let otherProps: any = {}
@@ -24,15 +28,19 @@
 			outline,
 			size,
 			toggle,
-			state,
 			link,
+			ghost,
+			loading,
+			active,
+			disabled,
+			pill,
+			tile,
 		}
 		otherProps = {
 			tag,
 			cssPrefix,
 			role: tag === 'a' ? 'button' : undefined,
 			type: type ?? 'button',
-			disabled: state === 'disable',
 		}
 	}
 </script>

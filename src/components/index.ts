@@ -1,4 +1,4 @@
-export * from './_internal'
+export * from './Base'
 export * from './Accordion'
 export * from './Alert'
 export * from './App'

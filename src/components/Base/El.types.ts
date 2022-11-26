@@ -33,6 +33,9 @@ export interface CssProps {
 	mx: MarginSizes
 	my: MarginSizes
 
+	// gaps
+	gap: GapSizes
+
 	// display properties
 	clearfix: BooleanValues
 	ratio: DisplayRatioTypes

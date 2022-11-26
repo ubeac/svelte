@@ -1,16 +1,15 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
+	import type { CssProps } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
-
-	import type { CssProps } from './El.type'
 
 	// default properties
 	export let element: any = undefined
 	export let cssPrefix: string | undefined = 'el'
 	export let tag: keyof HTMLElementTagNameMap | undefined = 'div'
-	export let cssProps: Partial<CssProps> = {}
+	export let cssProps: any = {}
 
 	// background properties
 	export let bgColor: BackgroundColors = undefined
@@ -48,6 +47,9 @@
 	export let me: MarginSizes = undefined
 	export let mx: MarginSizes = undefined
 	export let my: MarginSizes = undefined
+
+	// gap properties
+	export let gap: GapSizes = undefined
 
 	// display properties
 	export let clearfix: BooleanValues = undefined
@@ -194,6 +196,8 @@
 			me,
 			mx,
 			my,
+			// gap properties
+			gap,
 			// display properties
 			clearfix,
 			ratio,

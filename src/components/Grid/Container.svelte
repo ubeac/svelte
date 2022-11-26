@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { BaseHtmlElement } from '$lib/components'
+	import { El } from '$lib/components'
 
 	export let fluid: undefined | boolean | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'fluid' = undefined
 
 	let cssProps = { fluid: fluid ?? 'none' }
 </script>
 
-<BaseHtmlElement {...$$restProps} {cssProps} cssPrefix="container">
+<El {...$$restProps} {cssProps} cssPrefix="container">
 	<slot />
-</BaseHtmlElement>
+</El>

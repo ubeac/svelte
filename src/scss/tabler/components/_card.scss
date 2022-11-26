@@ -4,23 +4,17 @@
 $prefix-card: $prefix + 'card';
 $prefix-card-status: $prefix-card + '-status';
 
+$props: (
+	'': '.card',
+	body: '.card-body',
+	header: '.card-header',
+	title:'.card-title',
+	actions:'.card-actions',
+
+);
+
 .#{$prefix-card} {
-	@extend .card;
-
-	// Card Body
-	&-body {
-		@extend .card-body;
-	}
-
-	// Card Header
-	&-header {
-		@extend .card-header;
-	}
-
-	// Card Title
-	&-title {
-		@extend .card-title;
-	}
+	@include apply-props($props);
 
 	// Card Footer
 	&-footer {
@@ -34,10 +28,6 @@ $prefix-card-status: $prefix-card + '-status';
 		}
 	}
 
-	&-actions {
-		@extend .card-actions;
-	}
-
 	&-stamp {
 		@extend .card-stamp;
 
@@ -45,13 +35,15 @@ $prefix-card-status: $prefix-card + '-status';
 			@extend .card-stamp-icon;
 		}
 
-		@each $key, $value in $card-stamp-sizes {
+		@each $key,
+		$value in $card-stamp-sizes {
 			&-size-#{$key} {
 				--stamp-size: #{$value};
 			}
 		}
 
-		@each $key, $value in $theme-colors {
+		@each $key,
+		$value in $theme-colors {
 			&-color-#{$key} &-icon {
 				@extend .bg-#{$key};
 			}
@@ -92,20 +84,26 @@ $prefix-card-status: $prefix-card + '-status';
 
 // Card Status
 .#{$prefix-card-status} {
-	@each $key, $value in $theme-colors {
+
+	@each $key,
+	$value in $theme-colors {
 		&-color-#{$key} {
 			@extend .bg-#{$key};
 		}
 	}
 
-	@each $key in top, start, bottom {
+	@each $key in top,
+	start,
+	bottom {
 		&-position-#{$key} {
 			@extend .card-status-#{$key};
 		}
 	}
 
-	@each $key, $value in $card-status-sizes {
+	@each $key,
+	$value in $card-status-sizes {
 		&-size-#{$key} {
+
 			&.#{$prefix-card-status}-position-top,
 			&.#{$prefix-card-status}-position-bottom {
 				height: $value;

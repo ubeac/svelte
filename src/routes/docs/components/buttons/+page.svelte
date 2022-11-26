@@ -67,18 +67,11 @@
 </Preview>
 
 <h2>Tile buttons</h2>
-<p>
-	Set <code>shape</code> prop to "tile" to remove the border radius, if you want the corners of your button to be square
-	rather than rounded.
-</p>
 <Preview src="./ButtonTile.svelte">
 	<ButtonTile />
 </Preview>
 
-<h2>Rounded buttons</h2>
-<p>
-	Set <code>shape</code> prop to "round" to your button to make it rounded and give it a modern and attractive look.
-</p>
+<h2>Pill buttons</h2>
 <Preview src="./ButtonRound.svelte">
 	<ButtonRound />
 </Preview>

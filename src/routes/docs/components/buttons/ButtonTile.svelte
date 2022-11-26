@@ -3,5 +3,5 @@
 </script>
 
 {#each COLORS as color}
-	<Button shape="tile" {color}>{color}</Button>
+	<Button tile {color}>{color}</Button>
 {/each}

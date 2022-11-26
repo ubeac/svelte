@@ -1,13 +1,14 @@
 <script>
-	import { Avatar, Preview } from '$lib/components'
+	import { Preview } from '$lib/components'
 	import AvatarColors from './AvatarColors.svelte'
 	import AvatarDefault from './AvatarDefault.svelte'
 	import AvatarImage from './AvatarImage.svelte'
 	import AvatarShapes from './AvatarShapes.svelte'
 	import AvatarSize from './AvatarSize.svelte'
+	import AvatarStatus from './AvatarStatus.svelte'
+	import AvatarList from './AvatarList.svelte'
+	import AvatarListStacked from './AvatarListStacked.svelte'
 </script>
-
-<Avatar data-bs-dismiss="true" size="md" shape="circle" color="indigo" bgColor="primary">test</Avatar>
 
 <h1>Avatars</h1>
 <p>
@@ -44,9 +45,24 @@
 	<AvatarSize />
 </Preview>
 
-<h2>Avatar Image</h2>
+<h2>Avatar Image and Icon</h2>
 <p>Set an <code>image</code> as the background to make users easy to indentify and create a personalised experience.</p>
 
 <Preview src="./AvatarImage.svelte">
 	<AvatarImage />
+</Preview>
+
+<h2>Avatar Status</h2>
+<Preview src="./AvatarStatus.svelte">
+	<AvatarStatus />
+</Preview>
+
+<h2>Avatar List</h2>
+<Preview src="./AvatarList.svelte">
+	<AvatarList />
+</Preview>
+
+<h2>Avatar List Stacked</h2>
+<Preview src="./AvatarListStacked.svelte">
+	<AvatarListStacked />
 </Preview>
