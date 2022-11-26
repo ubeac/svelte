@@ -2,22 +2,22 @@
 	import { getContext } from 'svelte'
 
 	import { El } from '$lib/components'
-	import type { AccordionBodyProps } from '$lib/components'
+	import type { AccordionBodyProps, AccordionContext } from '$lib/components'
 
 	type $$Props = AccordionBodyProps
 
 	export let cssPrefix: $$Props['cssPrefix'] = 'accordion-body'
 	export let tag: $$Props['tag'] = 'div'
 
+	let ctx = getContext<AccordionContext>('ACCORDION')
+
 	$: otherProps = {
 		cssPrefix,
 		tag,
 	}
-
-	$: open = true //= getContext('ACCORDION')?.open
 </script>
 
-{#if open}
+{#if $ctx.open}
 	<El {...$$restProps} {...otherProps}>
 		<slot />
 	</El>

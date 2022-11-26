@@ -1,4 +1,5 @@
-// import type { Writable } from 'svelte/store'
+import type { Writable } from 'svelte/store'
+
 import type { ElProps } from '$lib/components'
 
 export interface AccordionsProps extends Partial<ElProps> {
@@ -8,6 +9,7 @@ export interface AccordionsProps extends Partial<ElProps> {
 
 export interface AccordionProps extends Partial<ElProps> {
 	open?: boolean
+	title?: string
 }
 
 export interface AccordionBodyProps extends Partial<ElProps> {
@@ -22,6 +24,6 @@ export interface AccordionTitleProps extends Partial<ElProps> {
 	//
 }
 
-// export type AccordionContext = Writable<{ id?: string; open?: boolean }>
+export type AccordionContext = Writable<{ open?: boolean }>
 
-// export type AccordionsContext = Writable<{ group: string; persistent: boolean; children: any[] }>
+export type AccordionsContext = Writable<{ persistent: boolean; children: any[] }>

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { createEventDispatcher, getContext, setContext } from 'svelte'
+	import { createEventDispatcher, getContext } from 'svelte'
 
 	import { El } from '$lib/components'
-	import type { AccordionHeaderProps } from '$lib/components'
+	import type { AccordionContext, AccordionHeaderProps, AccordionsContext } from '$lib/components'
 
 	const dispatch = createEventDispatcher()
 
@@ -12,24 +12,31 @@
 	export let buttonCssPrefix: $$Props['cssPrefix'] = 'accordion-button'
 	export let tag: $$Props['tag'] = 'h2'
 
+	const parentCtx = getContext<AccordionsContext>('ACCORDIONS')
+	const ctx = getContext<AccordionContext>('ACCORDION')
+
 	$: otherProps = {
 		cssPrefix,
 		tag,
 	}
 
-	const context = getContext('ACCORDION')
+	$: cssProps = {
+		collapsed: !$ctx.open,
+	}
 
 	const onClick = () => {
-		console.log('dispatching')
-		// dispatch('click')
-		console.log($context.open)
-		// setContext('ACCORDION', !getContext('ACCORDION')?.open)
-		// console.log(getContext('ACCORDION'))
+		dispatch('click')
+		if ($parentCtx.persistent) {
+			$parentCtx.children.forEach((childCtx) => {
+				childCtx.set({ open: false })
+			})
+		}
+		$ctx.open = !$ctx.open
 	}
 </script>
 
 <El {...$$restProps} {...otherProps}>
-	<El tag="button" cssPrefix={buttonCssPrefix} on:click={onClick}>
+	<El tag="button" cssPrefix={buttonCssPrefix} on:click={onClick} {cssProps}>
 		<slot />
 	</El>
 </El>

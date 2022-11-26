@@ -10,7 +10,7 @@ $prefix-preview: $prefix + 'preview';
 	}
 
 	&-body {
-		display: flex;
+		display: block;
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;

@@ -2,13 +2,17 @@ $prefix-accordions: $prefix + 'accordions';
 $prefix-accordion: $prefix + 'accordion';
 
 $accordions-props: (
-	'': '.accordion',
+	'': '.accordion'
 );
+
+.#{$prefix-accordions} {
+	@include apply-props($accordions-props);
+}
 
 $accordion-props: (
 	'': '.accordion-item',
 	header:'.accordion-header',
-	body:'.accordion-body',
+	body: '.accordion-body',
 	button:('':'.accordion-button',
 		collapsed:'.collapsed'
 	)
@@ -16,27 +20,4 @@ $accordion-props: (
 
 .#{$prefix-accordion} {
 	@include apply-props($accordion-props);
-}
-
-.#{$prefix-accordions} {
-	@include apply-props($accordions-props);
-	// &-item {
-	// 	@extend .accordion-item;
-	// }
-
-	// &-body {
-	// 	@extend .accordion-body;
-	// 	overflow: hidden;
-	// 	transition: height 0.3s 0ms cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s 0ms cubic-bezier(0.4, 0, 0.2, 1);
-	// 	box-sizing: border-box;
-	// 	height: 0;
-	// 	padding: 16px 24px;
-	// 	padding-top: 0;
-	// 	padding-bottom: 0;
-
-	// 	&-open {
-	// 		height: auto;
-	// 		padding: 16px 24px;
-	// 	}
-	// }
 }
