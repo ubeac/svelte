@@ -152,3 +152,35 @@ export interface ElProps extends CssProps {
 	cssProps?: any
 	[key: string]: any // used when we pass props to DOM Elements using ...$$restProps
 }
+
+// Theme Colors
+export const THEME_COLOR_TYPES: ThemeColors[] = [
+	'primary',
+	'secondary',
+	'success',
+	'danger',
+	'warning',
+	'info',
+	'light',
+	'dark',
+]
+
+export const NAMED_COLOR_TYPES: NamedColors[] = [
+	'blue',
+	'azure',
+	'indigo',
+	'purple',
+	'pink',
+	'red',
+	'orange',
+	'yellow',
+	'lime',
+	'green',
+	'teal',
+	'cyan',
+	'black',
+	'white',
+	'transparent',
+]
+
+export const BACKGROUND_COLOR_TYPES: BackgroundColors[] = [...THEME_COLOR_TYPES, ...NAMED_COLOR_TYPES, 'body']
