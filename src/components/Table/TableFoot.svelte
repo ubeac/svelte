@@ -1,14 +1,13 @@
-<script>
-	import { get_current_component } from 'svelte/internal'
+<script lang="ts">
+	import { El } from '../Base'
+	import type { TableFootProps } from './Table.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = TableFootProps
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('table-foot', undefined, $$props.class)
+	export let tag: $$Props['tag'] = 'tfoot'
+	export let cssPrefix: $$Props['cssPrefix'] = 'table-foot'
 </script>
 
-<tfoot use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssPrefix} {tag}>
 	<slot />
-</tfoot>
+</El>
