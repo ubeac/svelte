@@ -5,7 +5,7 @@
 
 {#each COLORS as color}
 	<Status {color}>
-		<Status animated dot {color} />
+		<Status animated style="dot" />
 		{color}
 	</Status>
 {/each}

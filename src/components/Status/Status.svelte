@@ -13,7 +13,7 @@
 
 	export let animated: $$Props['animated'] = undefined
 	export let color: $$Props['color'] = undefined
-	export let dot: $$Props['dot'] = undefined
+	export let style: $$Props['style'] = 'none'
 	export let lite: $$Props['lite'] = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
@@ -21,7 +21,7 @@
 	$: cssProps = {
 		animated,
 		color,
-		dot,
+		style,
 		lite,
 	}
 

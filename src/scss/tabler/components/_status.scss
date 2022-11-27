@@ -1,8 +1,8 @@
 $prefix-status: $prefix + 'status';
 
 $status-props: (
-	"": ".status",
 	"style": (
+		"none": ".status-none",
 		"dot": ".status-dot",
 		"indicator": ".status-indicator"
 	),
@@ -14,10 +14,10 @@ $status-props: (
 .#{$prefix-status} {
 	@include apply-props($status-props);
 
-	&-dot {
-		padding: 0 !important;
+	&-style-none {
+		@extend .status;
 	}
-
+	
 	&-animated.#{$prefix-status}-style-dot {
 		@extend .status-dot-animated;
 	}
