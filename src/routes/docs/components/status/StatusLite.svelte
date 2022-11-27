@@ -4,7 +4,7 @@
 </script>
 
 {#each COLORS as color}
-	<Status {color}>
+	<Status {color} lite>
 		<Status style="dot" {color} />
 		{color}
 	</Status>

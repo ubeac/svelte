@@ -12,5 +12,11 @@ export interface StatusProps extends Partial<ElProps> {
 	/**
 	 * The type of status
 	 */
-	dot?: boolean
+	style?: 'dot' | 'indicator'
+	/**
+	 * TODO
+	 */
+	lite?: boolean
 }
+
+export interface StatusCircleProps extends Partial<ElProps> {}

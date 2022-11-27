@@ -9,21 +9,9 @@
 	type $$Props = StatusProps
 
 	export let tag: $$Props['tag'] = 'span'
-	export let cssPrefix: $$Props['cssPrefix'] = 'status'
-
-	export let animated: $$Props['animated'] = undefined
-	export let color: $$Props['color'] = undefined
-	export let dot: $$Props['dot'] = undefined
-	export let lite: $$Props['lite'] = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'status-circle'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: cssProps = {
-		animated,
-		color,
-		dot,
-		lite,
-	}
 
 	$: otherProps = {
 		tag,
@@ -31,6 +19,6 @@
 	}
 </script>
 
-<El {...$$restProps} {forwardEvents} {cssProps} {...otherProps}>
+<El {...$$restProps} {forwardEvents} {...otherProps}>
 	<slot />
 </El>

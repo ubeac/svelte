@@ -2,8 +2,12 @@ $prefix-status: $prefix + 'status';
 
 $status-props: (
 	"": ".status",
-	"dot": ".status-dot",
-	"animated": ".status-dot-animated",
+	"style": (
+		"dot": ".status-dot",
+		"indicator": ".status-indicator"
+	),
+	"circle": ".status-indicator-circle",
+	"lite": '.status-lite',
 	'color': generate_props($theme_colors, ('.status-'))
 );
 
@@ -13,4 +17,13 @@ $status-props: (
 	&-dot {
 		padding: 0 !important;
 	}
+
+	&-animated.#{$prefix-status}-style-dot {
+		@extend .status-dot-animated;
+	}
+
+	&-animated.#{$prefix-status}-style-indicator {
+		@extend .status-indicator-animated;
+	}
 }
+
