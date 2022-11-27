@@ -26094,6 +26094,7 @@ Antialiasing
 .u-table-wrap > :not(caption) > * > * {
   white-space: unset;
 }
+
 .u-tabs {
   display: flex;
   flex-direction: column;
