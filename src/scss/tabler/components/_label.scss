@@ -2,7 +2,7 @@ $prefix-label: $prefix + 'label';
 
 $label-props: (
 	'': '.form-label',
-	'required': '.required'
+	required: '.required'
 );
 
 .#{$prefix-label} {
