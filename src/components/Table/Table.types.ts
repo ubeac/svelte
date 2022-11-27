@@ -2,13 +2,18 @@ import type { Writable } from 'svelte/store'
 
 import type { ElProps } from '$lib/components'
 
+type TableResponsiveTypes = boolean | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 type TableSizes = 'sm' | 'md'
 
 export interface TableProps extends Partial<ElProps> {
 	/**
 	 * Removes border between Rows.
 	 */
-	border?: boolean
+	border?: boolean | '0' | 0
+	/**
+	 * Sets color of table.
+	 */
+	color?: ThemeColors
 	/**
 	 * Change the background color of Row on mouse hover.
 	 */
@@ -16,7 +21,7 @@ export interface TableProps extends Partial<ElProps> {
 	/**
 	 * Set different background color for even and odd rows.
 	 */
-	striped?: boolean
+	striped?: boolean | 'columns'
 	/**
 	 * Disable wraping text inside Cells.
 	 */
@@ -25,6 +30,10 @@ export interface TableProps extends Partial<ElProps> {
 	 * Set table size
 	 */
 	size?: TableSizes
+	/**
+	 * TODO
+	 */
+	responsive?: TableResponsiveTypes
 	/**
 	 * Prefix of table's parent element
 	 */
@@ -40,12 +49,30 @@ export interface TableBodyProps extends Partial<ElProps> {
 }
 
 export interface TableCellProps extends Partial<ElProps> {
-	//
+	/**
+	 * Sets color of table cell.
+	 */
+	 color?: ThemeColors
+	 /**
+	 * TODO
+	 */
+     active?: boolean
+	  /**
+	  * TODO
+	  */
+	 truncate?: boolean
+	 /**
+	  * TODO
+	  */
+	 colspan?: string | number
 }
 
 export interface TableFootProps extends Partial<ElProps> {
 	//
 }
 export interface TableRowProps extends Partial<ElProps> {
-	//
+	/**
+	 * Sets color of table row.
+	 */
+	 color?: ThemeColors
 }

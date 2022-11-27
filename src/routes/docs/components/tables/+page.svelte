@@ -1,9 +1,13 @@
 <script>
 	import { Preview } from '@ubeac/svelte'
 	import TableBorder from './TableBorder.svelte'
+	import TableBorderless from './TableBorderless.svelte'
 	import TableDefault from './TableDefault.svelte'
 	import TableHover from './TableHover.svelte'
+	import TableTruncate from './TableTruncate.svelte'
 	import TableStriped from './TableStriped.svelte'
+	import TableResponsive from './TableResponsive.svelte'
+	import TableColors from './TableColors.svelte'
 </script>
 
 <h1>Tables</h1>
@@ -26,6 +30,11 @@
 	<TableBorder />
 </Preview>
 
+<p>You can disable borders by setting border to 0.</p>
+<Preview src="./TableBorderless.svelte">
+	<TableBorderless />
+</Preview>
+
 <h2>Hover effect</h2>
 <p>Table rows can change it's color if yo hover on them.</p>
 
@@ -33,9 +42,33 @@
 	<TableHover />
 </Preview>
 
+
+<h2>Truncate cells</h2>
+<p>TODO</p>
+
+<Preview src="./TableTruncate.svelte">
+	<TableTruncate />
+</Preview>
+
+
 <h2>Striped Tables</h2>
 <p>You can change colors of Even/Odd rows by adding <code>striped</code> prop.</p>
 
 <Preview src="./TableStriped.svelte">
 	<TableStriped />
+</Preview>
+
+<h2>Responsive Tables</h2>
+<p>TODO</p>
+
+<Preview src="./TableResponsive.svelte">
+	<TableResponsive />
+</Preview>
+
+
+<h2>Table Colors</h2>
+<p>TODO</p>
+
+<Preview src="./TableColors.svelte">
+	<TableColors />
 </Preview>
