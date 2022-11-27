@@ -9,6 +9,7 @@ $table-props: (
 	"border-0": ".table-borderless",
 	"nowrap": ".table-nowrap",
 	"hover": ".table-hover",
+	"sort": ".table-sort",
 	"striped": (
 		"": ".table-striped",
 		"columns": ".table-striped-columns"
@@ -17,9 +18,6 @@ $table-props: (
 	"md": ".table-md",
 	"color": generate_props($theme-colors, (".table-"))
 );
-
-	@include apply-props($props);
-}
 
 .#{$prefix-table-parent} {
 	$props: (

@@ -27,6 +27,10 @@ export interface TableProps extends Partial<ElProps> {
 	 */
 	wrap?: boolean
 	/**
+	 * TODO
+	 */
+	sort?: boolean
+	/**
 	 * Set table size
 	 */
 	size?: TableSizes
@@ -75,4 +79,8 @@ export interface TableRowProps extends Partial<ElProps> {
 	 * Sets color of table row.
 	 */
 	 color?: ThemeColors
+	 /**
+	  * TODO
+	  */
+	 active?: boolean
 }

@@ -8,6 +8,7 @@
 	import TableStriped from './TableStriped.svelte'
 	import TableResponsive from './TableResponsive.svelte'
 	import TableColors from './TableColors.svelte'
+	import TableSort from './TableSort.svelte'
 </script>
 
 <h1>Tables</h1>
@@ -71,4 +72,11 @@
 
 <Preview src="./TableColors.svelte">
 	<TableColors />
+</Preview>
+
+<h2>Table Sort</h2>
+<p>TODO</p>
+
+<Preview src="./TableSort.svelte">
+	<TableSort />
 </Preview>
