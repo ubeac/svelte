@@ -18,6 +18,9 @@ $table-props: (
 	"color": generate_props($theme-colors, (".table-"))
 );
 
+	@include apply-props($props);
+}
+
 .#{$prefix-table-parent} {
 	$props: (
 		"": ".table-parent",
@@ -39,6 +42,25 @@ $table-props: (
 	&-wrap> :not(caption)>*>* {
 		white-space: unset;
 	}
+}
+
+.#{$prefix-table-row} {
+	$props: (
+		"color": generate_props($theme-colors, ('.table-')),
+		"active": ".table-active"
+	);
+
+	@include apply-props($props);
+}
+
+.#{$prefix-table-cell} {
+	$props: (
+		"color": generate_props($theme-colors, ('.table-')),
+		"truncate": ".td-truncate",
+		"active": ".table-active"
+	);
+
+	@include apply-props($props);
 }
 
 .#{$prefix-table-row} {
