@@ -7,67 +7,56 @@
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	/**
-	 * Color of Switch
-	 */
-	export let color: Colors = 'default'
+	import { El } from '../Base'
+	import type { SwitchProps } from './Switch.types'
 
-	/**
-	 * Description of Switch
-	 */
-	export let description: string | undefined = undefined
+	type $$Props = SwitchProps
 
-	/**
-	 * The color of escription
-	 */
-	export let descriptionColor: string | undefined = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'switch'
+	export let tag: $$Props['tag'] = 'label'
+	export let id: $$Props['id'] = 'switch-' + nanoid(10)
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
-	/**
-	 * Show Multiple switch buttons in same line
-	 */
-	export let inline: boolean = false
+	export let color: $$Props['color'] = undefined
+	export let description: $$Props['description'] = undefined
+	export let descriptionColor: $$Props['descriptionColor'] = undefined
+	export let inline: $$Props['inline'] = undefined
+	export let text: $$Props['text'] = undefined
+	export let value: $$Props['value'] = undefined
 
-	/**
-	 * Set id for Switch element.
-	 */
-	export let id: string = 'switch-' + nanoid(10);
+	$: cssProps = {
+		inline,
+	}
 
-	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
-
-	/**
-	 * Sets text of Switch
-	 */
-	export let text: string | undefined = undefined
-
-	/**
-	 * Value of Switch
-	 */
-	export let value: boolean | undefined = undefined
-
-	$: classes = classname('switch', { inline }, $$props.class)
+	$: otherProps = {
+		tag,
+		cssPrefix,
+		id,
+		forwardEvents,
+		text,
+		description,
+	}
 </script>
 
-<div class={classes}>
+<El {...$$restProps} {cssProps} {...otherProps}>
 	<input
 		type="checkbox"
 		{id}
 		bind:checked={value}
 		use:forwardEvents
-		{...$$restProps}
-		class={classname('switch-input', { color }, undefined, true)} />
-	<label for={id} class={classname('switch-label')}>
+		class={classname('switch-input', {color}, undefined, true)}
+		cssProps={{ color }} />
+	<El tag="span" for={id} cssPrefix="switch-label" cssProps={{ color }}>
 		<slot>
 			{text}
 		</slot>
-	</label>
+	</El>
+
 	{#if description || $$slots['description']}
-		<div class={classname('switch-description', { color: descriptionColor })}>
+		<El tag="span" cssPrefix="switch-description" cssProps={{ color: descriptionColor }}>
 			<slot name="description">
 				{description}
 			</slot>
-		</div>
+		</El>
 	{/if}
-</div>
+</El>
