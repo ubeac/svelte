@@ -1,6 +1,7 @@
 <script>
 	import { Preview } from '@ubeac/svelte'
 	import BreadcrumbDefault from './BreadcrumbDefault.svelte'
+  import BreadcrumbHeader from './BreadcrumbHeader.svelte'
 	import BreadcrumbSeperator from './BreadcrumbSeperator.svelte'
 </script>
 
@@ -23,6 +24,17 @@
 <Preview vertical src="./BreadcrumbSeperator.svelte">
 	<div class="example-breadcrumbs">
 		<BreadcrumbSeperator />
+	</div>
+</Preview>
+
+
+<h2>Breadcrumb in Header</h2>
+<p>
+	If you wish to use breadcrumbs in headers, place them above the headers.
+</p>
+<Preview vertical src="./BreadcrumbHeader.svelte">
+	<div class="example-breadcrumbs">
+		<BreadcrumbHeader />
 	</div>
 </Preview>
 

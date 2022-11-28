@@ -2,25 +2,33 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
 
-	/**
-	 * Mark this as an active Breadcrumb item
-	 */
-	export let active: boolean = false
+	import { El } from '../Base'
+	import type { BreadcrumbItemProps } from './Breadcrumb.types'
 
-	/**
-	 * Set the Href of component
-	 */
-	export let href: string | undefined = undefined
+	type $$Props = BreadcrumbItemProps
 
-	const forwardEevnts = forwardEventsBuilder(get_current_component())
+	export let cssPrefix: $$Props['cssPrefix'] = 'breadcrumb-item'
+	export let tag: $$Props['tag'] = 'li'
 
-	$: classes = classname('breadcrumb-item', { active }, $$props.class)
+	export let active: $$Props['active'] = undefined
+	export let href: $$Props['href'] = undefined
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+
+	$: cssProps = {
+		active,
+	}
+
+	$: otherProps = {
+		cssPrefix,
+		tag,
+		'aria-current': active ? 'page' : null
+	}
 </script>
 
-<li use:forwardEevnts {...$$restProps} class={classes}>
-	<a {href}>
+<El {forwardEvents} {...$$restProps} {cssProps} {...otherProps}>
+	<El {href} tag="a" cssPrefix="breadcrumb-inner">
 		<slot />
-	</a>
-</li>
+	</El>
+</El>

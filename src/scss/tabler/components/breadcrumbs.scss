@@ -1,20 +1,19 @@
 $prefix-breadcrumb: $prefix + 'breadcrumb';
 $breadcrumb-types: 'arrows', 'bullets', 'dots';
 
+$breadcrumb-props: (
+	"": ".breadcrumb",
+	"item": (
+		"": ".breadcrumb-item",
+		"active": ".active"
+	),
+	"separator": (
+		"dots": ".breadcrumb-dots",
+		"arrows": ".breadcrumb-arrows",
+		"bullets": ".breadcrumb-bullets",
+	)
+);
+
 .#{$prefix-breadcrumb} {
-	@extend .breadcrumb;
-
-	&-item {
-		@extend .breadcrumb-item;
-	}
-
-	&-item-active {
-		@extend .active;
-	}
-
-	@each $key in $breadcrumb-types {
-		&-#{$key} {
-			@extend .breadcrumb-#{$key};
-		}
-	}
+	@include apply-props($breadcrumb-props);
 }
