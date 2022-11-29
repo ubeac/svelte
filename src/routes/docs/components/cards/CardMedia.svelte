@@ -7,7 +7,9 @@
 	<Col class="mb-3">
 		<Card class="example-column example-column-1">
 			<CardMedia position="top">
-				<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
+				<img
+					alt=""
+					src="https://preview.tabler.io/static/photos/finances-us-dollars-and-bitcoins-currency-money-3.jpg" />
 			</CardMedia>
 			<CardBody>
 				<CardTitle>Title</CardTitle>

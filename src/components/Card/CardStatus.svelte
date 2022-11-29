@@ -1,41 +1,40 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	import type { CardStatusProps } from './Card.types'
 
-	import type { CardStatusPositions, CardStatusSizes } from './Card.types'
+	type $$Props = CardStatusProps
 
+	export let cssPrefix: $$Props['cssPrefix'] = 'card-status'
 	/**
 	 * You can use color property to change status's border color
 	 */
-	export let color: Colors = 'default'
+	export let color: $$Props['color'] = 'primary'
 
 	/**
 	 * You can set position of status using position property
 	 */
-	export let position: CardStatusPositions = undefined
+	export let colorPosition: $$Props['colorPosition'] = undefined
 
 	/**
 	 * If you want to change size of Status, use size property
 	 */
-	export let size: CardStatusSizes = 'md'
+	export let size: $$Props['size'] = 'md'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname(
-		'card-status',
-		{
-			color,
-			position,
+	let cssProps: any = {}
+	let otherProps: any = {}
+	$: {
+		cssProps = {
 			size,
-		},
-		$$props.class,
-		true
-	)
+			colorPosition,
+			color,
+		}
+		otherProps = {
+			cssPrefix,
+		}
+	}
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssProps} {...otherProps}>
 	<slot />
-</div>
+</El>

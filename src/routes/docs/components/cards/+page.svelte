@@ -9,7 +9,6 @@
 	import CardColor from './CardColor.svelte'
 	import CardStamp from './CardStamp.svelte'
 	import CardStampSize from './CardStampSize.svelte'
-	import CardAction from './CardAction.svelte'
 	import CardMedia from './CardMedia.svelte'
 </script>
 
@@ -103,15 +102,3 @@
 <Preview src="./CardMedia.svelte">
 	<CardMedia />
 </Preview>
-
-<style global>
-	.example-column {
-		margin: 0 auto;
-	}
-	.example-column-1 {
-		max-width: 26rem;
-	}
-	.example-column-2 {
-		max-width: 52rem;
-	}
-</style>

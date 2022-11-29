@@ -662,7 +662,7 @@ progress {
     max-width: 1320px;
   }
 }
-.row, .u-row, .u-el-row {
+.row, .u-row, .u-el-row-deck, .u-el-row-, .u-el-row {
   --u-gutter-x: 1rem;
   --u-gutter-y: 0;
   display: flex;
@@ -671,7 +671,7 @@ progress {
   margin-right: calc(-0.5 * var(--u-gutter-x));
   margin-left: calc(-0.5 * var(--u-gutter-x));
 }
-.row > *, .u-row > *, .u-el-row > * {
+.row > *, .u-row > *, .u-el-row-deck > *, .u-el-row- > *, .u-el-row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -1120,32 +1120,32 @@ progress {
   width: auto;
 }
 
-.row-cols-1 > * {
+.row-cols-1 > *, .u-el-row-cols-1 > * {
   flex: 0 0 auto;
   width: 100%;
 }
 
-.row-cols-2 > * {
+.row-cols-2 > *, .u-el-row-cols-2 > * {
   flex: 0 0 auto;
   width: 50%;
 }
 
-.row-cols-3 > * {
+.row-cols-3 > *, .u-el-row-cols-3 > * {
   flex: 0 0 auto;
   width: 33.3333333333%;
 }
 
-.row-cols-4 > * {
+.row-cols-4 > *, .u-el-row-cols-4 > * {
   flex: 0 0 auto;
   width: 25%;
 }
 
-.row-cols-5 > * {
+.row-cols-5 > *, .u-el-row-cols-5 > * {
   flex: 0 0 auto;
   width: 20%;
 }
 
-.row-cols-6 > * {
+.row-cols-6 > *, .u-el-row-cols-6 > * {
   flex: 0 0 auto;
   width: 16.6666666667%;
 }
@@ -1327,27 +1327,27 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .row-cols-sm-1 > * {
+  .row-cols-sm-1 > *, .u-el-row-cols-sm-1 > * {
     flex: 0 0 auto;
     width: 100%;
   }
-  .row-cols-sm-2 > * {
+  .row-cols-sm-2 > *, .u-el-row-cols-sm-2 > * {
     flex: 0 0 auto;
     width: 50%;
   }
-  .row-cols-sm-3 > * {
+  .row-cols-sm-3 > *, .u-el-row-cols-sm-3 > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
-  .row-cols-sm-4 > * {
+  .row-cols-sm-4 > *, .u-el-row-cols-sm-4 > * {
     flex: 0 0 auto;
     width: 25%;
   }
-  .row-cols-sm-5 > * {
+  .row-cols-sm-5 > *, .u-el-row-cols-sm-5 > * {
     flex: 0 0 auto;
     width: 20%;
   }
-  .row-cols-sm-6 > * {
+  .row-cols-sm-6 > *, .u-el-row-cols-sm-6 > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -1406,37 +1406,37 @@ progress {
   .offset-sm-0 {
     margin-left: 0;
   }
-  .offset-sm-1, .u-col-offset-sm-1 {
+  .offset-sm-1, .u-col-offset-sm-1, .u-el-offset-1, .u-el-offset-sm-1 {
     margin-left: 8.33333333%;
   }
-  .offset-sm-2, .u-col-offset-sm-2 {
+  .offset-sm-2, .u-col-offset-sm-2, .u-el-offset-2, .u-el-offset-sm-2 {
     margin-left: 16.66666667%;
   }
-  .offset-sm-3, .u-col-offset-sm-3 {
+  .offset-sm-3, .u-col-offset-sm-3, .u-el-offset-3, .u-el-offset-sm-3 {
     margin-left: 25%;
   }
-  .offset-sm-4, .u-col-offset-sm-4 {
+  .offset-sm-4, .u-col-offset-sm-4, .u-el-offset-4, .u-el-offset-sm-4 {
     margin-left: 33.33333333%;
   }
-  .offset-sm-5, .u-col-offset-sm-5 {
+  .offset-sm-5, .u-col-offset-sm-5, .u-el-offset-5, .u-el-offset-sm-5 {
     margin-left: 41.66666667%;
   }
-  .offset-sm-6, .u-col-offset-sm-6 {
+  .offset-sm-6, .u-col-offset-sm-6, .u-el-offset-6, .u-el-offset-sm-6 {
     margin-left: 50%;
   }
-  .offset-sm-7, .u-col-offset-sm-7 {
+  .offset-sm-7, .u-col-offset-sm-7, .u-el-offset-7, .u-el-offset-sm-7 {
     margin-left: 58.33333333%;
   }
-  .offset-sm-8, .u-col-offset-sm-8 {
+  .offset-sm-8, .u-col-offset-sm-8, .u-el-offset-8, .u-el-offset-sm-8 {
     margin-left: 66.66666667%;
   }
-  .offset-sm-9, .u-col-offset-sm-9 {
+  .offset-sm-9, .u-col-offset-sm-9, .u-el-offset-9, .u-el-offset-sm-9 {
     margin-left: 75%;
   }
-  .offset-sm-10, .u-col-offset-sm-10 {
+  .offset-sm-10, .u-col-offset-sm-10, .u-el-offset-10, .u-el-offset-sm-10 {
     margin-left: 83.33333333%;
   }
-  .offset-sm-11, .u-col-offset-sm-11 {
+  .offset-sm-11, .u-col-offset-sm-11, .u-el-offset-11, .u-el-offset-sm-11 {
     margin-left: 91.66666667%;
   }
   .g-sm-0,
@@ -1496,27 +1496,27 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .row-cols-md-1 > * {
+  .row-cols-md-1 > *, .u-el-row-cols-md-1 > * {
     flex: 0 0 auto;
     width: 100%;
   }
-  .row-cols-md-2 > * {
+  .row-cols-md-2 > *, .u-el-row-cols-md-2 > * {
     flex: 0 0 auto;
     width: 50%;
   }
-  .row-cols-md-3 > * {
+  .row-cols-md-3 > *, .u-el-row-cols-md-3 > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
-  .row-cols-md-4 > * {
+  .row-cols-md-4 > *, .u-el-row-cols-md-4 > * {
     flex: 0 0 auto;
     width: 25%;
   }
-  .row-cols-md-5 > * {
+  .row-cols-md-5 > *, .u-el-row-cols-md-5 > * {
     flex: 0 0 auto;
     width: 20%;
   }
-  .row-cols-md-6 > * {
+  .row-cols-md-6 > *, .u-el-row-cols-md-6 > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -1575,37 +1575,37 @@ progress {
   .offset-md-0 {
     margin-left: 0;
   }
-  .offset-md-1, .u-col-offset-md-1 {
+  .offset-md-1, .u-col-offset-md-1, .u-el-offset-1, .u-el-offset-md-1 {
     margin-left: 8.33333333%;
   }
-  .offset-md-2, .u-col-offset-md-2 {
+  .offset-md-2, .u-col-offset-md-2, .u-el-offset-2, .u-el-offset-md-2 {
     margin-left: 16.66666667%;
   }
-  .offset-md-3, .u-col-offset-md-3 {
+  .offset-md-3, .u-col-offset-md-3, .u-el-offset-3, .u-el-offset-md-3 {
     margin-left: 25%;
   }
-  .offset-md-4, .u-col-offset-md-4 {
+  .offset-md-4, .u-col-offset-md-4, .u-el-offset-4, .u-el-offset-md-4 {
     margin-left: 33.33333333%;
   }
-  .offset-md-5, .u-col-offset-md-5 {
+  .offset-md-5, .u-col-offset-md-5, .u-el-offset-5, .u-el-offset-md-5 {
     margin-left: 41.66666667%;
   }
-  .offset-md-6, .u-col-offset-md-6 {
+  .offset-md-6, .u-col-offset-md-6, .u-el-offset-6, .u-el-offset-md-6 {
     margin-left: 50%;
   }
-  .offset-md-7, .u-col-offset-md-7 {
+  .offset-md-7, .u-col-offset-md-7, .u-el-offset-7, .u-el-offset-md-7 {
     margin-left: 58.33333333%;
   }
-  .offset-md-8, .u-col-offset-md-8 {
+  .offset-md-8, .u-col-offset-md-8, .u-el-offset-8, .u-el-offset-md-8 {
     margin-left: 66.66666667%;
   }
-  .offset-md-9, .u-col-offset-md-9 {
+  .offset-md-9, .u-col-offset-md-9, .u-el-offset-9, .u-el-offset-md-9 {
     margin-left: 75%;
   }
-  .offset-md-10, .u-col-offset-md-10 {
+  .offset-md-10, .u-col-offset-md-10, .u-el-offset-10, .u-el-offset-md-10 {
     margin-left: 83.33333333%;
   }
-  .offset-md-11, .u-col-offset-md-11 {
+  .offset-md-11, .u-col-offset-md-11, .u-el-offset-11, .u-el-offset-md-11 {
     margin-left: 91.66666667%;
   }
   .g-md-0,
@@ -1665,27 +1665,27 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .row-cols-lg-1 > * {
+  .row-cols-lg-1 > *, .u-el-row-cols-lg-1 > * {
     flex: 0 0 auto;
     width: 100%;
   }
-  .row-cols-lg-2 > * {
+  .row-cols-lg-2 > *, .u-el-row-cols-lg-2 > * {
     flex: 0 0 auto;
     width: 50%;
   }
-  .row-cols-lg-3 > * {
+  .row-cols-lg-3 > *, .u-el-row-cols-lg-3 > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
-  .row-cols-lg-4 > * {
+  .row-cols-lg-4 > *, .u-el-row-cols-lg-4 > * {
     flex: 0 0 auto;
     width: 25%;
   }
-  .row-cols-lg-5 > * {
+  .row-cols-lg-5 > *, .u-el-row-cols-lg-5 > * {
     flex: 0 0 auto;
     width: 20%;
   }
-  .row-cols-lg-6 > * {
+  .row-cols-lg-6 > *, .u-el-row-cols-lg-6 > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -1744,37 +1744,37 @@ progress {
   .offset-lg-0 {
     margin-left: 0;
   }
-  .offset-lg-1, .u-col-offset-lg-1 {
+  .offset-lg-1, .u-col-offset-lg-1, .u-el-offset-1, .u-el-offset-lg-1 {
     margin-left: 8.33333333%;
   }
-  .offset-lg-2, .u-col-offset-lg-2 {
+  .offset-lg-2, .u-col-offset-lg-2, .u-el-offset-2, .u-el-offset-lg-2 {
     margin-left: 16.66666667%;
   }
-  .offset-lg-3, .u-col-offset-lg-3 {
+  .offset-lg-3, .u-col-offset-lg-3, .u-el-offset-3, .u-el-offset-lg-3 {
     margin-left: 25%;
   }
-  .offset-lg-4, .u-col-offset-lg-4 {
+  .offset-lg-4, .u-col-offset-lg-4, .u-el-offset-4, .u-el-offset-lg-4 {
     margin-left: 33.33333333%;
   }
-  .offset-lg-5, .u-col-offset-lg-5 {
+  .offset-lg-5, .u-col-offset-lg-5, .u-el-offset-5, .u-el-offset-lg-5 {
     margin-left: 41.66666667%;
   }
-  .offset-lg-6, .u-col-offset-lg-6 {
+  .offset-lg-6, .u-col-offset-lg-6, .u-el-offset-6, .u-el-offset-lg-6 {
     margin-left: 50%;
   }
-  .offset-lg-7, .u-col-offset-lg-7 {
+  .offset-lg-7, .u-col-offset-lg-7, .u-el-offset-7, .u-el-offset-lg-7 {
     margin-left: 58.33333333%;
   }
-  .offset-lg-8, .u-col-offset-lg-8 {
+  .offset-lg-8, .u-col-offset-lg-8, .u-el-offset-8, .u-el-offset-lg-8 {
     margin-left: 66.66666667%;
   }
-  .offset-lg-9, .u-col-offset-lg-9 {
+  .offset-lg-9, .u-col-offset-lg-9, .u-el-offset-9, .u-el-offset-lg-9 {
     margin-left: 75%;
   }
-  .offset-lg-10, .u-col-offset-lg-10 {
+  .offset-lg-10, .u-col-offset-lg-10, .u-el-offset-10, .u-el-offset-lg-10 {
     margin-left: 83.33333333%;
   }
-  .offset-lg-11, .u-col-offset-lg-11 {
+  .offset-lg-11, .u-col-offset-lg-11, .u-el-offset-11, .u-el-offset-lg-11 {
     margin-left: 91.66666667%;
   }
   .g-lg-0,
@@ -1834,27 +1834,27 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .row-cols-xl-1 > * {
+  .row-cols-xl-1 > *, .u-el-row-cols-xl-1 > * {
     flex: 0 0 auto;
     width: 100%;
   }
-  .row-cols-xl-2 > * {
+  .row-cols-xl-2 > *, .u-el-row-cols-xl-2 > * {
     flex: 0 0 auto;
     width: 50%;
   }
-  .row-cols-xl-3 > * {
+  .row-cols-xl-3 > *, .u-el-row-cols-xl-3 > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
-  .row-cols-xl-4 > * {
+  .row-cols-xl-4 > *, .u-el-row-cols-xl-4 > * {
     flex: 0 0 auto;
     width: 25%;
   }
-  .row-cols-xl-5 > * {
+  .row-cols-xl-5 > *, .u-el-row-cols-xl-5 > * {
     flex: 0 0 auto;
     width: 20%;
   }
-  .row-cols-xl-6 > * {
+  .row-cols-xl-6 > *, .u-el-row-cols-xl-6 > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -1913,37 +1913,37 @@ progress {
   .offset-xl-0 {
     margin-left: 0;
   }
-  .offset-xl-1, .u-col-offset-xl-1 {
+  .offset-xl-1, .u-col-offset-xl-1, .u-el-offset-1, .u-el-offset-xl-1 {
     margin-left: 8.33333333%;
   }
-  .offset-xl-2, .u-col-offset-xl-2 {
+  .offset-xl-2, .u-col-offset-xl-2, .u-el-offset-2, .u-el-offset-xl-2 {
     margin-left: 16.66666667%;
   }
-  .offset-xl-3, .u-col-offset-xl-3 {
+  .offset-xl-3, .u-col-offset-xl-3, .u-el-offset-3, .u-el-offset-xl-3 {
     margin-left: 25%;
   }
-  .offset-xl-4, .u-col-offset-xl-4 {
+  .offset-xl-4, .u-col-offset-xl-4, .u-el-offset-4, .u-el-offset-xl-4 {
     margin-left: 33.33333333%;
   }
-  .offset-xl-5, .u-col-offset-xl-5 {
+  .offset-xl-5, .u-col-offset-xl-5, .u-el-offset-5, .u-el-offset-xl-5 {
     margin-left: 41.66666667%;
   }
-  .offset-xl-6, .u-col-offset-xl-6 {
+  .offset-xl-6, .u-col-offset-xl-6, .u-el-offset-6, .u-el-offset-xl-6 {
     margin-left: 50%;
   }
-  .offset-xl-7, .u-col-offset-xl-7 {
+  .offset-xl-7, .u-col-offset-xl-7, .u-el-offset-7, .u-el-offset-xl-7 {
     margin-left: 58.33333333%;
   }
-  .offset-xl-8, .u-col-offset-xl-8 {
+  .offset-xl-8, .u-col-offset-xl-8, .u-el-offset-8, .u-el-offset-xl-8 {
     margin-left: 66.66666667%;
   }
-  .offset-xl-9, .u-col-offset-xl-9 {
+  .offset-xl-9, .u-col-offset-xl-9, .u-el-offset-9, .u-el-offset-xl-9 {
     margin-left: 75%;
   }
-  .offset-xl-10, .u-col-offset-xl-10 {
+  .offset-xl-10, .u-col-offset-xl-10, .u-el-offset-10, .u-el-offset-xl-10 {
     margin-left: 83.33333333%;
   }
-  .offset-xl-11, .u-col-offset-xl-11 {
+  .offset-xl-11, .u-col-offset-xl-11, .u-el-offset-11, .u-el-offset-xl-11 {
     margin-left: 91.66666667%;
   }
   .g-xl-0,
@@ -2003,27 +2003,27 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .row-cols-xxl-1 > * {
+  .row-cols-xxl-1 > *, .u-el-row-cols-xxl-1 > * {
     flex: 0 0 auto;
     width: 100%;
   }
-  .row-cols-xxl-2 > * {
+  .row-cols-xxl-2 > *, .u-el-row-cols-xxl-2 > * {
     flex: 0 0 auto;
     width: 50%;
   }
-  .row-cols-xxl-3 > * {
+  .row-cols-xxl-3 > *, .u-el-row-cols-xxl-3 > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
-  .row-cols-xxl-4 > * {
+  .row-cols-xxl-4 > *, .u-el-row-cols-xxl-4 > * {
     flex: 0 0 auto;
     width: 25%;
   }
-  .row-cols-xxl-5 > * {
+  .row-cols-xxl-5 > *, .u-el-row-cols-xxl-5 > * {
     flex: 0 0 auto;
     width: 20%;
   }
-  .row-cols-xxl-6 > * {
+  .row-cols-xxl-6 > *, .u-el-row-cols-xxl-6 > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -2082,37 +2082,37 @@ progress {
   .offset-xxl-0 {
     margin-left: 0;
   }
-  .offset-xxl-1 {
+  .offset-xxl-1, .u-el-offset-1, .u-el-offset-xxl-1 {
     margin-left: 8.33333333%;
   }
-  .offset-xxl-2 {
+  .offset-xxl-2, .u-el-offset-2, .u-el-offset-xxl-2 {
     margin-left: 16.66666667%;
   }
-  .offset-xxl-3 {
+  .offset-xxl-3, .u-el-offset-3, .u-el-offset-xxl-3 {
     margin-left: 25%;
   }
-  .offset-xxl-4 {
+  .offset-xxl-4, .u-el-offset-4, .u-el-offset-xxl-4 {
     margin-left: 33.33333333%;
   }
-  .offset-xxl-5 {
+  .offset-xxl-5, .u-el-offset-5, .u-el-offset-xxl-5 {
     margin-left: 41.66666667%;
   }
-  .offset-xxl-6 {
+  .offset-xxl-6, .u-el-offset-6, .u-el-offset-xxl-6 {
     margin-left: 50%;
   }
-  .offset-xxl-7 {
+  .offset-xxl-7, .u-el-offset-7, .u-el-offset-xxl-7 {
     margin-left: 58.33333333%;
   }
-  .offset-xxl-8 {
+  .offset-xxl-8, .u-el-offset-8, .u-el-offset-xxl-8 {
     margin-left: 66.66666667%;
   }
-  .offset-xxl-9 {
+  .offset-xxl-9, .u-el-offset-9, .u-el-offset-xxl-9 {
     margin-left: 75%;
   }
-  .offset-xxl-10 {
+  .offset-xxl-10, .u-el-offset-10, .u-el-offset-xxl-10 {
     margin-left: 83.33333333%;
   }
-  .offset-xxl-11 {
+  .offset-xxl-11, .u-el-offset-11, .u-el-offset-xxl-11 {
     margin-left: 91.66666667%;
   }
   .g-xxl-0,
@@ -9227,15 +9227,15 @@ textarea.form-control-lg, textarea.u-input.u-input-size-lg, textarea.u-file-uplo
   line-height: 1.7142857143 !important;
 }
 
-.text-start {
+.text-start, .u-el-text-align-start {
   text-align: left !important;
 }
 
-.text-end {
+.text-end, .u-el-text-align-end {
   text-align: right !important;
 }
 
-.text-center {
+.text-center, .u-el-text-align-center {
   text-align: center !important;
 }
 
@@ -9504,182 +9504,182 @@ textarea.form-control-lg, textarea.u-input.u-input-size-lg, textarea.u-file-uplo
   --u-text-opacity: 1;
 }
 
-.bg-primary, .u-card-status-color-primary, .u-card-stamp-color-primary .u-card-stamp-icon, .u-el-bg-color-primary, .u-badge-color-primary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-primary .u-app-loading-bar-body {
+.bg-primary, .u-card-status-color-primary, .u-card-stamp-color-primary > .icon, .u-card-stamp-color-primary > .u-icon, .u-el-bg-color-primary, .u-badge-color-primary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-primary .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-primary-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-secondary, .u-card-status-color-secondary, .u-card-stamp-color-secondary .u-card-stamp-icon, .u-el-bg-color-secondary, .u-badge-color-secondary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-secondary .u-app-loading-bar-body {
+.bg-secondary, .u-card-status-color-secondary, .u-card-stamp-color-secondary > .icon, .u-card-stamp-color-secondary > .u-icon, .u-el-bg-color-secondary, .u-badge-color-secondary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-secondary .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-secondary-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-success, .u-card-status-color-success, .u-card-stamp-color-success .u-card-stamp-icon, .u-el-bg-color-success, .u-badge-color-success:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-success .u-app-loading-bar-body {
+.bg-success, .u-card-status-color-success, .u-card-stamp-color-success > .icon, .u-card-stamp-color-success > .u-icon, .u-el-bg-color-success, .u-badge-color-success:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-success .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-success-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-info, .u-card-status-color-info, .u-card-stamp-color-info .u-card-stamp-icon, .u-el-bg-color-info, .u-badge-color-info:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-info .u-app-loading-bar-body {
+.bg-info, .u-card-status-color-info, .u-card-stamp-color-info > .icon, .u-card-stamp-color-info > .u-icon, .u-el-bg-color-info, .u-badge-color-info:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-info .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-info-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-warning, .u-card-status-color-warning, .u-card-stamp-color-warning .u-card-stamp-icon, .u-el-bg-color-warning, .u-badge-color-warning:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-warning .u-app-loading-bar-body {
+.bg-warning, .u-card-status-color-warning, .u-card-stamp-color-warning > .icon, .u-card-stamp-color-warning > .u-icon, .u-el-bg-color-warning, .u-badge-color-warning:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-warning .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-warning-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-danger, .u-card-status-color-danger, .u-card-stamp-color-danger .u-card-stamp-icon, .u-el-bg-color-danger, .u-badge-color-danger:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-danger .u-app-loading-bar-body {
+.bg-danger, .u-card-status-color-danger, .u-card-stamp-color-danger > .icon, .u-card-stamp-color-danger > .u-icon, .u-el-bg-color-danger, .u-badge-color-danger:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-danger .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-danger-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-light, .u-card-status-color-light, .u-card-stamp-color-light .u-card-stamp-icon, .u-el-bg-color-light, .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-light .u-app-loading-bar-body {
+.bg-light, .u-card-status-color-light, .u-card-stamp-color-light > .icon, .u-card-stamp-color-light > .u-icon, .u-el-bg-color-light, .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-light .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-light-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-dark, .u-card-status-color-dark, .u-card-stamp-color-dark .u-card-stamp-icon, .u-el-bg-color-dark, .u-badge-color-dark:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dark .u-app-loading-bar-body {
+.bg-dark, .u-card-status-color-dark, .u-card-stamp-color-dark > .icon, .u-card-stamp-color-dark > .u-icon, .u-el-bg-color-dark, .u-badge-color-dark:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dark .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-dark-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-muted, .u-card-status-color-muted, .u-card-stamp-color-muted .u-card-stamp-icon, .u-el-bg-color-muted, .u-badge-color-muted:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-muted .u-app-loading-bar-body {
+.bg-muted, .u-card-status-color-muted, .u-card-stamp-color-muted > .icon, .u-card-stamp-color-muted > .u-icon, .u-el-bg-color-muted, .u-badge-color-muted:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-muted .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-muted-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-blue, .u-card-status-color-blue, .u-card-stamp-color-blue .u-card-stamp-icon, .u-el-bg-color-blue, .u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .u-app-loading-bar-body {
+.bg-blue, .u-card-status-color-blue, .u-card-stamp-color-blue > .icon, .u-card-stamp-color-blue > .u-icon, .u-el-bg-color-blue, .u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-blue-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-azure, .u-card-status-color-azure, .u-card-stamp-color-azure .u-card-stamp-icon, .u-el-bg-color-azure, .u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .u-app-loading-bar-body {
+.bg-azure, .u-card-status-color-azure, .u-card-stamp-color-azure > .icon, .u-card-stamp-color-azure > .u-icon, .u-el-bg-color-azure, .u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-azure-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-indigo, .u-card-status-color-indigo, .u-card-stamp-color-indigo .u-card-stamp-icon, .u-el-bg-color-indigo, .u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .u-app-loading-bar-body {
+.bg-indigo, .u-card-status-color-indigo, .u-card-stamp-color-indigo > .icon, .u-card-stamp-color-indigo > .u-icon, .u-el-bg-color-indigo, .u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-indigo-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-purple, .u-card-status-color-purple, .u-card-stamp-color-purple .u-card-stamp-icon, .u-el-bg-color-purple, .u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .u-app-loading-bar-body {
+.bg-purple, .u-card-status-color-purple, .u-card-stamp-color-purple > .icon, .u-card-stamp-color-purple > .u-icon, .u-el-bg-color-purple, .u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-purple-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-pink, .u-card-status-color-pink, .u-card-stamp-color-pink .u-card-stamp-icon, .u-el-bg-color-pink, .u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .u-app-loading-bar-body {
+.bg-pink, .u-card-status-color-pink, .u-card-stamp-color-pink > .icon, .u-card-stamp-color-pink > .u-icon, .u-el-bg-color-pink, .u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-pink-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-red, .u-card-status-color-red, .u-card-stamp-color-red .u-card-stamp-icon, .u-el-bg-color-red, .u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .u-app-loading-bar-body {
+.bg-red, .u-card-status-color-red, .u-card-stamp-color-red > .icon, .u-card-stamp-color-red > .u-icon, .u-el-bg-color-red, .u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-red-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-orange, .u-card-status-color-orange, .u-card-stamp-color-orange .u-card-stamp-icon, .u-el-bg-color-orange, .u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .u-app-loading-bar-body {
+.bg-orange, .u-card-status-color-orange, .u-card-stamp-color-orange > .icon, .u-card-stamp-color-orange > .u-icon, .u-el-bg-color-orange, .u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-orange-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-yellow, .u-card-status-color-yellow, .u-card-stamp-color-yellow .u-card-stamp-icon, .u-el-bg-color-yellow, .u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .u-app-loading-bar-body {
+.bg-yellow, .u-card-status-color-yellow, .u-card-stamp-color-yellow > .icon, .u-card-stamp-color-yellow > .u-icon, .u-el-bg-color-yellow, .u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-yellow-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-lime, .u-card-status-color-lime, .u-card-stamp-color-lime .u-card-stamp-icon, .u-el-bg-color-lime, .u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .u-app-loading-bar-body {
+.bg-lime, .u-card-status-color-lime, .u-card-stamp-color-lime > .icon, .u-card-stamp-color-lime > .u-icon, .u-el-bg-color-lime, .u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-lime-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-green, .u-card-status-color-green, .u-card-stamp-color-green .u-card-stamp-icon, .u-el-bg-color-green, .u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .u-app-loading-bar-body {
+.bg-green, .u-card-status-color-green, .u-card-stamp-color-green > .icon, .u-card-stamp-color-green > .u-icon, .u-el-bg-color-green, .u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-green-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-teal, .u-card-status-color-teal, .u-card-stamp-color-teal .u-card-stamp-icon, .u-el-bg-color-teal, .u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .u-app-loading-bar-body {
+.bg-teal, .u-card-status-color-teal, .u-card-stamp-color-teal > .icon, .u-card-stamp-color-teal > .u-icon, .u-el-bg-color-teal, .u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-teal-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-cyan, .u-card-status-color-cyan, .u-card-stamp-color-cyan .u-card-stamp-icon, .u-el-bg-color-cyan, .u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .u-app-loading-bar-body {
+.bg-cyan, .u-card-status-color-cyan, .u-card-stamp-color-cyan > .icon, .u-card-stamp-color-cyan > .u-icon, .u-el-bg-color-cyan, .u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-cyan-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-facebook, .u-card-status-color-facebook, .u-card-stamp-color-facebook .u-card-stamp-icon, .u-el-bg-color-facebook, .u-badge-color-facebook:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-facebook .u-app-loading-bar-body {
+.bg-facebook, .u-card-status-color-facebook, .u-card-stamp-color-facebook > .icon, .u-card-stamp-color-facebook > .u-icon, .u-el-bg-color-facebook, .u-badge-color-facebook:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-facebook .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-facebook-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-twitter, .u-card-status-color-twitter, .u-card-stamp-color-twitter .u-card-stamp-icon, .u-el-bg-color-twitter, .u-badge-color-twitter:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-twitter .u-app-loading-bar-body {
+.bg-twitter, .u-card-status-color-twitter, .u-card-stamp-color-twitter > .icon, .u-card-stamp-color-twitter > .u-icon, .u-el-bg-color-twitter, .u-badge-color-twitter:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-twitter .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-twitter-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-linkedin, .u-card-status-color-linkedin, .u-card-stamp-color-linkedin .u-card-stamp-icon, .u-el-bg-color-linkedin, .u-badge-color-linkedin:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-linkedin .u-app-loading-bar-body {
+.bg-linkedin, .u-card-status-color-linkedin, .u-card-stamp-color-linkedin > .icon, .u-card-stamp-color-linkedin > .u-icon, .u-el-bg-color-linkedin, .u-badge-color-linkedin:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-linkedin .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-linkedin-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-google, .u-card-status-color-google, .u-card-stamp-color-google .u-card-stamp-icon, .u-el-bg-color-google, .u-badge-color-google:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-google .u-app-loading-bar-body {
+.bg-google, .u-card-status-color-google, .u-card-stamp-color-google > .icon, .u-card-stamp-color-google > .u-icon, .u-el-bg-color-google, .u-badge-color-google:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-google .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-google-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-youtube, .u-card-status-color-youtube, .u-card-stamp-color-youtube .u-card-stamp-icon, .u-el-bg-color-youtube, .u-badge-color-youtube:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-youtube .u-app-loading-bar-body {
+.bg-youtube, .u-card-status-color-youtube, .u-card-stamp-color-youtube > .icon, .u-card-stamp-color-youtube > .u-icon, .u-el-bg-color-youtube, .u-badge-color-youtube:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-youtube .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-youtube-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-vimeo, .u-card-status-color-vimeo, .u-card-stamp-color-vimeo .u-card-stamp-icon, .u-el-bg-color-vimeo, .u-badge-color-vimeo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vimeo .u-app-loading-bar-body {
+.bg-vimeo, .u-card-status-color-vimeo, .u-card-stamp-color-vimeo > .icon, .u-card-stamp-color-vimeo > .u-icon, .u-el-bg-color-vimeo, .u-badge-color-vimeo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vimeo .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-vimeo-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-dribbble, .u-card-status-color-dribbble, .u-card-stamp-color-dribbble .u-card-stamp-icon, .u-el-bg-color-dribbble, .u-badge-color-dribbble:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dribbble .u-app-loading-bar-body {
+.bg-dribbble, .u-card-status-color-dribbble, .u-card-stamp-color-dribbble > .icon, .u-card-stamp-color-dribbble > .u-icon, .u-el-bg-color-dribbble, .u-badge-color-dribbble:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dribbble .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-dribbble-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-github, .u-card-status-color-github, .u-card-stamp-color-github .u-card-stamp-icon, .u-el-bg-color-github, .u-badge-color-github:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-github .u-app-loading-bar-body {
+.bg-github, .u-card-status-color-github, .u-card-stamp-color-github > .icon, .u-card-stamp-color-github > .u-icon, .u-el-bg-color-github, .u-badge-color-github:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-github .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-github-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-instagram, .u-card-status-color-instagram, .u-card-stamp-color-instagram .u-card-stamp-icon, .u-el-bg-color-instagram, .u-badge-color-instagram:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-instagram .u-app-loading-bar-body {
+.bg-instagram, .u-card-status-color-instagram, .u-card-stamp-color-instagram > .icon, .u-card-stamp-color-instagram > .u-icon, .u-el-bg-color-instagram, .u-badge-color-instagram:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-instagram .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-instagram-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-pinterest, .u-card-status-color-pinterest, .u-card-stamp-color-pinterest .u-card-stamp-icon, .u-el-bg-color-pinterest, .u-badge-color-pinterest:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pinterest .u-app-loading-bar-body {
+.bg-pinterest, .u-card-status-color-pinterest, .u-card-stamp-color-pinterest > .icon, .u-card-stamp-color-pinterest > .u-icon, .u-el-bg-color-pinterest, .u-badge-color-pinterest:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pinterest .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-pinterest-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-vk, .u-card-status-color-vk, .u-card-stamp-color-vk .u-card-stamp-icon, .u-el-bg-color-vk, .u-badge-color-vk:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vk .u-app-loading-bar-body {
+.bg-vk, .u-card-status-color-vk, .u-card-stamp-color-vk > .icon, .u-card-stamp-color-vk > .u-icon, .u-el-bg-color-vk, .u-badge-color-vk:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vk .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-vk-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-rss, .u-card-status-color-rss, .u-card-stamp-color-rss .u-card-stamp-icon, .u-el-bg-color-rss, .u-badge-color-rss:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-rss .u-app-loading-bar-body {
+.bg-rss, .u-card-status-color-rss, .u-card-stamp-color-rss > .icon, .u-card-stamp-color-rss > .u-icon, .u-el-bg-color-rss, .u-badge-color-rss:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-rss .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-rss-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-flickr, .u-card-status-color-flickr, .u-card-stamp-color-flickr .u-card-stamp-icon, .u-el-bg-color-flickr, .u-badge-color-flickr:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-flickr .u-app-loading-bar-body {
+.bg-flickr, .u-card-status-color-flickr, .u-card-stamp-color-flickr > .icon, .u-card-stamp-color-flickr > .u-icon, .u-el-bg-color-flickr, .u-badge-color-flickr:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-flickr .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-flickr-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-bitbucket, .u-card-status-color-bitbucket, .u-card-stamp-color-bitbucket .u-card-stamp-icon, .u-el-bg-color-bitbucket, .u-badge-color-bitbucket:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-bitbucket .u-app-loading-bar-body {
+.bg-bitbucket, .u-card-status-color-bitbucket, .u-card-stamp-color-bitbucket > .icon, .u-card-stamp-color-bitbucket > .u-icon, .u-el-bg-color-bitbucket, .u-badge-color-bitbucket:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-bitbucket .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-bitbucket-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-tabler, .u-card-status-color-tabler, .u-card-stamp-color-tabler .u-card-stamp-icon, .u-el-bg-color-tabler, .u-badge-color-tabler:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-tabler .u-app-loading-bar-body {
+.bg-tabler, .u-card-status-color-tabler, .u-card-stamp-color-tabler > .icon, .u-card-stamp-color-tabler > .u-icon, .u-el-bg-color-tabler, .u-badge-color-tabler:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-tabler .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-tabler-rgb), var(--u-bg-opacity)) !important;
 }
@@ -15752,7 +15752,7 @@ body:not(.theme-dark):not(.u-body-theme-dark) .hide-theme-light {
   .theme-dark .modal, .theme-dark .u-dialog, .u-body-theme-dark .modal, .u-body-theme-dark .u-dialog {
     --u-modal-border-color: var(--u-border-color);
   }
-  .theme-dark .bg-light, .theme-dark .u-card-status-color-light, .theme-dark .u-card-stamp-color-light .u-card-stamp-icon, .u-card-stamp-color-light .theme-dark .u-card-stamp-icon, .theme-dark .u-el-bg-color-light, .theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .theme-dark .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .theme-dark .u-app-loading-bar-body, .u-body-theme-dark .bg-light, .u-body-theme-dark .u-card-status-color-light, .u-body-theme-dark .u-card-stamp-color-light .u-card-stamp-icon, .u-card-stamp-color-light .u-body-theme-dark .u-card-stamp-icon, .u-body-theme-dark .u-el-bg-color-light, .u-body-theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-body-theme-dark .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .u-body-theme-dark .u-app-loading-bar-body {
+  .theme-dark .bg-light, .theme-dark .u-card-status-color-light, .theme-dark .u-card-stamp-color-light > .icon, .theme-dark .u-card-stamp-color-light > .u-icon, .theme-dark .u-el-bg-color-light, .theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .theme-dark .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .theme-dark .u-app-loading-bar-body, .u-body-theme-dark .bg-light, .u-body-theme-dark .u-card-status-color-light, .u-body-theme-dark .u-card-stamp-color-light > .icon, .u-body-theme-dark .u-card-stamp-color-light > .u-icon, .u-body-theme-dark .u-el-bg-color-light, .u-body-theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-body-theme-dark .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .u-body-theme-dark .u-app-loading-bar-body {
     background-color: #1a2234 !important;
   }
   .theme-dark .card-tabs .nav-tabs .nav-link, .u-tabs .u-tabs-items .theme-dark .card-tabs .nav-tabs .u-tabs-item, .theme-dark .card-tabs .u-tabs .u-tabs-items .nav-link, .theme-dark .card-tabs .u-tabs .u-tabs-items .u-tabs-item, .u-tabs .theme-dark .card-tabs .u-tabs-items .nav-link, .u-tabs .theme-dark .card-tabs .u-tabs-items .u-tabs-item, .u-body-theme-dark .card-tabs .nav-tabs .nav-link, .u-tabs .u-tabs-items .u-body-theme-dark .card-tabs .nav-tabs .u-tabs-item, .u-body-theme-dark .card-tabs .u-tabs .u-tabs-items .nav-link, .u-body-theme-dark .card-tabs .u-tabs .u-tabs-items .u-tabs-item, .u-tabs .u-body-theme-dark .card-tabs .u-tabs-items .nav-link, .u-tabs .u-body-theme-dark .card-tabs .u-tabs-items .u-tabs-item {
@@ -15946,7 +15946,7 @@ body:not(.theme-dark):not(.u-body-theme-dark) .hide-theme-light {
     .theme-dark-auto .modal, .theme-dark-auto .u-dialog {
       --u-modal-border-color: var(--u-border-color);
     }
-    .theme-dark-auto .bg-light, .theme-dark-auto .u-card-status-color-light, .theme-dark-auto .u-card-stamp-color-light .u-card-stamp-icon, .u-card-stamp-color-light .theme-dark-auto .u-card-stamp-icon, .theme-dark-auto .u-el-bg-color-light, .theme-dark-auto .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .theme-dark-auto .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .theme-dark-auto .u-app-loading-bar-body {
+    .theme-dark-auto .bg-light, .theme-dark-auto .u-card-status-color-light, .theme-dark-auto .u-card-stamp-color-light > .icon, .theme-dark-auto .u-card-stamp-color-light > .u-icon, .theme-dark-auto .u-el-bg-color-light, .theme-dark-auto .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .theme-dark-auto .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .theme-dark-auto .u-app-loading-bar-body {
       background-color: #1a2234 !important;
     }
     .theme-dark-auto .card-tabs .nav-tabs .nav-link, .u-tabs .u-tabs-items .theme-dark-auto .card-tabs .nav-tabs .u-tabs-item, .theme-dark-auto .card-tabs .u-tabs .u-tabs-items .nav-link, .theme-dark-auto .card-tabs .u-tabs .u-tabs-items .u-tabs-item, .u-tabs .theme-dark-auto .card-tabs .u-tabs-items .nav-link, .u-tabs .theme-dark-auto .card-tabs .u-tabs-items .u-tabs-item {
@@ -18595,7 +18595,7 @@ a.card:hover, a.u-card:hover {
   --u-stamp-size: 13rem;
 }
 
-.card-stamp-icon, .u-card-stamp-icon {
+.card-stamp-icon, .u-card-stamp > .icon, .u-card-stamp > .u-icon {
   background: var(--u-muted);
   color: var(--u-card-bg, var(--u-bg-surface));
   display: flex;
@@ -18610,7 +18610,7 @@ a.card:hover, a.u-card:hover {
   font-size: calc(var(--u-stamp-size) * 0.75);
   transform: rotate(10deg);
 }
-.card-stamp-icon .icon, .card-stamp-icon .u-icon, .u-card-stamp-icon .icon, .u-card-stamp-icon .u-icon {
+.card-stamp-icon .icon, .card-stamp-icon .u-icon, .u-card-stamp > .icon .icon, .u-card-stamp > .u-icon .icon, .u-card-stamp > .icon .u-icon, .u-card-stamp > .u-icon .u-icon {
   stroke-width: 2;
   width: calc(var(--u-stamp-size) * 0.75);
   height: calc(var(--u-stamp-size) * 0.75);
@@ -18896,7 +18896,7 @@ Card optinos
 /**
 Card status
  */
-.card-status-top, .u-card-status-position-top {
+.card-status-top, .u-card-status-color-position-top {
   position: absolute;
   top: 0;
   right: 0;
@@ -18905,7 +18905,7 @@ Card status
   border-radius: var(--u-card-border-radius) var(--u-card-border-radius) 0 0;
 }
 
-.card-status-start, .u-card-status-position-start {
+.card-status-start, .u-card-status-color-position-start {
   position: absolute;
   right: auto;
   bottom: 0;
@@ -18914,7 +18914,7 @@ Card status
   border-radius: var(--u-card-border-radius) 0 0 var(--u-card-border-radius);
 }
 
-.card-status-bottom, .u-card-status-position-bottom {
+.card-status-bottom, .u-card-status-color-position-bottom {
   position: absolute;
   top: initial;
   bottom: 0;
@@ -19264,7 +19264,7 @@ Card list group
   border-radius: var(--u-border-radius);
 }
 
-.row > *, .u-row > *, .u-el-row > * {
+.row > *, .u-row > *, .u-el-row-deck > *, .u-el-row- > *, .u-el-row > * {
   min-width: 0;
 }
 
@@ -19363,14 +19363,17 @@ Card list group
   margin-bottom: 6rem;
 }
 
-.row-deck > .col, .row-deck > .u-col, .row-deck > .u-el-col,
-.row-deck > [class*=col-] {
+.row-deck > .col, .row-deck > .u-col, .u-el-row-deck > .col, .u-el-row-deck > .u-col, .row-deck > .u-el-col, .u-el-row-deck > .u-el-col,
+.row-deck > [class*=col-],
+.u-el-row-deck > [class*=col-] {
   display: flex;
   align-items: stretch;
 }
-.row-deck > .col .card, .row-deck > .u-col .card, .row-deck > .col .u-card, .row-deck > .u-col .u-card, .row-deck > .u-el-col .card, .row-deck > .u-el-col .u-card,
+.row-deck > .col .card, .row-deck > .u-col .card, .row-deck > .col .u-card, .row-deck > .u-col .u-card, .u-el-row-deck > .col .card, .u-el-row-deck > .u-col .card, .u-el-row-deck > .col .u-card, .u-el-row-deck > .u-col .u-card, .row-deck > .u-el-col .card, .row-deck > .u-el-col .u-card, .u-el-row-deck > .u-el-col .card, .u-el-row-deck > .u-el-col .u-card,
 .row-deck > [class*=col-] .card,
-.row-deck > [class*=col-] .u-card {
+.row-deck > [class*=col-] .u-card,
+.u-el-row-deck > [class*=col-] .card,
+.u-el-row-deck > [class*=col-] .u-card {
   flex: 1 1 auto;
 }
 
@@ -21031,73 +21034,73 @@ Progressbg
   border-top-color: transparent;
   border-right-color: transparent;
 }
-.ribbon.bg-blue, .ribbon.u-card-status-color-blue, .u-card-stamp-color-blue .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-blue, .ribbon.u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .ribbon.u-app-loading-bar-body {
+.ribbon.bg-blue, .ribbon.u-card-status-color-blue, .u-card-stamp-color-blue > .ribbon.icon, .u-card-stamp-color-blue > .ribbon.u-icon, .ribbon.u-el-bg-color-blue, .ribbon.u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .ribbon.u-app-loading-bar-body {
   border-color: var(--u-blue);
 }
 .ribbon.bg-blue-lt, .ribbon.u-badge-color-blue.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-blue, .ribbon.u-app-loading-bar-blue {
   border-color: rgba(var(--u-blue-rgb), 0.1) !important;
 }
-.ribbon.bg-azure, .ribbon.u-card-status-color-azure, .u-card-stamp-color-azure .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-azure, .ribbon.u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .ribbon.u-app-loading-bar-body {
+.ribbon.bg-azure, .ribbon.u-card-status-color-azure, .u-card-stamp-color-azure > .ribbon.icon, .u-card-stamp-color-azure > .ribbon.u-icon, .ribbon.u-el-bg-color-azure, .ribbon.u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .ribbon.u-app-loading-bar-body {
   border-color: var(--u-azure);
 }
 .ribbon.bg-azure-lt, .ribbon.u-badge-color-azure.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-azure, .ribbon.u-app-loading-bar-azure {
   border-color: rgba(var(--u-azure-rgb), 0.1) !important;
 }
-.ribbon.bg-indigo, .ribbon.u-card-status-color-indigo, .u-card-stamp-color-indigo .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-indigo, .ribbon.u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .ribbon.u-app-loading-bar-body {
+.ribbon.bg-indigo, .ribbon.u-card-status-color-indigo, .u-card-stamp-color-indigo > .ribbon.icon, .u-card-stamp-color-indigo > .ribbon.u-icon, .ribbon.u-el-bg-color-indigo, .ribbon.u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .ribbon.u-app-loading-bar-body {
   border-color: var(--u-indigo);
 }
 .ribbon.bg-indigo-lt, .ribbon.u-badge-color-indigo.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-indigo, .ribbon.u-app-loading-bar-indigo {
   border-color: rgba(var(--u-indigo-rgb), 0.1) !important;
 }
-.ribbon.bg-purple, .ribbon.u-card-status-color-purple, .u-card-stamp-color-purple .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-purple, .ribbon.u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .ribbon.u-app-loading-bar-body {
+.ribbon.bg-purple, .ribbon.u-card-status-color-purple, .u-card-stamp-color-purple > .ribbon.icon, .u-card-stamp-color-purple > .ribbon.u-icon, .ribbon.u-el-bg-color-purple, .ribbon.u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .ribbon.u-app-loading-bar-body {
   border-color: var(--u-purple);
 }
 .ribbon.bg-purple-lt, .ribbon.u-badge-color-purple.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-purple, .ribbon.u-app-loading-bar-purple {
   border-color: rgba(var(--u-purple-rgb), 0.1) !important;
 }
-.ribbon.bg-pink, .ribbon.u-card-status-color-pink, .u-card-stamp-color-pink .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-pink, .ribbon.u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .ribbon.u-app-loading-bar-body {
+.ribbon.bg-pink, .ribbon.u-card-status-color-pink, .u-card-stamp-color-pink > .ribbon.icon, .u-card-stamp-color-pink > .ribbon.u-icon, .ribbon.u-el-bg-color-pink, .ribbon.u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .ribbon.u-app-loading-bar-body {
   border-color: var(--u-pink);
 }
 .ribbon.bg-pink-lt, .ribbon.u-badge-color-pink.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-pink, .ribbon.u-app-loading-bar-pink {
   border-color: rgba(var(--u-pink-rgb), 0.1) !important;
 }
-.ribbon.bg-red, .ribbon.u-card-status-color-red, .u-card-stamp-color-red .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-red, .ribbon.u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .ribbon.u-app-loading-bar-body {
+.ribbon.bg-red, .ribbon.u-card-status-color-red, .u-card-stamp-color-red > .ribbon.icon, .u-card-stamp-color-red > .ribbon.u-icon, .ribbon.u-el-bg-color-red, .ribbon.u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .ribbon.u-app-loading-bar-body {
   border-color: var(--u-red);
 }
 .ribbon.bg-red-lt, .ribbon.u-badge-color-red.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-red, .ribbon.u-app-loading-bar-red {
   border-color: rgba(var(--u-red-rgb), 0.1) !important;
 }
-.ribbon.bg-orange, .ribbon.u-card-status-color-orange, .u-card-stamp-color-orange .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-orange, .ribbon.u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .ribbon.u-app-loading-bar-body {
+.ribbon.bg-orange, .ribbon.u-card-status-color-orange, .u-card-stamp-color-orange > .ribbon.icon, .u-card-stamp-color-orange > .ribbon.u-icon, .ribbon.u-el-bg-color-orange, .ribbon.u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .ribbon.u-app-loading-bar-body {
   border-color: var(--u-orange);
 }
 .ribbon.bg-orange-lt, .ribbon.u-badge-color-orange.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-orange, .ribbon.u-app-loading-bar-orange {
   border-color: rgba(var(--u-orange-rgb), 0.1) !important;
 }
-.ribbon.bg-yellow, .ribbon.u-card-status-color-yellow, .u-card-stamp-color-yellow .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-yellow, .ribbon.u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .ribbon.u-app-loading-bar-body {
+.ribbon.bg-yellow, .ribbon.u-card-status-color-yellow, .u-card-stamp-color-yellow > .ribbon.icon, .u-card-stamp-color-yellow > .ribbon.u-icon, .ribbon.u-el-bg-color-yellow, .ribbon.u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .ribbon.u-app-loading-bar-body {
   border-color: var(--u-yellow);
 }
 .ribbon.bg-yellow-lt, .ribbon.u-badge-color-yellow.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-yellow, .ribbon.u-app-loading-bar-yellow {
   border-color: rgba(var(--u-yellow-rgb), 0.1) !important;
 }
-.ribbon.bg-lime, .ribbon.u-card-status-color-lime, .u-card-stamp-color-lime .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-lime, .ribbon.u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .ribbon.u-app-loading-bar-body {
+.ribbon.bg-lime, .ribbon.u-card-status-color-lime, .u-card-stamp-color-lime > .ribbon.icon, .u-card-stamp-color-lime > .ribbon.u-icon, .ribbon.u-el-bg-color-lime, .ribbon.u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .ribbon.u-app-loading-bar-body {
   border-color: var(--u-lime);
 }
 .ribbon.bg-lime-lt, .ribbon.u-badge-color-lime.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-lime, .ribbon.u-app-loading-bar-lime {
   border-color: rgba(var(--u-lime-rgb), 0.1) !important;
 }
-.ribbon.bg-green, .ribbon.u-card-status-color-green, .u-card-stamp-color-green .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-green, .ribbon.u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .ribbon.u-app-loading-bar-body {
+.ribbon.bg-green, .ribbon.u-card-status-color-green, .u-card-stamp-color-green > .ribbon.icon, .u-card-stamp-color-green > .ribbon.u-icon, .ribbon.u-el-bg-color-green, .ribbon.u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .ribbon.u-app-loading-bar-body {
   border-color: var(--u-green);
 }
 .ribbon.bg-green-lt, .ribbon.u-badge-color-green.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-green, .ribbon.u-app-loading-bar-green {
   border-color: rgba(var(--u-green-rgb), 0.1) !important;
 }
-.ribbon.bg-teal, .ribbon.u-card-status-color-teal, .u-card-stamp-color-teal .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-teal, .ribbon.u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .ribbon.u-app-loading-bar-body {
+.ribbon.bg-teal, .ribbon.u-card-status-color-teal, .u-card-stamp-color-teal > .ribbon.icon, .u-card-stamp-color-teal > .ribbon.u-icon, .ribbon.u-el-bg-color-teal, .ribbon.u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .ribbon.u-app-loading-bar-body {
   border-color: var(--u-teal);
 }
 .ribbon.bg-teal-lt, .ribbon.u-badge-color-teal.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-teal, .ribbon.u-app-loading-bar-teal {
   border-color: rgba(var(--u-teal-rgb), 0.1) !important;
 }
-.ribbon.bg-cyan, .ribbon.u-card-status-color-cyan, .u-card-stamp-color-cyan .ribbon.u-card-stamp-icon, .ribbon.u-el-bg-color-cyan, .ribbon.u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .ribbon.u-app-loading-bar-body {
+.ribbon.bg-cyan, .ribbon.u-card-status-color-cyan, .u-card-stamp-color-cyan > .ribbon.icon, .u-card-stamp-color-cyan > .ribbon.u-icon, .ribbon.u-el-bg-color-cyan, .ribbon.u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .ribbon.u-app-loading-bar-body {
   border-color: var(--u-cyan);
 }
 .ribbon.bg-cyan-lt, .ribbon.u-badge-color-cyan.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-cyan, .ribbon.u-app-loading-bar-cyan {
@@ -22944,7 +22947,7 @@ Chart sparkline
   background-position: center;
 }
 
-.bg-primary, .u-card-status-color-primary, .u-card-stamp-color-primary .u-card-stamp-icon, .u-el-bg-color-primary, .u-badge-color-primary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-primary .u-app-loading-bar-body {
+.bg-primary, .u-card-status-color-primary, .u-card-stamp-color-primary > .icon, .u-card-stamp-color-primary > .u-icon, .u-el-bg-color-primary, .u-badge-color-primary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-primary .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-primary-rgb), var(--u-bg-opacity)) !important;
 }
@@ -22956,7 +22959,7 @@ Chart sparkline
   background-color: rgba(var(--u-primary-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-secondary, .u-card-status-color-secondary, .u-card-stamp-color-secondary .u-card-stamp-icon, .u-el-bg-color-secondary, .u-badge-color-secondary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-secondary .u-app-loading-bar-body {
+.bg-secondary, .u-card-status-color-secondary, .u-card-stamp-color-secondary > .icon, .u-card-stamp-color-secondary > .u-icon, .u-el-bg-color-secondary, .u-badge-color-secondary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-secondary .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-secondary-rgb), var(--u-bg-opacity)) !important;
 }
@@ -22968,7 +22971,7 @@ Chart sparkline
   background-color: rgba(var(--u-secondary-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-success, .u-card-status-color-success, .u-card-stamp-color-success .u-card-stamp-icon, .u-el-bg-color-success, .u-badge-color-success:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-success .u-app-loading-bar-body {
+.bg-success, .u-card-status-color-success, .u-card-stamp-color-success > .icon, .u-card-stamp-color-success > .u-icon, .u-el-bg-color-success, .u-badge-color-success:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-success .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-success-rgb), var(--u-bg-opacity)) !important;
 }
@@ -22980,7 +22983,7 @@ Chart sparkline
   background-color: rgba(var(--u-success-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-info, .u-card-status-color-info, .u-card-stamp-color-info .u-card-stamp-icon, .u-el-bg-color-info, .u-badge-color-info:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-info .u-app-loading-bar-body {
+.bg-info, .u-card-status-color-info, .u-card-stamp-color-info > .icon, .u-card-stamp-color-info > .u-icon, .u-el-bg-color-info, .u-badge-color-info:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-info .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-info-rgb), var(--u-bg-opacity)) !important;
 }
@@ -22992,7 +22995,7 @@ Chart sparkline
   background-color: rgba(var(--u-info-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-warning, .u-card-status-color-warning, .u-card-stamp-color-warning .u-card-stamp-icon, .u-el-bg-color-warning, .u-badge-color-warning:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-warning .u-app-loading-bar-body {
+.bg-warning, .u-card-status-color-warning, .u-card-stamp-color-warning > .icon, .u-card-stamp-color-warning > .u-icon, .u-el-bg-color-warning, .u-badge-color-warning:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-warning .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-warning-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23004,7 +23007,7 @@ Chart sparkline
   background-color: rgba(var(--u-warning-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-danger, .u-card-status-color-danger, .u-card-stamp-color-danger .u-card-stamp-icon, .u-el-bg-color-danger, .u-badge-color-danger:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-danger .u-app-loading-bar-body {
+.bg-danger, .u-card-status-color-danger, .u-card-stamp-color-danger > .icon, .u-card-stamp-color-danger > .u-icon, .u-el-bg-color-danger, .u-badge-color-danger:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-danger .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-danger-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23016,7 +23019,7 @@ Chart sparkline
   background-color: rgba(var(--u-danger-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-light, .u-card-status-color-light, .u-card-stamp-color-light .u-card-stamp-icon, .u-el-bg-color-light, .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-light .u-app-loading-bar-body {
+.bg-light, .u-card-status-color-light, .u-card-stamp-color-light > .icon, .u-card-stamp-color-light > .u-icon, .u-el-bg-color-light, .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-light .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-light-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23028,7 +23031,7 @@ Chart sparkline
   background-color: rgba(var(--u-light-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-dark, .u-card-status-color-dark, .u-card-stamp-color-dark .u-card-stamp-icon, .u-el-bg-color-dark, .u-badge-color-dark:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dark .u-app-loading-bar-body {
+.bg-dark, .u-card-status-color-dark, .u-card-stamp-color-dark > .icon, .u-card-stamp-color-dark > .u-icon, .u-el-bg-color-dark, .u-badge-color-dark:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dark .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-dark-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23040,7 +23043,7 @@ Chart sparkline
   background-color: rgba(var(--u-dark-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-muted, .u-card-status-color-muted, .u-card-stamp-color-muted .u-card-stamp-icon, .u-el-bg-color-muted, .u-badge-color-muted:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-muted .u-app-loading-bar-body {
+.bg-muted, .u-card-status-color-muted, .u-card-stamp-color-muted > .icon, .u-card-stamp-color-muted > .u-icon, .u-el-bg-color-muted, .u-badge-color-muted:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-muted .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-muted-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23052,7 +23055,7 @@ Chart sparkline
   background-color: rgba(var(--u-muted-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-blue, .u-card-status-color-blue, .u-card-stamp-color-blue .u-card-stamp-icon, .u-el-bg-color-blue, .u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .u-app-loading-bar-body {
+.bg-blue, .u-card-status-color-blue, .u-card-stamp-color-blue > .icon, .u-card-stamp-color-blue > .u-icon, .u-el-bg-color-blue, .u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-blue-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23064,7 +23067,7 @@ Chart sparkline
   background-color: rgba(var(--u-blue-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-azure, .u-card-status-color-azure, .u-card-stamp-color-azure .u-card-stamp-icon, .u-el-bg-color-azure, .u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .u-app-loading-bar-body {
+.bg-azure, .u-card-status-color-azure, .u-card-stamp-color-azure > .icon, .u-card-stamp-color-azure > .u-icon, .u-el-bg-color-azure, .u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-azure-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23076,7 +23079,7 @@ Chart sparkline
   background-color: rgba(var(--u-azure-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-indigo, .u-card-status-color-indigo, .u-card-stamp-color-indigo .u-card-stamp-icon, .u-el-bg-color-indigo, .u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .u-app-loading-bar-body {
+.bg-indigo, .u-card-status-color-indigo, .u-card-stamp-color-indigo > .icon, .u-card-stamp-color-indigo > .u-icon, .u-el-bg-color-indigo, .u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-indigo-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23088,7 +23091,7 @@ Chart sparkline
   background-color: rgba(var(--u-indigo-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-purple, .u-card-status-color-purple, .u-card-stamp-color-purple .u-card-stamp-icon, .u-el-bg-color-purple, .u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .u-app-loading-bar-body {
+.bg-purple, .u-card-status-color-purple, .u-card-stamp-color-purple > .icon, .u-card-stamp-color-purple > .u-icon, .u-el-bg-color-purple, .u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-purple-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23100,7 +23103,7 @@ Chart sparkline
   background-color: rgba(var(--u-purple-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-pink, .u-card-status-color-pink, .u-card-stamp-color-pink .u-card-stamp-icon, .u-el-bg-color-pink, .u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .u-app-loading-bar-body {
+.bg-pink, .u-card-status-color-pink, .u-card-stamp-color-pink > .icon, .u-card-stamp-color-pink > .u-icon, .u-el-bg-color-pink, .u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-pink-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23112,7 +23115,7 @@ Chart sparkline
   background-color: rgba(var(--u-pink-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-red, .u-card-status-color-red, .u-card-stamp-color-red .u-card-stamp-icon, .u-el-bg-color-red, .u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .u-app-loading-bar-body {
+.bg-red, .u-card-status-color-red, .u-card-stamp-color-red > .icon, .u-card-stamp-color-red > .u-icon, .u-el-bg-color-red, .u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-red-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23124,7 +23127,7 @@ Chart sparkline
   background-color: rgba(var(--u-red-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-orange, .u-card-status-color-orange, .u-card-stamp-color-orange .u-card-stamp-icon, .u-el-bg-color-orange, .u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .u-app-loading-bar-body {
+.bg-orange, .u-card-status-color-orange, .u-card-stamp-color-orange > .icon, .u-card-stamp-color-orange > .u-icon, .u-el-bg-color-orange, .u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-orange-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23136,7 +23139,7 @@ Chart sparkline
   background-color: rgba(var(--u-orange-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-yellow, .u-card-status-color-yellow, .u-card-stamp-color-yellow .u-card-stamp-icon, .u-el-bg-color-yellow, .u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .u-app-loading-bar-body {
+.bg-yellow, .u-card-status-color-yellow, .u-card-stamp-color-yellow > .icon, .u-card-stamp-color-yellow > .u-icon, .u-el-bg-color-yellow, .u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-yellow-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23148,7 +23151,7 @@ Chart sparkline
   background-color: rgba(var(--u-yellow-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-lime, .u-card-status-color-lime, .u-card-stamp-color-lime .u-card-stamp-icon, .u-el-bg-color-lime, .u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .u-app-loading-bar-body {
+.bg-lime, .u-card-status-color-lime, .u-card-stamp-color-lime > .icon, .u-card-stamp-color-lime > .u-icon, .u-el-bg-color-lime, .u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-lime-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23160,7 +23163,7 @@ Chart sparkline
   background-color: rgba(var(--u-lime-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-green, .u-card-status-color-green, .u-card-stamp-color-green .u-card-stamp-icon, .u-el-bg-color-green, .u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .u-app-loading-bar-body {
+.bg-green, .u-card-status-color-green, .u-card-stamp-color-green > .icon, .u-card-stamp-color-green > .u-icon, .u-el-bg-color-green, .u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-green-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23172,7 +23175,7 @@ Chart sparkline
   background-color: rgba(var(--u-green-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-teal, .u-card-status-color-teal, .u-card-stamp-color-teal .u-card-stamp-icon, .u-el-bg-color-teal, .u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .u-app-loading-bar-body {
+.bg-teal, .u-card-status-color-teal, .u-card-stamp-color-teal > .icon, .u-card-stamp-color-teal > .u-icon, .u-el-bg-color-teal, .u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-teal-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23184,7 +23187,7 @@ Chart sparkline
   background-color: rgba(var(--u-teal-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-cyan, .u-card-status-color-cyan, .u-card-stamp-color-cyan .u-card-stamp-icon, .u-el-bg-color-cyan, .u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .u-app-loading-bar-body {
+.bg-cyan, .u-card-status-color-cyan, .u-card-stamp-color-cyan > .icon, .u-card-stamp-color-cyan > .u-icon, .u-el-bg-color-cyan, .u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-cyan-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23196,7 +23199,7 @@ Chart sparkline
   background-color: rgba(var(--u-cyan-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-facebook, .u-card-status-color-facebook, .u-card-stamp-color-facebook .u-card-stamp-icon, .u-el-bg-color-facebook, .u-badge-color-facebook:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-facebook .u-app-loading-bar-body {
+.bg-facebook, .u-card-status-color-facebook, .u-card-stamp-color-facebook > .icon, .u-card-stamp-color-facebook > .u-icon, .u-el-bg-color-facebook, .u-badge-color-facebook:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-facebook .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-facebook-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23208,7 +23211,7 @@ Chart sparkline
   background-color: rgba(var(--u-facebook-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-twitter, .u-card-status-color-twitter, .u-card-stamp-color-twitter .u-card-stamp-icon, .u-el-bg-color-twitter, .u-badge-color-twitter:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-twitter .u-app-loading-bar-body {
+.bg-twitter, .u-card-status-color-twitter, .u-card-stamp-color-twitter > .icon, .u-card-stamp-color-twitter > .u-icon, .u-el-bg-color-twitter, .u-badge-color-twitter:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-twitter .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-twitter-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23220,7 +23223,7 @@ Chart sparkline
   background-color: rgba(var(--u-twitter-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-linkedin, .u-card-status-color-linkedin, .u-card-stamp-color-linkedin .u-card-stamp-icon, .u-el-bg-color-linkedin, .u-badge-color-linkedin:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-linkedin .u-app-loading-bar-body {
+.bg-linkedin, .u-card-status-color-linkedin, .u-card-stamp-color-linkedin > .icon, .u-card-stamp-color-linkedin > .u-icon, .u-el-bg-color-linkedin, .u-badge-color-linkedin:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-linkedin .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-linkedin-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23232,7 +23235,7 @@ Chart sparkline
   background-color: rgba(var(--u-linkedin-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-google, .u-card-status-color-google, .u-card-stamp-color-google .u-card-stamp-icon, .u-el-bg-color-google, .u-badge-color-google:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-google .u-app-loading-bar-body {
+.bg-google, .u-card-status-color-google, .u-card-stamp-color-google > .icon, .u-card-stamp-color-google > .u-icon, .u-el-bg-color-google, .u-badge-color-google:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-google .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-google-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23244,7 +23247,7 @@ Chart sparkline
   background-color: rgba(var(--u-google-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-youtube, .u-card-status-color-youtube, .u-card-stamp-color-youtube .u-card-stamp-icon, .u-el-bg-color-youtube, .u-badge-color-youtube:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-youtube .u-app-loading-bar-body {
+.bg-youtube, .u-card-status-color-youtube, .u-card-stamp-color-youtube > .icon, .u-card-stamp-color-youtube > .u-icon, .u-el-bg-color-youtube, .u-badge-color-youtube:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-youtube .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-youtube-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23256,7 +23259,7 @@ Chart sparkline
   background-color: rgba(var(--u-youtube-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-vimeo, .u-card-status-color-vimeo, .u-card-stamp-color-vimeo .u-card-stamp-icon, .u-el-bg-color-vimeo, .u-badge-color-vimeo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vimeo .u-app-loading-bar-body {
+.bg-vimeo, .u-card-status-color-vimeo, .u-card-stamp-color-vimeo > .icon, .u-card-stamp-color-vimeo > .u-icon, .u-el-bg-color-vimeo, .u-badge-color-vimeo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vimeo .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-vimeo-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23268,7 +23271,7 @@ Chart sparkline
   background-color: rgba(var(--u-vimeo-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-dribbble, .u-card-status-color-dribbble, .u-card-stamp-color-dribbble .u-card-stamp-icon, .u-el-bg-color-dribbble, .u-badge-color-dribbble:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dribbble .u-app-loading-bar-body {
+.bg-dribbble, .u-card-status-color-dribbble, .u-card-stamp-color-dribbble > .icon, .u-card-stamp-color-dribbble > .u-icon, .u-el-bg-color-dribbble, .u-badge-color-dribbble:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dribbble .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-dribbble-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23280,7 +23283,7 @@ Chart sparkline
   background-color: rgba(var(--u-dribbble-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-github, .u-card-status-color-github, .u-card-stamp-color-github .u-card-stamp-icon, .u-el-bg-color-github, .u-badge-color-github:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-github .u-app-loading-bar-body {
+.bg-github, .u-card-status-color-github, .u-card-stamp-color-github > .icon, .u-card-stamp-color-github > .u-icon, .u-el-bg-color-github, .u-badge-color-github:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-github .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-github-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23292,7 +23295,7 @@ Chart sparkline
   background-color: rgba(var(--u-github-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-instagram, .u-card-status-color-instagram, .u-card-stamp-color-instagram .u-card-stamp-icon, .u-el-bg-color-instagram, .u-badge-color-instagram:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-instagram .u-app-loading-bar-body {
+.bg-instagram, .u-card-status-color-instagram, .u-card-stamp-color-instagram > .icon, .u-card-stamp-color-instagram > .u-icon, .u-el-bg-color-instagram, .u-badge-color-instagram:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-instagram .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-instagram-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23304,7 +23307,7 @@ Chart sparkline
   background-color: rgba(var(--u-instagram-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-pinterest, .u-card-status-color-pinterest, .u-card-stamp-color-pinterest .u-card-stamp-icon, .u-el-bg-color-pinterest, .u-badge-color-pinterest:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pinterest .u-app-loading-bar-body {
+.bg-pinterest, .u-card-status-color-pinterest, .u-card-stamp-color-pinterest > .icon, .u-card-stamp-color-pinterest > .u-icon, .u-el-bg-color-pinterest, .u-badge-color-pinterest:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pinterest .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-pinterest-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23316,7 +23319,7 @@ Chart sparkline
   background-color: rgba(var(--u-pinterest-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-vk, .u-card-status-color-vk, .u-card-stamp-color-vk .u-card-stamp-icon, .u-el-bg-color-vk, .u-badge-color-vk:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vk .u-app-loading-bar-body {
+.bg-vk, .u-card-status-color-vk, .u-card-stamp-color-vk > .icon, .u-card-stamp-color-vk > .u-icon, .u-el-bg-color-vk, .u-badge-color-vk:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vk .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-vk-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23328,7 +23331,7 @@ Chart sparkline
   background-color: rgba(var(--u-vk-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-rss, .u-card-status-color-rss, .u-card-stamp-color-rss .u-card-stamp-icon, .u-el-bg-color-rss, .u-badge-color-rss:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-rss .u-app-loading-bar-body {
+.bg-rss, .u-card-status-color-rss, .u-card-stamp-color-rss > .icon, .u-card-stamp-color-rss > .u-icon, .u-el-bg-color-rss, .u-badge-color-rss:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-rss .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-rss-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23340,7 +23343,7 @@ Chart sparkline
   background-color: rgba(var(--u-rss-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-flickr, .u-card-status-color-flickr, .u-card-stamp-color-flickr .u-card-stamp-icon, .u-el-bg-color-flickr, .u-badge-color-flickr:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-flickr .u-app-loading-bar-body {
+.bg-flickr, .u-card-status-color-flickr, .u-card-stamp-color-flickr > .icon, .u-card-stamp-color-flickr > .u-icon, .u-el-bg-color-flickr, .u-badge-color-flickr:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-flickr .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-flickr-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23352,7 +23355,7 @@ Chart sparkline
   background-color: rgba(var(--u-flickr-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-bitbucket, .u-card-status-color-bitbucket, .u-card-stamp-color-bitbucket .u-card-stamp-icon, .u-el-bg-color-bitbucket, .u-badge-color-bitbucket:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-bitbucket .u-app-loading-bar-body {
+.bg-bitbucket, .u-card-status-color-bitbucket, .u-card-stamp-color-bitbucket > .icon, .u-card-stamp-color-bitbucket > .u-icon, .u-el-bg-color-bitbucket, .u-badge-color-bitbucket:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-bitbucket .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-bitbucket-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23364,7 +23367,7 @@ Chart sparkline
   background-color: rgba(var(--u-bitbucket-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-tabler, .u-card-status-color-tabler, .u-card-stamp-color-tabler .u-card-stamp-icon, .u-el-bg-color-tabler, .u-badge-color-tabler:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-tabler .u-app-loading-bar-body {
+.bg-tabler, .u-card-status-color-tabler, .u-card-stamp-color-tabler > .icon, .u-card-stamp-color-tabler > .u-icon, .u-el-bg-color-tabler, .u-badge-color-tabler:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-tabler .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-tabler-rgb), var(--u-bg-opacity)) !important;
 }
@@ -24403,56 +24406,58 @@ Antialiasing
   align-items: center;
 }
 .u-card-stamp-size-sm {
-  --stamp-size: 4rem;
+  --u-stamp-size: 5rem;
 }
 .u-card-stamp-size-md {
-  --stamp-size: 7rem;
+  --u-stamp-size: 6rem;
 }
 .u-card-stamp-size-lg {
-  --stamp-size: 13rem;
+  --u-stamp-size: 7rem;
 }
-.u-card-stamp-position-top-start {
+.u-card-stamp-icon-position-top-start {
   top: 0;
   left: 0;
 }
-.u-card-stamp-position-top-start .u-card-stamp-icon {
+.u-card-stamp-icon-position-top-start .u-icon {
   transform: rotate(-10deg);
-  right: calc(var(--stamp-size) * 0.25);
+  left: calc(var(--u-stamp-size) * -0.25);
 }
-.u-card-stamp-position-bottom-start {
+.u-card-stamp-icon-position-bottom-start {
   bottom: 0;
   left: 0;
   top: auto;
 }
-.u-card-stamp-position-bottom-start .u-card-stamp-icon {
-  top: calc(var(--stamp-size) * 0.25);
-  right: calc(var(--stamp-size) * 0.25);
+.u-card-stamp-icon-position-bottom-start .u-icon {
+  top: auto;
+  left: calc(var(--u-stamp-size) * -0.25);
+  bottom: calc(var(--u-stamp-size) * -0.25);
 }
-.u-card-stamp-position-bottom-end {
+.u-card-stamp-icon-position-bottom-end {
   bottom: 0;
   top: auto;
+  right: 0;
 }
-.u-card-stamp-position-bottom-end .u-card-stamp-icon {
+.u-card-stamp-icon-position-bottom-end .u-icon {
   transform: rotate(-10deg);
-  top: calc(var(--stamp-size) * 0.25);
+  top: calc(100% - var(--u-stamp-size) * 0.75);
 }
 
-.u-card-status-size-sm.u-card-status-position-top, .u-card-status-size-sm.u-card-status-position-bottom {
+.u-card-status-size-sm.u-card-status-color-position-top, .u-card-status-size-sm.u-card-status-color-position-bottom {
   height: 1px;
 }
-.u-card-status-size-sm.u-card-status-position-start {
+.u-card-status-size-sm.u-card-status-color-position-start {
   width: 1px;
 }
-.u-card-status-size-md.u-card-status-position-top, .u-card-status-size-md.u-card-status-position-bottom {
+.u-card-status-size-md.u-card-status-color-position-top, .u-card-status-size-md.u-card-status-color-position-bottom {
   height: 2px;
 }
-.u-card-status-size-md.u-card-status-position-start {
+.u-card-status-size-md.u-card-status-color-position-start {
   width: 2px;
 }
-.u-card-status-size-lg.u-card-status-position-top, .u-card-status-size-lg.u-card-status-position-bottom {
+.u-card-status-size-lg.u-card-status-color-position-top, .u-card-status-size-lg.u-card-status-color-position-bottom {
   height: 3px;
 }
-.u-card-status-size-lg.u-card-status-position-start {
+.u-card-status-size-lg.u-card-status-color-position-start {
   width: 3px;
 }
 

@@ -1,51 +1,46 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El, Icon } from '$lib/components'
 
-	import { Icon } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	import type { CardStampProps } from './Card.types'
 
-	import type { CardStampPositions, CardStampSizes } from './Card.types'
+	type $$Props = CardStampProps
+
+	export let cssPrefix: $$Props['cssPrefix'] = 'card-stamp'
+	/**
+	 * You can use color property to change status's border color
+	 */
+	export let color: $$Props['color'] = 'primary'
 
 	/**
-	 * if you want to change color of Stamp, use the color property
+	 * You can set position of status using position property
 	 */
-	export let color: Colors = 'default'
+	export let iconPosition: $$Props['iconPosition'] = undefined
 
 	/**
-	 * Icon name for the stamp
+	 * If you want to change size of Status, use size property
 	 */
-	export let icon: string
+	export let size: $$Props['size'] = 'md'
 
 	/**
-	 * you can change position of Stamp by changing placement property
+	 * You can set stamp icon using icon property
 	 */
-	export let position: CardStampPositions = 'top-end'
+	export let icon: $$Props['icon'] = undefined
 
-	/**
-	 * You can chnage size of Stamp by changing size property
-	 */
-	export let size: CardStampSizes = 'md'
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname(
-		'card-stamp',
-		{
-			color,
-			position,
+	let cssProps: any = {}
+	let otherProps: any = {}
+	$: {
+		cssProps = {
 			size,
-		},
-		$$props.class,
-		true
-	)
+			iconPosition,
+			color,
+		}
+		otherProps = {
+			cssPrefix,
+			icon,
+		}
+	}
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
-	<slot>
-		<div class={classname('card-stamp-icon')}>
-			<Icon name={icon} />
-		</div>
-	</slot>
-</div>
+<El {...$$restProps} {cssProps} {...otherProps}>
+	<Icon name={icon} />
+</El>

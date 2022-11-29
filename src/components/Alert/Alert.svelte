@@ -1,11 +1,9 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte'
 
-	import { Icon } from '$lib/components'
+	import { El, Icon } from '$lib/components'
 	import { classname } from '$lib/utils'
 
-	import { El } from '../Base'
-	import Col from '../Grid/Col.svelte'
 	import type { AlertProps } from './Alert.types'
 
 	type $$Props = AlertProps
