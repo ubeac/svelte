@@ -1,17 +1,17 @@
 $prefix-breadcrumb: $prefix + 'breadcrumb';
-$breadcrumb-types: 'arrows', 'bullets', 'dots';
+$breadcrumb-variants: (
+	dots: "·",
+	arrows: "›",
+	bullets: "\02022",
+	) !default;
+
 
 $breadcrumb-props: (
-	"": ".breadcrumb",
-	"item": (
-		"": ".breadcrumb-item",
-		"active": ".active"
+	null: ".breadcrumb",
+	item: (null: ".breadcrumb-item",
+		active: ".active"
 	),
-	"separator": (
-		"dots": ".breadcrumb-dots",
-		"arrows": ".breadcrumb-arrows",
-		"bullets": ".breadcrumb-bullets",
-	)
+	separator : generate_props($breadcrumb-variants, '.breadcrumb-')
 );
 
 .#{$prefix-breadcrumb} {

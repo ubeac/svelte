@@ -192,6 +192,7 @@ $heading-display-sizes: (
 }
 
 .#{$prefix-el} {
+
     &-col {
         @extend .col;
 
@@ -230,6 +231,10 @@ $heading-display-sizes: (
         &-text-color-#{$key} {
             @extend .text-#{$key};
         }
+    }
+
+    &-text-truncate {
+        @extend .text-truncate;
     }
 
     @each $key,

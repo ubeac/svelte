@@ -1,8 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
-
-	import { forwardEventsBuilder } from '$lib/directives'
-
 	import { El } from '../Base'
 	import type { BreadcrumbProps } from './Breadcrumb.types'
 
@@ -13,8 +9,6 @@
 
 	export let separator: $$Props['separator'] = undefined
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
 	$: cssProps = {
 		separator,
 	}
@@ -22,10 +16,11 @@
 	$: otherProps = {
 		tag,
 		cssPrefix,
-		'aria-label': "breadcrumbs"
 	}
 </script>
 
-<El {...$$restProps} {forwardEvents} {cssProps} {...otherProps}>
-	<slot />
+<El tag="nav" aria-label="breadcrumb">
+	<El {...$$restProps} {cssProps} {...otherProps}>
+		<slot />
+	</El>
 </El>

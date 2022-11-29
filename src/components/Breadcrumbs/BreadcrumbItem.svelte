@@ -23,7 +23,7 @@
 	$: otherProps = {
 		cssPrefix,
 		tag,
-		'aria-current': active ? 'page' : null
+		'aria-current': active ?? 'page',
 	}
 </script>
 

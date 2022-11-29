@@ -5,5 +5,5 @@
 <Breadcrumb>
 	<BreadcrumbItem>Home</BreadcrumbItem>
 	<BreadcrumbItem>Dashboard</BreadcrumbItem>
-	<BreadcrumbItem>Breadcrumb</BreadcrumbItem>
+	<BreadcrumbItem active>Breadcrumb</BreadcrumbItem>
 </Breadcrumb>

@@ -1,11 +1,10 @@
 <script>
-	import { Breadcrumb, BreadcrumbItem, Button, Col, El, Icon, Row } from '@ubeac/svelte'
-	import { ButtonGroup } from '@ubeac/svelte/components'
+	import { Breadcrumb, BreadcrumbItem, Button, El, Icon, ButtonGroup } from '@ubeac/svelte'
 </script>
 
 <El class="page-header">
-	<Row alignItems="center" mw="100">
-		<Col>
+	<El row mw="100" class="align-items-center mw-100">
+		<El col>
 			<El mb="1">
 				<Breadcrumb>
 					<BreadcrumbItem>Home</BreadcrumbItem>
@@ -13,13 +12,14 @@
 					<BreadcrumbItem active>Articles</BreadcrumbItem>
 				</Breadcrumb>
 			</El>
-			<h2 class="page-title">
-				<span class="text-truncate">
-					Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.
-				</span>
-			</h2>
-		</Col>
-		<Col cols="auto">
+			<El tag="h2" class="page-title">
+				<El tag="span" textTruncate>
+					Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods. Knights of Ni,
+					we are but simple travelers who seek the enchanter who lives beyond these woods.
+				</El>
+			</El>
+		</El>
+		<El col="auto">
 			<ButtonGroup>
 				<Button display="none" displayMd="inline-flex">
 					<Icon name="edit" />
@@ -27,6 +27,6 @@
 				</Button>
 				<Button color="primary">Publish</Button>
 			</ButtonGroup>
-		</Col>
-	</Row>
+		</El>
+	</El>
 </El>
