@@ -10,6 +10,11 @@
 	export let cssPrefix: string | undefined = 'el'
 	export let tag: keyof HTMLElementTagNameMap | undefined = 'div'
 	export let cssProps: any = {}
+	export let in_: any | undefined = undefined;
+	export let out: any | undefined = undefined;
+	export let transition: any | undefined = undefined;
+	export let transitionProps: any | undefined = undefined;
+
 
 	// background properties
 	export let bgColor: BackgroundColors = undefined
@@ -296,6 +301,7 @@
 	}
 </script>
 
-<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes}>
+<!-- transition:transition in:in_ out:out (cannot have transition and in/out at same time) -->
+<svelte:element this={tag} transition:transition={transitionProps} use:forwardEvents bind:this={element} {...$$restProps} class={classes}>
 	<slot />
 </svelte:element>

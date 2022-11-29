@@ -3,6 +3,7 @@
 
 	import { El } from '$lib/components'
 	import type { AccordionBodyProps, AccordionContext } from '$lib/components'
+	import {fly} from 'svelte/transition'
 
 	type $$Props = AccordionBodyProps
 
@@ -18,7 +19,7 @@
 </script>
 
 {#if $ctx.open}
-	<El {...$$restProps} {...otherProps}>
+	<El transition={fly} transitionProps={{y: -20}} {...$$restProps} {...otherProps}>
 		<slot />
 	</El>
 {/if}
