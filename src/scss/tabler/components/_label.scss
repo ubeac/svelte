@@ -1,0 +1,10 @@
+$prefix-label: $prefix + 'label';
+
+$label-props: (
+	'': '.form-label',
+	required: '.required'
+);
+
+.#{$prefix-label} {
+	@include apply-props($label-props);
+}

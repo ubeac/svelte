@@ -2,49 +2,49 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
 
-	/**
-	 * Removes border between Rows.
-	 */
-	export let border: boolean = false
+	import { El } from '../Base'
+	import type { TableProps } from './Table.types'
 
-	/**
-	 * Change the background color of Row on mouse hover.
-	 */
-	export let hover: boolean = false
+	type $$Props = TableProps
 
-	/**
-	 * Set different background color for even and odd rows.
-	 */
-	export let striped: boolean = false
+	export let tag: $$Props['tag'] = 'table'
+	export let cssPrefix: $$Props['cssPrefix'] = 'table'
+	export let tableParentCssPrefix: $$Props['tableParentCssPrefix'] = 'table-parent'
 
-	/**
-	 * Disable wraping text inside Cells.
-	 */
-	export let wrap: boolean = false
-	/**
-	 * Set table size
-	 */
-	export let size: 'sm' | 'md' = 'md'
+	export let color: $$Props['color'] = undefined
+	export let border: $$Props['border'] = undefined
+	export let hover: $$Props['hover'] = undefined
+	export let striped: $$Props['striped'] = undefined
+	export let wrap: $$Props['wrap'] = undefined
+	export let responsive: $$Props['responsive'] = undefined
+	export let size: $$Props['size'] = undefined
+	export let sort: $$Props['sort'] = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname(
-		'table',
-		{
-			border,
-			hover,
-			striped,
-			wrap,
-			size,
-		},
-		$$props.class
-	)
+	$: cssProps = {
+		color,
+		border,
+		hover,
+		striped,
+		wrap,
+		size,
+		sort
+	}
+
+	$: parentCssProps = {
+		responsive
+	}
+
+	$: otherProps = {
+		tag,
+		cssPrefix,
+	}
 </script>
 
-<div class={classname('table-parent')}>
-	<table use:forwardEvents {...$$restProps} class={classes}>
+<El cssPrefix={tableParentCssPrefix} cssProps={parentCssProps} tag="div">
+	<El {forwardEvents} {...$$restProps} {cssProps} {...otherProps}>
 		<slot />
-	</table>
-</div>
+	</El>
+</El>
