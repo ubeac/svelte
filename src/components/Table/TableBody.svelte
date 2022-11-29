@@ -1,14 +1,13 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '../Base'
+	import type { TableBodyProps } from './Table.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = TableBodyProps
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('table-body', undefined, $$props.class)
+	export let tag: $$Props['tag'] = 'tbody'
+	export let cssPrefix: $$Props['cssPrefix'] = 'table-body'
 </script>
 
-<tbody use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssPrefix} {tag}>
 	<slot />
-</tbody>
+</El>
