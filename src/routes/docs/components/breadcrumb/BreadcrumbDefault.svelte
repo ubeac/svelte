@@ -3,7 +3,7 @@
 </script>
 
 <Breadcrumb>
-	<BreadcrumbItem>Home</BreadcrumbItem>
-	<BreadcrumbItem>Dashboard</BreadcrumbItem>
+	<BreadcrumbItem href="/">Home</BreadcrumbItem>
+	<BreadcrumbItem href="/docs">Documentation</BreadcrumbItem>
 	<BreadcrumbItem active>Breadcrumb</BreadcrumbItem>
 </Breadcrumb>

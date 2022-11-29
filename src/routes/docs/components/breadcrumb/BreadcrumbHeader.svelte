@@ -7,9 +7,9 @@
 		<El col>
 			<El mb="1">
 				<Breadcrumb>
-					<BreadcrumbItem>Home</BreadcrumbItem>
-					<BreadcrumbItem>Library</BreadcrumbItem>
-					<BreadcrumbItem active>Articles</BreadcrumbItem>
+					<BreadcrumbItem href="/">Home</BreadcrumbItem>
+					<BreadcrumbItem href="/docs">Documentation</BreadcrumbItem>
+					<BreadcrumbItem active>Breadcrumb</BreadcrumbItem>
 				</Breadcrumb>
 			</El>
 			<El tag="h2" class="page-title">
