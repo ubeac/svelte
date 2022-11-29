@@ -1,19 +1,26 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '../Base'
+	import type { BreadcrumbProps } from './Breadcrumb.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = BreadcrumbProps
 
-	/**
-	 * Change separator Icon between items
-	 */
-	export let separator: 'arrows' | 'bullets' | 'dots' | 'defalut' = 'defalut'
+	export let cssPrefix: $$Props['cssPrefix'] = 'breadcrumb'
+	export let tag: $$Props['tag'] = 'ol'
 
-	const forwardEevnts = forwardEventsBuilder(get_current_component())
+	export let separator: $$Props['separator'] = undefined
 
-	$: classes = classname('breadcrumb', { separator }, $$props.class)
+	$: cssProps = {
+		separator,
+	}
+
+	$: otherProps = {
+		tag,
+		cssPrefix,
+	}
 </script>
 
-<ol use:forwardEevnts {...$$restProps} class={classes}>
-	<slot />
-</ol>
+<El tag="nav" aria-label="breadcrumb">
+	<El {...$$restProps} {cssProps} {...otherProps}>
+		<slot />
+	</El>
+</El>
