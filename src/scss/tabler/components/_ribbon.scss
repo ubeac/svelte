@@ -1,0 +1,16 @@
+//
+// Ribbon
+//
+$prefix-ribbon: $prefix + 'ribbon';
+
+$positions: 'top' 'start' 'bottom' 'end';
+
+$props: (
+	null: '.ribbon',
+	bg-color: generate_props($theme_colors, ('.bg-')),
+	element-position: generate_props($positions, ('.ribbon-'))
+);
+
+.#{$prefix-ribbon} {
+	@include apply-props($props);
+}

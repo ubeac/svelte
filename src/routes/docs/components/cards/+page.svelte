@@ -10,6 +10,7 @@
 	import CardStamp from './CardStamp.svelte'
 	import CardMedia from './CardMedia.svelte'
 	import CardStacked from './CardStacked.svelte'
+	import CardRibbon from './CardRibbon.svelte'
 </script>
 
 <h1>Cards</h1>
@@ -89,6 +90,12 @@
 <p>Add a CardStamp.</p>
 <Preview src="./CardStamp.svelte">
 	<CardStamp />
+</Preview>
+
+<h2>Card Ribbon</h2>
+<p>Add a Ribbon to your card.</p>
+<Preview src="./CardRibbon.svelte">
+	<CardRibbon />
 </Preview>
 
 <h2>Stacked Card</h2>
