@@ -1,29 +1,11 @@
 $prefix-status: $prefix + 'status';
 
 $status-props: (
-	"style": (
-		"none": ".status-none",
-		"dot": ".status-dot",
-		"indicator": ".status-indicator"
-	),
-	"circle": ".status-indicator-circle",
-	"lite": '.status-lite',
-	'color': generate_props($theme_colors, ('.status-'))
+	null: ".status",
+	lite: ".status-lite",
+	color: generate_props($theme_colors, (".status-"))
 );
 
 .#{$prefix-status} {
 	@include apply-props($status-props);
-
-	&-style-none {
-		@extend .status;
-	}
-	
-	&-animated.#{$prefix-status}-style-dot {
-		@extend .status-dot-animated;
-	}
-
-	&-animated.#{$prefix-status}-style-indicator {
-		@extend .status-indicator-animated;
-	}
 }
-
