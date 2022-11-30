@@ -9,7 +9,7 @@
 	export let animated: $$Props['animated'] = undefined
 	export let color: $$Props['color'] = undefined
 	export let indicator: $$Props['indicator'] = undefined
-	export let cssIndicatorPrefix: $$Props['cssPrefix'] = 'dot-indicator-circle'
+	export let cssIndicatorPrefix: $$Props['cssIndicatorPrefix'] = 'dot-indicator-circle'
 
 	$: cssProps = {
 		animated,

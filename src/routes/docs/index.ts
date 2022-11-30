@@ -133,6 +133,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'spinners',
+				title: 'Spinner',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'statuses',
 				title: 'Status',
 				icon: 'star',
