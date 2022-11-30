@@ -25,7 +25,7 @@
     $values in $mappings {
         $prefix: '-';
 
-        @if $key=='' or $key=='null' {
+        @if $key=='' or $key==null {
             $prefix: '';
         }
 

@@ -5,15 +5,15 @@
 <El row>
 	<El col>
 		<Card>
-			<Stamp color="primary" icon="bell" size="md" iconPosition="top-start" />
 			<CardBody>
-				<CardTitle>Stamp color: primary</CardTitle>
+				<CardTitle>Stamp color: warning</CardTitle>
 				<p>
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
 					standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
 					make a type specimen book.
 				</p>
 			</CardBody>
+			<Stamp color="primary" icon="bell" size="md" iconPosition="top-start" />
 		</Card>
 	</El>
 	<El col>
@@ -26,7 +26,7 @@
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp color="warning" icon="bell" size="sm" iconPosition="bottom-start" />
+			<Stamp color="warning" icon="bell" size="md" iconPosition="bottom-start" />
 		</Card>
 	</El>
 	<El col>
@@ -44,6 +44,7 @@
 	</El>
 	<El col>
 		<Card>
+			<Stamp color="success" icon="bell" size="md" iconPosition="bottom-end" />
 			<CardBody>
 				<CardTitle>Stamp color: success</CardTitle>
 				<p>
@@ -52,7 +53,6 @@
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp color="success" icon="bell" size="lg" iconPosition="bottom-end" />
 		</Card>
 	</El>
 </El>

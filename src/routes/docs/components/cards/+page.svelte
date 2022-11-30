@@ -8,8 +8,8 @@
 	import CardAside from './CardAside.svelte'
 	import CardColor from './CardColor.svelte'
 	import CardStamp from './CardStamp.svelte'
-	import CardStampSize from './CardStampSize.svelte'
 	import CardMedia from './CardMedia.svelte'
+	import CardStacked from './CardStacked.svelte'
 </script>
 
 <h1>Cards</h1>
@@ -85,16 +85,19 @@
 	<CardColor />
 </Preview>
 
-<h2>Stamp Color</h2>
+<h2>Card Stamp</h2>
 <p>Add a CardStamp.</p>
 <Preview src="./CardStamp.svelte">
 	<CardStamp />
 </Preview>
 
-<h2>Stamp Size</h2>
-<p>Add a CardStamp with different size.</p>
-<Preview src="./CardStampSize.svelte">
-	<CardStampSize />
+<h2>Stacked Card</h2>
+<p>
+	Use the card-stacked class to stack up multiple cards, if you want to save screen space or create a visually appealing
+	effect.
+</p>
+<Preview src="./CardStacked.svelte">
+	<CardStacked />
 </Preview>
 
 <h2>Card Media</h2>

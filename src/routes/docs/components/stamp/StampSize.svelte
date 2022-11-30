@@ -1,11 +1,10 @@
 <script>
-	import { Card, CardBody, CardHeader, CardTitle, CardStamp } from '@ubeac/svelte'
-	import { Row, Col } from '@ubeac/svelte'
+	import { El, Card, CardBody, CardTitle, Stamp } from '@ubeac/svelte'
 </script>
 
-<Row>
+<El row>
 	{#each ['sm', 'md', 'lg'] as size}
-		<Col class="mb-3">
+		<El col>
 			<Card>
 				<CardBody>
 					<CardTitle>Stamp size: {size}</CardTitle>
@@ -15,8 +14,8 @@
 						scrambled it to make a type specimen book.
 					</p>
 				</CardBody>
-				<CardStamp {size} position="top-end" color="yellow" icon="bell" />
+				<Stamp {size} icon-position="top-end" color="yellow" icon="bell" />
 			</Card>
-		</Col>
+		</El>
 	{/each}
-</Row>
+</El>

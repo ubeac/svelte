@@ -2,20 +2,14 @@
 // Card
 //
 $prefix-card: $prefix + 'card';
-$prefix-card-status: $prefix-card + '-status';
 
 $props: (
-	'': '.card',
+	null: '.card',
 	body: '.card-body',
 	header: '.card-header',
 	title:'.card-title',
 	actions:'.card-actions',
-);
-
-$card-stamp-sizes: (
-	sm:'5rem',
-	md:'6rem',
-	lg:'7rem'
+	stacked: '.card-stacked'
 );
 
 .#{$prefix-card} {
@@ -33,93 +27,37 @@ $card-stamp-sizes: (
 		}
 	}
 
-	&-stamp {
-		@extend .card-stamp;
-
-		>.icon {
-			@extend .card-stamp-icon;
-		}
-
-		@each $key,
-		$value in $card-stamp-sizes {
-			&-size-#{$key} {
-				--u-stamp-size: #{$value};
-			}
-		}
+	&-status {
 
 		@each $key,
 		$value in $theme-colors {
-			&-color-#{$key}>.icon {
+			&-color-#{$key} {
 				@extend .bg-#{$key};
 			}
 		}
 
-		&-icon-position-top-start {
-			top: 0;
-			left: 0;
-
-			.#{$prefix}icon {
-				transform: rotate(-10deg);
-				left: calc(var(--u-stamp-size) * -0.25);
+		@each $key in top,
+		start,
+		bottom {
+			&-position-#{$key} {
+				@extend .card-status-#{$key};
 			}
 		}
 
-		&-icon-position-bottom-start {
-			bottom: 0;
-			left: 0;
-			top: auto;
+		@each $key,
+		$value in $card-status-sizes {
+			&-size-#{$key} {
 
-			.#{$prefix}icon {
-				top: auto;
-				left: calc(var(--u-stamp-size) * -0.25);
-				bottom: calc(var(--u-stamp-size) * -0.25);
+				&.#{$prefix-card}-status-position-top,
+				&.#{$prefix-card}-status-position-bottom {
+					height: $value;
+				}
 			}
-		}
 
-		&-icon-position-bottom-end {
-			bottom: 0;
-			top: auto;
-			right: 0;
-
-			.#{$prefix}icon {
-				transform: rotate(-10deg);
-				top: calc(100% - (var(--u-stamp-size) * 0.75));
-			}
-		}
-	}
-}
-
-// Card Status
-.#{$prefix-card-status} {
-
-	@each $key,
-	$value in $theme-colors {
-		&-color-#{$key} {
-			@extend .bg-#{$key};
-		}
-	}
-
-	@each $key in top,
-	start,
-	bottom {
-		&-color-position-#{$key} {
-			@extend .card-status-#{$key};
-		}
-	}
-
-	@each $key,
-	$value in $card-status-sizes {
-		&-size-#{$key} {
-
-			&.#{$prefix-card-status}-color-position-top,
-			&.#{$prefix-card-status}-color-position-bottom {
-				height: $value;
-			}
-		}
-
-		&-size-#{$key} {
-			&.#{$prefix-card-status}-color-position-start {
-				width: $value;
+			&-size-#{$key} {
+				&.#{$prefix-card}-status-position-start {
+					width: $value;
+				}
 			}
 		}
 	}

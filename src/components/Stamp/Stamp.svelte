@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { El, Icon } from '$lib/components'
 
-	import type { CardStampProps } from './Card.types'
+	import type { StampProps } from './Stamp.types'
 
-	type $$Props = CardStampProps
+	type $$Props = StampProps
 
-	export let cssPrefix: $$Props['cssPrefix'] = 'card-stamp'
+	export let cssPrefix: $$Props['cssPrefix'] = 'stamp'
 	/**
 	 * You can use color property to change status's border color
 	 */
-	export let color: $$Props['color'] = 'primary'
+	export let color: $$Props['color'] = undefined
 
 	/**
 	 * You can set position of status using position property

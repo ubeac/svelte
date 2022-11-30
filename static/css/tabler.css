@@ -662,7 +662,7 @@ progress {
     max-width: 1320px;
   }
 }
-.row, .u-row, .u-el-row-deck, .u-el-row-, .u-el-row {
+.row, .u-row, .u-el-row-deck, .u-el-row {
   --u-gutter-x: 1rem;
   --u-gutter-y: 0;
   display: flex;
@@ -671,7 +671,7 @@ progress {
   margin-right: calc(-0.5 * var(--u-gutter-x));
   margin-left: calc(-0.5 * var(--u-gutter-x));
 }
-.row > *, .u-row > *, .u-el-row-deck > *, .u-el-row- > *, .u-el-row > * {
+.row > *, .u-row > *, .u-el-row-deck > *, .u-el-row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -9504,182 +9504,182 @@ textarea.form-control-lg, textarea.u-input.u-input-size-lg, textarea.u-file-uplo
   --u-text-opacity: 1;
 }
 
-.bg-primary, .u-card-status-color-primary, .u-card-stamp-color-primary > .icon, .u-card-stamp-color-primary > .u-icon, .u-el-bg-color-primary, .u-badge-color-primary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-primary .u-app-loading-bar-body {
+.bg-primary, .u-stamp-color-primary > .icon, .u-stamp-color-primary > .u-icon, .u-card-status-color-primary, .u-el-bg-color-primary, .u-badge-color-primary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-primary .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-primary-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-secondary, .u-card-status-color-secondary, .u-card-stamp-color-secondary > .icon, .u-card-stamp-color-secondary > .u-icon, .u-el-bg-color-secondary, .u-badge-color-secondary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-secondary .u-app-loading-bar-body {
+.bg-secondary, .u-stamp-color-secondary > .icon, .u-stamp-color-secondary > .u-icon, .u-card-status-color-secondary, .u-el-bg-color-secondary, .u-badge-color-secondary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-secondary .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-secondary-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-success, .u-card-status-color-success, .u-card-stamp-color-success > .icon, .u-card-stamp-color-success > .u-icon, .u-el-bg-color-success, .u-badge-color-success:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-success .u-app-loading-bar-body {
+.bg-success, .u-stamp-color-success > .icon, .u-stamp-color-success > .u-icon, .u-card-status-color-success, .u-el-bg-color-success, .u-badge-color-success:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-success .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-success-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-info, .u-card-status-color-info, .u-card-stamp-color-info > .icon, .u-card-stamp-color-info > .u-icon, .u-el-bg-color-info, .u-badge-color-info:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-info .u-app-loading-bar-body {
+.bg-info, .u-stamp-color-info > .icon, .u-stamp-color-info > .u-icon, .u-card-status-color-info, .u-el-bg-color-info, .u-badge-color-info:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-info .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-info-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-warning, .u-card-status-color-warning, .u-card-stamp-color-warning > .icon, .u-card-stamp-color-warning > .u-icon, .u-el-bg-color-warning, .u-badge-color-warning:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-warning .u-app-loading-bar-body {
+.bg-warning, .u-stamp-color-warning > .icon, .u-stamp-color-warning > .u-icon, .u-card-status-color-warning, .u-el-bg-color-warning, .u-badge-color-warning:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-warning .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-warning-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-danger, .u-card-status-color-danger, .u-card-stamp-color-danger > .icon, .u-card-stamp-color-danger > .u-icon, .u-el-bg-color-danger, .u-badge-color-danger:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-danger .u-app-loading-bar-body {
+.bg-danger, .u-stamp-color-danger > .icon, .u-stamp-color-danger > .u-icon, .u-card-status-color-danger, .u-el-bg-color-danger, .u-badge-color-danger:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-danger .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-danger-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-light, .u-card-status-color-light, .u-card-stamp-color-light > .icon, .u-card-stamp-color-light > .u-icon, .u-el-bg-color-light, .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-light .u-app-loading-bar-body {
+.bg-light, .u-stamp-color-light > .icon, .u-stamp-color-light > .u-icon, .u-card-status-color-light, .u-el-bg-color-light, .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-light .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-light-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-dark, .u-card-status-color-dark, .u-card-stamp-color-dark > .icon, .u-card-stamp-color-dark > .u-icon, .u-el-bg-color-dark, .u-badge-color-dark:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dark .u-app-loading-bar-body {
+.bg-dark, .u-stamp-color-dark > .icon, .u-stamp-color-dark > .u-icon, .u-card-status-color-dark, .u-el-bg-color-dark, .u-badge-color-dark:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dark .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-dark-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-muted, .u-card-status-color-muted, .u-card-stamp-color-muted > .icon, .u-card-stamp-color-muted > .u-icon, .u-el-bg-color-muted, .u-badge-color-muted:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-muted .u-app-loading-bar-body {
+.bg-muted, .u-stamp-color-muted > .icon, .u-stamp-color-muted > .u-icon, .u-card-status-color-muted, .u-el-bg-color-muted, .u-badge-color-muted:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-muted .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-muted-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-blue, .u-card-status-color-blue, .u-card-stamp-color-blue > .icon, .u-card-stamp-color-blue > .u-icon, .u-el-bg-color-blue, .u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .u-app-loading-bar-body {
+.bg-blue, .u-stamp-color-blue > .icon, .u-stamp-color-blue > .u-icon, .u-card-status-color-blue, .u-el-bg-color-blue, .u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-blue-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-azure, .u-card-status-color-azure, .u-card-stamp-color-azure > .icon, .u-card-stamp-color-azure > .u-icon, .u-el-bg-color-azure, .u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .u-app-loading-bar-body {
+.bg-azure, .u-stamp-color-azure > .icon, .u-stamp-color-azure > .u-icon, .u-card-status-color-azure, .u-el-bg-color-azure, .u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-azure-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-indigo, .u-card-status-color-indigo, .u-card-stamp-color-indigo > .icon, .u-card-stamp-color-indigo > .u-icon, .u-el-bg-color-indigo, .u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .u-app-loading-bar-body {
+.bg-indigo, .u-stamp-color-indigo > .icon, .u-stamp-color-indigo > .u-icon, .u-card-status-color-indigo, .u-el-bg-color-indigo, .u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-indigo-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-purple, .u-card-status-color-purple, .u-card-stamp-color-purple > .icon, .u-card-stamp-color-purple > .u-icon, .u-el-bg-color-purple, .u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .u-app-loading-bar-body {
+.bg-purple, .u-stamp-color-purple > .icon, .u-stamp-color-purple > .u-icon, .u-card-status-color-purple, .u-el-bg-color-purple, .u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-purple-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-pink, .u-card-status-color-pink, .u-card-stamp-color-pink > .icon, .u-card-stamp-color-pink > .u-icon, .u-el-bg-color-pink, .u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .u-app-loading-bar-body {
+.bg-pink, .u-stamp-color-pink > .icon, .u-stamp-color-pink > .u-icon, .u-card-status-color-pink, .u-el-bg-color-pink, .u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-pink-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-red, .u-card-status-color-red, .u-card-stamp-color-red > .icon, .u-card-stamp-color-red > .u-icon, .u-el-bg-color-red, .u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .u-app-loading-bar-body {
+.bg-red, .u-stamp-color-red > .icon, .u-stamp-color-red > .u-icon, .u-card-status-color-red, .u-el-bg-color-red, .u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-red-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-orange, .u-card-status-color-orange, .u-card-stamp-color-orange > .icon, .u-card-stamp-color-orange > .u-icon, .u-el-bg-color-orange, .u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .u-app-loading-bar-body {
+.bg-orange, .u-stamp-color-orange > .icon, .u-stamp-color-orange > .u-icon, .u-card-status-color-orange, .u-el-bg-color-orange, .u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-orange-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-yellow, .u-card-status-color-yellow, .u-card-stamp-color-yellow > .icon, .u-card-stamp-color-yellow > .u-icon, .u-el-bg-color-yellow, .u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .u-app-loading-bar-body {
+.bg-yellow, .u-stamp-color-yellow > .icon, .u-stamp-color-yellow > .u-icon, .u-card-status-color-yellow, .u-el-bg-color-yellow, .u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-yellow-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-lime, .u-card-status-color-lime, .u-card-stamp-color-lime > .icon, .u-card-stamp-color-lime > .u-icon, .u-el-bg-color-lime, .u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .u-app-loading-bar-body {
+.bg-lime, .u-stamp-color-lime > .icon, .u-stamp-color-lime > .u-icon, .u-card-status-color-lime, .u-el-bg-color-lime, .u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-lime-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-green, .u-card-status-color-green, .u-card-stamp-color-green > .icon, .u-card-stamp-color-green > .u-icon, .u-el-bg-color-green, .u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .u-app-loading-bar-body {
+.bg-green, .u-stamp-color-green > .icon, .u-stamp-color-green > .u-icon, .u-card-status-color-green, .u-el-bg-color-green, .u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-green-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-teal, .u-card-status-color-teal, .u-card-stamp-color-teal > .icon, .u-card-stamp-color-teal > .u-icon, .u-el-bg-color-teal, .u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .u-app-loading-bar-body {
+.bg-teal, .u-stamp-color-teal > .icon, .u-stamp-color-teal > .u-icon, .u-card-status-color-teal, .u-el-bg-color-teal, .u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-teal-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-cyan, .u-card-status-color-cyan, .u-card-stamp-color-cyan > .icon, .u-card-stamp-color-cyan > .u-icon, .u-el-bg-color-cyan, .u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .u-app-loading-bar-body {
+.bg-cyan, .u-stamp-color-cyan > .icon, .u-stamp-color-cyan > .u-icon, .u-card-status-color-cyan, .u-el-bg-color-cyan, .u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-cyan-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-facebook, .u-card-status-color-facebook, .u-card-stamp-color-facebook > .icon, .u-card-stamp-color-facebook > .u-icon, .u-el-bg-color-facebook, .u-badge-color-facebook:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-facebook .u-app-loading-bar-body {
+.bg-facebook, .u-stamp-color-facebook > .icon, .u-stamp-color-facebook > .u-icon, .u-card-status-color-facebook, .u-el-bg-color-facebook, .u-badge-color-facebook:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-facebook .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-facebook-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-twitter, .u-card-status-color-twitter, .u-card-stamp-color-twitter > .icon, .u-card-stamp-color-twitter > .u-icon, .u-el-bg-color-twitter, .u-badge-color-twitter:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-twitter .u-app-loading-bar-body {
+.bg-twitter, .u-stamp-color-twitter > .icon, .u-stamp-color-twitter > .u-icon, .u-card-status-color-twitter, .u-el-bg-color-twitter, .u-badge-color-twitter:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-twitter .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-twitter-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-linkedin, .u-card-status-color-linkedin, .u-card-stamp-color-linkedin > .icon, .u-card-stamp-color-linkedin > .u-icon, .u-el-bg-color-linkedin, .u-badge-color-linkedin:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-linkedin .u-app-loading-bar-body {
+.bg-linkedin, .u-stamp-color-linkedin > .icon, .u-stamp-color-linkedin > .u-icon, .u-card-status-color-linkedin, .u-el-bg-color-linkedin, .u-badge-color-linkedin:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-linkedin .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-linkedin-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-google, .u-card-status-color-google, .u-card-stamp-color-google > .icon, .u-card-stamp-color-google > .u-icon, .u-el-bg-color-google, .u-badge-color-google:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-google .u-app-loading-bar-body {
+.bg-google, .u-stamp-color-google > .icon, .u-stamp-color-google > .u-icon, .u-card-status-color-google, .u-el-bg-color-google, .u-badge-color-google:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-google .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-google-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-youtube, .u-card-status-color-youtube, .u-card-stamp-color-youtube > .icon, .u-card-stamp-color-youtube > .u-icon, .u-el-bg-color-youtube, .u-badge-color-youtube:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-youtube .u-app-loading-bar-body {
+.bg-youtube, .u-stamp-color-youtube > .icon, .u-stamp-color-youtube > .u-icon, .u-card-status-color-youtube, .u-el-bg-color-youtube, .u-badge-color-youtube:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-youtube .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-youtube-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-vimeo, .u-card-status-color-vimeo, .u-card-stamp-color-vimeo > .icon, .u-card-stamp-color-vimeo > .u-icon, .u-el-bg-color-vimeo, .u-badge-color-vimeo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vimeo .u-app-loading-bar-body {
+.bg-vimeo, .u-stamp-color-vimeo > .icon, .u-stamp-color-vimeo > .u-icon, .u-card-status-color-vimeo, .u-el-bg-color-vimeo, .u-badge-color-vimeo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vimeo .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-vimeo-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-dribbble, .u-card-status-color-dribbble, .u-card-stamp-color-dribbble > .icon, .u-card-stamp-color-dribbble > .u-icon, .u-el-bg-color-dribbble, .u-badge-color-dribbble:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dribbble .u-app-loading-bar-body {
+.bg-dribbble, .u-stamp-color-dribbble > .icon, .u-stamp-color-dribbble > .u-icon, .u-card-status-color-dribbble, .u-el-bg-color-dribbble, .u-badge-color-dribbble:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dribbble .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-dribbble-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-github, .u-card-status-color-github, .u-card-stamp-color-github > .icon, .u-card-stamp-color-github > .u-icon, .u-el-bg-color-github, .u-badge-color-github:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-github .u-app-loading-bar-body {
+.bg-github, .u-stamp-color-github > .icon, .u-stamp-color-github > .u-icon, .u-card-status-color-github, .u-el-bg-color-github, .u-badge-color-github:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-github .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-github-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-instagram, .u-card-status-color-instagram, .u-card-stamp-color-instagram > .icon, .u-card-stamp-color-instagram > .u-icon, .u-el-bg-color-instagram, .u-badge-color-instagram:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-instagram .u-app-loading-bar-body {
+.bg-instagram, .u-stamp-color-instagram > .icon, .u-stamp-color-instagram > .u-icon, .u-card-status-color-instagram, .u-el-bg-color-instagram, .u-badge-color-instagram:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-instagram .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-instagram-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-pinterest, .u-card-status-color-pinterest, .u-card-stamp-color-pinterest > .icon, .u-card-stamp-color-pinterest > .u-icon, .u-el-bg-color-pinterest, .u-badge-color-pinterest:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pinterest .u-app-loading-bar-body {
+.bg-pinterest, .u-stamp-color-pinterest > .icon, .u-stamp-color-pinterest > .u-icon, .u-card-status-color-pinterest, .u-el-bg-color-pinterest, .u-badge-color-pinterest:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pinterest .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-pinterest-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-vk, .u-card-status-color-vk, .u-card-stamp-color-vk > .icon, .u-card-stamp-color-vk > .u-icon, .u-el-bg-color-vk, .u-badge-color-vk:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vk .u-app-loading-bar-body {
+.bg-vk, .u-stamp-color-vk > .icon, .u-stamp-color-vk > .u-icon, .u-card-status-color-vk, .u-el-bg-color-vk, .u-badge-color-vk:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vk .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-vk-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-rss, .u-card-status-color-rss, .u-card-stamp-color-rss > .icon, .u-card-stamp-color-rss > .u-icon, .u-el-bg-color-rss, .u-badge-color-rss:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-rss .u-app-loading-bar-body {
+.bg-rss, .u-stamp-color-rss > .icon, .u-stamp-color-rss > .u-icon, .u-card-status-color-rss, .u-el-bg-color-rss, .u-badge-color-rss:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-rss .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-rss-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-flickr, .u-card-status-color-flickr, .u-card-stamp-color-flickr > .icon, .u-card-stamp-color-flickr > .u-icon, .u-el-bg-color-flickr, .u-badge-color-flickr:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-flickr .u-app-loading-bar-body {
+.bg-flickr, .u-stamp-color-flickr > .icon, .u-stamp-color-flickr > .u-icon, .u-card-status-color-flickr, .u-el-bg-color-flickr, .u-badge-color-flickr:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-flickr .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-flickr-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-bitbucket, .u-card-status-color-bitbucket, .u-card-stamp-color-bitbucket > .icon, .u-card-stamp-color-bitbucket > .u-icon, .u-el-bg-color-bitbucket, .u-badge-color-bitbucket:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-bitbucket .u-app-loading-bar-body {
+.bg-bitbucket, .u-stamp-color-bitbucket > .icon, .u-stamp-color-bitbucket > .u-icon, .u-card-status-color-bitbucket, .u-el-bg-color-bitbucket, .u-badge-color-bitbucket:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-bitbucket .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-bitbucket-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-tabler, .u-card-status-color-tabler, .u-card-stamp-color-tabler > .icon, .u-card-stamp-color-tabler > .u-icon, .u-el-bg-color-tabler, .u-badge-color-tabler:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-tabler .u-app-loading-bar-body {
+.bg-tabler, .u-stamp-color-tabler > .icon, .u-stamp-color-tabler > .u-icon, .u-card-status-color-tabler, .u-el-bg-color-tabler, .u-badge-color-tabler:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-tabler .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-tabler-rgb), var(--u-bg-opacity)) !important;
 }
@@ -15715,7 +15715,9 @@ body:not(.theme-dark):not(.u-body-theme-dark) .hide-theme-light {
   .u-body-theme-dark .card-footer,
   .u-body-theme-dark .u-card-footer,
   .theme-dark .card-stacked::after,
+  .theme-dark .u-card-stacked::after,
   .u-body-theme-dark .card-stacked::after,
+  .u-body-theme-dark .u-card-stacked::after,
   .theme-dark .footer:not(.footer-transparent):not(.u-app-footer),
   .theme-dark .u-app-footer:not(.footer-transparent):not(.u-app-footer),
   .u-body-theme-dark .footer:not(.footer-transparent):not(.u-app-footer),
@@ -15752,7 +15754,7 @@ body:not(.theme-dark):not(.u-body-theme-dark) .hide-theme-light {
   .theme-dark .modal, .theme-dark .u-dialog, .u-body-theme-dark .modal, .u-body-theme-dark .u-dialog {
     --u-modal-border-color: var(--u-border-color);
   }
-  .theme-dark .bg-light, .theme-dark .u-card-status-color-light, .theme-dark .u-card-stamp-color-light > .icon, .theme-dark .u-card-stamp-color-light > .u-icon, .theme-dark .u-el-bg-color-light, .theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .theme-dark .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .theme-dark .u-app-loading-bar-body, .u-body-theme-dark .bg-light, .u-body-theme-dark .u-card-status-color-light, .u-body-theme-dark .u-card-stamp-color-light > .icon, .u-body-theme-dark .u-card-stamp-color-light > .u-icon, .u-body-theme-dark .u-el-bg-color-light, .u-body-theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-body-theme-dark .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .u-body-theme-dark .u-app-loading-bar-body {
+  .theme-dark .bg-light, .theme-dark .u-stamp-color-light > .icon, .theme-dark .u-stamp-color-light > .u-icon, .theme-dark .u-card-status-color-light, .theme-dark .u-el-bg-color-light, .theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .theme-dark .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .theme-dark .u-app-loading-bar-body, .u-body-theme-dark .bg-light, .u-body-theme-dark .u-stamp-color-light > .icon, .u-body-theme-dark .u-stamp-color-light > .u-icon, .u-body-theme-dark .u-card-status-color-light, .u-body-theme-dark .u-el-bg-color-light, .u-body-theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-body-theme-dark .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .u-body-theme-dark .u-app-loading-bar-body {
     background-color: #1a2234 !important;
   }
   .theme-dark .card-tabs .nav-tabs .nav-link, .u-tabs .u-tabs-items .theme-dark .card-tabs .nav-tabs .u-tabs-item, .theme-dark .card-tabs .u-tabs .u-tabs-items .nav-link, .theme-dark .card-tabs .u-tabs .u-tabs-items .u-tabs-item, .u-tabs .theme-dark .card-tabs .u-tabs-items .nav-link, .u-tabs .theme-dark .card-tabs .u-tabs-items .u-tabs-item, .u-body-theme-dark .card-tabs .nav-tabs .nav-link, .u-tabs .u-tabs-items .u-body-theme-dark .card-tabs .nav-tabs .u-tabs-item, .u-body-theme-dark .card-tabs .u-tabs .u-tabs-items .nav-link, .u-body-theme-dark .card-tabs .u-tabs .u-tabs-items .u-tabs-item, .u-tabs .u-body-theme-dark .card-tabs .u-tabs-items .nav-link, .u-tabs .u-body-theme-dark .card-tabs .u-tabs-items .u-tabs-item {
@@ -15925,6 +15927,7 @@ body:not(.theme-dark):not(.u-body-theme-dark) .hide-theme-light {
     .theme-dark-auto .card-footer,
     .theme-dark-auto .u-card-footer,
     .theme-dark-auto .card-stacked::after,
+    .theme-dark-auto .u-card-stacked::after,
     .theme-dark-auto .footer:not(.footer-transparent):not(.u-app-footer),
     .theme-dark-auto .u-app-footer:not(.footer-transparent):not(.u-app-footer),
     .theme-dark-auto .modal-content,
@@ -15946,7 +15949,7 @@ body:not(.theme-dark):not(.u-body-theme-dark) .hide-theme-light {
     .theme-dark-auto .modal, .theme-dark-auto .u-dialog {
       --u-modal-border-color: var(--u-border-color);
     }
-    .theme-dark-auto .bg-light, .theme-dark-auto .u-card-status-color-light, .theme-dark-auto .u-card-stamp-color-light > .icon, .theme-dark-auto .u-card-stamp-color-light > .u-icon, .theme-dark-auto .u-el-bg-color-light, .theme-dark-auto .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .theme-dark-auto .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .theme-dark-auto .u-app-loading-bar-body {
+    .theme-dark-auto .bg-light, .theme-dark-auto .u-stamp-color-light > .icon, .theme-dark-auto .u-stamp-color-light > .u-icon, .theme-dark-auto .u-card-status-color-light, .theme-dark-auto .u-el-bg-color-light, .theme-dark-auto .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .theme-dark-auto .u-app-loading-bar-light .u-app-loading-bar-body, .u-app-loading-bar-light .theme-dark-auto .u-app-loading-bar-body {
       background-color: #1a2234 !important;
     }
     .theme-dark-auto .card-tabs .nav-tabs .nav-link, .u-tabs .u-tabs-items .theme-dark-auto .card-tabs .nav-tabs .u-tabs-item, .theme-dark-auto .card-tabs .u-tabs .u-tabs-items .nav-link, .theme-dark-auto .card-tabs .u-tabs .u-tabs-items .u-tabs-item, .u-tabs .theme-dark-auto .card-tabs .u-tabs-items .nav-link, .u-tabs .theme-dark-auto .card-tabs .u-tabs-items .u-tabs-item {
@@ -18577,7 +18580,7 @@ a.card:hover, a.u-card:hover {
   border-color: transparent;
 }
 
-.card-stamp, .u-card-stamp {
+.card-stamp, .u-stamp {
   --u-stamp-size: 7rem;
   position: absolute;
   top: 0;
@@ -18595,7 +18598,7 @@ a.card:hover, a.u-card:hover {
   --u-stamp-size: 13rem;
 }
 
-.card-stamp-icon, .u-card-stamp > .icon, .u-card-stamp > .u-icon {
+.card-stamp-icon, .u-stamp > .icon, .u-stamp > .u-icon {
   background: var(--u-muted);
   color: var(--u-card-bg, var(--u-bg-surface));
   display: flex;
@@ -18610,7 +18613,7 @@ a.card:hover, a.u-card:hover {
   font-size: calc(var(--u-stamp-size) * 0.75);
   transform: rotate(10deg);
 }
-.card-stamp-icon .icon, .card-stamp-icon .u-icon, .u-card-stamp > .icon .icon, .u-card-stamp > .u-icon .icon, .u-card-stamp > .icon .u-icon, .u-card-stamp > .u-icon .u-icon {
+.card-stamp-icon .icon, .u-stamp > .icon .icon, .u-stamp > .u-icon .icon, .card-stamp-icon .u-icon, .u-stamp > .icon .u-icon, .u-stamp > .u-icon .u-icon {
   stroke-width: 2;
   width: calc(var(--u-stamp-size) * 0.75);
   height: calc(var(--u-stamp-size) * 0.75);
@@ -18679,11 +18682,11 @@ a.card:hover, a.u-card:hover {
 /**
 Stacked card
  */
-.card-stacked {
+.card-stacked, .u-card-stacked {
   --u-card-stacked-offset: .25rem;
   position: relative;
 }
-.card-stacked:after {
+.card-stacked:after, .u-card-stacked:after {
   position: absolute;
   top: calc(-1 * var(--u-card-stacked-offset));
   right: var(--u-card-stacked-offset);
@@ -18896,7 +18899,7 @@ Card optinos
 /**
 Card status
  */
-.card-status-top, .u-card-status-color-position-top {
+.card-status-top, .u-card-status-position-top {
   position: absolute;
   top: 0;
   right: 0;
@@ -18905,7 +18908,7 @@ Card status
   border-radius: var(--u-card-border-radius) var(--u-card-border-radius) 0 0;
 }
 
-.card-status-start, .u-card-status-color-position-start {
+.card-status-start, .u-card-status-position-start {
   position: absolute;
   right: auto;
   bottom: 0;
@@ -18914,7 +18917,7 @@ Card status
   border-radius: var(--u-card-border-radius) 0 0 var(--u-card-border-radius);
 }
 
-.card-status-bottom, .u-card-status-color-position-bottom {
+.card-status-bottom, .u-card-status-position-bottom {
   position: absolute;
   top: initial;
   bottom: 0;
@@ -19264,7 +19267,7 @@ Card list group
   border-radius: var(--u-border-radius);
 }
 
-.row > *, .u-row > *, .u-el-row-deck > *, .u-el-row- > *, .u-el-row > * {
+.row > *, .u-row > *, .u-el-row-deck > *, .u-el-row > * {
   min-width: 0;
 }
 
@@ -21034,73 +21037,73 @@ Progressbg
   border-top-color: transparent;
   border-right-color: transparent;
 }
-.ribbon.bg-blue, .ribbon.u-card-status-color-blue, .u-card-stamp-color-blue > .ribbon.icon, .u-card-stamp-color-blue > .ribbon.u-icon, .ribbon.u-el-bg-color-blue, .ribbon.u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .ribbon.u-app-loading-bar-body {
+.ribbon.bg-blue, .u-stamp-color-blue > .ribbon.icon, .u-stamp-color-blue > .ribbon.u-icon, .ribbon.u-card-status-color-blue, .ribbon.u-el-bg-color-blue, .ribbon.u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .ribbon.u-app-loading-bar-body {
   border-color: var(--u-blue);
 }
 .ribbon.bg-blue-lt, .ribbon.u-badge-color-blue.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-blue, .ribbon.u-app-loading-bar-blue {
   border-color: rgba(var(--u-blue-rgb), 0.1) !important;
 }
-.ribbon.bg-azure, .ribbon.u-card-status-color-azure, .u-card-stamp-color-azure > .ribbon.icon, .u-card-stamp-color-azure > .ribbon.u-icon, .ribbon.u-el-bg-color-azure, .ribbon.u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .ribbon.u-app-loading-bar-body {
+.ribbon.bg-azure, .u-stamp-color-azure > .ribbon.icon, .u-stamp-color-azure > .ribbon.u-icon, .ribbon.u-card-status-color-azure, .ribbon.u-el-bg-color-azure, .ribbon.u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .ribbon.u-app-loading-bar-body {
   border-color: var(--u-azure);
 }
 .ribbon.bg-azure-lt, .ribbon.u-badge-color-azure.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-azure, .ribbon.u-app-loading-bar-azure {
   border-color: rgba(var(--u-azure-rgb), 0.1) !important;
 }
-.ribbon.bg-indigo, .ribbon.u-card-status-color-indigo, .u-card-stamp-color-indigo > .ribbon.icon, .u-card-stamp-color-indigo > .ribbon.u-icon, .ribbon.u-el-bg-color-indigo, .ribbon.u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .ribbon.u-app-loading-bar-body {
+.ribbon.bg-indigo, .u-stamp-color-indigo > .ribbon.icon, .u-stamp-color-indigo > .ribbon.u-icon, .ribbon.u-card-status-color-indigo, .ribbon.u-el-bg-color-indigo, .ribbon.u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .ribbon.u-app-loading-bar-body {
   border-color: var(--u-indigo);
 }
 .ribbon.bg-indigo-lt, .ribbon.u-badge-color-indigo.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-indigo, .ribbon.u-app-loading-bar-indigo {
   border-color: rgba(var(--u-indigo-rgb), 0.1) !important;
 }
-.ribbon.bg-purple, .ribbon.u-card-status-color-purple, .u-card-stamp-color-purple > .ribbon.icon, .u-card-stamp-color-purple > .ribbon.u-icon, .ribbon.u-el-bg-color-purple, .ribbon.u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .ribbon.u-app-loading-bar-body {
+.ribbon.bg-purple, .u-stamp-color-purple > .ribbon.icon, .u-stamp-color-purple > .ribbon.u-icon, .ribbon.u-card-status-color-purple, .ribbon.u-el-bg-color-purple, .ribbon.u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .ribbon.u-app-loading-bar-body {
   border-color: var(--u-purple);
 }
 .ribbon.bg-purple-lt, .ribbon.u-badge-color-purple.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-purple, .ribbon.u-app-loading-bar-purple {
   border-color: rgba(var(--u-purple-rgb), 0.1) !important;
 }
-.ribbon.bg-pink, .ribbon.u-card-status-color-pink, .u-card-stamp-color-pink > .ribbon.icon, .u-card-stamp-color-pink > .ribbon.u-icon, .ribbon.u-el-bg-color-pink, .ribbon.u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .ribbon.u-app-loading-bar-body {
+.ribbon.bg-pink, .u-stamp-color-pink > .ribbon.icon, .u-stamp-color-pink > .ribbon.u-icon, .ribbon.u-card-status-color-pink, .ribbon.u-el-bg-color-pink, .ribbon.u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .ribbon.u-app-loading-bar-body {
   border-color: var(--u-pink);
 }
 .ribbon.bg-pink-lt, .ribbon.u-badge-color-pink.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-pink, .ribbon.u-app-loading-bar-pink {
   border-color: rgba(var(--u-pink-rgb), 0.1) !important;
 }
-.ribbon.bg-red, .ribbon.u-card-status-color-red, .u-card-stamp-color-red > .ribbon.icon, .u-card-stamp-color-red > .ribbon.u-icon, .ribbon.u-el-bg-color-red, .ribbon.u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .ribbon.u-app-loading-bar-body {
+.ribbon.bg-red, .u-stamp-color-red > .ribbon.icon, .u-stamp-color-red > .ribbon.u-icon, .ribbon.u-card-status-color-red, .ribbon.u-el-bg-color-red, .ribbon.u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .ribbon.u-app-loading-bar-body {
   border-color: var(--u-red);
 }
 .ribbon.bg-red-lt, .ribbon.u-badge-color-red.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-red, .ribbon.u-app-loading-bar-red {
   border-color: rgba(var(--u-red-rgb), 0.1) !important;
 }
-.ribbon.bg-orange, .ribbon.u-card-status-color-orange, .u-card-stamp-color-orange > .ribbon.icon, .u-card-stamp-color-orange > .ribbon.u-icon, .ribbon.u-el-bg-color-orange, .ribbon.u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .ribbon.u-app-loading-bar-body {
+.ribbon.bg-orange, .u-stamp-color-orange > .ribbon.icon, .u-stamp-color-orange > .ribbon.u-icon, .ribbon.u-card-status-color-orange, .ribbon.u-el-bg-color-orange, .ribbon.u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .ribbon.u-app-loading-bar-body {
   border-color: var(--u-orange);
 }
 .ribbon.bg-orange-lt, .ribbon.u-badge-color-orange.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-orange, .ribbon.u-app-loading-bar-orange {
   border-color: rgba(var(--u-orange-rgb), 0.1) !important;
 }
-.ribbon.bg-yellow, .ribbon.u-card-status-color-yellow, .u-card-stamp-color-yellow > .ribbon.icon, .u-card-stamp-color-yellow > .ribbon.u-icon, .ribbon.u-el-bg-color-yellow, .ribbon.u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .ribbon.u-app-loading-bar-body {
+.ribbon.bg-yellow, .u-stamp-color-yellow > .ribbon.icon, .u-stamp-color-yellow > .ribbon.u-icon, .ribbon.u-card-status-color-yellow, .ribbon.u-el-bg-color-yellow, .ribbon.u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .ribbon.u-app-loading-bar-body {
   border-color: var(--u-yellow);
 }
 .ribbon.bg-yellow-lt, .ribbon.u-badge-color-yellow.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-yellow, .ribbon.u-app-loading-bar-yellow {
   border-color: rgba(var(--u-yellow-rgb), 0.1) !important;
 }
-.ribbon.bg-lime, .ribbon.u-card-status-color-lime, .u-card-stamp-color-lime > .ribbon.icon, .u-card-stamp-color-lime > .ribbon.u-icon, .ribbon.u-el-bg-color-lime, .ribbon.u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .ribbon.u-app-loading-bar-body {
+.ribbon.bg-lime, .u-stamp-color-lime > .ribbon.icon, .u-stamp-color-lime > .ribbon.u-icon, .ribbon.u-card-status-color-lime, .ribbon.u-el-bg-color-lime, .ribbon.u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .ribbon.u-app-loading-bar-body {
   border-color: var(--u-lime);
 }
 .ribbon.bg-lime-lt, .ribbon.u-badge-color-lime.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-lime, .ribbon.u-app-loading-bar-lime {
   border-color: rgba(var(--u-lime-rgb), 0.1) !important;
 }
-.ribbon.bg-green, .ribbon.u-card-status-color-green, .u-card-stamp-color-green > .ribbon.icon, .u-card-stamp-color-green > .ribbon.u-icon, .ribbon.u-el-bg-color-green, .ribbon.u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .ribbon.u-app-loading-bar-body {
+.ribbon.bg-green, .u-stamp-color-green > .ribbon.icon, .u-stamp-color-green > .ribbon.u-icon, .ribbon.u-card-status-color-green, .ribbon.u-el-bg-color-green, .ribbon.u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .ribbon.u-app-loading-bar-body {
   border-color: var(--u-green);
 }
 .ribbon.bg-green-lt, .ribbon.u-badge-color-green.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-green, .ribbon.u-app-loading-bar-green {
   border-color: rgba(var(--u-green-rgb), 0.1) !important;
 }
-.ribbon.bg-teal, .ribbon.u-card-status-color-teal, .u-card-stamp-color-teal > .ribbon.icon, .u-card-stamp-color-teal > .ribbon.u-icon, .ribbon.u-el-bg-color-teal, .ribbon.u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .ribbon.u-app-loading-bar-body {
+.ribbon.bg-teal, .u-stamp-color-teal > .ribbon.icon, .u-stamp-color-teal > .ribbon.u-icon, .ribbon.u-card-status-color-teal, .ribbon.u-el-bg-color-teal, .ribbon.u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .ribbon.u-app-loading-bar-body {
   border-color: var(--u-teal);
 }
 .ribbon.bg-teal-lt, .ribbon.u-badge-color-teal.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-teal, .ribbon.u-app-loading-bar-teal {
   border-color: rgba(var(--u-teal-rgb), 0.1) !important;
 }
-.ribbon.bg-cyan, .ribbon.u-card-status-color-cyan, .u-card-stamp-color-cyan > .ribbon.icon, .u-card-stamp-color-cyan > .ribbon.u-icon, .ribbon.u-el-bg-color-cyan, .ribbon.u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .ribbon.u-app-loading-bar-body {
+.ribbon.bg-cyan, .u-stamp-color-cyan > .ribbon.icon, .u-stamp-color-cyan > .ribbon.u-icon, .ribbon.u-card-status-color-cyan, .ribbon.u-el-bg-color-cyan, .ribbon.u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .ribbon.u-app-loading-bar-body {
   border-color: var(--u-cyan);
 }
 .ribbon.bg-cyan-lt, .ribbon.u-badge-color-cyan.u-badge-ghost:not(.u-badge-outline), .ribbon.u-avatar-color-cyan, .ribbon.u-app-loading-bar-cyan {
@@ -22947,7 +22950,7 @@ Chart sparkline
   background-position: center;
 }
 
-.bg-primary, .u-card-status-color-primary, .u-card-stamp-color-primary > .icon, .u-card-stamp-color-primary > .u-icon, .u-el-bg-color-primary, .u-badge-color-primary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-primary .u-app-loading-bar-body {
+.bg-primary, .u-stamp-color-primary > .icon, .u-stamp-color-primary > .u-icon, .u-card-status-color-primary, .u-el-bg-color-primary, .u-badge-color-primary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-primary .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-primary-rgb), var(--u-bg-opacity)) !important;
 }
@@ -22959,7 +22962,7 @@ Chart sparkline
   background-color: rgba(var(--u-primary-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-secondary, .u-card-status-color-secondary, .u-card-stamp-color-secondary > .icon, .u-card-stamp-color-secondary > .u-icon, .u-el-bg-color-secondary, .u-badge-color-secondary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-secondary .u-app-loading-bar-body {
+.bg-secondary, .u-stamp-color-secondary > .icon, .u-stamp-color-secondary > .u-icon, .u-card-status-color-secondary, .u-el-bg-color-secondary, .u-badge-color-secondary:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-secondary .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-secondary-rgb), var(--u-bg-opacity)) !important;
 }
@@ -22971,7 +22974,7 @@ Chart sparkline
   background-color: rgba(var(--u-secondary-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-success, .u-card-status-color-success, .u-card-stamp-color-success > .icon, .u-card-stamp-color-success > .u-icon, .u-el-bg-color-success, .u-badge-color-success:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-success .u-app-loading-bar-body {
+.bg-success, .u-stamp-color-success > .icon, .u-stamp-color-success > .u-icon, .u-card-status-color-success, .u-el-bg-color-success, .u-badge-color-success:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-success .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-success-rgb), var(--u-bg-opacity)) !important;
 }
@@ -22983,7 +22986,7 @@ Chart sparkline
   background-color: rgba(var(--u-success-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-info, .u-card-status-color-info, .u-card-stamp-color-info > .icon, .u-card-stamp-color-info > .u-icon, .u-el-bg-color-info, .u-badge-color-info:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-info .u-app-loading-bar-body {
+.bg-info, .u-stamp-color-info > .icon, .u-stamp-color-info > .u-icon, .u-card-status-color-info, .u-el-bg-color-info, .u-badge-color-info:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-info .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-info-rgb), var(--u-bg-opacity)) !important;
 }
@@ -22995,7 +22998,7 @@ Chart sparkline
   background-color: rgba(var(--u-info-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-warning, .u-card-status-color-warning, .u-card-stamp-color-warning > .icon, .u-card-stamp-color-warning > .u-icon, .u-el-bg-color-warning, .u-badge-color-warning:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-warning .u-app-loading-bar-body {
+.bg-warning, .u-stamp-color-warning > .icon, .u-stamp-color-warning > .u-icon, .u-card-status-color-warning, .u-el-bg-color-warning, .u-badge-color-warning:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-warning .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-warning-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23007,7 +23010,7 @@ Chart sparkline
   background-color: rgba(var(--u-warning-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-danger, .u-card-status-color-danger, .u-card-stamp-color-danger > .icon, .u-card-stamp-color-danger > .u-icon, .u-el-bg-color-danger, .u-badge-color-danger:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-danger .u-app-loading-bar-body {
+.bg-danger, .u-stamp-color-danger > .icon, .u-stamp-color-danger > .u-icon, .u-card-status-color-danger, .u-el-bg-color-danger, .u-badge-color-danger:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-danger .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-danger-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23019,7 +23022,7 @@ Chart sparkline
   background-color: rgba(var(--u-danger-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-light, .u-card-status-color-light, .u-card-stamp-color-light > .icon, .u-card-stamp-color-light > .u-icon, .u-el-bg-color-light, .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-light .u-app-loading-bar-body {
+.bg-light, .u-stamp-color-light > .icon, .u-stamp-color-light > .u-icon, .u-card-status-color-light, .u-el-bg-color-light, .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-light .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-light-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23031,7 +23034,7 @@ Chart sparkline
   background-color: rgba(var(--u-light-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-dark, .u-card-status-color-dark, .u-card-stamp-color-dark > .icon, .u-card-stamp-color-dark > .u-icon, .u-el-bg-color-dark, .u-badge-color-dark:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dark .u-app-loading-bar-body {
+.bg-dark, .u-stamp-color-dark > .icon, .u-stamp-color-dark > .u-icon, .u-card-status-color-dark, .u-el-bg-color-dark, .u-badge-color-dark:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dark .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-dark-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23043,7 +23046,7 @@ Chart sparkline
   background-color: rgba(var(--u-dark-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-muted, .u-card-status-color-muted, .u-card-stamp-color-muted > .icon, .u-card-stamp-color-muted > .u-icon, .u-el-bg-color-muted, .u-badge-color-muted:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-muted .u-app-loading-bar-body {
+.bg-muted, .u-stamp-color-muted > .icon, .u-stamp-color-muted > .u-icon, .u-card-status-color-muted, .u-el-bg-color-muted, .u-badge-color-muted:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-muted .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-muted-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23055,7 +23058,7 @@ Chart sparkline
   background-color: rgba(var(--u-muted-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-blue, .u-card-status-color-blue, .u-card-stamp-color-blue > .icon, .u-card-stamp-color-blue > .u-icon, .u-el-bg-color-blue, .u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .u-app-loading-bar-body {
+.bg-blue, .u-stamp-color-blue > .icon, .u-stamp-color-blue > .u-icon, .u-card-status-color-blue, .u-el-bg-color-blue, .u-badge-color-blue:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-blue .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-blue-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23067,7 +23070,7 @@ Chart sparkline
   background-color: rgba(var(--u-blue-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-azure, .u-card-status-color-azure, .u-card-stamp-color-azure > .icon, .u-card-stamp-color-azure > .u-icon, .u-el-bg-color-azure, .u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .u-app-loading-bar-body {
+.bg-azure, .u-stamp-color-azure > .icon, .u-stamp-color-azure > .u-icon, .u-card-status-color-azure, .u-el-bg-color-azure, .u-badge-color-azure:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-azure .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-azure-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23079,7 +23082,7 @@ Chart sparkline
   background-color: rgba(var(--u-azure-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-indigo, .u-card-status-color-indigo, .u-card-stamp-color-indigo > .icon, .u-card-stamp-color-indigo > .u-icon, .u-el-bg-color-indigo, .u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .u-app-loading-bar-body {
+.bg-indigo, .u-stamp-color-indigo > .icon, .u-stamp-color-indigo > .u-icon, .u-card-status-color-indigo, .u-el-bg-color-indigo, .u-badge-color-indigo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-indigo .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-indigo-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23091,7 +23094,7 @@ Chart sparkline
   background-color: rgba(var(--u-indigo-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-purple, .u-card-status-color-purple, .u-card-stamp-color-purple > .icon, .u-card-stamp-color-purple > .u-icon, .u-el-bg-color-purple, .u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .u-app-loading-bar-body {
+.bg-purple, .u-stamp-color-purple > .icon, .u-stamp-color-purple > .u-icon, .u-card-status-color-purple, .u-el-bg-color-purple, .u-badge-color-purple:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-purple .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-purple-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23103,7 +23106,7 @@ Chart sparkline
   background-color: rgba(var(--u-purple-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-pink, .u-card-status-color-pink, .u-card-stamp-color-pink > .icon, .u-card-stamp-color-pink > .u-icon, .u-el-bg-color-pink, .u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .u-app-loading-bar-body {
+.bg-pink, .u-stamp-color-pink > .icon, .u-stamp-color-pink > .u-icon, .u-card-status-color-pink, .u-el-bg-color-pink, .u-badge-color-pink:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pink .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-pink-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23115,7 +23118,7 @@ Chart sparkline
   background-color: rgba(var(--u-pink-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-red, .u-card-status-color-red, .u-card-stamp-color-red > .icon, .u-card-stamp-color-red > .u-icon, .u-el-bg-color-red, .u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .u-app-loading-bar-body {
+.bg-red, .u-stamp-color-red > .icon, .u-stamp-color-red > .u-icon, .u-card-status-color-red, .u-el-bg-color-red, .u-badge-color-red:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-red .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-red-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23127,7 +23130,7 @@ Chart sparkline
   background-color: rgba(var(--u-red-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-orange, .u-card-status-color-orange, .u-card-stamp-color-orange > .icon, .u-card-stamp-color-orange > .u-icon, .u-el-bg-color-orange, .u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .u-app-loading-bar-body {
+.bg-orange, .u-stamp-color-orange > .icon, .u-stamp-color-orange > .u-icon, .u-card-status-color-orange, .u-el-bg-color-orange, .u-badge-color-orange:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-orange .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-orange-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23139,7 +23142,7 @@ Chart sparkline
   background-color: rgba(var(--u-orange-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-yellow, .u-card-status-color-yellow, .u-card-stamp-color-yellow > .icon, .u-card-stamp-color-yellow > .u-icon, .u-el-bg-color-yellow, .u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .u-app-loading-bar-body {
+.bg-yellow, .u-stamp-color-yellow > .icon, .u-stamp-color-yellow > .u-icon, .u-card-status-color-yellow, .u-el-bg-color-yellow, .u-badge-color-yellow:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-yellow .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-yellow-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23151,7 +23154,7 @@ Chart sparkline
   background-color: rgba(var(--u-yellow-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-lime, .u-card-status-color-lime, .u-card-stamp-color-lime > .icon, .u-card-stamp-color-lime > .u-icon, .u-el-bg-color-lime, .u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .u-app-loading-bar-body {
+.bg-lime, .u-stamp-color-lime > .icon, .u-stamp-color-lime > .u-icon, .u-card-status-color-lime, .u-el-bg-color-lime, .u-badge-color-lime:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-lime .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-lime-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23163,7 +23166,7 @@ Chart sparkline
   background-color: rgba(var(--u-lime-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-green, .u-card-status-color-green, .u-card-stamp-color-green > .icon, .u-card-stamp-color-green > .u-icon, .u-el-bg-color-green, .u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .u-app-loading-bar-body {
+.bg-green, .u-stamp-color-green > .icon, .u-stamp-color-green > .u-icon, .u-card-status-color-green, .u-el-bg-color-green, .u-badge-color-green:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-green .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-green-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23175,7 +23178,7 @@ Chart sparkline
   background-color: rgba(var(--u-green-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-teal, .u-card-status-color-teal, .u-card-stamp-color-teal > .icon, .u-card-stamp-color-teal > .u-icon, .u-el-bg-color-teal, .u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .u-app-loading-bar-body {
+.bg-teal, .u-stamp-color-teal > .icon, .u-stamp-color-teal > .u-icon, .u-card-status-color-teal, .u-el-bg-color-teal, .u-badge-color-teal:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-teal .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-teal-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23187,7 +23190,7 @@ Chart sparkline
   background-color: rgba(var(--u-teal-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-cyan, .u-card-status-color-cyan, .u-card-stamp-color-cyan > .icon, .u-card-stamp-color-cyan > .u-icon, .u-el-bg-color-cyan, .u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .u-app-loading-bar-body {
+.bg-cyan, .u-stamp-color-cyan > .icon, .u-stamp-color-cyan > .u-icon, .u-card-status-color-cyan, .u-el-bg-color-cyan, .u-badge-color-cyan:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-cyan .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-cyan-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23199,7 +23202,7 @@ Chart sparkline
   background-color: rgba(var(--u-cyan-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-facebook, .u-card-status-color-facebook, .u-card-stamp-color-facebook > .icon, .u-card-stamp-color-facebook > .u-icon, .u-el-bg-color-facebook, .u-badge-color-facebook:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-facebook .u-app-loading-bar-body {
+.bg-facebook, .u-stamp-color-facebook > .icon, .u-stamp-color-facebook > .u-icon, .u-card-status-color-facebook, .u-el-bg-color-facebook, .u-badge-color-facebook:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-facebook .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-facebook-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23211,7 +23214,7 @@ Chart sparkline
   background-color: rgba(var(--u-facebook-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-twitter, .u-card-status-color-twitter, .u-card-stamp-color-twitter > .icon, .u-card-stamp-color-twitter > .u-icon, .u-el-bg-color-twitter, .u-badge-color-twitter:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-twitter .u-app-loading-bar-body {
+.bg-twitter, .u-stamp-color-twitter > .icon, .u-stamp-color-twitter > .u-icon, .u-card-status-color-twitter, .u-el-bg-color-twitter, .u-badge-color-twitter:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-twitter .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-twitter-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23223,7 +23226,7 @@ Chart sparkline
   background-color: rgba(var(--u-twitter-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-linkedin, .u-card-status-color-linkedin, .u-card-stamp-color-linkedin > .icon, .u-card-stamp-color-linkedin > .u-icon, .u-el-bg-color-linkedin, .u-badge-color-linkedin:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-linkedin .u-app-loading-bar-body {
+.bg-linkedin, .u-stamp-color-linkedin > .icon, .u-stamp-color-linkedin > .u-icon, .u-card-status-color-linkedin, .u-el-bg-color-linkedin, .u-badge-color-linkedin:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-linkedin .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-linkedin-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23235,7 +23238,7 @@ Chart sparkline
   background-color: rgba(var(--u-linkedin-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-google, .u-card-status-color-google, .u-card-stamp-color-google > .icon, .u-card-stamp-color-google > .u-icon, .u-el-bg-color-google, .u-badge-color-google:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-google .u-app-loading-bar-body {
+.bg-google, .u-stamp-color-google > .icon, .u-stamp-color-google > .u-icon, .u-card-status-color-google, .u-el-bg-color-google, .u-badge-color-google:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-google .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-google-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23247,7 +23250,7 @@ Chart sparkline
   background-color: rgba(var(--u-google-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-youtube, .u-card-status-color-youtube, .u-card-stamp-color-youtube > .icon, .u-card-stamp-color-youtube > .u-icon, .u-el-bg-color-youtube, .u-badge-color-youtube:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-youtube .u-app-loading-bar-body {
+.bg-youtube, .u-stamp-color-youtube > .icon, .u-stamp-color-youtube > .u-icon, .u-card-status-color-youtube, .u-el-bg-color-youtube, .u-badge-color-youtube:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-youtube .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-youtube-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23259,7 +23262,7 @@ Chart sparkline
   background-color: rgba(var(--u-youtube-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-vimeo, .u-card-status-color-vimeo, .u-card-stamp-color-vimeo > .icon, .u-card-stamp-color-vimeo > .u-icon, .u-el-bg-color-vimeo, .u-badge-color-vimeo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vimeo .u-app-loading-bar-body {
+.bg-vimeo, .u-stamp-color-vimeo > .icon, .u-stamp-color-vimeo > .u-icon, .u-card-status-color-vimeo, .u-el-bg-color-vimeo, .u-badge-color-vimeo:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vimeo .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-vimeo-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23271,7 +23274,7 @@ Chart sparkline
   background-color: rgba(var(--u-vimeo-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-dribbble, .u-card-status-color-dribbble, .u-card-stamp-color-dribbble > .icon, .u-card-stamp-color-dribbble > .u-icon, .u-el-bg-color-dribbble, .u-badge-color-dribbble:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dribbble .u-app-loading-bar-body {
+.bg-dribbble, .u-stamp-color-dribbble > .icon, .u-stamp-color-dribbble > .u-icon, .u-card-status-color-dribbble, .u-el-bg-color-dribbble, .u-badge-color-dribbble:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-dribbble .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-dribbble-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23283,7 +23286,7 @@ Chart sparkline
   background-color: rgba(var(--u-dribbble-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-github, .u-card-status-color-github, .u-card-stamp-color-github > .icon, .u-card-stamp-color-github > .u-icon, .u-el-bg-color-github, .u-badge-color-github:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-github .u-app-loading-bar-body {
+.bg-github, .u-stamp-color-github > .icon, .u-stamp-color-github > .u-icon, .u-card-status-color-github, .u-el-bg-color-github, .u-badge-color-github:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-github .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-github-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23295,7 +23298,7 @@ Chart sparkline
   background-color: rgba(var(--u-github-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-instagram, .u-card-status-color-instagram, .u-card-stamp-color-instagram > .icon, .u-card-stamp-color-instagram > .u-icon, .u-el-bg-color-instagram, .u-badge-color-instagram:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-instagram .u-app-loading-bar-body {
+.bg-instagram, .u-stamp-color-instagram > .icon, .u-stamp-color-instagram > .u-icon, .u-card-status-color-instagram, .u-el-bg-color-instagram, .u-badge-color-instagram:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-instagram .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-instagram-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23307,7 +23310,7 @@ Chart sparkline
   background-color: rgba(var(--u-instagram-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-pinterest, .u-card-status-color-pinterest, .u-card-stamp-color-pinterest > .icon, .u-card-stamp-color-pinterest > .u-icon, .u-el-bg-color-pinterest, .u-badge-color-pinterest:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pinterest .u-app-loading-bar-body {
+.bg-pinterest, .u-stamp-color-pinterest > .icon, .u-stamp-color-pinterest > .u-icon, .u-card-status-color-pinterest, .u-el-bg-color-pinterest, .u-badge-color-pinterest:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-pinterest .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-pinterest-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23319,7 +23322,7 @@ Chart sparkline
   background-color: rgba(var(--u-pinterest-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-vk, .u-card-status-color-vk, .u-card-stamp-color-vk > .icon, .u-card-stamp-color-vk > .u-icon, .u-el-bg-color-vk, .u-badge-color-vk:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vk .u-app-loading-bar-body {
+.bg-vk, .u-stamp-color-vk > .icon, .u-stamp-color-vk > .u-icon, .u-card-status-color-vk, .u-el-bg-color-vk, .u-badge-color-vk:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-vk .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-vk-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23331,7 +23334,7 @@ Chart sparkline
   background-color: rgba(var(--u-vk-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-rss, .u-card-status-color-rss, .u-card-stamp-color-rss > .icon, .u-card-stamp-color-rss > .u-icon, .u-el-bg-color-rss, .u-badge-color-rss:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-rss .u-app-loading-bar-body {
+.bg-rss, .u-stamp-color-rss > .icon, .u-stamp-color-rss > .u-icon, .u-card-status-color-rss, .u-el-bg-color-rss, .u-badge-color-rss:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-rss .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-rss-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23343,7 +23346,7 @@ Chart sparkline
   background-color: rgba(var(--u-rss-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-flickr, .u-card-status-color-flickr, .u-card-stamp-color-flickr > .icon, .u-card-stamp-color-flickr > .u-icon, .u-el-bg-color-flickr, .u-badge-color-flickr:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-flickr .u-app-loading-bar-body {
+.bg-flickr, .u-stamp-color-flickr > .icon, .u-stamp-color-flickr > .u-icon, .u-card-status-color-flickr, .u-el-bg-color-flickr, .u-badge-color-flickr:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-flickr .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-flickr-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23355,7 +23358,7 @@ Chart sparkline
   background-color: rgba(var(--u-flickr-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-bitbucket, .u-card-status-color-bitbucket, .u-card-stamp-color-bitbucket > .icon, .u-card-stamp-color-bitbucket > .u-icon, .u-el-bg-color-bitbucket, .u-badge-color-bitbucket:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-bitbucket .u-app-loading-bar-body {
+.bg-bitbucket, .u-stamp-color-bitbucket > .icon, .u-stamp-color-bitbucket > .u-icon, .u-card-status-color-bitbucket, .u-el-bg-color-bitbucket, .u-badge-color-bitbucket:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-bitbucket .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-bitbucket-rgb), var(--u-bg-opacity)) !important;
 }
@@ -23367,7 +23370,7 @@ Chart sparkline
   background-color: rgba(var(--u-bitbucket-rgb), var(--u-bg-opacity)) !important;
 }
 
-.bg-tabler, .u-card-status-color-tabler, .u-card-stamp-color-tabler > .icon, .u-card-stamp-color-tabler > .u-icon, .u-el-bg-color-tabler, .u-badge-color-tabler:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-tabler .u-app-loading-bar-body {
+.bg-tabler, .u-stamp-color-tabler > .icon, .u-stamp-color-tabler > .u-icon, .u-card-status-color-tabler, .u-el-bg-color-tabler, .u-badge-color-tabler:not(.u-badge-outline):not(.u-badge-ghost), .u-app-loading-bar-tabler .u-app-loading-bar-body {
   --u-bg-opacity: 1;
   background-color: rgba(var(--u-tabler-rgb), var(--u-bg-opacity)) !important;
 }
@@ -24405,59 +24408,22 @@ Antialiasing
   display: flex;
   align-items: center;
 }
-.u-card-stamp-size-sm {
-  --u-stamp-size: 5rem;
-}
-.u-card-stamp-size-md {
-  --u-stamp-size: 6rem;
-}
-.u-card-stamp-size-lg {
-  --u-stamp-size: 7rem;
-}
-.u-card-stamp-icon-position-top-start {
-  top: 0;
-  left: 0;
-}
-.u-card-stamp-icon-position-top-start .u-icon {
-  transform: rotate(-10deg);
-  left: calc(var(--u-stamp-size) * -0.25);
-}
-.u-card-stamp-icon-position-bottom-start {
-  bottom: 0;
-  left: 0;
-  top: auto;
-}
-.u-card-stamp-icon-position-bottom-start .u-icon {
-  top: auto;
-  left: calc(var(--u-stamp-size) * -0.25);
-  bottom: calc(var(--u-stamp-size) * -0.25);
-}
-.u-card-stamp-icon-position-bottom-end {
-  bottom: 0;
-  top: auto;
-  right: 0;
-}
-.u-card-stamp-icon-position-bottom-end .u-icon {
-  transform: rotate(-10deg);
-  top: calc(100% - var(--u-stamp-size) * 0.75);
-}
-
-.u-card-status-size-sm.u-card-status-color-position-top, .u-card-status-size-sm.u-card-status-color-position-bottom {
+.u-card-status-size-sm.u-card-status-position-top, .u-card-status-size-sm.u-card-status-position-bottom {
   height: 1px;
 }
-.u-card-status-size-sm.u-card-status-color-position-start {
+.u-card-status-size-sm.u-card-status-position-start {
   width: 1px;
 }
-.u-card-status-size-md.u-card-status-color-position-top, .u-card-status-size-md.u-card-status-color-position-bottom {
+.u-card-status-size-md.u-card-status-position-top, .u-card-status-size-md.u-card-status-position-bottom {
   height: 2px;
 }
-.u-card-status-size-md.u-card-status-color-position-start {
+.u-card-status-size-md.u-card-status-position-start {
   width: 2px;
 }
-.u-card-status-size-lg.u-card-status-color-position-top, .u-card-status-size-lg.u-card-status-color-position-bottom {
+.u-card-status-size-lg.u-card-status-position-top, .u-card-status-size-lg.u-card-status-position-bottom {
   height: 3px;
 }
-.u-card-status-size-lg.u-card-status-color-position-start {
+.u-card-status-size-lg.u-card-status-position-start {
   width: 3px;
 }
 
@@ -26093,6 +26059,43 @@ Antialiasing
   width: 1rem !important;
   height: 1rem !important;
 }
+.u-stamp-size-sm {
+  --u-stamp-size: 5rem;
+}
+.u-stamp-size-md {
+  --u-stamp-size: 6rem;
+}
+.u-stamp-size-lg {
+  --u-stamp-size: 7rem;
+}
+.u-stamp-icon-position-top-start {
+  top: 0;
+  left: 0;
+}
+.u-stamp-icon-position-top-start .u-icon {
+  transform: rotate(-10deg);
+  left: calc(var(--u-stamp-size) * -0.25);
+}
+.u-stamp-icon-position-bottom-start {
+  bottom: 0;
+  left: 0;
+  top: auto;
+}
+.u-stamp-icon-position-bottom-start .u-icon {
+  top: auto;
+  left: calc(var(--u-stamp-size) * -0.25);
+  bottom: calc(var(--u-stamp-size) * -0.25);
+}
+.u-stamp-icon-position-bottom-end {
+  bottom: 0;
+  top: auto;
+  right: 0;
+}
+.u-stamp-icon-position-bottom-end .u-icon {
+  transform: rotate(-10deg);
+  top: calc(100% - var(--u-stamp-size) * 0.75);
+}
+
 .u-status-dot {
   padding: 0 !important;
 }
