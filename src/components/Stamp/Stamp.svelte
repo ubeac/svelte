@@ -7,22 +7,27 @@
 
 	export let cssPrefix: $$Props['cssPrefix'] = 'stamp'
 	/**
-	 * You can use color property to change status's border color
+	 * You can use color property to change the stamp's background color
 	 */
-	export let color: $$Props['color'] = undefined
+	export let bgColor: $$Props['bgColor'] = undefined
 
 	/**
-	 * You can set position of status using position property
+	 * You can use text color property to change the stamp's border color
+	 */
+	export let textColor: $$Props['textColor'] = undefined
+
+	/**
+	 * You can set position of the stamp using position property
 	 */
 	export let iconPosition: $$Props['iconPosition'] = undefined
 
 	/**
-	 * If you want to change size of Status, use size property
+	 * If you want to change size of the stamp, use size property
 	 */
 	export let size: $$Props['size'] = 'md'
 
 	/**
-	 * You can set stamp icon using icon property
+	 * You can set the stamp icon using icon property
 	 */
 	export let icon: $$Props['icon'] = undefined
 
@@ -32,7 +37,8 @@
 		cssProps = {
 			size,
 			iconPosition,
-			color,
+			bgColor,
+			textColor,
 		}
 		otherProps = {
 			cssPrefix,

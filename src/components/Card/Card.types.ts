@@ -11,8 +11,13 @@ export interface CardProps extends Partial<ElProps> {
 	statusColor?: Colors
 	statusPosition?: CardStatusPositions
 	statusSize?: CardStatusSizes
+	bgColor?: Colors
+	borderless?: boolean
 }
 
+export interface CardHeaderProps extends Partial<ElProps> {
+	light?: boolean
+}
 export interface CardFooterProps extends Partial<ElProps> {
 	transparent?: boolean
 }

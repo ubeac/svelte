@@ -29,8 +29,12 @@ $card-stamp-sizes: (
 
 	@each $key,
 	$value in $theme-colors {
-		&-color-#{$key}>.icon {
+		&-bg-color-#{$key}>.icon {
 			@extend .bg-#{$key};
+		}
+
+		&-text-color-#{$key}>.icon {
+			@extend .text-#{$key};
 		}
 	}
 

@@ -3,12 +3,12 @@
 //
 $prefix-ribbon: $prefix + 'ribbon';
 
-$positions: 'top' 'start' 'bottom' 'end';
+$ribbonPositions: 'top' 'start' 'bottom' 'end';
 
 $props: (
 	null: '.ribbon',
 	bg-color: generate_props($theme_colors, ('.bg-')),
-	element-position: generate_props($positions, ('.ribbon-'))
+	element-position: generate_props($ribbonPositions, ('.ribbon-'))
 );
 
 .#{$prefix-ribbon} {

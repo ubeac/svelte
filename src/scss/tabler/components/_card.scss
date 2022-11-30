@@ -9,13 +9,22 @@ $props: (
 	header: '.card-header',
 	title:'.card-title',
 	actions:'.card-actions',
-	stacked: '.card-stacked'
+	stacked: '.card-stacked',
+	borderless: '.card-borderless'
 );
 
 $media-positions: 'top' 'bottom';
 
 .#{$prefix-card} {
 	@include apply-props($props);
+
+	@each $key,
+	$value in $theme_colors {
+		&-bg-color-#{$key} {
+			@extend .bg-#{$key};
+			@extend .text-#{$key}-fg;
+		}
+	}
 
 	// Card Footer
 	&-footer {
@@ -27,6 +36,10 @@ $media-positions: 'top' 'bottom';
 		&.#{$prefix-card}-footer-transparent {
 			@extend .card-footer-transparent;
 		}
+	}
+
+	&-header-light {
+		@extend .card-header-light;
 	}
 
 	&-status {

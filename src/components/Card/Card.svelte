@@ -39,12 +39,24 @@
 	 */
 	export let status: $$Props['status'] = undefined
 
+	/**
+	 * You can set the card to show status and make it more eye-catching
+	 */
+	export let bgColor: $$Props['bgColor'] = undefined
+
+	/**
+	 * You can set the card to be shown borderless
+	 */
+	export let borderless: $$Props['borderless'] = undefined
+
 	let cssProps: any = {}
 	let otherProps: any = {}
 	let statusCssProps: any = {}
 	$: {
 		cssProps = {
 			stacked,
+			bgColor,
+			borderless,
 		}
 		otherProps = {
 			cssPrefix,

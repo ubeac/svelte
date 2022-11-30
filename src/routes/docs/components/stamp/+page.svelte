@@ -6,6 +6,7 @@
 </script>
 
 <h1>Stamps</h1>
+<p>Stamp container should have <code>relative</code> position.</p>
 
 <h2>Colors</h2>
 <p />

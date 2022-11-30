@@ -5,7 +5,7 @@
 <El row>
 	<El col>
 		<Card>
-			<Stamp color="primary" icon="bell" size="md" iconPosition="top-start" />
+			<Stamp bgColor="primary" icon="bell" size="md" iconPosition="top-start" />
 			<CardBody>
 				<CardTitle>Stamp color: primary</CardTitle>
 				<p>
@@ -26,7 +26,7 @@
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp color="warning" icon="bell" size="sm" iconPosition="bottom-start" />
+			<Stamp bgColor="warning" icon="bell" size="sm" iconPosition="bottom-start" />
 		</Card>
 	</El>
 	<El col>
@@ -39,7 +39,7 @@
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp color="secondary" icon="bell" size="md" iconPosition="top-end" />
+			<Stamp bgColor="secondary" icon="bell" size="md" iconPosition="top-end" />
 		</Card>
 	</El>
 	<El col>
@@ -52,7 +52,7 @@
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp color="success" icon="bell" size="lg" iconPosition="bottom-end" />
+			<Stamp bgColor="success" icon="bell" size="lg" iconPosition="bottom-end" />
 		</Card>
 	</El>
 </El>

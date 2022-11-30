@@ -5,6 +5,7 @@
 </script>
 
 <h1>Ribbons</h1>
+<p>Ribbon container should have <code>relative</code> position.</p>
 
 <h2>Colors</h2>
 <p />

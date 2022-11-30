@@ -11,6 +11,8 @@
 	import CardMedia from './CardMedia.svelte'
 	import CardStacked from './CardStacked.svelte'
 	import CardRibbon from './CardRibbon.svelte'
+	import CardFooter from './CardFooter.svelte'
+	import CardBackground from './CardBackground.svelte'
 </script>
 
 <h1>Cards</h1>
@@ -77,6 +79,11 @@
 	<CardAside />
 </Preview>
 
+<h2>Card with background color</h2>
+<Preview src="./CardBackground.svelte">
+	<CardBackground />
+</Preview>
+
 <h2>Color variations</h2>
 <p>
 	Add a status color to your card, either at the top or on the side of the card, to customise it and make it more
@@ -111,4 +118,10 @@
 <p>Add a CardMedia to show image and other medias inside our card.</p>
 <Preview src="./CardMedia.svelte">
 	<CardMedia />
+</Preview>
+
+<h2>Card Footer</h2>
+<p>Add a CardMedia to show image and other medias inside our card.</p>
+<Preview src="./CardFooter.svelte">
+	<CardFooter />
 </Preview>
