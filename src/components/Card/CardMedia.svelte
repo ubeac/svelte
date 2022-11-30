@@ -1,21 +1,19 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	import type { CardMediaProps } from './Card.types'
 
-	import type { CardMediaPositions } from './Card.types'
+	type $$Props = CardMediaProps
 
+	export let cssPrefix: $$Props['cssPrefix'] = 'card-media'
 	/**
 	 * You can change border radius of Media using placement property
 	 */
-	export let placement: CardMediaPlacements = 'middle'
+	export let elementPosition: $$Props['elementPosition'] = 'top'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('card-media', { placement }, $$props.class)
+	$: cssProps = { elementPosition }
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssProps} {cssPrefix}>
 	<slot />
-</div>
+</El>

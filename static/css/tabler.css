@@ -4560,18 +4560,22 @@ textarea.form-control-lg, textarea.u-input.u-input-size-lg, textarea.u-file-uplo
 
 .card-img,
 .card-img-top,
-.card-img-bottom {
+.u-card-media-element-position-top > *,
+.card-img-bottom,
+.u-card-media-element-position-bottom > * {
   width: 100%;
 }
 
 .card-img,
-.card-img-top {
+.card-img-top,
+.u-card-media-element-position-top > * {
   border-top-left-radius: var(--u-card-inner-border-radius);
   border-top-right-radius: var(--u-card-inner-border-radius);
 }
 
 .card-img,
-.card-img-bottom {
+.card-img-bottom,
+.u-card-media-element-position-bottom > * {
   border-bottom-right-radius: var(--u-card-inner-border-radius);
   border-bottom-left-radius: var(--u-card-inner-border-radius);
 }
@@ -4596,14 +4600,14 @@ textarea.form-control-lg, textarea.u-input.u-input-size-lg, textarea.u-file-uplo
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top, .card-group > .u-card:not(:last-child) .card-img-top,
+  .card-group > .card:not(:last-child) .card-img-top, .card-group > .card:not(:last-child) .u-card-media-element-position-top > *, .card-group > .u-card:not(:last-child) .card-img-top, .card-group > .u-card:not(:last-child) .u-card-media-element-position-top > *,
   .card-group > .card:not(:last-child) .card-header,
   .card-group > .card:not(:last-child) .u-card-header,
   .card-group > .u-card:not(:last-child) .card-header,
   .card-group > .u-card:not(:last-child) .u-card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .u-card:not(:last-child) .card-img-bottom,
+  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .card:not(:last-child) .u-card-media-element-position-bottom > *, .card-group > .u-card:not(:last-child) .card-img-bottom, .card-group > .u-card:not(:last-child) .u-card-media-element-position-bottom > *,
   .card-group > .card:not(:last-child) .card-footer,
   .card-group > .card:not(:last-child) .u-card-footer,
   .card-group > .u-card:not(:last-child) .card-footer,
@@ -4614,14 +4618,14 @@ textarea.form-control-lg, textarea.u-input.u-input-size-lg, textarea.u-file-uplo
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top, .card-group > .u-card:not(:first-child) .card-img-top,
+  .card-group > .card:not(:first-child) .card-img-top, .card-group > .card:not(:first-child) .u-card-media-element-position-top > *, .card-group > .u-card:not(:first-child) .card-img-top, .card-group > .u-card:not(:first-child) .u-card-media-element-position-top > *,
   .card-group > .card:not(:first-child) .card-header,
   .card-group > .card:not(:first-child) .u-card-header,
   .card-group > .u-card:not(:first-child) .card-header,
   .card-group > .u-card:not(:first-child) .u-card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .u-card:not(:first-child) .card-img-bottom,
+  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .card:not(:first-child) .u-card-media-element-position-bottom > *, .card-group > .u-card:not(:first-child) .card-img-bottom, .card-group > .u-card:not(:first-child) .u-card-media-element-position-bottom > *,
   .card-group > .card:not(:first-child) .card-footer,
   .card-group > .card:not(:first-child) .u-card-footer,
   .card-group > .u-card:not(:first-child) .card-footer,
@@ -24426,7 +24430,6 @@ Antialiasing
 .u-card-status-size-lg.u-card-status-position-start {
   width: 3px;
 }
-
 .u-col-align-self-start {
   align-self: start;
 }

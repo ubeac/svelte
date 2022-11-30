@@ -12,6 +12,8 @@ $props: (
 	stacked: '.card-stacked'
 );
 
+$media-positions: 'top' 'bottom';
+
 .#{$prefix-card} {
 	@include apply-props($props);
 
@@ -58,6 +60,14 @@ $props: (
 				&.#{$prefix-card}-status-position-start {
 					width: $value;
 				}
+			}
+		}
+	}
+
+	&-media {
+		@each $position in $media-positions {
+			&-element-position-#{$position}>* {
+				@extend .card-img-#{$position};
 			}
 		}
 	}

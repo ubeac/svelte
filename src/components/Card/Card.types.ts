@@ -17,10 +17,7 @@ export interface CardFooterProps extends Partial<ElProps> {
 	transparent?: boolean
 }
 
-declare type CardMediaPositions = undefined | 'top' | 'start' | 'middle' | 'end' | 'bottom'
+declare type CardMediaPositions = undefined | 'top' | 'bottom'
 export interface CardMediaProps extends Partial<ElProps> {
-	mediaPosition?: CardMediaPositions
+	elementPosition?: CardMediaPositions
 }
-
-// export const CARD_MEDIA_PLACEMENTS = ['top', 'start', 'middle', 'end', 'bottom'] as const
-// export type CardMediaPlacements = typeof CARD_MEDIA_PLACEMENTS[number]

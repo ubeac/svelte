@@ -4,7 +4,7 @@
 
 <El row>
 	<El col>
-		<Card status statusColor="danger" statusPosition="top">
+		<Card status statusColor="danger" statusPosition="top" statusSize="lg">
 			<CardBody>
 				<CardTitle>Card with top status</CardTitle>
 				<p class="text-muted">
@@ -15,7 +15,7 @@
 		</Card>
 	</El>
 	<El col>
-		<Card status statusColor="green" statusPosition="start">
+		<Card status statusColor="green" statusPosition="start" statusSize="md">
 			<CardBody>
 				<CardTitle>Card with side status</CardTitle>
 				<p class="text-muted">
@@ -26,7 +26,7 @@
 		</Card>
 	</El>
 	<El col>
-		<Card status statusColor="pink" statusPosition="bottom">
+		<Card status statusColor="pink" statusPosition="bottom" statusSize="sm">
 			<CardBody>
 				<CardTitle>Card with bottom status</CardTitle>
 				<p class="text-muted">
