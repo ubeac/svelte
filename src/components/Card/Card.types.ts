@@ -2,6 +2,8 @@ import type { ElProps } from '$lib/components'
 
 declare type CardStatusPositions = undefined | 'top' | 'bottom' | 'start'
 declare type CardStatusSizes = undefined | 'sm' | 'md' | 'lg'
+declare type CardRotateDirections = undefined | 'left' | 'right'
+declare type CardStates = undefined | 'active' | 'inactive'
 
 export interface CardProps extends Partial<ElProps> {
 	title?: string
@@ -13,6 +15,8 @@ export interface CardProps extends Partial<ElProps> {
 	statusSize?: CardStatusSizes
 	bgColor?: Colors
 	borderless?: boolean
+	rotate?: CardRotateDirections
+	cardState?: CardStates
 }
 
 export interface CardHeaderProps extends Partial<ElProps> {

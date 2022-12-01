@@ -49,6 +49,16 @@
 	 */
 	export let borderless: $$Props['borderless'] = undefined
 
+	/**
+	 * You can rotate property to rotate the card
+	 */
+	export let rotate: $$Props['rotate'] = undefined
+
+	/**
+	 * You set card to have active state
+	 */
+	export let cardState: $$Props['cardState'] = undefined
+
 	let cssProps: any = {}
 	let otherProps: any = {}
 	let statusCssProps: any = {}
@@ -57,6 +67,8 @@
 			stacked,
 			bgColor,
 			borderless,
+			rotate,
+			cardState,
 		}
 		otherProps = {
 			cssPrefix,

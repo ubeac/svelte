@@ -3,6 +3,10 @@
 //
 $prefix-card: $prefix + 'card';
 
+$media-positions: 'top' 'bottom';
+$rotate-directions: 'right' 'left';
+$card-states: 'active' 'inactive';
+
 $props: (
 	null: '.card',
 	body: '.card-body',
@@ -10,10 +14,9 @@ $props: (
 	title:'.card-title',
 	actions:'.card-actions',
 	stacked: '.card-stacked',
-	borderless: '.card-borderless'
+	borderless: '.card-borderless',
+	rotate: generate_props($rotate-directions, ('.card-rotate-')),
 );
-
-$media-positions: 'top' 'bottom';
 
 .#{$prefix-card} {
 	@include apply-props($props);
@@ -23,6 +26,12 @@ $media-positions: 'top' 'bottom';
 		&-bg-color-#{$key} {
 			@extend .bg-#{$key};
 			@extend .text-#{$key}-fg;
+		}
+	}
+
+	@each $state in $card-states {
+		&-card-state-#{$state} {
+			@extend .card-#{$state};
 		}
 	}
 
