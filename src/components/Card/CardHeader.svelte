@@ -1,13 +1,21 @@
 <script lang="ts">
 	import { El } from '$lib/components'
 
-	import type { ElProps } from '../Base/El.type'
+	import type { CardHeaderProps } from './Card.types'
 
-	type $$Props = Partial<ElProps>
+	type $$Props = CardHeaderProps
 
 	export let cssPrefix: $$Props['cssPrefix'] = 'card-header'
+
+	/**
+	 * You can use light property to set the card header style
+	 */
+	export let light: $$Props['light'] = undefined
+
+	let cssProps: any = {}
+	$: cssProps = { light }
 </script>
 
-<El {...$$restProps} {cssPrefix}>
+<El {...$$restProps} {cssProps} {cssPrefix}>
 	<slot />
 </El>

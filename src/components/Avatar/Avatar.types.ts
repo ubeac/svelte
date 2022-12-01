@@ -1,4 +1,4 @@
-import type { ElProps } from '../Base/El.type'
+import type { ElProps } from '$lib/components'
 
 export const AVATAR_SIZES = ['xs', 'sm', 'ep', 'md', 'lg', 'xl'] as const
 export type AvatarSizes = typeof AVATAR_SIZES[number]

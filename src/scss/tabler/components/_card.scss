@@ -2,19 +2,35 @@
 // Card
 //
 $prefix-card: $prefix + 'card';
-$prefix-card-status: $prefix-card + '-status';
+
+$media-positions: 'top' 'bottom';
+$rotate-directions: 'right' 'left';
+$card-states: 'active' 'inactive';
+$card-sizes: 'sm' 'md' 'lg';
 
 $props: (
-	'': '.card',
+	null: '.card',
 	body: '.card-body',
 	header: '.card-header',
 	title:'.card-title',
 	actions:'.card-actions',
-
+	stacked: '.card-stacked',
+	borderless: '.card-borderless',
+	rotate: generate_props($rotate-directions, ('.card-rotate-')),
+	card-size: generate_props($card-sizes, ('.card-')),
+	card-state: generate_props($card-states, ('.card-')),
 );
 
 .#{$prefix-card} {
 	@include apply-props($props);
+
+	@each $key,
+	$value in $theme_colors {
+		&-bg-color-#{$key} {
+			@extend .bg-#{$key};
+			@extend .text-#{$key}-fg;
+		}
+	}
 
 	// Card Footer
 	&-footer {
@@ -28,91 +44,49 @@ $props: (
 		}
 	}
 
-	&-stamp {
-		@extend .card-stamp;
+	&-header-light {
+		@extend .card-header-light;
+	}
 
-		&-icon {
-			@extend .card-stamp-icon;
-		}
-
-		@each $key,
-		$value in $card-stamp-sizes {
-			&-size-#{$key} {
-				--stamp-size: #{$value};
-			}
-		}
+	&-status {
 
 		@each $key,
 		$value in $theme-colors {
-			&-color-#{$key} &-icon {
+			&-color-#{$key} {
 				@extend .bg-#{$key};
 			}
 		}
 
-		&-position-top-start {
-			top: 0;
-			left: 0;
-
-			.#{$prefix-card}-stamp-icon {
-				transform: rotate(-10deg);
-				right: calc(var(--stamp-size) * 0.25);
+		@each $key in top,
+		start,
+		bottom {
+			&-position-#{$key} {
+				@extend .card-status-#{$key};
 			}
 		}
 
-		&-position-bottom-start {
-			bottom: 0;
-			left: 0;
-			top: auto;
+		@each $key,
+		$value in $card-status-sizes {
+			&-size-#{$key} {
 
-			.#{$prefix-card}-stamp-icon {
-				top: calc(var(--stamp-size) * 0.25);
-				right: calc(var(--stamp-size) * 0.25);
+				&.#{$prefix-card}-status-position-top,
+				&.#{$prefix-card}-status-position-bottom {
+					height: $value;
+				}
 			}
-		}
 
-		&-position-bottom-end {
-			bottom: 0;
-			top: auto;
-
-			.#{$prefix-card}-stamp-icon {
-				transform: rotate(-10deg);
-				top: calc(var(--stamp-size) * 0.25);
+			&-size-#{$key} {
+				&.#{$prefix-card}-status-position-start {
+					width: $value;
+				}
 			}
 		}
 	}
-}
 
-// Card Status
-.#{$prefix-card-status} {
-
-	@each $key,
-	$value in $theme-colors {
-		&-color-#{$key} {
-			@extend .bg-#{$key};
-		}
-	}
-
-	@each $key in top,
-	start,
-	bottom {
-		&-position-#{$key} {
-			@extend .card-status-#{$key};
-		}
-	}
-
-	@each $key,
-	$value in $card-status-sizes {
-		&-size-#{$key} {
-
-			&.#{$prefix-card-status}-position-top,
-			&.#{$prefix-card-status}-position-bottom {
-				height: $value;
-			}
-		}
-
-		&-size-#{$key} {
-			&.#{$prefix-card-status}-position-start {
-				width: $value;
+	&-media {
+		@each $position in $media-positions {
+			&-element-position-#{$position}>* {
+				@extend .card-img-#{$position};
 			}
 		}
 	}

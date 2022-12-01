@@ -8,9 +8,11 @@
 	import CardAside from './CardAside.svelte'
 	import CardColor from './CardColor.svelte'
 	import CardStamp from './CardStamp.svelte'
-	import CardStampSize from './CardStampSize.svelte'
-	import CardAction from './CardAction.svelte'
 	import CardMedia from './CardMedia.svelte'
+	import CardStacked from './CardStacked.svelte'
+	import CardRibbon from './CardRibbon.svelte'
+	import CardFooter from './CardFooter.svelte'
+	import CardBackground from './CardBackground.svelte'
 </script>
 
 <h1>Cards</h1>
@@ -77,6 +79,11 @@
 	<CardAside />
 </Preview>
 
+<h2>Card with background color</h2>
+<Preview src="./CardBackground.svelte">
+	<CardBackground />
+</Preview>
+
 <h2>Color variations</h2>
 <p>
 	Add a status color to your card, either at the top or on the side of the card, to customise it and make it more
@@ -86,16 +93,25 @@
 	<CardColor />
 </Preview>
 
-<h2>Stamp Color</h2>
+<h2>Card Stamp</h2>
 <p>Add a CardStamp.</p>
 <Preview src="./CardStamp.svelte">
 	<CardStamp />
 </Preview>
 
-<h2>Stamp Size</h2>
-<p>Add a CardStamp with different size.</p>
-<Preview src="./CardStampSize.svelte">
-	<CardStampSize />
+<h2>Card Ribbon</h2>
+<p>Add a Ribbon to your card.</p>
+<Preview src="./CardRibbon.svelte">
+	<CardRibbon />
+</Preview>
+
+<h2>Stacked Card</h2>
+<p>
+	Use the card-stacked class to stack up multiple cards, if you want to save screen space or create a visually appealing
+	effect.
+</p>
+<Preview src="./CardStacked.svelte">
+	<CardStacked />
 </Preview>
 
 <h2>Card Media</h2>
@@ -104,14 +120,8 @@
 	<CardMedia />
 </Preview>
 
-<style global>
-	.example-column {
-		margin: 0 auto;
-	}
-	.example-column-1 {
-		max-width: 26rem;
-	}
-	.example-column-2 {
-		max-width: 52rem;
-	}
-</style>
+<h2>Card Footer</h2>
+<p>Add a CardMedia to show image and other medias inside our card.</p>
+<Preview src="./CardFooter.svelte">
+	<CardFooter />
+</Preview>

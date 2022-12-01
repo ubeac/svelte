@@ -5,54 +5,54 @@
 <El row>
 	<El col>
 		<Card>
-			<Stamp bgColor="primary" icon="bell" size="md" iconPosition="top-start" />
 			<CardBody>
-				<CardTitle>Stamp color: primary</CardTitle>
+				<CardTitle>Stamp position: Top Start</CardTitle>
 				<p>
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
 					standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
 					make a type specimen book.
 				</p>
 			</CardBody>
+			<Stamp color="warning" icon="bell" size="md" iconPosition="top-start" />
 		</Card>
 	</El>
 	<El col>
 		<Card>
 			<CardBody>
-				<CardTitle>Stamp color: warning</CardTitle>
+				<CardTitle>Stamp position: Bottom Start</CardTitle>
 				<p>
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
 					standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp bgColor="warning" icon="bell" size="sm" iconPosition="bottom-start" />
+			<Stamp color="warning" icon="bell" size="md" iconPosition="bottom-start" />
 		</Card>
 	</El>
 	<El col>
 		<Card>
 			<CardBody>
-				<CardTitle>Stamp color: secondary</CardTitle>
+				<CardTitle>Stamp position: Top End</CardTitle>
 				<p>
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
 					standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp bgColor="secondary" icon="bell" size="md" iconPosition="top-end" />
+			<Stamp color="warning" icon="bell" size="md" iconPosition="top-end" />
 		</Card>
 	</El>
 	<El col>
 		<Card>
+			<Stamp color="warning" icon="bell" size="md" iconPosition="bottom-end" />
 			<CardBody>
-				<CardTitle>Stamp color: success</CardTitle>
+				<CardTitle>Stamp position: Bottom End</CardTitle>
 				<p>
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
 					standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp bgColor="success" icon="bell" size="lg" iconPosition="bottom-end" />
 		</Card>
 	</El>
 </El>
