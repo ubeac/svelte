@@ -1,3 +1,5 @@
+import type { ElProps } from '$lib/components'
+
 export const ICON_SIZES = [
 	'auto',
 	'xs',
@@ -20,3 +22,11 @@ export type IconSizes = typeof ICON_SIZES[number]
 // TODO: complete this list
 export const ICON_PACKS = ['tabler', 'mdi', 'fa-solid', 'la', 'bx'] as const
 export type IconPacks = typeof ICON_PACKS[number] | string
+
+export interface IconProps extends Partial<ElProps> {
+	color?: Colors
+	pack?: IconPacks
+	filled?: boolean
+	name?: string
+	size?: IconSizes
+}

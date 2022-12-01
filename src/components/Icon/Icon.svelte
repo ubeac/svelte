@@ -1,44 +1,41 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
-
 	import Icon from '@iconify/svelte'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
-	import type { IconPacks, IconSizes } from './Icon.types'
+	import type { IconProps } from './Icon.types'
+
+	type $$Props = IconProps
+
+	export let cssPrefix: $$Props['cssPrefix'] = 'icon'
 
 	/**
 	 * Set color of the Icon
 	 */
-	export let color: Colors = 'default'
+	export let color: $$Props['color'] = undefined
 
 	/**
 	 * Set color of the Icon
 	 */
-	export let filled: boolean = false
+	export let filled: $$Props['filled'] = false
 
 	/**
 	 * Name of the Icon, see https://icon-sets.iconify.design/ for list of icon names and packs
 	 */
-	export let name: string | undefined = undefined
+	export let name: $$Props['name'] = undefined
 
 	/**
 	 * Change Icons package, see https://icon-sets.iconify.design/ for list of icon packs
 	 */
-	export let pack: IconPacks = 'tabler'
+	export let pack: $$Props['pack'] = 'tabler'
 
 	/**
 	 * Set Size of the Icon
 	 */
-	export let size: IconSizes = 'auto'
-
-	// TODO
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	export let size: $$Props['size'] = undefined
 
 	$: classes = classname(
-		'icon',
+		cssPrefix,
 		{
 			color,
 			filled,
@@ -49,4 +46,4 @@
 	)
 </script>
 
-<Icon icon="{pack}:{name}" width="auto" height="auto" {...$$restProps} class={classes} />
+<Icon icon="{pack}:{name}" {...$$restProps} class={classes} />
