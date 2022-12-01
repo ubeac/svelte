@@ -8,6 +8,21 @@
 			<CardBody>This is some text within a card body.</CardBody>
 		</Card>
 	</El>
+	<El col>
+		<Card cardSize="sm">
+			<CardBody>This is some text within a card body.</CardBody>
+		</Card>
+	</El>
+	<El col>
+		<Card cardSize="md">
+			<CardBody>This is some text within a card body.</CardBody>
+		</Card>
+	</El>
+	<El col>
+		<Card cardSize="lg">
+			<CardBody>This is some text within a card body.</CardBody>
+		</Card>
+	</El>
 </El>
 <El row mt="3">
 	<El col>

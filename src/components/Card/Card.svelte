@@ -59,6 +59,11 @@
 	 */
 	export let cardState: $$Props['cardState'] = undefined
 
+	/**
+	 * You set card to have active state
+	 */
+	export let cardSize: $$Props['cardSize'] = undefined
+
 	let cssProps: any = {}
 	let otherProps: any = {}
 	let statusCssProps: any = {}
@@ -69,6 +74,7 @@
 			borderless,
 			rotate,
 			cardState,
+			cardSize,
 		}
 		otherProps = {
 			cssPrefix,

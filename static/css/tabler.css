@@ -18856,21 +18856,21 @@ a.card-title:hover, a.u-card-title:hover {
 .card-body > :last-child, .u-card-body > :last-child {
   margin-bottom: 0;
 }
-.card-sm > .card-body, .card-sm > .u-card-body {
+.card-sm > .card-body, .u-card-card-size-sm > .card-body, .card-sm > .u-card-body, .u-card-card-size-sm > .u-card-body {
   padding: 1rem;
 }
 @media (min-width: 768px) {
-  .card-md > .card-body, .card-md > .u-card-body {
+  .card-md > .card-body, .u-card-card-size-md > .card-body, .card-md > .u-card-body, .u-card-card-size-md > .u-card-body {
     padding: 2.5rem;
   }
 }
 @media (min-width: 768px) {
-  .card-lg > .card-body, .card-lg > .u-card-body {
+  .card-lg > .card-body, .u-card-card-size-lg > .card-body, .card-lg > .u-card-body, .u-card-card-size-lg > .u-card-body {
     padding: 2rem;
   }
 }
 @media (min-width: 992px) {
-  .card-lg > .card-body, .card-lg > .u-card-body {
+  .card-lg > .card-body, .u-card-card-size-lg > .card-body, .card-lg > .u-card-body, .u-card-card-size-lg > .u-card-body {
     padding: 4rem;
   }
 }
