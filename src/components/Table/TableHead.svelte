@@ -1,16 +1,17 @@
-<script>
-	import { get_current_component, setContext } from 'svelte/internal'
+<script lang="ts">
+	import { setContext } from 'svelte'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	import { El } from '../Base'
+	import type { TableHeadProps } from './Table.types'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	type $$Props = TableHeadProps
+
+	export let tag: $$Props['tag'] = 'thead'
+	export let cssPrefix: $$Props['cssPrefix'] = 'table-head'
 
 	setContext('TABLE:HEAD', true)
-
-	$: classes = classname('table-head', undefined, $$props.class)
 </script>
 
-<thead use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssPrefix} {tag}>
 	<slot />
-</thead>
+</El>

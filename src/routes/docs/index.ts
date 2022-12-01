@@ -78,6 +78,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'dots',
+				title: 'Dot',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'el',
 				title: 'El',
 				icon: 'star',
@@ -90,6 +95,11 @@ export const navigations = [
 			{
 				route: base_component_path + 'grids',
 				title: 'Grid',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'icons',
+				title: 'Icon',
 				icon: 'star',
 			},
 			{
@@ -133,12 +143,17 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'stamp',
+				route: base_component_path + 'stamps',
 				title: 'Stamp',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'status',
+				route: base_component_path + 'spinners',
+				title: 'Spinner',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'statuses',
 				title: 'Status',
 				icon: 'star',
 			},

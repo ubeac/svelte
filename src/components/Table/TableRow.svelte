@@ -1,14 +1,21 @@
-<script>
-	import { get_current_component } from 'svelte/internal'
+<script lang="ts">
+	import { El } from '../Base'
+	import type { TableRowProps } from './Table.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = TableRowProps
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	export let tag: $$Props['tag'] = 'tr'
+	export let cssPrefix: $$Props['cssPrefix'] = 'table-row'
 
-	$: classes = classname('table-row', undefined, $$props.class)
+	export let color: $$Props['color'] = undefined
+	export let active: $$Props['active'] = undefined
+
+	$: cssProps = {
+		color,
+		active
+	}
 </script>
 
-<tr use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssProps} {cssPrefix} {tag}>
 	<slot />
-</tr>
+</El>

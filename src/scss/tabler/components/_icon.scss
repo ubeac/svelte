@@ -20,23 +20,21 @@ $icon-sizes: (
 	9x: 9rem,
 );
 
+$props: (
+	null: ".icon",
+	filled: ".icon-filled",
+	color: generate_props($theme_colors, (".text-")),
+	size: generate_props($icon-sizes, (".icon-size-"))
+);
+
 .#{$prefix-icon} {
-	@extend .icon;
+	@include apply-props($props);
 
-	@each $key, $value in $theme-colors {
-		&-color-#{$key} {
-			@extend .text-#{$key};
-		}
-	}
-
-	@each $key, $value in $icon-sizes {
+	@each $key,
+	$value in $icon-sizes {
 		&-size-#{$key} {
 			width: #{$value} !important;
 			height: #{$value} !important;
 		}
-	}
-
-	&-filled {
-		@extend .icon-filled;
 	}
 }

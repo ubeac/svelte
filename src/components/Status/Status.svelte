@@ -1,37 +1,26 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '../Base'
+	import type { StatusProps } from './Status.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	type $$Props = StatusProps
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	export let tag: $$Props['tag'] = 'span'
+	export let cssPrefix: $$Props['cssPrefix'] = 'status'
 
-	/**
-	 *  animated of dot status
-	 */
-	export let animated: boolean = false
-	/**
-	 * The color of status
-	 */
-	export let color: Colors = 'default'
-	/**
-	 * The type of status
-	 */
-	export let dot: boolean = false
+	export let color: $$Props['color'] = undefined
+	export let lite: $$Props['lite'] = undefined
 
-	$: classes = classname(
-		'status',
-		{
-			animated,
-			color,
-			dot,
-		},
-		$$props.class,
-		true
-	)
+	$: cssProps = {
+		color,
+		lite,
+	}
+
+	$: otherProps = {
+		tag,
+		cssPrefix,
+	}
 </script>
 
-<span use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssProps} {...otherProps}>
 	<slot />
-</span>
+</El>

@@ -10,6 +10,9 @@
 
 	export let required: $$Props['required'] = false
 
+	let fore: $$Props['for'] = undefined
+	export {fore as for}
+
 	$: cssProps = {
 		required,
 	}
@@ -20,6 +23,6 @@
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {...otherProps}>
+<El {...$$restProps} for={fore} {cssProps} {...otherProps}>
 	<slot />
 </El>
