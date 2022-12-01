@@ -1,0 +1,31 @@
+//
+// Input
+//
+$prefix-input: $prefix + 'input';
+
+$props: (
+	null: '.form-control',
+	size:(sm: '.form-control-sm',
+		md: '.form-control-md',
+		lg: '.form-control-lg'
+	),
+	state:(valid: '.is-valid',
+		invalid: '.is-invalid',
+		loading: '.is-loading'
+	),
+	border-rounded: '.form-control-rounded',
+	border-flush: '.form-control-flush'
+);
+
+.#{$prefix-input} {
+	@include apply-props($props);
+
+	&-wrapper {
+		@extend .input-group;
+		position: relative;
+	}
+
+	&-icon-wrapper {
+		@extend .input-icon-addon;
+	}
+}

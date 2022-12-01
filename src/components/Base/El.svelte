@@ -296,6 +296,10 @@
 	}
 </script>
 
-<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes}>
-	<slot />
-</svelte:element>
+{#if $$slots.default}
+	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes}>
+		<slot />
+	</svelte:element>
+{:else}
+	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes} />
+{/if}
