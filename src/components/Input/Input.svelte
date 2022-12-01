@@ -1,42 +1,49 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '../Base'
+	import type { InputProps } from './Input.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = InputProps
 
-	import type { InputSizes } from './Input.types'
+	export let cssPrefix: $$Props['cssPrefix'] = 'input'
 
-	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let tag: $$Props['tag'] = 'input'
 
 	/**
 	 * Set the input disabled
 	 */
-	export let disabled: boolean = false
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
 	 * Set placeholder for the input
 	 */
-	export let placeholder: string | undefined = undefined
+	export let placeholder: $$Props['placeholder'] = undefined
 
 	/**
 	 * Set the input read only
 	 */
-	export let readOnly: boolean = false
+	export let readOnly: $$Props['readOnly'] = undefined
 
 	/**
 	 * Set the size of input
 	 */
-	export let size: InputSizes = 'md'
+	export let size: $$Props['size'] = 'md'
 
 	/**
 	 * the text Value of input
 	 */
-	export let value: any = undefined
+	export let value: $$Props['value'] = undefined
 
-	$: classes = classname('input', { size, disabled, readOnly }, $$props.class, true)
+	$: cssProps = {
+		readOnly,
+		size,
+		disabled,
+	}
+
+	$: otherProps = {
+		tag,
+		cssPrefix,
+		placeholder,
+	}
 </script>
 
-<input bind:value use:forwardEvents {...$$restProps} class={classes} {placeholder} {readOnly} {disabled} />
+<El bind:value {...$$restProps} {...otherProps} {cssProps} />
