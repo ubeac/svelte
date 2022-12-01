@@ -13,7 +13,7 @@
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp color="warning" icon="bell" size="md" iconPosition="top-start" />
+			<Stamp bgColor="warning" icon="bell" size="md" iconPosition="top-start" />
 		</Card>
 	</El>
 	<El col>
@@ -26,7 +26,7 @@
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp color="warning" icon="bell" size="md" iconPosition="bottom-start" />
+			<Stamp bgColor="warning" icon="bell" size="md" iconPosition="bottom-start" />
 		</Card>
 	</El>
 	<El col>
@@ -39,12 +39,12 @@
 					make a type specimen book.
 				</p>
 			</CardBody>
-			<Stamp color="warning" icon="bell" size="md" iconPosition="top-end" />
+			<Stamp bgColor="warning" icon="bell" size="md" iconPosition="top-end" />
 		</Card>
 	</El>
 	<El col>
 		<Card>
-			<Stamp color="warning" icon="bell" size="md" iconPosition="bottom-end" />
+			<Stamp bgColor="warning" icon="bell" size="md" iconPosition="bottom-end" />
 			<CardBody>
 				<CardTitle>Stamp position: Bottom End</CardTitle>
 				<p>

@@ -143,7 +143,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'stamps',
+				route: base_component_path + 'stamp',
 				title: 'Stamp',
 				icon: 'star',
 			},
