@@ -98,6 +98,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'icons',
+				title: 'Icon',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'inputs',
 				title: 'Input',
 				icon: 'star',
