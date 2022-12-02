@@ -1,43 +1,32 @@
 <script>
-	import { Card, CardBody, CardMedia, CardTitle, CardActions, CardFooter } from '@ubeac/svelte'
-	import { Row, Col } from '@ubeac/svelte'
+	import { Card, CardBody, CardMedia, CardTitle, El } from '@ubeac/svelte'
 </script>
 
-<Row>
-	<Col class="mb-3">
+<El row>
+	<El col class="mb-6">
 		<Card class="example-column example-column-1">
-			<CardMedia position="top">
-				<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
+			<CardMedia elementPosition="top">
+				<img
+					alt=""
+					src="https://preview.tabler.io/static/photos/home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg" />
 			</CardMedia>
 			<CardBody>
 				<CardTitle>Title</CardTitle>
 				<p>Body</p>
 			</CardBody>
 		</Card>
-	</Col>
-	<Col class="mb-3">
+	</El>
+	<El col class="mb-6">
 		<Card class="example-column example-column-1">
 			<CardBody>
 				<CardTitle>Title</CardTitle>
 				<p>Body</p>
 			</CardBody>
-			<CardMedia position="middle">
-				<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
-			</CardMedia>
-			<CardBody>
-				<p>Body</p>
-			</CardBody>
-		</Card>
-	</Col>
-	<Col class="mb-3">
-		<Card class="example-column example-column-1">
-			<CardBody>
-				<CardTitle>Title</CardTitle>
-				<p>Body</p>
-			</CardBody>
-			<CardMedia position="bottom">
-				<img alt="" src="https://preview.tabler.io/static/photos/9f36332564ca271d.jpg" />
+			<CardMedia elementPosition="bottom">
+				<img
+					alt=""
+					src="https://preview.tabler.io/static/photos/home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg" />
 			</CardMedia>
 		</Card>
-	</Col>
-</Row>
+	</El>
+</El>

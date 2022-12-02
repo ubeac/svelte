@@ -125,13 +125,13 @@ export interface CssProps {
 	offsetXxl: ColSizes
 
 	// Row
-	row: BooleanValues
-	rowCol: RowColSizes
-	rowColSm: RowColSizes
-	rowColMd: RowColSizes
-	rowColLg: RowColSizes
-	rowColXl: RowColSizes
-	rowColXxl: RowColSizes
+	row?: boolean | 'deck'
+	rowCols: RowColSizes
+	rowColsSm: RowColSizes
+	rowColsMd: RowColSizes
+	rowColsLg: RowColSizes
+	rowColsXl: RowColSizes
+	rowColsXxl: RowColSizes
 
 	// Gutter
 	g: RowGutterSizes
@@ -185,4 +185,4 @@ export const NAMED_COLOR_TYPES: NamedColors[] = [
 
 export const BACKGROUND_COLOR_TYPES: BackgroundColors[] = [...THEME_COLOR_TYPES, ...NAMED_COLOR_TYPES, 'body']
 
-export const OPACITY_TYPES: Opacities[] = ["10", "25", "50", "75"]
+export const OPACITY_TYPES: Opacities[] = ['10', '25', '50', '75']

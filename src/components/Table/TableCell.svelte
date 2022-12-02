@@ -1,16 +1,31 @@
 <script lang="ts">
-	import { get_current_component, getContext } from 'svelte/internal'
+  import { getContext } from 'svelte'
+	import { El } from '../Base'
+	import type { TableCellProps } from './Table.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = TableCellProps
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	export let tag: $$Props['tag'] = 'td';
+	export let cssPrefix: $$Props['cssPrefix'] = 'table-cell'
 
-	const head = getContext('TABLE:HEAD') ?? false
+	export let color: $$Props['color'] = undefined
+	export let truncate: $$Props['truncate'] = undefined
+	export let active: $$Props['active'] = undefined
+	export let colspan: $$Props['colspan'] = undefined
 
-	$: classes = classname('table-cell', undefined, $$props.class)
+	let head = getContext('TABLE:HEAD') ?? false
+
+	$: cssProps = {
+		color,
+		truncate,
+		active
+	}
+
+	$: {
+		tag = head ? 'th' : 'td'
+	}
 </script>
 
-<svelte:element this={head ? 'th' : 'td'} use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {colspan} {cssProps} {cssPrefix} {tag}>
 	<slot />
-</svelte:element>
+</El>
