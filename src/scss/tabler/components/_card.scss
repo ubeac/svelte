@@ -27,8 +27,7 @@ $props: (
 	@each $key,
 	$value in $theme_colors {
 		&-bg-color-#{$key} {
-			@extend .bg-#{$key};
-			@extend .text-#{$key}-fg;
+			@extend .text-bg-#{$key};
 		}
 	}
 
