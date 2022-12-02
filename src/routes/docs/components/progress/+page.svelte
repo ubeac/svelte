@@ -1,8 +1,8 @@
 <script>
 	import { Preview } from '$lib/components'
 	import ProgressDefault from './ProgressDefault.svelte'
-	// import Progressdefault from './Progress.svelte'
-	// import Progressdefault from './Progressdefault.svelte'
+	import ProgressIndeterminate from './ProgressIndeterminate.svelte'
+	import ProgressColors from './ProgressColors.svelte'
 </script>
 
 <h1>Progress bar</h1>
@@ -18,14 +18,16 @@
 	<ProgressDefault />
 </Preview>
 
-<!-- <h2>Sizes</h2>
-<p />
-<Preview src="./StampSize.svelte">
-	<StampSize />
+<h2>Indeterminate</h2>
+<p>
+	You can create a progress bar which shows indeterminate progress by adding <code>indeterminate</code> to the progress component.
+</p>
+<Preview src="./ProgressIndeterminate.svelte">
+	<ProgressIndeterminate />
 </Preview>
 
-<h2>Positions</h2>
-<p />
-<Preview src="./StampPositions.svelte">
-	<StampPositions />
-</Preview> -->
+<h2>Collors</h2>
+<p>Customize the color of the progress bar to suit your design.</p>
+<Preview src="./ProgressColors.svelte">
+	<ProgressColors />
+</Preview>

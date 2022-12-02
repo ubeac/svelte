@@ -4981,7 +4981,7 @@ textarea.form-control-lg, textarea.u-input.u-input-size-lg, textarea.u-file-uplo
   border-radius: var(--u-progress-border-radius);
 }
 
-.progress-bar {
+.progress-bar, .u-progress-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4993,7 +4993,7 @@ textarea.form-control-lg, textarea.u-input.u-input-size-lg, textarea.u-file-uplo
   transition: var(--u-progress-bar-transition);
 }
 @media (prefers-reduced-motion: reduce) {
-  .progress-bar {
+  .progress-bar, .u-progress-bar {
     transition: none;
   }
 }
@@ -7910,7 +7910,7 @@ textarea.form-control-lg, textarea.u-input.u-input-size-lg, textarea.u-file-uplo
   align-self: stretch;
 }
 
-.visually-hidden,
+.visually-hidden, .u-progress-visually-hidden > .u-progress-bar > span,
 .visually-hidden-focusable:not(:focus):not(:focus-within) {
   position: absolute !important;
   width: 1px !important;
@@ -20953,11 +20953,11 @@ Progress
 /**
 Progress bar
  */
-.progress-bar {
+.progress-bar, .u-progress-bar {
   height: 100%;
 }
 
-.progress-bar-indeterminate:after, .progress-bar-indeterminate:before {
+.progress-bar-indeterminate:after, .u-progress-indeterminate > .u-progress-bar:after, .progress-bar-indeterminate:before, .u-progress-indeterminate > .u-progress-bar:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -20966,11 +20966,11 @@ Progress bar
   background-color: inherit;
   will-change: left, right;
 }
-.progress-bar-indeterminate:before {
+.progress-bar-indeterminate:before, .u-progress-indeterminate > .u-progress-bar:before {
   animation: progress-indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
 }
 
-.progress-separated .progress-bar {
+.progress-separated .progress-bar, .progress-separated .u-progress-bar {
   box-shadow: 0 0 0 2px var(--u-card-bg, var(--u-bg-surface));
 }
 

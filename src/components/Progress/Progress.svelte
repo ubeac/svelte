@@ -39,19 +39,20 @@
 	 */
 	export let indeterminate: $$Props['indeterminate'] = undefined
 
+	/**
+	 *
+	 */
+	export let visuallyHidden: $$Props['visuallyHidden'] = undefined
+
 	let cssProps: any = {}
-	//let barCssProps: any = {}
 	let otherProps: any = {}
 	$: {
 		cssProps = {
 			progressSize,
 			color,
 			indeterminate,
+			visuallyHidden,
 		}
-		// barCssProps = {
-		// 	color,
-		// 	indeterminate,
-		// }
 		otherProps = {
 			cssPrefix,
 		}
@@ -68,7 +69,7 @@
 		aria-valuemax={maxValue}
 		aria-label="{currentValue}% completed">
 		{#if !indeterminate}
-			<El tag="span" class="visually-hidden">{currentValue}% completed</El>
+			<El tag="span">{currentValue}% completed</El>
 		{/if}
 	</El>
 </El>
