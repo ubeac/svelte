@@ -1,37 +1,44 @@
 <script lang="ts">
-	import { get_current_component, onDestroy, onMount } from 'svelte/internal'
+	import { get_current_component, onDestroy, onMount, tick } from 'svelte/internal'
 
 	import { createPopper } from '@popperjs/core'
 	import type { Instance } from '@popperjs/core'
 
 	import { forwardEventsBuilder } from '$lib/directives'
 
+	import { El } from '../Base'
+	import type { PopupProps } from './Popup.types'
 	import type { PopupPlacements, PopupTriggers } from './Popup.types'
+
+	type $$Props = PopupProps
+
+	export let cssPrefix: $$Props['cssPrefix'] = 'popup'
+	export let tag: $$Props['tag'] = 'div'
 
 	/**
 	 * Disable Popup's functionality
 	 */
-	export let disabled: boolean = false
+	export let disabled: $$Props['disabled'] = false
 
 	/**
 	 * Open Popup in Fixed position of the page
 	 */
-	export let fixed: boolean = false
+	export let fixedPosition: $$Props['fixedPosition'] = false
 
 	/**
 	 * Forward all native Events
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Distance between Popup and target element
 	 */
-	export let offset: [number, number] = [0, 8]
+	export let popupOffset: $$Props['popupOffset'] = [0, 16]
 
 	/**
 	 * Do not close popup when user clicked inside of it
 	 */
-	export let persistence: boolean = false
+	export let persistent: $$Props['persistent'] = undefined
 
 	/**
 	 * Set where the Popup should be opened (relative to target element)
@@ -44,13 +51,15 @@
 	export let trigger: PopupTriggers = ['focus', 'hover']
 
 	let instance: Instance
-	let ref: HTMLElement
+	let element: HTMLElement
+
+	let hidden: boolean = true
 
 	$: if (typeof trigger === 'string') trigger = [trigger]
 
 	$: options = {
 		placement,
-		strategy: fixed ? 'fixed' : 'absolute',
+		strategy: fixedPosition ? 'fixed' : 'absolute',
 		modifiers: [
 			{
 				name: 'preventOverflow',
@@ -61,7 +70,7 @@
 			{
 				name: 'offset',
 				options: {
-					offset,
+					popupOffset,
 				},
 			},
 		],
@@ -85,16 +94,16 @@
 		if (disabled) return
 		if (typeof window != 'undefined') document.addEventListener('click', onOutside)
 		eventsName().map(([hide, show]) => {
-			ref?.previousElementSibling?.addEventListener(hide, onHide)
-			ref?.previousElementSibling?.addEventListener(show, onShow)
+			element?.previousElementSibling?.addEventListener(hide, onHide)
+			element?.previousElementSibling?.addEventListener(show, onShow)
 		})
 	}
 
 	function unbind() {
 		if (typeof window != 'undefined') document.removeEventListener('click', onOutside)
 		eventsName().map(([hide, show]) => {
-			ref?.previousElementSibling?.removeEventListener(hide, onHide)
-			ref?.previousElementSibling?.removeEventListener(show, onShow)
+			element?.previousElementSibling?.removeEventListener(hide, onHide)
+			element?.previousElementSibling?.removeEventListener(show, onShow)
 		})
 	}
 
@@ -106,35 +115,41 @@
 	function onHide(event?: Event) {
 		const run = () => {
 			instance?.destroy()
-			ref.setAttribute('hidden', '')
+			hidden = true
 		}
 
 		if (!event) return run()
 
-		if (persistence) return
+		if (persistent) return
 
 		setTimeout(run, 150)
 	}
 
 	function onOutside(event: Event) {
-		if (!persistence) return
-		if (ref.hasAttribute('hidden')) return
-		if (event.composedPath().some((path) => path == ref || path == ref?.previousElementSibling)) return
+		if (!persistent) return
+		if (hidden) return
+		if (event.composedPath().some((path) => path == element || path == element?.previousElementSibling)) return
 		instance?.destroy()
-		ref.setAttribute('hidden', '')
+		hidden = true
 	}
 
 	function onShow() {
-		if (!ref.hasAttribute('hidden')) return onHide()
-		instance = createPopper(ref?.previousElementSibling!, ref, options as any)
-		ref.removeAttribute('hidden')
+		if (!hidden) return onHide()
+		instance = createPopper(element?.previousElementSibling!, element, options as any)
+
+		tick().then(() => instance.update())
+		hidden = false
 	}
 
 	onMount(bind)
 
 	onDestroy(unbind)
+
+	$: cssProps = {
+		// 
+	}
 </script>
 
-<div bind:this={ref} hidden use:forwardEvents {...$$restProps}>
+<El {...$$restProps} bind:element display={hidden ? 'none' : 'block'} {forwardEvents} {cssProps} {cssPrefix} {tag}>
 	<slot />
-</div>
+</El>

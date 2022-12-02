@@ -2,13 +2,22 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+
+	import { El } from '../Base'
+	import type { PopoverBodyProps } from './Popover.types'
+
+	type $$Props = PopoverBodyProps
+
+	export let tag: $$Props['tag'] = 'h3'
+	export let cssPrefix: $$Props['cssPrefix'] = 'popover-header'
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 
-	$: classes = classname('popover-header', undefined, $$props.class)
+	$: cssProps = {
+		//
+	}
 </script>
 
-<h3 use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {tag} {forwardEvents} {cssPrefix} {cssProps}>
 	<slot />
-</h3>
+</El>
