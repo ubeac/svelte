@@ -123,6 +123,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'progress',
+				title: 'Progress',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'radio',
 				title: 'Radio',
 				icon: 'star',

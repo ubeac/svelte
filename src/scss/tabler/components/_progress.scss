@@ -1,0 +1,27 @@
+$prefix-progress: $prefix + 'progress';
+
+$progress-sizes: 'sm' 'md' 'lg';
+$props: (
+	null:'.progress',
+	progress-size: generate_props($progress-sizes, ('.progress-')),
+	//bar:(color: generate_props($theme-colors, ('.bg-')))
+);
+
+.#{$prefix-progress} {
+	@include apply-props($props);
+
+
+
+	@each $color,
+	$value in $theme-colors {
+		&-color-#{$color}>.#{$prefix-progress}-bar {
+			@extend .bg-#{$color};
+		}
+	}
+
+	// &-indeterminate {
+	// 	@extend .progress-bar-indeterminate;
+	// }
+
+
+}

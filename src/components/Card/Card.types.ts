@@ -18,7 +18,7 @@ export interface CardProps extends Partial<ElProps> {
 	borderless?: boolean
 	rotate?: CardRotateDirections
 	cardState?: CardStates
-	cardSize?: CardStatusSizes
+	cardSize?: CardSizes
 }
 
 export interface CardHeaderProps extends Partial<ElProps> {
