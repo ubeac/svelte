@@ -1,29 +1,18 @@
-$prefix-switch: $prefix + 'switch';
-
 $switch-props: (
-	"": (".form-check", ".form-switch"),
-	"description": ".form-check-description",
-	"label": ".form-check-label",
-	"inline": ".form-check-inline",
-	"input": ".form-check-input",
+	null: ".form-check-input",
+	wrapper: ".form-check" ".form-switch",
+	label: ".form-check-label",
+	inline: ".form-check-inline",
+	color: generate_props($theme_colors, ('.alert-')),
 );
 
 .#{$prefix-switch} {
 	@include apply-props($switch-props);
 
-	&-description {
-		@each $key, $value in $theme-colors {
-			&-color-#{$key} {
-				color: #{$value} !important;
-			}
-		}
-	}
-
-	&-input {
-		@each $key, $value in $theme-colors {
-			&-color-#{$key}:checked {
-				background-color: #{$value} !important;
-			}
+	@each $key,
+	$value in $theme-colors {
+		&-color-#{$key}:checked {
+			background-color: #{$value} !important;
 		}
 	}
 }
