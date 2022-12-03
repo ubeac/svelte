@@ -78,6 +78,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'divider',
+				title: 'Divider',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'dots',
 				title: 'Dot',
 				icon: 'star',
