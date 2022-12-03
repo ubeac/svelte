@@ -1,62 +1,43 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El, Label } from '$lib/components'
 
-	import { nanoid } from 'nanoid'
-
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
-
-	import { El } from '../Base'
 	import type { SwitchProps } from './Switch.types'
 
 	type $$Props = SwitchProps
 
 	export let cssPrefix: $$Props['cssPrefix'] = 'switch'
-	export let tag: $$Props['tag'] = 'label'
-	export let id: $$Props['id'] = 'switch-' + nanoid(10)
-	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
-
+	export let tag: $$Props['tag'] = 'input'
+	export let id: $$Props['id'] = undefined
 	export let color: $$Props['color'] = undefined
-	export let description: $$Props['description'] = undefined
-	export let descriptionColor: $$Props['descriptionColor'] = undefined
 	export let inline: $$Props['inline'] = undefined
 	export let text: $$Props['text'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let role: $$Props['role'] = 'switch'
+	export let type: $$Props['type'] = 'checkbox'
 
+	$: _for = id
 	$: cssProps = {
 		inline,
+		color,
 	}
 
 	$: otherProps = {
 		tag,
 		cssPrefix,
-		id,
-		forwardEvents,
 		text,
-		description,
+		role,
+		type,
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {...otherProps}>
-	<input
-		type="checkbox"
-		{id}
-		bind:checked={value}
-		use:forwardEvents
-		class={classname('switch-input', {color}, undefined, true)}
-		cssProps={{ color }} />
-	<El tag="span" for={id} cssPrefix="switch-label" cssProps={{ color }}>
-		<slot>
-			{text}
-		</slot>
-	</El>
+<El cssPrefix="{cssPrefix}-wrapper">
+	<El bind:value bind:checked={value} bind:id {...$$restProps} {cssProps} {...otherProps} />
 
-	{#if description || $$slots['description']}
-		<El tag="span" cssPrefix="switch-description" cssProps={{ color: descriptionColor }}>
-			<slot name="description">
-				{description}
-			</slot>
-		</El>
+	{#if text}
+		<Label for={_for} cssPrefix="{cssPrefix}-label">
+			{text}
+		</Label>
 	{/if}
+
+	<slot />
 </El>
