@@ -1,8 +1,3 @@
-$prefix-table: $prefix + 'table';
-$prefix-table-row: $prefix + 'table-row';
-$prefix-table-cell: $prefix + 'table-cell';
-$prefix-table-parent: $prefix + 'table-parent';
-
 $table-props: (
 	null: ".table" ".table-vcenter",
 	border: ".table-bordered",

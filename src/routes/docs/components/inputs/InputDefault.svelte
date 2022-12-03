@@ -1,8 +1,12 @@
-<script>
+<script lang="ts">
 	import { Input } from '@ubeac/svelte'
 
-	let value
+	let value: any
 	$: console.log(value)
 </script>
 
-<Input bind:value />
+<Input bind:value placeholder="Try to type something..." />
+{#if value}
+	You typed:
+	<p>Value: {value}</p>
+{/if}
