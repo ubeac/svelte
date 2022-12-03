@@ -141,13 +141,13 @@
 	export let offsetXxl: ColSizes = undefined
 
 	// Row
-	export let row: BooleanValues = undefined
-	export let rowCol: RowColSizes = undefined
-	export let rowColSm: RowColSizes = undefined
-	export let rowColMd: RowColSizes = undefined
-	export let rowColLg: RowColSizes = undefined
-	export let rowColXl: RowColSizes = undefined
-	export let rowColXxl: RowColSizes = undefined
+	export let row: boolean | 'deck' | undefined = undefined
+	export let rowCols: RowColSizes = undefined
+	export let rowColsSm: RowColSizes = undefined
+	export let rowColsMd: RowColSizes = undefined
+	export let rowColsLg: RowColSizes = undefined
+	export let rowColsXl: RowColSizes = undefined
+	export let rowColsXxl: RowColSizes = undefined
 
 	// Row gutters
 	export let g: RowGutterSizes = undefined
@@ -275,12 +275,12 @@
 			offsetXxl,
 			//Row
 			row,
-			rowCol,
-			rowColSm,
-			rowColMd,
-			rowColLg,
-			rowColXl,
-			rowColXxl,
+			rowCols,
+			rowColsSm,
+			rowColsMd,
+			rowColsLg,
+			rowColsXl,
+			rowColsXxl,
 			// gutter
 			g,
 			gSm,
@@ -296,6 +296,10 @@
 	}
 </script>
 
-<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes}>
-	<slot />
-</svelte:element>
+{#if $$slots.default}
+	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes}>
+		<slot />
+	</svelte:element>
+{:else}
+	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes} />
+{/if}

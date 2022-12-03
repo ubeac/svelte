@@ -1,6 +1,7 @@
 <script>
 	import { Preview } from '@ubeac/svelte'
 	import BreadcrumbDefault from './BreadcrumbDefault.svelte'
+	import BreadcrumbHeader from './BreadcrumbHeader.svelte'
 	import BreadcrumbSeperator from './BreadcrumbSeperator.svelte'
 </script>
 
@@ -21,13 +22,11 @@
 	you can choose dots, bullets or arrows.
 </p>
 <Preview vertical src="./BreadcrumbSeperator.svelte">
-	<div class="example-breadcrumbs">
-		<BreadcrumbSeperator />
-	</div>
+	<BreadcrumbSeperator />
 </Preview>
 
-<style lang="scss">
-	.example-breadcrumbs {
-		width: 100%;
-	}
-</style>
+<h2>Breadcrumb in Header</h2>
+<p>If you wish to use breadcrumbs in headers, place them above the headers.</p>
+<Preview vertical src="./BreadcrumbHeader.svelte">
+	<BreadcrumbHeader />
+</Preview>

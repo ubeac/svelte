@@ -147,14 +147,15 @@ $breakpoints: (
 );
 
 $props: (
-    'bg-gradient': '.bg-gradient',
-    'border': '.border',
-    'max-width-100': '.mw-100',
-    'max-height-100': '.mh-100',
-    'row': '.row',
-    'show': '.show',
-    'lead': '.lead',
-    'blockquote': '.blockquote'
+    bg-gradient: '.bg-gradient',
+    border: '.border',
+    max-width-100: '.mw-100',
+    max-height-100: '.mh-100',
+    row: (null: '.row',
+        deck: '.row' '.row-deck'),
+    show: '.show',
+    lead: '.lead',
+    blockquote: '.blockquote'
 );
 
 $positions: (
@@ -191,7 +192,20 @@ $heading-display-sizes: (
     border-width: var(--#{$prefix}border-width) !important;
 }
 
+$text-aligns: (
+    'start',
+    'center',
+    'end') !default;
+
+$row-cols-sizes: 1,
+    2,
+    3,
+    4,
+    5,
+    6 !default;
+
 .#{$prefix-el} {
+
     &-col {
         @extend .col;
 
@@ -204,6 +218,34 @@ $heading-display-sizes: (
                 &-#{$breakpoint}-#{$size} {
                     @extend .col-#{$breakpoint}-#{$size};
                 }
+            }
+        }
+    }
+
+    &-offset {
+        @each $breakpoint in $breakpoints {
+            @each $size in $col-sizes {
+                &-#{$breakpoint}-#{$size} {
+                    @extend .offset-#{$breakpoint}-#{$size} !optional;
+                }
+
+                &-#{$size} {
+                    @extend .offset-#{$breakpoint}-#{$size} !optional;
+                }
+            }
+        }
+    }
+
+    &-text-align {
+        @each $text-align in $text-aligns {
+            @each $breakpoint in $breakpoints {
+                &-#{$breakpoint}-#{$text-align} {
+                    @extend .offset-#{$breakpoint}-#{$text-align} !optional;
+                }
+            }
+
+            &-#{$text-align} {
+                @extend .text-#{$text-align} !optional;
             }
         }
     }
@@ -230,6 +272,10 @@ $heading-display-sizes: (
         &-text-color-#{$key} {
             @extend .text-#{$key};
         }
+    }
+
+    &-text-truncate {
+        @extend .text-truncate;
     }
 
     @each $key,
@@ -415,6 +461,23 @@ $heading-display-sizes: (
             }
         }
     }
+
+    &-row {
+        @extend .row;
+
+        @each $size in $row-cols-sizes {
+            &-cols-#{$size} {
+                @extend .row-cols-#{$size};
+            }
+
+            @each $breakpoint in $breakpoints {
+                &-cols-#{$breakpoint}-#{$size} {
+                    @extend .row-cols-#{$breakpoint}-#{$size};
+                }
+            }
+        }
+    }
+
 
     @include apply-props($props
 );

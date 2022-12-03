@@ -18,4 +18,5 @@ export interface ButtonProps extends Partial<ElProps> {
 	toggle?: boolean
 	pill?: boolean
 	tile?: boolean
+	ghost?: boolean
 }

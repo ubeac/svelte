@@ -1,12 +1,10 @@
 <script>
-	import { Card, CardBody, CardHeader, CardTitle, CardStatus } from '@ubeac/svelte'
-	import { Row, Col } from '@ubeac/svelte'
+	import { Card, CardBody, El, CardTitle } from '@ubeac/svelte'
 </script>
 
-<Row>
-	<Col>
-		<Card>
-			<CardStatus color="danger" position="top" />
+<El row>
+	<El col>
+		<Card status statusColor="danger" statusPosition="top" statusSize="lg">
 			<CardBody>
 				<CardTitle>Card with top status</CardTitle>
 				<p class="text-muted">
@@ -15,11 +13,9 @@
 				</p>
 			</CardBody>
 		</Card>
-	</Col>
-	<Col>
-		<Card>
-			<CardStatus color="green" position="start" />
-
+	</El>
+	<El col>
+		<Card status statusColor="green" statusPosition="start" statusSize="md">
 			<CardBody>
 				<CardTitle>Card with side status</CardTitle>
 				<p class="text-muted">
@@ -28,11 +24,9 @@
 				</p>
 			</CardBody>
 		</Card>
-	</Col>
-	<Col>
-		<Card>
-			<CardStatus color="pink" position="bottom" />
-
+	</El>
+	<El col>
+		<Card status statusColor="pink" statusPosition="bottom" statusSize="sm">
 			<CardBody>
 				<CardTitle>Card with bottom status</CardTitle>
 				<p class="text-muted">
@@ -41,5 +35,5 @@
 				</p>
 			</CardBody>
 		</Card>
-	</Col>
-</Row>
+	</El>
+</El>

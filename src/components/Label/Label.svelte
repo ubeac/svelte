@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { El } from '../Base'
+	import { El } from '$lib/components'
+
 	import type { LabelProps } from './Label.types'
 
 	type $$Props = LabelProps
@@ -8,6 +9,9 @@
 	export let cssPrefix: $$Props['cssPrefix'] = 'label'
 
 	export let required: $$Props['required'] = false
+
+	let fore: $$Props['for'] = undefined
+	export {fore as for}
 
 	$: cssProps = {
 		required,
@@ -19,6 +23,6 @@
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {...otherProps}>
+<El {...$$restProps} for={fore} {cssProps} {...otherProps}>
 	<slot />
 </El>

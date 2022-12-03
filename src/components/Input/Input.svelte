@@ -1,42 +1,69 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
+	import type { InputProps } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = InputProps
 
-	import type { InputSizes } from './Input.types'
+	export let cssPrefix: $$Props['cssPrefix'] = 'input'
 
-	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let tag: $$Props['tag'] = 'input'
 
 	/**
 	 * Set the input disabled
 	 */
-	export let disabled: boolean = false
+	export let disabled: $$Props['disabled'] = undefined
+
+	export let borderRounded: $$Props['borderRounded'] = undefined
+
+	export let borderFlush: $$Props['borderFlush'] = undefined
 
 	/**
 	 * Set placeholder for the input
 	 */
-	export let placeholder: string | undefined = undefined
+	export let placeholder: $$Props['placeholder'] = undefined
 
 	/**
 	 * Set the input read only
 	 */
-	export let readOnly: boolean = false
+	export let readonly: $$Props['readonly'] = undefined
 
 	/**
 	 * Set the size of input
 	 */
-	export let size: InputSizes = 'md'
+	export let size: $$Props['size'] = undefined
+
+	/**
+	 * Set the size of input
+	 */
+	export let state: $$Props['state'] = undefined
 
 	/**
 	 * the text Value of input
 	 */
-	export let value: any = undefined
+	export let value: $$Props['value'] = undefined
 
-	$: classes = classname('input', { size, disabled, readOnly }, $$props.class, true)
+	$: cssProps = {
+		size,
+		state,
+		borderRounded,
+		borderFlush,
+	}
+
+	$: otherProps = {
+		tag,
+		cssPrefix,
+		placeholder,
+		disabled,
+		readonly,
+	}
 </script>
 
-<input bind:value use:forwardEvents {...$$restProps} class={classes} {placeholder} {readOnly} {disabled} />
+<El cssPrefix="{cssPrefix}-wrapper" cssProps={{ size }}>
+	{#if $$slots.start}
+		<slot name="start" />
+	{/if}
+	<El bind:value {...$$restProps} {...otherProps} {cssProps} />
+	{#if $$slots.end}
+		<slot name="end" />
+	{/if}
+</El>

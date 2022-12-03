@@ -1,41 +1,33 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '../Base'
+	import type { SpinnerProps } from './Spinner.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
-
-	import type { SpinnerSizes, SpinnerStyles } from './Spinner.types'
-
-	/**
-	 * The color of spinner
-	 */
-	export let color: Colors = 'default'
-
-	/**
-	 * Sets the size of component
-	 */
-	export let size: SpinnerSizes = 'sm'
+	type $$Props = SpinnerProps
+	export let tag: $$Props['tag'] = 'span'
+	export let cssPrefix: $$Props['cssPrefix'] = 'spinner'
+	export let color: $$Props['color'] = undefined
+	export let size: $$Props['size'] = undefined
+	export let role: $$Props['role'] = 'status'
+	export let animate: $$Props['animate'] = undefined
 
 	/**
 	 * You can choose a style for spinner using style property
 	 */
-	export let style: SpinnerStyles = 'border'
+	// export let style: SpinnerStyles = 'border'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	$: cssProps = {
+		size,
+		color,
+		animate,
+	}
 
-	$: classes = classname(
-		'spinner',
-		{
-			color,
-			size,
-			style,
-		},
-		$$props.class,
-		true
-	)
+	$: otherProps = {
+		tag,
+		cssPrefix,
+		role,
+	}
 </script>
 
-<div role="status" use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssProps} {...otherProps}>
 	<slot />
-</div>
+</El>

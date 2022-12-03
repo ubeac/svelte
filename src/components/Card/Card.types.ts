@@ -1,24 +1,34 @@
-import type { ElProps } from '../Base/El.type'
+import type { ElProps } from '$lib/components'
+
+declare type CardStatusPositions = undefined | 'top' | 'bottom' | 'start'
+declare type CardStatusSizes = undefined | 'sm' | 'md' | 'lg'
+declare type CardSizes = undefined | 'sm' | 'md' | 'lg'
+declare type CardRotateDirections = undefined | 'left' | 'right'
+declare type CardStates = undefined | 'active' | 'inactive'
 
 export interface CardProps extends Partial<ElProps> {
 	title?: string
+	stacked?: boolean
+	statusCssPrefix?: string
+	status?: boolean
+	statusColor?: Colors
+	statusPosition?: CardStatusPositions
+	statusSize?: CardStatusSizes
+	bgColor?: Colors
+	borderless?: boolean
+	rotate?: CardRotateDirections
+	cardState?: CardStates
+	cardSize?: CardStatusSizes
 }
 
+export interface CardHeaderProps extends Partial<ElProps> {
+	light?: boolean
+}
 export interface CardFooterProps extends Partial<ElProps> {
 	transparent?: boolean
 }
 
-export const CARD_MEDIA_PLACEMENTS = ['top', 'start', 'middle', 'end', 'bottom'] as const
-export type CardMediaPlacements = typeof CARD_MEDIA_PLACEMENTS[number]
-
-export const CARD_STAMP_POSITIONS = ['top-start', 'top-end', 'bottom-start', 'bottom-end'] as const
-export type CardStampPositions = typeof CARD_STAMP_POSITIONS[number]
-
-export const CARD_STAMP_SIZES = ['sm', 'md', 'lg'] as const
-export type CardStampSizes = typeof CARD_STAMP_SIZES[number]
-
-export const CARD_STATUS_POSITIONS = [undefined, 'top', 'bottom', 'start'] as const
-export type CardStatusPositions = typeof CARD_STATUS_POSITIONS[number]
-
-export const CARD_STATUS_SIZES = ['sm', 'md', 'lg'] as const
-export type CardStatusSizes = typeof CARD_STATUS_SIZES[number]
+declare type CardMediaPositions = undefined | 'top' | 'bottom'
+export interface CardMediaProps extends Partial<ElProps> {
+	elementPosition?: CardMediaPositions
+}
