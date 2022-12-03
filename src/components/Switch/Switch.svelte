@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { El } from '../Base'
-	import { Label } from '../Label'
+	import { El, Label } from '$lib/components'
+
 	import type { SwitchProps } from './Switch.types'
 
 	type $$Props = SwitchProps
@@ -15,6 +15,7 @@
 	export let role: $$Props['role'] = 'switch'
 	export let type: $$Props['type'] = 'checkbox'
 
+	$: _for = id
 	$: cssProps = {
 		inline,
 		color,
@@ -23,7 +24,6 @@
 	$: otherProps = {
 		tag,
 		cssPrefix,
-		id,
 		text,
 		role,
 		type,
@@ -31,10 +31,10 @@
 </script>
 
 <El cssPrefix="{cssPrefix}-wrapper">
-	<El bind:value bind:checked={value} {...$$restProps} {cssProps} {...otherProps} />
+	<El bind:value bind:checked={value} bind:id {...$$restProps} {cssProps} {...otherProps} />
 
 	{#if text}
-		<Label for={id} cssPrefix="{cssPrefix}-label">
+		<Label for={_for} cssPrefix="{cssPrefix}-label">
 			{text}
 		</Label>
 	{/if}

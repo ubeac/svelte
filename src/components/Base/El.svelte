@@ -12,7 +12,7 @@
 	// default properties
 	export let element: any = undefined
 	export let cssPrefix: string | undefined = 'el'
-	export let id: string | undefined = undefined
+	export let id: string | undefined = cssPrefix + '_' + globalCounter++
 
 	export let tag: keyof HTMLElementTagNameMap | undefined = 'div'
 	export let cssProps: any = {}
@@ -164,9 +164,6 @@
 
 	// forward events
 	export let forwardEvents: (node: HTMLElement) => any = () => ({})
-
-	globalCounter++
-	id = cssPrefix + '-' + globalCounter++
 
 	let classes: string | undefined
 	let defaultCssProps: CssProps
