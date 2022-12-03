@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, Spinner } from '$lib/components'
+	import { El } from '$lib/components'
 	import type { InputProps } from '$lib/components'
 
 	type $$Props = InputProps
@@ -58,20 +58,12 @@
 	}
 </script>
 
-<El cssPrefix="{cssPrefix}-wrapper">
-	<slot name="start">
-		<button class="btn" type="button">Go!</button><span class="input-group-text">start</span>
-	</slot>
-
-	<El bind:value {...$$restProps} {...otherProps} {cssProps} />
-	{#if state === 'loading'}
-		<slot name="state">
-			<El tag="span" cssPrefix="{cssPrefix}-icon-wrapper">
-				<Spinner size="sm" animate="border" />
-			</El>
-		</slot>
+<El cssPrefix="{cssPrefix}-wrapper" cssProps={{ size }}>
+	{#if $$slots.start}
+		<slot name="start" />
 	{/if}
-	<slot name="end">
-		<span class="input-group-text">aaa</span><button class="btn" type="button">Search!</button>
-	</slot>
+	<El bind:value {...$$restProps} {...otherProps} {cssProps} />
+	{#if $$slots.end}
+		<slot name="end" />
+	{/if}
 </El>

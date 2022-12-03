@@ -10,5 +10,3 @@
 	You typed:
 	<p>Value: {value}</p>
 {/if}
-
-<Input><slot name="start">this is text</slot></Input>

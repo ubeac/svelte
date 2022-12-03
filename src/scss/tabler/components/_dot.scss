@@ -1,5 +1,3 @@
-$prefix-status: $prefix + 'dot';
-
 $props: (
     null: ".status-dot",
     animated: ".status-dot-animated",
@@ -8,7 +6,7 @@ $props: (
     indicator-circle: ".status-indicator-circle"
 );
 
-.#{$prefix-status} {
+.#{$prefix-dot} {
     @include apply-props($props);
 
 }

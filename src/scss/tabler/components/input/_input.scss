@@ -1,12 +1,11 @@
 //
 // Input
 //
-$prefix-input: $prefix + 'input';
 
 $props: (
 	null: '.form-control',
 	size:(sm: '.form-control-sm',
-		md: '.form-control-md',
+		md: '.form-control',
 		lg: '.form-control-lg'
 	),
 	state:(valid: '.is-valid',
@@ -17,15 +16,24 @@ $props: (
 	border-flush: '.form-control-flush'
 );
 
+$wrapper-props: (
+	null: '.input-group',
+	size:(sm: '.input-group-sm',
+		md: '.input-group',
+		lg: '.input-group-lg'
+	)
+);
+
 .#{$prefix-input} {
 	@include apply-props($props);
 
-	&-wrapper {
-		@extend .input-group;
-		position: relative;
-	}
+}
 
-	&-icon-wrapper {
-		@extend .input-icon-addon;
+.#{$prefix-input-wrapper} {
+	@include apply-props($wrapper-props);
+	position: relative;
+
+	&>span {
+		@extend .input-group-text;
 	}
 }

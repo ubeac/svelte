@@ -9,6 +9,9 @@
 	import InputTypes from './InputTypes.svelte'
 	import InputStates from './InputStates.svelte'
 	import InputBorderShapes from './InputBorderShapes.svelte'
+	import InputWithText from './InputWithText.svelte'
+	import InputWithTextButton from './InputWithTextButton.svelte'
+	import InputIcons from './InputIcons.svelte'
 </script>
 
 <h1>Input</h1>
@@ -30,16 +33,31 @@
 	<InputSizes />
 </Preview>
 
-<h2>Disabled input</h2>
-<p>Set input disabled</p>
-<Preview src="./InputDisabled.svelte">
-	<InputDisabled />
-</Preview>
-
 <h2>Placeholder</h2>
 <p>Inputs can have placeholders</p>
 <Preview src="./InputPlaceholder.svelte">
 	<InputPlaceholder />
+</Preview>
+
+<h2>Wrapping with icon</h2>
+<Preview vertical src="./InputIcons.svelte">
+	<InputIcons />
+</Preview>
+
+<h2>Wrapping with text</h2>
+<Preview vertical src="./InputWithText.svelte">
+	<InputWithText />
+</Preview>
+
+<h2>Wrapping with button & text</h2>
+<Preview vertical src="./InputWithTextButton.svelte">
+	<InputWithTextButton />
+</Preview>
+
+<h2>Disabled input</h2>
+<p>Set input disabled</p>
+<Preview src="./InputDisabled.svelte">
+	<InputDisabled />
 </Preview>
 
 <h2>Readonly input</h2>
