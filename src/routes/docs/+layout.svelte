@@ -1,30 +1,30 @@
 <script>
-	import { Page, App, AppHeader, AppFooter, PageBody, Container, Row, Col, Card, CardBody } from '@ubeac/svelte'
+	import { Page, App, AppHeader, AppFooter, PageBody, Card, CardBody, El } from '@ubeac/svelte'
 </script>
 
 <App theme="light">
 	<AppHeader theme="dark">
-		<Container fluid="md">
-			<Row>
-				<Col>this is header</Col>
-			</Row>
-		</Container>
+		<El container="md">
+			<El row>
+				<El col>this is header</El>
+			</El>
+		</El>
 	</AppHeader>
 	<Page>
 		<PageBody>
-			<Container fluid="md">
-				<Row>
-					<Col><Card><CardBody><slot /></CardBody></Card></Col>
-				</Row>
-			</Container>
+			<El container="md">
+				<El row>
+					<El col><Card><CardBody><slot /></CardBody></Card></El>
+				</El>
+			</El>
 		</PageBody>
 	</Page>
 	<AppFooter>
-		<Container fluid="md">
-			<Row>
-				<Col>this is footer</Col>
-			</Row>
-		</Container>
+		<El container="md">
+			<El row>
+				<El col>this is footer</El>
+			</El>
+		</El>
 	</AppFooter>
 </App>
 

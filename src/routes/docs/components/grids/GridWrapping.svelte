@@ -1,9 +1,9 @@
 <script>
-	import { Container, Row, Col, Card } from '@ubeac/svelte'
+	import { Col, Card, El } from '@ubeac/svelte'
 </script>
 
-<Container class="container-example">
-	<Row noGutters>
+<El contaier class="container-example">
+	<El row noGutters>
 		<Col cols="9">
 			<Card class="card-example">.col-9</Card>
 		</Col>
@@ -16,5 +16,5 @@
 		<Col cols="6">
 			<Card class="card-example">.col-6<br />Subsequent columns continue along the new line.</Card>
 		</Col>
-	</Row>
-</Container>
+	</El>
+</El>

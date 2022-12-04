@@ -119,6 +119,9 @@
 	export let floatXl: FloatPositions = undefined
 	export let floatXxl: FloatPositions = undefined
 
+	// container
+	export let container: ContainerMaxWidths = undefined
+
 	// max widths
 	export let col: ColSizes = undefined
 	export let colSm: ColSizes = undefined
@@ -259,6 +262,8 @@
 			floatLg,
 			floatXl,
 			floatXxl,
+			// container
+			container,
 			// col layout
 			col,
 			colSm,

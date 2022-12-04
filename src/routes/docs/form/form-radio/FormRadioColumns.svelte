@@ -1,10 +1,10 @@
 <script>
-	import { FormRadio, Button, Col, Container, FormFieldset, FormHint, Row } from '@ubeac/svelte'
+	import { FormRadio, Button, Col, FormFieldset, FormHint, El } from '@ubeac/svelte'
 </script>
 
-<Container>
+<El container>
 	<FormFieldset label="Form Radios">
-		<Row>
+		<El row>
 			<FormRadio cols="8" label="2/3 width:" text="Radio 1" />
 			<FormRadio cols="4" value label="1/3 width:" text="Radio 2" />
 			<FormRadio cols="4" value label="1/3 width:" text="Radio 3" />
@@ -16,6 +16,6 @@
 			<Col offset="9" cols="auto">
 				<Button block>Submit</Button>
 			</Col>
-		</Row>
+		</El>
 	</FormFieldset>
-</Container>
+</El>
