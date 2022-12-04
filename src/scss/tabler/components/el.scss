@@ -146,18 +146,6 @@ $breakpoints: (
     'xxl'
 );
 
-$props: (
-    bg-gradient: '.bg-gradient',
-    border: '.border',
-    max-width-100: '.mw-100',
-    max-height-100: '.mh-100',
-    row: (null: '.row',
-        deck: '.row' '.row-deck'),
-    show: '.show',
-    lead: '.lead',
-    blockquote: '.blockquote'
-);
-
 $positions: (
     'static',
     'relative',
@@ -203,6 +191,29 @@ $row-cols-sizes: 1,
     4,
     5,
     6 !default;
+
+$container-breakpoints: (
+    null,
+    fluid,
+    sm,
+    md,
+    lg,
+    xl,
+    xxl
+);
+
+$props: (
+    bg-gradient: '.bg-gradient',
+    border: '.border',
+    max-width-100: '.mw-100',
+    max-height-100: '.mh-100',
+    row: (null: '.row',
+        deck: '.row' '.row-deck'),
+    show: '.show',
+    lead: '.lead',
+    blockquote: '.blockquote',
+    container: (generate_props($container-breakpoints, ('.container-')))
+);
 
 .#{$prefix-el} {
 
@@ -479,6 +490,5 @@ $row-cols-sizes: 1,
     }
 
 
-    @include apply-props($props
-);
+    @include apply-props($props);
 }

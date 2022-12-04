@@ -100,6 +100,9 @@ export interface CssProps {
 	floatXl: FloatPositions
 	floatXxl: FloatPositions
 
+	// container
+	container?: ContainerMaxWidths
+
 	// Col
 	col: ColSizes
 	colSm: ColSizes

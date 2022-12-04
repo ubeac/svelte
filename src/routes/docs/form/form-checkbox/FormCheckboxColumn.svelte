@@ -1,11 +1,11 @@
 <script>
-	import { Button, Col, Container, FormFieldset, FormHint, Row, FormCheckbox } from '@ubeac/svelte'
+	import { Button, Col, FormFieldset, FormHint, FormCheckbox, El } from '@ubeac/svelte'
 	let value = false
 </script>
 
-<Container>
+<El container>
 	<FormFieldset label="Form checkboxes">
-		<Row>
+		<El row>
 			<FormCheckbox cols="8" label="2/3 width:" text="Check 1" />
 			<FormCheckbox cols="4" value label="1/3 width:" text="Check 2" />
 			<FormCheckbox cols="4" value label="1/3 width:" text="Check 3" />
@@ -17,8 +17,8 @@
 			<Col offset="9" cols="auto">
 				<Button block>Submit</Button>
 			</Col>
-		</Row>
+		</El>
 	</FormFieldset>
-</Container>
+</El>
 
 <span if={value}>{value}</span>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Col, Row } from '$lib/components/Grid'
+	import { Col, El } from '$lib/components'
 	import { classname } from '$lib/utils'
 
 	/**
@@ -17,7 +17,7 @@
 
 <svelte:element this={tag} {...$$restProps} class={classes}>
 	<slot>
-		<Row justify="between">
+		<El row justify="between">
 			<Col>
 				<div class={classname('page--header-title')}>
 					<slot name="title">
@@ -30,6 +30,6 @@
 					<slot name="actions" />
 				</div>
 			</Col>
-		</Row>
+		</El>
 	</slot>
 </svelte:element>
