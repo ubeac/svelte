@@ -12,7 +12,7 @@
 	/**
 	 * Set color of Divider
 	 */
-	export let color: $$Props['color'] = 'secondary'
+	export let color: $$Props['color'] = undefined
 
 	/**
 	 * Set alignment of Divider
