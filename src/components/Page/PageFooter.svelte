@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Col, Row } from '$lib/components/Grid'
+	import { Col, El } from '$lib/components'
 	import { classname } from '$lib/utils'
 
 	/**
@@ -12,12 +12,12 @@
 
 <svelte:element this={tag} {...$$restProps} class={classes}>
 	<slot>
-		<Row justify="end">
+		<El row justify="end">
 			<Col>
 				<div class={classname('page--footer-actions')}>
 					<slot name="actions" />
 				</div>
 			</Col>
-		</Row>
+		</El>
 	</slot>
 </svelte:element>

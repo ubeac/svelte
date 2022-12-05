@@ -1,12 +1,16 @@
 //
 // Card
 //
-$prefix-card: $prefix + 'card';
 
 $media-positions: 'top' 'bottom';
 $rotate-directions: 'right' 'left';
 $card-states: 'active' 'inactive';
 $card-sizes: 'sm' 'md' 'lg';
+$card-status-sizes: (
+	sm: 1px,
+	md: 2px,
+	lg: 3px,
+);
 
 $props: (
 	null: '.card',
@@ -27,8 +31,7 @@ $props: (
 	@each $key,
 	$value in $theme_colors {
 		&-bg-color-#{$key} {
-			@extend .bg-#{$key};
-			@extend .text-#{$key}-fg;
+			@extend .text-bg-#{$key};
 		}
 	}
 

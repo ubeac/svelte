@@ -1,9 +1,17 @@
-<script>
-	import { classname } from '$lib/utils'
+<script lang="ts">
+	import { El } from '../Base'
+	import type { ToastBodyProps } from './Toast.types'
 
-	$: classes = classname('toast-body', undefined, $$props.class, true)
+	type $$Props = ToastBodyProps
+
+	export let cssPrefix: $$Props['cssPrefix'] = 'toast-body'
+	export let tag: $$Props['tag'] = 'div'
+
+	$: cssProps = {
+		// 
+	}
 </script>
 
-<div class={classes} {...$$restProps}>
+<El {...$$restProps} {cssPrefix} {cssProps} {tag}>
 	<slot />
-</div>
+</El>

@@ -1,8 +1,0 @@
-//
-// row
-//
-$prefix-row: $prefix + 'row';
-
-.#{$prefix-row} {
-	@extend .row;
-}
