@@ -10,20 +10,20 @@
 	export let cssPrefix: $$Props['cssPrefix'] = 'divider'
 
 	/**
-	 * Set color of Badge
+	 * Set color of Divider
 	 */
 	export let color: $$Props['color'] = 'secondary'
 
 	/**
-	 * Set position of Divider
+	 * Set alignment of Divider
 	 */
-	export let dividerPosition: $$Props['dividerPosition'] = undefined
+	export let alignment: $$Props['alignment'] = undefined
 
 	let cssProps: any = {}
 	let otherProps: any = {}
 	$: {
 		cssProps = {
-			dividerPosition,
+			alignment,
 			color,
 		}
 		otherProps = {

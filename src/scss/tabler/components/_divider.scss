@@ -1,15 +1,16 @@
 //
 // Divider
 //
-$prefix-button: $prefix + 'divider';
-$dividerPositions: 'left' 'center' 'right';
 
 $props: (
 	null: '.hr-text',
 	color: generate_props($theme_colors, ('.text-')),
-	divider-position: generate_props($dividerPositions, ('.hr-text-')),
+	alignment: ('start': '.hr-text-left',
+		'center': '.hr-text-center',
+		'end': '.hr-text-right'
+	)
 );
 
-.#{$prefix-button} {
+.#{$prefix-divider} {
 	@include apply-props($props);
 }

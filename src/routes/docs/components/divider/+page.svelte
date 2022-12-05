@@ -29,7 +29,7 @@
 	<DividerPositions />
 </Preview>
 
-<h2>Collors</h2>
+<h2>Colors</h2>
 <p>Customize the color of the divider to suit your design.</p>
 <Preview src="./DividerColors.svelte">
 	<DividerColors />
