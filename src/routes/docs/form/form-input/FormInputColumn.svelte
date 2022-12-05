@@ -1,9 +1,9 @@
 <script>
-	import { FormInput, Container, Row, Col, Button } from '@ubeac/svelte'
+	import { FormInput, Col, Button, El } from '@ubeac/svelte'
 </script>
 
-<Container xs>
-	<Row>
+<El container>
+	<El row>
 		<FormInput label="First Name:" cols="6" />
 		<FormInput label="Last Name:" cols="6" />
 		<FormInput label="Username:" cols="12" />
@@ -13,5 +13,5 @@
 		<Col class="mt-3" offset="9" cols="3">
 			<Button block color="primary">Submit</Button>
 		</Col>
-	</Row>
-</Container>
+	</El>
+</El>

@@ -1,10 +1,10 @@
 <script>
-	import { FormSwitch, Button, Col, Container, FormFieldset, FormHint, Row } from '@ubeac/svelte'
+	import { FormSwitch, Button, Col, FormFieldset, FormHint, El } from '@ubeac/svelte'
 </script>
 
-<Container>
+<El container>
 	<FormFieldset label="Form Switches">
-		<Row>
+		<El row>
 			<FormSwitch cols="8" label="2/3 width:" text="Switch 1" />
 			<FormSwitch cols="4" value label="1/3 width:" text="Switch 2" />
 			<FormSwitch cols="4" value label="1/3 width:" text="Switch 3" />
@@ -16,6 +16,6 @@
 			<Col offset="9" cols="auto">
 				<Button block>Submit</Button>
 			</Col>
-		</Row>
+		</El>
 	</FormFieldset>
-</Container>
+</El>

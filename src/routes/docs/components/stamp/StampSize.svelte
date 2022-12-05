@@ -14,7 +14,7 @@
 						scrambled it to make a type specimen book.
 					</p>
 				</CardBody>
-				<Stamp {size} icon-position="top-end" color="yellow" icon="bell" />
+				<Stamp {size} iconPosition="top-end" bgColor="yellow" icon="bell" />
 			</Card>
 		</El>
 	{/each}

@@ -1,73 +1,43 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El, Label } from '$lib/components'
 
-	import { nanoid } from 'nanoid'
+	import type { SwitchProps } from './Switch.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	type $$Props = SwitchProps
 
-	/**
-	 * Color of Switch
-	 */
-	export let color: Colors = 'default'
+	export let cssPrefix: $$Props['cssPrefix'] = 'switch'
+	export let tag: $$Props['tag'] = 'input'
+	export let id: $$Props['id'] = undefined
+	export let color: $$Props['color'] = undefined
+	export let inline: $$Props['inline'] = undefined
+	export let text: $$Props['text'] = undefined
+	export let value: $$Props['value'] = undefined
+	export let role: $$Props['role'] = 'switch'
+	export let type: $$Props['type'] = 'checkbox'
 
-	/**
-	 * Description of Switch
-	 */
-	export let description: string | undefined = undefined
+	$: _for = id
+	$: cssProps = {
+		inline,
+		color,
+	}
 
-	/**
-	 * The color of escription
-	 */
-	export let descriptionColor: string | undefined = undefined
-
-	/**
-	 * Show Multiple switch buttons in same line
-	 */
-	export let inline: boolean = false
-
-	/**
-	 * Set id for Switch element.
-	 */
-	export let id: string = 'switch-' + nanoid(10);
-
-	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
-
-	/**
-	 * Sets text of Switch
-	 */
-	export let text: string | undefined = undefined
-
-	/**
-	 * Value of Switch
-	 */
-	export let value: boolean | undefined = undefined
-
-	$: classes = classname('switch', { inline }, $$props.class)
+	$: otherProps = {
+		tag,
+		cssPrefix,
+		text,
+		role,
+		type,
+	}
 </script>
 
-<div class={classes}>
-	<input
-		type="checkbox"
-		{id}
-		bind:checked={value}
-		use:forwardEvents
-		{...$$restProps}
-		class={classname('switch-input', { color }, undefined, true)} />
-	<label for={id} class={classname('switch-label')}>
-		<slot>
+<El cssPrefix="{cssPrefix}-wrapper">
+	<El bind:value bind:checked={value} bind:id {...$$restProps} {cssProps} {...otherProps} />
+
+	{#if text}
+		<Label for={_for} cssPrefix="{cssPrefix}-label">
 			{text}
-		</slot>
-	</label>
-	{#if description || $$slots['description']}
-		<div class={classname('switch-description', { color: descriptionColor })}>
-			<slot name="description">
-				{description}
-			</slot>
-		</div>
+		</Label>
 	{/if}
-</div>
+
+	<slot />
+</El>

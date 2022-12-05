@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { El } from '../Base'
-	import type { SpinnerProps } from './Spinner.props'
+	import type { SpinnerProps } from './Spinner.types'
 
 	type $$Props = SpinnerProps
 	export let tag: $$Props['tag'] = 'span'

@@ -1,9 +1,9 @@
 <script>
-	import { Container, Row, Card, CardBody } from '@ubeac/svelte'
+	import { Card, CardBody, El } from '@ubeac/svelte'
 </script>
 
-<Container>
-	<Row align="center">
+<El>
+	<El row align="center">
 		<Card>
 			<CardBody>
 				<p>
@@ -13,5 +13,5 @@
 				</p>
 			</CardBody>
 		</Card>
-	</Row>
-</Container>
+	</El>
+</El>

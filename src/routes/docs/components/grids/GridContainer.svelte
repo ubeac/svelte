@@ -1,11 +1,11 @@
 <script>
-	import { Container } from '@ubeac/svelte'
+	import { El } from '@ubeac/svelte'
 </script>
 
-<Container class="container-breackpoint">.container</Container>
-<Container sm class="container-breackpoint">.container-sm</Container>
-<Container md class="container-breackpoint">.container-md</Container>
-<Container lg class="container-breackpoint">.container-lg</Container>
-<Container xl class="container-breackpoint">.container-xl</Container>
-<Container xxl class="container-breackpoint">.container-xxl</Container>
-<Container fluid class="container-breackpoint">.container-fluid</Container>
+<El container class="container-breackpoint">.container</El>
+<El container="sm" class="container-breackpoint">.container-sm</El>
+<El container="md" class="container-breackpoint">.container-md</El>
+<El container="lg" class="container-breackpoint">.container-lg</El>
+<El container="xl" class="container-breackpoint">.container-xl</El>
+<El container="xxl" class="container-breackpoint">.container-xxl</El>
+<El container="fluid" class="container-breackpoint">.container-fluid</El>

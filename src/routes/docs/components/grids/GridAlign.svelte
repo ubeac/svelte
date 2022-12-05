@@ -1,15 +1,15 @@
 <script>
-	import { Container, Row, Col, Card, CardBody } from '@ubeac/svelte'
+	import { Col, Card, El } from '@ubeac/svelte'
 </script>
 
 {#each ['start', 'center', 'end'] as align}
-	<Container class="container-example">
-		<Row class="row-example" {align}>
+	<El container class="container-example">
+		<El row class="row-example" {align}>
 			{#each [1, 2, 3] as item}
 				<Col>
 					<Card class="card-example">One of three columns</Card>
 				</Col>
 			{/each}
-		</Row>
-	</Container>
+		</El>
+	</El>
 {/each}

@@ -100,6 +100,9 @@ export interface CssProps {
 	floatXl: FloatPositions
 	floatXxl: FloatPositions
 
+	// container
+	container?: ContainerMaxWidths
+
 	// Col
 	col: ColSizes
 	colSm: ColSizes
@@ -145,6 +148,7 @@ export interface CssProps {
 }
 
 export interface ElProps extends CssProps {
+	id?: string
 	class?: string
 	tag: keyof HTMLElementTagNameMap
 	element: any // TODO: this should be something like SvelteComponent or C

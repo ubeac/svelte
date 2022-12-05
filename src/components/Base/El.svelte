@@ -1,3 +1,7 @@
+<script lang="ts" context="module">
+	let globalCounter: number = 0
+</script>
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
@@ -8,6 +12,8 @@
 	// default properties
 	export let element: any = undefined
 	export let cssPrefix: string | undefined = 'el'
+	export let id: string | undefined = cssPrefix + '_' + globalCounter++
+
 	export let tag: keyof HTMLElementTagNameMap | undefined = 'div'
 	export let cssProps: any = {}
 
@@ -105,9 +111,6 @@
 	export let fontStyle: FontStyles = undefined
 	export let hidden: BooleanValues = undefined
 
-	// forward events
-	export let forwardEvents: (node: HTMLElement) => any = () => ({})
-
 	// float
 	export let float: FloatPositions = undefined
 	export let floatSm: FloatPositions = undefined
@@ -115,6 +118,9 @@
 	export let floatLg: FloatPositions = undefined
 	export let floatXl: FloatPositions = undefined
 	export let floatXxl: FloatPositions = undefined
+
+	// container
+	export let container: ContainerMaxWidths = undefined
 
 	// max widths
 	export let col: ColSizes = undefined
@@ -159,9 +165,13 @@
 	export let gx: RowGutterSizes = undefined
 	export let gy: RowGutterSizes = undefined
 
+	// forward events
+	export let forwardEvents: (node: HTMLElement) => any = () => ({})
+
 	let classes: string | undefined
 	let defaultCssProps: CssProps
 	let defaultCssPrefix: string = 'el'
+	let otherProps: any = {}
 
 	$: {
 		forwardEvents = forwardEventsBuilder(get_current_component())
@@ -252,6 +262,8 @@
 			floatLg,
 			floatXl,
 			floatXxl,
+			// container
+			container,
 			// col layout
 			col,
 			colSm,
@@ -293,9 +305,18 @@
 		}
 		classes = classname(defaultCssPrefix, defaultCssProps, '', true)
 		if (cssPrefix) classes += ' ' + classname(cssPrefix, cssProps, $$props.class, true)
+
+		otherProps = {
+			id,
+			class: classes,
+		}
 	}
 </script>
 
-<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} class={classes}>
-	<slot />
-</svelte:element>
+{#if $$slots.default}
+	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...otherProps}>
+		<slot />
+	</svelte:element>
+{:else}
+	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...otherProps} />
+{/if}
