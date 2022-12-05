@@ -1,51 +1,37 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
+	import type { DividerProps } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
-
-	/**
-	 * Set text position
-	 */
-	export let placement: 'start' | 'center' | 'end' = 'center'
+	type $$Props = DividerProps
 
 	/**
-	 * Set style of the divider line
+	 * Set Css Prefix for the Divider
 	 */
-	export let type: 'solid' | 'dashed' | 'dotted' = 'solid'
+	export let cssPrefix: $$Props['cssPrefix'] = 'divider'
 
 	/**
-	 * Set Divider variant
+	 * Set color of Divider
 	 */
-	export let variant: 'middle' | 'inset' | 'full' = 'full'
+	export let color: $$Props['color'] = 'secondary'
 
 	/**
-	 * Split views vertically
+	 * Set alignment of Divider
 	 */
-	export let vertical: boolean = false
+	export let alignment: $$Props['alignment'] = undefined
 
-	/**
-	 * Thickness of divider line
-	 */
-	export let width: 'medium' | 'thick' | 'thin' = 'thin'
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname(
-		'divider',
-		{
-			empty: !$$slots['default'],
-			horizontal: !vertical,
-			placement,
-			type,
-			variant,
-			vertical,
-			width,
-		},
-		$$props.class
-	)
+	let cssProps: any = {}
+	let otherProps: any = {}
+	$: {
+		cssProps = {
+			alignment,
+			color,
+		}
+		otherProps = {
+			cssPrefix,
+		}
+	}
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssProps} {...otherProps}>
 	<slot />
-</div>
+</El>

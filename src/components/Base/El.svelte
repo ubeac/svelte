@@ -13,7 +13,7 @@
 	export let element: any = undefined
 	export let cssPrefix: string | undefined = 'el'
 	export let id: string | undefined = cssPrefix + '_' + globalCounter++
-
+	export let style: any = undefined
 	export let tag: keyof HTMLElementTagNameMap | undefined = 'div'
 	export let cssProps: any = {}
 
@@ -309,6 +309,7 @@
 		otherProps = {
 			id,
 			class: classes,
+			style,
 		}
 	}
 </script>
