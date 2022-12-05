@@ -10,37 +10,37 @@
 	export let cssPrefix: $$Props['cssPrefix'] = 'progress'
 
 	/**
-	 * Set color of Badge
+	 * Set color of Progress
 	 */
 	export let color: $$Props['color'] = 'primary'
 
 	/**
-	 * Show badge as small dot. If true, default slot will be ignored.
+	 * Set the minimum value for progress.
 	 */
 	export let minValue: $$Props['minValue'] = undefined
 
 	/**
-	 * reduce background color's opacity
+	 * Set the max value for progress.
 	 */
 	export let maxValue: $$Props['maxValue'] = undefined
 
 	/**
-	 * Set a redirect url for badge
+	 * Set the currect value for progress.
 	 */
 	export let currentValue: $$Props['currentValue'] = undefined
 
 	/**
-	 *
+	 * Set the size of progress component.
 	 */
 	export let progressSize: $$Props['progressSize'] = undefined
 
 	/**
-	 *
+	 * You can create a progress bar which shows indeterminate progress.
 	 */
 	export let indeterminate: $$Props['indeterminate'] = undefined
 
 	/**
-	 *
+	 * You can remove the displayed value.
 	 */
 	export let visuallyHidden: $$Props['visuallyHidden'] = undefined
 
