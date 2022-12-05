@@ -1,12 +1,12 @@
 import type { ElProps } from '$lib/components'
 
-declare type progressSizes = undefined | 'sm' | 'md'
+declare type progressSizes = 'sm' | 'md'
+
 export interface ProgressProps extends Partial<ElProps> {
 	color?: Colors
-	minValue?: string
-	maxValue?: string
-	currentValue?: string
-	progressSize?: progressSizes
+	value?: string | number
+	size?: progressSizes
 	indeterminate?: boolean
-	visuallyHidden?: boolean
+	striped?: boolean | 'animated'
+	label?: string
 }

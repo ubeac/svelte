@@ -1,31 +1,15 @@
-$prefix-progress: $prefix + 'progress';
+$progress-sizes: 'sm' 'md';
 
-$progress-sizes: 'sm' 'md' 'lg';
 $props: (
 	null:'.progress',
-	progress-size: generate_props($progress-sizes, ('.progress-')),
+	size: generate_props($progress-sizes, ('.progress-')),
+	bar:(null: '.progress-bar',
+		visually-hidden: '.visually-hidden',
+		indeterminate: '.progress-bar-indeterminate',
+		color:generate_props($theme-colors, ('.bg-')),
+		striped: (null:'.progress-bar-striped', animated:'.progress-bar-striped' '.progress-bar-animated')),
 );
 
 .#{$prefix-progress} {
 	@include apply-props($props);
-
-	&-bar {
-		@extend .progress-bar;
-	}
-
-	@each $color,
-	$value in $theme-colors {
-		&-color-#{$color}>.#{$prefix-progress}-bar {
-			@extend .bg-#{$color};
-		}
-	}
-
-	&-indeterminate>.#{$prefix-progress}-bar {
-		@extend .progress-bar-indeterminate;
-	}
-
-	&-visually-hidden>.#{$prefix-progress}-bar>span {
-		@extend .visually-hidden;
-	}
-
 }

@@ -154,6 +154,7 @@ export interface ElProps extends CssProps {
 	element: any // TODO: this should be something like SvelteComponent or C
 	cssPrefix?: string
 	cssProps?: any
+	style?: any
 	[key: string]: any // used when we pass props to DOM Elements using ...$$restProps
 }
 

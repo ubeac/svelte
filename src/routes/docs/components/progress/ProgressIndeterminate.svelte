@@ -2,4 +2,4 @@
 	import { Progress } from '@ubeac/svelte'
 </script>
 
-<Progress indeterminate />
+<Progress indeterminate color="orange" />

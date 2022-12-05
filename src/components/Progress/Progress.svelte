@@ -12,27 +12,17 @@
 	/**
 	 * Set color of Progress
 	 */
-	export let color: $$Props['color'] = 'primary'
-
-	/**
-	 * Set the minimum value for progress.
-	 */
-	export let minValue: $$Props['minValue'] = undefined
-
-	/**
-	 * Set the max value for progress.
-	 */
-	export let maxValue: $$Props['maxValue'] = undefined
+	export let color: $$Props['color'] = undefined
 
 	/**
 	 * Set the currect value for progress.
 	 */
-	export let currentValue: $$Props['currentValue'] = undefined
+	export let value: $$Props['value'] = undefined
 
 	/**
 	 * Set the size of progress component.
 	 */
-	export let progressSize: $$Props['progressSize'] = undefined
+	export let size: $$Props['size'] = undefined
 
 	/**
 	 * You can create a progress bar which shows indeterminate progress.
@@ -40,36 +30,43 @@
 	export let indeterminate: $$Props['indeterminate'] = undefined
 
 	/**
-	 * You can remove the displayed value.
+	 * Enable striped progress bar with/without animation.
 	 */
-	export let visuallyHidden: $$Props['visuallyHidden'] = undefined
+	export let striped: $$Props['striped'] = undefined
+
+	/**
+	 * aris-label for the progress bar
+	 */
+	export let label: $$Props['label'] = undefined
 
 	let cssProps: any = {}
 	let otherProps: any = {}
+	let _label: string = ''
 	$: {
 		cssProps = {
-			progressSize,
-			color,
-			indeterminate,
-			visuallyHidden,
+			size,
 		}
 		otherProps = {
 			cssPrefix,
 		}
+		_label = label ?? value + '% completed'
 	}
 </script>
 
 <El {...$$restProps} {cssProps} {...otherProps}>
 	<El
+		cssProps={{ color, indeterminate, striped }}
 		cssPrefix="{cssPrefix}-bar"
 		role="progressbar"
-		style="width: {currentValue}%"
-		aria-valuenow={currentValue}
-		aria-valuemin={minValue}
-		aria-valuemax={maxValue}
-		aria-label="{currentValue}% completed">
-		{#if !indeterminate}
-			<El tag="span">{currentValue}% completed</El>
+		style="width: {value}%"
+		aria-valuenow={value}
+		aria-valuemin="0"
+		aria-valuemax="100"
+		aria-label={_label}>
+		{#if label}
+			<El tag="span">{_label}</El>
+		{:else}
+			<El tag="span" cssPrefix="{cssPrefix}-bar-visually-hidden">{value}% Complete</El>
 		{/if}
 	</El>
 </El>
