@@ -42,11 +42,6 @@
 	export let description: string | undefined = undefined
 
 	/**
-	 * The color of escription
-	 */
-	export let descriptionColor: string | undefined = undefined
-
-	/**
 	 * Show multiple Switches in same horozontal line
 	 */
 	export let inline: boolean = false
@@ -76,7 +71,7 @@
 			<Label for={id} {required}>{label}</Label>
 		{/if}
 	</slot>
-	<Switch {id} bind:value {text} {color} {inline} {description} {descriptionColor} {forwardEvents} {...$$restProps} />
+	<Switch {id} bind:value {text} {color} {inline} {description} {forwardEvents} {...$$restProps} />
 	<slot name="message">
 		{#if message}
 			<FormHint>{message}</FormHint>

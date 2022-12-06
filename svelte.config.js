@@ -35,9 +35,7 @@ const config = {
 		},
 		alias: {
 			'@ubeac/svelte': path.resolve('./src'),
-			'@ubeac/static': path.resolve('./static'),
 		},
-		trailingSlash: 'always',
 	},
 	package: {
 		files(file) {

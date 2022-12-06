@@ -24,11 +24,6 @@
 	export let description: string | undefined = undefined
 
 	/**
-	 * Description Color for Radio button
-	 */
-	export let descriptionColor: Colors = 'default'
-
-	/**
 	 * Show Multiple radio buttons in same line
 	 */
 	export let inline: boolean = false
@@ -80,7 +75,7 @@
 		</slot>
 	</label>
 	{#if description || $$slots['description']}
-		<div class={classname('radio-description', { color: descriptionColor })}>
+		<div class={classname('radio-description', {})}>
 			<slot name="description">
 				{description}
 			</slot>

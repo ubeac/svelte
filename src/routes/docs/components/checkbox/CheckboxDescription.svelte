@@ -5,4 +5,4 @@
 </script>
 
 <Checkbox bind:value text="this is text" description="this is description" />
-<Checkbox bind:value text="this is text" description="this is description by danger color" descriptionColor="danger" />
+<Checkbox bind:value text="this is text" description="this is description by danger color" />
