@@ -1,5 +1,5 @@
 <script>
-	import { Page, App, AppHeader, AppFooter, PageBody, Card, CardBody, El } from '@ubeac/svelte'
+	import { Page, App, AppHeader, AppFooter, PageBody, Card, CardBody, El, AppBody } from '@ubeac/svelte'
 </script>
 
 <App theme="light">
@@ -10,15 +10,17 @@
 			</El>
 		</El>
 	</AppHeader>
-	<Page>
-		<PageBody>
-			<El container="md">
-				<El row>
-					<El col><Card><CardBody><slot /></CardBody></Card></El>
+	<AppBody>
+		<Page>
+			<PageBody>
+				<El container="md">
+					<El row>
+						<El col><Card><CardBody><slot /></CardBody></Card></El>
+					</El>
 				</El>
-			</El>
-		</PageBody>
-	</Page>
+			</PageBody>
+		</Page>
+	</AppBody>
 	<AppFooter>
 		<El container="md">
 			<El row>

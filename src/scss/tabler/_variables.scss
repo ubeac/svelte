@@ -1,5 +1,8 @@
 $prefix: 'u-' !default;
 
+$prefix-app: $prefix + 'app' !default;
+$prefix-app-header: $prefix + 'app-header' !default;
+$prefix-app-footer: $prefix + 'app-footer' !default;
 $prefix-accordions: $prefix + 'accordions' !default;
 $prefix-accordion: $prefix + 'accordion' !default;
 $prefix-alert: $prefix + 'alert' !default;

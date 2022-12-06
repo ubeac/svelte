@@ -1,21 +1,31 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
+	import { El } from '$lib/components'
 	import { classname } from '$lib/utils'
 
-	/**
-	 * Set application default theme
-	 */
-	export let theme: 'dark' | 'light' = 'light'
+	import type { AppProps } from './App.types'
 
-	let classes: string | undefined = undefined
-	let bodyClasses: string | undefined = undefined
-	$: {
-		classes = classname('app', [], $$props.class, true)
-		bodyClasses = classname('body', { theme }, [], true)
-		if (browser) document.body.className = bodyClasses ?? ''
-	}
+	type $$Props = AppProps
+
+	/**
+	 * Specify a custom tag used on the root element.
+	 */
+	export let tag: $$Props['tag'] = 'div'
+
+	/**
+	 * Set Css Prefix for the App Footer
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'app'
+
+	/**
+	 * Set root app's default theme
+	 */
+	export let theme: $$Props['theme'] = undefined
+
+	$: cssProps = { theme }
+	$: otherProps = { cssPrefix, tag }
+
+	$: if (browser) document.body.className = classname(cssPrefix, { theme }, [], true) ?? ''
 </script>
 
-<div {...$$restProps} class={classes}>
-	<slot />
-</div>
+<El {...$$restProps} {cssProps} {...otherProps}><slot /></El>

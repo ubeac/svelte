@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Alert, Avatar, Col, El, Row } from '@ubeac/svelte'
+	import { Alert, Avatar, El } from '@ubeac/svelte'
 </script>
 
 <Alert color="success">

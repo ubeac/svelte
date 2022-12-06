@@ -1,19 +1,22 @@
 <script lang="ts">
-	import { classname } from '@ubeac/svelte/utils'
+	import { Footer } from '$lib/components'
+
+	import type { AppFooterProps } from './App.types'
+
+	type $$Props = AppFooterProps
 
 	/**
-	 * Specify a custom tag used on the root element.
+	 * Set Css Prefix for the App Footer
 	 */
-	export let tag: string = 'footer'
+	export let cssPrefix: $$Props['cssPrefix'] = 'app-footer'
 
 	/**
 	 * Set application header's default theme
 	 */
-	export let theme: 'dark' | 'light' = 'light'
+	export let theme: $$Props['theme'] = undefined
 
-	$: classes = classname('app-footer', { theme }, $$props.class, true)
+	$: cssProps = { theme }
+	$: otherProps = { cssPrefix }
 </script>
 
-<svelte:element this={tag} {...$$restProps} class={classes}>
-	<slot />
-</svelte:element>
+<Footer {...$$restProps} {cssProps} {...otherProps}><slot /></Footer>

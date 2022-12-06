@@ -1,5 +1,5 @@
 $accordions-props: (
-	'': '.accordion'
+	null: '.accordion'
 );
 
 .#{$prefix-accordions} {
@@ -7,7 +7,7 @@ $accordions-props: (
 }
 
 $accordion-props: (
-	'': '.accordion-item',
+	null: '.accordion-item',
 	header:'.accordion-header',
 	body: '.accordion-body',
 	button:('':'.accordion-button',
