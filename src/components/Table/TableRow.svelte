@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { El } from '../Base'
+	import { El } from '$lib/components'
+
 	import type { TableRowProps } from './Table.types'
 
 	type $$Props = TableRowProps
@@ -12,7 +13,7 @@
 
 	$: cssProps = {
 		color,
-		active
+		active,
 	}
 </script>
 

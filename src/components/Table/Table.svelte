@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
+	import { El } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 
-	import { El } from '../Base'
 	import type { TableProps } from './Table.types'
 
 	type $$Props = TableProps
@@ -30,11 +30,11 @@
 		striped,
 		wrap,
 		size,
-		sort
+		sort,
 	}
 
 	$: parentCssProps = {
-		responsive
+		responsive,
 	}
 
 	$: otherProps = {

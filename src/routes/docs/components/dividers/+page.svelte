@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '@ubeac/svelte'
 	import DividerDefault from './DividerDefault.svelte'
 	import DividerPositions from './DividerPositions.svelte'
 	import DividerColors from './DividerColors.svelte'

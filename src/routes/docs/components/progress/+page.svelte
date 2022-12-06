@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '@ubeac/svelte'
 	import ProgressDefault from './ProgressDefault.svelte'
 	import ProgressIndeterminate from './ProgressIndeterminate.svelte'
 	import ProgressColors from './ProgressColors.svelte'

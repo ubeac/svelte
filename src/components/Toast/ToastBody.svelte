@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { El } from '../Base'
+	import { El } from '$lib/components'
+
 	import type { ToastBodyProps } from './Toast.types'
 
 	type $$Props = ToastBodyProps
@@ -8,7 +9,7 @@
 	export let tag: $$Props['tag'] = 'div'
 
 	$: cssProps = {
-		// 
+		//
 	}
 </script>
 

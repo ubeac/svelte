@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '@ubeac/svelte'
 	import RibbonColor from './RibbonColor.svelte'
 	import RibbonPositions from './RibbonPositions.svelte'
 </script>

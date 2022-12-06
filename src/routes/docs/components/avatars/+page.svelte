@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '@ubeac/svelte'
 	import AvatarColors from './AvatarColors.svelte'
 	import AvatarDefault from './AvatarDefault.svelte'
 	import AvatarImage from './AvatarImage.svelte'

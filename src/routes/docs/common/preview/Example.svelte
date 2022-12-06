@@ -1,5 +1,5 @@
 <script>
-	import { Button } from '$lib/components'
+	import { Button } from '@ubeac/svelte'
 
 	let count = 0
 

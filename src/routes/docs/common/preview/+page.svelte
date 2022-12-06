@@ -1,6 +1,6 @@
 <script>
-	import { Preview } from '$lib/components'
-	import Example1 from '../example1.svelte'
+	import { Preview } from '@ubeac/svelte'
+	import Example from './Example.svelte'
 </script>
 
 <h1>Preview</h1>
@@ -9,6 +9,6 @@ vero nihil impedit animi! Ipsam aspernatur eius sed assumenda amet, maxime fugia
 
 <h2>Test 1</h2>
 
-<Preview src="../example1.svelte">
-	<Example1 />
+<Preview src="./Example.svelte">
+	<Example />
 </Preview>

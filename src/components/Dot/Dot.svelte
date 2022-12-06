@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { El } from '../Base'
+	import { El } from '$lib/components'
+
 	import type { DotProps } from './Dot.types'
 
 	type $$Props = DotProps

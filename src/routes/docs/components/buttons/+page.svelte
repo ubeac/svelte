@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '@ubeac/svelte'
 
 	import ButtonColors from './ButtonColors.svelte'
 	import ButtonDefault from './ButtonDefault.svelte'

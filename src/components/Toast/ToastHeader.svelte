@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { El, type ElProps } from '../Base'
+	import { El, type ElProps } from '$lib/components'
+
 	import type { ToastHeaderProps } from './Toast.types'
 
 	type $$Props = ToastHeaderProps
@@ -17,7 +18,7 @@
 		container?.parentNode?.removeChild(container)
 	}
 
-	let buttonOtherProps: Partial<ElProps>;
+	let buttonOtherProps: Partial<ElProps>
 	$: buttonOtherProps = {
 		'tag': 'button',
 		'cssPrefix': 'toast-close',

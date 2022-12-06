@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '@ubeac/svelte'
 
 	import BadgeButtons from './BadgeButtons.svelte'
 	import BadgeColors from './BadgeColors.svelte'

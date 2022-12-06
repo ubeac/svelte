@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '@ubeac/svelte'
 	import StampColor from './StampColor.svelte'
 	import StampSize from './StampSize.svelte'
 	import StampPositions from './StampPositions.svelte'
