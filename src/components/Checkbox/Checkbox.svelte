@@ -18,11 +18,6 @@
 	export let description: string | undefined = ''
 
 	/**
-	 * Description of checkbox
-	 */
-	export let descriptionColor: Colors = 'default'
-
-	/**
 	 * Forward all native Events
 	 */
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
@@ -34,13 +29,13 @@
 
 	/**
 	 * Set id for Checkbox element
-	*/
+	 */
 	export let id: string = 'checkbox-' + nanoid(10)
 
 	/**
 	 * Show multiple items in same line
-	*/
-	export let inline: boolean = false;
+	 */
+	export let inline: boolean = false
 
 	/**
 	 * Set checkbox's key
@@ -57,7 +52,7 @@
 	 */
 	export let value: boolean = false
 
-	$: classes = classname('checkbox', {inline}, $$props.class, true)
+	$: classes = classname('checkbox', { inline }, $$props.class, true)
 
 	$: updateGroup(value)
 	$: updateChekbox(group)

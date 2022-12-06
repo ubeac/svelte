@@ -27,11 +27,6 @@
 	export let forwardEvents = forwardEventsBuilder(get_current_component())
 
 	/**
-	 *  Binding result of selected items
-	 */
-	export let group: any = []
-
-	/**
 	 * Set id for HTML element
 	 */
 	export let id: string = 'form-checkbox-' + nanoid(10)
