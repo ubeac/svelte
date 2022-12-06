@@ -78,7 +78,6 @@
 		}
 		otherProps = {
 			cssPrefix,
-			statusCssPrefix,
 		}
 		statusCssProps = {
 			size: statusSize,

@@ -1,35 +1,17 @@
 <script lang="ts">
-	import { Col, El } from '$lib/components'
-	import { classname } from '$lib/utils'
+	import { El } from '$lib/components'
+
+	import type { PageHeaderProps } from './Page.types'
+
+	type $$Props = PageHeaderProps
 
 	/**
-	 * Specify a custom tag used on the root element.
+	 * Set Css Prefix for the Page
 	 */
-	export let tag: string = 'div'
+	export let cssPrefix: $$Props['cssPrefix'] = 'page-header'
 
-	/**
-	 * Specify a title for page header.
-	 */
-	export let title: string | undefined = undefined
-
-	$: classes = classname('page-header', {}, $$props.class, true)
+	$: cssProps = {}
+	$: otherProps = { cssPrefix }
 </script>
 
-<svelte:element this={tag} {...$$restProps} class={classes}>
-	<slot>
-		<El row justify="between">
-			<Col>
-				<div class={classname('page--header-title')}>
-					<slot name="title">
-						{title}
-					</slot>
-				</div>
-			</Col>
-			<Col auto>
-				<div class={classname('page--header-actions')}>
-					<slot name="actions" />
-				</div>
-			</Col>
-		</El>
-	</slot>
-</svelte:element>
+<El {...$$restProps} {cssProps} {...otherProps}><slot /></El>

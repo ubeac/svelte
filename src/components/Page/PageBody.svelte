@@ -1,9 +1,17 @@
 <script lang="ts">
-	import { classname } from '$lib/utils'
+	import { El } from '$lib/components'
 
-	$: classes = classname('page-body', {}, $$props.class, true)
+	import type { PageBodyProps } from './Page.types'
+
+	type $$Props = PageBodyProps
+
+	/**
+	 * Set Css Prefix for the Page
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'page-body'
+
+	$: cssProps = {}
+	$: otherProps = { cssPrefix }
 </script>
 
-<div {...$$restProps} class={classes}>
-	<slot />
-</div>
+<El {...$$restProps} {cssProps} {...otherProps}><slot /></El>

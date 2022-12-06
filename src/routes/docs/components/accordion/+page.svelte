@@ -5,6 +5,8 @@
 	import AccordionPersistent from './AccordionPersistent.svelte'
 </script>
 
+<h1>Accordions</h1>
+
 <h2>Example</h2>
 <p>Click the accordions below to expand/collapse the accordion content.</p>
 <Preview src="./AccordionDefault.svelte">

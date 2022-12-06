@@ -1,6 +1,7 @@
 $prefix: 'u-' !default;
 
 $prefix-app: $prefix + 'app' !default;
+$prefix-app-body: $prefix + 'app-body' !default;
 $prefix-app-header: $prefix + 'app-header' !default;
 $prefix-app-footer: $prefix + 'app-footer' !default;
 $prefix-accordions: $prefix + 'accordions' !default;
@@ -19,6 +20,9 @@ $prefix-icon: $prefix + 'icon' !default;
 $prefix-input: $prefix + 'input' !default;
 $prefix-input-wrapper: $prefix-input + '-wrapper' !default;
 $prefix-label: $prefix + 'label' !default;
+$prefix-page: $prefix + 'page';
+$prefix-page-body: $prefix + 'page-body';
+$prefix-page-header: $prefix + 'page-header';
 $prefix-progress: $prefix + 'progress' !default;
 $prefix-ribbon: $prefix + 'ribbon' !default;
 $prefix-spinner: $prefix + 'spinner' !default;
