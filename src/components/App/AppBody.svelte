@@ -1,17 +1,22 @@
 <script lang="ts">
-	import { getContext } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
 
-	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
-	import { classname } from '@ubeac/svelte/utils'
+	import type { AppBodyProps } from './App.types'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-	const { headerSize, footerSize, leftSize, rightSize } = getContext<any>('APP')
+	type $$Props = AppBodyProps
 
-	$: classes = classname('app-body', {}, $$props.class)
-	$: styles = `inset: ${$headerSize}px ${$rightSize}px  ${$footerSize}px ${$leftSize}px;`
+	/**
+	 * Set Css Prefix for the application body
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'app-body'
+
+	/**
+	 * Set application body's default theme
+	 */
+	export let theme: $$Props['theme'] = undefined
+
+	$: cssProps = { theme }
+	$: otherProps = { cssPrefix }
 </script>
 
-<div use:forwardEvents {...$$restProps} style={styles} class={classes}>
-	<slot />
-</div>
+<El {...$$restProps} {cssProps} {...otherProps}><slot /></El>
