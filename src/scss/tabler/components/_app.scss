@@ -13,6 +13,17 @@ $app-props: (
 }
 
 //
+// App Body
+//
+$app-body-props: (
+	null:'.page-wrapper'
+);
+
+.#{$prefix-app-body} {
+	@include apply-props($app-body-props);
+}
+
+//
 // App Header
 //
 $app-header-props: (
@@ -35,26 +46,4 @@ $app-footer-props: (
 
 .#{$prefix-app-footer} {
 	@include apply-props($app-footer-props);
-}
-
-.u-app-loading-bar {
-	overflow: hidden;
-	display: none;
-	position: relative;
-	height: 0.25rem;
-	width: 100%;
-}
-
-//
-// App Loading Bar
-//
-@each $color,
-$value in $theme-colors {
-	.u-app-loading-bar-#{$color} {
-		@extend .bg-#{$color}-lt;
-
-		.u-app-loading-bar-body {
-			@extend .bg-#{$color};
-		}
-	}
 }
