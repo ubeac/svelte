@@ -1,5 +1,5 @@
 <script type="ts">
-	import { App, AppBody, AppFooter, AppHeader, Card, CardBody, El, Page, PageBody, PageHeader } from '@ubeac/svelte'
+	import { Card, CardBody, El, PageBody, PageHeader } from '@ubeac/svelte'
 
 	let container: ContainerMaxWidths = 'md'
 
@@ -7,53 +7,24 @@
 	let cssPrefixTitle = `page-header-title`
 </script>
 
-<App theme="light">
-	<AppHeader theme="dark">
-		<El {container}>
-			<El row>
-				<El col>this is header</El>
+<PageHeader>
+	<El {container}>
+		<El row>
+			<El col>
+				<El cssPrefix={cssPrefixPreTitle}><slot name="preTitle" /></El>
+				<El tag="h1" cssPrefix={cssPrefixTitle}><slot name="title">Documentation</slot></El>
 			</El>
 		</El>
-	</AppHeader>
-	<AppBody>
-		<Page {container}>
-			{#if $$slots.preTitle || $$slots.preTitle}
-				<PageHeader>
-					<El {container}>
-						<El row>
-							<El col>
-								{#if $$slots.preTitle}
-									<slot name="preTitle">
-										<El cssPrefix={cssPrefixPreTitle}><slot /></El>
-									</slot>
-								{/if}
-								{#if $$slots.title}
-									<slot name="title">
-										<El tag="h2" cssPrefix={cssPrefixTitle}><slot /></El>
-									</slot>
-								{/if}
-							</El>
-						</El>
-					</El>
-				</PageHeader>
-			{/if}
-			<PageBody>
-				<El {container}>
-					<El row>
-						<El col><Card><CardBody><slot /></CardBody></Card></El>
-					</El>
-				</El>
-			</PageBody>
-		</Page>
-	</AppBody>
-	<AppFooter>
-		<El {container}>
-			<El row>
-				<El col>this is footer</El>
-			</El>
+	</El>
+</PageHeader>
+<PageBody>
+	<El {container}>
+		<El row>
+			<El colLg="3" display="none" displayLg="block">Test</El>
+			<El colLg="9"><Card size="lg"><CardBody><slot /></CardBody></Card></El>
 		</El>
-	</AppFooter>
-</App>
+	</El>
+</PageBody>
 
 <style global>
 	.u-preview-body > * {

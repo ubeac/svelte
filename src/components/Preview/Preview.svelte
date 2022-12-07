@@ -83,7 +83,7 @@
 					<PreviewCopyButton on:success={setChecked} value={markup}>
 						<Icon name={copyIcon} />
 					</PreviewCopyButton>
-					<pre class="language-svelte"><code class="language-svelte">{@html markupHighlighted}</code></pre>
+					<pre class="language-svelte"><code>{@html markupHighlighted}</code></pre>
 				</div>
 			</TabsPanel>
 			{#if script}
@@ -92,7 +92,7 @@
 						<PreviewCopyButton on:success={setChecked} value={script}>
 							<Icon name={copyIcon} />
 						</PreviewCopyButton>
-						<pre class="language-svelte"><code class="language-svelte">{@html scriptHighlighted}</code></pre>
+						<pre class="language-svelte"><code>{@html scriptHighlighted}</code></pre>
 					</div>
 				</TabsPanel>
 			{/if}
@@ -103,7 +103,7 @@
 							<Icon name={copyIcon} />
 						</PreviewCopyButton>
 
-						<pre class="language-svelte"><code class="language-svelte">{@html styleHighlighted}</code></pre>
+						<pre class="language-svelte"><code>{@html styleHighlighted}</code></pre>
 					</div>
 				</TabsPanel>
 			{/if}
