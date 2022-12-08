@@ -1,22 +1,39 @@
 <script lang="ts">
-	import { classname } from '$lib/utils'
+	import { El, type ElProps } from '../Base'
+	import type { ToastHeaderProps } from './Toast.types'
+
+	type $$Props = ToastHeaderProps
+
+	export let cssPrefix: $$Props['cssPrefix'] = 'toast-header'
+	export let tag: $$Props['tag'] = 'div'
 
 	/**
 	 * Show close button icon
 	 */
-	export let showCloseButton: boolean = true
-
-	$: classes = classname('toast-header', undefined, $$props.class, true)
+	export let showCloseButton: $$Props['showCloseButton'] = true
 
 	function remove(e: any) {
 		const container = e?.path[2]
 		container?.parentNode?.removeChild(container)
 	}
+
+	let buttonOtherProps: Partial<ElProps>;
+	$: buttonOtherProps = {
+		'tag': 'button',
+		'cssPrefix': 'toast-close',
+		'type': 'button',
+		'data-bs-dismiss': 'toast',
+		'aria-label': 'Close',
+	}
+
+	$: cssProps = {
+		//
+	}
 </script>
 
-<div class={classes} {...$$restProps}>
+<El {...$$restProps} {cssPrefix} {cssProps} {tag}>
 	<slot />
 	{#if showCloseButton}
-		<button on:click={remove} type="button" class="ms-2 btn-close" data-bs-dismiss="toast" aria-label="Close" />
+		<El on:click={remove} {...buttonOtherProps} />
 	{/if}
-</div>
+</El>

@@ -1,11 +1,22 @@
 <script lang="ts">
-	import { classname } from '$lib/utils'
+	import { El } from '../Base'
+	import type { ToastProps } from './Toast.types'
 
-	export let show: boolean = false
+	type $$Props = ToastProps
 
-	$: classes = classname('toast', { show }, $$props.class, true)
+	export let cssPrefix: $$Props['cssPrefix'] = 'toast'
+	export let tag: $$Props['tag'] = 'div'
+
+	/**
+	 * Show or hide toast
+	 */
+	export let show: $$Props['show'] = false
+
+	$: cssProps = {
+		show,
+	}
 </script>
 
-<div class={classes} {...$$restProps}>
+<El {...$$restProps} {cssPrefix} {cssProps} {tag}>
 	<slot />
-</div>
+</El>

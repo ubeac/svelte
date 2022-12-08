@@ -122,8 +122,10 @@ declare type VerticalAligns = 'baseline' | 'top' | 'middle' | 'bottom' | 'text-b
 
 // Col Sizes and settings
 type ColSizes = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | 'auto' | undefined | boolean
-
 type ColOrders = '1' | '2' | '3' | '4' | '5' | 'first' | 'last' | undefined
+
+// Container Sizes and settings
+type ContainerMaxWidths = boolean | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'fluid' | undefined
 
 // Row sizes and settings
 type RowColSizes = '1' | '2' | '3' | '4' | '5' | undefined

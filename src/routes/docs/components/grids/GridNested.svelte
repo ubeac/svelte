@@ -1,19 +1,19 @@
 <script>
-	import { Container, Row, Col, Card } from '@ubeac/svelte'
+	import { Col, Card, El } from '@ubeac/svelte'
 </script>
 
-<Container class="container-example">
-	<Row noGutters>
+<El container class="container-example">
+	<El row noGutters>
 		<Col cols="9">
 			<Card class="card-example">Level 1: .col-sm-9</Card>
-			<Row noGutters>
+			<El row noGutters>
 				<Col cols="8">
 					<Card style="background-color: lightgrey;" class="card-example">Level 2: .col-8</Card>
 				</Col>
 				<Col cols="4">
 					<Card style="background-color: lightgrey;" class="card-example">Level 2: .col-4</Card>
 				</Col>
-			</Row>
+			</El>
 		</Col>
-	</Row>
-</Container>
+	</El>
+</El>

@@ -2,4 +2,4 @@
 	import { Input } from '@ubeac/svelte'
 </script>
 
-<Input readOnly value="Svelte" />
+<Input readonly value="Svelte" />

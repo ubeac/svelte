@@ -3,6 +3,3 @@
 </svelte:head>
 
 <slot />
-
-<style lang="scss" global>
-</style>
