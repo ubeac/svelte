@@ -1,96 +1,98 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { FormField, Input } from '$lib/components'
+	import type { FormInputProps } from '$lib/components'
 
-	import { nanoid } from 'nanoid'
-
-	import { FormGroup, Icon, Input, Label, Spinner } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
-
-	import { FormHint } from '.'
-	import FormField from './FormField.svelte'
+	type $$Props = FormInputProps
 
 	/**
-	 * Set Column width
+	 * Set the tag of FormInput
 	 */
-	export let cols: string | number | boolean = '12'
+	export let tag: $$Props['tag'] = 'input'
 
 	/**
-	 * Sets an icon inside component
+	 * Set the FormInput disabled
 	 */
-	export let icon: string | undefined = undefined
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
-	 * Sets an icon inside component
+	 * Set border of FormInput rounded
 	 */
-	export let iconEnd: string | undefined = undefined
+	export let borderRounded: $$Props['borderRounded'] = undefined
 
 	/**
-	 * Set id for HTML element
+	 * Set order of FormInput flush (without border)
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let borderFlush: $$Props['borderFlush'] = undefined
 
 	/**
-	 * Set Label for input
+	 * Set placeholder for the FormInput
 	 */
-	export let label: string | undefined = undefined
+	export let placeholder: $$Props['placeholder'] = undefined
 
 	/**
-	 * Show loading indicator inside component
+	 * Set the FormInput read-only
 	 */
-	export let loading: boolean = false
+	export let readonly: $$Props['readonly'] = undefined
 
 	/**
-	 * Show Message at bottom of Input
+	 * Set the FormInput required
 	 */
-	export let message: string | undefined = undefined
+	export let required: $$Props['required'] = undefined
 
 	/**
-	 * Mark this as required field in form
+	 * Set the size of FormInput
 	 */
-	export let required: boolean = false
+	export let size: $$Props['size'] = undefined
 
 	/**
-	 * The content of input
+	 * Set the state of FormInput
 	 */
-	export let value: any = undefined
+	export let state: $$Props['state'] = undefined
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * Set the type of input
+	 */
+	export let type: $$Props['type'] = undefined
 
-	$: classes = classname('form-input', undefined, $$props.class)
+	/**
+	 * the text Value of FormInput
+	 */
+	export let value: $$Props['value'] = undefined
+
+	/**
+	 * Set the text label of FormInput
+	 */
+	export let label: $$Props['label'] = undefined
+
+	/**
+	 * Define hint for the FormField
+	 */
+	export let hint: $$Props['hint'] = undefined
+
+	$: props = {
+		required,
+		label,
+		hint,
+		state,
+	}
+
+	$: inputProps = {
+		tag,
+		placeholder,
+		disabled,
+		readonly,
+		type,
+		required,
+		size,
+		state,
+		borderRounded,
+		borderFlush,
+	}
 </script>
 
-<FormField {cols} class={classes}>
-	<slot name="label">
-		{#if label}
-			<Label for="form-input-{id}" {required}>{label}</Label>
-		{/if}
-	</slot>
-	<div class={classname('form-field-body')}>
-		<slot name="start">
-			{#if icon}
-				<span class={classname('form-field-icon')}>
-					<Icon name={icon} />
-				</span>
-			{/if}
-		</slot>
-		<Input id="form-input-{id}" {required} {forwardEvents} {...$$restProps} bind:value />
-		<slot name="end">
-			{#if iconEnd && !loading}
-				<span class={classname('form-field-icon')}>
-					<Icon name={iconEnd} />
-				</span>
-			{/if}
-			{#if loading}
-				<span class={classname('form-field-icon')}>
-					<Spinner />
-				</span>
-			{/if}
-		</slot>
-	</div>
-	<slot name="message">
-		{#if message}
-			<FormHint>{message}</FormHint>
-		{/if}
-	</slot>
+<FormField {...props} {...$$restProps}>
+	<slot name="label" />
+	<Input {...inputProps} bind:value>
+		<slot />
+	</Input>
 </FormField>

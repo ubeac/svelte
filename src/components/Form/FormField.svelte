@@ -1,19 +1,47 @@
 <script lang="ts">
-	import { classname } from '$lib/utils'
+	import { El, Label } from '$lib/components'
+	import type { FormFieldProps } from '$lib/components'
 
-	import { Col } from '../Grid'
+	type $$Props = FormFieldProps
 
 	/**
-	 * Set Column width
+	 * Set Css Prefix for the FormField
 	 */
-	export let cols: string | number | boolean = false
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-field'
 
-	let klass = ''
-	export { klass as class }
+	/**
+	 * Define label for the FormField
+	 */
+	export let label: $$Props['label'] = undefined
 
-	$: classes = classname('form-field', {}, klass, true)
+	/**
+	 * Define hint for the FormField
+	 */
+	export let hint: $$Props['hint'] = undefined
+
+	/**
+	 * Set the FormField required
+	 */
+	export let required: $$Props['required'] = undefined
+
+	/**
+	 * Set the size of FormField
+	 */
+	export let state: $$Props['state'] = undefined
+
+	$: cssProps = {}
+	$: otherProps = { cssPrefix }
+	$: labelCssProps = { required }
 </script>
 
-<Col {cols} class={classes} {...$$restProps}>
+<El {...$$restProps} {cssProps} {...otherProps}>
+	<slot name="label"><Label cssProps={{ labelCssProps }} {...labelCssProps}>{label}</Label></slot>
 	<slot />
-</Col>
+	<slot name="hint">
+		{#if hint}
+			<El cssPrefix={cssPrefix + '-hint'} cssProps={{ state }}>
+				{hint}
+			</El>
+		{/if}
+	</slot>
+</El>

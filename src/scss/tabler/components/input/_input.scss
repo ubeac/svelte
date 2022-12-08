@@ -9,15 +9,14 @@ $props: (
 		lg: '.form-control-lg'
 	),
 	state:(valid: '.is-valid',
-		invalid: '.is-invalid',
-		loading: '.is-loading'
+		invalid: '.is-invalid'
 	),
 	border-rounded: '.form-control-rounded',
 	border-flush: '.form-control-flush'
 );
 
 $wrapper-props: (
-	null: '.input-group',
+	null: '.input-icon',
 	size:(sm: '.input-group-sm',
 		md: '.input-group',
 		lg: '.input-group-lg'
@@ -31,9 +30,38 @@ $wrapper-props: (
 
 .#{$prefix-input-wrapper} {
 	@include apply-props($wrapper-props);
-	position: relative;
+	// position: relative;
 
-	&>span {
-		@extend .input-group-text;
+	// &>.#{$prefix-input}:not(:last-child),
+	// &>.#{$prefix-input}:not(:last-child) {
+	// 	padding-right: 2.5rem;
+	// }
+
+	// &>.#{$prefix-input}:not(:first-child),
+	// &>.#{$prefix-input}:not(:last-child) {
+	// 	padding-left: 2.5rem;
+	// }
+
+	&>.#{$prefix-button} {
+		@extend .input-icon-addon;
 	}
 }
+
+// .input-icon-addon {
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	min-width: 2.5rem;
+// 	color: var(--#{$prefix}icon-color);
+// 	pointer-events: none;
+// 	font-size: 1.2em;
+
+// 	&:last-child {
+// 		right: 0;
+// 		left: auto;
+// 	}
+// }

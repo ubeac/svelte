@@ -4,14 +4,14 @@
 
 <El container>
 	<El row>
-		<FormInput label="First Name:" cols="6" />
-		<FormInput label="Last Name:" cols="6" />
-		<FormInput label="Username:" cols="12" />
-		<FormInput label="Email:" cols="12" />
-		<FormInput label="Password" cols="6" />
-		<FormInput label="Repeat Password" cols="6" />
-		<Col class="mt-3" offset="9" cols="3">
-			<Button block color="primary">Submit</Button>
+		<FormInput label="First Name" col="6" />
+		<FormInput label="Last Name" col="6" />
+		<FormInput label="Username" col="12" />
+		<FormInput label="Email" col="12" />
+		<FormInput label="Password" col="6" />
+		<FormInput label="Repeat Password" col="6" />
+		<Col mt="3" offset="9" col="3">
+			<Button color="primary">Submit</Button>
 		</Col>
 	</El>
 </El>
