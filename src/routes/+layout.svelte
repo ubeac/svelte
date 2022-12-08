@@ -1,6 +1,7 @@
 <script type="ts">
 	import { App, AppBody, AppFooter, Avatar, El, Page } from '@ubeac/svelte'
 	import type { Themes } from '@ubeac/svelte'
+	import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 	let container: ContainerMaxWidths = 'md'
 	let theme: Themes = 'light'
