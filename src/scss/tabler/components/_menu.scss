@@ -1,7 +1,7 @@
 $prefix-menu: $prefix + 'menu';
 
 $menu-props: (
-	"": ".dropdown-menu"
+	null: ".dropdown-menu"
 );
 
 .#{$prefix-menu} {
