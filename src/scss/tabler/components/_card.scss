@@ -21,8 +21,8 @@ $props: (
 	stacked: '.card-stacked',
 	borderless: '.card-borderless',
 	rotate: generate_props($rotate-directions, ('.card-rotate-')),
-	card-size: generate_props($card-sizes, ('.card-')),
-	card-state: generate_props($card-states, ('.card-')),
+	size: generate_props($card-sizes, ('.card-')),
+	state: generate_props($card-states, ('.card-')),
 );
 
 .#{$prefix-card} {
