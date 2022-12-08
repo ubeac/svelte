@@ -9,17 +9,17 @@
 		</Card>
 	</El>
 	<El col>
-		<Card cardSize="sm">
+		<Card size="sm">
 			<CardBody>This is some text within a card body.</CardBody>
 		</Card>
 	</El>
 	<El col>
-		<Card cardSize="md">
+		<Card size="md">
 			<CardBody>This is some text within a card body.</CardBody>
 		</Card>
 	</El>
 	<El col>
-		<Card cardSize="lg">
+		<Card size="lg">
 			<CardBody>This is some text within a card body.</CardBody>
 		</Card>
 	</El>
@@ -36,12 +36,12 @@
 		</Card>
 	</El>
 	<El col>
-		<Card cardState="active">
+		<Card state="active">
 			<CardBody>This is a card with active state.</CardBody>
 		</Card>
 	</El>
 	<El col>
-		<Card cardState="inactive">
+		<Card state="inactive">
 			<CardBody>This is some text inactive state.</CardBody>
 		</Card>
 	</El>
