@@ -1,19 +1,5 @@
-export const MENU_PLACEMENTS = [
-	'auto',
-	'auto-start',
-	'auto-end',
-	'right',
-	'right-start',
-	'right-end',
-	'left',
-	'left-start',
-	'left-end',
-	'top',
-	'top-start',
-	'top-end',
-	'bottom',
-	'bottom-start',
-	'bottom-end',
-] as const
+import type { PopupProps } from "../Popup";
 
-export type MenuPlacements = typeof MENU_PLACEMENTS[number]
+export interface MenuProps extends PopupProps {
+	// 
+}
