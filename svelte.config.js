@@ -29,6 +29,7 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		trailingSlash: 'always',
 		files: {
 			lib: 'src',
 			assets: 'static',
