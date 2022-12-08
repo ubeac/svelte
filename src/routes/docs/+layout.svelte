@@ -1,6 +1,8 @@
 <script type="ts">
 	import { Card, CardBody, El, PageBody, PageHeader } from '@ubeac/svelte'
 
+	import { navigations } from '.'
+
 	let container: ContainerMaxWidths = 'md'
 
 	let cssPrefixPreTitle = `page-header-pretitle`
@@ -20,7 +22,33 @@
 <PageBody>
 	<El {container}>
 		<El row>
-			<El colLg="3" display="none" displayLg="block">Test</El>
+			<El colLg="3" display="none" displayLg="block">
+				<ul class="nav nav-pills nav-vertical">
+					{#each navigations as navigation}
+						<li class="nav-item">
+							<a
+								href={navigation.route ? navigation.route : '#menu-base'}
+								class="nav-link"
+								data-bs-toggle="collapse"
+								aria-expanded="true">
+								{navigation.title}
+								{#if navigation.children}
+									<span class="nav-link-toggle" />
+								{/if}
+							</a>
+							{#if navigation.children}
+								<ul class="nav nav-pills collapse show" id="menu-base" style="">
+									{#each navigation.children as menu}
+										<li class="nav-item">
+											<a href={menu.route} class="nav-link">{menu.title}</a>
+										</li>
+									{/each}
+								</ul>
+							{/if}
+						</li>
+					{/each}
+				</ul>
+			</El>
 			<El colLg="9"><Card size="lg"><CardBody><slot /></CardBody></Card></El>
 		</El>
 	</El>

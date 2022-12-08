@@ -20,13 +20,15 @@
 			{#each navigations as navigation}
 				<div class="col-sm-6">
 					<h3>{navigation.title}</h3>
-					<ul class="list-unstyled">
-						{#each navigation.children as menu}
-							<li>
-								- <a href={menu.route}>{menu.title}</a>
-							</li>
-						{/each}
-					</ul>
+					{#if navigation.children}
+						<ul class="list-unstyled">
+							{#each navigation.children as menu}
+								<li>
+									- <a href={menu.route}>{menu.title}</a>
+								</li>
+							{/each}
+						</ul>
+					{/if}
 				</div>
 			{/each}
 		</div>

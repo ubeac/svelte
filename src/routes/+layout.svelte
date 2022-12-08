@@ -1,5 +1,5 @@
 <script type="ts">
-	import { App, AppBody, AppFooter, Avatar, Card, CardBody, El, Page, PageBody, PageHeader } from '@ubeac/svelte'
+	import { App, AppBody, AppFooter, Avatar, El, Page } from '@ubeac/svelte'
 	import type { Themes } from '@ubeac/svelte'
 
 	let container: ContainerMaxWidths = 'md'
@@ -327,7 +327,7 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="../form-elements.html">
+							<a class="nav-link" href="#form-elements">
 								<span class="nav-link-icon d-md-none d-lg-inline-block"
 									><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
 									<svg
@@ -479,7 +479,7 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="../icons.html">
+							<a class="nav-link" href="https://tabler-icons.io/" target="_blank" rel="noreferrer">
 								<span class="nav-link-icon d-md-none d-lg-inline-block"
 									><!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
 									<svg
@@ -540,31 +540,13 @@
 								<span class="nav-link-title"> Help </span>
 							</a>
 							<div class="dropdown-menu">
-								<a class="dropdown-item" href="../docs/"> Documentation </a>
-								<a class="dropdown-item" href="../changelog.html"> Changelog </a>
-								<a class="dropdown-item" href="https://github.com/tabler/tabler" target="_blank" rel="noopener">
-									Source code
-								</a>
+								<a class="dropdown-item" href="/docs"> Documentation </a>
 								<a
-									class="dropdown-item text-pink"
-									href="https://github.com/sponsors/codecalm"
+									class="dropdown-item"
+									href="https://github.com/ubeac/svelte/tree/next"
 									target="_blank"
-									rel="noopener">
-									<!-- Download SVG icon from http://tabler-icons.io/i/heart -->
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="icon icon-inline me-1"
-										width="24"
-										height="24"
-										viewBox="0 0 24 24"
-										stroke-width="2"
-										stroke="currentColor"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-											d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
-									Sponsor project!
+									rel="noreferrer">
+									Source code
 								</a>
 							</div>
 						</li>
@@ -580,9 +562,29 @@
 	</AppBody>
 	<AppFooter>
 		<El {container}>
-			<El row>
-				<El col>this is footer</El>
-			</El>
+			<div class="row text-center align-items-center flex-row-reverse">
+				<div class="col-lg-auto ms-lg-auto">
+					<ul class="list-inline list-inline-dots mb-0">
+						<li class="list-inline-item"><a href="/docs" class="link-secondary">Documentation</a></li>
+						<li class="list-inline-item">
+							<a
+								href="https://github.com/ubeac/svelte/tree/next"
+								target="_blank"
+								class="link-secondary"
+								rel="noreferrer">
+								Source code
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-12 col-lg-auto mt-3 mt-lg-0">
+					<ul class="list-inline list-inline-dots mb-0">
+						<li class="list-inline-item">
+							Copyright © 2023 <a href=".." class="link-secondary">uBeac</a>. All rights reserved.
+						</li>
+					</ul>
+				</div>
+			</div>
 		</El>
 	</AppFooter>
 </App>
