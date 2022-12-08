@@ -135,10 +135,11 @@
 
 	function onShow() {
 		if (!hidden) return onHide()
-		instance = createPopper(element?.previousElementSibling!, element, options as any)
-
-		tick().then(() => instance.update())
 		hidden = false
+
+		tick().then(() => {
+			instance = createPopper(element?.previousElementSibling!, element, options as any)
+		})
 	}
 
 	onMount(bind)
@@ -146,7 +147,7 @@
 	onDestroy(unbind)
 
 	$: cssProps = {
-		// 
+		//
 	}
 </script>
 
