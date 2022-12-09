@@ -4,17 +4,6 @@ export const base_common_path: string = base_path + 'common/'
 export const base_form_path: string = base_path + 'form/'
 
 export const navigations = [
-	{ title: 'Introduction', route: base_path },
-	{
-		title: 'Getting Started',
-		children: [
-			{
-				route: base_path + 'getting-started/installation',
-				title: 'Installation',
-				icon: 'icons',
-			},
-		],
-	},
 	{
 		title: 'Components',
 		children: [
@@ -129,6 +118,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'offcanvas',
+				title: 'Label',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'page',
 				title: 'Page',
 				icon: 'star',
@@ -221,7 +215,7 @@ export const navigations = [
 		],
 	},
 	{
-		title: 'Form Components',
+		title: 'Form',
 		children: [
 			{
 				route: base_form_path + 'form-autocomplete',
