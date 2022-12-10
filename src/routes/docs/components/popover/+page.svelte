@@ -1,5 +1,6 @@
 <script>
 	import { Preview } from '@ubeac/svelte'
+	import PopoverComponents from './PopoverComponents.svelte'
 	import PopoverDefault from './PopoverDefault.svelte'
 	import PopoverDirections from './PopoverDirections.svelte'
 	import PopoverHover from './PopoverHover.svelte'
@@ -19,6 +20,12 @@
 <p>Popover supports these directions:</p>
 <Preview src="./PopoverDirections.svelte">
 	<PopoverDirections />
+</Preview>
+
+<h2>Component inside popover</h2>
+<p>You can place any components inside popovers:</p>
+<Preview src="./PopoverComponents.svelte">
+	<PopoverComponents />
 </Preview>
 
 <h2>Popover on hover</h2>

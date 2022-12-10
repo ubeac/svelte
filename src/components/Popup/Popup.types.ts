@@ -1,3 +1,5 @@
+import type { ElProps } from '../Base'
+
 export const POPUP_PLACEMENTS = [
 	'auto',
 	'auto-start',
@@ -18,3 +20,17 @@ export const POPUP_PLACEMENTS = [
 export type PopupPlacements = typeof POPUP_PLACEMENTS[number]
 
 export type PopupTriggers = Array<'click' | 'focus' | 'hover'> | 'click' | 'focus' | 'hover'
+
+export interface PopupProps extends Partial<ElProps> {
+	disabled?: boolean
+	fixedPosition?: boolean
+	forwardEvents?: any
+	popupOffset?: [number, number]
+	persistent?: boolean
+	placement?: PopupPlacements
+	trigger?: PopupTriggers
+}
+
+export interface PopupArrowProps extends Partial<ElProps> {
+	//
+}
