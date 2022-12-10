@@ -71,11 +71,21 @@
 </script>
 
 <El cssPrefix="{cssPrefix}-wrapper" cssProps={{ size }}>
+	{#if $$slots.before}
+		<slot name="before" />
+	{/if}
 	{#if $$slots.start}
-		<slot name="start" />
+		<El cssPrefix="{cssPrefix}-start">
+			<slot name="start" />
+		</El>
 	{/if}
 	<El tag="input" bind:value {...$$restProps} {...otherProps} {cssProps} />
 	{#if $$slots.end}
-		<slot name="end" />
+		<El cssPrefix="{cssPrefix}-end">
+			<slot name="end" />
+		</El>
+	{/if}
+	{#if $$slots.after}
+		<slot name="after" />
 	{/if}
 </El>

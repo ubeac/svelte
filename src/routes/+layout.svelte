@@ -54,7 +54,7 @@
 				</div>
 				<div class="d-none d-md-flex  me-3">
 					<a
-						href="#"
+						href="/"
 						on:click={onThemeChange}
 						class="nav-link px-0 hide-theme-dark"
 						data-bs-toggle="tooltip"
@@ -77,7 +77,7 @@
 								d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
 					</a>
 					<a
-						href="#"
+						href="/"
 						on:click={onThemeChange}
 						class="nav-link px-0 hide-theme-light"
 						data-bs-toggle="tooltip"
@@ -101,7 +101,7 @@
 					</a>
 				</div>
 				<div class="nav-item dropdown">
-					<a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+					<a href="/" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
 						<Avatar size="sm"><img alt="AV" src="/avatars/000m.jpg" /></Avatar>
 						<!-- <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)" /> -->
 						<div class="d-none d-xl-block ps-2">
@@ -110,9 +110,9 @@
 						</div>
 					</a>
 					<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-						<a href="#" class="dropdown-item">Status</a>
-						<a href="#" class="dropdown-item">Profile</a>
-						<a href="#" class="dropdown-item">Feedback</a>
+						<a href="/" class="dropdown-item">Status</a>
+						<a href="/" class="dropdown-item">Profile</a>
+						<a href="/" class="dropdown-item">Feedback</a>
 						<div class="dropdown-divider" />
 						<a href="./settings.html" class="dropdown-item">Settings</a>
 						<a href="./sign-in.html" class="dropdown-item">Logout</a>

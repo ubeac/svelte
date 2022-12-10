@@ -21,36 +21,36 @@
 	<InputDefault />
 </Preview>
 
-<h2>Input types</h2>
-<p>You can also change type of input</p>
-<Preview vertical src="./InputTypes.svelte">
-	<InputTypes />
-</Preview>
-
-<h2>Input sizes</h2>
-<p>Use size prop to change size of input</p>
-<Preview vertical src="./InputSizes.svelte">
-	<InputSizes />
-</Preview>
-
 <h2>Placeholder</h2>
 <p>Inputs can have placeholders</p>
 <Preview src="./InputPlaceholder.svelte">
 	<InputPlaceholder />
 </Preview>
 
+<h2>Input types</h2>
+<p>You can also change type of input</p>
+<Preview src="./InputTypes.svelte">
+	<InputTypes />
+</Preview>
+
+<h2>Input sizes</h2>
+<p>Use size prop to change size of input</p>
+<Preview src="./InputSizes.svelte">
+	<InputSizes />
+</Preview>
+
 <h2>Wrapping with icon</h2>
-<Preview vertical src="./InputIcons.svelte">
+<Preview src="./InputIcons.svelte">
 	<InputIcons />
 </Preview>
 
 <h2>Wrapping with text</h2>
-<Preview vertical src="./InputWithText.svelte">
+<Preview src="./InputWithText.svelte">
 	<InputWithText />
 </Preview>
 
 <h2>Wrapping with button & text</h2>
-<Preview vertical src="./InputWithTextButton.svelte">
+<Preview src="./InputWithTextButton.svelte">
 	<InputWithTextButton />
 </Preview>
 
