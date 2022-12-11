@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import IconColors from './IconColors.svelte'
 	import IconDefault from './IconDefault.svelte'
 	import IconFilled from './IconFilled.svelte'
@@ -8,22 +8,22 @@
 
 <h1>Icons</h1>
 
-<h2>Icon</h2>
+<Doc title="Icon" />
 <Preview src="./IconDefault.svelte">
 	<IconDefault />
 </Preview>
 
-<h2>Icon colors</h2>
+<Doc title="Icon colors" />
 <Preview src="./IconColors.svelte">
 	<IconColors />
 </Preview>
 
-<h2>Filled icons</h2>
+<Doc title="Filled icons" />
 <Preview src="./IconFilled.svelte">
 	<IconFilled />
 </Preview>
 
-<h2>Icon sizes</h2>
+<Doc title="Icon sizes" />
 <Preview src="./IconSizes.svelte">
 	<IconSizes />
 </Preview>

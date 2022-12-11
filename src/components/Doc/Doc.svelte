@@ -9,7 +9,7 @@
 	$: href = encodeURIComponent(title)
 </script>
 
-<El tag="h2" {...$$restProps} {href} id={href}>
+<El mt="4" tag="h2" {...$$restProps} {href} id={href}>
 	{title}
 </El>
 <p>
