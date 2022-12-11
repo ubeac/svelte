@@ -1,10 +1,44 @@
 <script type="ts">
-	import { App, AppBody, AppFooter, Avatar, El, Page } from '@ubeac/svelte'
+	import { App, AppBody, AppFooter, Avatar, El, Page, Progress } from '@ubeac/svelte'
 	import type { Themes } from '@ubeac/svelte'
 	import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
+	import { browser } from '$app/environment'
+	import { beforeNavigate } from '$app/navigation'
+	import { navigating } from '$app/stores'
+
 	let container: ContainerMaxWidths = 'md'
 	let theme: Themes = 'light'
+	let progressValue = 0
+	let updater
+
+	export let maximum = 0.994
+	export let intervalTime = 700
+	export let stepSizes = [0, 0.005, 0.01, 0.02]
+
+	const getIncrement = (number: number) => {
+		if (number >= 0 && number < 0.2) return 0.1
+		else if (number >= 0.2 && number < 0.5) return 0.04
+		else if (number >= 0.5 && number < 0.8) return 0.02
+		else if (number >= 0.8 && number < 0.99) return 0.005
+		return 0
+	}
+	if (browser) {
+		updater = setInterval(() => {
+			console.log('progressValue', progressValue)
+			const randomStep = stepSizes[Math.floor(Math.random() * stepSizes.length)]
+			const step = getIncrement(progressValue) + randomStep
+			if (progressValue < maximum) {
+				progressValue = progressValue + step
+			}
+			if (progressValue > maximum) {
+				// progressValue = maximum
+				stop()
+			}
+		}, intervalTime)
+	}
+
+	$: if ($navigating) progressValue = 1
 
 	const onThemeChange = () => (theme === 'light' ? (theme = 'dark') : (theme = 'light'))
 </script>
@@ -558,6 +592,7 @@
 	</div>
 	<AppBody>
 		<Page {container}>
+			<Progress color="warning" style="height: 2px; z-index: 100;" value={progressValue * 100} />
 			<slot />
 		</Page>
 	</AppBody>
