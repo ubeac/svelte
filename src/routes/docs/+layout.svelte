@@ -27,7 +27,7 @@
 					{#each navigations as navigation}
 						<li class="nav-item">
 							<a
-								href={navigation.route ? navigation.route : '#menu-base'}
+								href={navigation.route ? navigation.route : `#${navigation.id}`}
 								class="nav-link"
 								data-bs-toggle="collapse"
 								aria-expanded="true">
@@ -37,7 +37,7 @@
 								{/if}
 							</a>
 							{#if navigation.children}
-								<ul class="nav nav-pills collapse show" id="menu-base" style="">
+								<ul class="nav nav-pills collapse show" id={navigation.id} style="">
 									{#each navigation.children as menu}
 										<li class="nav-item">
 											<a href={menu.route} class="nav-link">{menu.title}</a>
