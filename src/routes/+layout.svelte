@@ -4,15 +4,14 @@
 	import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 	import { browser } from '$app/environment'
-	import { beforeNavigate } from '$app/navigation'
-	import { navigating } from '$app/stores'
+	import { afterNavigate, beforeNavigate } from '$app/navigation'
 
 	let container: ContainerMaxWidths = 'md'
 	let theme: Themes = 'light'
 	let progressValue = 0
-	let updater
+	let updater: any
 
-	export let maximum = 0.994
+	export let maximum = 0.999
 	export let intervalTime = 700
 	export let stepSizes = [0, 0.005, 0.01, 0.02]
 
@@ -21,24 +20,32 @@
 		else if (number >= 0.2 && number < 0.5) return 0.04
 		else if (number >= 0.5 && number < 0.8) return 0.02
 		else if (number >= 0.8 && number < 0.99) return 0.005
-		return 0
+		return 0.00001
 	}
-	if (browser) {
-		updater = setInterval(() => {
-			console.log('progressValue', progressValue)
-			const randomStep = stepSizes[Math.floor(Math.random() * stepSizes.length)]
-			const step = getIncrement(progressValue) + randomStep
-			if (progressValue < maximum) {
-				progressValue = progressValue + step
-			}
-			if (progressValue > maximum) {
-				// progressValue = maximum
-				stop()
-			}
-		}, intervalTime)
+	const startInterval = () => {
+		if (browser) {
+			updater = setInterval(() => {
+				const randomStep = stepSizes[Math.floor(Math.random() * stepSizes.length)]
+				const step = getIncrement(progressValue) + randomStep
+				if (progressValue < maximum) {
+					progressValue = progressValue + step
+				}
+				if (progressValue > maximum) {
+					clearInterval(updater)
+				}
+			}, intervalTime)
+		}
 	}
 
-	$: if ($navigating) progressValue = 1
+	beforeNavigate(() => {
+		progressValue = 0
+		startInterval()
+	})
+
+	afterNavigate(() => {
+		progressValue = 1
+		clearInterval(updater)
+	})
 
 	const onThemeChange = () => (theme === 'light' ? (theme = 'dark') : (theme = 'light'))
 </script>
@@ -48,6 +55,11 @@
 </svelte:head>
 
 <App {theme}>
+	<div class="sticky-top">
+		<div class="position-relative">
+			<Progress col position="absolute" color="primary" style="height: 3px;" value={progressValue * 100} />
+		</div>
+	</div>
 	<header class="navbar navbar-expand-md navbar-light d-print-none">
 		<div class="container-xl">
 			<button
@@ -592,7 +604,6 @@
 	</div>
 	<AppBody>
 		<Page {container}>
-			<Progress color="warning" style="height: 2px; z-index: 100;" value={progressValue * 100} />
 			<slot />
 		</Page>
 	</AppBody>
