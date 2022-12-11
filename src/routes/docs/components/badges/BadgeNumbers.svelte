@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Badge } from '@ubeac/svelte'
+	import { Badge, El } from '@ubeac/svelte'
 </script>
 
-<div>
-	<div class="mb-1">
+<El>
+	<El mb="1">
 		<Badge color="blue">1</Badge>
 		<Badge color="azure">2</Badge>
 		<Badge color="indigo">3</Badge>
@@ -16,8 +16,8 @@
 		<Badge color="green">10</Badge>
 		<Badge color="teal">11</Badge>
 		<Badge color="cyan">12</Badge>
-	</div>
-	<div class="mb-1">
+	</El>
+	<El mb="1">
 		<Badge pill color="blue">1</Badge>
 		<Badge pill color="azure">2</Badge>
 		<Badge pill color="indigo">3</Badge>
@@ -30,8 +30,8 @@
 		<Badge pill color="green">10</Badge>
 		<Badge pill color="teal">11</Badge>
 		<Badge pill color="cyan">12</Badge>
-	</div>
-	<div class="mb-1">
+	</El>
+	<El mb="1">
 		<Badge tile color="blue">1</Badge>
 		<Badge tile color="azure">2</Badge>
 		<Badge tile color="indigo">3</Badge>
@@ -44,5 +44,5 @@
 		<Badge tile color="green">10</Badge>
 		<Badge tile color="teal">11</Badge>
 		<Badge tile color="cyan">12</Badge>
-	</div>
-</div>
+	</El>
+</El>
