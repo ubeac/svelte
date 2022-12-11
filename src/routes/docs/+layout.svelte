@@ -1,5 +1,5 @@
 <script type="ts">
-	import { Card, CardBody, El, PageBody, PageHeader } from '@ubeac/svelte'
+	import { Card, CardBody, El, PageBody, PageHeader, ToC } from '@ubeac/svelte'
 
 	import { navigations } from '.'
 
@@ -19,10 +19,11 @@
 		</El>
 	</El>
 </PageHeader>
+
 <PageBody>
 	<El {container}>
 		<El row>
-			<El colLg="3" display="none" displayLg="block">
+			<El colLg="2" display="none" displayLg="block">
 				<ul class="nav nav-pills nav-vertical">
 					{#each navigations as navigation}
 						<li class="nav-item">
@@ -49,7 +50,14 @@
 					{/each}
 				</ul>
 			</El>
-			<El colLg="9"><Card size="lg"><CardBody><slot /></CardBody></Card></El>
+			<El colLg="8" col="12">
+				<Card size="lg">
+					<CardBody><slot /></CardBody>
+				</Card>
+			</El>
+			<El colLg="2" display="none" displayLg="block">
+				<ToC />
+			</El>
 		</El>
 	</El>
 </PageBody>
