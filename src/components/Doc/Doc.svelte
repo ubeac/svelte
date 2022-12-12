@@ -11,6 +11,7 @@
 	<a href="#{href}">#</a>
 	<h2 class="d-inline" {href} id={href}>{title}</h2>
 </div>
+
 <p>
 	<slot />
 </p>

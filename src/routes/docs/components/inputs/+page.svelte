@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Doc, Preview } from '@ubeac/svelte'
 
 	import InputDefault from './InputDefault.svelte'
 	import InputDisabled from './InputDisabled.svelte'
@@ -9,69 +9,55 @@
 	import InputTypes from './InputTypes.svelte'
 	import InputStates from './InputStates.svelte'
 	import InputBorderShapes from './InputBorderShapes.svelte'
-	import InputWithText from './InputWithText.svelte'
-	import InputWithTextButton from './InputWithTextButton.svelte'
-	import InputIcons from './InputIcons.svelte'
 </script>
 
 <h1>Input</h1>
-<p>Input components are used for collecting user provided information.</p>
-
+<Doc title="Default">Input components are used for collecting user provided information.</Doc>
 <Preview src="./InputDefault.svelte">
 	<InputDefault />
 </Preview>
 
-<h2>Input types</h2>
-<p>You can also change type of input</p>
-<Preview vertical src="./InputTypes.svelte">
-	<InputTypes />
-</Preview>
-
-<h2>Input sizes</h2>
-<p>Use size prop to change size of input</p>
-<Preview vertical src="./InputSizes.svelte">
-	<InputSizes />
-</Preview>
-
-<h2>Placeholder</h2>
-<p>Inputs can have placeholders</p>
+<Doc title="Placeholder">Inputs can have placeholders.</Doc>
 <Preview src="./InputPlaceholder.svelte">
 	<InputPlaceholder />
 </Preview>
 
-<h2>Wrapping with icon</h2>
-<Preview vertical src="./InputIcons.svelte">
-	<InputIcons />
+<Doc title="Types">You can also change type of input.</Doc>
+<Preview src="./InputTypes.svelte">
+	<InputTypes />
 </Preview>
 
-<h2>Wrapping with text</h2>
-<Preview vertical src="./InputWithText.svelte">
-	<InputWithText />
+<Doc title="Sizing">Use size property to change height size of the input.</Doc>
+<Preview src="./InputSizes.svelte">
+	<InputSizes />
 </Preview>
 
-<h2>Wrapping with button & text</h2>
-<Preview vertical src="./InputWithTextButton.svelte">
-	<InputWithTextButton />
-</Preview>
-
-<h2>Disabled input</h2>
-<p>Set input disabled</p>
+<Doc title="Disabled">
+	Set the disabled boolean property on an input to give it a grayed out appearance, remove pointer events, and prevent
+	focusing.
+</Doc>
 <Preview src="./InputDisabled.svelte">
 	<InputDisabled />
 </Preview>
 
-<h2>Readonly input</h2>
-<p>Set input value unchangable</p>
+<Doc title="Readonly">
+	Set the readonly boolean property on an input to prevent modification of the input’s value. readonly inputs can still
+	be focused and selected, while disabled inputs cannot.
+</Doc>
 <Preview src="./InputReadOnly.svelte">
 	<InputReadOnly />
 </Preview>
 
-<h2>Input states</h2>
+<Doc title="States">
+	<!--  -->
+</Doc>
 <Preview src="./InputStates.svelte">
 	<InputStates />
 </Preview>
 
-<h2>Input borders</h2>
+<Doc title="Borders">
+	Set <code>borderRounded</code> or <code>borderFlush</code> boolean properties to apply rounded borders or remove the borders.
+</Doc>
 <Preview src="./InputBorderShapes.svelte">
 	<InputBorderShapes />
 </Preview>

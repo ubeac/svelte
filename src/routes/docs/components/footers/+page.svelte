@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import Footer1 from './Footer1.svelte'
 	import Footer2 from './Footer2.svelte'
 	import Footer3 from './Footer3.svelte'
@@ -11,32 +11,44 @@
 <h1>Footer</h1>
 <p>Finish every page strong with an awesome footer, big or small.</p>
 
-<h2>Sticky footer</h2>
+<Doc title="Sticky footer">
+	<!--  -->
+</Doc>
 <Preview src="./FooterSticky.svelte">
 	<FooterSticky />
 </Preview>
 
-<h2>Example 1</h2>
+<Doc title="Example 1">
+	<!--  -->
+</Doc>
 <Preview src="./Footer1.svelte">
 	<Footer1 />
 </Preview>
 
-<h2>Example 2</h2>
+<Doc title="Example 2">
+	<!--  -->
+</Doc>
 <Preview src="./Footer2.svelte">
 	<Footer2 />
 </Preview>
 
-<h2>Example 3</h2>
+<Doc title="Example 3">
+	<!--  -->
+</Doc>
 <Preview src="./Footer3.svelte">
 	<Footer3 />
 </Preview>
 
-<h2>Example 4</h2>
+<Doc title="Example 4">
+	<!--  -->
+</Doc>
 <Preview src="./Footer4.svelte">
 	<Footer4 />
 </Preview>
 
-<h2>Example 5</h2>
+<Doc title="Example 5">
+	<!--  -->
+</Doc>
 <Preview src="./Footer5.svelte">
 	<Footer5 />
 </Preview>

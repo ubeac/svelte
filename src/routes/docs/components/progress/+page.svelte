@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components'
 	import ProgressDefault from './ProgressDefault.svelte'
 	import ProgressIndeterminate from './ProgressIndeterminate.svelte'
 	import ProgressColors from './ProgressColors.svelte'
@@ -16,45 +16,42 @@
 	abandoning a process they have initiated.
 </p>
 
-<h2>Default</h2>
+<Doc title="Default">
+	<!--  -->
+</Doc>
 <Preview src="./ProgressDefault.svelte">
 	<ProgressDefault />
 </Preview>
 
-<h2>Colors</h2>
-<p>Customize the color of the progress bar to suit your design.</p>
+<Doc title="Colors">Customize the color of the progress bar to suit your design.</Doc>
+
 <Preview src="./ProgressColors.svelte">
 	<ProgressColors />
 </Preview>
 
-<h2>Sizes</h2>
-<p>Customize the size of the progress bar.</p>
+<Doc title="Sizes">Customize the size of the progress bar.</Doc>
 <Preview src="./ProgressSizes.svelte">
 	<ProgressSizes />
 </Preview>
 
-<h2>Indeterminate</h2>
-<p>
+<Doc title="Indeterminate">
 	You can create a progress bar which shows indeterminate progress by adding <code>indeterminate</code> to the progress component.
-</p>
+</Doc>
 <Preview src="./ProgressIndeterminate.svelte">
 	<ProgressIndeterminate />
 </Preview>
 
-<h2>Striped progress</h2>
-<p>Set striped property to show striped background</p>
+<Doc title="Striped progress">Set striped property to show striped background</Doc>
 <Preview src="./ProgressStriped.svelte">
 	<ProgressStriped />
 </Preview>
 
-<h2>Animated striped</h2>
-<p>The striped gradient can also be animated.</p>
+<Doc title="Animated striped">The striped gradient can also be animated.</Doc>
 <Preview src="./ProgressStripedAnimated.svelte">
 	<ProgressStripedAnimated />
 </Preview>
 
-<h2>Labels</h2>
-<p>Add labels to your progress bars by setting label property.</p>
+<Doc title="Labels">Add labels to your progress bars by setting label property.</Doc>
 <Preview src="./ProgressLabel.svelte">
 	<ProgressLabel />
 </Preview>
