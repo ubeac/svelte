@@ -14,7 +14,7 @@
 	export let cssPrefix: string | undefined = 'el'
 	export let id: string | undefined = cssPrefix + '_' + globalCounter++
 	export let style: any = undefined
-	export let tag: keyof HTMLElementTagNameMap | undefined = 'div'
+	export let tag: keyof HTMLElementTagNameMap = 'div'
 	export let cssProps: any = {}
 	export let value: any = undefined
 
@@ -319,8 +319,10 @@
 	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...otherProps}>
 		<slot />
 	</svelte:element>
-{:else if (tag = 'input')}
+{:else if tag === 'input'}
 	<input use:forwardEvents bind:this={element} {...$$restProps} {...otherProps} bind:value />
+{:else if tag === 'textarea'}
+	<textarea use:forwardEvents bind:this={element} {...$$restProps} {...otherProps} bind:value />
 {:else}
 	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...otherProps} />
 {/if}

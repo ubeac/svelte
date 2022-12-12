@@ -6,7 +6,7 @@
 	import FormInputState from './FormInputState.svelte'
 </script>
 
-<h1>Form Input</h1>
+<h1>FormInput</h1>
 <p>
 	FormInput is an input and label wrapper component to be used insisde forms. It supports all props and events of
 	<a href="/docs/components/inputs">Input</a>

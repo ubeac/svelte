@@ -201,7 +201,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'textarea',
+				route: base_component_path + 'textareas',
 				title: 'Textarea',
 				icon: 'star',
 			},
@@ -283,7 +283,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_form_path + 'form-textarea',
+				route: base_form_path + 'form-textareas',
 				title: 'FormTextarea',
 				icon: 'star',
 			},

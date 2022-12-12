@@ -16,3 +16,7 @@ export interface FormInputProps extends Partial<FormFieldProps> {
 	borderRounded?: boolean
 	borderFlush?: boolean
 }
+
+export interface FormTextAreaProps extends Partial<FormInputProps> {
+	rows?: number | string
+}
