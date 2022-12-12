@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import TableBorder from './TableBorder.svelte'
 	import TableBorderless from './TableBorderless.svelte'
 	import TableDefault from './TableDefault.svelte'
@@ -17,66 +17,49 @@
 	users can browse a lot of information at once and a good table design will help you take care of its clarity.
 </p>
 
-<h2>Basic Table</h2>
-<p>Table component has basic styles.</p>
-
+<Doc title="Basic Table">Table component has basic styles.</Doc>
 <Preview src="./TableDefault.svelte">
 	<TableDefault />
 </Preview>
 
-<h2>Bordered Tables</h2>
-<p>You can add borders for table rows using <code>border</code> prop.</p>
-
+<Doc title="Bordered Tables">You can add borders for table rows using <code>border</code> prop.</Doc>
 <Preview src="./TableBorder.svelte">
 	<TableBorder />
 </Preview>
 
-<p>You can disable borders by setting border to 0.</p>
+<Doc title="Borderless Tables">You can disable borders by setting border to 0.</Doc>
 <Preview src="./TableBorderless.svelte">
 	<TableBorderless />
 </Preview>
 
-<h2>Hover effect</h2>
-<p>Table rows can change it's color if yo hover on them.</p>
-
+<Doc title="Hover effect">Table rows can change it's color if yo hover on them.</Doc>
 <Preview src="./TableHover.svelte">
 	<TableHover />
 </Preview>
 
-
-<h2>Truncate cells</h2>
-<p>TODO</p>
-
+<Doc title="Truncate cells">TODO</Doc>
 <Preview src="./TableTruncate.svelte">
 	<TableTruncate />
 </Preview>
 
-
-<h2>Striped Tables</h2>
-<p>You can change colors of Even/Odd rows by adding <code>striped</code> prop.</p>
-
+<Doc title="Striped Tables">
+	You can change colors of Even/Odd rows by adding <code>striped</code> prop.
+</Doc>
 <Preview src="./TableStriped.svelte">
 	<TableStriped />
 </Preview>
 
-<h2>Responsive Tables</h2>
-<p>TODO</p>
-
+<Doc title="Responsive Tables">TODO</Doc>
 <Preview src="./TableResponsive.svelte">
 	<TableResponsive />
 </Preview>
 
-
-<h2>Table Colors</h2>
-<p>TODO</p>
-
+<Doc title="Table Colors">TODO</Doc>
 <Preview src="./TableColors.svelte">
 	<TableColors />
 </Preview>
 
-<h2>Table Sort</h2>
-<p>TODO</p>
-
+<Doc title="Sortable Table">TODO</Doc>
 <Preview src="./TableSort.svelte">
 	<TableSort />
 </Preview>
