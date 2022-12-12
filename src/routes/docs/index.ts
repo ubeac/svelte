@@ -141,6 +141,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'offcanvas',
+				title: 'Label',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'page',
 				title: 'Page',
 				icon: 'star',
