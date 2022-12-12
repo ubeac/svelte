@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import BottomMenu from './BottomMenu.svelte'
 	import MenuDefault from './MenuDefault.svelte'
 </script>
@@ -7,13 +7,12 @@
 <h1>Menu</h1>
 <p>TODO</p>
 
+<Doc title="Default Markup">TODO</Doc>
 <Preview src="./MenuDefault.svelte">
 	<MenuDefault />
 </Preview>
 
-<h2>Menu</h2>
-<p>TODO</p>
-
+<Doc title="Menu">TODO</Doc>
 <Preview src="./BottomMenu.svelte">
 	<BottomMenu />
 </Preview>

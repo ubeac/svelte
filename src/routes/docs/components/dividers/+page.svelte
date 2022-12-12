@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components'
 	import DividerDefault from './DividerDefault.svelte'
 	import DividerPositions from './DividerPositions.svelte'
 	import DividerColors from './DividerColors.svelte'
@@ -11,26 +11,25 @@
 	user experience and enhanced interaction with a website or app.
 </p>
 
-<h2>Defaults</h2>
-<p>
+<Doc title="Defaults">
 	Use dividers to visually separate content into parts. You can use a line only or add text that will be centered by
 	default.
-</p>
+</Doc>
 <Preview src="./DividerDefault.svelte">
 	<DividerDefault />
 </Preview>
 
-<h2>Text Positions</h2>
-<p>
+<Doc title="Text Positions">
 	You can modify the position of the text which is to be included in a separator and make it left- or right-aligned.
 	Otherwise, the text will remain centered.
-</p>
+</Doc>
 <Preview src="./DividerPositions.svelte">
 	<DividerPositions />
 </Preview>
 
-<h2>Colors</h2>
-<p>Customize the color of the divider to suit your design.</p>
+<Doc title="Colors">
+	Customize the color of the divider to suit your design.
+</Doc>
 <Preview src="./DividerColors.svelte">
 	<DividerColors />
 </Preview>

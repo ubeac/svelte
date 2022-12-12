@@ -1,10 +1,51 @@
 <script type="ts">
-	import { App, AppBody, AppFooter, Avatar, El, Page } from '@ubeac/svelte'
+	import { App, AppBody, AppFooter, Avatar, El, Page, Progress } from '@ubeac/svelte'
 	import type { Themes } from '@ubeac/svelte'
 	import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
+	import { browser } from '$app/environment'
+	import { afterNavigate, beforeNavigate } from '$app/navigation'
+
 	let container: ContainerMaxWidths = 'md'
 	let theme: Themes = 'light'
+	let progressValue = 0
+	let updater: any
+
+	export let maximum = 0.999
+	export let intervalTime = 700
+	export let stepSizes = [0, 0.005, 0.01, 0.02]
+
+	const getIncrement = (number: number) => {
+		if (number >= 0 && number < 0.2) return 0.1
+		else if (number >= 0.2 && number < 0.5) return 0.04
+		else if (number >= 0.5 && number < 0.8) return 0.02
+		else if (number >= 0.8 && number < 0.99) return 0.005
+		return 0.00001
+	}
+	const startInterval = () => {
+		if (browser) {
+			updater = setInterval(() => {
+				const randomStep = stepSizes[Math.floor(Math.random() * stepSizes.length)]
+				const step = getIncrement(progressValue) + randomStep
+				if (progressValue < maximum) {
+					progressValue = progressValue + step
+				}
+				if (progressValue > maximum) {
+					clearInterval(updater)
+				}
+			}, intervalTime)
+		}
+	}
+
+	beforeNavigate(() => {
+		progressValue = 0
+		startInterval()
+	})
+
+	afterNavigate(() => {
+		progressValue = 1
+		clearInterval(updater)
+	})
 
 	const onThemeChange = () => (theme === 'light' ? (theme = 'dark') : (theme = 'light'))
 </script>
@@ -14,6 +55,13 @@
 </svelte:head>
 
 <App {theme}>
+	{#if progressValue < 1}
+		<div class="sticky-top">
+			<div class="position-relative">
+				<Progress col position="absolute" color="primary" style="height: 3px;" value={progressValue * 100} />
+			</div>
+		</div>
+	{/if}
 	<header class="navbar navbar-expand-md navbar-light d-print-none">
 		<div class="container-xl">
 			<button
@@ -54,7 +102,7 @@
 				</div>
 				<div class="d-none d-md-flex  me-3">
 					<a
-						href="#"
+						href="/"
 						on:click={onThemeChange}
 						class="nav-link px-0 hide-theme-dark"
 						data-bs-toggle="tooltip"
@@ -77,7 +125,7 @@
 								d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
 					</a>
 					<a
-						href="#"
+						href="/"
 						on:click={onThemeChange}
 						class="nav-link px-0 hide-theme-light"
 						data-bs-toggle="tooltip"
@@ -101,7 +149,7 @@
 					</a>
 				</div>
 				<div class="nav-item dropdown">
-					<a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+					<a href="/" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
 						<Avatar size="sm"><img alt="AV" src="/avatars/000m.jpg" /></Avatar>
 						<!-- <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)" /> -->
 						<div class="d-none d-xl-block ps-2">
@@ -110,9 +158,9 @@
 						</div>
 					</a>
 					<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-						<a href="#" class="dropdown-item">Status</a>
-						<a href="#" class="dropdown-item">Profile</a>
-						<a href="#" class="dropdown-item">Feedback</a>
+						<a href="/" class="dropdown-item">Status</a>
+						<a href="/" class="dropdown-item">Profile</a>
+						<a href="/" class="dropdown-item">Feedback</a>
 						<div class="dropdown-divider" />
 						<a href="./settings.html" class="dropdown-item">Settings</a>
 						<a href="./sign-in.html" class="dropdown-item">Logout</a>
@@ -594,6 +642,10 @@
 	.u-preview-body > * {
 		margin: 0 0.2rem 0.8rem 0.2rem;
 		vertical-align: top;
+	}
+
+	.u-card-body > h2 {
+		margin-top: 1.75rem !important;
 	}
 	.u-preview-body > :last-child {
 		margin: 0 0.2rem 0 0.2rem !important;
