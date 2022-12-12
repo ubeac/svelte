@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import BreadcrumbDefault from './BreadcrumbDefault.svelte'
 	import BreadcrumbHeader from './BreadcrumbHeader.svelte'
 	import BreadcrumbSeperator from './BreadcrumbSeperator.svelte'
@@ -11,22 +11,22 @@
 	Thanks to breadcrumbs, they can easily navigate within the website hierarchy and better understand its structure.
 </p>
 
-<h2>Default</h2>
+<Doc title="Default">
+	<!--  -->
+</Doc>
 <Preview src="./BreadcrumbDefault.svelte">
 	<BreadcrumbDefault />
 </Preview>
 
-<h2>Breadcrumb variations</h2>
-<p>
+<Doc title="Breadcrumb variations">
 	If you wish to use different separators, set the <code>separator</code> prop. Depending on the aesthetics of your design,
 	you can choose dots, bullets or arrows.
-</p>
+</Doc>
 <Preview vertical src="./BreadcrumbSeperator.svelte">
 	<BreadcrumbSeperator />
 </Preview>
 
-<h2>Breadcrumb in Header</h2>
-<p>If you wish to use breadcrumbs in headers, place them above the headers.</p>
+<Doc title="Breadcrumb in Header">If you wish to use breadcrumbs in headers, place them above the headers.</Doc>
 <Preview vertical src="./BreadcrumbHeader.svelte">
 	<BreadcrumbHeader />
 </Preview>

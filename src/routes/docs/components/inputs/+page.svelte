@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Doc, Preview } from '@ubeac/svelte'
 
 	import InputDefault from './InputDefault.svelte'
 	import InputDisabled from './InputDisabled.svelte'
@@ -16,7 +16,9 @@
 
 <h1>Input</h1>
 <p>Input components are used for collecting user provided information.</p>
-
+<Doc title="Default Markup">
+	<!--  -->
+</Doc>
 <Preview src="./InputDefault.svelte">
 	<InputDefault />
 </Preview>
@@ -27,51 +29,62 @@
 	<InputPlaceholder />
 </Preview>
 
-<h2>Input types</h2>
-<p>You can also change type of input</p>
-<Preview src="./InputTypes.svelte">
+<Doc title="Input types">You can also change type of input.</Doc>
+<Preview vertical src="./InputTypes.svelte">
 	<InputTypes />
 </Preview>
 
-<h2>Input sizes</h2>
-<p>Use size prop to change size of input</p>
-<Preview src="./InputSizes.svelte">
+<Doc title="Input sizes">Use size prop to change size of input.</Doc>
+<Preview vertical src="./InputSizes.svelte">
 	<InputSizes />
 </Preview>
 
-<h2>Wrapping with icon</h2>
-<Preview src="./InputIcons.svelte">
+<Doc title="Placeholder">Inputs can have placeholders.</Doc>
+<Preview src="./InputPlaceholder.svelte">
+	<InputPlaceholder />
+</Preview>
+
+<Doc title="Wrapping with icon">
+	<!--  -->
+</Doc>
+<Preview vertical src="./InputIcons.svelte">
 	<InputIcons />
 </Preview>
 
-<h2>Wrapping with text</h2>
-<Preview src="./InputWithText.svelte">
+<Doc title="Wrapping with text">
+	<!--  -->
+</Doc>
+<Preview vertical src="./InputWithText.svelte">
 	<InputWithText />
 </Preview>
 
-<h2>Wrapping with button & text</h2>
-<Preview src="./InputWithTextButton.svelte">
+<Doc title="Wrapping with button & text">
+	<!--  -->
+</Doc>
+<Preview vertical src="./InputWithTextButton.svelte">
 	<InputWithTextButton />
 </Preview>
 
-<h2>Disabled input</h2>
-<p>Set input disabled</p>
+<Doc title="Disabled input">Set input disabled.</Doc>
 <Preview src="./InputDisabled.svelte">
 	<InputDisabled />
 </Preview>
 
-<h2>Readonly input</h2>
-<p>Set input value unchangable</p>
+<Doc title="Readonly input">Set input value unchangable.</Doc>
 <Preview src="./InputReadOnly.svelte">
 	<InputReadOnly />
 </Preview>
 
-<h2>Input states</h2>
+<Doc title="Input states">
+	<!--  -->
+</Doc>
 <Preview src="./InputStates.svelte">
 	<InputStates />
 </Preview>
 
-<h2>Input borders</h2>
+<Doc title="Input borders">
+	<!--  -->
+</Doc>
 <Preview src="./InputBorderShapes.svelte">
 	<InputBorderShapes />
 </Preview>

@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components'
 	import AvatarColors from './AvatarColors.svelte'
 	import AvatarDefault from './AvatarDefault.svelte'
 	import AvatarImage from './AvatarImage.svelte'
@@ -16,53 +16,58 @@
 	are often used in communication apps, collaboration tools and social media.
 </p>
 
-<h2>Default markup</h2>
-<p>
+<Doc title="Default markup">
 	Use the <code>Avatar</code> component to add an avatar to your interface design for greater customisation.
-</p>
+</Doc>
 <Preview src="./AvatarDefault.svelte">
 	<AvatarDefault />
 </Preview>
 
-<h2>Avatar Colors</h2>
-<p>Customize the color of the avatars.</p>
+<Doc title="Avatar Colors">Customize the color of the avatars.</Doc>
 
 <Preview src="./AvatarColors.svelte">
 	<AvatarColors />
 </Preview>
 
-<h2>Avatar Shapes</h2>
-<p>You can make them round or square and change their border radius.</p>
+<Doc title="Avatar Shapes">You can make them round or square and change their border radius.</Doc>
 
 <Preview src="./AvatarShapes.svelte">
 	<AvatarShapes />
 </Preview>
 
-<h2>Avatar Size</h2>
-<p>you can create a standard avatar or scale it up or down to different sizes based on what you need.</p>
+<Doc title="Avatar Size">
+	you can create a standard avatar or scale it up or down to different sizes based on what you need.
+</Doc>
 
 <Preview src="./AvatarSize.svelte">
 	<AvatarSize />
 </Preview>
 
-<h2>Avatar Image and Icon</h2>
-<p>Set an <code>image</code> as the background to make users easy to indentify and create a personalised experience.</p>
+<Doc title="Avatar Image and Icon">
+	Set an <code>image</code> as the background to make users easy to indentify and create a personalised experience.
+</Doc>
 
 <Preview src="./AvatarImage.svelte">
 	<AvatarImage />
 </Preview>
 
-<h2>Avatar Status</h2>
+<Doc title="Avatar Status">
+	<!--  -->
+</Doc>
 <Preview src="./AvatarStatus.svelte">
 	<AvatarStatus />
 </Preview>
 
-<h2>Avatar List</h2>
+<Doc title="Avatar List">
+	<!--  -->
+</Doc>
 <Preview src="./AvatarList.svelte">
 	<AvatarList />
 </Preview>
 
-<h2>Avatar List Stacked</h2>
+<Doc title="Avatar List Stacked">
+	<!--  -->
+</Doc>
 <Preview src="./AvatarListStacked.svelte">
 	<AvatarListStacked />
 </Preview>
