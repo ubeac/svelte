@@ -6580,6 +6580,7 @@ textarea.form-control-lg, textarea.u-input-size-lg, textarea.u-file-uploader.u-f
   display: block;
 }
 
+/* rtl:begin:ignore */
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end,
 .u-tabs .u-tabs-panels .carousel-item-end.u-tabs-panel-active,
@@ -6602,6 +6603,7 @@ textarea.form-control-lg, textarea.u-input-size-lg, textarea.u-file-uploader.u-f
   transform: translateX(-100%);
 }
 
+/* rtl:end:ignore */
 .carousel-fade .carousel-item, .carousel-fade .u-carousel-item {
   opacity: 0;
   transition-property: opacity;
