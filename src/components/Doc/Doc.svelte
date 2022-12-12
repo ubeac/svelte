@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-
 	import type { DocProps } from './Doc.types'
 
 	type $$Props = DocProps
@@ -9,10 +7,10 @@
 	$: href = encodeURIComponent(title)
 </script>
 
-<El tag="h2" {...$$restProps} {href} id={href}>
-	{title}
-	<El ml="2" tag="a" href="#{href}" cssPrefix="doc-anchor">#</El>
-</El>
+<div class="mt-3 mb-2">
+	<a href="#{href}">#</a>
+	<h2 class="d-inline" {href} id={href}>{title}</h2>
+</div>
 <p>
 	<slot />
 </p>
