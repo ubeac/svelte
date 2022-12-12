@@ -6,6 +6,7 @@
 	import TextareaReadonly from './TextareaReadonly.svelte'
 	import TextareaPlaceholder from './TextareaPlaceholder.svelte'
 	import TextareaSizes from './TextareaSizes.svelte'
+	import TextareaBorderShapes from './TextareaBorderShapes.svelte'
 </script>
 
 <h1>Textarea</h1>
@@ -38,4 +39,11 @@
 <Doc title="Placeholder">You can set placeholder of textarea using <code>placeholder</code> property.</Doc>
 <Preview src="./TextareaPlaceholder.svelte">
 	<TextareaPlaceholder />
+</Preview>
+
+<Doc title="Borders">
+	Set <code>borderRounded</code> or <code>borderFlush</code> boolean properties to apply rounded borders or remove the borders.
+</Doc>
+<Preview src="./TextareaBorderShapes.svelte">
+	<TextareaBorderShapes />
 </Preview>
