@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
-	import { Card, CardBody, El, Page, PageBody, PageHeader } from '$lib/components'
+	import { El } from '$lib/components'
 
 	import type { PageProps } from './Page.types'
 

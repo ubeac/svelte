@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import ToastDefault from './ToastDefault.svelte'
 	import ToastWithOutCloseButton from './ToastWithOutCloseButton.svelte'
 	import ToastToggleShow from './ToastToggleShow.svelte'
@@ -12,29 +12,25 @@
 	feedback, rather than encourage to take action.
 </p>
 
-<h2>Default</h2>
-<p>
+<Doc title="Default">
 	Use the default toast message to inform users of the outcome of their action and provide additional information. It
 	contains an <code>X</code> close button to make it possible for users to close the toast if they wish.
-</p>
+</Doc>
 
 <Preview src="./ToastDefault.svelte">
 	<ToastDefault />
 </Preview>
 
-<h2>With out close button</h2>
-<p>
+<Doc title="Without close button">
 	Set the <code>showCloseButton</code> props as boolean.
-</p>
-
+</Doc>
 <Preview src="./ToastWithOutCloseButton.svelte">
 	<ToastWithOutCloseButton />
 </Preview>
 
-<h2>Toggle Show</h2>
-<p>
+<Doc title="Toggle Show">
 	Set the <code>show</code> props as boolean to show or hide toast.
-</p>
+</Doc>
 <Preview src="./ToastToggleShow.svelte">
 	<ToastToggleShow />
 </Preview>
