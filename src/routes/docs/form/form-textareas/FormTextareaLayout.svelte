@@ -1,5 +1,5 @@
 <script>
-	import { FormInput, Button, El } from '@ubeac/svelte'
+	import { FormInput, Button, El, FormTextarea } from '@ubeac/svelte'
 </script>
 
 <El row>
@@ -9,6 +9,7 @@
 	<FormInput label="Email" col="12" />
 	<FormInput label="Password" col="6" />
 	<FormInput label="Repeat Password" col="6" />
+	<FormTextarea label="Bio" col="12" />
 	<El col textAlign="end">
 		<Button color="primary">Submit</Button>
 	</El>

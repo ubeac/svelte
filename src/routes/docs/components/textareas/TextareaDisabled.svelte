@@ -7,6 +7,4 @@
 		' dolores dolor vero eius nihil nostrum ea nobis tempora. Facere, cumque.'
 </script>
 
-<Textarea bind:value />
-
-<p class="preview" if={value.length > 0}>{value}</p>
+<Textarea disabled bind:value />

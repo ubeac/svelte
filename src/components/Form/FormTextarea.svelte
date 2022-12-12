@@ -1,92 +1,105 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { FormField, Textarea } from '$lib/components'
+	import type { FormTextAreaProps } from '$lib/components'
 
-	import { nanoid } from 'nanoid'
-
-	import { FormField, FormHint, Icon, Label, Spinner, Textarea } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = FormTextAreaProps
 
 	/**
-	 * Set Column width
+	 * Set the tag of FormTextarea
 	 */
-	export let cols: string | number | boolean = '12'
+	export let tag: $$Props['tag'] = 'textarea'
 
 	/**
-	 * Show an icon inside component
+	 * Set the FormTextarea disabled
 	 */
-	export let icon: string | undefined = undefined
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
-	 * Set id for HTML element
+	 * Set border of FormTextarea rounded
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let borderRounded: $$Props['borderRounded'] = undefined
 
 	/**
-	 * Sets an icon inside component
+	 * Set order of FormTextarea flush (without border)
 	 */
-	export let iconEnd: string | undefined = undefined
+	export let borderFlush: $$Props['borderFlush'] = undefined
 
 	/**
-	 * Set label for Textarea
+	 * Set placeholder for the FormTextarea
 	 */
-	export let label: string | undefined = undefined
+	export let placeholder: $$Props['placeholder'] = undefined
 
 	/**
-	 * Show a loading indicator
+	 * Set the FormTextarea read-only
 	 */
-	export let loading: boolean = false
+	export let readonly: $$Props['readonly'] = undefined
 
 	/**
-	 * Show Message at bottom of Input
+	 * Set the FormTextarea required
 	 */
-	export let message: string | undefined = undefined
-	/**
-	 * Mark this as required field in form
-	 */
-	export let required: boolean = false
+	export let required: $$Props['required'] = undefined
 
 	/**
-	 * The text content of textarea
+	 * Set rows for the FormTextarea
 	 */
-	export let value: any = undefined
+	export let rows: $$Props['rows'] = 3
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * Set the size of FormTextarea
+	 */
+	export let size: $$Props['size'] = undefined
 
-	$: classes = classname('form-textarea', undefined, $$props.class)
+	/**
+	 * Set the state of FormTextarea
+	 */
+	export let state: $$Props['state'] = undefined
+
+	/**
+	 * Set the type of FormTextarea
+	 */
+	export let type: $$Props['type'] = undefined
+
+	/**
+	 * the text Value of FormTextarea
+	 */
+	export let value: $$Props['value'] = undefined
+
+	/**
+	 * Set the text label of FormTextarea
+	 */
+	export let label: $$Props['label'] = undefined
+
+	/**
+	 * Define hint for the FormTextarea
+	 */
+	export let hint: $$Props['hint'] = undefined
+
+	$: props = {
+		required,
+		label,
+		hint,
+		state,
+	}
+
+	$: inputProps = {
+		tag,
+		placeholder,
+		disabled,
+		readonly,
+		type,
+		required,
+		size,
+		state,
+		borderRounded,
+		borderFlush,
+		rows,
+	}
 </script>
 
-<FormField {cols} class={classes}>
-	<slot name="label">
-		{#if label}
-			<Label for="form-input-{id}" {required}>{label}</Label>
-		{/if}
-	</slot>
-	<div class={classname('form-field-body')}>
-		<slot name="start">
-			{#if icon}
-				<span class={classname('form-field-icon')}>
-					<Icon name={icon} />
-				</span>
-			{/if}
-		</slot>
-		<Textarea bind:value id="form-textarea-{id}" {required} {forwardEvents} {...$$restProps} />
-		<slot name="end">
-			{#if iconEnd && !loading}
-				<span class={classname('form-field-icon')}>
-					<Icon name={iconEnd} />
-				</span>
-			{/if}
-			{#if loading}
-				<span class={classname('form-field-icon')}>
-					<Spinner />
-				</span>
-			{/if}
-		</slot>
-	</div>
-	<slot name="message">
-		{#if message}
-			<FormHint>{message}</FormHint>
-		{/if}
-	</slot>
+<FormField {...props} {...$$restProps}>
+	<slot name="label" />
+	<Textarea {...inputProps} bind:value>
+		<slot />
+	</Textarea>
+	<slot name="hint" />
 </FormField>

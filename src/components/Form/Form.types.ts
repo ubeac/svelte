@@ -16,3 +16,14 @@ export interface FormInputProps extends Partial<FormFieldProps> {
 	borderRounded?: boolean
 	borderFlush?: boolean
 }
+
+export interface FormTextAreaProps extends Partial<FormInputProps> {
+	disabled?: boolean
+	placeholder?: string
+	readonly?: boolean
+	size?: InputSizes
+	value?: any
+	borderRounded?: boolean
+	borderFlush?: boolean
+	rows?: number | string
+}
