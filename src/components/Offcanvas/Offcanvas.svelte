@@ -41,12 +41,11 @@
 	export let show: $$Props['show'] = false
 
 	$: cssProps = {
-		scroll,
 		placement,
 		show,
 		keyboard,
 	}
-	$: otherProps = { show, keyboard, tag, cssPrefix }
+	$: otherProps = { backdrop, scroll, tag, cssPrefix }
 
 	$: if (browser) {
 		if (show && backdrop && !scroll) {
