@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import TooltipDefault from './TooltipDefault.svelte'
 	import TooltipHtml from './TooltipHTML.svelte'
 </script>
@@ -11,22 +11,18 @@
 	significantly enhance user experience and add value to your website or software.
 </p>
 
-<h2>Default Markup</h2>
-<p>
+<Doc title="Default Markup">
 	Use the default markup to create tooltips that will help users understand particular elements of your interface. You
 	can decide where the text label is to be displayed - at the top, bottom or on either side of the element.
-</p>
-
+</Doc>
 <Preview src="./TooltipDefault.svelte">
 	<TooltipDefault />
 </Preview>
 
-<h2>Tooltip with HTML</h2>
-<p>
+<Doc title="Tooltip with HTML">
 	you can write HTML code inside Tooltip to highlight particular bits of information and make the content more
 	attractive.
-</p>
-
+</Doc>
 <Preview src="./TooltipHTML.svelte">
 	<TooltipHtml />
 </Preview>

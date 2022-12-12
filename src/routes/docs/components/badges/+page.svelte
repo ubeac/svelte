@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components'
 
 	import BadgeButtons from './BadgeButtons.svelte'
 	import BadgeColors from './BadgeColors.svelte'
@@ -21,78 +21,75 @@
 	info.
 </p>
 
-<h2>Default</h2>
-<p>The default badges are square and come in the basic set of colors.</p>
+<Doc title="Default">The default badges are square and come in the basic set of colors.</Doc>
 <Preview src="./BadgeDefault.svelte">
 	<BadgeDefault />
 </Preview>
 
-<h2>Colors</h2>
-<p>You can create a soft colour variant of a corresponding contextual badge variation, to make it look more subtle.</p>
+<Doc title="Colors">
+	You can create a soft colour variant of a corresponding contextual badge variation, to make it look more subtle.
+</Doc>
 <Preview src="./BadgeColors.svelte">
 	<BadgeColors />
 </Preview>
 
-<h2>Outline</h2>
-<p>
+<Doc title="Outline">
 	Use the <code>outline</code> prop if you want to remove the color and the background of your badge and give it a more subtle
 	look.
-</p>
+</Doc>
 <Preview src="./BadgeOutlines.svelte">
 	<BadgeOutlines />
 </Preview>
 
-<h2>Ghost</h2>
-<p>
+<Doc title="Ghost">
 	Use the <code>ghost</code> prop to make your badge look simple yet aesthetically appealing.
-</p>
+</Doc>
 <Preview src="./BadgeGhosts.svelte">
 	<BadgeGhosts />
 </Preview>
 
-<h2>Badge Shapes</h2>
-<p>
+<Doc title="Badge Shapes">
 	Use the <code>shape</code> prop to change your badge shape.
-</p>
+</Doc>
 <Preview src="./BadgeShapes.svelte">
 	<BadgeShapes />
 </Preview>
 
-<h2>Badge with headings</h2>
-<p>Badges can be used as part of heading element.</p>
+<Doc title="Badge with headings">Badges can be used as part of heading element.</Doc>
 <Preview src="./BadgeHeadings.svelte">
 	<BadgeHeadings />
 </Preview>
 
-<h2>Numbers and shapes</h2>
+<Doc title="Numbers and shapes">
+	<!--  -->
+</Doc>
 <Preview src="./BadgeNumbers.svelte">
 	<BadgeNumbers />
 </Preview>
 
-<h2>Badge as dot</h2>
-<p>
+<Doc title="Badge as dot">
 	Use the <code>dot</code> prop if you want to create a badge with rounded corners. Its width will adjust to the label text.
-</p>
+</Doc>
 <Preview src="./BadgeDots.svelte">
 	<BadgeDots />
 </Preview>
 
-<h2>Badge links</h2>
-<p>
+<Doc title="Badge links">
 	Place the link at badge <code>href</code> prop if you want it to perform the function of a link and make it clickable.
-</p>
+</Doc>
 <Preview src="./BadgeLinks.svelte">
 	<BadgeLinks />
 </Preview>
 
-<h2>Badge inside Button</h2>
-<p>Badges can be used as part of links or buttons to provide a counter.</p>
-<Preview src="./BadgeButtons.svelte">
+<Doc title="Badge inside Button">Badges can be used as part of links or buttons to provide a counter.</Doc>
+<Preview
+	src="./BadgeButtons.svelte">
 	<BadgeButtons />
 </Preview>
 
-<h2>Badge with blinking effect</h2>
-<p />
+<Doc title="Badge with blinking effect">
+	<!--  -->
+</Doc>
 <Preview src="./BadgeBlink.svelte">
 	<BadgeBlink />
 </Preview>
