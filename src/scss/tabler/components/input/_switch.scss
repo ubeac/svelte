@@ -1,0 +1,18 @@
+$switch-props: (
+	null: ".form-check-input",
+	wrapper: ".form-check" ".form-switch",
+	label: ".form-check-label",
+	inline: ".form-check-inline",
+	color: generate_props($theme_colors, ('.alert-')),
+);
+
+.#{$prefix-switch} {
+	@include apply-props($switch-props);
+
+	@each $key,
+	$value in $theme-colors {
+		&-color-#{$key}:checked {
+			background-color: #{$value} !important;
+		}
+	}
+}

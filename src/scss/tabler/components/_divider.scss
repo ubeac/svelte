@@ -1,0 +1,16 @@
+//
+// Divider
+//
+
+$props: (
+	null: '.hr-text',
+	color: generate_props($theme_colors, ('.text-')),
+	alignment: ('start': '.hr-text-left',
+		'center': '.hr-text-center',
+		'end': '.hr-text-right'
+	)
+);
+
+.#{$prefix-divider} {
+	@include apply-props($props);
+}

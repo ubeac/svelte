@@ -1,10 +1,9 @@
 export const COLORS = [
-	'default',
 	'primary',
 	'secondary',
 	'success',
-	'danger',
 	'warning',
+	'danger',
 	'info',
 	'light',
 	'dark',

@@ -36,3 +36,11 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## ToDo List
+
+- [ ] Util function return unique id
+- [ ] Mixin for Reuse functions
+- [ ] Add Scss build on runtime
+- [ ] Prevent storybook crash onError
+- [ ] Write some directive to forward all events like on:\*="$listeners"
