@@ -16,6 +16,7 @@
 	export let style: any = undefined
 	export let tag: keyof HTMLElementTagNameMap | undefined = 'div'
 	export let cssProps: any = {}
+	export let value: any = undefined
 
 	// background properties
 	export let bgColor: BackgroundColors = undefined
@@ -318,6 +319,8 @@
 	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...otherProps}>
 		<slot />
 	</svelte:element>
+{:else if (tag = 'input')}
+	<input use:forwardEvents bind:this={element} {...$$restProps} {...otherProps} bind:value />
 {:else}
 	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...otherProps} />
 {/if}

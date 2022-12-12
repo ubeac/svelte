@@ -7,6 +7,7 @@ export const navigations = [
 	{ title: 'Introduction', route: base_path },
 	{
 		title: 'Getting Started',
+		id: 'menu-base',
 		children: [
 			{
 				route: base_path + 'getting-started/installation',
@@ -17,6 +18,7 @@ export const navigations = [
 	},
 	{
 		title: 'Components',
+		id: 'menu-components',
 		children: [
 			{
 				route: base_component_path + 'accordion',
@@ -124,6 +126,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'input-groups',
+				title: 'Input group',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'label',
 				title: 'Label',
 				icon: 'star',
@@ -212,6 +219,7 @@ export const navigations = [
 	},
 	{
 		title: 'Common',
+		id: 'menu-common',
 		children: [
 			{
 				route: base_common_path + 'if',
@@ -227,6 +235,7 @@ export const navigations = [
 	},
 	{
 		title: 'Form Components',
+		id: 'menu-forms',
 		children: [
 			{
 				route: base_form_path + 'form-autocomplete',
@@ -282,6 +291,7 @@ export const navigations = [
 	},
 	{
 		title: 'Icons',
+		id: 'menu-icons',
 		children: [
 			{
 				route: base_path + 'icons',
@@ -292,6 +302,7 @@ export const navigations = [
 	},
 	{
 		title: 'Pages',
+		id: 'menu-pages',
 		children: [
 			{
 				route: base_path + '', // removed '/docs/components/login' to prevent error in prerender step
