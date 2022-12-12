@@ -12,10 +12,7 @@
 </script>
 
 <h1>Input</h1>
-<p>Input components are used for collecting user provided information.</p>
-<Doc title="Default">
-	<!--  -->
-</Doc>
+<Doc title="Default">Input components are used for collecting user provided information.</Doc>
 <Preview src="./InputDefault.svelte">
 	<InputDefault />
 </Preview>

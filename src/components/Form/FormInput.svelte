@@ -95,4 +95,5 @@
 	<Input {...inputProps} bind:value>
 		<slot />
 	</Input>
+	<slot name="hint" />
 </FormField>

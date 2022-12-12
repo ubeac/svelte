@@ -1,9 +1,9 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
-	import FormInputColumn from './FormInputColumn.svelte'
-	import FormInputIcon from './FormInputIcon.svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
+	import FormInputLayout from './FormInputLayout.svelte'
 	import FormInputDefault from './FormInputDefault.svelte'
-	import FormInputMessage from './FormInputMessage.svelte'
+	import FormInputHint from './FormInputHint.svelte'
+	import FormInputState from './FormInputState.svelte'
 </script>
 
 <h1>Form Input</h1>
@@ -13,28 +13,33 @@
 	and also have some additional features.
 </p>
 
-<h2>Label, Placeholder, Read-Only, Disabled</h2>
-<p>Inputs usually have label, placeholder, disabled, readonly</p>
+<Doc title="Label">
+	Set <code>label</code> property to show input label's and bind to its id automatically.
+	<code>required</code> is a booleanproperty which show an indicator on label as well. You can also use
+	<code>label</code> slot.
+</Doc>
 <Preview src="./FormInputDefault.svelte">
 	<FormInputDefault />
 </Preview>
 
-<h2>Hint/Validation Message</h2>
-<p>You can set a message below of Input like this:</p>
-<Preview src="./FormInputMessage.svelte">
-	<FormInputMessage />
+<Doc title="Hint">
+	Set <code>hint</code> string property to show some useful information about the input. You can also use
+	<code>hint</code> slot.
+</Doc>
+<Preview src="./FormInputHint.svelte">
+	<FormInputHint />
 </Preview>
 
-<h2>Layout</h2>
-<p>You can set width of each FormInput in a form using <code>col</code> prop.</p>
-
-<Preview src="./FormInputColumn.svelte">
-	<FormInputColumn />
+<Doc title="State">
+	Set <code>state</code> property to show a state indicator on the input.
+</Doc>
+<Preview src="./FormInputState.svelte">
+	<FormInputState />
 </Preview>
 
-<h2>Icon</h2>
-<p>You can set Icon for FormInput by setting <code>icon</code> prop or using <code>icon</code> slot.</p>
-
-<Preview src="./FormInputIcon.svelte">
-	<FormInputIcon />
+<Doc title="Layout">
+	Use default <code>row</code> and <code>col</code> properties to change layout of the FormInputs inside forms.
+</Doc>
+<Preview src="./FormInputLayout.svelte">
+	<FormInputLayout />
 </Preview>
