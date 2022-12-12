@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components'
 	import StampColor from './StampColor.svelte'
 	import StampSize from './StampSize.svelte'
 	import StampPositions from './StampPositions.svelte'
@@ -8,20 +8,23 @@
 <h1>Stamps</h1>
 <p>Stamp container should have <code>relative</code> position.</p>
 
-<h2>Colors</h2>
-<p />
+<Doc title="Colors">
+	<!--  -->
+</Doc>
 <Preview src="./StampColor.svelte">
 	<StampColor />
 </Preview>
 
-<h2>Sizes</h2>
-<p />
+<Doc title="Sizes">
+	<!--  -->
+</Doc>
 <Preview src="./StampSize.svelte">
 	<StampSize />
 </Preview>
 
-<h2>Positions</h2>
-<p />
+<Doc title="Positions">
+	<!--  -->
+</Doc>
 <Preview src="./StampPositions.svelte">
 	<StampPositions />
 </Preview>

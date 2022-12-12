@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import StatusDefault from './StatusDefault.svelte'
 	import StatusDots from './StatusDots.svelte'
 	import StatusDotsAnimated from './StatusDotsAnimated.svelte'
@@ -13,29 +13,37 @@
 	space.
 </p>
 
-<h2>Status colors</h2>
+<Doc title="Status colors">
+	<!--  -->
+</Doc>
 <Preview src="./StatusDefault.svelte">
 	<StatusDefault />
 </Preview>
 
-<h2>Status with dot</h2>
-<p>Set the <code>style</code> prop to dot to change status mode to circle shape.</p>
+<Doc title="Status with dot">
+	Set the <code>style</code> prop to dot to change status mode to circle shape.
+</Doc>
 <Preview src="./StatusDots.svelte">
 	<StatusDots />
 </Preview>
 
-<h2>Lite status</h2>
+<Doc title="Lite status">
+	<!--  -->
+</Doc>
 <Preview src="./StatusLite.svelte">
 	<StatusLite />
 </Preview>
 
-<h2>Status with animated dots</h2>
-<p>Set the <code>animated</code> prop to change status mode to animated.</p>
+<Doc title="Status with animated dots">
+	Set the <code>animated</code> prop to change status mode to animated.
+</Doc>
 <Preview src="./StatusDotsAnimated.svelte">
 	<StatusDotsAnimated />
 </Preview>
 
-<h2>Lite status with animated dots</h2>
+<Doc title="Lite status with animated dots">
+	<!--  -->
+</Doc>
 <Preview src="./StatusLiteAnimated.svelte">
 	<StatusLiteAnimated />
 </Preview>
