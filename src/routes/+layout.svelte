@@ -55,11 +55,13 @@
 </svelte:head>
 
 <App {theme}>
-	<div class="sticky-top">
-		<div class="position-relative">
-			<Progress col position="absolute" color="primary" style="height: 3px;" value={progressValue * 100} />
+	{#if progressValue < 1}
+		<div class="sticky-top">
+			<div class="position-relative">
+				<Progress col position="absolute" color="primary" style="height: 3px;" value={progressValue * 100} />
+			</div>
 		</div>
-	</div>
+	{/if}
 	<header class="navbar navbar-expand-md navbar-light d-print-none">
 		<div class="container-xl">
 			<button
