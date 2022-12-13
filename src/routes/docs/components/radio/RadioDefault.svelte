@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { Button, Radio } from '@ubeac/svelte'
+	import { Radio } from '@ubeac/svelte'
 
-	let value = false
+	let selected = false
 </script>
 
-<Button on:click={() => (value = false)}>Reset</Button>
-
-<Radio bind:value text="radio 1" />
-<Radio bind:value>Radio 2</Radio>
+<Radio label="radio 1" bind:selected />
+<hr />
+Selected:{selected}
