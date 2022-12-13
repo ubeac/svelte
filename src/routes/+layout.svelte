@@ -1,50 +1,22 @@
 <script type="ts">
-	import { App, AppBody, AppFooter, Avatar, El, Page, Progress } from '@ubeac/svelte'
+	import type { SvelteComponentDev } from 'svelte/internal'
+
+	import { App, AppBody, AppFooter, AppLoadingBar, Avatar, El, Page, Progress } from '@ubeac/svelte'
 	import type { Themes } from '@ubeac/svelte'
 	import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
-	import { browser } from '$app/environment'
 	import { afterNavigate, beforeNavigate } from '$app/navigation'
 
 	let container: ContainerMaxWidths = 'md'
 	let theme: Themes = 'light'
-	let progressValue = 0
-	let updater: any
-
-	export let maximum = 0.999
-	export let intervalTime = 700
-	export let stepSizes = [0, 0.005, 0.01, 0.02]
-
-	const getIncrement = (number: number) => {
-		if (number >= 0 && number < 0.2) return 0.1
-		else if (number >= 0.2 && number < 0.5) return 0.04
-		else if (number >= 0.5 && number < 0.8) return 0.02
-		else if (number >= 0.8 && number < 0.99) return 0.005
-		return 0.00001
-	}
-	const startInterval = () => {
-		if (browser) {
-			updater = setInterval(() => {
-				const randomStep = stepSizes[Math.floor(Math.random() * stepSizes.length)]
-				const step = getIncrement(progressValue) + randomStep
-				if (progressValue < maximum) {
-					progressValue = progressValue + step
-				}
-				if (progressValue > maximum) {
-					clearInterval(updater)
-				}
-			}, intervalTime)
-		}
-	}
+	let loadingBar: SvelteComponentDev
 
 	beforeNavigate(() => {
-		progressValue = 0
-		startInterval()
+		loadingBar.start()
 	})
 
 	afterNavigate(() => {
-		progressValue = 1
-		clearInterval(updater)
+		loadingBar.done()
 	})
 
 	const onThemeChange = () => (theme === 'light' ? (theme = 'dark') : (theme = 'light'))
@@ -55,11 +27,8 @@
 </svelte:head>
 
 <App {theme}>
-	<div class="sticky-top">
-		<div class="position-relative">
-			<Progress col position="absolute" color="primary" style="height: 3px;" value={progressValue * 100} />
-		</div>
-	</div>
+	<AppLoadingBar fixed color="primary" bind:this={loadingBar} />
+
 	<header class="navbar navbar-expand-md navbar-light d-print-none">
 		<div class="container-xl">
 			<button

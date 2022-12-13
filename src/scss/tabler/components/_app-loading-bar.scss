@@ -1,0 +1,63 @@
+$prefix-app-loading-bar: $prefix + 'app-loading-bar';
+
+.#{$prefix-app-loading-bar} {
+    overflow: hidden;
+    display: none;
+    position: relative;
+    height: 0.25rem;
+    width: 100%;
+
+    &-fixed-position {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+    }
+
+    &-indeterminate>&-body {
+        animation: #{$prefix-app-loading-bar}-animation 1s linear infinite;
+    }
+
+    &-show {
+        display: block;
+    }
+
+    &-body {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 0.125rem;
+
+
+    }
+
+
+    @each $color,
+    $value in $theme-colors {
+        &-color-#{$color} {
+            @extend .bg-#{$color}-lt;
+        }
+
+        &-body-color-#{$color} {
+            @extend .bg-#{$color};
+        }
+    }
+}
+
+@keyframes #{$prefix-app-loading-bar}-animation {
+    0% {
+        left: 0%;
+        width: 0%;
+    }
+
+    50% {
+        left: 10%;
+        width: 80%;
+    }
+
+    100% {
+        left: 100%;
+        width: 0%;
+    }
+}
