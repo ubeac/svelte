@@ -9,7 +9,8 @@ $wrapper-props: (
 );
 
 $props: (
-	null: '.form-check-input'
+	null: '.form-check-input',
+	label: '.form-check-label'
 );
 
 .#{$prefix-radio} {
@@ -25,8 +26,4 @@ $props: (
 
 .#{$prefix-radio-wrapper} {
 	@include apply-props($wrapper-props);
-
-	&>label {
-		@extend .form-check-label;
-	}
 }

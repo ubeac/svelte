@@ -80,9 +80,9 @@
 <El cssPrefix="{cssPrefix}-wrapper" cssProps={{ inline, reverse }}>
 	<El tag="input" type="radio" bind:element={inputElement} {...$$restProps} {...otherProps} {cssProps} on:change />
 	{#if label}
-		<label for={labelForId}>
+		<El tag="label" cssPrefix="{cssPrefix}-label" for={labelForId}>
 			{label}
-		</label>
+		</El>
 	{/if}
 	{#if $$slots.label}
 		<slot name="label" />
