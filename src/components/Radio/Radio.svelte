@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { getContext } from 'svelte'
-	import { writable } from 'svelte/store'
-
 	import { El } from '$lib/components'
 	import type { RadioProps } from '$lib/components'
 
@@ -18,6 +15,16 @@
 	 * Set the radio disabled
 	 */
 	export let disabled: $$Props['disabled'] = undefined
+
+	/**
+	 * Set the radio as inline component
+	 */
+	export let inline: $$Props['inline'] = undefined
+
+	/**
+	 * Put your radios on the opposite side with reverse property.
+	 */
+	export let reverse: $$Props['reverse'] = undefined
 
 	/**
 	 * Set label of the radio
@@ -44,41 +51,40 @@
 	 */
 	export let value: $$Props['value'] = undefined
 
-	const ctx = getContext('RadioButtonGroup')
-	const selectedValue = ctx ? ctx.selectedValue : writable(checked ? value : undefined)
+	/**
+	 * id for inner input radio to be used outside the component
+	 */
+	let labelForId: $$Props['for'] = undefined
+	export { labelForId as for }
 
-	if (ctx) {
-		ctx.add({ checked, disabled, value })
-	}
+	let inputElement: any = null
+	let cssProps: any = {}
+	let otherProps: any = {}
 
-	$: checked = $selectedValue === value
+	$: {
+		labelForId = inputElement?.id ?? ''
 
-	$: cssProps = { color }
+		cssProps = { color }
 
-	$: otherProps = {
-		cssPrefix,
-		disabled,
-		readonly,
-		value,
-		checked,
-		name: name ?? 'aaaa',
+		otherProps = {
+			cssPrefix,
+			disabled,
+			readonly,
+			value,
+			checked,
+			name: name ?? inputElement?.id,
+		}
 	}
 </script>
 
-<El cssPrefix="{cssPrefix}-wrapper">
-	<El
-		tag="input"
-		type="radio"
-		{...$$restProps}
-		{...otherProps}
-		{cssProps}
-		on:change
-		on:change={() => {
-			if (ctx) {
-				ctx.update(value)
-			}
-		}} />
+<El cssPrefix="{cssPrefix}-wrapper" cssProps={{ inline, reverse }}>
+	<El tag="input" type="radio" bind:element={inputElement} {...$$restProps} {...otherProps} {cssProps} on:change />
 	{#if label}
-		<label for="aaaa">{label}</label>
+		<label for={labelForId}>
+			{label}
+		</label>
+	{/if}
+	{#if $$slots.label}
+		<slot name="label" />
 	{/if}
 </El>

@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { Radio } from '@ubeac/svelte'
 </script>
 
-<Radio color="primary" label="Primary" selected />
-<Radio color="secondary" label="Secondary" selected />
-<Radio color="success" label="Success" selected />
-<Radio color="warning" label="Warning" selected />
-<Radio color="danger" label="Danger" selected />
+<Radio name="colors" color="primary" label="Primary" checked />
+<Radio name="colors" color="secondary" label="Secondary" />
+<Radio name="colors" color="success" label="Success" />
+<Radio name="colors" color="warning" label="Warning" />
+<Radio name="colors" color="danger" label="Danger" />
