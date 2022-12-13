@@ -20113,25 +20113,21 @@ Upload files
 /**
 Icon input
  */
-.input-icon, .u-form-field-body {
+.input-icon {
   position: relative;
 }
-.input-icon .form-control:not(:last-child), .input-icon .u-textarea:not(:last-child), .input-icon .u-input-size-md:not(:last-child), .input-icon .u-input:not(:last-child), .input-icon .u-file-uploader:not(:last-child), .input-icon .u-date-picker:not(:last-child), .input-icon .u-google-map-autocomplete:not(:last-child), .u-form-field-body .form-control:not(:last-child), .u-form-field-body .u-textarea:not(:last-child), .u-form-field-body .u-input-size-md:not(:last-child), .u-form-field-body .u-input:not(:last-child), .u-form-field-body .u-file-uploader:not(:last-child), .u-form-field-body .u-date-picker:not(:last-child), .u-form-field-body .u-google-map-autocomplete:not(:last-child),
+.input-icon .form-control:not(:last-child), .input-icon .u-textarea:not(:last-child), .input-icon .u-input-size-md:not(:last-child), .input-icon .u-input:not(:last-child), .input-icon .u-file-uploader:not(:last-child), .input-icon .u-date-picker:not(:last-child), .input-icon .u-google-map-autocomplete:not(:last-child),
 .input-icon .form-select:not(:last-child),
-.input-icon .u-select:not(:last-child),
-.u-form-field-body .form-select:not(:last-child),
-.u-form-field-body .u-select:not(:last-child) {
+.input-icon .u-select:not(:last-child) {
   padding-right: 2.5rem;
 }
-.input-icon .form-control:not(:first-child), .input-icon .u-textarea:not(:first-child), .input-icon .u-input-size-md:not(:first-child), .input-icon .u-input:not(:first-child), .input-icon .u-file-uploader:not(:first-child), .input-icon .u-date-picker:not(:first-child), .input-icon .u-google-map-autocomplete:not(:first-child), .u-form-field-body .form-control:not(:first-child), .u-form-field-body .u-textarea:not(:first-child), .u-form-field-body .u-input-size-md:not(:first-child), .u-form-field-body .u-input:not(:first-child), .u-form-field-body .u-file-uploader:not(:first-child), .u-form-field-body .u-date-picker:not(:first-child), .u-form-field-body .u-google-map-autocomplete:not(:first-child),
+.input-icon .form-control:not(:first-child), .input-icon .u-textarea:not(:first-child), .input-icon .u-input-size-md:not(:first-child), .input-icon .u-input:not(:first-child), .input-icon .u-file-uploader:not(:first-child), .input-icon .u-date-picker:not(:first-child), .input-icon .u-google-map-autocomplete:not(:first-child),
 .input-icon .form-select:not(:last-child),
-.input-icon .u-select:not(:last-child),
-.u-form-field-body .form-select:not(:last-child),
-.u-form-field-body .u-select:not(:last-child) {
+.input-icon .u-select:not(:last-child) {
   padding-left: 2.5rem;
 }
 
-.input-icon-addon, .u-form-field-body > .u-form-field-icon {
+.input-icon-addon {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -20144,7 +20140,7 @@ Icon input
   pointer-events: none;
   font-size: 1.2em;
 }
-.input-icon-addon:last-child, .u-form-field-body > .u-form-field-icon:last-child {
+.input-icon-addon:last-child {
   right: 0;
   left: auto;
 }
@@ -24657,6 +24653,17 @@ Antialiasing
   overflow: hidden;
 }
 
+.u-form-field-hint {
+  margin-top: 0.25rem;
+  font-size: 85.714285%;
+}
+.u-form-field-hint-state-valid {
+  color: #2fb344;
+}
+.u-form-field-hint-state-invalid {
+  color: #d63939;
+}
+
 .u-form-fieldset > fieldset {
   background: #fbfbfb;
   border: 1px solid #e9e9e9;
@@ -25587,9 +25594,6 @@ Antialiasing
   color: #206bc4 !important;
 }
 
-.u-input-wrapper {
-  position: relative;
-}
 .u-radio-input-color-primary:checked {
   background-color: #206bc4 !important;
 }

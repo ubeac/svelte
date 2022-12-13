@@ -9,28 +9,12 @@
 	import InputTypes from './InputTypes.svelte'
 	import InputStates from './InputStates.svelte'
 	import InputBorderShapes from './InputBorderShapes.svelte'
-	import InputWithText from './InputWithText.svelte'
-	import InputWithTextButton from './InputWithTextButton.svelte'
-	import InputIcons from './InputIcons.svelte'
 </script>
 
 <h1>Input</h1>
-<p>Input components are used for collecting user provided information.</p>
-<Doc title="Default Markup">
-	<!--  -->
-</Doc>
+<Doc title="Default">Input components are used for collecting user provided information.</Doc>
 <Preview src="./InputDefault.svelte">
 	<InputDefault />
-</Preview>
-
-<Doc title="Input types">You can also change type of input.</Doc>
-<Preview vertical src="./InputTypes.svelte">
-	<InputTypes />
-</Preview>
-
-<Doc title="Input sizes">Use size prop to change size of input.</Doc>
-<Preview vertical src="./InputSizes.svelte">
-	<InputSizes />
 </Preview>
 
 <Doc title="Placeholder">Inputs can have placeholders.</Doc>
@@ -38,46 +22,41 @@
 	<InputPlaceholder />
 </Preview>
 
-<Doc title="Wrapping with icon">
-	<!--  -->
-</Doc>
-<Preview vertical src="./InputIcons.svelte">
-	<InputIcons />
+<Doc title="Types">You can also change type of input.</Doc>
+<Preview src="./InputTypes.svelte">
+	<InputTypes />
 </Preview>
 
-<Doc title="Wrapping with text">
-	<!--  -->
-</Doc>
-<Preview vertical src="./InputWithText.svelte">
-	<InputWithText />
+<Doc title="Sizing">Use size property to change height size of the input.</Doc>
+<Preview src="./InputSizes.svelte">
+	<InputSizes />
 </Preview>
 
-<Doc title="Wrapping with button & text">
-	<!--  -->
+<Doc title="Disabled">
+	Set the disabled boolean property on an input to give it a grayed out appearance, remove pointer events, and prevent
+	focusing.
 </Doc>
-<Preview vertical src="./InputWithTextButton.svelte">
-	<InputWithTextButton />
-</Preview>
-
-<Doc title="Disabled input">Set input disabled.</Doc>
 <Preview src="./InputDisabled.svelte">
 	<InputDisabled />
 </Preview>
 
-<Doc title="Readonly input">Set input value unchangable.</Doc>
+<Doc title="Readonly">
+	Set the readonly boolean property on an input to prevent modification of the input’s value. readonly inputs can still
+	be focused and selected, while disabled inputs cannot.
+</Doc>
 <Preview src="./InputReadOnly.svelte">
 	<InputReadOnly />
 </Preview>
 
-<Doc title="Input states">
+<Doc title="States">
 	<!--  -->
 </Doc>
 <Preview src="./InputStates.svelte">
 	<InputStates />
 </Preview>
 
-<Doc title="Input borders">
-	<!--  -->
+<Doc title="Borders">
+	Set <code>borderRounded</code> or <code>borderFlush</code> boolean properties to apply rounded borders or remove the borders.
 </Doc>
 <Preview src="./InputBorderShapes.svelte">
 	<InputBorderShapes />

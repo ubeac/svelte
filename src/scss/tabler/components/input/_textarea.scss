@@ -1,5 +1,5 @@
 //
-// Input
+// Textarea
 //
 
 $wrapper-props: (
@@ -24,11 +24,12 @@ $props: (
 	),
 );
 
-.#{$prefix-input} {
+
+.#{$prefix-textarea} {
 	@include apply-props($props);
 }
 
-.#{$prefix-input-wrapper} {
+.#{$prefix-textarea-wrapper} {
 	@include apply-props($wrapper-props);
 
 	&>span {
