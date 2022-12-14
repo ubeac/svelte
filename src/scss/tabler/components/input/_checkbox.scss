@@ -1,0 +1,30 @@
+$checkbox-props: (
+	wrapper: ".form-check",
+	null: '.form-check-input',
+	inline: '.form-check-inline',
+	label: '.form-check-label',
+	description: '.form-check-description',
+
+
+);
+
+.#{$prefix-checkbox} {
+	@include apply-props($checkbox-props);
+
+	@each $key,
+	$value in $theme-colors {
+		&-color-#{$key}:checked {
+			background-color: #{$value} !important;
+		}
+	}
+
+
+	&-description {
+		@each $key,
+		$value in $theme-colors {
+			&-color-#{$key} {
+				color: #{$value} !important;
+			}
+		}
+	}
+}

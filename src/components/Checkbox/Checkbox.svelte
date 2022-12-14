@@ -4,56 +4,61 @@
 	import { nanoid } from 'nanoid'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
 
+	import { El, type ElProps } from '../Base'
+	import type { CheckboxProps } from './Checkbox.types'
+
+	type $$Props = CheckboxProps
+
+	export let tag: $$Props['tag'] = 'input'
+	export let cssPrefix: $$Props['cssPrefix'] = 'checkbox'
+	
 	/**
 	 * Set color of checkbox when it is checked
 	 */
-	export let color: Colors = 'primary'
+	export let color: $$Props['color'] = 'primary'
 
 	/**
 	 * Description of checkbox
 	 */
-	export let description: string | undefined = ''
+	export let description: $$Props['description'] = ''
 
 	/**
 	 * Forward all native Events
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Binding result of selected items
 	 */
-	export let group: any = []
+	export let group: $$Props['group'] = []
 
 	/**
 	 * Set id for Checkbox element
 	 */
-	export let id: string = 'checkbox-' + nanoid(10)
+	export let id: $$Props['id'] = 'checkbox-' + nanoid(10)
 
 	/**
 	 * Show multiple items in same line
 	 */
-	export let inline: boolean = false
+	export let inline: $$Props['inline'] = false
 
 	/**
 	 * Set checkbox's key
 	 */
-	export let key: string | undefined = undefined
+	export let key: $$Props['key'] = undefined
 
 	/**
 	 * Set text of checkbox
 	 */
-	export let text: string | undefined = undefined
+	export let text: $$Props['text'] = undefined
 
 	/**
 	 * Checked status of checkbox
 	 */
-	export let value: boolean = false
+	export let value: $$Props['value'] = false
 
-	$: classes = classname('checkbox', { inline }, $$props.class, true)
-
+	$: group ??= []
 	$: updateGroup(value)
 	$: updateChekbox(group)
 
@@ -61,7 +66,7 @@
 		value = group.indexOf(key) >= 0
 	}
 
-	function updateGroup(value: boolean) {
+	function updateGroup(value?: boolean) {
 		const index = group.indexOf(key)
 		if (value) {
 			if (index < 0) {
@@ -74,27 +79,56 @@
 			}
 		}
 	}
+
+	$: wrapperProps = {
+		cssPrefix: cssPrefix + '-wrapper',
+		cssProps: {
+			inline
+		}
+	}
+	
+	$: checkboxProps = {
+		...$$restProps,
+		tag,
+		cssPrefix,
+		type: 'checkbox',
+		value: key,
+		id,
+		forwardEvents,
+		cssProps: {
+			color,
+		},
+	}
+
+	let labelProps: Partial<ElProps>;
+	$: labelProps = {
+		cssPrefix: cssPrefix + '-label',
+		tag: 'label',
+		for: id
+	}
+
+	$: descriptionProps = {
+		cssPrefix: cssPrefix + '-description'
+	}
+
 </script>
 
-<div class={classes}>
-	<input
-		type="checkbox"
-		{id}
-		bind:checked={value}
-		value={key}
-		use:forwardEvents
-		{...$$restProps}
-		class={classname('checkbox-input', { color }, undefined, true)} />
-	<label for={id} class={classname('checkbox-label')}>
-		<slot>
-			{text}
-		</slot>
-	</label>
+<El {...wrapperProps}>
+	<El {...checkboxProps} bind:checked={value} />
+
+	{#if text || $$slots['default']}
+		<El {...labelProps}>
+			<slot>
+				{text}
+			</slot>
+		</El>
+	{/if}
+
 	{#if description || $$slots['description']}
-		<div class={classname('checkbox-description')}>
+		<El {...descriptionProps}>
 			<slot name="description">
 				{description}
 			</slot>
-		</div>
+		</El>
 	{/if}
-</div>
+</El>
