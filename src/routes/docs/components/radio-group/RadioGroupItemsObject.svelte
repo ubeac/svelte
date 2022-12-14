@@ -12,4 +12,5 @@
 </script>
 
 <RadioGroup {items} bind:value={selected} />
-<span if={!!selected}>You selected {selected}</span>
+
+<i>You selected: {value}</i>

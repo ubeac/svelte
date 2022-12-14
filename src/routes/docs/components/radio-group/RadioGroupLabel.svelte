@@ -8,9 +8,6 @@
 	let value = items[1]
 </script>
 
-<RadioGroup inline color="primary" {items} bind:value />
-<RadioGroup inline color="secondary" {items} bind:value />
-<RadioGroup inline color="success" {items} bind:value />
-<RadioGroup inline color="danger" {items} bind:value />
+<RadioGroup bind:value {items} label={(item, index) => index.toString() + '-' + item} />
 
 <i>You selected: {value}</i>

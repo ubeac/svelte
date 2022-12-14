@@ -8,6 +8,10 @@ $wrapper-props: (
 	reverse: '.form-check-reverse'
 );
 
+.#{$prefix-radio-wrapper} {
+	@include apply-props($wrapper-props);
+}
+
 $props: (
 	null: '.form-check-input',
 	label: '.form-check-label'
@@ -24,6 +28,5 @@ $props: (
 	}
 }
 
-.#{$prefix-radio-wrapper} {
-	@include apply-props($wrapper-props);
-}
+
+.#{$prefix-radio-group} {}

@@ -12,3 +12,16 @@ export interface RadioProps extends Partial<ElProps> {
 	reverse?: boolean
 	for?: string
 }
+
+export interface RadioGroupProps extends Partial<ElProps> {
+	value?: any
+	color?: Colors
+	inline?: boolean
+	reverse?: boolean
+	items?: Array<any>
+	label?: LabelFunc
+}
+
+interface LabelFunc {
+	(item: any, index: number): string
+}
