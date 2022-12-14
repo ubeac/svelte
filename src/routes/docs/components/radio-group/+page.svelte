@@ -23,17 +23,25 @@
 	<RadioGroupLabel />
 </Preview>
 
-<Doc title="Colors">RadioGroupColor</Doc>
+<Doc title="Colors">
+	Set <code>color</code> property to define background color for all <code>Radios</code> inside the
+	<code>RadioGroup</code>
+</Doc>
 <Preview src="./RadioGroupColor.svelte">
 	<RadioGroupColor />
 </Preview>
 
-<Doc title="Inline">RadioGroupInline</Doc>
+<Doc title="Inline">
+	Set <code>inline</code> property to display inline all <code>Radios</code> inside the
+	<code>RadioGroup</code>
+</Doc>
 <Preview src="./RadioGroupInline.svelte">
 	<RadioGroupInline />
 </Preview>
 
-<Doc title="Reverse">RadioGroupReverse</Doc>
+<Doc title="Reverse">
+	Set <code>reverse</code> property to reverse position of all <code>Radios</code> inside the
+	<code>RadioGroup</code></Doc>
 <Preview src="./RadioGroupReverse.svelte">
 	<RadioGroupReverse />
 </Preview>

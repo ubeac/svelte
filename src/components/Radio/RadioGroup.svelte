@@ -49,7 +49,6 @@
 
 	const onChange = (event: any) => {
 		value = event.target.value
-		console.log('RadioGroup.onChange', value)
 	}
 
 	const isPrimitive = (item: any) => {
@@ -62,5 +61,7 @@
 		{#each items as item, index}
 			<Radio {...radioProps} checked={value === item} label={label(item, index)} value={item} on:change={onChange} />
 		{/each}
+	{:else}
+		<slot />
 	{/if}
 </El>
