@@ -35,10 +35,13 @@
 
 	export let label: $$Props['label'] = (item: any, index: number) => (isPrimitive(item) ? item : index)
 
+	export let selectedIndex: $$Props['selectedIndex'] = undefined
+
 	let element: any = null
 	let radioProps: any = {}
 
 	$: {
+		selectedIndex = items && value ? items.indexOf(value) : undefined
 		radioProps = {
 			inline,
 			reverse,
@@ -48,7 +51,8 @@
 	}
 
 	const onChange = (event: any) => {
-		value = event.target.value
+		selectedIndex = event.target.value
+		value = items && selectedIndex ? items[selectedIndex] : undefined
 	}
 
 	const isPrimitive = (item: any) => {
@@ -59,7 +63,7 @@
 <El {cssPrefix} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index}
-			<Radio {...radioProps} checked={value === item} label={label(item, index)} value={item} on:change={onChange} />
+			<Radio {...radioProps} checked={value === item} label={label(item, index)} value={index} on:change={onChange} />
 		{/each}
 	{:else}
 		<slot />

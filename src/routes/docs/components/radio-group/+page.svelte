@@ -47,7 +47,7 @@
 </Preview>
 
 <Doc title="Binding">
-	Set a function to the <code>label</code> property to customize the label.
+	Set an array of objects to <code>items</code> property and define <code>label</code>.
 </Doc>
 <Preview src="./RadioGroupArrayBinding.svelte">
 	<RadioGroupArrayBinding />

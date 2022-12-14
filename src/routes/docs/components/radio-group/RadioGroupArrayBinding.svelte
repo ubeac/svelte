@@ -2,10 +2,10 @@
 	import { RadioGroup } from '@ubeac/svelte'
 
 	let items = [
-		{ text: 'HTML', value: 'html' },
-		{ text: 'CSS', value: 'css' },
-		{ text: 'JavaScript', value: 'js' },
-		{ text: 'Svelte', value: 'svelte' },
+		{ text: 'HTML', code: 'html' },
+		{ text: 'CSS', code: 'css' },
+		{ text: 'JavaScript', code: 'js' },
+		{ text: 'Svelte', code: 'svelte' },
 	]
 
 	let value: any = undefined

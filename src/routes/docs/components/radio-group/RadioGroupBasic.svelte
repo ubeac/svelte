@@ -6,7 +6,8 @@
 
 	// setting the selected value
 	let value = items[1]
+	let selectedIndex: number
 </script>
 
-<RadioGroup bind:value {items} />
-<i>You selected: {value}</i>
+<RadioGroup bind:value bind:selectedIndex {items} />
+<i>You selected: {value}, index: {selectedIndex}</i>

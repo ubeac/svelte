@@ -20,6 +20,7 @@ export interface RadioGroupProps extends Partial<ElProps> {
 	reverse?: boolean
 	items?: Array<any>
 	label?: LabelFunc
+	selectedIndex?: number
 }
 
 interface LabelFunc {
