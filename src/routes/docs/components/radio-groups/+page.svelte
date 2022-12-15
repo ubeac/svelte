@@ -6,7 +6,6 @@
 	import RadioGroupArrayBinding from './RadioGroupArrayBinding.svelte'
 	import RadioGroupInline from './RadioGroupInline.svelte'
 	import RadioGroupReverse from './RadioGroupReverse.svelte'
-	import RadioGroupItemsObject from './RadioGroupItemsObject.svelte'
 </script>
 
 <h1>RadioGroup</h1>
@@ -17,7 +16,7 @@
 </Preview>
 
 <Doc title="Custom label">
-	Set a function to the <code>label</code> property to customize the label.
+	Set a function to the <code>labelFn</code> (return string) to customize the label.
 </Doc>
 <Preview src="./RadioGroupLabel.svelte">
 	<RadioGroupLabel />
@@ -41,7 +40,8 @@
 
 <Doc title="Reverse">
 	Set <code>reverse</code> property to reverse position of all <code>Radios</code> inside the
-	<code>RadioGroup</code></Doc>
+	<code>RadioGroup</code>
+</Doc>
 <Preview src="./RadioGroupReverse.svelte">
 	<RadioGroupReverse />
 </Preview>

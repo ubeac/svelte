@@ -13,4 +13,4 @@
 <RadioGroup inline color="success" {items} bind:value />
 <RadioGroup inline color="danger" {items} bind:value />
 
-<i>You selected: {value}</i>
+<i>value: {value}</i>

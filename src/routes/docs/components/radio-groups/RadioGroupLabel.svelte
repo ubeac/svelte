@@ -8,9 +8,11 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value: any = undefined
+	let value = items[1]
 </script>
 
-<RadioGroup bind:value {items} label={(item) => item.text} />
+<RadioGroup bind:value {items} let:item let:index>
+	{index + 1}- {item.text}
+</RadioGroup>
 
-<i>You selected: {JSON.stringify(value)}</i>
+<i>value: {JSON.stringify(value)}</i>

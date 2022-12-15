@@ -7,7 +7,7 @@
 <Radio name="lang3" label="HTML" checked />
 <Radio name="lang3" label="CSS" />
 <Radio name="lang3" label="JavaScript" />
-<Radio name="lang3" bind:for={_for}>
-	<label slot="label" for={_for}><strong><i>Svelte</i></strong></label>
+<Radio name="lang3">
+	<strong>Svelte</strong> is awesome!
 </Radio>
 <Radio name="lang3" />

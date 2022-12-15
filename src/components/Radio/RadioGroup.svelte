@@ -4,44 +4,39 @@
 
 	type $$Props = RadioGroupProps
 	/**
-	 * Set Color of RadioGroup
+	 * Set color for the selected Radio's background color
 	 */
 	export let color: $$Props['color'] = undefined
 
 	/**
-	 * Set Css Prefix for the Input
+	 * Set Css Prefix for the RadioGroup
 	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'radio-group'
 
 	/**
-	 * Set inline to sohw inline radios
+	 * Set inline to sohw inline Radios
 	 */
 	export let inline: $$Props['inline'] = undefined
 
 	/**
-	 * Array of items to be bound to the radios
+	 * Array of items to be bound to the Radios
 	 */
 	export let items: $$Props['items'] = undefined
 
 	/**
-	 * Set reverse to show reversed radios
+	 * Set reverse to show reversed Radios
 	 */
 	export let reverse: $$Props['reverse'] = undefined
 
 	/**
-	 * the value of radio
+	 * The value of RadioGroup
 	 */
 	export let value: $$Props['value'] = undefined
-
-	export let label: $$Props['label'] = (item: any, index: number) => (isPrimitive(item) ? item : index)
-
-	export let selectedIndex: $$Props['selectedIndex'] = undefined
 
 	let element: any = null
 	let radioProps: any = {}
 
 	$: {
-		selectedIndex = items && value ? items.indexOf(value) : undefined
 		radioProps = {
 			inline,
 			reverse,
@@ -51,19 +46,17 @@
 	}
 
 	const onChange = (event: any) => {
-		selectedIndex = event.target.value
+		const selectedIndex = event.target.value
 		value = items && selectedIndex ? items[selectedIndex] : undefined
-	}
-
-	const isPrimitive = (item: any) => {
-		return item !== Object(item)
 	}
 </script>
 
 <El {cssPrefix} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index}
-			<Radio {...radioProps} checked={value === item} label={label(item, index)} value={index} on:change={onChange} />
+			<Radio {...radioProps} value={index} checked={value === item} on:change={onChange}>
+				<slot {index} {item}>{item}</slot>
+			</Radio>
 		{/each}
 	{:else}
 		<slot />

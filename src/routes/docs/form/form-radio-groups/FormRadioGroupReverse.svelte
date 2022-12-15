@@ -1,5 +1,5 @@
 <script>
-	import { RadioGroup } from '@ubeac/svelte'
+	import { FormRadioGroup } from '@ubeac/svelte'
 
 	// define array to be bound to the RadioGroup
 	let items = ['HTML', 'CSS', 'JavaScript', 'Svelte']
@@ -8,6 +8,6 @@
 	let value = items[1]
 </script>
 
-<RadioGroup reverse {items} bind:value />
+<FormRadioGroup label="Select Language" reverse {items} bind:value />
 
-<i>You selected: {value}</i>
+<i>value: {value}</i>

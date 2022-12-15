@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import { RadioGroup } from '@ubeac/svelte'
+
 	// define array to be bound to the RadioGroup
 	let items = ['HTML', 'CSS', 'JavaScript', 'Svelte']
 
@@ -7,6 +8,5 @@
 	let value = items[1]
 </script>
 
-<RadioGroup inline {items} bind:value />
-
-<i>You selected: {value}</i>
+<RadioGroup bind:value {items} />
+<i>value: {value}</i>

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { RadioGroup } from '@ubeac/svelte'
 
 	// define array to be bound to the RadioGroup
@@ -8,6 +8,6 @@
 	let value = items[1]
 </script>
 
-<RadioGroup bind:value {items} label={(item, index) => index.toString() + '-' + item} />
+<RadioGroup reverse {items} bind:value />
 
-<i>You selected: {value}</i>
+<i>value: {value}</i>

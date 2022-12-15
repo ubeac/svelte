@@ -19,10 +19,4 @@ export interface RadioGroupProps extends Partial<ElProps> {
 	inline?: boolean
 	reverse?: boolean
 	items?: Array<any>
-	label?: LabelFunc
-	selectedIndex?: number
-}
-
-interface LabelFunc {
-	(item: any, index: number): string
 }
