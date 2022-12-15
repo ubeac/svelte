@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import CheckboxGroupInline from './CheckboxGroupInline.svelte'
 	import CheckboxGroupItems from './CheckboxGroupItems.svelte'
 	import CheckboxGroupDefault from './CheckboxGroupDefault.svelte'
@@ -11,23 +11,20 @@
 	turn an option on or off.
 </p>
 
+<Doc title="Basic">Basic Usage</Doc>
 <Preview vertical src="./CheckboxGroupDefault.svelte">
 	<CheckboxGroupDefault />
 </Preview>
 
-<h1>Checkbox Group Inline</h1>
-<p>CheckboxGroup can have inline property for all items to be in one horizontal line.</p>
-
+<Doc title="Checkbox Group Inline">CheckboxGroup can have inline property for all items to be in one horizontal line.</Doc>
 <Preview src="./CheckboxGroupInline.svelte">
 	<CheckboxGroupInline />
 </Preview>
 
-<h1>Checkbox Group Items</h1>
-<p>
+<Doc title="Checkbox Group Items">
 	CheckboxGroup items can have custom items property name, for convenience in displaying items in the checkbox, this
 	feature is for other components like ( FormCheckboxGroup ).
-</p>
-
+</Doc>
 <Preview src="./CheckboxGroupItems.svelte">
 	<CheckboxGroupItems />
 </Preview>

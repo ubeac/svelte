@@ -1,11 +1,10 @@
 $checkbox-props: (
 	wrapper: ".form-check",
+	wrapper-inline: '.form-check-inline',
+
 	null: '.form-check-input',
-	inline: '.form-check-inline',
 	label: '.form-check-label',
 	description: '.form-check-description',
-
-
 );
 
 .#{$prefix-checkbox} {
@@ -20,6 +19,7 @@ $checkbox-props: (
 
 
 	&-description {
+
 		@each $key,
 		$value in $theme-colors {
 			&-color-#{$key} {

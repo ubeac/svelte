@@ -5,6 +5,7 @@
 	import FormCheckboxGroupColor from './FormCheckboxGroupColor.svelte'
 	import FormCheckboxGroupArrayBinding from './FormCheckboxGroupArrayBinding.svelte'
 	import FormCheckboxGroupInline from './FormCheckboxGroupInline.svelte'
+	import FormCheckboxGroupLayout from './FormCheckboxGroupLayout.svelte'
 </script>
 
 <h1>FormCheckboxGroup</h1>
@@ -44,4 +45,11 @@
 </Doc>
 <Preview src="./FormCheckboxGroupArrayBinding.svelte">
 	<FormCheckboxGroupArrayBinding />
+</Preview>
+
+<Doc title="Layout">
+	Use default <code>row</code> and <code>col</code> properties to change layout of the FormCheckboxes inside forms.
+</Doc>
+<Preview src="./FormCheckboxGroupLayout.svelte">
+	<FormCheckboxGroupLayout />
 </Preview>

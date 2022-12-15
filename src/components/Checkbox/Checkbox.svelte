@@ -27,7 +27,7 @@
 	/**
 	 * Label of checkbox
 	 */
-	export let label: $$Props['label'] = false
+	export let label: $$Props['label'] = ''
 
 	/**
 	 * Checked status of checkbox
@@ -54,7 +54,7 @@
 		type: 'checkbox',
 		checked: value,
 		cssProps: {
-			color,
+			color
 		},
 	}
 

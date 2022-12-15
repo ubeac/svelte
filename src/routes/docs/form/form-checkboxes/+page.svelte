@@ -17,7 +17,7 @@
 </Preview>
 
 <h2>Column width</h2>
-<p>You can set Column width of FormCheckbox using <code>cols</code> prop.</p>
+<p>You can set Column width of FormCheckbox using <code>row</code> and <code>col</code> props.</p>
 
 <Preview src="./FormCheckboxColumn.svelte">
 	<FormCheckboxColumn />
