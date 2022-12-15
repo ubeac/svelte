@@ -156,12 +156,12 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'radio',
+				route: base_component_path + 'radios',
 				title: 'Radio',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'radio-group',
+				route: base_component_path + 'radio-groups',
 				title: 'RadioGroup',
 				icon: 'star',
 			},
@@ -263,12 +263,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_form_path + 'form-radio',
-				title: 'FormRadio',
-				icon: 'star',
-			},
-			{
-				route: base_form_path + 'form-radio-group',
+				route: base_form_path + 'form-radio-groups',
 				title: 'FormRadioGroup',
 				icon: 'star',
 			},
