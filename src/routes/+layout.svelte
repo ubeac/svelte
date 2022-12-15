@@ -55,11 +55,13 @@
 </svelte:head>
 
 <App {theme}>
-	<div class="sticky-top">
-		<div class="position-relative">
-			<Progress col position="absolute" color="primary" style="height: 3px;" value={progressValue * 100} />
+	{#if progressValue < 1}
+		<div class="sticky-top">
+			<div class="position-relative">
+				<Progress col position="absolute" color="primary" style="height: 3px;" value={progressValue * 100} />
+			</div>
 		</div>
-	</div>
+	{/if}
 	<header class="navbar navbar-expand-md navbar-light d-print-none">
 		<div class="container-xl">
 			<button
@@ -640,6 +642,10 @@
 	.u-preview-body > * {
 		margin: 0 0.2rem 0.8rem 0.2rem;
 		vertical-align: top;
+	}
+
+	.u-card-body > h2 {
+		margin-top: 1.75rem !important;
 	}
 	.u-preview-body > :last-child {
 		margin: 0 0.2rem 0 0.2rem !important;

@@ -1,40 +1,87 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
+	import type { TextareaProps } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
-
-	/**
-	 * Disables Textarea
-	 */
-	export let disabled: boolean = false
+	type $$Props = TextareaProps
 
 	/**
-	 * Forward all native Events
+	 * Set Css Prefix for the Input
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let cssPrefix: $$Props['cssPrefix'] = 'textarea'
 
 	/**
-	 * Set placeholder of Textarea
+	 * Set the input disabled
 	 */
-	export let placeholder: string | undefined = undefined
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
-	 * Makes value unchangable
+	 * Set border of input rounded
 	 */
-	export let readOnly: boolean = false
+	export let borderRounded: $$Props['borderRounded'] = undefined
 
 	/**
-	 * Set number of rows
+	 * Set order of input flush (without border)
 	 */
-	export let rows: number | string | undefined = undefined
+	export let borderFlush: $$Props['borderFlush'] = undefined
 
 	/**
-	 * The text content of Textarea
+	 * Set placeholder for the input
 	 */
-	export let value: string | undefined = undefined
+	export let placeholder: $$Props['placeholder'] = undefined
 
-	$: classes = classname('textarea', {}, $$props.class)
+	/**
+	 * Set the input read-only
+	 */
+	export let readonly: $$Props['readonly'] = undefined
+
+	/**
+	 * Set number of rows for Textarea
+	 */
+	export let rows: $$Props['rows'] = undefined
+
+	/**
+	 * Set the size of input
+	 */
+	export let size: $$Props['size'] = undefined
+
+	/**
+	 * Set the size of input
+	 */
+	export let state: $$Props['state'] = undefined
+
+	/**
+	 * Set the type of input
+	 */
+	export let type: $$Props['type'] = undefined
+
+	/**
+	 * the text Value of input
+	 */
+	export let value: $$Props['value'] = undefined
+
+	$: cssProps = {
+		size,
+		state,
+		borderRounded,
+		borderFlush,
+	}
+
+	$: otherProps = {
+		cssPrefix,
+		placeholder,
+		disabled,
+		readonly,
+		type,
+		rows,
+	}
 </script>
 
-<textarea bind:value use:forwardEvents {disabled} {placeholder} {readOnly} {rows} {...$$restProps} class={classes} />
+<El cssPrefix="{cssPrefix}-wrapper" cssProps={{ size }}>
+	{#if $$slots.start}
+		<slot name="start" />
+	{/if}
+	<El tag="textarea" bind:value {...$$restProps} {...otherProps} {cssProps} />
+	{#if $$slots.end}
+		<slot name="end" />
+	{/if}
+</El>
