@@ -2621,13 +2621,13 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-radius: 8px;
 }
 
-.form-check, .u-switch-wrapper, .u-radio-wrapper, .u-checkbox {
+.form-check, .u-switch-wrapper, .u-radio-wrapper, .u-checkbox-wrapper {
   display: block;
   min-height: 1.25rem;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
 }
-.form-check .form-check-input, .u-switch-wrapper .form-check-input, .form-check .u-switch, .u-switch-wrapper .u-switch, .form-check .u-radio, .u-switch-wrapper .u-radio, .u-radio-wrapper .form-check-input, .u-radio-wrapper .u-switch, .u-radio-wrapper .u-radio, .form-check .u-checkbox-input, .u-switch-wrapper .u-checkbox-input, .u-radio-wrapper .u-checkbox-input, .u-checkbox .form-check-input, .u-checkbox .u-switch, .u-checkbox .u-radio, .u-checkbox .u-checkbox-input {
+.form-check .form-check-input, .u-switch-wrapper .form-check-input, .form-check .u-switch, .u-switch-wrapper .u-switch, .form-check .u-radio, .u-switch-wrapper .u-radio, .u-radio-wrapper .form-check-input, .u-radio-wrapper .u-switch, .u-radio-wrapper .u-radio, .form-check .u-checkbox, .u-switch-wrapper .u-checkbox, .u-radio-wrapper .u-checkbox, .u-checkbox-wrapper .form-check-input, .u-checkbox-wrapper .u-switch, .u-checkbox-wrapper .u-radio, .u-checkbox-wrapper .u-checkbox {
   float: left;
   margin-left: -1.5rem;
 }
@@ -2637,13 +2637,13 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   padding-left: 0;
   text-align: right;
 }
-.form-check-reverse .form-check-input, .form-check-reverse .u-switch, .form-check-reverse .u-radio, .u-radio-wrapper-reverse .form-check-input, .u-radio-wrapper-reverse .u-switch, .u-radio-wrapper-reverse .u-radio, .form-check-reverse .u-checkbox-input, .u-radio-wrapper-reverse .u-checkbox-input {
+.form-check-reverse .form-check-input, .form-check-reverse .u-switch, .form-check-reverse .u-radio, .u-radio-wrapper-reverse .form-check-input, .u-radio-wrapper-reverse .u-switch, .u-radio-wrapper-reverse .u-radio, .form-check-reverse .u-checkbox, .u-radio-wrapper-reverse .u-checkbox {
   float: right;
   margin-right: -1.5rem;
   margin-left: 0;
 }
 
-.form-check-input, .u-switch, .u-radio, .u-checkbox-input {
+.form-check-input, .u-switch, .u-radio, .u-checkbox {
   width: 1rem;
   height: 1rem;
   margin-top: 0.2142857143rem;
@@ -2656,41 +2656,41 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   appearance: none;
   print-color-adjust: exact;
 }
-.form-check-input[type=checkbox], [type=checkbox].u-switch, [type=checkbox].u-radio, [type=checkbox].u-checkbox-input {
+.form-check-input[type=checkbox], [type=checkbox].u-switch, [type=checkbox].u-radio, [type=checkbox].u-checkbox {
   border-radius: var(--u-border-radius);
 }
-.form-check-input[type=radio], [type=radio].u-switch, [type=radio].u-radio, [type=radio].u-checkbox-input {
+.form-check-input[type=radio], [type=radio].u-switch, [type=radio].u-radio, [type=radio].u-checkbox {
   border-radius: 50%;
 }
-.form-check-input:active, .u-switch:active, .u-radio:active, .u-checkbox-input:active {
+.form-check-input:active, .u-switch:active, .u-radio:active, .u-checkbox:active {
   filter: brightness(90%);
 }
-.form-check-input:focus, .u-switch:focus, .u-radio:focus, .u-checkbox-input:focus {
+.form-check-input:focus, .u-switch:focus, .u-radio:focus, .u-checkbox:focus {
   border-color: #90b5e2;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
 }
-.form-check-input:checked, .u-switch:checked, .u-radio:checked, .u-checkbox-input:checked {
+.form-check-input:checked, .u-switch:checked, .u-radio:checked, .u-checkbox:checked {
   background-color: var(--u-primary);
   border-color: var(--u-border-color-translucent);
 }
-.form-check-input:checked[type=checkbox], .u-switch:checked[type=checkbox], .u-radio:checked[type=checkbox], .u-checkbox-input:checked[type=checkbox] {
+.form-check-input:checked[type=checkbox], .u-switch:checked[type=checkbox], .u-radio:checked[type=checkbox], .u-checkbox:checked[type=checkbox] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8.5l2.5 2.5l5.5 -5.5'/%3e%3c/svg%3e");
 }
-.form-check-input:checked[type=radio], .u-switch:checked[type=radio], .u-radio:checked[type=radio], .u-checkbox-input:checked[type=radio] {
+.form-check-input:checked[type=radio], .u-switch:checked[type=radio], .u-radio:checked[type=radio], .u-checkbox:checked[type=radio] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle r='3' fill='%23ffffff' cx='8' cy='8' /%3e%3c/svg%3e");
 }
-.form-check-input[type=checkbox]:indeterminate, [type=checkbox].u-switch:indeterminate, [type=checkbox].u-radio:indeterminate, [type=checkbox].u-checkbox-input:indeterminate {
+.form-check-input[type=checkbox]:indeterminate, [type=checkbox].u-switch:indeterminate, [type=checkbox].u-radio:indeterminate, [type=checkbox].u-checkbox:indeterminate {
   background-color: #206bc4;
   border-color: #206bc4;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
-.form-check-input:disabled, .u-switch:disabled, .u-radio:disabled, .u-checkbox-input:disabled {
+.form-check-input:disabled, .u-switch:disabled, .u-radio:disabled, .u-checkbox:disabled {
   pointer-events: none;
   filter: none;
   opacity: 0.5;
 }
-.form-check-input[disabled] ~ .form-check-label, .form-check-input[disabled] ~ .u-switch-label, [disabled].u-switch ~ .form-check-label, [disabled].u-switch ~ .u-switch-label, .form-check-input[disabled] ~ .u-radio-label, [disabled].u-switch ~ .u-radio-label, [disabled].u-radio ~ .form-check-label, [disabled].u-radio ~ .u-switch-label, [disabled].u-radio ~ .u-radio-label, .form-check-input[disabled] ~ .u-checkbox-label, [disabled].u-switch ~ .u-checkbox-label, [disabled].u-radio ~ .u-checkbox-label, [disabled].u-checkbox-input ~ .form-check-label, [disabled].u-checkbox-input ~ .u-switch-label, [disabled].u-checkbox-input ~ .u-radio-label, [disabled].u-checkbox-input ~ .u-checkbox-label, .form-check-input:disabled ~ .form-check-label, .form-check-input:disabled ~ .u-switch-label, .u-switch:disabled ~ .form-check-label, .u-switch:disabled ~ .u-switch-label, .form-check-input:disabled ~ .u-radio-label, .u-switch:disabled ~ .u-radio-label, .u-radio:disabled ~ .form-check-label, .u-radio:disabled ~ .u-switch-label, .u-radio:disabled ~ .u-radio-label, .form-check-input:disabled ~ .u-checkbox-label, .u-switch:disabled ~ .u-checkbox-label, .u-radio:disabled ~ .u-checkbox-label, .u-checkbox-input:disabled ~ .form-check-label, .u-checkbox-input:disabled ~ .u-switch-label, .u-checkbox-input:disabled ~ .u-radio-label, .u-checkbox-input:disabled ~ .u-checkbox-label {
+.form-check-input[disabled] ~ .form-check-label, .form-check-input[disabled] ~ .u-switch-label, [disabled].u-switch ~ .form-check-label, [disabled].u-switch ~ .u-switch-label, .form-check-input[disabled] ~ .u-radio-label, [disabled].u-switch ~ .u-radio-label, [disabled].u-radio ~ .form-check-label, [disabled].u-radio ~ .u-switch-label, [disabled].u-radio ~ .u-radio-label, .form-check-input[disabled] ~ .u-checkbox-label, [disabled].u-switch ~ .u-checkbox-label, [disabled].u-radio ~ .u-checkbox-label, [disabled].u-checkbox ~ .form-check-label, [disabled].u-checkbox ~ .u-switch-label, [disabled].u-checkbox ~ .u-radio-label, [disabled].u-checkbox ~ .u-checkbox-label, .form-check-input:disabled ~ .form-check-label, .form-check-input:disabled ~ .u-switch-label, .u-switch:disabled ~ .form-check-label, .u-switch:disabled ~ .u-switch-label, .form-check-input:disabled ~ .u-radio-label, .u-switch:disabled ~ .u-radio-label, .u-radio:disabled ~ .form-check-label, .u-radio:disabled ~ .u-switch-label, .u-radio:disabled ~ .u-radio-label, .form-check-input:disabled ~ .u-checkbox-label, .u-switch:disabled ~ .u-checkbox-label, .u-radio:disabled ~ .u-checkbox-label, .u-checkbox:disabled ~ .form-check-label, .u-checkbox:disabled ~ .u-switch-label, .u-checkbox:disabled ~ .u-radio-label, .u-checkbox:disabled ~ .u-checkbox-label {
   cursor: default;
   opacity: 0.7;
 }
@@ -2698,7 +2698,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .form-switch, .u-switch-wrapper {
   padding-left: 2.5rem;
 }
-.form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox-input, .u-switch-wrapper .u-checkbox-input {
+.form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox, .u-switch-wrapper .u-checkbox {
   width: 2rem;
   margin-left: -2.5rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23e6e7e9'/%3e%3c/svg%3e");
@@ -2707,14 +2707,14 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   transition: background-position 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox-input, .u-switch-wrapper .u-checkbox-input {
+  .form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox, .u-switch-wrapper .u-checkbox {
     transition: none;
   }
 }
-.form-switch .form-check-input:focus, .u-switch-wrapper .form-check-input:focus, .form-switch .u-switch:focus, .u-switch-wrapper .u-switch:focus, .form-switch .u-radio:focus, .u-switch-wrapper .u-radio:focus, .form-switch .u-checkbox-input:focus, .u-switch-wrapper .u-checkbox-input:focus {
+.form-switch .form-check-input:focus, .u-switch-wrapper .form-check-input:focus, .form-switch .u-switch:focus, .u-switch-wrapper .u-switch:focus, .form-switch .u-radio:focus, .u-switch-wrapper .u-radio:focus, .form-switch .u-checkbox:focus, .u-switch-wrapper .u-checkbox:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2390b5e2'/%3e%3c/svg%3e");
 }
-.form-switch .form-check-input:checked, .u-switch-wrapper .form-check-input:checked, .form-switch .u-switch:checked, .u-switch-wrapper .u-switch:checked, .form-switch .u-radio:checked, .u-switch-wrapper .u-radio:checked, .form-switch .u-checkbox-input:checked, .u-switch-wrapper .u-checkbox-input:checked {
+.form-switch .form-check-input:checked, .u-switch-wrapper .form-check-input:checked, .form-switch .u-switch:checked, .u-switch-wrapper .u-switch:checked, .form-switch .u-radio:checked, .u-switch-wrapper .u-radio:checked, .form-switch .u-checkbox:checked, .u-switch-wrapper .u-checkbox:checked {
   background-position: right center;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e");
 }
@@ -2722,7 +2722,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   padding-right: 2.5rem;
   padding-left: 0;
 }
-.form-switch.form-check-reverse .form-check-input, .form-check-reverse.u-switch-wrapper .form-check-input, .form-switch.form-check-reverse .u-switch, .form-check-reverse.u-switch-wrapper .u-switch, .form-switch.form-check-reverse .u-radio, .form-check-reverse.u-switch-wrapper .u-radio, .form-switch.u-radio-wrapper-reverse .form-check-input, .u-radio-wrapper-reverse.u-switch-wrapper .form-check-input, .form-switch.u-radio-wrapper-reverse .u-switch, .u-radio-wrapper-reverse.u-switch-wrapper .u-switch, .form-switch.u-radio-wrapper-reverse .u-radio, .u-radio-wrapper-reverse.u-switch-wrapper .u-radio, .form-switch.form-check-reverse .u-checkbox-input, .form-check-reverse.u-switch-wrapper .u-checkbox-input, .form-switch.u-radio-wrapper-reverse .u-checkbox-input, .u-radio-wrapper-reverse.u-switch-wrapper .u-checkbox-input {
+.form-switch.form-check-reverse .form-check-input, .form-check-reverse.u-switch-wrapper .form-check-input, .form-switch.form-check-reverse .u-switch, .form-check-reverse.u-switch-wrapper .u-switch, .form-switch.form-check-reverse .u-radio, .form-check-reverse.u-switch-wrapper .u-radio, .form-switch.u-radio-wrapper-reverse .form-check-input, .u-radio-wrapper-reverse.u-switch-wrapper .form-check-input, .form-switch.u-radio-wrapper-reverse .u-switch, .u-radio-wrapper-reverse.u-switch-wrapper .u-switch, .form-switch.u-radio-wrapper-reverse .u-radio, .u-radio-wrapper-reverse.u-switch-wrapper .u-radio, .form-switch.form-check-reverse .u-checkbox, .form-check-reverse.u-switch-wrapper .u-checkbox, .form-switch.u-radio-wrapper-reverse .u-checkbox, .u-radio-wrapper-reverse.u-switch-wrapper .u-checkbox {
   margin-right: -2.5rem;
   margin-left: 0;
 }
@@ -3252,20 +3252,20 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   width: calc(3rem + calc(1.4285714286em + 0.875rem));
 }
 
-.was-validated .form-check-input:valid, .was-validated .u-switch:valid, .was-validated .u-radio:valid, .was-validated .u-checkbox-input:valid, .form-check-input.is-valid, .form-check-input.u-textarea-state-valid, .is-valid.u-switch, .u-switch.u-textarea-state-valid, .is-valid.u-radio, .u-radio.u-textarea-state-valid, .form-check-input.u-input-state-valid, .u-input-state-valid.u-switch, .u-input-state-valid.u-radio, .is-valid.u-checkbox-input, .u-checkbox-input.u-textarea-state-valid, .u-checkbox-input.u-input-state-valid {
+.was-validated .form-check-input:valid, .was-validated .u-switch:valid, .was-validated .u-radio:valid, .was-validated .u-checkbox:valid, .form-check-input.is-valid, .form-check-input.u-textarea-state-valid, .is-valid.u-switch, .u-switch.u-textarea-state-valid, .is-valid.u-radio, .u-radio.u-textarea-state-valid, .form-check-input.u-input-state-valid, .u-input-state-valid.u-switch, .u-input-state-valid.u-radio, .is-valid.u-checkbox, .u-checkbox.u-textarea-state-valid, .u-checkbox.u-input-state-valid {
   border-color: #2fb344;
 }
-.was-validated .form-check-input:valid:checked, .was-validated .u-switch:valid:checked, .was-validated .u-radio:valid:checked, .was-validated .u-checkbox-input:valid:checked, .form-check-input.is-valid:checked, .form-check-input.u-textarea-state-valid:checked, .is-valid.u-switch:checked, .u-switch.u-textarea-state-valid:checked, .is-valid.u-radio:checked, .u-radio.u-textarea-state-valid:checked, .form-check-input.u-input-state-valid:checked, .u-input-state-valid.u-switch:checked, .u-input-state-valid.u-radio:checked, .is-valid.u-checkbox-input:checked, .u-checkbox-input.u-textarea-state-valid:checked, .u-checkbox-input.u-input-state-valid:checked {
+.was-validated .form-check-input:valid:checked, .was-validated .u-switch:valid:checked, .was-validated .u-radio:valid:checked, .was-validated .u-checkbox:valid:checked, .form-check-input.is-valid:checked, .form-check-input.u-textarea-state-valid:checked, .is-valid.u-switch:checked, .u-switch.u-textarea-state-valid:checked, .is-valid.u-radio:checked, .u-radio.u-textarea-state-valid:checked, .form-check-input.u-input-state-valid:checked, .u-input-state-valid.u-switch:checked, .u-input-state-valid.u-radio:checked, .is-valid.u-checkbox:checked, .u-checkbox.u-textarea-state-valid:checked, .u-checkbox.u-input-state-valid:checked {
   background-color: #2fb344;
 }
-.was-validated .form-check-input:valid:focus, .was-validated .u-switch:valid:focus, .was-validated .u-radio:valid:focus, .was-validated .u-checkbox-input:valid:focus, .form-check-input.is-valid:focus, .form-check-input.u-textarea-state-valid:focus, .is-valid.u-switch:focus, .u-switch.u-textarea-state-valid:focus, .is-valid.u-radio:focus, .u-radio.u-textarea-state-valid:focus, .form-check-input.u-input-state-valid:focus, .u-input-state-valid.u-switch:focus, .u-input-state-valid.u-radio:focus, .is-valid.u-checkbox-input:focus, .u-checkbox-input.u-textarea-state-valid:focus, .u-checkbox-input.u-input-state-valid:focus {
+.was-validated .form-check-input:valid:focus, .was-validated .u-switch:valid:focus, .was-validated .u-radio:valid:focus, .was-validated .u-checkbox:valid:focus, .form-check-input.is-valid:focus, .form-check-input.u-textarea-state-valid:focus, .is-valid.u-switch:focus, .u-switch.u-textarea-state-valid:focus, .is-valid.u-radio:focus, .u-radio.u-textarea-state-valid:focus, .form-check-input.u-input-state-valid:focus, .u-input-state-valid.u-switch:focus, .u-input-state-valid.u-radio:focus, .is-valid.u-checkbox:focus, .u-checkbox.u-textarea-state-valid:focus, .u-checkbox.u-input-state-valid:focus {
   box-shadow: 0 0 0 0.25rem rgba(47, 179, 68, 0.25);
 }
-.was-validated .form-check-input:valid ~ .form-check-label, .was-validated .form-check-input:valid ~ .u-switch-label, .was-validated .u-switch:valid ~ .form-check-label, .was-validated .u-switch:valid ~ .u-switch-label, .was-validated .form-check-input:valid ~ .u-radio-label, .was-validated .u-switch:valid ~ .u-radio-label, .was-validated .u-radio:valid ~ .form-check-label, .was-validated .u-radio:valid ~ .u-switch-label, .was-validated .u-radio:valid ~ .u-radio-label, .was-validated .form-check-input:valid ~ .u-checkbox-label, .was-validated .u-switch:valid ~ .u-checkbox-label, .was-validated .u-radio:valid ~ .u-checkbox-label, .was-validated .u-checkbox-input:valid ~ .form-check-label, .was-validated .u-checkbox-input:valid ~ .u-switch-label, .was-validated .u-checkbox-input:valid ~ .u-radio-label, .was-validated .u-checkbox-input:valid ~ .u-checkbox-label, .form-check-input.is-valid ~ .form-check-label, .form-check-input.u-textarea-state-valid ~ .form-check-label, .form-check-input.is-valid ~ .u-switch-label, .form-check-input.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-switch ~ .form-check-label, .u-switch.u-textarea-state-valid ~ .form-check-label, .is-valid.u-switch ~ .u-switch-label, .u-switch.u-textarea-state-valid ~ .u-switch-label, .form-check-input.is-valid ~ .u-radio-label, .form-check-input.u-textarea-state-valid ~ .u-radio-label, .is-valid.u-switch ~ .u-radio-label, .u-switch.u-textarea-state-valid ~ .u-radio-label, .is-valid.u-radio ~ .form-check-label, .u-radio.u-textarea-state-valid ~ .form-check-label, .is-valid.u-radio ~ .u-switch-label, .u-radio.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-radio ~ .u-radio-label, .u-radio.u-textarea-state-valid ~ .u-radio-label, .form-check-input.u-input-state-valid ~ .form-check-label, .form-check-input.u-input-state-valid ~ .u-switch-label, .u-input-state-valid.u-switch ~ .form-check-label, .u-input-state-valid.u-switch ~ .u-switch-label, .form-check-input.u-input-state-valid ~ .u-radio-label, .u-input-state-valid.u-switch ~ .u-radio-label, .u-input-state-valid.u-radio ~ .form-check-label, .u-input-state-valid.u-radio ~ .u-switch-label, .u-input-state-valid.u-radio ~ .u-radio-label, .form-check-input.is-valid ~ .u-checkbox-label, .form-check-input.u-textarea-state-valid ~ .u-checkbox-label, .is-valid.u-switch ~ .u-checkbox-label, .u-switch.u-textarea-state-valid ~ .u-checkbox-label, .is-valid.u-radio ~ .u-checkbox-label, .u-radio.u-textarea-state-valid ~ .u-checkbox-label, .form-check-input.u-input-state-valid ~ .u-checkbox-label, .u-input-state-valid.u-switch ~ .u-checkbox-label, .u-input-state-valid.u-radio ~ .u-checkbox-label, .is-valid.u-checkbox-input ~ .form-check-label, .u-checkbox-input.u-textarea-state-valid ~ .form-check-label, .is-valid.u-checkbox-input ~ .u-switch-label, .u-checkbox-input.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-checkbox-input ~ .u-radio-label, .u-checkbox-input.u-textarea-state-valid ~ .u-radio-label, .u-checkbox-input.u-input-state-valid ~ .form-check-label, .u-checkbox-input.u-input-state-valid ~ .u-switch-label, .u-checkbox-input.u-input-state-valid ~ .u-radio-label, .is-valid.u-checkbox-input ~ .u-checkbox-label, .u-checkbox-input.u-textarea-state-valid ~ .u-checkbox-label, .u-checkbox-input.u-input-state-valid ~ .u-checkbox-label {
+.was-validated .form-check-input:valid ~ .form-check-label, .was-validated .form-check-input:valid ~ .u-switch-label, .was-validated .u-switch:valid ~ .form-check-label, .was-validated .u-switch:valid ~ .u-switch-label, .was-validated .form-check-input:valid ~ .u-radio-label, .was-validated .u-switch:valid ~ .u-radio-label, .was-validated .u-radio:valid ~ .form-check-label, .was-validated .u-radio:valid ~ .u-switch-label, .was-validated .u-radio:valid ~ .u-radio-label, .was-validated .form-check-input:valid ~ .u-checkbox-label, .was-validated .u-switch:valid ~ .u-checkbox-label, .was-validated .u-radio:valid ~ .u-checkbox-label, .was-validated .u-checkbox:valid ~ .form-check-label, .was-validated .u-checkbox:valid ~ .u-switch-label, .was-validated .u-checkbox:valid ~ .u-radio-label, .was-validated .u-checkbox:valid ~ .u-checkbox-label, .form-check-input.is-valid ~ .form-check-label, .form-check-input.u-textarea-state-valid ~ .form-check-label, .form-check-input.is-valid ~ .u-switch-label, .form-check-input.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-switch ~ .form-check-label, .u-switch.u-textarea-state-valid ~ .form-check-label, .is-valid.u-switch ~ .u-switch-label, .u-switch.u-textarea-state-valid ~ .u-switch-label, .form-check-input.is-valid ~ .u-radio-label, .form-check-input.u-textarea-state-valid ~ .u-radio-label, .is-valid.u-switch ~ .u-radio-label, .u-switch.u-textarea-state-valid ~ .u-radio-label, .is-valid.u-radio ~ .form-check-label, .u-radio.u-textarea-state-valid ~ .form-check-label, .is-valid.u-radio ~ .u-switch-label, .u-radio.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-radio ~ .u-radio-label, .u-radio.u-textarea-state-valid ~ .u-radio-label, .form-check-input.u-input-state-valid ~ .form-check-label, .form-check-input.u-input-state-valid ~ .u-switch-label, .u-input-state-valid.u-switch ~ .form-check-label, .u-input-state-valid.u-switch ~ .u-switch-label, .form-check-input.u-input-state-valid ~ .u-radio-label, .u-input-state-valid.u-switch ~ .u-radio-label, .u-input-state-valid.u-radio ~ .form-check-label, .u-input-state-valid.u-radio ~ .u-switch-label, .u-input-state-valid.u-radio ~ .u-radio-label, .form-check-input.is-valid ~ .u-checkbox-label, .form-check-input.u-textarea-state-valid ~ .u-checkbox-label, .is-valid.u-switch ~ .u-checkbox-label, .u-switch.u-textarea-state-valid ~ .u-checkbox-label, .is-valid.u-radio ~ .u-checkbox-label, .u-radio.u-textarea-state-valid ~ .u-checkbox-label, .form-check-input.u-input-state-valid ~ .u-checkbox-label, .u-input-state-valid.u-switch ~ .u-checkbox-label, .u-input-state-valid.u-radio ~ .u-checkbox-label, .is-valid.u-checkbox ~ .form-check-label, .u-checkbox.u-textarea-state-valid ~ .form-check-label, .is-valid.u-checkbox ~ .u-switch-label, .u-checkbox.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-checkbox ~ .u-radio-label, .u-checkbox.u-textarea-state-valid ~ .u-radio-label, .u-checkbox.u-input-state-valid ~ .form-check-label, .u-checkbox.u-input-state-valid ~ .u-switch-label, .u-checkbox.u-input-state-valid ~ .u-radio-label, .is-valid.u-checkbox ~ .u-checkbox-label, .u-checkbox.u-textarea-state-valid ~ .u-checkbox-label, .u-checkbox.u-input-state-valid ~ .u-checkbox-label {
   color: #2fb344;
 }
 
-.form-check-inline .form-check-input ~ .valid-feedback, .u-switch-inline .form-check-input ~ .valid-feedback, .form-check-inline .u-switch ~ .valid-feedback, .u-switch-inline .u-switch ~ .valid-feedback, .form-check-inline .u-radio ~ .valid-feedback, .u-switch-inline .u-radio ~ .valid-feedback, .u-radio-wrapper-inline .form-check-input ~ .valid-feedback, .u-radio-wrapper-inline .u-switch ~ .valid-feedback, .u-radio-wrapper-inline .u-radio ~ .valid-feedback, .u-checkbox-inline .form-check-input ~ .valid-feedback, .u-checkbox-inline .u-switch ~ .valid-feedback, .u-checkbox-inline .u-radio ~ .valid-feedback, .form-check-inline .u-checkbox-input ~ .valid-feedback, .u-switch-inline .u-checkbox-input ~ .valid-feedback, .u-radio-wrapper-inline .u-checkbox-input ~ .valid-feedback, .u-checkbox-inline .u-checkbox-input ~ .valid-feedback, .form-check-inline .form-check-input ~ .u-form-hint-state-valid, .u-switch-inline .form-check-input ~ .u-form-hint-state-valid, .form-check-inline .u-switch ~ .u-form-hint-state-valid, .u-switch-inline .u-switch ~ .u-form-hint-state-valid, .form-check-inline .u-radio ~ .u-form-hint-state-valid, .u-switch-inline .u-radio ~ .u-form-hint-state-valid, .u-radio-wrapper-inline .form-check-input ~ .u-form-hint-state-valid, .u-radio-wrapper-inline .u-switch ~ .u-form-hint-state-valid, .u-radio-wrapper-inline .u-radio ~ .u-form-hint-state-valid, .u-checkbox-inline .form-check-input ~ .u-form-hint-state-valid, .u-checkbox-inline .u-switch ~ .u-form-hint-state-valid, .u-checkbox-inline .u-radio ~ .u-form-hint-state-valid, .form-check-inline .u-checkbox-input ~ .u-form-hint-state-valid, .u-switch-inline .u-checkbox-input ~ .u-form-hint-state-valid, .u-radio-wrapper-inline .u-checkbox-input ~ .u-form-hint-state-valid, .u-checkbox-inline .u-checkbox-input ~ .u-form-hint-state-valid {
+.form-check-inline .form-check-input ~ .valid-feedback, .u-switch-inline .form-check-input ~ .valid-feedback, .form-check-inline .u-switch ~ .valid-feedback, .u-switch-inline .u-switch ~ .valid-feedback, .form-check-inline .u-radio ~ .valid-feedback, .u-switch-inline .u-radio ~ .valid-feedback, .u-radio-wrapper-inline .form-check-input ~ .valid-feedback, .u-radio-wrapper-inline .u-switch ~ .valid-feedback, .u-radio-wrapper-inline .u-radio ~ .valid-feedback, .u-checkbox-inline .form-check-input ~ .valid-feedback, .u-checkbox-inline .u-switch ~ .valid-feedback, .u-checkbox-inline .u-radio ~ .valid-feedback, .form-check-inline .u-checkbox ~ .valid-feedback, .u-switch-inline .u-checkbox ~ .valid-feedback, .u-radio-wrapper-inline .u-checkbox ~ .valid-feedback, .u-checkbox-inline .u-checkbox ~ .valid-feedback, .form-check-inline .form-check-input ~ .u-form-hint-state-valid, .u-switch-inline .form-check-input ~ .u-form-hint-state-valid, .form-check-inline .u-switch ~ .u-form-hint-state-valid, .u-switch-inline .u-switch ~ .u-form-hint-state-valid, .form-check-inline .u-radio ~ .u-form-hint-state-valid, .u-switch-inline .u-radio ~ .u-form-hint-state-valid, .u-radio-wrapper-inline .form-check-input ~ .u-form-hint-state-valid, .u-radio-wrapper-inline .u-switch ~ .u-form-hint-state-valid, .u-radio-wrapper-inline .u-radio ~ .u-form-hint-state-valid, .u-checkbox-inline .form-check-input ~ .u-form-hint-state-valid, .u-checkbox-inline .u-switch ~ .u-form-hint-state-valid, .u-checkbox-inline .u-radio ~ .u-form-hint-state-valid, .form-check-inline .u-checkbox ~ .u-form-hint-state-valid, .u-switch-inline .u-checkbox ~ .u-form-hint-state-valid, .u-radio-wrapper-inline .u-checkbox ~ .u-form-hint-state-valid, .u-checkbox-inline .u-checkbox ~ .u-form-hint-state-valid {
   margin-left: 0.5em;
 }
 
@@ -3405,20 +3405,20 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   width: calc(3rem + calc(1.4285714286em + 0.875rem));
 }
 
-.was-validated .form-check-input:invalid, .was-validated .u-switch:invalid, .was-validated .u-radio:invalid, .was-validated .u-checkbox-input:invalid, .form-check-input.is-invalid, .form-check-input.u-textarea-state-invalid, .is-invalid.u-switch, .u-switch.u-textarea-state-invalid, .is-invalid.u-radio, .u-radio.u-textarea-state-invalid, .form-check-input.u-input-state-invalid, .u-input-state-invalid.u-switch, .u-input-state-invalid.u-radio, .is-invalid.u-checkbox-input, .u-checkbox-input.u-textarea-state-invalid, .u-checkbox-input.u-input-state-invalid {
+.was-validated .form-check-input:invalid, .was-validated .u-switch:invalid, .was-validated .u-radio:invalid, .was-validated .u-checkbox:invalid, .form-check-input.is-invalid, .form-check-input.u-textarea-state-invalid, .is-invalid.u-switch, .u-switch.u-textarea-state-invalid, .is-invalid.u-radio, .u-radio.u-textarea-state-invalid, .form-check-input.u-input-state-invalid, .u-input-state-invalid.u-switch, .u-input-state-invalid.u-radio, .is-invalid.u-checkbox, .u-checkbox.u-textarea-state-invalid, .u-checkbox.u-input-state-invalid {
   border-color: #d63939;
 }
-.was-validated .form-check-input:invalid:checked, .was-validated .u-switch:invalid:checked, .was-validated .u-radio:invalid:checked, .was-validated .u-checkbox-input:invalid:checked, .form-check-input.is-invalid:checked, .form-check-input.u-textarea-state-invalid:checked, .is-invalid.u-switch:checked, .u-switch.u-textarea-state-invalid:checked, .is-invalid.u-radio:checked, .u-radio.u-textarea-state-invalid:checked, .form-check-input.u-input-state-invalid:checked, .u-input-state-invalid.u-switch:checked, .u-input-state-invalid.u-radio:checked, .is-invalid.u-checkbox-input:checked, .u-checkbox-input.u-textarea-state-invalid:checked, .u-checkbox-input.u-input-state-invalid:checked {
+.was-validated .form-check-input:invalid:checked, .was-validated .u-switch:invalid:checked, .was-validated .u-radio:invalid:checked, .was-validated .u-checkbox:invalid:checked, .form-check-input.is-invalid:checked, .form-check-input.u-textarea-state-invalid:checked, .is-invalid.u-switch:checked, .u-switch.u-textarea-state-invalid:checked, .is-invalid.u-radio:checked, .u-radio.u-textarea-state-invalid:checked, .form-check-input.u-input-state-invalid:checked, .u-input-state-invalid.u-switch:checked, .u-input-state-invalid.u-radio:checked, .is-invalid.u-checkbox:checked, .u-checkbox.u-textarea-state-invalid:checked, .u-checkbox.u-input-state-invalid:checked {
   background-color: #d63939;
 }
-.was-validated .form-check-input:invalid:focus, .was-validated .u-switch:invalid:focus, .was-validated .u-radio:invalid:focus, .was-validated .u-checkbox-input:invalid:focus, .form-check-input.is-invalid:focus, .form-check-input.u-textarea-state-invalid:focus, .is-invalid.u-switch:focus, .u-switch.u-textarea-state-invalid:focus, .is-invalid.u-radio:focus, .u-radio.u-textarea-state-invalid:focus, .form-check-input.u-input-state-invalid:focus, .u-input-state-invalid.u-switch:focus, .u-input-state-invalid.u-radio:focus, .is-invalid.u-checkbox-input:focus, .u-checkbox-input.u-textarea-state-invalid:focus, .u-checkbox-input.u-input-state-invalid:focus {
+.was-validated .form-check-input:invalid:focus, .was-validated .u-switch:invalid:focus, .was-validated .u-radio:invalid:focus, .was-validated .u-checkbox:invalid:focus, .form-check-input.is-invalid:focus, .form-check-input.u-textarea-state-invalid:focus, .is-invalid.u-switch:focus, .u-switch.u-textarea-state-invalid:focus, .is-invalid.u-radio:focus, .u-radio.u-textarea-state-invalid:focus, .form-check-input.u-input-state-invalid:focus, .u-input-state-invalid.u-switch:focus, .u-input-state-invalid.u-radio:focus, .is-invalid.u-checkbox:focus, .u-checkbox.u-textarea-state-invalid:focus, .u-checkbox.u-input-state-invalid:focus {
   box-shadow: 0 0 0 0.25rem rgba(214, 57, 57, 0.25);
 }
-.was-validated .form-check-input:invalid ~ .form-check-label, .was-validated .form-check-input:invalid ~ .u-switch-label, .was-validated .u-switch:invalid ~ .form-check-label, .was-validated .u-switch:invalid ~ .u-switch-label, .was-validated .form-check-input:invalid ~ .u-radio-label, .was-validated .u-switch:invalid ~ .u-radio-label, .was-validated .u-radio:invalid ~ .form-check-label, .was-validated .u-radio:invalid ~ .u-switch-label, .was-validated .u-radio:invalid ~ .u-radio-label, .was-validated .form-check-input:invalid ~ .u-checkbox-label, .was-validated .u-switch:invalid ~ .u-checkbox-label, .was-validated .u-radio:invalid ~ .u-checkbox-label, .was-validated .u-checkbox-input:invalid ~ .form-check-label, .was-validated .u-checkbox-input:invalid ~ .u-switch-label, .was-validated .u-checkbox-input:invalid ~ .u-radio-label, .was-validated .u-checkbox-input:invalid ~ .u-checkbox-label, .form-check-input.is-invalid ~ .form-check-label, .form-check-input.u-textarea-state-invalid ~ .form-check-label, .form-check-input.is-invalid ~ .u-switch-label, .form-check-input.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-switch ~ .form-check-label, .u-switch.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-switch ~ .u-switch-label, .u-switch.u-textarea-state-invalid ~ .u-switch-label, .form-check-input.is-invalid ~ .u-radio-label, .form-check-input.u-textarea-state-invalid ~ .u-radio-label, .is-invalid.u-switch ~ .u-radio-label, .u-switch.u-textarea-state-invalid ~ .u-radio-label, .is-invalid.u-radio ~ .form-check-label, .u-radio.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-radio ~ .u-switch-label, .u-radio.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-radio ~ .u-radio-label, .u-radio.u-textarea-state-invalid ~ .u-radio-label, .form-check-input.u-input-state-invalid ~ .form-check-label, .form-check-input.u-input-state-invalid ~ .u-switch-label, .u-input-state-invalid.u-switch ~ .form-check-label, .u-input-state-invalid.u-switch ~ .u-switch-label, .form-check-input.u-input-state-invalid ~ .u-radio-label, .u-input-state-invalid.u-switch ~ .u-radio-label, .u-input-state-invalid.u-radio ~ .form-check-label, .u-input-state-invalid.u-radio ~ .u-switch-label, .u-input-state-invalid.u-radio ~ .u-radio-label, .form-check-input.is-invalid ~ .u-checkbox-label, .form-check-input.u-textarea-state-invalid ~ .u-checkbox-label, .is-invalid.u-switch ~ .u-checkbox-label, .u-switch.u-textarea-state-invalid ~ .u-checkbox-label, .is-invalid.u-radio ~ .u-checkbox-label, .u-radio.u-textarea-state-invalid ~ .u-checkbox-label, .form-check-input.u-input-state-invalid ~ .u-checkbox-label, .u-input-state-invalid.u-switch ~ .u-checkbox-label, .u-input-state-invalid.u-radio ~ .u-checkbox-label, .is-invalid.u-checkbox-input ~ .form-check-label, .u-checkbox-input.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-checkbox-input ~ .u-switch-label, .u-checkbox-input.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-checkbox-input ~ .u-radio-label, .u-checkbox-input.u-textarea-state-invalid ~ .u-radio-label, .u-checkbox-input.u-input-state-invalid ~ .form-check-label, .u-checkbox-input.u-input-state-invalid ~ .u-switch-label, .u-checkbox-input.u-input-state-invalid ~ .u-radio-label, .is-invalid.u-checkbox-input ~ .u-checkbox-label, .u-checkbox-input.u-textarea-state-invalid ~ .u-checkbox-label, .u-checkbox-input.u-input-state-invalid ~ .u-checkbox-label {
+.was-validated .form-check-input:invalid ~ .form-check-label, .was-validated .form-check-input:invalid ~ .u-switch-label, .was-validated .u-switch:invalid ~ .form-check-label, .was-validated .u-switch:invalid ~ .u-switch-label, .was-validated .form-check-input:invalid ~ .u-radio-label, .was-validated .u-switch:invalid ~ .u-radio-label, .was-validated .u-radio:invalid ~ .form-check-label, .was-validated .u-radio:invalid ~ .u-switch-label, .was-validated .u-radio:invalid ~ .u-radio-label, .was-validated .form-check-input:invalid ~ .u-checkbox-label, .was-validated .u-switch:invalid ~ .u-checkbox-label, .was-validated .u-radio:invalid ~ .u-checkbox-label, .was-validated .u-checkbox:invalid ~ .form-check-label, .was-validated .u-checkbox:invalid ~ .u-switch-label, .was-validated .u-checkbox:invalid ~ .u-radio-label, .was-validated .u-checkbox:invalid ~ .u-checkbox-label, .form-check-input.is-invalid ~ .form-check-label, .form-check-input.u-textarea-state-invalid ~ .form-check-label, .form-check-input.is-invalid ~ .u-switch-label, .form-check-input.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-switch ~ .form-check-label, .u-switch.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-switch ~ .u-switch-label, .u-switch.u-textarea-state-invalid ~ .u-switch-label, .form-check-input.is-invalid ~ .u-radio-label, .form-check-input.u-textarea-state-invalid ~ .u-radio-label, .is-invalid.u-switch ~ .u-radio-label, .u-switch.u-textarea-state-invalid ~ .u-radio-label, .is-invalid.u-radio ~ .form-check-label, .u-radio.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-radio ~ .u-switch-label, .u-radio.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-radio ~ .u-radio-label, .u-radio.u-textarea-state-invalid ~ .u-radio-label, .form-check-input.u-input-state-invalid ~ .form-check-label, .form-check-input.u-input-state-invalid ~ .u-switch-label, .u-input-state-invalid.u-switch ~ .form-check-label, .u-input-state-invalid.u-switch ~ .u-switch-label, .form-check-input.u-input-state-invalid ~ .u-radio-label, .u-input-state-invalid.u-switch ~ .u-radio-label, .u-input-state-invalid.u-radio ~ .form-check-label, .u-input-state-invalid.u-radio ~ .u-switch-label, .u-input-state-invalid.u-radio ~ .u-radio-label, .form-check-input.is-invalid ~ .u-checkbox-label, .form-check-input.u-textarea-state-invalid ~ .u-checkbox-label, .is-invalid.u-switch ~ .u-checkbox-label, .u-switch.u-textarea-state-invalid ~ .u-checkbox-label, .is-invalid.u-radio ~ .u-checkbox-label, .u-radio.u-textarea-state-invalid ~ .u-checkbox-label, .form-check-input.u-input-state-invalid ~ .u-checkbox-label, .u-input-state-invalid.u-switch ~ .u-checkbox-label, .u-input-state-invalid.u-radio ~ .u-checkbox-label, .is-invalid.u-checkbox ~ .form-check-label, .u-checkbox.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-checkbox ~ .u-switch-label, .u-checkbox.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-checkbox ~ .u-radio-label, .u-checkbox.u-textarea-state-invalid ~ .u-radio-label, .u-checkbox.u-input-state-invalid ~ .form-check-label, .u-checkbox.u-input-state-invalid ~ .u-switch-label, .u-checkbox.u-input-state-invalid ~ .u-radio-label, .is-invalid.u-checkbox ~ .u-checkbox-label, .u-checkbox.u-textarea-state-invalid ~ .u-checkbox-label, .u-checkbox.u-input-state-invalid ~ .u-checkbox-label {
   color: #d63939;
 }
 
-.form-check-inline .form-check-input ~ .invalid-feedback, .u-switch-inline .form-check-input ~ .invalid-feedback, .form-check-inline .u-switch ~ .invalid-feedback, .u-switch-inline .u-switch ~ .invalid-feedback, .form-check-inline .u-radio ~ .invalid-feedback, .u-switch-inline .u-radio ~ .invalid-feedback, .u-radio-wrapper-inline .form-check-input ~ .invalid-feedback, .u-radio-wrapper-inline .u-switch ~ .invalid-feedback, .u-radio-wrapper-inline .u-radio ~ .invalid-feedback, .u-checkbox-inline .form-check-input ~ .invalid-feedback, .u-checkbox-inline .u-switch ~ .invalid-feedback, .u-checkbox-inline .u-radio ~ .invalid-feedback, .form-check-inline .u-checkbox-input ~ .invalid-feedback, .u-switch-inline .u-checkbox-input ~ .invalid-feedback, .u-radio-wrapper-inline .u-checkbox-input ~ .invalid-feedback, .u-checkbox-inline .u-checkbox-input ~ .invalid-feedback, .form-check-inline .form-check-input ~ .u-form-hint-state-invalid, .u-switch-inline .form-check-input ~ .u-form-hint-state-invalid, .form-check-inline .u-switch ~ .u-form-hint-state-invalid, .u-switch-inline .u-switch ~ .u-form-hint-state-invalid, .form-check-inline .u-radio ~ .u-form-hint-state-invalid, .u-switch-inline .u-radio ~ .u-form-hint-state-invalid, .u-radio-wrapper-inline .form-check-input ~ .u-form-hint-state-invalid, .u-radio-wrapper-inline .u-switch ~ .u-form-hint-state-invalid, .u-radio-wrapper-inline .u-radio ~ .u-form-hint-state-invalid, .u-checkbox-inline .form-check-input ~ .u-form-hint-state-invalid, .u-checkbox-inline .u-switch ~ .u-form-hint-state-invalid, .u-checkbox-inline .u-radio ~ .u-form-hint-state-invalid, .form-check-inline .u-checkbox-input ~ .u-form-hint-state-invalid, .u-switch-inline .u-checkbox-input ~ .u-form-hint-state-invalid, .u-radio-wrapper-inline .u-checkbox-input ~ .u-form-hint-state-invalid, .u-checkbox-inline .u-checkbox-input ~ .u-form-hint-state-invalid {
+.form-check-inline .form-check-input ~ .invalid-feedback, .u-switch-inline .form-check-input ~ .invalid-feedback, .form-check-inline .u-switch ~ .invalid-feedback, .u-switch-inline .u-switch ~ .invalid-feedback, .form-check-inline .u-radio ~ .invalid-feedback, .u-switch-inline .u-radio ~ .invalid-feedback, .u-radio-wrapper-inline .form-check-input ~ .invalid-feedback, .u-radio-wrapper-inline .u-switch ~ .invalid-feedback, .u-radio-wrapper-inline .u-radio ~ .invalid-feedback, .u-checkbox-inline .form-check-input ~ .invalid-feedback, .u-checkbox-inline .u-switch ~ .invalid-feedback, .u-checkbox-inline .u-radio ~ .invalid-feedback, .form-check-inline .u-checkbox ~ .invalid-feedback, .u-switch-inline .u-checkbox ~ .invalid-feedback, .u-radio-wrapper-inline .u-checkbox ~ .invalid-feedback, .u-checkbox-inline .u-checkbox ~ .invalid-feedback, .form-check-inline .form-check-input ~ .u-form-hint-state-invalid, .u-switch-inline .form-check-input ~ .u-form-hint-state-invalid, .form-check-inline .u-switch ~ .u-form-hint-state-invalid, .u-switch-inline .u-switch ~ .u-form-hint-state-invalid, .form-check-inline .u-radio ~ .u-form-hint-state-invalid, .u-switch-inline .u-radio ~ .u-form-hint-state-invalid, .u-radio-wrapper-inline .form-check-input ~ .u-form-hint-state-invalid, .u-radio-wrapper-inline .u-switch ~ .u-form-hint-state-invalid, .u-radio-wrapper-inline .u-radio ~ .u-form-hint-state-invalid, .u-checkbox-inline .form-check-input ~ .u-form-hint-state-invalid, .u-checkbox-inline .u-switch ~ .u-form-hint-state-invalid, .u-checkbox-inline .u-radio ~ .u-form-hint-state-invalid, .form-check-inline .u-checkbox ~ .u-form-hint-state-invalid, .u-switch-inline .u-checkbox ~ .u-form-hint-state-invalid, .u-radio-wrapper-inline .u-checkbox ~ .u-form-hint-state-invalid, .u-checkbox-inline .u-checkbox ~ .u-form-hint-state-invalid {
   margin-left: 0.5em;
 }
 
@@ -16090,7 +16090,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     background-color: #1d273b;
     color: inherit;
   }
-  .theme-dark .form-check-input:not(:checked), .theme-dark .u-switch:not(:checked), .theme-dark .u-radio:not(:checked), .theme-dark .u-checkbox-input:not(:checked), .u-app-theme-dark .form-check-input:not(:checked), .u-app-theme-dark .u-switch:not(:checked), .u-app-theme-dark .u-radio:not(:checked), .u-app-theme-dark .u-checkbox-input:not(:checked),
+  .theme-dark .form-check-input:not(:checked), .theme-dark .u-switch:not(:checked), .theme-dark .u-radio:not(:checked), .theme-dark .u-checkbox:not(:checked), .u-app-theme-dark .form-check-input:not(:checked), .u-app-theme-dark .u-switch:not(:checked), .u-app-theme-dark .u-radio:not(:checked), .u-app-theme-dark .u-checkbox:not(:checked),
   .theme-dark .form-select,
   .theme-dark .u-select,
   .u-app-theme-dark .form-select,
@@ -16302,7 +16302,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
       background-color: #1d273b;
       color: inherit;
     }
-    .theme-dark-auto .form-check-input:not(:checked), .theme-dark-auto .u-switch:not(:checked), .theme-dark-auto .u-radio:not(:checked), .theme-dark-auto .u-checkbox-input:not(:checked),
+    .theme-dark-auto .form-check-input:not(:checked), .theme-dark-auto .u-switch:not(:checked), .theme-dark-auto .u-radio:not(:checked), .theme-dark-auto .u-checkbox:not(:checked),
     .theme-dark-auto .form-select,
     .theme-dark-auto .u-select,
     .theme-dark-auto .form-file-text,
@@ -20641,31 +20641,31 @@ Form control dark theme fix
 /*
 Form check
  */
-.form-check, .u-switch-wrapper, .u-radio-wrapper, .u-checkbox {
+.form-check, .u-switch-wrapper, .u-radio-wrapper, .u-checkbox-wrapper {
   user-select: none;
 }
-.form-check.form-check-highlight .form-check-input:not(:checked) ~ .form-check-label, .form-check.form-check-highlight .form-check-input:not(:checked) ~ .u-switch-label, .form-check-highlight.u-switch-wrapper .form-check-input:not(:checked) ~ .form-check-label, .form-check-highlight.u-switch-wrapper .form-check-input:not(:checked) ~ .u-switch-label, .form-check.form-check-highlight .u-switch:not(:checked) ~ .form-check-label, .form-check.form-check-highlight .u-switch:not(:checked) ~ .u-switch-label, .form-check-highlight.u-switch-wrapper .u-switch:not(:checked) ~ .form-check-label, .form-check-highlight.u-switch-wrapper .u-switch:not(:checked) ~ .u-switch-label, .form-check.form-check-highlight .form-check-input:not(:checked) ~ .u-radio-label, .form-check-highlight.u-switch-wrapper .form-check-input:not(:checked) ~ .u-radio-label, .form-check.form-check-highlight .u-switch:not(:checked) ~ .u-radio-label, .form-check-highlight.u-switch-wrapper .u-switch:not(:checked) ~ .u-radio-label, .form-check.form-check-highlight .u-radio:not(:checked) ~ .form-check-label, .form-check.form-check-highlight .u-radio:not(:checked) ~ .u-switch-label, .form-check-highlight.u-switch-wrapper .u-radio:not(:checked) ~ .form-check-label, .form-check-highlight.u-switch-wrapper .u-radio:not(:checked) ~ .u-switch-label, .form-check.form-check-highlight .u-radio:not(:checked) ~ .u-radio-label, .form-check-highlight.u-switch-wrapper .u-radio:not(:checked) ~ .u-radio-label, .form-check-highlight.u-radio-wrapper .form-check-input:not(:checked) ~ .form-check-label, .form-check-highlight.u-radio-wrapper .form-check-input:not(:checked) ~ .u-switch-label, .form-check-highlight.u-radio-wrapper .u-switch:not(:checked) ~ .form-check-label, .form-check-highlight.u-radio-wrapper .u-switch:not(:checked) ~ .u-switch-label, .form-check-highlight.u-radio-wrapper .form-check-input:not(:checked) ~ .u-radio-label, .form-check-highlight.u-radio-wrapper .u-switch:not(:checked) ~ .u-radio-label, .form-check-highlight.u-radio-wrapper .u-radio:not(:checked) ~ .form-check-label, .form-check-highlight.u-radio-wrapper .u-radio:not(:checked) ~ .u-switch-label, .form-check-highlight.u-radio-wrapper .u-radio:not(:checked) ~ .u-radio-label, .form-check.form-check-highlight .form-check-input:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-switch-wrapper .form-check-input:not(:checked) ~ .u-checkbox-label, .form-check.form-check-highlight .u-switch:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-switch-wrapper .u-switch:not(:checked) ~ .u-checkbox-label, .form-check.form-check-highlight .u-radio:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-switch-wrapper .u-radio:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-radio-wrapper .form-check-input:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-radio-wrapper .u-switch:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-radio-wrapper .u-radio:not(:checked) ~ .u-checkbox-label, .form-check.form-check-highlight .u-checkbox-input:not(:checked) ~ .form-check-label, .form-check.form-check-highlight .u-checkbox-input:not(:checked) ~ .u-switch-label, .form-check-highlight.u-switch-wrapper .u-checkbox-input:not(:checked) ~ .form-check-label, .form-check-highlight.u-switch-wrapper .u-checkbox-input:not(:checked) ~ .u-switch-label, .form-check.form-check-highlight .u-checkbox-input:not(:checked) ~ .u-radio-label, .form-check-highlight.u-switch-wrapper .u-checkbox-input:not(:checked) ~ .u-radio-label, .form-check-highlight.u-radio-wrapper .u-checkbox-input:not(:checked) ~ .form-check-label, .form-check-highlight.u-radio-wrapper .u-checkbox-input:not(:checked) ~ .u-switch-label, .form-check-highlight.u-radio-wrapper .u-checkbox-input:not(:checked) ~ .u-radio-label, .form-check.form-check-highlight .u-checkbox-input:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-switch-wrapper .u-checkbox-input:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-radio-wrapper .u-checkbox-input:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-checkbox .form-check-input:not(:checked) ~ .form-check-label, .form-check-highlight.u-checkbox .form-check-input:not(:checked) ~ .u-switch-label, .form-check-highlight.u-checkbox .u-switch:not(:checked) ~ .form-check-label, .form-check-highlight.u-checkbox .u-switch:not(:checked) ~ .u-switch-label, .form-check-highlight.u-checkbox .form-check-input:not(:checked) ~ .u-radio-label, .form-check-highlight.u-checkbox .u-switch:not(:checked) ~ .u-radio-label, .form-check-highlight.u-checkbox .u-radio:not(:checked) ~ .form-check-label, .form-check-highlight.u-checkbox .u-radio:not(:checked) ~ .u-switch-label, .form-check-highlight.u-checkbox .u-radio:not(:checked) ~ .u-radio-label, .form-check-highlight.u-checkbox .form-check-input:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-checkbox .u-switch:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-checkbox .u-radio:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-checkbox .u-checkbox-input:not(:checked) ~ .form-check-label, .form-check-highlight.u-checkbox .u-checkbox-input:not(:checked) ~ .u-switch-label, .form-check-highlight.u-checkbox .u-checkbox-input:not(:checked) ~ .u-radio-label, .form-check-highlight.u-checkbox .u-checkbox-input:not(:checked) ~ .u-checkbox-label {
+.form-check.form-check-highlight .form-check-input:not(:checked) ~ .form-check-label, .form-check.form-check-highlight .form-check-input:not(:checked) ~ .u-switch-label, .form-check-highlight.u-switch-wrapper .form-check-input:not(:checked) ~ .form-check-label, .form-check-highlight.u-switch-wrapper .form-check-input:not(:checked) ~ .u-switch-label, .form-check.form-check-highlight .u-switch:not(:checked) ~ .form-check-label, .form-check.form-check-highlight .u-switch:not(:checked) ~ .u-switch-label, .form-check-highlight.u-switch-wrapper .u-switch:not(:checked) ~ .form-check-label, .form-check-highlight.u-switch-wrapper .u-switch:not(:checked) ~ .u-switch-label, .form-check.form-check-highlight .form-check-input:not(:checked) ~ .u-radio-label, .form-check-highlight.u-switch-wrapper .form-check-input:not(:checked) ~ .u-radio-label, .form-check.form-check-highlight .u-switch:not(:checked) ~ .u-radio-label, .form-check-highlight.u-switch-wrapper .u-switch:not(:checked) ~ .u-radio-label, .form-check.form-check-highlight .u-radio:not(:checked) ~ .form-check-label, .form-check.form-check-highlight .u-radio:not(:checked) ~ .u-switch-label, .form-check-highlight.u-switch-wrapper .u-radio:not(:checked) ~ .form-check-label, .form-check-highlight.u-switch-wrapper .u-radio:not(:checked) ~ .u-switch-label, .form-check.form-check-highlight .u-radio:not(:checked) ~ .u-radio-label, .form-check-highlight.u-switch-wrapper .u-radio:not(:checked) ~ .u-radio-label, .form-check-highlight.u-radio-wrapper .form-check-input:not(:checked) ~ .form-check-label, .form-check-highlight.u-radio-wrapper .form-check-input:not(:checked) ~ .u-switch-label, .form-check-highlight.u-radio-wrapper .u-switch:not(:checked) ~ .form-check-label, .form-check-highlight.u-radio-wrapper .u-switch:not(:checked) ~ .u-switch-label, .form-check-highlight.u-radio-wrapper .form-check-input:not(:checked) ~ .u-radio-label, .form-check-highlight.u-radio-wrapper .u-switch:not(:checked) ~ .u-radio-label, .form-check-highlight.u-radio-wrapper .u-radio:not(:checked) ~ .form-check-label, .form-check-highlight.u-radio-wrapper .u-radio:not(:checked) ~ .u-switch-label, .form-check-highlight.u-radio-wrapper .u-radio:not(:checked) ~ .u-radio-label, .form-check.form-check-highlight .form-check-input:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-switch-wrapper .form-check-input:not(:checked) ~ .u-checkbox-label, .form-check.form-check-highlight .u-switch:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-switch-wrapper .u-switch:not(:checked) ~ .u-checkbox-label, .form-check.form-check-highlight .u-radio:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-switch-wrapper .u-radio:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-radio-wrapper .form-check-input:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-radio-wrapper .u-switch:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-radio-wrapper .u-radio:not(:checked) ~ .u-checkbox-label, .form-check.form-check-highlight .u-checkbox:not(:checked) ~ .form-check-label, .form-check.form-check-highlight .u-checkbox:not(:checked) ~ .u-switch-label, .form-check-highlight.u-switch-wrapper .u-checkbox:not(:checked) ~ .form-check-label, .form-check-highlight.u-switch-wrapper .u-checkbox:not(:checked) ~ .u-switch-label, .form-check.form-check-highlight .u-checkbox:not(:checked) ~ .u-radio-label, .form-check-highlight.u-switch-wrapper .u-checkbox:not(:checked) ~ .u-radio-label, .form-check-highlight.u-radio-wrapper .u-checkbox:not(:checked) ~ .form-check-label, .form-check-highlight.u-radio-wrapper .u-checkbox:not(:checked) ~ .u-switch-label, .form-check-highlight.u-radio-wrapper .u-checkbox:not(:checked) ~ .u-radio-label, .form-check.form-check-highlight .u-checkbox:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-switch-wrapper .u-checkbox:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-radio-wrapper .u-checkbox:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-checkbox-wrapper .form-check-input:not(:checked) ~ .form-check-label, .form-check-highlight.u-checkbox-wrapper .form-check-input:not(:checked) ~ .u-switch-label, .form-check-highlight.u-checkbox-wrapper .u-switch:not(:checked) ~ .form-check-label, .form-check-highlight.u-checkbox-wrapper .u-switch:not(:checked) ~ .u-switch-label, .form-check-highlight.u-checkbox-wrapper .form-check-input:not(:checked) ~ .u-radio-label, .form-check-highlight.u-checkbox-wrapper .u-switch:not(:checked) ~ .u-radio-label, .form-check-highlight.u-checkbox-wrapper .u-radio:not(:checked) ~ .form-check-label, .form-check-highlight.u-checkbox-wrapper .u-radio:not(:checked) ~ .u-switch-label, .form-check-highlight.u-checkbox-wrapper .u-radio:not(:checked) ~ .u-radio-label, .form-check-highlight.u-checkbox-wrapper .form-check-input:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-checkbox-wrapper .u-switch:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-checkbox-wrapper .u-radio:not(:checked) ~ .u-checkbox-label, .form-check-highlight.u-checkbox-wrapper .u-checkbox:not(:checked) ~ .form-check-label, .form-check-highlight.u-checkbox-wrapper .u-checkbox:not(:checked) ~ .u-switch-label, .form-check-highlight.u-checkbox-wrapper .u-checkbox:not(:checked) ~ .u-radio-label, .form-check-highlight.u-checkbox-wrapper .u-checkbox:not(:checked) ~ .u-checkbox-label {
   color: var(--u-muted);
 }
-.form-check .form-check-label-off, .u-switch-wrapper .form-check-label-off, .u-radio-wrapper .form-check-label-off, .u-checkbox .form-check-label-off {
+.form-check .form-check-label-off, .u-switch-wrapper .form-check-label-off, .u-radio-wrapper .form-check-label-off, .u-checkbox-wrapper .form-check-label-off {
   color: var(--u-muted);
 }
-.form-check .form-check-input:checked ~ .form-check-label-off, .u-switch-wrapper .form-check-input:checked ~ .form-check-label-off, .form-check .u-switch:checked ~ .form-check-label-off, .u-switch-wrapper .u-switch:checked ~ .form-check-label-off, .form-check .u-radio:checked ~ .form-check-label-off, .u-switch-wrapper .u-radio:checked ~ .form-check-label-off, .u-radio-wrapper .form-check-input:checked ~ .form-check-label-off, .u-radio-wrapper .u-switch:checked ~ .form-check-label-off, .u-radio-wrapper .u-radio:checked ~ .form-check-label-off, .form-check .u-checkbox-input:checked ~ .form-check-label-off, .u-switch-wrapper .u-checkbox-input:checked ~ .form-check-label-off, .u-radio-wrapper .u-checkbox-input:checked ~ .form-check-label-off, .u-checkbox .form-check-input:checked ~ .form-check-label-off, .u-checkbox .u-switch:checked ~ .form-check-label-off, .u-checkbox .u-radio:checked ~ .form-check-label-off, .u-checkbox .u-checkbox-input:checked ~ .form-check-label-off {
+.form-check .form-check-input:checked ~ .form-check-label-off, .u-switch-wrapper .form-check-input:checked ~ .form-check-label-off, .form-check .u-switch:checked ~ .form-check-label-off, .u-switch-wrapper .u-switch:checked ~ .form-check-label-off, .form-check .u-radio:checked ~ .form-check-label-off, .u-switch-wrapper .u-radio:checked ~ .form-check-label-off, .u-radio-wrapper .form-check-input:checked ~ .form-check-label-off, .u-radio-wrapper .u-switch:checked ~ .form-check-label-off, .u-radio-wrapper .u-radio:checked ~ .form-check-label-off, .form-check .u-checkbox:checked ~ .form-check-label-off, .u-switch-wrapper .u-checkbox:checked ~ .form-check-label-off, .u-radio-wrapper .u-checkbox:checked ~ .form-check-label-off, .u-checkbox-wrapper .form-check-input:checked ~ .form-check-label-off, .u-checkbox-wrapper .u-switch:checked ~ .form-check-label-off, .u-checkbox-wrapper .u-radio:checked ~ .form-check-label-off, .u-checkbox-wrapper .u-checkbox:checked ~ .form-check-label-off {
   display: none;
 }
-.form-check .form-check-input:not(:checked) ~ .form-check-label-on, .u-switch-wrapper .form-check-input:not(:checked) ~ .form-check-label-on, .form-check .u-switch:not(:checked) ~ .form-check-label-on, .u-switch-wrapper .u-switch:not(:checked) ~ .form-check-label-on, .form-check .u-radio:not(:checked) ~ .form-check-label-on, .u-switch-wrapper .u-radio:not(:checked) ~ .form-check-label-on, .u-radio-wrapper .form-check-input:not(:checked) ~ .form-check-label-on, .u-radio-wrapper .u-switch:not(:checked) ~ .form-check-label-on, .u-radio-wrapper .u-radio:not(:checked) ~ .form-check-label-on, .form-check .u-checkbox-input:not(:checked) ~ .form-check-label-on, .u-switch-wrapper .u-checkbox-input:not(:checked) ~ .form-check-label-on, .u-radio-wrapper .u-checkbox-input:not(:checked) ~ .form-check-label-on, .u-checkbox .form-check-input:not(:checked) ~ .form-check-label-on, .u-checkbox .u-switch:not(:checked) ~ .form-check-label-on, .u-checkbox .u-radio:not(:checked) ~ .form-check-label-on, .u-checkbox .u-checkbox-input:not(:checked) ~ .form-check-label-on {
+.form-check .form-check-input:not(:checked) ~ .form-check-label-on, .u-switch-wrapper .form-check-input:not(:checked) ~ .form-check-label-on, .form-check .u-switch:not(:checked) ~ .form-check-label-on, .u-switch-wrapper .u-switch:not(:checked) ~ .form-check-label-on, .form-check .u-radio:not(:checked) ~ .form-check-label-on, .u-switch-wrapper .u-radio:not(:checked) ~ .form-check-label-on, .u-radio-wrapper .form-check-input:not(:checked) ~ .form-check-label-on, .u-radio-wrapper .u-switch:not(:checked) ~ .form-check-label-on, .u-radio-wrapper .u-radio:not(:checked) ~ .form-check-label-on, .form-check .u-checkbox:not(:checked) ~ .form-check-label-on, .u-switch-wrapper .u-checkbox:not(:checked) ~ .form-check-label-on, .u-radio-wrapper .u-checkbox:not(:checked) ~ .form-check-label-on, .u-checkbox-wrapper .form-check-input:not(:checked) ~ .form-check-label-on, .u-checkbox-wrapper .u-switch:not(:checked) ~ .form-check-label-on, .u-checkbox-wrapper .u-radio:not(:checked) ~ .form-check-label-on, .u-checkbox-wrapper .u-checkbox:not(:checked) ~ .form-check-label-on {
   display: none;
 }
 
-.form-check-input, .u-switch, .u-radio, .u-checkbox-input {
+.form-check-input, .u-switch, .u-radio, .u-checkbox {
   background-size: 1rem;
   margin-top: 0.125rem;
 }
-.form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox-input, .u-switch-wrapper .u-checkbox-input {
+.form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox, .u-switch-wrapper .u-checkbox {
   transition: background-color 0.3s, background-position 0.3s;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox-input, .u-switch-wrapper .u-checkbox-input {
+  .form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox, .u-switch-wrapper .u-checkbox {
     transition: none;
   }
 }
@@ -20689,14 +20689,14 @@ Form check
 .form-check-single {
   margin: 0;
 }
-.form-check-single .form-check-input, .form-check-single .u-switch, .form-check-single .u-radio, .form-check-single .u-checkbox-input {
+.form-check-single .form-check-input, .form-check-single .u-switch, .form-check-single .u-radio, .form-check-single .u-checkbox {
   margin: 0;
 }
 
 /*
 Form switch
  */
-.form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox-input, .u-switch-wrapper .u-checkbox-input {
+.form-switch .form-check-input, .u-switch-wrapper .form-check-input, .form-switch .u-switch, .u-switch-wrapper .u-switch, .form-switch .u-radio, .u-switch-wrapper .u-radio, .form-switch .u-checkbox, .u-switch-wrapper .u-checkbox {
   height: 1.125rem;
   margin-top: 0.0625rem;
 }
@@ -20705,7 +20705,7 @@ Form switch
   padding-left: 3.5rem;
   min-height: 1.5rem;
 }
-.form-switch-lg .form-check-input, .form-switch-lg .u-switch, .form-switch-lg .u-radio, .form-switch-lg .u-checkbox-input {
+.form-switch-lg .form-check-input, .form-switch-lg .u-switch, .form-switch-lg .u-radio, .form-switch-lg .u-checkbox {
   height: 1.5rem;
   width: 2.75rem;
   background-size: 1.5rem;
@@ -20716,7 +20716,7 @@ Form switch
 }
 
 /*Correction of Form-check position*/
-.form-check-input:checked, .u-switch:checked, .u-radio:checked, .u-checkbox-input:checked {
+.form-check-input:checked, .u-switch:checked, .u-radio:checked, .u-checkbox:checked {
   border: none;
 }
 
@@ -25549,112 +25549,112 @@ Antialiasing
   padding-left: 6px;
 }
 
-.u-checkbox-input-color-primary:checked {
+.u-checkbox-color-primary:checked {
   background-color: #206bc4 !important;
 }
-.u-checkbox-input-color-secondary:checked {
+.u-checkbox-color-secondary:checked {
   background-color: #616876 !important;
 }
-.u-checkbox-input-color-success:checked {
+.u-checkbox-color-success:checked {
   background-color: #2fb344 !important;
 }
-.u-checkbox-input-color-info:checked {
+.u-checkbox-color-info:checked {
   background-color: #4299e1 !important;
 }
-.u-checkbox-input-color-warning:checked {
+.u-checkbox-color-warning:checked {
   background-color: #f76707 !important;
 }
-.u-checkbox-input-color-danger:checked {
+.u-checkbox-color-danger:checked {
   background-color: #d63939 !important;
 }
-.u-checkbox-input-color-light:checked {
+.u-checkbox-color-light:checked {
   background-color: #f8fafc !important;
 }
-.u-checkbox-input-color-dark:checked {
+.u-checkbox-color-dark:checked {
   background-color: #1d273b !important;
 }
-.u-checkbox-input-color-muted:checked {
+.u-checkbox-color-muted:checked {
   background-color: #616876 !important;
 }
-.u-checkbox-input-color-blue:checked {
+.u-checkbox-color-blue:checked {
   background-color: #206bc4 !important;
 }
-.u-checkbox-input-color-azure:checked {
+.u-checkbox-color-azure:checked {
   background-color: #4299e1 !important;
 }
-.u-checkbox-input-color-indigo:checked {
+.u-checkbox-color-indigo:checked {
   background-color: #4263eb !important;
 }
-.u-checkbox-input-color-purple:checked {
+.u-checkbox-color-purple:checked {
   background-color: #ae3ec9 !important;
 }
-.u-checkbox-input-color-pink:checked {
+.u-checkbox-color-pink:checked {
   background-color: #d6336c !important;
 }
-.u-checkbox-input-color-red:checked {
+.u-checkbox-color-red:checked {
   background-color: #d63939 !important;
 }
-.u-checkbox-input-color-orange:checked {
+.u-checkbox-color-orange:checked {
   background-color: #f76707 !important;
 }
-.u-checkbox-input-color-yellow:checked {
+.u-checkbox-color-yellow:checked {
   background-color: #f59f00 !important;
 }
-.u-checkbox-input-color-lime:checked {
+.u-checkbox-color-lime:checked {
   background-color: #74b816 !important;
 }
-.u-checkbox-input-color-green:checked {
+.u-checkbox-color-green:checked {
   background-color: #2fb344 !important;
 }
-.u-checkbox-input-color-teal:checked {
+.u-checkbox-color-teal:checked {
   background-color: #0ca678 !important;
 }
-.u-checkbox-input-color-cyan:checked {
+.u-checkbox-color-cyan:checked {
   background-color: #17a2b8 !important;
 }
-.u-checkbox-input-color-facebook:checked {
+.u-checkbox-color-facebook:checked {
   background-color: #1877F2 !important;
 }
-.u-checkbox-input-color-twitter:checked {
+.u-checkbox-color-twitter:checked {
   background-color: #1da1f2 !important;
 }
-.u-checkbox-input-color-linkedin:checked {
+.u-checkbox-color-linkedin:checked {
   background-color: #0a66c2 !important;
 }
-.u-checkbox-input-color-google:checked {
+.u-checkbox-color-google:checked {
   background-color: #dc4e41 !important;
 }
-.u-checkbox-input-color-youtube:checked {
+.u-checkbox-color-youtube:checked {
   background-color: #ff0000 !important;
 }
-.u-checkbox-input-color-vimeo:checked {
+.u-checkbox-color-vimeo:checked {
   background-color: #1ab7ea !important;
 }
-.u-checkbox-input-color-dribbble:checked {
+.u-checkbox-color-dribbble:checked {
   background-color: #ea4c89 !important;
 }
-.u-checkbox-input-color-github:checked {
+.u-checkbox-color-github:checked {
   background-color: #181717 !important;
 }
-.u-checkbox-input-color-instagram:checked {
+.u-checkbox-color-instagram:checked {
   background-color: #e4405f !important;
 }
-.u-checkbox-input-color-pinterest:checked {
+.u-checkbox-color-pinterest:checked {
   background-color: #bd081c !important;
 }
-.u-checkbox-input-color-vk:checked {
+.u-checkbox-color-vk:checked {
   background-color: #6383a8 !important;
 }
-.u-checkbox-input-color-rss:checked {
+.u-checkbox-color-rss:checked {
   background-color: #ffa500 !important;
 }
-.u-checkbox-input-color-flickr:checked {
+.u-checkbox-color-flickr:checked {
   background-color: #0063dc !important;
 }
-.u-checkbox-input-color-bitbucket:checked {
+.u-checkbox-color-bitbucket:checked {
   background-color: #0052cc !important;
 }
-.u-checkbox-input-color-tabler:checked {
+.u-checkbox-color-tabler:checked {
   background-color: #206bc4 !important;
 }
 .u-checkbox-description-color-primary {

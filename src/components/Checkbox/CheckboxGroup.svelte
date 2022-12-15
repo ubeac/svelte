@@ -1,50 +1,60 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
-
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors, Items } from '$lib/types'
-	import { classname, createOptions } from '$lib/utils'
-
+	import { El } from '../Base'
 	import Checkbox from './Checkbox.svelte'
+	import type { CheckboxGroupProps } from './Checkbox.types'
+
+	type $$Props = CheckboxGroupProps
 
 	/**
-	 * Set the color of checkbox when it is checked
+	 * Set color for the selected Checkbox's background color
 	 */
-	export let color: Colors = 'primary'
+	export let color: $$Props['color'] = undefined
 
 	/**
-	 * Set checkbox group to show in a row
+	 * Set Css Prefix for the CheckboxGroup
 	 */
-	export let inline: boolean = false
+	export let cssPrefix: $$Props['cssPrefix'] = 'checkbox-group'
 
 	/**
-	 * Checkbox group items
+	 * Set inline to sohw inline Checkboxes
 	 */
-	export let items: Items = []
+	export let inline: $$Props['inline'] = undefined
 
 	/**
-	 * The key in the items that each checkbox is related to
+	 * Array of items to be bound to the Checkboxes
 	 */
-	export let key: string = 'key'
+	export let items: $$Props['items'] = undefined
 
 	/**
-	 * Set the field that should be used as each checkbox label
+	 * The value of CheckboxGroup
 	 */
-	export let text: string = 'text'
+	export let value: $$Props['value'] = []
 
-	/**
-	 * Binding result of selected items
-	 */
-	export let value: any = []
+	let element: HTMLElement
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	$: checkboxProps = {
+		inline,
+		name: element?.id,
+		color,
+	}
 
-	$: ({ options, getKey, getText } = createOptions({ items, key, text }))
-	$: classes = classname('checkbox-group', $$props.class, true)
+	function onChange(option: any) {
+		if (value!.includes(option)) {
+			value = value?.filter((val) => val !== option)
+		} else {
+			value = [...value!, option]
+		}
+	}
 </script>
 
-<div class={classes}>
-	{#each $options as option}
-		<Checkbox bind:group={value} {inline} {forwardEvents} text={getText(option)} key={getKey(option)} {color} />
-	{/each}
-</div>
+<El {cssPrefix} bind:element {...$$restProps}>
+	{#if items}
+		{#each items as item, index}
+			<Checkbox {...checkboxProps} value={value?.includes(item)} on:change={() => onChange(item)}>
+				<slot {index} {item}>{item}</slot>
+			</Checkbox>
+		{/each}
+	{:else}
+		<slot />
+	{/if}
+</El>

@@ -3,9 +3,14 @@ import type { ElProps } from '../Base'
 export interface CheckboxProps extends Partial<ElProps> {
 	color?: Colors
 	description?: string
-	group?: any
+	label?: string
 	inline?: boolean
-	key?: string
-	text?: string
 	value?: boolean
+}
+
+export interface CheckboxGroupProps extends Partial<ElProps> {
+	inline?: boolean
+	color?: Colors
+	items?: Array<any>
+	value?: Array<any>
 }
