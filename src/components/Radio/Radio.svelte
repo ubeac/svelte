@@ -1,84 +1,89 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '$lib/components'
+	import type { RadioProps } from '$lib/components'
 
-	import { nanoid } from 'nanoid'
+	type $$Props = RadioProps
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	export let color: $$Props['color'] = undefined
 
 	/**
-	 * Forward all native Events
+	 * Set Css Prefix for the Input
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let cssPrefix: $$Props['cssPrefix'] = 'radio'
 
 	/**
-	 * Radio color
+	 * Set the radio disabled
 	 */
-	export let color: Colors = 'default'
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
-	 * Description for Radio button
+	 * Set the radio as inline component
 	 */
-	export let description: string | undefined = undefined
+	export let inline: $$Props['inline'] = undefined
 
 	/**
-	 * Show Multiple radio buttons in same line
+	 * Put your radios on the opposite side with reverse property.
 	 */
-	export let inline: boolean = false
+	export let reverse: $$Props['reverse'] = undefined
 
 	/**
-	 * Set id of radio element
+	 * Set label of the radio
 	 */
-	export let id: string = 'radio-' + nanoid(10)
+	export let label: $$Props['label'] = undefined
 
 	/**
-	 * Radio name
+	 * Set name of the radio
 	 */
-	export let name: string | undefined = undefined
+	export let name: $$Props['name'] = undefined
 
 	/**
-	 * Set text of radio
+	 * Set the radio read-only
 	 */
-	export let text: string | undefined = undefined
+	export let readonly: $$Props['readonly'] = undefined
 
 	/**
-	 * Radio checked status
+	 * Set the radio checked
 	 */
-	export let value: boolean | undefined = undefined
+	export let checked: $$Props['checked'] = false
 
-	const dispatch = createEventDispatcher()
+	/**
+	 * the value of radio
+	 */
+	export let value: $$Props['value'] = undefined
 
-	function change(event: any) {
-		value = event.target.checked
-		dispatch('changed', value)
+	/**
+	 * id for inner input radio to be used outside the component
+	 */
+	let labelForId: $$Props['for'] = undefined
+	export { labelForId as for }
+
+	let inputElement: any = null
+	let cssProps: any = {}
+	let otherProps: any = {}
+
+	$: {
+		labelForId = inputElement?.id ?? ''
+
+		cssProps = { color }
+
+		otherProps = {
+			cssPrefix,
+			disabled,
+			readonly,
+			value,
+			checked,
+			name: name ?? inputElement?.id,
+		}
 	}
-
-	$: classes = classname('radio', { inline }, $$props.class, true)
 </script>
 
-<div class={classes}>
-	<input
-		type="radio"
-		{name}
-		{value}
-		{id}
-		checked={value}
-		use:forwardEvents
-		{...$$restProps}
-		class={classname('radio-input', { color }, undefined, true)}
-		on:change={change} />
-	<label for={id} class={classname('radio-label')}>
+<El cssPrefix="{cssPrefix}-wrapper" cssProps={{ inline, reverse }}>
+	<El tag="input" type="radio" bind:element={inputElement} {...$$restProps} {...otherProps} {cssProps} on:change />
+	<El tag="label" cssPrefix="{cssPrefix}-label" for={labelForId}>
 		<slot>
-			{text}
+			{#if label}
+				{label}
+			{/if}
 		</slot>
-	</label>
-	{#if description || $$slots['description']}
-		<div class={classname('radio-description', {})}>
-			<slot name="description">
-				{description}
-			</slot>
-		</div>
-	{/if}
-</div>
+	</El>
+</El>
