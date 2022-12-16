@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { El, type ElProps } from '$lib/components'
-	import type { CheckboxProps } from '$lib/components'
+
+	import type { CheckboxProps } from './Checkbox.types'
 
 	type $$Props = CheckboxProps
 

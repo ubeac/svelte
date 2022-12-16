@@ -6,5 +6,5 @@
 </script>
 
 {#each COLORS as color}
-	<Checkbox bind:value={checked} text={color} {color} />
+	<Checkbox bind:value={checked} label={color} {color} />
 {/each}

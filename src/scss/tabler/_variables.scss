@@ -14,6 +14,7 @@ $prefix-button: $prefix + 'button' !default;
 $prefix-breadcrumb: $prefix + 'breadcrumb' !default;
 $prefix-card: $prefix + 'card' !default;
 $prefix-checkbox: $prefix + 'checkbox' !default;
+$prefix-checkbox-group: $prefix + 'checkbox-group' !default;
 $prefix-divider: $prefix + 'divider' !default;
 $prefix-dot: $prefix + 'dot' !default;
 $prefix-footer: $prefix + 'footer' !default;
@@ -41,3 +42,5 @@ $prefix-textarea: $prefix + 'textarea' !default;
 $prefix-textarea-wrapper: $prefix-textarea + '-wrapper' !default;
 // Form
 $prefix-form-field: $prefix + 'form-field' !default;
+$prefix-form-checkbox: $prefix + 'form-checkbox' !default;
+$prefix-form-checkbox-group: $prefix + 'form-checkbox-group' !default;

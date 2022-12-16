@@ -4,28 +4,30 @@
 	let items = [
 		{
 			name: 'Apple',
-			value: 'Apple',
+			value: 'a',
 		},
 		{
 			name: 'Orange',
-			value: 'Orange',
+			value: 'o',
 		},
 		{
 			name: 'Peach',
-			value: 'Peach',
+			value: 'p',
 		},
 		{
 			name: 'Banana',
-			value: 'Banana',
+			value: 'b',
 		},
 		{
 			name: 'Apricot',
-			value: 'Apricot',
+			value: 'ap',
 		},
 	]
 	let value: string[] = []
 </script>
 
-<CheckboxGroup {items} bind:value text="name" key="value" />
+<CheckboxGroup {items} bind:value let:item let:index>
+	{index}- <b>{item.name}</b> ({item.value})
+</CheckboxGroup>
 
-<span>{value}</span>
+<span>{JSON.stringify(value)}</span>
