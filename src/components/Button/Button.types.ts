@@ -20,9 +20,3 @@ export interface ButtonProps extends Partial<ElProps> {
 	tile?: boolean
 	ghost?: boolean
 }
-
-declare type ButtonGroupSizes = 'sm' | 'lg' | 'md' | undefined
-export interface ButtonGroupProps extends Partial<ElProps> {
-	size?: ButtonGroupSizes
-	vertical?: boolean
-}
