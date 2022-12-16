@@ -81,8 +81,7 @@
 		absolute,
 	}
 </script>
-	
-{open}
+
 <El {...$$restProps} {tag} {cssPrefix} {cssProps} on:click={() => hide()}>
 	<El cssPrefix="{cssPrefix}-container">
 		<slot />
