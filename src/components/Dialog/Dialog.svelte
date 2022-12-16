@@ -4,45 +4,57 @@
 	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
 	import { classname } from '@ubeac/svelte/utils'
 
-	import type { DialogPlacements, DialogSizes } from './Dialog.types'
-  import { browser } from '$app/environment'
+	import { browser } from '$app/environment'
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	import { El } from '../Base'
+	import type { DialogPlacements, DialogSizes } from './Dialog.types'
+
+	type $$Props = DialogProps
 
 	/**
 	 * Make page's color Dimmer
 	 */
-	export let backdrop: boolean = true
+	export let backdrop: $$Props['backdrop'] = true
+
+	/**
+	 * TODO
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'dialog'
+
+	/**
+	 * TODO
+	 */
+	export let tag: $$Props['tag'] = 'div'
 
 	/**
 	 * set position relative to it's parent (instead of entire screen)
 	 */
-	export let absolute: boolean = false
+	export let absolute: $$Props['absolute'] = undefined
 
 	/**
 	 * Controls open/close state of Dialog
 	 */
-	export let open: boolean = false
+	export let open: $$Props['open'] = undefined
 
 	/**
 	 * Do not close dialog if user clicked outside of Dialog Component
 	 */
-	export let persistent: boolean = false
+	export let persistent: $$Props['persistent'] = undefined
 
 	/**
 	 * Set position of Dialog
 	 */
-	export let placement: DialogPlacements = 'top'
+	export let placement: $$Props['placement'] = 'top'
 
 	/**
 	 * Makes dialog's body scrollable
 	 */
-	export let scrollable: boolean = false
+	export let scrollable: $$Props['scrollable'] = undefined
 
 	/**
 	 * Changes width of Dialog
 	 */
-	export let size: DialogSizes = 'md'
+	export let size: $$Props['size'] = 'md'
 
 	function hide(force = false) {
 		if (!force && persistent) return
@@ -51,25 +63,32 @@
 
 	setContext('DIALOG', { hide })
 
-	$: if(browser) {
-		if(open) {
-		document.body.classList.add(classname('body-dialog-open') ?? '');
-	} else {
-		if(document.body.classList.contains(classname('body-dialog-open') ?? '')) {
-			document.body.classList.remove(classname('body-dialog-open') ?? '')
+	$: if (browser) {
+		if (open) {
+			document.body.classList.add(classname('body-dialog-open') ?? '')
+		} else {
+			if (document.body.classList.contains(classname('body-dialog-open') ?? '')) {
+				document.body.classList.remove(classname('body-dialog-open') ?? '')
+			}
 		}
 	}
-}
 
-	$: classes = classname('dialog', { placement, scrollable, size, open, absolute }, $$props.class, true)
+	$: cssProps = {
+		placement,
+		scrollable,
+		size,
+		open,
+		absolute,
+	}
 </script>
-
-<div on:click={() => hide()} use:forwardEvents {...$$restProps} class={classes}>
-	<div class={classname('dialog-container')}>
+	
+{open}
+<El {...$$restProps} {tag} {cssPrefix} {cssProps} on:click={() => hide()}>
+	<El cssPrefix="{cssPrefix}-container">
 		<slot />
-	</div>
-</div>
+	</El>
+</El>
 
 {#if backdrop}
-	<div class={classname('dialog-backdrop', { open, absolute })} />
+	<El cssPrefix="{cssPrefix}-backdrop" cssProps={{ open, absolute }} />
 {/if}
