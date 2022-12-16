@@ -56,6 +56,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'button-group',
+				title: 'ButtonGroup',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'cards',
 				title: 'Card',
 				icon: 'star',
