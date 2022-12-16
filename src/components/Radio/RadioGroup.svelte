@@ -1,77 +1,64 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
+	import { El, Radio } from '$lib/components'
+	import type { RadioGroupProps } from '$lib/components'
 
-	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
-	import { nanoid } from 'nanoid'
-
-	import { FormRadio } from '$lib/components'
-	import type { Colors } from '$lib/types'
-	import { classname, createOptions } from '$lib/utils'
-
-	import Radio from './Radio.svelte'
+	type $$Props = RadioGroupProps
+	/**
+	 * Set color for the selected Radio's background color
+	 */
+	export let color: $$Props['color'] = undefined
 
 	/**
-	 * Set Color of RadioGroup
+	 * Set Css Prefix for the RadioGroup
 	 */
-	export let color: Colors = 'default'
+	export let cssPrefix: $$Props['cssPrefix'] = 'radio-group'
 
 	/**
-	 * Forwards All native events.
+	 * Set inline to sohw inline Radios
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let inline: $$Props['inline'] = undefined
 
 	/**
-	 * Set View of RadioGroup
+	 * Array of items to be bound to the Radios
 	 */
-	export let inline: boolean = false
+	export let items: $$Props['items'] = undefined
 
 	/**
-	 * Select items
+	 * Set reverse to show reversed Radios
 	 */
-	export let items: any = []
+	export let reverse: $$Props['reverse'] = undefined
 
 	/**
-	 * Set the field that selected options are bound to
+	 * The value of RadioGroup
 	 */
-	export let key: string = 'value'
+	export let value: $$Props['value'] = undefined
 
-	/**
-	 * Set name of RadioGroup
-	 */
-	export let name: string = 'radio-group-' + nanoid(5)
+	let element: any = null
+	let radioProps: any = {}
 
-	/**
-	 * Set the field that should be used as each option label
-	 */
-	export let text: string = 'text'
-
-	/**
-	 * Value that selected radio text is bound to
-	 */
-	export let value: number | string | undefined = undefined
-
-	const dispatch = createEventDispatcher()
-
-	function onChange(checked: any, option: any) {
-		if (checked) value = getKey(option)
-		dispatch('changed', value)
+	$: {
+		radioProps = {
+			inline,
+			reverse,
+			name: element?.id,
+			color,
+		}
 	}
 
-	$: ({ options, getKey, getText, isSelected } = createOptions({ items, key, text }))
-
-	$: classes = classname('radio-group', {}, $$props.class)
+	const onChange = (event: any) => {
+		const selectedIndex = event.target.value
+		value = items && selectedIndex ? items[selectedIndex] : undefined
+	}
 </script>
 
-<div class={classes} role="radiogroup">
-	{#each $options as option}
-		<Radio
-			{forwardEvents}
-			{name}
-			{color}
-			{inline}
-			value={isSelected(option, value)}
-			text={getText(option)}
-			on:changed={({ detail }) => onChange(detail, option)} />
-	{/each}
-</div>
+<El {cssPrefix} bind:element {...$$restProps}>
+	{#if items}
+		{#each items as item, index}
+			<Radio {...radioProps} value={index} checked={value === item} on:change={onChange}>
+				<slot {index} {item}>{item}</slot>
+			</Radio>
+		{/each}
+	{:else}
+		<slot />
+	{/if}
+</El>
