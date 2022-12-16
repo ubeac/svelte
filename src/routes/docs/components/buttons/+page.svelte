@@ -7,7 +7,6 @@
 	import ButtonGhost from './ButtonGhost.svelte'
 	import ButtonGroup from './ButtonGroup.svelte'
 	import ButtonGroupSizes from './ButtonGroupSizes.svelte'
-	import ButtonGroupColors from './ButtonGroupColors.svelte'
 	import ButtonGroupLotsOfItems from './ButtonGroupLotsOfItems.svelte'
 	import ButtonIcon from './ButtonIcon.svelte'
 	import ButtonLarge from './ButtonLarge.svelte'
@@ -132,13 +131,6 @@
 </Doc>
 <Preview src="./ButtonGroupSizes.svelte">
 	<ButtonGroupSizes />
-</Preview>
-
-<Doc title="Button Group Colros">
-	Instead of applying button color classes to every button in a group, just set color property to ButtonGroup.
-</Doc>
-<Preview src="./ButtonGroupColors.svelte">
-	<ButtonGroupColors />
 </Preview>
 
 <Doc title="Button Group Icons">Set an icon in to ButtonGroup.</Doc>

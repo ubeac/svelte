@@ -3,9 +3,9 @@
 //
 
 $props: (
-	null: '.btn-group',
 	size: (sm: '.btn-group-sm', md: '.btn-group-md', lg: '.btn-group-lg'),
-	vertical: '.btn-group-vertical'
+	vertical: (null:'.btn-group-vertical',
+		size: (sm: '.btn-group-vertical-sm', md: '.btn-group-vertical-md', lg: '.btn-group-vertical-lg'))
 );
 
 $button-group-sizes: 'sm' 'lg';
@@ -13,26 +13,7 @@ $button-group-sizes: 'sm' 'lg';
 .#{$prefix-button-group} {
 	@include apply-props($props);
 
-	flex-wrap: wrap;
-
-	@each $size in $button-group-sizes {
-		&-size-#{$size} {
-			@extend .btn-group-#{$size};
-		}
-
-		&-vertical-size-#{$size} {
-			@extend .btn-group-#{$size};
-		}
-	}
-
-	@each $color,
-	$value in $theme-colors {
-		&-color-#{$color}>.btn {
-			@extend .btn-#{$color};
-		}
-
-		&-vertical-color-#{$color}>.btn {
-			@extend .btn-#{$color};
-		}
+	&:not(.#{$prefix-button-group}-vertical) {
+		@extend .btn-group;
 	}
 }

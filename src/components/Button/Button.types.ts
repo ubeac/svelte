@@ -21,9 +21,8 @@ export interface ButtonProps extends Partial<ElProps> {
 	ghost?: boolean
 }
 
-declare type ButtonGroupSizes = 'sm' | 'lg' | undefined
-export interface ButtonGroupProps extends Partial<ElProps> {	
-	size?:ButtonGroupSizes,
-	vertical?:boolean,
-	color?: Colors
+declare type ButtonGroupSizes = 'sm' | 'lg' | 'md' | undefined
+export interface ButtonGroupProps extends Partial<ElProps> {
+	size?: ButtonGroupSizes
+	vertical?: boolean
 }

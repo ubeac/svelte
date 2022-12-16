@@ -2,7 +2,7 @@
 	import { Button, ButtonGroup } from '@ubeac/svelte'
 </script>
 
-<ButtonGroup wrap>
+<ButtonGroup>
 	<Button>One</Button>
 	<Button>Two</Button>
 	<Button>Three</Button>
