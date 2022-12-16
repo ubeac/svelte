@@ -8,12 +8,14 @@
 	export let cssPrefix: $$Props['cssPrefix'] = 'form-checkbox-group'
 	export let inline: $$Props['inline'] = undefined
 	export let items: $$Props['items'] = undefined
+	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
 
 	$: checkboxGroupProps = {
 		color,
 		inline,
 		items,
+		reverse,
 	}
 </script>
 

@@ -18,6 +18,10 @@
 	 * Description of checkbox
 	 */
 	export let description: $$Props['description'] = undefined
+	/**
+	 * Set the checkbox disabled
+	 */
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
 	 * Show multiple items in same line
@@ -28,6 +32,11 @@
 	 * Label of checkbox
 	 */
 	export let label: $$Props['label'] = ''
+
+	/**
+	 * Put your checkboxes on the opposite side with reverse property.
+	 */
+	export let reverse: $$Props['reverse'] = undefined
 
 	/**
 	 * Checked status of checkbox
@@ -44,6 +53,7 @@
 		cssPrefix: cssPrefix + '-wrapper',
 		cssProps: {
 			inline,
+			reverse,
 		},
 	}
 
@@ -51,10 +61,11 @@
 		...$$restProps,
 		tag: 'input',
 		cssPrefix,
+		disabled,
 		type: 'checkbox',
 		checked: value,
 		cssProps: {
-			color
+			color,
 		},
 	}
 

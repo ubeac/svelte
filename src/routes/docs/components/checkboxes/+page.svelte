@@ -3,6 +3,7 @@
 	import CheckboxColor from './CheckboxColor.svelte'
 	import CheckboxDefault from './CheckboxDefault.svelte'
 	import CheckboxDescription from './CheckboxDescription.svelte'
+	import CheckboxReverse from './CheckboxReverse.svelte'
 </script>
 
 <h1>Checkbox</h1>
@@ -28,4 +29,11 @@
 </Doc>
 <Preview src="./CheckboxDescription.svelte">
 	<CheckboxDescription />
+</Preview>
+
+<Doc title="Reverse">
+	Put checkboxes on the opposite side with the <code>reverse</code> boolean property.
+</Doc>
+<Preview src="./CheckboxReverse.svelte">
+	<CheckboxReverse />
 </Preview>

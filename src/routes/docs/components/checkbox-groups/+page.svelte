@@ -3,6 +3,7 @@
 	import CheckboxGroupInline from './CheckboxGroupInline.svelte'
 	import CheckboxGroupItems from './CheckboxGroupItems.svelte'
 	import CheckboxGroupDefault from './CheckboxGroupDefault.svelte'
+	import CheckboxGroupReverse from './CheckboxGroupReverse.svelte'
 </script>
 
 <h1>Checkbox Group</h1>
@@ -16,9 +17,18 @@
 	<CheckboxGroupDefault />
 </Preview>
 
-<Doc title="Checkbox Group Inline">CheckboxGroup can have inline property for all items to be in one horizontal line.</Doc>
+<Doc title="Checkbox Group Inline"
+	>CheckboxGroup can have inline property for all items to be in one horizontal line.</Doc>
 <Preview src="./CheckboxGroupInline.svelte">
 	<CheckboxGroupInline />
+</Preview>
+
+<Doc title="Reverse">
+	Set <code>reverse</code> property to reverse position of all <code>Checkboxes</code> inside the
+	<code>CheckboxGroup</code>
+</Doc>
+<Preview src="./CheckboxGroupReverse.svelte">
+	<CheckboxGroupReverse />
 </Preview>
 
 <Doc title="Checkbox Group Items">

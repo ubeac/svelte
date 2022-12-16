@@ -66,12 +66,12 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'checkbox',
+				route: base_component_path + 'checkboxes',
 				title: 'Checkbox',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'checkbox-group',
+				route: base_component_path + 'checkbox-groups',
 				title: 'CheckboxGroup',
 				icon: 'star',
 			},
@@ -243,12 +243,12 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_form_path + 'form-checkbox',
+				route: base_form_path + 'form-checkboxes',
 				title: 'FormCheckbox',
 				icon: 'star',
 			},
 			{
-				route: base_form_path + 'form-checkbox-group',
+				route: base_form_path + 'form-checkbox-groups',
 				title: 'FormCheckboxGroup',
 				icon: 'star',
 			},

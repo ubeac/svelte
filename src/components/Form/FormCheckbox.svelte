@@ -8,12 +8,14 @@
 	export let cssPrefix: $$Props['cssPrefix'] = 'form-checkbox'
 	export let inline: $$Props['inline'] = undefined
 	export let description: $$Props['description'] = undefined
+	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
 
 	$: checkboxProps = {
 		color,
 		inline,
 		description,
+		reverse,
 	}
 </script>
 

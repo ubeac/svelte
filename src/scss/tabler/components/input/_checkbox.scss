@@ -1,8 +1,12 @@
-$checkbox-props: (
-	wrapper: ".form-check",
-	wrapper-inline: '.form-check-inline',
+$checkbox-wrapper-props: (
+	null: '.form-check',
+	inline: '.form-check-inline',
+	reverse: '.form-check-reverse',
+);
 
+$checkbox-props: (
 	null: '.form-check-input',
+	wrapper: $checkbox-wrapper-props,
 	label: '.form-check-label',
 	description: '.form-check-description',
 );
@@ -16,7 +20,6 @@ $checkbox-props: (
 			background-color: #{$value} !important;
 		}
 	}
-
 
 	&-description {
 

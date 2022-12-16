@@ -26,6 +26,11 @@
 	export let items: $$Props['items'] = undefined
 
 	/**
+	 * Put your checkboxes on the opposite side with reverse property.
+	 */
+	 export let reverse: $$Props['reverse'] = undefined
+
+	/**
 	 * The value of CheckboxGroup
 	 */
 	export let value: $$Props['value'] = []
@@ -36,6 +41,7 @@
 		inline,
 		name: element?.id,
 		color,
+		reverse
 	}
 
 	function onChange(option: any) {
