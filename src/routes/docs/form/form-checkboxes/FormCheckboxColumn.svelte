@@ -13,7 +13,7 @@
 			<FormCheckbox col="4" label="1/3 width:" required>Check 5</FormCheckbox>
 
 			<Col offset="9" cols="auto">
-				<Button block>Submit</Button>
+				<Button w="100">Submit</Button>
 			</Col>
 		</El>
 	</FormFieldset>
