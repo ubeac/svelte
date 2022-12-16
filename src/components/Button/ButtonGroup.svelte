@@ -1,38 +1,45 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	// import { get_current_component } from 'svelte/internal'
+	// import { forwardEventsBuilder } from '$lib/directives'
+	// import { classname } from '$lib/utils'
+	import { El } from '$lib/components'
+	import type { ButtonGroupProps } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = ButtonGroupProps
 
 	/**
-	 * Stick buttons to each other
+	 * Set Css Prefix for the Badge
 	 */
-	export let compact: boolean = false
+	export let cssPrefix: $$Props['cssPrefix'] = 'button-group'
+
+	/**
+	 * Set the size of the buttons
+	 */
+	export let size: $$Props['size'] = undefined
+
+	/**
+	 * Set the color of the buttons
+	 */
+	export let color: $$Props['color'] = undefined
 
 	/**
 	 * Align buttons vertically, default is horizontal
 	 */
-	export let vertical: boolean = false
+	export let vertical: $$Props['vertical'] = undefined
 
-	/**
-	 * Set buttons to be wrapped if needed
-	 */
-	export let wrap: boolean = false
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname(
-		'button-group',
-		{
-			compact,
-			horizontal: !vertical,
-			vertical,
-			wrap,
-		},
-		$$props.class
-	)
+	let cssProps: any = {}
+	let otherProps: any = {}
+	$: {
+		cssProps = {
+			color,
+			size,
+		}
+		otherProps = {
+			cssPrefix: vertical ? cssPrefix + '-vertical' : cssPrefix,
+		}
+	}
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssProps} {...otherProps} role="group">
 	<slot />
-</div>
+</El>

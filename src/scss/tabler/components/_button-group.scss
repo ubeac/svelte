@@ -1,0 +1,38 @@
+//
+// Button Group
+//
+
+$props: (
+	null: '.btn-group',
+	size: (sm: '.btn-group-sm', md: '.btn-group-md', lg: '.btn-group-lg'),
+	vertical: '.btn-group-vertical'
+);
+
+$button-group-sizes: 'sm' 'lg';
+
+.#{$prefix-button-group} {
+	@include apply-props($props);
+
+	flex-wrap: wrap;
+
+	@each $size in $button-group-sizes {
+		&-size-#{$size} {
+			@extend .btn-group-#{$size};
+		}
+
+		&-vertical-size-#{$size} {
+			@extend .btn-group-#{$size};
+		}
+	}
+
+	@each $color,
+	$value in $theme-colors {
+		&-color-#{$color}>.btn {
+			@extend .btn-#{$color};
+		}
+
+		&-vertical-color-#{$color}>.btn {
+			@extend .btn-#{$color};
+		}
+	}
+}

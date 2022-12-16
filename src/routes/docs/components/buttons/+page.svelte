@@ -6,6 +6,8 @@
 	import ButtonDisabled from './ButtonDisabled.svelte'
 	import ButtonGhost from './ButtonGhost.svelte'
 	import ButtonGroup from './ButtonGroup.svelte'
+	import ButtonGroupSizes from './ButtonGroupSizes.svelte'
+	import ButtonGroupColors from './ButtonGroupColors.svelte'
 	import ButtonGroupLotsOfItems from './ButtonGroupLotsOfItems.svelte'
 	import ButtonIcon from './ButtonIcon.svelte'
 	import ButtonLarge from './ButtonLarge.svelte'
@@ -16,6 +18,8 @@
 	import ButtonTag from './ButtonTag.svelte'
 	import ButtonTile from './ButtonTile.svelte'
 	import ButtonWithAvatar from './ButtonWithAvatar.svelte'
+	import ButtonGroupVertical from './ButtonGroupVertical.svelte'
+	import ButtonGroupIcons from './ButtonGroupIcons.svelte'
 </script>
 
 <h1>Buttons</h1>
@@ -122,12 +126,37 @@
 <Preview src="./ButtonGroup.svelte">
 	<ButtonGroup />
 </Preview>
+
+<Doc title="Button Group Sizes">
+	Instead of applying button sizing classes to every button in a group, just set size property to ButtonGroup.
+</Doc>
+<Preview src="./ButtonGroupSizes.svelte">
+	<ButtonGroupSizes />
+</Preview>
+
+<Doc title="Button Group Colros">
+	Instead of applying button color classes to every button in a group, just set color property to ButtonGroup.
+</Doc>
+<Preview src="./ButtonGroupColors.svelte">
+	<ButtonGroupColors />
+</Preview>
+
+<Doc title="Button Group Icons">Set an icon in to ButtonGroup.</Doc>
+<Preview src="./ButtonGroupIcons.svelte">
+	<ButtonGroupIcons />
+</Preview>
+
 <Doc title="Button Group wrap">
 	If the list is long, by adding wrap prop for ButtonGroup, it will be wrapped and some buttons will be moved to the
 	next line.
 </Doc>
 <Preview src="./ButtonGroupLotsOfItems.svelte">
 	<ButtonGroupLotsOfItems />
+</Preview>
+
+<Doc title="Vertical variation">Make a set of buttons appear vertically stacked rather than horizontally.</Doc>
+<Preview src="./ButtonGroupVertical.svelte">
+	<ButtonGroupVertical />
 </Preview>
 
 <Doc title="Buttons with avatars">
