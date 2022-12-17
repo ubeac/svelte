@@ -1,10 +1,10 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import DialogAbsolute from './DialogAbsolute.svelte'
 	import DialogCenter from './DialogCenter.svelte'
-
 	import DialogDefault from './DialogDefault.svelte'
 	import DialogLarge from './DialogLarge.svelte'
+	import DialogNoBackdrop from './DialogNoBackdrop.svelte'
 	import DialogPersistent from './DialogPersistent.svelte'
 	import DialogScrollable from './DialogScrollable.svelte'
 	import DialogSmall from './DialogSmall.svelte'
@@ -12,28 +12,38 @@
 
 <h1>Dialog</h1>
 
-<h2>Default</h2>
+<Doc title="Default">
+	<!--  -->
+</Doc>
 <Preview src="./DialogDefault.svelte">
 	<DialogDefault />
 </Preview>
 
-<h2>absolute</h2>
+<Doc title="absolute">
+	<!--  -->
+</Doc>
 <Preview class="example-absolute" src="./DialogAbsolute.svelte">
 	<DialogAbsolute />
 </Preview>
 
-<h2>persistent</h2>
+<Doc title="Persistent">
+	<!--  -->
+</Doc>
 <Preview src="./DialogPersistent.svelte">
 	<DialogPersistent />
 </Preview>
 
-<h2>Scrollable</h2>
+<Doc title="Scrollable">
+	<!--  -->
+</Doc>
 <p>You can make dialog's content scrollable using <code>scrollable</code> prop.</p>
 <Preview src="./DialogScrollable.svelte">
 	<DialogScrollable />
 </Preview>
 
-<h2>Size</h2>
+<Doc title="Size">
+	<!--  -->
+</Doc>
 <p>Dialog also supports Small and Large sizes.</p>
 <Preview src="./DialogLarge.svelte">
 	<DialogLarge />
@@ -43,15 +53,20 @@
 	<DialogSmall />
 </Preview>
 
-<h2>Centered Dialog</h2>
+<Doc title="Centered Dialog">
+	<!--  -->
+</Doc>
 <p>set <code>placement</code> property to <code>center </code> to vertically center the Dialog.</p>
 <Preview src="./DialogCenter.svelte">
 	<DialogCenter />
 </Preview>
-<h2>Without Backdrop</h2>
+
+<Doc title="Without Backdrop">
+	<!--  -->
+</Doc>
 <p>Disables the backgruond dimming effect.</p>
-<Preview src="./DialogPersistent.svelte">
-	<DialogPersistent />
+<Preview src="./DialogNoBackdrop.svelte">
+	<DialogNoBackdrop />
 </Preview>
 
 <style global>
