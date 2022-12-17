@@ -24,21 +24,21 @@
 	<El {container}>
 		<El row>
 			<El colLg="2" display="none" displayLg="block">
-				<ul class="nav nav-pills nav-vertical">
+				<ul class="nav nav-pills nav-vertical" id="docs">
 					{#each navigations as navigation}
 						<li class="nav-item">
 							<a
 								href={navigation.route ? navigation.route : `#${navigation.id}`}
 								class="nav-link"
 								data-bs-toggle="collapse"
-								aria-expanded="true">
+								aria-expanded="false">
 								{navigation.title}
 								{#if navigation.children}
 									<span class="nav-link-toggle" />
 								{/if}
 							</a>
 							{#if navigation.children}
-								<ul class="nav nav-pills collapse show" id={navigation.id} style="">
+								<ul class="nav nav-pills collapse" data-bs-parent="#docs" id={navigation.id} style="">
 									{#each navigation.children as menu}
 										<li class="nav-item">
 											<a href={menu.route} class="nav-link">{menu.title}</a>

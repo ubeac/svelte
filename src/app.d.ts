@@ -46,7 +46,23 @@ declare type NamedColors =
 	| 'transparent'
 	| undefined
 
-declare type Colors = ThemeColors | NamedColors
+declare type SocialMediaColors =
+	| 'facebook'
+	| 'twitter'
+	| 'google'
+	| 'youtube'
+	| 'vimeo'
+	| 'dribbble'
+	| 'github'
+	| 'instagram'
+	| 'pinterest'
+	| 'vk'
+	| 'rss'
+	| 'flickr'
+	| 'bitbucket'
+	| undefined
+
+declare type Colors = ThemeColors | NamedColors | SocialMediaColors
 
 declare type TextColors = Colors
 
