@@ -10,4 +10,4 @@
 <Button on:click={() => (show = true)}>Show</Button>
 <Button on:click={() => (show = false)}>Hide</Button>
 
-<AppLoadingBar {show} />
+<AppLoadingBar {color} {show} />

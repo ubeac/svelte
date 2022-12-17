@@ -54,6 +54,7 @@
 		show = true
 		value.set(0, { duration: 0 })
 		if (interval) clearInterval(interval)
+		increment()
 		interval = setInterval(increment, duration)
 	}
 	/**

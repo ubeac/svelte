@@ -6,4 +6,4 @@
 
 <Button on:click={() => (show = true)}>Show</Button>
 
-<AppLoadingBar {show} />
+<AppLoadingBar fixedPosition {show} />
