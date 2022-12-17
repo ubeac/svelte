@@ -1,4 +1,8 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
+
+	import Inputmask from 'inputmask'
+
 	import { FormField, Input } from '$lib/components'
 	import type { FormInputProps } from '$lib/components'
 
@@ -69,6 +73,16 @@
 	 */
 	export let hint: $$Props['hint'] = undefined
 
+	/**
+	 * the mask Value of input
+	 */
+	export let mask: $$Props['mask'] = undefined
+
+	/**
+	 * the mask Value of input
+	 */
+	export let maskOptions: $$Props['maskOptions'] = undefined
+
 	$: props = {
 		required,
 		label,
@@ -87,12 +101,14 @@
 		state,
 		borderRounded,
 		borderFlush,
+		mask,
+		maskOptions,
 	}
 </script>
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Input {...inputProps} bind:value>
+	<Input {...inputProps} bind:value {mask} {maskOptions}>
 		<slot />
 	</Input>
 	<slot name="hint" />

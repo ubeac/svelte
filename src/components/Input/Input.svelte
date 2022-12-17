@@ -1,4 +1,8 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
+
+	import Inputmask from 'inputmask'
+
 	import { El } from '$lib/components'
 	import type { InputProps } from '$lib/components'
 
@@ -8,6 +12,8 @@
 	 * Set Css Prefix for the Input
 	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'input'
+
+	export let element: any = undefined
 
 	/**
 	 * Set the input disabled
@@ -54,27 +60,47 @@
 	 */
 	export let value: $$Props['value'] = undefined
 
-	$: cssProps = {
-		size,
-		state,
-		borderRounded,
-		borderFlush,
+	/**
+	 * the mask Value of input
+	 */
+	export let mask: $$Props['mask'] = undefined
+
+	/**
+	 * the mask Value of input
+	 */
+	export let maskOptions: $$Props['maskOptions'] = undefined
+
+	let cssProps = {}
+	let otherProps = {}
+	$: {
+		cssProps = {
+			size,
+			state,
+			borderRounded,
+			borderFlush,
+		}
+		otherProps = {
+			cssPrefix,
+			placeholder,
+			disabled,
+			readonly,
+			type,
+		}
 	}
 
-	$: otherProps = {
-		cssPrefix,
-		placeholder,
-		disabled,
-		readonly,
-		type,
-	}
+	onMount(() => {
+		if (element !== undefined && mask) {
+			var im = new Inputmask(mask, maskOptions)
+			im.mask(element)
+		}
+	})
 </script>
 
 <El cssPrefix="{cssPrefix}-wrapper" cssProps={{ size }}>
 	{#if $$slots.start}
 		<slot name="start" />
 	{/if}
-	<El tag="input" bind:value {...$$restProps} {...otherProps} {cssProps} />
+	<El tag="input" bind:value bind:element {...$$restProps} {...otherProps} {cssProps} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

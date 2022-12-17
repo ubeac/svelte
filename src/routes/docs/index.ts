@@ -131,11 +131,6 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'inputmask',
-				title: 'Input mask',
-				icon: 'star',
-			},
-			{
 				route: base_component_path + 'label',
 				title: 'Label',
 				icon: 'star',

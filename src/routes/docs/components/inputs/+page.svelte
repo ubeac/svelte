@@ -9,6 +9,7 @@
 	import InputTypes from './InputTypes.svelte'
 	import InputStates from './InputStates.svelte'
 	import InputBorderShapes from './InputBorderShapes.svelte'
+	import InputMasks from './InputMasks.svelte'
 </script>
 
 <h1>Input</h1>
@@ -60,4 +61,9 @@
 </Doc>
 <Preview src="./InputBorderShapes.svelte">
 	<InputBorderShapes />
+</Preview>
+
+<Doc title="Masks" />
+<Preview src="./InputMasks.svelte">
+	<InputMasks />
 </Preview>

@@ -4,6 +4,7 @@
 	import FormInputDefault from './FormInputDefault.svelte'
 	import FormInputHint from './FormInputHint.svelte'
 	import FormInputState from './FormInputState.svelte'
+	import FormInputMask from './FormInputMask.svelte'
 </script>
 
 <h1>FormInput</h1>
@@ -42,4 +43,8 @@
 </Doc>
 <Preview src="./FormInputLayout.svelte">
 	<FormInputLayout />
+</Preview>
+<Doc title="Masks" />
+<Preview src="./FormInputMask.svelte">
+	<FormInputMask />
 </Preview>
