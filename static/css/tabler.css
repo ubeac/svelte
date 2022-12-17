@@ -3252,18 +3252,6 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   width: calc(3rem + calc(1.4285714286em + 0.875rem));
 }
 
-<<<<<<< HEAD
-.was-validated .form-check-input:valid, .was-validated .u-switch:valid, .was-validated .u-radio-input:valid, .was-validated .u-checkbox-input:valid, .form-check-input.is-valid, .form-check-input.u-textarea-state-valid, .is-valid.u-switch, .u-switch.u-textarea-state-valid, .is-valid.u-radio-input, .u-radio-input.u-textarea-state-valid, .form-check-input.u-input-state-valid, .u-input-state-valid.u-switch, .u-input-state-valid.u-radio-input, .is-valid.u-checkbox-input, .u-checkbox-input.u-textarea-state-valid, .u-checkbox-input.u-input-state-valid {
-  border-color: #2fb344;
-}
-.was-validated .form-check-input:valid:checked, .was-validated .u-switch:valid:checked, .was-validated .u-radio-input:valid:checked, .was-validated .u-checkbox-input:valid:checked, .form-check-input.is-valid:checked, .form-check-input.u-textarea-state-valid:checked, .is-valid.u-switch:checked, .u-switch.u-textarea-state-valid:checked, .is-valid.u-radio-input:checked, .u-radio-input.u-textarea-state-valid:checked, .form-check-input.u-input-state-valid:checked, .u-input-state-valid.u-switch:checked, .u-input-state-valid.u-radio-input:checked, .is-valid.u-checkbox-input:checked, .u-checkbox-input.u-textarea-state-valid:checked, .u-checkbox-input.u-input-state-valid:checked {
-  background-color: #2fb344;
-}
-.was-validated .form-check-input:valid:focus, .was-validated .u-switch:valid:focus, .was-validated .u-radio-input:valid:focus, .was-validated .u-checkbox-input:valid:focus, .form-check-input.is-valid:focus, .form-check-input.u-textarea-state-valid:focus, .is-valid.u-switch:focus, .u-switch.u-textarea-state-valid:focus, .is-valid.u-radio-input:focus, .u-radio-input.u-textarea-state-valid:focus, .form-check-input.u-input-state-valid:focus, .u-input-state-valid.u-switch:focus, .u-input-state-valid.u-radio-input:focus, .is-valid.u-checkbox-input:focus, .u-checkbox-input.u-textarea-state-valid:focus, .u-checkbox-input.u-input-state-valid:focus {
-  box-shadow: 0 0 0 0.25rem rgba(47, 179, 68, 0.25);
-}
-.was-validated .form-check-input:valid ~ .form-check-label, .was-validated .form-check-input:valid ~ .u-switch-label, .was-validated .u-switch:valid ~ .form-check-label, .was-validated .u-switch:valid ~ .u-switch-label, .was-validated .form-check-input:valid ~ .u-radio-label, .was-validated .u-switch:valid ~ .u-radio-label, .was-validated .u-radio-input:valid ~ .form-check-label, .was-validated .u-radio-input:valid ~ .u-switch-label, .was-validated .u-radio-input:valid ~ .u-radio-label, .was-validated .form-check-input:valid ~ .u-checkbox-label, .was-validated .u-switch:valid ~ .u-checkbox-label, .was-validated .u-radio-input:valid ~ .u-checkbox-label, .was-validated .u-checkbox-input:valid ~ .form-check-label, .was-validated .u-checkbox-input:valid ~ .u-switch-label, .was-validated .u-checkbox-input:valid ~ .u-radio-label, .was-validated .u-checkbox-input:valid ~ .u-checkbox-label, .form-check-input.is-valid ~ .form-check-label, .form-check-input.u-textarea-state-valid ~ .form-check-label, .form-check-input.is-valid ~ .u-switch-label, .form-check-input.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-switch ~ .form-check-label, .u-switch.u-textarea-state-valid ~ .form-check-label, .is-valid.u-switch ~ .u-switch-label, .u-switch.u-textarea-state-valid ~ .u-switch-label, .form-check-input.is-valid ~ .u-radio-label, .form-check-input.u-textarea-state-valid ~ .u-radio-label, .is-valid.u-switch ~ .u-radio-label, .u-switch.u-textarea-state-valid ~ .u-radio-label, .is-valid.u-radio-input ~ .form-check-label, .u-radio-input.u-textarea-state-valid ~ .form-check-label, .is-valid.u-radio-input ~ .u-switch-label, .u-radio-input.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-radio-input ~ .u-radio-label, .u-radio-input.u-textarea-state-valid ~ .u-radio-label, .form-check-input.u-input-state-valid ~ .form-check-label, .form-check-input.u-input-state-valid ~ .u-switch-label, .u-input-state-valid.u-switch ~ .form-check-label, .u-input-state-valid.u-switch ~ .u-switch-label, .form-check-input.u-input-state-valid ~ .u-radio-label, .u-input-state-valid.u-switch ~ .u-radio-label, .u-input-state-valid.u-radio-input ~ .form-check-label, .u-input-state-valid.u-radio-input ~ .u-switch-label, .u-input-state-valid.u-radio-input ~ .u-radio-label, .form-check-input.is-valid ~ .u-checkbox-label, .form-check-input.u-textarea-state-valid ~ .u-checkbox-label, .is-valid.u-switch ~ .u-checkbox-label, .u-switch.u-textarea-state-valid ~ .u-checkbox-label, .is-valid.u-radio-input ~ .u-checkbox-label, .u-radio-input.u-textarea-state-valid ~ .u-checkbox-label, .form-check-input.u-input-state-valid ~ .u-checkbox-label, .u-input-state-valid.u-switch ~ .u-checkbox-label, .u-input-state-valid.u-radio-input ~ .u-checkbox-label, .is-valid.u-checkbox-input ~ .form-check-label, .u-checkbox-input.u-textarea-state-valid ~ .form-check-label, .is-valid.u-checkbox-input ~ .u-switch-label, .u-checkbox-input.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-checkbox-input ~ .u-radio-label, .u-checkbox-input.u-textarea-state-valid ~ .u-radio-label, .u-checkbox-input.u-input-state-valid ~ .form-check-label, .u-checkbox-input.u-input-state-valid ~ .u-switch-label, .u-checkbox-input.u-input-state-valid ~ .u-radio-label, .is-valid.u-checkbox-input ~ .u-checkbox-label, .u-checkbox-input.u-textarea-state-valid ~ .u-checkbox-label, .u-checkbox-input.u-input-state-valid ~ .u-checkbox-label {
-=======
 .was-validated .form-check-input:valid, .was-validated .u-switch:valid, .was-validated .u-radio:valid, .was-validated .u-checkbox-input:valid, .form-check-input.is-valid, .form-check-input.u-textarea-state-valid, .is-valid.u-switch, .u-switch.u-textarea-state-valid, .is-valid.u-radio, .u-radio.u-textarea-state-valid, .form-check-input.u-input-state-valid, .u-input-state-valid.u-switch, .u-input-state-valid.u-radio, .is-valid.u-checkbox-input, .u-checkbox-input.u-textarea-state-valid, .u-checkbox-input.u-input-state-valid {
   border-color: #2fb344;
 }
@@ -3274,7 +3262,6 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   box-shadow: 0 0 0 0.25rem rgba(47, 179, 68, 0.25);
 }
 .was-validated .form-check-input:valid ~ .form-check-label, .was-validated .form-check-input:valid ~ .u-switch-label, .was-validated .u-switch:valid ~ .form-check-label, .was-validated .u-switch:valid ~ .u-switch-label, .was-validated .form-check-input:valid ~ .u-radio-label, .was-validated .u-switch:valid ~ .u-radio-label, .was-validated .u-radio:valid ~ .form-check-label, .was-validated .u-radio:valid ~ .u-switch-label, .was-validated .u-radio:valid ~ .u-radio-label, .was-validated .form-check-input:valid ~ .u-checkbox-label, .was-validated .u-switch:valid ~ .u-checkbox-label, .was-validated .u-radio:valid ~ .u-checkbox-label, .was-validated .u-checkbox-input:valid ~ .form-check-label, .was-validated .u-checkbox-input:valid ~ .u-switch-label, .was-validated .u-checkbox-input:valid ~ .u-radio-label, .was-validated .u-checkbox-input:valid ~ .u-checkbox-label, .form-check-input.is-valid ~ .form-check-label, .form-check-input.u-textarea-state-valid ~ .form-check-label, .form-check-input.is-valid ~ .u-switch-label, .form-check-input.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-switch ~ .form-check-label, .u-switch.u-textarea-state-valid ~ .form-check-label, .is-valid.u-switch ~ .u-switch-label, .u-switch.u-textarea-state-valid ~ .u-switch-label, .form-check-input.is-valid ~ .u-radio-label, .form-check-input.u-textarea-state-valid ~ .u-radio-label, .is-valid.u-switch ~ .u-radio-label, .u-switch.u-textarea-state-valid ~ .u-radio-label, .is-valid.u-radio ~ .form-check-label, .u-radio.u-textarea-state-valid ~ .form-check-label, .is-valid.u-radio ~ .u-switch-label, .u-radio.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-radio ~ .u-radio-label, .u-radio.u-textarea-state-valid ~ .u-radio-label, .form-check-input.u-input-state-valid ~ .form-check-label, .form-check-input.u-input-state-valid ~ .u-switch-label, .u-input-state-valid.u-switch ~ .form-check-label, .u-input-state-valid.u-switch ~ .u-switch-label, .form-check-input.u-input-state-valid ~ .u-radio-label, .u-input-state-valid.u-switch ~ .u-radio-label, .u-input-state-valid.u-radio ~ .form-check-label, .u-input-state-valid.u-radio ~ .u-switch-label, .u-input-state-valid.u-radio ~ .u-radio-label, .form-check-input.is-valid ~ .u-checkbox-label, .form-check-input.u-textarea-state-valid ~ .u-checkbox-label, .is-valid.u-switch ~ .u-checkbox-label, .u-switch.u-textarea-state-valid ~ .u-checkbox-label, .is-valid.u-radio ~ .u-checkbox-label, .u-radio.u-textarea-state-valid ~ .u-checkbox-label, .form-check-input.u-input-state-valid ~ .u-checkbox-label, .u-input-state-valid.u-switch ~ .u-checkbox-label, .u-input-state-valid.u-radio ~ .u-checkbox-label, .is-valid.u-checkbox-input ~ .form-check-label, .u-checkbox-input.u-textarea-state-valid ~ .form-check-label, .is-valid.u-checkbox-input ~ .u-switch-label, .u-checkbox-input.u-textarea-state-valid ~ .u-switch-label, .is-valid.u-checkbox-input ~ .u-radio-label, .u-checkbox-input.u-textarea-state-valid ~ .u-radio-label, .u-checkbox-input.u-input-state-valid ~ .form-check-label, .u-checkbox-input.u-input-state-valid ~ .u-switch-label, .u-checkbox-input.u-input-state-valid ~ .u-radio-label, .is-valid.u-checkbox-input ~ .u-checkbox-label, .u-checkbox-input.u-textarea-state-valid ~ .u-checkbox-label, .u-checkbox-input.u-input-state-valid ~ .u-checkbox-label {
->>>>>>> 282b35656c2f896ff02b3de574ce1f86bbbddc28
   color: #2fb344;
 }
 
@@ -3418,18 +3405,6 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   width: calc(3rem + calc(1.4285714286em + 0.875rem));
 }
 
-<<<<<<< HEAD
-.was-validated .form-check-input:invalid, .was-validated .u-switch:invalid, .was-validated .u-radio-input:invalid, .was-validated .u-checkbox-input:invalid, .form-check-input.is-invalid, .form-check-input.u-textarea-state-invalid, .is-invalid.u-switch, .u-switch.u-textarea-state-invalid, .is-invalid.u-radio-input, .u-radio-input.u-textarea-state-invalid, .form-check-input.u-input-state-invalid, .u-input-state-invalid.u-switch, .u-input-state-invalid.u-radio-input, .is-invalid.u-checkbox-input, .u-checkbox-input.u-textarea-state-invalid, .u-checkbox-input.u-input-state-invalid {
-  border-color: #d63939;
-}
-.was-validated .form-check-input:invalid:checked, .was-validated .u-switch:invalid:checked, .was-validated .u-radio-input:invalid:checked, .was-validated .u-checkbox-input:invalid:checked, .form-check-input.is-invalid:checked, .form-check-input.u-textarea-state-invalid:checked, .is-invalid.u-switch:checked, .u-switch.u-textarea-state-invalid:checked, .is-invalid.u-radio-input:checked, .u-radio-input.u-textarea-state-invalid:checked, .form-check-input.u-input-state-invalid:checked, .u-input-state-invalid.u-switch:checked, .u-input-state-invalid.u-radio-input:checked, .is-invalid.u-checkbox-input:checked, .u-checkbox-input.u-textarea-state-invalid:checked, .u-checkbox-input.u-input-state-invalid:checked {
-  background-color: #d63939;
-}
-.was-validated .form-check-input:invalid:focus, .was-validated .u-switch:invalid:focus, .was-validated .u-radio-input:invalid:focus, .was-validated .u-checkbox-input:invalid:focus, .form-check-input.is-invalid:focus, .form-check-input.u-textarea-state-invalid:focus, .is-invalid.u-switch:focus, .u-switch.u-textarea-state-invalid:focus, .is-invalid.u-radio-input:focus, .u-radio-input.u-textarea-state-invalid:focus, .form-check-input.u-input-state-invalid:focus, .u-input-state-invalid.u-switch:focus, .u-input-state-invalid.u-radio-input:focus, .is-invalid.u-checkbox-input:focus, .u-checkbox-input.u-textarea-state-invalid:focus, .u-checkbox-input.u-input-state-invalid:focus {
-  box-shadow: 0 0 0 0.25rem rgba(214, 57, 57, 0.25);
-}
-.was-validated .form-check-input:invalid ~ .form-check-label, .was-validated .form-check-input:invalid ~ .u-switch-label, .was-validated .u-switch:invalid ~ .form-check-label, .was-validated .u-switch:invalid ~ .u-switch-label, .was-validated .form-check-input:invalid ~ .u-radio-label, .was-validated .u-switch:invalid ~ .u-radio-label, .was-validated .u-radio-input:invalid ~ .form-check-label, .was-validated .u-radio-input:invalid ~ .u-switch-label, .was-validated .u-radio-input:invalid ~ .u-radio-label, .was-validated .form-check-input:invalid ~ .u-checkbox-label, .was-validated .u-switch:invalid ~ .u-checkbox-label, .was-validated .u-radio-input:invalid ~ .u-checkbox-label, .was-validated .u-checkbox-input:invalid ~ .form-check-label, .was-validated .u-checkbox-input:invalid ~ .u-switch-label, .was-validated .u-checkbox-input:invalid ~ .u-radio-label, .was-validated .u-checkbox-input:invalid ~ .u-checkbox-label, .form-check-input.is-invalid ~ .form-check-label, .form-check-input.u-textarea-state-invalid ~ .form-check-label, .form-check-input.is-invalid ~ .u-switch-label, .form-check-input.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-switch ~ .form-check-label, .u-switch.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-switch ~ .u-switch-label, .u-switch.u-textarea-state-invalid ~ .u-switch-label, .form-check-input.is-invalid ~ .u-radio-label, .form-check-input.u-textarea-state-invalid ~ .u-radio-label, .is-invalid.u-switch ~ .u-radio-label, .u-switch.u-textarea-state-invalid ~ .u-radio-label, .is-invalid.u-radio-input ~ .form-check-label, .u-radio-input.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-radio-input ~ .u-switch-label, .u-radio-input.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-radio-input ~ .u-radio-label, .u-radio-input.u-textarea-state-invalid ~ .u-radio-label, .form-check-input.u-input-state-invalid ~ .form-check-label, .form-check-input.u-input-state-invalid ~ .u-switch-label, .u-input-state-invalid.u-switch ~ .form-check-label, .u-input-state-invalid.u-switch ~ .u-switch-label, .form-check-input.u-input-state-invalid ~ .u-radio-label, .u-input-state-invalid.u-switch ~ .u-radio-label, .u-input-state-invalid.u-radio-input ~ .form-check-label, .u-input-state-invalid.u-radio-input ~ .u-switch-label, .u-input-state-invalid.u-radio-input ~ .u-radio-label, .form-check-input.is-invalid ~ .u-checkbox-label, .form-check-input.u-textarea-state-invalid ~ .u-checkbox-label, .is-invalid.u-switch ~ .u-checkbox-label, .u-switch.u-textarea-state-invalid ~ .u-checkbox-label, .is-invalid.u-radio-input ~ .u-checkbox-label, .u-radio-input.u-textarea-state-invalid ~ .u-checkbox-label, .form-check-input.u-input-state-invalid ~ .u-checkbox-label, .u-input-state-invalid.u-switch ~ .u-checkbox-label, .u-input-state-invalid.u-radio-input ~ .u-checkbox-label, .is-invalid.u-checkbox-input ~ .form-check-label, .u-checkbox-input.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-checkbox-input ~ .u-switch-label, .u-checkbox-input.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-checkbox-input ~ .u-radio-label, .u-checkbox-input.u-textarea-state-invalid ~ .u-radio-label, .u-checkbox-input.u-input-state-invalid ~ .form-check-label, .u-checkbox-input.u-input-state-invalid ~ .u-switch-label, .u-checkbox-input.u-input-state-invalid ~ .u-radio-label, .is-invalid.u-checkbox-input ~ .u-checkbox-label, .u-checkbox-input.u-textarea-state-invalid ~ .u-checkbox-label, .u-checkbox-input.u-input-state-invalid ~ .u-checkbox-label {
-=======
 .was-validated .form-check-input:invalid, .was-validated .u-switch:invalid, .was-validated .u-radio:invalid, .was-validated .u-checkbox-input:invalid, .form-check-input.is-invalid, .form-check-input.u-textarea-state-invalid, .is-invalid.u-switch, .u-switch.u-textarea-state-invalid, .is-invalid.u-radio, .u-radio.u-textarea-state-invalid, .form-check-input.u-input-state-invalid, .u-input-state-invalid.u-switch, .u-input-state-invalid.u-radio, .is-invalid.u-checkbox-input, .u-checkbox-input.u-textarea-state-invalid, .u-checkbox-input.u-input-state-invalid {
   border-color: #d63939;
 }
@@ -3440,7 +3415,6 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   box-shadow: 0 0 0 0.25rem rgba(214, 57, 57, 0.25);
 }
 .was-validated .form-check-input:invalid ~ .form-check-label, .was-validated .form-check-input:invalid ~ .u-switch-label, .was-validated .u-switch:invalid ~ .form-check-label, .was-validated .u-switch:invalid ~ .u-switch-label, .was-validated .form-check-input:invalid ~ .u-radio-label, .was-validated .u-switch:invalid ~ .u-radio-label, .was-validated .u-radio:invalid ~ .form-check-label, .was-validated .u-radio:invalid ~ .u-switch-label, .was-validated .u-radio:invalid ~ .u-radio-label, .was-validated .form-check-input:invalid ~ .u-checkbox-label, .was-validated .u-switch:invalid ~ .u-checkbox-label, .was-validated .u-radio:invalid ~ .u-checkbox-label, .was-validated .u-checkbox-input:invalid ~ .form-check-label, .was-validated .u-checkbox-input:invalid ~ .u-switch-label, .was-validated .u-checkbox-input:invalid ~ .u-radio-label, .was-validated .u-checkbox-input:invalid ~ .u-checkbox-label, .form-check-input.is-invalid ~ .form-check-label, .form-check-input.u-textarea-state-invalid ~ .form-check-label, .form-check-input.is-invalid ~ .u-switch-label, .form-check-input.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-switch ~ .form-check-label, .u-switch.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-switch ~ .u-switch-label, .u-switch.u-textarea-state-invalid ~ .u-switch-label, .form-check-input.is-invalid ~ .u-radio-label, .form-check-input.u-textarea-state-invalid ~ .u-radio-label, .is-invalid.u-switch ~ .u-radio-label, .u-switch.u-textarea-state-invalid ~ .u-radio-label, .is-invalid.u-radio ~ .form-check-label, .u-radio.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-radio ~ .u-switch-label, .u-radio.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-radio ~ .u-radio-label, .u-radio.u-textarea-state-invalid ~ .u-radio-label, .form-check-input.u-input-state-invalid ~ .form-check-label, .form-check-input.u-input-state-invalid ~ .u-switch-label, .u-input-state-invalid.u-switch ~ .form-check-label, .u-input-state-invalid.u-switch ~ .u-switch-label, .form-check-input.u-input-state-invalid ~ .u-radio-label, .u-input-state-invalid.u-switch ~ .u-radio-label, .u-input-state-invalid.u-radio ~ .form-check-label, .u-input-state-invalid.u-radio ~ .u-switch-label, .u-input-state-invalid.u-radio ~ .u-radio-label, .form-check-input.is-invalid ~ .u-checkbox-label, .form-check-input.u-textarea-state-invalid ~ .u-checkbox-label, .is-invalid.u-switch ~ .u-checkbox-label, .u-switch.u-textarea-state-invalid ~ .u-checkbox-label, .is-invalid.u-radio ~ .u-checkbox-label, .u-radio.u-textarea-state-invalid ~ .u-checkbox-label, .form-check-input.u-input-state-invalid ~ .u-checkbox-label, .u-input-state-invalid.u-switch ~ .u-checkbox-label, .u-input-state-invalid.u-radio ~ .u-checkbox-label, .is-invalid.u-checkbox-input ~ .form-check-label, .u-checkbox-input.u-textarea-state-invalid ~ .form-check-label, .is-invalid.u-checkbox-input ~ .u-switch-label, .u-checkbox-input.u-textarea-state-invalid ~ .u-switch-label, .is-invalid.u-checkbox-input ~ .u-radio-label, .u-checkbox-input.u-textarea-state-invalid ~ .u-radio-label, .u-checkbox-input.u-input-state-invalid ~ .form-check-label, .u-checkbox-input.u-input-state-invalid ~ .u-switch-label, .u-checkbox-input.u-input-state-invalid ~ .u-radio-label, .is-invalid.u-checkbox-input ~ .u-checkbox-label, .u-checkbox-input.u-textarea-state-invalid ~ .u-checkbox-label, .u-checkbox-input.u-input-state-invalid ~ .u-checkbox-label {
->>>>>>> 282b35656c2f896ff02b3de574ce1f86bbbddc28
   color: #d63939;
 }
 
@@ -3613,14 +3587,14 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   color: var(--u-btn-hover-color);
 }
 
-.btn-lg, .u-button-size-lg, .btn-group-lg > .btn, .btn-group-lg > .u-button {
+.btn-lg, .u-button-size-lg, .btn-group-lg > .btn, .u-button-group-size-lg > .btn, .btn-group-lg > .u-button, .u-button-group-size-lg > .u-button {
   --u-btn-padding-y: 0.5rem;
   --u-btn-padding-x: 0.75rem;
   --u-btn-font-size: 1.25rem;
   --u-btn-border-radius: 8px;
 }
 
-.btn-sm, .u-button-size-sm, .btn-group-sm > .btn, .btn-group-sm > .u-button {
+.btn-sm, .u-button-size-sm, .btn-group-sm > .btn, .u-button-group-size-sm > .btn, .btn-group-sm > .u-button, .u-button-group-size-sm > .u-button {
   --u-btn-padding-y: 0.125rem;
   --u-btn-padding-x: 0.25rem;
   --u-btn-font-size: 0.75rem;
@@ -3968,65 +3942,114 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   --u-dropdown-header-color: #6c7a91;
 }
 
-.btn-group,
-.btn-group-vertical {
+.btn-group, .u-button-group:not(.u-button-group-vertical),
+.btn-group-vertical,
+.u-button-group-vertical {
   position: relative;
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .btn-group > .u-button,
+.btn-group > .btn, .u-button-group:not(.u-button-group-vertical) > .btn, .btn-group > .u-button, .u-button-group:not(.u-button-group-vertical) > .u-button,
 .btn-group-vertical > .btn,
-.btn-group-vertical > .u-button {
+.u-button-group-vertical > .btn,
+.btn-group-vertical > .u-button,
+.u-button-group-vertical > .u-button {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .u-button,
+.btn-group > .btn-check:checked + .btn, .u-button-group:not(.u-button-group-vertical) > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .u-button, .u-button-group:not(.u-button-group-vertical) > .btn-check:checked + .u-button,
 .btn-group > .btn-check:focus + .btn,
+.u-button-group:not(.u-button-group-vertical) > .btn-check:focus + .btn,
 .btn-group > .btn-check:focus + .u-button,
+.u-button-group:not(.u-button-group-vertical) > .btn-check:focus + .u-button,
 .btn-group > .btn:hover,
+.u-button-group:not(.u-button-group-vertical) > .btn:hover,
 .btn-group > .u-button:hover,
+.u-button-group:not(.u-button-group-vertical) > .u-button:hover,
 .btn-group > .btn:focus,
+.u-button-group:not(.u-button-group-vertical) > .btn:focus,
 .btn-group > .u-button:focus,
+.u-button-group:not(.u-button-group-vertical) > .u-button:focus,
 .btn-group > .btn:active,
+.u-button-group:not(.u-button-group-vertical) > .btn:active,
 .btn-group > .u-button:active,
+.u-button-group:not(.u-button-group-vertical) > .u-button:active,
 .btn-group > .btn.active,
 .u-tabs .u-tabs-panels .btn-group > .btn.u-tabs-panel-active,
 .u-tabs .u-tabs-items .btn-group > .btn.u-tabs-item-active,
 .btn-group > .btn.u-carousel-item-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.active,
+.u-tabs .u-tabs-panels .u-button-group:not(.u-button-group-vertical) > .btn.u-tabs-panel-active,
+.u-tabs .u-tabs-items .u-button-group:not(.u-button-group-vertical) > .btn.u-tabs-item-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.u-carousel-item-active,
 .btn-group > .btn.u-button-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.u-button-active,
 .btn-group > .active.u-button,
 .u-tabs .u-tabs-panels .btn-group > .u-button.u-tabs-panel-active,
 .u-tabs .u-tabs-items .btn-group > .u-button.u-tabs-item-active,
 .btn-group > .u-button.u-carousel-item-active,
+.u-button-group:not(.u-button-group-vertical) > .active.u-button,
+.u-tabs .u-tabs-panels .u-button-group:not(.u-button-group-vertical) > .u-button.u-tabs-panel-active,
+.u-tabs .u-tabs-items .u-button-group:not(.u-button-group-vertical) > .u-button.u-tabs-item-active,
+.u-button-group:not(.u-button-group-vertical) > .u-button.u-carousel-item-active,
 .btn-group > .u-button.u-button-active,
+.u-button-group:not(.u-button-group-vertical) > .u-button.u-button-active,
 .btn-group > .btn.u-breadcrumb-item-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.u-breadcrumb-item-active,
 .btn-group > .u-breadcrumb-item-active.u-button,
+.u-button-group:not(.u-button-group-vertical) > .u-breadcrumb-item-active.u-button,
 .btn-group > .btn.u-avatar-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.u-avatar-active,
 .btn-group > .u-avatar-active.u-button,
+.u-button-group:not(.u-button-group-vertical) > .u-avatar-active.u-button,
 .btn-group-vertical > .btn-check:checked + .btn,
+.u-button-group-vertical > .btn-check:checked + .btn,
 .btn-group-vertical > .btn-check:checked + .u-button,
+.u-button-group-vertical > .btn-check:checked + .u-button,
 .btn-group-vertical > .btn-check:focus + .btn,
+.u-button-group-vertical > .btn-check:focus + .btn,
 .btn-group-vertical > .btn-check:focus + .u-button,
+.u-button-group-vertical > .btn-check:focus + .u-button,
 .btn-group-vertical > .btn:hover,
+.u-button-group-vertical > .btn:hover,
 .btn-group-vertical > .u-button:hover,
+.u-button-group-vertical > .u-button:hover,
 .btn-group-vertical > .btn:focus,
+.u-button-group-vertical > .btn:focus,
 .btn-group-vertical > .u-button:focus,
+.u-button-group-vertical > .u-button:focus,
 .btn-group-vertical > .btn:active,
+.u-button-group-vertical > .btn:active,
 .btn-group-vertical > .u-button:active,
+.u-button-group-vertical > .u-button:active,
 .btn-group-vertical > .btn.active,
 .u-tabs .u-tabs-panels .btn-group-vertical > .btn.u-tabs-panel-active,
 .u-tabs .u-tabs-items .btn-group-vertical > .btn.u-tabs-item-active,
 .btn-group-vertical > .btn.u-carousel-item-active,
+.u-button-group-vertical > .btn.active,
+.u-tabs .u-tabs-panels .u-button-group-vertical > .btn.u-tabs-panel-active,
+.u-tabs .u-tabs-items .u-button-group-vertical > .btn.u-tabs-item-active,
+.u-button-group-vertical > .btn.u-carousel-item-active,
 .btn-group-vertical > .btn.u-button-active,
+.u-button-group-vertical > .btn.u-button-active,
 .btn-group-vertical > .active.u-button,
 .u-tabs .u-tabs-panels .btn-group-vertical > .u-button.u-tabs-panel-active,
 .u-tabs .u-tabs-items .btn-group-vertical > .u-button.u-tabs-item-active,
 .btn-group-vertical > .u-button.u-carousel-item-active,
+.u-button-group-vertical > .active.u-button,
+.u-tabs .u-tabs-panels .u-button-group-vertical > .u-button.u-tabs-panel-active,
+.u-tabs .u-tabs-items .u-button-group-vertical > .u-button.u-tabs-item-active,
+.u-button-group-vertical > .u-button.u-carousel-item-active,
 .btn-group-vertical > .u-button.u-button-active,
+.u-button-group-vertical > .u-button.u-button-active,
 .btn-group-vertical > .btn.u-breadcrumb-item-active,
+.u-button-group-vertical > .btn.u-breadcrumb-item-active,
 .btn-group-vertical > .u-breadcrumb-item-active.u-button,
+.u-button-group-vertical > .u-breadcrumb-item-active.u-button,
 .btn-group-vertical > .btn.u-avatar-active,
-.btn-group-vertical > .u-avatar-active.u-button {
+.u-button-group-vertical > .btn.u-avatar-active,
+.btn-group-vertical > .u-avatar-active.u-button,
+.u-button-group-vertical > .u-avatar-active.u-button {
   z-index: 1;
 }
 
@@ -4039,26 +4062,45 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   width: auto;
 }
 
-.btn-group {
+.btn-group, .u-button-group:not(.u-button-group-vertical) {
   border-radius: var(--u-border-radius);
 }
-.btn-group > :not(.btn-check:first-child) + .btn, .btn-group > :not(.btn-check:first-child) + .u-button,
-.btn-group > .btn-group:not(:first-child) {
+.btn-group > :not(.btn-check:first-child) + .btn, .u-button-group:not(.u-button-group-vertical) > :not(.btn-check:first-child) + .btn, .btn-group > :not(.btn-check:first-child) + .u-button, .u-button-group:not(.u-button-group-vertical) > :not(.btn-check:first-child) + .u-button,
+.btn-group > .btn-group:not(:first-child),
+.u-button-group:not(.u-button-group-vertical) > .btn-group:not(:first-child),
+.btn-group > .u-button-group:not(:first-child):not(.u-button-group-vertical),
+.u-button-group:not(.u-button-group-vertical) > .u-button-group:not(:first-child):not(.u-button-group-vertical) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .u-button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .u-button-group:not(.u-button-group-vertical) > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .u-button:not(:last-child):not(.dropdown-toggle), .u-button-group:not(.u-button-group-vertical) > .u-button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
+.u-button-group:not(.u-button-group-vertical) > .btn.dropdown-toggle-split:first-child,
 .btn-group > .dropdown-toggle-split.u-button:first-child,
+.u-button-group:not(.u-button-group-vertical) > .dropdown-toggle-split.u-button:first-child,
 .btn-group > .btn-group:not(:last-child) > .btn,
-.btn-group > .btn-group:not(:last-child) > .u-button {
+.u-button-group:not(.u-button-group-vertical) > .btn-group:not(:last-child) > .btn,
+.btn-group > .u-button-group:not(:last-child):not(.u-button-group-vertical) > .btn,
+.u-button-group:not(.u-button-group-vertical) > .u-button-group:not(:last-child):not(.u-button-group-vertical) > .btn,
+.btn-group > .btn-group:not(:last-child) > .u-button,
+.u-button-group:not(.u-button-group-vertical) > .btn-group:not(:last-child) > .u-button,
+.btn-group > .u-button-group:not(:last-child):not(.u-button-group-vertical) > .u-button,
+.u-button-group:not(.u-button-group-vertical) > .u-button-group:not(:last-child):not(.u-button-group-vertical) > .u-button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), .btn-group > .u-button:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .u-button-group:not(.u-button-group-vertical) > .btn:nth-child(n+3), .btn-group > .u-button:nth-child(n+3), .u-button-group:not(.u-button-group-vertical) > .u-button:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
+.u-button-group:not(.u-button-group-vertical) > :not(.btn-check) + .btn,
 .btn-group > :not(.btn-check) + .u-button,
+.u-button-group:not(.u-button-group-vertical) > :not(.btn-check) + .u-button,
 .btn-group > .btn-group:not(:first-child) > .btn,
-.btn-group > .btn-group:not(:first-child) > .u-button {
+.u-button-group:not(.u-button-group-vertical) > .btn-group:not(:first-child) > .btn,
+.btn-group > .u-button-group:not(:first-child):not(.u-button-group-vertical) > .btn,
+.u-button-group:not(.u-button-group-vertical) > .u-button-group:not(:first-child):not(.u-button-group-vertical) > .btn,
+.btn-group > .btn-group:not(:first-child) > .u-button,
+.u-button-group:not(.u-button-group-vertical) > .btn-group:not(:first-child) > .u-button,
+.btn-group > .u-button-group:not(:first-child):not(.u-button-group-vertical) > .u-button,
+.u-button-group:not(.u-button-group-vertical) > .u-button-group:not(:first-child):not(.u-button-group-vertical) > .u-button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4074,38 +4116,56 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .u-button-size-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .u-button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .u-button-size-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .u-button-group-size-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .u-button + .dropdown-toggle-split, .u-button-group-size-sm > .u-button + .dropdown-toggle-split {
   padding-right: 0.1875rem;
   padding-left: 0.1875rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .u-button-size-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .u-button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .u-button-size-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .u-button-group-size-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .u-button + .dropdown-toggle-split, .u-button-group-size-lg > .u-button + .dropdown-toggle-split {
   padding-right: 0.5625rem;
   padding-left: 0.5625rem;
 }
 
-.btn-group-vertical {
+.btn-group-vertical, .u-button-group-vertical {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .btn-group-vertical > .u-button,
-.btn-group-vertical > .btn-group {
+.btn-group-vertical > .btn, .u-button-group-vertical > .btn, .btn-group-vertical > .u-button, .u-button-group-vertical > .u-button,
+.btn-group-vertical > .btn-group,
+.btn-group-vertical > .u-button-group:not(.u-button-group-vertical),
+.u-button-group-vertical > .btn-group,
+.u-button-group-vertical > .u-button-group:not(.u-button-group-vertical) {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .u-button:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) {
+.btn-group-vertical > .btn:not(:first-child), .u-button-group-vertical > .btn:not(:first-child), .btn-group-vertical > .u-button:not(:first-child), .u-button-group-vertical > .u-button:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child),
+.btn-group-vertical > .u-button-group:not(:first-child):not(.u-button-group-vertical),
+.u-button-group-vertical > .btn-group:not(:first-child),
+.u-button-group-vertical > .u-button-group:not(:first-child):not(.u-button-group-vertical) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .u-button:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .u-button-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .u-button:not(:last-child):not(.dropdown-toggle), .u-button-group-vertical > .u-button:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-.btn-group-vertical > .btn-group:not(:last-child) > .u-button {
+.btn-group-vertical > .u-button-group:not(:last-child):not(.u-button-group-vertical) > .btn,
+.u-button-group-vertical > .btn-group:not(:last-child) > .btn,
+.u-button-group-vertical > .u-button-group:not(:last-child):not(.u-button-group-vertical) > .btn,
+.btn-group-vertical > .btn-group:not(:last-child) > .u-button,
+.btn-group-vertical > .u-button-group:not(:last-child):not(.u-button-group-vertical) > .u-button,
+.u-button-group-vertical > .btn-group:not(:last-child) > .u-button,
+.u-button-group-vertical > .u-button-group:not(:last-child):not(.u-button-group-vertical) > .u-button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .u-button ~ .btn, .btn-group-vertical > .btn ~ .u-button, .btn-group-vertical > .u-button ~ .u-button,
+.btn-group-vertical > .btn ~ .btn, .u-button-group-vertical > .btn ~ .btn, .btn-group-vertical > .u-button ~ .btn, .u-button-group-vertical > .u-button ~ .btn, .btn-group-vertical > .btn ~ .u-button, .u-button-group-vertical > .btn ~ .u-button, .btn-group-vertical > .u-button ~ .u-button, .u-button-group-vertical > .u-button ~ .u-button,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .u-button {
+.btn-group-vertical > .u-button-group:not(:first-child):not(.u-button-group-vertical) > .btn,
+.u-button-group-vertical > .btn-group:not(:first-child) > .btn,
+.u-button-group-vertical > .u-button-group:not(:first-child):not(.u-button-group-vertical) > .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .u-button,
+.btn-group-vertical > .u-button-group:not(:first-child):not(.u-button-group-vertical) > .u-button,
+.u-button-group-vertical > .btn-group:not(:first-child) > .u-button,
+.u-button-group-vertical > .u-button-group:not(:first-child):not(.u-button-group-vertical) > .u-button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -18603,12 +18663,12 @@ a.badge, a.u-badge {
   --u-btn-box-shadow: none;
 }
 
-.btn-sm, .u-button-size-sm, .btn-group-sm > .btn, .btn-group-sm > .u-button {
+.btn-sm, .u-button-size-sm, .btn-group-sm > .btn, .u-button-group-size-sm > .btn, .btn-group-sm > .u-button, .u-button-group-size-sm > .u-button {
   --u-btn-line-height: 1.5;
   --u-btn-icon-size: .75rem;
 }
 
-.btn-lg, .u-button-size-lg, .btn-group-lg > .btn, .btn-group-lg > .u-button {
+.btn-lg, .u-button-size-lg, .btn-group-lg > .btn, .u-button-group-size-lg > .btn, .btn-group-lg > .u-button, .u-button-group-size-lg > .u-button {
   --u-btn-line-height: 1.5;
   --u-btn-icon-size: 2rem;
 }
@@ -18714,54 +18774,98 @@ a.badge, a.u-badge {
   display: flex;
 }
 
-.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .u-button,
+.btn-group > .btn-check:checked + .btn, .u-button-group:not(.u-button-group-vertical) > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .u-button, .u-button-group:not(.u-button-group-vertical) > .btn-check:checked + .u-button,
 .btn-group > .btn:active,
+.u-button-group:not(.u-button-group-vertical) > .btn:active,
 .btn-group > .u-button:active,
+.u-button-group:not(.u-button-group-vertical) > .u-button:active,
 .btn-group > .btn.active,
 .u-tabs .u-tabs-panels .btn-group > .btn.u-tabs-panel-active,
 .u-tabs .u-tabs-items .btn-group > .btn.u-tabs-item-active,
 .btn-group > .btn.u-carousel-item-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.active,
+.u-tabs .u-tabs-panels .u-button-group:not(.u-button-group-vertical) > .btn.u-tabs-panel-active,
+.u-tabs .u-tabs-items .u-button-group:not(.u-button-group-vertical) > .btn.u-tabs-item-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.u-carousel-item-active,
 .btn-group > .btn.u-button-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.u-button-active,
 .btn-group > .active.u-button,
 .u-tabs .u-tabs-panels .btn-group > .u-button.u-tabs-panel-active,
 .u-tabs .u-tabs-items .btn-group > .u-button.u-tabs-item-active,
 .btn-group > .u-button.u-carousel-item-active,
+.u-button-group:not(.u-button-group-vertical) > .active.u-button,
+.u-tabs .u-tabs-panels .u-button-group:not(.u-button-group-vertical) > .u-button.u-tabs-panel-active,
+.u-tabs .u-tabs-items .u-button-group:not(.u-button-group-vertical) > .u-button.u-tabs-item-active,
+.u-button-group:not(.u-button-group-vertical) > .u-button.u-carousel-item-active,
 .btn-group > .u-button.u-button-active,
+.u-button-group:not(.u-button-group-vertical) > .u-button.u-button-active,
 .btn-group > .btn.u-breadcrumb-item-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.u-breadcrumb-item-active,
 .btn-group > .u-breadcrumb-item-active.u-button,
+.u-button-group:not(.u-button-group-vertical) > .u-breadcrumb-item-active.u-button,
 .btn-group > .btn.u-avatar-active,
+.u-button-group:not(.u-button-group-vertical) > .btn.u-avatar-active,
 .btn-group > .u-avatar-active.u-button,
+.u-button-group:not(.u-button-group-vertical) > .u-avatar-active.u-button,
 .btn-group-vertical > .btn-check:checked + .btn,
+.u-button-group-vertical > .btn-check:checked + .btn,
 .btn-group-vertical > .btn-check:checked + .u-button,
+.u-button-group-vertical > .btn-check:checked + .u-button,
 .btn-group-vertical > .btn:active,
+.u-button-group-vertical > .btn:active,
 .btn-group-vertical > .u-button:active,
+.u-button-group-vertical > .u-button:active,
 .btn-group-vertical > .btn.active,
 .u-tabs .u-tabs-panels .btn-group-vertical > .btn.u-tabs-panel-active,
 .u-tabs .u-tabs-items .btn-group-vertical > .btn.u-tabs-item-active,
 .btn-group-vertical > .btn.u-carousel-item-active,
+.u-button-group-vertical > .btn.active,
+.u-tabs .u-tabs-panels .u-button-group-vertical > .btn.u-tabs-panel-active,
+.u-tabs .u-tabs-items .u-button-group-vertical > .btn.u-tabs-item-active,
+.u-button-group-vertical > .btn.u-carousel-item-active,
 .btn-group-vertical > .btn.u-button-active,
+.u-button-group-vertical > .btn.u-button-active,
 .btn-group-vertical > .active.u-button,
 .u-tabs .u-tabs-panels .btn-group-vertical > .u-button.u-tabs-panel-active,
 .u-tabs .u-tabs-items .btn-group-vertical > .u-button.u-tabs-item-active,
 .btn-group-vertical > .u-button.u-carousel-item-active,
+.u-button-group-vertical > .active.u-button,
+.u-tabs .u-tabs-panels .u-button-group-vertical > .u-button.u-tabs-panel-active,
+.u-tabs .u-tabs-items .u-button-group-vertical > .u-button.u-tabs-item-active,
+.u-button-group-vertical > .u-button.u-carousel-item-active,
 .btn-group-vertical > .u-button.u-button-active,
+.u-button-group-vertical > .u-button.u-button-active,
 .btn-group-vertical > .btn.u-breadcrumb-item-active,
+.u-button-group-vertical > .btn.u-breadcrumb-item-active,
 .btn-group-vertical > .u-breadcrumb-item-active.u-button,
+.u-button-group-vertical > .u-breadcrumb-item-active.u-button,
 .btn-group-vertical > .btn.u-avatar-active,
-.btn-group-vertical > .u-avatar-active.u-button {
+.u-button-group-vertical > .btn.u-avatar-active,
+.btn-group-vertical > .u-avatar-active.u-button,
+.u-button-group-vertical > .u-avatar-active.u-button {
   z-index: 5;
 }
-.btn-group > .btn-check:focus + .btn, .btn-group > .btn-check:focus + .u-button,
+.btn-group > .btn-check:focus + .btn, .u-button-group:not(.u-button-group-vertical) > .btn-check:focus + .btn, .btn-group > .btn-check:focus + .u-button, .u-button-group:not(.u-button-group-vertical) > .btn-check:focus + .u-button,
 .btn-group > .btn:hover,
+.u-button-group:not(.u-button-group-vertical) > .btn:hover,
 .btn-group > .u-button:hover,
+.u-button-group:not(.u-button-group-vertical) > .u-button:hover,
 .btn-group > .btn:focus,
+.u-button-group:not(.u-button-group-vertical) > .btn:focus,
 .btn-group > .u-button:focus,
+.u-button-group:not(.u-button-group-vertical) > .u-button:focus,
 .btn-group-vertical > .btn-check:focus + .btn,
+.u-button-group-vertical > .btn-check:focus + .btn,
 .btn-group-vertical > .btn-check:focus + .u-button,
+.u-button-group-vertical > .btn-check:focus + .u-button,
 .btn-group-vertical > .btn:hover,
+.u-button-group-vertical > .btn:hover,
 .btn-group-vertical > .u-button:hover,
+.u-button-group-vertical > .u-button:hover,
 .btn-group-vertical > .btn:focus,
-.btn-group-vertical > .u-button:focus {
+.u-button-group-vertical > .btn:focus,
+.btn-group-vertical > .u-button:focus,
+.u-button-group-vertical > .u-button:focus {
   z-index: 1;
 }
 
@@ -24734,51 +24838,6 @@ Antialiasing
 }
 .u-button > .u-avatar {
   margin: 0 !important;
-}
-
-.u-button-group {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  gap: 0.5rem;
-}
-.u-button-group .u-button :active,
-.u-button-group .u-button :focus,
-.u-button-group .u-button :hover {
-  z-index: 1;
-}
-.u-button-group-compact {
-  gap: 0;
-}
-.u-button-group-wrap {
-  flex-wrap: wrap;
-}
-.u-button-group-vertical {
-  flex-direction: column;
-}
-.u-button-group-vertical.u-button-group-compact > .u-button:not(:first-child) {
-  margin-top: -1px;
-}
-.u-button-group-vertical.u-button-group-compact > .u-button:not(:first-child) {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.u-button-group-vertical.u-button-group-compact > .u-button:not(:last-child) {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.u-button-group-horizontal {
-  flex-direction: row;
-}
-.u-button-group-horizontal.u-button-group-compact > .u-button:not(:first-child) {
-  margin-inline-start: -1px;
-}
-.u-button-group-horizontal.u-button-group-compact > .u-button:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.u-button-group-horizontal.u-button-group-compact > .u-button:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .u-card-footer {
