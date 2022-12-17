@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { tweened } from 'svelte/motion'
-
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
 
 	import { El } from '../Base'
 	import type { AppLoadingBarProps } from './AppLoadingBar.types'
