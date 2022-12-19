@@ -63,7 +63,11 @@
 	<InputBorderShapes />
 </Preview>
 
-<Doc title="Masks" />
+<Doc title="Masks">
+	Using input mask is the way you can force users to fill input field in a specific format with specific values. Since
+	the <a href="https://github.com/RobinHerbots/Inputmask#readme" target="_blank">RobinHerbots Inputmask</a> is used, You
+	can find more details in the official documentation page.
+</Doc>
 <Preview src="./InputMasks.svelte">
 	<InputMasks />
 </Preview>
