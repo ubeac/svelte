@@ -1,44 +1,54 @@
 <script lang="ts">
-	import { get_current_component, setContext } from 'svelte/internal'
+	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	import { El } from '../Base'
+	import { Icon } from '../Icon'
+	import TabItem from './TabItem.svelte'
+	import type { TabsContext, TabsProps, TabType } from './Tabs.types'
 
-	/**
-	 * Forward All native Events.
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	type $$Props = TabsProps
 
-	/**
-	 * TODO
-	 */
-	export let value: any
+	export let cssPrefix: $$Props['cssPrefix'] = 'tabs'
+	export let tag: $$Props['tag'] = 'div'
+	export let pills: $$Props['pills'] = undefined
+	export let fill: $$Props['fill'] = undefined
+	export let activeIndex: $$Props['activeIndex'] = 0
 
-	/**
-	 * TODO
-	 */
-	export let vertical: boolean = false
+	let tabs: TabType[] = []
 
-	const active = writable<any>(value)
+	const selected = writable(activeIndex)
 
-	$: active.set(value)
-
-	$: classes = classname('tabs', { vertical }, $$props.class, true)
-
-	function change(next: any) {
-		value = next
+	function register(id: string, tab: Partial<TabType>) {
+		console.log('register', id, tab)
+		tabs = [...tabs, { ...tab, id }]
+		return tabs.length - 1
 	}
 
-	function update(next: any, prev: any) {
-		if (typeof prev == 'undefined') return
-		if ($active !== prev) return
-		change(next)
+	function unregister(id: string) {
+		tabs = tabs.filter((tab) => tab.id !== id)
 	}
 
-	setContext('TABS', { active, change, update })
+	setContext<TabsContext>('TABS', {
+		register,
+		unregister,
+		selected,
+	})
+
+	$: cssProps = {
+		pills,
+	}
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
-	<slot />
-</div>
+<El {...$$restProps} {tag} {cssPrefix} {cssProps}>
+	{#if tabs.length > 0}
+		<El cssPrefix="{cssPrefix}-items">
+			{#each tabs as tab, index}
+				<TabItem {index} {tab} />
+			{/each}
+		</El>
+	{/if}
+	<El cssPrefix="{cssPrefix}-content">
+		<slot />
+	</El>
+</El>

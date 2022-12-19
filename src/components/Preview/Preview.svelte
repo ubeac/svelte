@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import Prism from 'prismjs'
 	import 'prismjs/themes/prism.css'
 
@@ -109,4 +109,4 @@
 			{/if}
 		</TabsPanels>
 	</Tabs>
-</Card>
+</Card> -->
