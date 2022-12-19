@@ -5,8 +5,6 @@
 	import ButtonDefault from './ButtonDefault.svelte'
 	import ButtonDisabled from './ButtonDisabled.svelte'
 	import ButtonGhost from './ButtonGhost.svelte'
-	import ButtonGroup from './ButtonGroup.svelte'
-	import ButtonGroupLotsOfItems from './ButtonGroupLotsOfItems.svelte'
 	import ButtonIcon from './ButtonIcon.svelte'
 	import ButtonLarge from './ButtonLarge.svelte'
 	import ButtonLoading from './ButtonLoading.svelte'
@@ -16,6 +14,8 @@
 	import ButtonTag from './ButtonTag.svelte'
 	import ButtonTile from './ButtonTile.svelte'
 	import ButtonWithAvatar from './ButtonWithAvatar.svelte'
+	import ButtonSocialIcon from './ButtonSocialIcon.svelte'
+	import ButtonSocial from './ButtonSocial.svelte'
 </script>
 
 <h1>Buttons</h1>
@@ -115,21 +115,6 @@
 	<ButtonLoading />
 </Preview>
 
-<Doc title="List of buttons">
-	Create a list of buttons using the <code>ButtonGroup</code> component to display different actions a user can take.
-</Doc>
-
-<Preview src="./ButtonGroup.svelte">
-	<ButtonGroup />
-</Preview>
-<Doc title="Button Group wrap">
-	If the list is long, by adding wrap prop for ButtonGroup, it will be wrapped and some buttons will be moved to the
-	next line.
-</Doc>
-<Preview src="./ButtonGroupLotsOfItems.svelte">
-	<ButtonGroupLotsOfItems />
-</Preview>
-
 <Doc title="Buttons with avatars">
 	Use buttons with avatars to simplify the process of interaction and make your design more personalized. Buttons can
 	contain avatars and labels or only avatars, if displayed on a smaller space.
@@ -137,4 +122,16 @@
 
 <Preview src="./ButtonWithAvatar.svelte">
 	<ButtonWithAvatar />
+</Preview>
+
+<Doc title="Buttons with social media icons" />
+
+<Preview src="./ButtonSocialIcon.svelte">
+	<ButtonSocialIcon />
+</Preview>
+
+<Doc title="Social media buttons" />
+
+<Preview src="./ButtonSocial.svelte">
+	<ButtonSocial />
 </Preview>
