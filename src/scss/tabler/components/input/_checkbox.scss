@@ -30,4 +30,8 @@ $checkbox-props: (
 			}
 		}
 	}
+
+	&-indeterminate {
+		@extend .form-check-input, [type=checkbox], :indeterminate
+	}
 }

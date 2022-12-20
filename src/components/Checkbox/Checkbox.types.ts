@@ -1,4 +1,4 @@
-import type { ElProps } from '../Base'
+import type { ElProps } from '$lib/components'
 
 export interface CheckboxProps extends Partial<ElProps> {
 	color?: Colors
@@ -7,7 +7,10 @@ export interface CheckboxProps extends Partial<ElProps> {
 	label?: string
 	inline?: boolean
 	reverse?: boolean
-	value?: boolean
+	value?: any
+	checked?: boolean
+	name?: string
+	indeterminate?: boolean
 }
 
 export interface CheckboxGroupProps extends Partial<ElProps> {

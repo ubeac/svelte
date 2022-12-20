@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { El, type ElProps } from '$lib/components'
-
-	import type { CheckboxProps } from './Checkbox.types'
+	import { type CheckboxProps, El, type ElProps } from '$lib/components'
 
 	type $$Props = CheckboxProps
+
+	//#region Props
 
 	/**
 	 * Set Css Prefix for the Input
@@ -16,13 +16,24 @@
 	export let color: $$Props['color'] = undefined
 
 	/**
+	 * Set the checkbox checked attribute
+	 */
+	export let checked: $$Props['checked'] = false
+
+	/**
 	 * Description of checkbox
 	 */
 	export let description: $$Props['description'] = undefined
+
 	/**
 	 * Set the checkbox disabled
 	 */
 	export let disabled: $$Props['disabled'] = undefined
+
+	/**
+	 * Set the checkbox indeterminate
+	 */
+	export let indeterminate: $$Props['indeterminate'] = false
 
 	/**
 	 * Show multiple items in same line
@@ -32,7 +43,12 @@
 	/**
 	 * Label of checkbox
 	 */
-	export let label: $$Props['label'] = ''
+	export let label: $$Props['label'] = undefined
+
+	/**
+	 * Name of checkbox
+	 */
+	export let name: $$Props['name'] = undefined
 
 	/**
 	 * Put your checkboxes on the opposite side with reverse property.
@@ -40,9 +56,11 @@
 	export let reverse: $$Props['reverse'] = undefined
 
 	/**
-	 * Checked status of checkbox
+	 * Set the checkbox value
 	 */
-	export let value: $$Props['value'] = false
+	export let value: $$Props['value'] = undefined
+
+	//#endregion
 
 	let element: HTMLElement
 	let checkboxProps: Partial<ElProps>
@@ -60,13 +78,14 @@
 
 	$: checkboxProps = {
 		...$$restProps,
-		tag: 'input',
 		cssPrefix,
 		disabled,
-		type: 'checkbox',
-		checked: value,
+		checked,
+		value,
+		name,
 		cssProps: {
 			color,
+			indeterminate,
 		},
 	}
 
@@ -79,15 +98,10 @@
 	$: descriptionProps = {
 		cssPrefix: cssPrefix + '-description',
 	}
-
-	function onChange(event: any) {
-		value = event.target.checked
-	}
 </script>
 
 <El {...wrapperProps}>
-	<El {...checkboxProps} bind:element on:change={onChange} on:change />
-
+	<El tag="input" type="checkbox" {...checkboxProps} bind:element on:change />
 	{#if label || $$slots['default']}
 		<El {...labelProps}>
 			<slot>

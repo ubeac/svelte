@@ -2,8 +2,8 @@
 	import { Checkbox } from '@ubeac/svelte'
 </script>
 
-<Checkbox color="primary" label="Primary" value={true} />
-<Checkbox color="secondary" label="Secondary" value={true} />
-<Checkbox color="success" label="Success" value={true} />
-<Checkbox color="warning" label="Warning" value={true} />
-<Checkbox color="danger" label="Danger" value={true} />
+<Checkbox checked color="primary" label="Primary" />
+<Checkbox checked color="secondary" label="Secondary" />
+<Checkbox checked color="success" label="Success" />
+<Checkbox checked color="warning" label="Warning" />
+<Checkbox checked color="danger" label="Danger" />

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { El } from '../Base'
-	import Checkbox from './Checkbox.svelte'
-	import type { CheckboxGroupProps } from './Checkbox.types'
+	import { Checkbox, type CheckboxGroupProps, El } from '$lib/components'
 
 	type $$Props = CheckboxGroupProps
+
+	//#region Props
 
 	/**
 	 * Set color for the selected Checkbox's background color
@@ -28,12 +28,14 @@
 	/**
 	 * Put your checkboxes on the opposite side with reverse property.
 	 */
-	 export let reverse: $$Props['reverse'] = undefined
+	export let reverse: $$Props['reverse'] = undefined
 
 	/**
 	 * The value of CheckboxGroup
 	 */
 	export let value: $$Props['value'] = []
+
+	//#endregion
 
 	let element: HTMLElement
 
@@ -41,22 +43,32 @@
 		inline,
 		name: element?.id,
 		color,
-		reverse
+		reverse,
 	}
 
-	function onChange(option: any) {
-		if (value!.includes(option)) {
-			value = value?.filter((val) => val !== option)
-		} else {
-			value = [...value!, option]
+	function onChange(event: any) {
+		if (value === undefined) value = []
+
+		if (items != undefined && items?.length > 0) {
+			const selectedIndex = event.target.value
+			const selectedChecked = event.target.checked
+			if (selectedChecked) {
+				value.push(items[selectedIndex])
+			} else {
+				var _index = value.indexOf(items[selectedIndex])
+				if (_index !== -1) {
+					value.splice(_index, 1)
+				}
+			}
+			value = value
 		}
 	}
 </script>
 
 <El {cssPrefix} bind:element {...$$restProps}>
 	{#if items}
-		{#each items as item, index}
-			<Checkbox {...checkboxProps} value={value?.includes(item)} on:change={() => onChange(item)}>
+		{#each items as item, index (index)}
+			<Checkbox {...checkboxProps} value={index} checked={value?.includes(item)} on:change={onChange}>
 				<slot {index} {item}>{item}</slot>
 			</Checkbox>
 		{/each}

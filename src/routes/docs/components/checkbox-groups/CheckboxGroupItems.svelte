@@ -30,4 +30,4 @@
 	{index}- <b>{item.name}</b> ({item.value})
 </CheckboxGroup>
 
-<span>{JSON.stringify(value)}</span>
+<i>{JSON.stringify(value)}</i>

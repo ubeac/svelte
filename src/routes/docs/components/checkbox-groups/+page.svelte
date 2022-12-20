@@ -4,36 +4,50 @@
 	import CheckboxGroupItems from './CheckboxGroupItems.svelte'
 	import CheckboxGroupDefault from './CheckboxGroupDefault.svelte'
 	import CheckboxGroupReverse from './CheckboxGroupReverse.svelte'
+	import CheckboxGroupLabel from './CheckboxGroupLabel.svelte'
+	import CheckboxGroupColor from './CheckboxGroupColor.svelte'
 </script>
 
 <h1>Checkbox Group</h1>
-<p>
-	Use CheckboxGroup if you want to allow users to select more than one option from a set of predefined options or to
-	turn an option on or off.
-</p>
 
-<Doc title="Basic">Basic Usage</Doc>
+<Doc title="Basic">
+	CheckboxGroup is a wrapper for <code>Checkbox</code> component, it can be used to group multiple checkboxes in one component.
+</Doc>
 <Preview vertical src="./CheckboxGroupDefault.svelte">
 	<CheckboxGroupDefault />
 </Preview>
 
-<Doc title="Checkbox Group Inline"
-	>CheckboxGroup can have inline property for all items to be in one horizontal line.</Doc>
+<Doc title="Custom Label">
+	You can use default slot to pass a custom label for <code>CheckboxGroup</code>.
+</Doc>
+<Preview vertical src="./CheckboxGroupLabel.svelte">
+	<CheckboxGroupLabel />
+</Preview>
+
+<Doc title="Color">
+	Set <code>color</code> property to define background color for all <code>Checkbox</code> inside the
+	<code>CheckboxGroup</code>
+</Doc>
+<Preview vertical src="./CheckboxGroupColor.svelte">
+	<CheckboxGroupColor />
+</Preview>
+
+<Doc title="Inline">
+	Set <code>inline</code> property to display all checkboxes in one line.
+</Doc>
 <Preview src="./CheckboxGroupInline.svelte">
 	<CheckboxGroupInline />
 </Preview>
 
 <Doc title="Reverse">
-	Set <code>reverse</code> property to reverse position of all <code>Checkboxes</code> inside the
-	<code>CheckboxGroup</code>
+	<code>reverse</code> property can be used to put the checkboxes on the opposite side.
 </Doc>
 <Preview src="./CheckboxGroupReverse.svelte">
 	<CheckboxGroupReverse />
 </Preview>
 
-<Doc title="Checkbox Group Items">
-	CheckboxGroup items can have custom items property name, for convenience in displaying items in the checkbox, this
-	feature is for other components like ( FormCheckboxGroup ).
+<Doc title="Binding">
+	You can use <code>items</code> property to pass an array of items to <code>CheckboxGroup</code> component.
 </Doc>
 <Preview src="./CheckboxGroupItems.svelte">
 	<CheckboxGroupItems />
