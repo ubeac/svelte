@@ -1,65 +1,86 @@
 <script lang="ts">
-	import { browser } from '$app/environment'
-	import { El } from '$lib/components'
-	import type { OffcanvasProps } from '$lib/components'
+	import { onMount, setContext } from 'svelte'
+
+	import { El, type OffcanvasProps } from '$lib/components'
 
 	type $$Props = OffcanvasProps
+
 	/**
 	 * Set Css Prefix for the Offcanvas
 	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'offcanvas'
-	/**
-	 * Set Html tag for the Offcanvas
-	 */
-	export let tag: $$Props['tag'] = 'div'
+
 	/**
 	 * Set Offcanvas placement
 	 */
-	export let placement: $$Props['placement'] = undefined
+	export let placement: $$Props['placement'] = 'start'
+
 	/**
-	 * Allow body scrolling while offcanvas is open
+	 * Disable body scrolling while Offcanvas is open
 	 */
-	export let scroll: $$Props['scroll'] = undefined
+	export let noScroll: $$Props['noScroll'] = undefined
+
 	/**
-	 * Apply a backdrop on body while offcanvas is open
+	 * Apply a backdrop on body while Offcanvas is open
 	 */
 	export let backdrop: $$Props['backdrop'] = undefined
+
 	/**
-	 * Closes the offcanvas when escape key is pressed
+	 * Closes the Offcanvas when escape key is pressed
 	 */
-	export let keyboard: $$Props['keyboard'] = undefined
+	export let autoClose: $$Props['autoClose'] = undefined
+
 	/**
-	 * You can show and hide the offcanvas
+	 * You can show and hide the Offcanvas
 	 */
-	export let show: $$Props['show'] = false
-	$: cssProps = {
-		placement,
-		show,
+	export let show: $$Props['show'] = undefined
+
+	const close = () => {
+		show = false
 	}
-	$: otherProps = { backdrop, scroll, keyboard, tag, cssPrefix }
-	$: if (browser) {
-		if (show && backdrop && !scroll) {
-			document.body.classList.add('u-noscroll')
-		} else {
-			document.body.classList.remove('u-noscroll')
-		}
-	}
-	const onKeyUp = (e) => {
-		if (keyboard) {
-			if (e.code == 'Escape') {
-				show = false
+
+	let element: HTMLElement
+	let props: OffcanvasProps = { cssPrefix, ...$$restProps }
+	let cssProps = { placement, show }
+
+	setContext('OFFCANVAS', { close })
+
+	onMount(() => {
+		const handleOutsideClick = (event: any) => {
+			if (element && backdrop && !element.contains(event.target) && !event.defaultPrevented) {
+				close()
 			}
 		}
+
+		const handleEscapeKey = (event: any) => {
+			if (element && autoClose && event.key === 'Escape' && !event.defaultPrevented) {
+				close()
+			}
+		}
+		if (element && autoClose) {
+			document.addEventListener('click', handleOutsideClick, true)
+			document.addEventListener('keyup', handleEscapeKey, true)
+			return () => {
+				document.removeEventListener('click', handleOutsideClick, true)
+				document.removeEventListener('keyup', handleEscapeKey, true)
+			}
+		}
+	})
+
+	$: {
+		props = { cssPrefix, ...$$restProps }
+		cssProps = { placement, show }
 	}
 </script>
 
-<svelte:window on:keyup|preventDefault={onKeyUp} />
-
+<El {...props} {cssProps} bind:element>
+	<slot />
+</El>
 {#if show}
 	{#if backdrop}
 		<El cssPrefix="{cssPrefix}-backdrop" />
 	{/if}
-	<El {...$$restProps} {cssProps} {...otherProps}>
-		<slot />
-	</El>
+	{#if noScroll}
+		<El cssPrefix="{cssPrefix}-no-scroll" />
+	{/if}
 {/if}

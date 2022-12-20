@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte'
 
-	import { El } from '$lib/components'
-	import type { AccordionBodyProps, AccordionContext } from '$lib/components'
+	import { type AccordionBodyProps, type AccordionContext, El } from '$lib/components'
 
 	type $$Props = AccordionBodyProps
 

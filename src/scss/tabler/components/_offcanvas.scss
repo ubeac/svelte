@@ -3,7 +3,13 @@ $offcanvas-placements: 'start' 'end' 'top' 'bottom';
 $props: (
     null:'.offcanvas',
     show: '.show',
-    placement: generate_props($offcanvas-placements, ('.offcanvas-'))
+    placement: generate_props($offcanvas-placements, ('.offcanvas-')),
+    header:(null:'.offcanvas-header',
+        btn: '.btn-close',
+        title: '.offcanvas-title'
+    ),
+    body: '.offcanvas-body',
+    scroll-static: '.offcanvas-scroll-static'
 );
 
 .#{$prefix-offcanvas} {
@@ -22,6 +28,10 @@ $props: (
     }
 }
 
-.u-noscroll {
+body:has(.#{$prefix-offcanvas}-no-scroll) {
     overflow-y: hidden !important;
+}
+
+.#{$prefix-offcanvas}-no-scroll {
+    visibility: hidden !important;
 }

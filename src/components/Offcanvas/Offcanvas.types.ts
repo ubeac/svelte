@@ -1,11 +1,20 @@
 import type { ElProps } from '$lib/components'
 
-declare type Placements = 'top' | 'end' | 'bottom' | 'start' | undefined
+export type OffcanvasPlacements = 'top' | 'end' | 'bottom' | 'start'
 
 export interface OffcanvasProps extends Partial<ElProps> {
-	placement?: Placements
-	scroll?: boolean
+	placement?: OffcanvasPlacements
+	noScroll?: boolean
 	backdrop?: boolean
-	keyboard?: boolean
+	autoClose?: boolean
 	show?: boolean
+	close?: () => void
+}
+
+export interface OffcanvasBodyProps extends Partial<ElProps> {
+	//
+}
+
+export interface OffcanvasHeaderProps extends Partial<ElProps> {
+	title?: string
 }
