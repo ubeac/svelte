@@ -176,7 +176,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'select',
+				route: base_component_path + 'selects',
 				title: 'Select',
 				icon: 'star',
 			},
