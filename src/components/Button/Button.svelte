@@ -46,5 +46,9 @@
 </script>
 
 <El {...$$restProps} {cssProps} {...otherProps} on:click>
-	<slot>{value}</slot>
+	<slot>
+		{#if value}
+			{value}
+		{/if}
+	</slot>
 </El>
