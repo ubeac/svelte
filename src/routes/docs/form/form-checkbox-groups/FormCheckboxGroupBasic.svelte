@@ -5,6 +5,6 @@
 	let value: string[] = []
 </script>
 
-<FormCheckboxGroup {items} bind:value />
+<FormCheckboxGroup label="Select a Fruit" {items} bind:value />
 
-<span if={value.length > 0}>{value}</span>
+<i>value: {JSON.stringify(value)}</i>

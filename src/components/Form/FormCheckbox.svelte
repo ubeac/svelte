@@ -1,79 +1,28 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { type FormCheckboxProps, FormField } from '.'
+	import { Checkbox } from '../Checkbox'
 
-	import { nanoid } from 'nanoid'
+	type $$Props = FormCheckboxProps
 
-	import { Checkbox } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	export let color: $$Props['color'] = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-checkbox'
+	export let inline: $$Props['inline'] = undefined
+	export let description: $$Props['description'] = undefined
+	export let reverse: $$Props['reverse'] = undefined
+	export let value: $$Props['value'] = undefined
 
-	import { FormField, FormHint } from '.'
-	import { Label } from '../Label'
-
-	/**
-	 * Set Column width
-	 */
-	export let cols: string | number | boolean = '12'
-
-	/**
-	 * Set color of checkbox
-	 */
-	export let color: Colors = 'default'
-
-	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
-
-	/**
-	 * Set id for HTML element
-	 */
-	export let id: string = 'form-checkbox-' + nanoid(10)
-
-	/**
-	 * Value of checkbox in group
-	 */
-	export let key: string | undefined = undefined
-
-	/**
-	 * label for Form checkbox
-	 */
-	export let label: string | undefined = undefined
-
-	/**
-	 * Show Message at bottom of Input
-	 */
-	export let message: string | undefined = undefined
-
-	/**
-	 * Mark this as required field in form
-	 */
-	export let required: boolean = false
-
-	/**
-	 * Set text of checkbox
-	 */
-	export let text: string | undefined = undefined
-
-	/**
-	 * Show checked state of checkbox
-	 */
-	export let value: boolean = false
-
-	$: classes = classname('form-checkbox', {}, $$props.class, true)
+	$: checkboxProps = {
+		color,
+		inline,
+		description,
+		reverse,
+	}
 </script>
 
-<FormField {cols} class={classes}>
-	<slot name="label">
-		{#if label}
-			<Label for={id} {required}>{label}</Label>
-		{/if}
-	</slot>
-	<Checkbox bind:value {id} {forwardEvents} {key} {color} {text} {...$$restProps} />
-	<slot name="message">
-		{#if message}
-			<FormHint>{message}</FormHint>
-		{/if}
-	</slot>
+<FormField {...$$restProps} {cssPrefix}>
+	<slot name="label" />
+	<Checkbox {...checkboxProps} bind:value>
+		<slot />
+	</Checkbox>
+	<slot name="hint" />
 </FormField>
