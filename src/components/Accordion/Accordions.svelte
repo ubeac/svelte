@@ -2,8 +2,7 @@
 	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 
-	import { El } from '$lib/components'
-	import type { AccordionsProps } from '$lib/components'
+	import { type AccordionsProps, El } from '$lib/components'
 
 	type $$Props = AccordionsProps
 

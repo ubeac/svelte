@@ -1,6 +1,6 @@
 {
 	"name": "@ubeac/svelte",
-	"version": "0.0.3-next.154",
+	"version": "0.0.3-next.157",
 	"type": "module",
 	"svelte": "index.js",
 	"publishConfig": {
