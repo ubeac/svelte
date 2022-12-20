@@ -3546,12 +3546,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   outline: 0;
   box-shadow: var(--u-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, .btn-check:checked + .u-button, :not(.btn-check) + .btn:active, :not(.btn-check) + .u-button:active, .btn:first-child:active, .u-button:first-child:active, .btn.active, .btn.u-tab-item-inner-active, .btn.u-tab-active, .btn.u-carousel-item-active, .btn.u-button-active, .active.u-button, .u-button.u-tab-item-inner-active, .u-button.u-tab-active, .u-button.u-carousel-item-active, .u-button.u-button-active, .btn.u-breadcrumb-item-active, .u-breadcrumb-item-active.u-button, .btn.u-avatar-active, .u-avatar-active.u-button, .btn.show, .btn.u-tooltip, .btn.u-toast-show, .btn.u-popover, .btn.u-dialog-open, .btn.u-dialog-backdrop-open, .btn.u-collapse-open, .show.u-button, .u-button.u-tooltip, .u-button.u-toast-show, .u-button.u-popover, .u-button.u-dialog-open, .u-button.u-dialog-backdrop-open, .u-button.u-collapse-open, .btn.u-el-show, .u-el-show.u-button {
+.btn-check:checked + .btn, .btn-check:checked + .u-button, :not(.btn-check) + .btn:active, :not(.btn-check) + .u-button:active, .btn:first-child:active, .u-button:first-child:active, .btn.active, .btn.u-tab-item-inner-active, .btn.u-tab-active, .btn.u-carousel-item-active, .btn.u-button-active, .active.u-button, .u-button.u-tab-item-inner-active, .u-button.u-tab-active, .u-button.u-carousel-item-active, .u-button.u-button-active, .btn.u-breadcrumb-item-active, .u-breadcrumb-item-active.u-button, .btn.u-avatar-active, .u-avatar-active.u-button, .btn.show, .btn.u-tooltip, .btn.u-toast-show, .btn.u-popover, .btn.u-offcanvas-show, .btn.u-dialog-open, .btn.u-dialog-backdrop-open, .btn.u-collapse-open, .show.u-button, .u-button.u-tooltip, .u-button.u-toast-show, .u-button.u-popover, .u-button.u-offcanvas-show, .u-button.u-dialog-open, .u-button.u-dialog-backdrop-open, .u-button.u-collapse-open, .btn.u-el-show, .u-el-show.u-button {
   color: var(--u-btn-active-color);
   background-color: var(--u-btn-active-bg);
   border-color: var(--u-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, .btn-check:checked + .u-button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .u-button:active:focus-visible, .btn:first-child:active:focus-visible, .u-button:first-child:active:focus-visible, .btn.active:focus-visible, .btn.u-tab-item-inner-active:focus-visible, .btn.u-tab-active:focus-visible, .btn.u-carousel-item-active:focus-visible, .btn.u-button-active:focus-visible, .active.u-button:focus-visible, .u-button.u-tab-item-inner-active:focus-visible, .u-button.u-tab-active:focus-visible, .u-button.u-carousel-item-active:focus-visible, .u-button.u-button-active:focus-visible, .btn.u-breadcrumb-item-active:focus-visible, .u-breadcrumb-item-active.u-button:focus-visible, .btn.u-avatar-active:focus-visible, .u-avatar-active.u-button:focus-visible, .btn.show:focus-visible, .btn.u-tooltip:focus-visible, .btn.u-toast-show:focus-visible, .btn.u-popover:focus-visible, .btn.u-dialog-open:focus-visible, .btn.u-dialog-backdrop-open:focus-visible, .btn.u-collapse-open:focus-visible, .show.u-button:focus-visible, .u-button.u-tooltip:focus-visible, .u-button.u-toast-show:focus-visible, .u-button.u-popover:focus-visible, .u-button.u-dialog-open:focus-visible, .u-button.u-dialog-backdrop-open:focus-visible, .u-button.u-collapse-open:focus-visible, .btn.u-el-show:focus-visible, .u-el-show.u-button:focus-visible {
+.btn-check:checked + .btn:focus-visible, .btn-check:checked + .u-button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .u-button:active:focus-visible, .btn:first-child:active:focus-visible, .u-button:first-child:active:focus-visible, .btn.active:focus-visible, .btn.u-tab-item-inner-active:focus-visible, .btn.u-tab-active:focus-visible, .btn.u-carousel-item-active:focus-visible, .btn.u-button-active:focus-visible, .active.u-button:focus-visible, .u-button.u-tab-item-inner-active:focus-visible, .u-button.u-tab-active:focus-visible, .u-button.u-carousel-item-active:focus-visible, .u-button.u-button-active:focus-visible, .btn.u-breadcrumb-item-active:focus-visible, .u-breadcrumb-item-active.u-button:focus-visible, .btn.u-avatar-active:focus-visible, .u-avatar-active.u-button:focus-visible, .btn.show:focus-visible, .btn.u-tooltip:focus-visible, .btn.u-toast-show:focus-visible, .btn.u-popover:focus-visible, .btn.u-offcanvas-show:focus-visible, .btn.u-dialog-open:focus-visible, .btn.u-dialog-backdrop-open:focus-visible, .btn.u-collapse-open:focus-visible, .show.u-button:focus-visible, .u-button.u-tooltip:focus-visible, .u-button.u-toast-show:focus-visible, .u-button.u-popover:focus-visible, .u-button.u-offcanvas-show:focus-visible, .u-button.u-dialog-open:focus-visible, .u-button.u-dialog-backdrop-open:focus-visible, .u-button.u-collapse-open:focus-visible, .btn.u-el-show:focus-visible, .u-el-show.u-button:focus-visible {
   box-shadow: var(--u-btn-focus-box-shadow);
 }
 .btn:disabled, .u-button:disabled, .btn.disabled, .btn.u-tab-item-inner-disabled, .btn.u-button-disabled, .disabled.u-button, .u-button.u-tab-item-inner-disabled, .u-button.u-button-disabled, fieldset:disabled .btn, fieldset:disabled .u-button {
@@ -3609,11 +3609,11 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     transition: none;
   }
 }
-.fade:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-tooltip:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-popover:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-dialog-backdrop:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-dialog:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show) {
+.fade:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-tooltip:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-popover:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-dialog-backdrop:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-dialog:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show) {
   opacity: 0;
 }
 
-.collapse:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show) {
+.collapse:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show) {
   display: none;
 }
 
@@ -3908,7 +3908,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   background-color: transparent;
 }
 
-.dropdown-menu.show, .dropdown-menu.u-tooltip, .dropdown-menu.u-toast-show, .dropdown-menu.u-tab-active, .dropdown-menu.u-popover, .show.u-menu, .u-menu.u-tooltip, .u-menu.u-toast-show, .u-menu.u-tab-active, .u-menu.u-popover, .show.u-autocomplete-items, .u-autocomplete-items.u-tooltip, .u-autocomplete-items.u-toast-show, .u-autocomplete-items.u-tab-active, .u-autocomplete-items.u-popover, .dropdown-menu.u-dialog-open, .u-dialog-open.u-menu, .u-dialog-open.u-autocomplete-items, .dropdown-menu.u-dialog-backdrop-open, .u-dialog-backdrop-open.u-menu, .u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.u-collapse-open, .u-collapse-open.u-menu, .u-collapse-open.u-autocomplete-items, .dropdown-menu.u-el-show, .u-el-show.u-menu, .u-el-show.u-autocomplete-items {
+.dropdown-menu.show, .dropdown-menu.u-tooltip, .dropdown-menu.u-toast-show, .dropdown-menu.u-tab-active, .dropdown-menu.u-popover, .dropdown-menu.u-offcanvas-show, .show.u-menu, .u-menu.u-tooltip, .u-menu.u-toast-show, .u-menu.u-tab-active, .u-menu.u-popover, .u-menu.u-offcanvas-show, .show.u-autocomplete-items, .u-autocomplete-items.u-tooltip, .u-autocomplete-items.u-toast-show, .u-autocomplete-items.u-tab-active, .u-autocomplete-items.u-popover, .u-autocomplete-items.u-offcanvas-show, .dropdown-menu.u-dialog-open, .u-dialog-open.u-menu, .u-dialog-open.u-autocomplete-items, .dropdown-menu.u-dialog-backdrop-open, .u-dialog-backdrop-open.u-menu, .u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.u-collapse-open, .u-collapse-open.u-menu, .u-collapse-open.u-autocomplete-items, .dropdown-menu.u-el-show, .u-el-show.u-menu, .u-el-show.u-autocomplete-items {
   display: block;
 }
 
@@ -4274,6 +4274,14 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .u-tabs-items .nav-item.u-popover .u-tab-item-inner,
 .u-tabs-items .u-popover.u-tab-item .nav-link,
 .u-tabs-items .u-popover.u-tab-item .u-tab-item-inner,
+.nav-tabs .nav-item.u-offcanvas-show .nav-link,
+.nav-tabs .nav-item.u-offcanvas-show .u-tab-item-inner,
+.nav-tabs .u-offcanvas-show.u-tab-item .nav-link,
+.nav-tabs .u-offcanvas-show.u-tab-item .u-tab-item-inner,
+.u-tabs-items .nav-item.u-offcanvas-show .nav-link,
+.u-tabs-items .nav-item.u-offcanvas-show .u-tab-item-inner,
+.u-tabs-items .u-offcanvas-show.u-tab-item .nav-link,
+.u-tabs-items .u-offcanvas-show.u-tab-item .u-tab-item-inner,
 .nav-tabs .nav-item.u-dialog-open .nav-link,
 .nav-tabs .nav-item.u-dialog-open .u-tab-item-inner,
 .nav-tabs .u-dialog-open.u-tab-item .nav-link,
@@ -4352,6 +4360,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .nav-pills .u-popover > .u-tab-item-inner,
 .u-tabs-pills .u-tabs-items .u-popover > .nav-link,
 .u-tabs-pills .u-tabs-items .u-popover > .u-tab-item-inner,
+.nav-pills .u-offcanvas-show > .nav-link,
+.nav-pills .u-offcanvas-show > .u-tab-item-inner,
+.u-tabs-pills .u-tabs-items .u-offcanvas-show > .nav-link,
+.u-tabs-pills .u-tabs-items .u-offcanvas-show > .u-tab-item-inner,
 .nav-pills .u-dialog-open > .nav-link,
 .nav-pills .u-dialog-open > .u-tab-item-inner,
 .u-tabs-pills .u-tabs-items .u-dialog-open > .nav-link,
@@ -4488,7 +4500,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   margin-bottom: 0;
   list-style: none;
 }
-.navbar-nav .show > .nav-link, .navbar-nav .u-tooltip > .nav-link, .navbar-nav .u-toast-show > .nav-link, .navbar-nav .show > .u-tab-item-inner, .navbar-nav .u-tooltip > .u-tab-item-inner, .navbar-nav .u-toast-show > .u-tab-item-inner, .navbar-nav .u-tab-active > .nav-link, .navbar-nav .u-tab-active > .u-tab-item-inner, .navbar-nav .u-popover > .nav-link, .navbar-nav .u-popover > .u-tab-item-inner, .navbar-nav .u-dialog-open > .nav-link, .navbar-nav .u-dialog-open > .u-tab-item-inner, .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .navbar-nav .u-collapse-open > .nav-link, .navbar-nav .u-collapse-open > .u-tab-item-inner, .navbar-nav .u-el-show > .nav-link, .navbar-nav .u-el-show > .u-tab-item-inner,
+.navbar-nav .show > .nav-link, .navbar-nav .u-tooltip > .nav-link, .navbar-nav .u-toast-show > .nav-link, .navbar-nav .show > .u-tab-item-inner, .navbar-nav .u-tooltip > .u-tab-item-inner, .navbar-nav .u-toast-show > .u-tab-item-inner, .navbar-nav .u-tab-active > .nav-link, .navbar-nav .u-tab-active > .u-tab-item-inner, .navbar-nav .u-popover > .nav-link, .navbar-nav .u-popover > .u-tab-item-inner, .navbar-nav .u-offcanvas-show > .nav-link, .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .navbar-nav .u-dialog-open > .nav-link, .navbar-nav .u-dialog-open > .u-tab-item-inner, .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .navbar-nav .u-collapse-open > .nav-link, .navbar-nav .u-collapse-open > .u-tab-item-inner, .navbar-nav .u-el-show > .nav-link, .navbar-nav .u-el-show > .u-tab-item-inner,
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.u-tab-item-inner-active,
 .navbar-nav .active.u-tab-item-inner,
@@ -4591,7 +4603,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   .navbar-expand-sm .navbar-toggler {
     display: none;
   }
-  .navbar-expand-sm .offcanvas {
+  .navbar-expand-sm .offcanvas, .navbar-expand-sm .u-offcanvas {
     position: static;
     z-index: auto;
     flex-grow: 1;
@@ -4603,10 +4615,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     transform: none !important;
     transition: none;
   }
-  .navbar-expand-sm .offcanvas .offcanvas-header {
+  .navbar-expand-sm .offcanvas .offcanvas-header, .navbar-expand-sm .offcanvas .u-offcanvas-header, .navbar-expand-sm .u-offcanvas .offcanvas-header, .navbar-expand-sm .u-offcanvas .u-offcanvas-header {
     display: none;
   }
-  .navbar-expand-sm .offcanvas .offcanvas-body {
+  .navbar-expand-sm .offcanvas .offcanvas-body, .navbar-expand-sm .offcanvas .u-offcanvas-body, .navbar-expand-sm .u-offcanvas .offcanvas-body, .navbar-expand-sm .u-offcanvas .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -4638,7 +4650,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   .navbar-expand-md .navbar-toggler, .u-app-header .navbar-toggler {
     display: none;
   }
-  .navbar-expand-md .offcanvas, .u-app-header .offcanvas {
+  .navbar-expand-md .offcanvas, .navbar-expand-md .u-offcanvas, .u-app-header .offcanvas, .u-app-header .u-offcanvas {
     position: static;
     z-index: auto;
     flex-grow: 1;
@@ -4650,10 +4662,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     transform: none !important;
     transition: none;
   }
-  .navbar-expand-md .offcanvas .offcanvas-header, .u-app-header .offcanvas .offcanvas-header {
+  .navbar-expand-md .offcanvas .offcanvas-header, .navbar-expand-md .offcanvas .u-offcanvas-header, .navbar-expand-md .u-offcanvas .offcanvas-header, .navbar-expand-md .u-offcanvas .u-offcanvas-header, .u-app-header .offcanvas .offcanvas-header, .u-app-header .offcanvas .u-offcanvas-header, .u-app-header .u-offcanvas .offcanvas-header, .u-app-header .u-offcanvas .u-offcanvas-header {
     display: none;
   }
-  .navbar-expand-md .offcanvas .offcanvas-body, .u-app-header .offcanvas .offcanvas-body {
+  .navbar-expand-md .offcanvas .offcanvas-body, .navbar-expand-md .offcanvas .u-offcanvas-body, .navbar-expand-md .u-offcanvas .offcanvas-body, .navbar-expand-md .u-offcanvas .u-offcanvas-body, .u-app-header .offcanvas .offcanvas-body, .u-app-header .offcanvas .u-offcanvas-body, .u-app-header .u-offcanvas .offcanvas-body, .u-app-header .u-offcanvas .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -4685,7 +4697,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   .navbar-expand-lg .navbar-toggler {
     display: none;
   }
-  .navbar-expand-lg .offcanvas {
+  .navbar-expand-lg .offcanvas, .navbar-expand-lg .u-offcanvas {
     position: static;
     z-index: auto;
     flex-grow: 1;
@@ -4697,10 +4709,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     transform: none !important;
     transition: none;
   }
-  .navbar-expand-lg .offcanvas .offcanvas-header {
+  .navbar-expand-lg .offcanvas .offcanvas-header, .navbar-expand-lg .offcanvas .u-offcanvas-header, .navbar-expand-lg .u-offcanvas .offcanvas-header, .navbar-expand-lg .u-offcanvas .u-offcanvas-header {
     display: none;
   }
-  .navbar-expand-lg .offcanvas .offcanvas-body {
+  .navbar-expand-lg .offcanvas .offcanvas-body, .navbar-expand-lg .offcanvas .u-offcanvas-body, .navbar-expand-lg .u-offcanvas .offcanvas-body, .navbar-expand-lg .u-offcanvas .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -4732,7 +4744,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   .navbar-expand-xl .navbar-toggler {
     display: none;
   }
-  .navbar-expand-xl .offcanvas {
+  .navbar-expand-xl .offcanvas, .navbar-expand-xl .u-offcanvas {
     position: static;
     z-index: auto;
     flex-grow: 1;
@@ -4744,10 +4756,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     transform: none !important;
     transition: none;
   }
-  .navbar-expand-xl .offcanvas .offcanvas-header {
+  .navbar-expand-xl .offcanvas .offcanvas-header, .navbar-expand-xl .offcanvas .u-offcanvas-header, .navbar-expand-xl .u-offcanvas .offcanvas-header, .navbar-expand-xl .u-offcanvas .u-offcanvas-header {
     display: none;
   }
-  .navbar-expand-xl .offcanvas .offcanvas-body {
+  .navbar-expand-xl .offcanvas .offcanvas-body, .navbar-expand-xl .offcanvas .u-offcanvas-body, .navbar-expand-xl .u-offcanvas .offcanvas-body, .navbar-expand-xl .u-offcanvas .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -4779,7 +4791,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   .navbar-expand-xxl .navbar-toggler {
     display: none;
   }
-  .navbar-expand-xxl .offcanvas {
+  .navbar-expand-xxl .offcanvas, .navbar-expand-xxl .u-offcanvas {
     position: static;
     z-index: auto;
     flex-grow: 1;
@@ -4791,10 +4803,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     transform: none !important;
     transition: none;
   }
-  .navbar-expand-xxl .offcanvas .offcanvas-header {
+  .navbar-expand-xxl .offcanvas .offcanvas-header, .navbar-expand-xxl .offcanvas .u-offcanvas-header, .navbar-expand-xxl .u-offcanvas .offcanvas-header, .navbar-expand-xxl .u-offcanvas .u-offcanvas-header {
     display: none;
   }
-  .navbar-expand-xxl .offcanvas .offcanvas-body {
+  .navbar-expand-xxl .offcanvas .offcanvas-body, .navbar-expand-xxl .offcanvas .u-offcanvas-body, .navbar-expand-xxl .u-offcanvas .offcanvas-body, .navbar-expand-xxl .u-offcanvas .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -4825,7 +4837,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .navbar-expand .navbar-toggler {
   display: none;
 }
-.navbar-expand .offcanvas {
+.navbar-expand .offcanvas, .navbar-expand .u-offcanvas {
   position: static;
   z-index: auto;
   flex-grow: 1;
@@ -4837,10 +4849,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   transform: none !important;
   transition: none;
 }
-.navbar-expand .offcanvas .offcanvas-header {
+.navbar-expand .offcanvas .offcanvas-header, .navbar-expand .offcanvas .u-offcanvas-header, .navbar-expand .u-offcanvas .offcanvas-header, .navbar-expand .u-offcanvas .u-offcanvas-header {
   display: none;
 }
-.navbar-expand .offcanvas .offcanvas-body {
+.navbar-expand .offcanvas .offcanvas-body, .navbar-expand .offcanvas .u-offcanvas-body, .navbar-expand .u-offcanvas .offcanvas-body, .navbar-expand .u-offcanvas .u-offcanvas-body {
   display: flex;
   flex-grow: 0;
   padding: 0;
@@ -5379,7 +5391,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .alert-dismissible, .u-alert-dismissible {
   padding-right: 3rem;
 }
-.alert-dismissible .btn-close, .alert-dismissible .u-toast-close, .alert-dismissible .u-dialog-close, .alert-dismissible .u-alert-end, .u-alert-dismissible .btn-close, .u-alert-dismissible .u-toast-close, .u-alert-dismissible .u-dialog-close, .u-alert-dismissible .u-alert-end {
+.alert-dismissible .btn-close, .alert-dismissible .u-toast-close, .alert-dismissible .u-offcanvas-header-btn, .alert-dismissible .u-dialog-close, .alert-dismissible .u-alert-end, .u-alert-dismissible .btn-close, .u-alert-dismissible .u-toast-close, .u-alert-dismissible .u-offcanvas-header-btn, .u-alert-dismissible .u-dialog-close, .u-alert-dismissible .u-alert-end {
   position: absolute;
   top: 0;
   right: 0;
@@ -6182,7 +6194,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-color: #134076;
 }
 
-.btn-close, .u-toast-close, .u-dialog-close, .u-alert-end {
+.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-dialog-close, .u-alert-end {
   box-sizing: content-box;
   width: 0.75rem;
   height: 0.75rem;
@@ -6193,17 +6205,17 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-radius: 4px;
   opacity: 0.3;
 }
-.btn-close:hover, .u-toast-close:hover, .u-dialog-close:hover, .u-alert-end:hover {
+.btn-close:hover, .u-toast-close:hover, .u-offcanvas-header-btn:hover, .u-dialog-close:hover, .u-alert-end:hover {
   color: #000000;
   text-decoration: none;
   opacity: 0.75;
 }
-.btn-close:focus, .u-toast-close:focus, .u-dialog-close:focus, .u-alert-end:focus {
+.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-dialog-close:focus, .u-alert-end:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
   opacity: 1;
 }
-.btn-close:disabled, .u-toast-close:disabled, .u-dialog-close:disabled, .u-alert-end:disabled, .btn-close.disabled, .disabled.u-toast-close, .btn-close.u-tab-item-inner-disabled, .u-tab-item-inner-disabled.u-toast-close, .disabled.u-dialog-close, .u-dialog-close.u-tab-item-inner-disabled, .btn-close.u-button-disabled, .u-button-disabled.u-toast-close, .u-button-disabled.u-dialog-close, .disabled.u-alert-end, .u-alert-end.u-tab-item-inner-disabled, .u-alert-end.u-button-disabled {
+.btn-close:disabled, .u-toast-close:disabled, .u-offcanvas-header-btn:disabled, .u-dialog-close:disabled, .u-alert-end:disabled, .btn-close.disabled, .disabled.u-toast-close, .btn-close.u-tab-item-inner-disabled, .u-tab-item-inner-disabled.u-toast-close, .disabled.u-offcanvas-header-btn, .u-offcanvas-header-btn.u-tab-item-inner-disabled, .disabled.u-dialog-close, .u-dialog-close.u-tab-item-inner-disabled, .btn-close.u-button-disabled, .u-button-disabled.u-toast-close, .u-button-disabled.u-offcanvas-header-btn, .u-button-disabled.u-dialog-close, .disabled.u-alert-end, .u-alert-end.u-tab-item-inner-disabled, .u-alert-end.u-button-disabled {
   pointer-events: none;
   user-select: none;
   opacity: 0.25;
@@ -6243,7 +6255,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .toast.showing, .showing.u-toast {
   opacity: 0;
 }
-.toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show) {
+.toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-active):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show) {
   display: none;
 }
 
@@ -6270,7 +6282,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-top-left-radius: calc(var(--u-toast-border-radius) - var(--u-toast-border-width));
   border-top-right-radius: calc(var(--u-toast-border-radius) - var(--u-toast-border-width));
 }
-.toast-header .btn-close, .u-toast-header .btn-close, .toast-header .u-toast-close, .u-toast-header .u-toast-close, .toast-header .u-dialog-close, .u-toast-header .u-dialog-close, .toast-header .u-alert-end, .u-toast-header .u-alert-end {
+.toast-header .btn-close, .u-toast-header .btn-close, .toast-header .u-toast-close, .u-toast-header .u-toast-close, .toast-header .u-offcanvas-header-btn, .u-toast-header .u-offcanvas-header-btn, .toast-header .u-dialog-close, .u-toast-header .u-dialog-close, .toast-header .u-alert-end, .u-toast-header .u-alert-end {
   margin-right: calc(-0.5 * var(--u-toast-padding-x));
   margin-left: var(--u-toast-padding-x);
 }
@@ -6329,7 +6341,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     transition: none;
   }
 }
-.modal.show .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-toast-show .modal-dialog, .modal.u-tab-active .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-dialog-open .modal-dialog, .modal.u-dialog-backdrop-open .modal-dialog, .modal.show .u-dialog-container, .modal.u-tooltip .u-dialog-container, .modal.u-toast-show .u-dialog-container, .modal.u-tab-active .u-dialog-container, .modal.u-popover .u-dialog-container, .modal.u-dialog-open .u-dialog-container, .modal.u-dialog-backdrop-open .u-dialog-container, .show.u-dialog .modal-dialog, .u-dialog.u-tooltip .modal-dialog, .u-dialog.u-toast-show .modal-dialog, .u-dialog.u-tab-active .modal-dialog, .u-dialog.u-popover .modal-dialog, .u-dialog.u-dialog-open .modal-dialog, .u-dialog.u-dialog-backdrop-open .modal-dialog, .show.u-dialog .u-dialog-container, .u-dialog.u-tooltip .u-dialog-container, .u-dialog.u-toast-show .u-dialog-container, .u-dialog.u-tab-active .u-dialog-container, .u-dialog.u-popover .u-dialog-container, .u-dialog.u-dialog-open .u-dialog-container, .u-dialog.u-dialog-backdrop-open .u-dialog-container, .modal.u-collapse-open .modal-dialog, .modal.u-collapse-open .u-dialog-container, .u-collapse-open.u-dialog .modal-dialog, .u-collapse-open.u-dialog .u-dialog-container, .modal.u-el-show .modal-dialog, .modal.u-el-show .u-dialog-container, .u-el-show.u-dialog .modal-dialog, .u-el-show.u-dialog .u-dialog-container {
+.modal.show .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-toast-show .modal-dialog, .modal.u-tab-active .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-offcanvas-show .modal-dialog, .modal.u-dialog-open .modal-dialog, .modal.u-dialog-backdrop-open .modal-dialog, .modal.show .u-dialog-container, .modal.u-tooltip .u-dialog-container, .modal.u-toast-show .u-dialog-container, .modal.u-tab-active .u-dialog-container, .modal.u-popover .u-dialog-container, .modal.u-offcanvas-show .u-dialog-container, .modal.u-dialog-open .u-dialog-container, .modal.u-dialog-backdrop-open .u-dialog-container, .show.u-dialog .modal-dialog, .u-dialog.u-tooltip .modal-dialog, .u-dialog.u-toast-show .modal-dialog, .u-dialog.u-tab-active .modal-dialog, .u-dialog.u-popover .modal-dialog, .u-dialog.u-offcanvas-show .modal-dialog, .u-dialog.u-dialog-open .modal-dialog, .u-dialog.u-dialog-backdrop-open .modal-dialog, .show.u-dialog .u-dialog-container, .u-dialog.u-tooltip .u-dialog-container, .u-dialog.u-toast-show .u-dialog-container, .u-dialog.u-tab-active .u-dialog-container, .u-dialog.u-popover .u-dialog-container, .u-dialog.u-offcanvas-show .u-dialog-container, .u-dialog.u-dialog-open .u-dialog-container, .u-dialog.u-dialog-backdrop-open .u-dialog-container, .modal.u-collapse-open .modal-dialog, .modal.u-collapse-open .u-dialog-container, .u-collapse-open.u-dialog .modal-dialog, .u-collapse-open.u-dialog .u-dialog-container, .modal.u-el-show .modal-dialog, .modal.u-el-show .u-dialog-container, .u-el-show.u-dialog .modal-dialog, .u-el-show.u-dialog .u-dialog-container {
   transform: none;
 }
 .modal.modal-static .modal-dialog, .modal.modal-static .u-dialog-container, .modal-static.u-dialog .modal-dialog, .modal-static.u-dialog .u-dialog-container {
@@ -6382,7 +6394,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .modal-backdrop.fade, .modal-backdrop.u-tooltip, .modal-backdrop.u-popover, .u-dialog-backdrop, .modal-backdrop.u-dialog {
   opacity: 0;
 }
-.modal-backdrop.show, .modal-backdrop.u-tooltip, .modal-backdrop.u-toast-show, .modal-backdrop.u-tab-active, .modal-backdrop.u-popover, .modal-backdrop.u-dialog-open, .modal-backdrop.u-dialog-backdrop-open, .show.u-dialog-backdrop, .u-dialog-backdrop.u-tooltip, .u-dialog-backdrop.u-toast-show, .u-dialog-backdrop.u-tab-active, .u-dialog-backdrop.u-popover, .u-dialog-backdrop.u-dialog-open, .u-dialog-backdrop.u-dialog-backdrop-open, .modal-backdrop.u-collapse-open, .u-collapse-open.u-dialog-backdrop, .modal-backdrop.u-el-show, .u-el-show.u-dialog-backdrop {
+.modal-backdrop.show, .modal-backdrop.u-tooltip, .modal-backdrop.u-toast-show, .modal-backdrop.u-tab-active, .modal-backdrop.u-popover, .modal-backdrop.u-offcanvas-show, .modal-backdrop.u-dialog-open, .modal-backdrop.u-dialog-backdrop-open, .show.u-dialog-backdrop, .u-dialog-backdrop.u-tooltip, .u-dialog-backdrop.u-toast-show, .u-dialog-backdrop.u-tab-active, .u-dialog-backdrop.u-popover, .u-dialog-backdrop.u-offcanvas-show, .u-dialog-backdrop.u-dialog-open, .u-dialog-backdrop.u-dialog-backdrop-open, .modal-backdrop.u-collapse-open, .u-collapse-open.u-dialog-backdrop, .modal-backdrop.u-el-show, .u-el-show.u-dialog-backdrop {
   opacity: var(--u-backdrop-opacity);
 }
 
@@ -6396,7 +6408,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-top-left-radius: var(--u-modal-inner-border-radius);
   border-top-right-radius: var(--u-modal-inner-border-radius);
 }
-.modal-header .btn-close, .modal-header .u-toast-close, .u-dialog-header .btn-close, .u-dialog-header .u-toast-close, .modal-header .u-dialog-close, .u-dialog-header .u-dialog-close, .modal-header .u-alert-end, .u-dialog-header .u-alert-end {
+.modal-header .btn-close, .modal-header .u-toast-close, .modal-header .u-offcanvas-header-btn, .u-dialog-header .btn-close, .u-dialog-header .u-toast-close, .u-dialog-header .u-offcanvas-header-btn, .modal-header .u-dialog-close, .u-dialog-header .u-dialog-close, .modal-header .u-alert-end, .u-dialog-header .u-alert-end {
   padding: calc(var(--u-modal-header-padding-y) * 0.5) calc(var(--u-modal-header-padding-x) * 0.5);
   margin: calc(-0.5 * var(--u-modal-header-padding-y)) calc(-0.5 * var(--u-modal-header-padding-x)) calc(-0.5 * var(--u-modal-header-padding-y)) auto;
 }
@@ -6614,7 +6626,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   word-wrap: break-word;
   opacity: 0;
 }
-.tooltip.show, .u-tooltip, .tooltip.u-toast-show, .tooltip.u-tab-active, .tooltip.u-popover, .tooltip.u-dialog-open, .tooltip.u-dialog-backdrop-open, .tooltip.u-collapse-open, .tooltip.u-el-show {
+.tooltip.show, .u-tooltip, .tooltip.u-toast-show, .tooltip.u-tab-active, .tooltip.u-popover, .tooltip.u-offcanvas-show, .tooltip.u-dialog-open, .tooltip.u-dialog-backdrop-open, .tooltip.u-collapse-open, .tooltip.u-el-show {
   opacity: var(--u-tooltip-opacity);
 }
 .tooltip .tooltip-arrow, .tooltip .u-tooltip-arrow, .u-tooltip .tooltip-arrow, .u-tooltip .u-tooltip-arrow {
@@ -7136,7 +7148,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     --u-spinner-animation-speed: 1.5s;
   }
 }
-.offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
+.offcanvas, .u-offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
   --u-offcanvas-zindex: 1045;
   --u-offcanvas-width: 400px;
   --u-offcanvas-height: 30vh;
@@ -7171,7 +7183,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.offcanvas-start {
+  .offcanvas-sm.offcanvas-start, .offcanvas-sm.u-offcanvas-placement-start {
     top: 0;
     left: 0;
     width: var(--u-offcanvas-width);
@@ -7180,7 +7192,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.offcanvas-end {
+  .offcanvas-sm.offcanvas-end, .offcanvas-sm.u-offcanvas-placement-end {
     top: 0;
     right: 0;
     width: var(--u-offcanvas-width);
@@ -7189,7 +7201,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.offcanvas-top {
+  .offcanvas-sm.offcanvas-top, .offcanvas-sm.u-offcanvas-placement-top {
     top: 0;
     right: 0;
     left: 0;
@@ -7200,7 +7212,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.offcanvas-bottom {
+  .offcanvas-sm.offcanvas-bottom, .offcanvas-sm.u-offcanvas-placement-bottom {
     right: 0;
     left: 0;
     height: var(--u-offcanvas-height);
@@ -7210,12 +7222,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding), .offcanvas-sm.u-tooltip:not(.hiding), .offcanvas-sm.u-toast-show:not(.hiding), .offcanvas-sm.u-tab-active:not(.hiding), .offcanvas-sm.u-popover:not(.hiding), .offcanvas-sm.u-dialog-open:not(.hiding), .offcanvas-sm.u-dialog-backdrop-open:not(.hiding), .offcanvas-sm.u-collapse-open:not(.hiding), .offcanvas-sm.u-el-show:not(.hiding) {
+  .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding), .offcanvas-sm.u-tooltip:not(.hiding), .offcanvas-sm.u-toast-show:not(.hiding), .offcanvas-sm.u-tab-active:not(.hiding), .offcanvas-sm.u-popover:not(.hiding), .offcanvas-sm.u-offcanvas-show:not(.hiding), .offcanvas-sm.u-dialog-open:not(.hiding), .offcanvas-sm.u-dialog-backdrop-open:not(.hiding), .offcanvas-sm.u-collapse-open:not(.hiding), .offcanvas-sm.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show, .offcanvas-sm.u-tooltip, .offcanvas-sm.u-toast-show, .offcanvas-sm.u-tab-active, .offcanvas-sm.u-popover, .offcanvas-sm.u-dialog-open, .offcanvas-sm.u-dialog-backdrop-open, .offcanvas-sm.u-collapse-open, .offcanvas-sm.u-el-show {
+  .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show, .offcanvas-sm.u-tooltip, .offcanvas-sm.u-toast-show, .offcanvas-sm.u-tab-active, .offcanvas-sm.u-popover, .offcanvas-sm.u-offcanvas-show, .offcanvas-sm.u-dialog-open, .offcanvas-sm.u-dialog-backdrop-open, .offcanvas-sm.u-collapse-open, .offcanvas-sm.u-el-show {
     visibility: visible;
   }
 }
@@ -7225,10 +7237,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     --u-offcanvas-border-width: 0;
     background-color: transparent !important;
   }
-  .offcanvas-sm .offcanvas-header {
+  .offcanvas-sm .offcanvas-header, .offcanvas-sm .u-offcanvas-header {
     display: none;
   }
-  .offcanvas-sm .offcanvas-body {
+  .offcanvas-sm .offcanvas-body, .offcanvas-sm .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -7259,7 +7271,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.offcanvas-start {
+  .offcanvas-md.offcanvas-start, .offcanvas-md.u-offcanvas-placement-start {
     top: 0;
     left: 0;
     width: var(--u-offcanvas-width);
@@ -7268,7 +7280,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.offcanvas-end {
+  .offcanvas-md.offcanvas-end, .offcanvas-md.u-offcanvas-placement-end {
     top: 0;
     right: 0;
     width: var(--u-offcanvas-width);
@@ -7277,7 +7289,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.offcanvas-top {
+  .offcanvas-md.offcanvas-top, .offcanvas-md.u-offcanvas-placement-top {
     top: 0;
     right: 0;
     left: 0;
@@ -7288,7 +7300,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.offcanvas-bottom {
+  .offcanvas-md.offcanvas-bottom, .offcanvas-md.u-offcanvas-placement-bottom {
     right: 0;
     left: 0;
     height: var(--u-offcanvas-height);
@@ -7298,12 +7310,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.showing, .offcanvas-md.show:not(.hiding), .offcanvas-md.u-tooltip:not(.hiding), .offcanvas-md.u-toast-show:not(.hiding), .offcanvas-md.u-tab-active:not(.hiding), .offcanvas-md.u-popover:not(.hiding), .offcanvas-md.u-dialog-open:not(.hiding), .offcanvas-md.u-dialog-backdrop-open:not(.hiding), .offcanvas-md.u-collapse-open:not(.hiding), .offcanvas-md.u-el-show:not(.hiding) {
+  .offcanvas-md.showing, .offcanvas-md.show:not(.hiding), .offcanvas-md.u-tooltip:not(.hiding), .offcanvas-md.u-toast-show:not(.hiding), .offcanvas-md.u-tab-active:not(.hiding), .offcanvas-md.u-popover:not(.hiding), .offcanvas-md.u-offcanvas-show:not(.hiding), .offcanvas-md.u-dialog-open:not(.hiding), .offcanvas-md.u-dialog-backdrop-open:not(.hiding), .offcanvas-md.u-collapse-open:not(.hiding), .offcanvas-md.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show, .offcanvas-md.u-tooltip, .offcanvas-md.u-toast-show, .offcanvas-md.u-tab-active, .offcanvas-md.u-popover, .offcanvas-md.u-dialog-open, .offcanvas-md.u-dialog-backdrop-open, .offcanvas-md.u-collapse-open, .offcanvas-md.u-el-show {
+  .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show, .offcanvas-md.u-tooltip, .offcanvas-md.u-toast-show, .offcanvas-md.u-tab-active, .offcanvas-md.u-popover, .offcanvas-md.u-offcanvas-show, .offcanvas-md.u-dialog-open, .offcanvas-md.u-dialog-backdrop-open, .offcanvas-md.u-collapse-open, .offcanvas-md.u-el-show {
     visibility: visible;
   }
 }
@@ -7313,10 +7325,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     --u-offcanvas-border-width: 0;
     background-color: transparent !important;
   }
-  .offcanvas-md .offcanvas-header {
+  .offcanvas-md .offcanvas-header, .offcanvas-md .u-offcanvas-header {
     display: none;
   }
-  .offcanvas-md .offcanvas-body {
+  .offcanvas-md .offcanvas-body, .offcanvas-md .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -7347,7 +7359,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.offcanvas-start {
+  .offcanvas-lg.offcanvas-start, .offcanvas-lg.u-offcanvas-placement-start {
     top: 0;
     left: 0;
     width: var(--u-offcanvas-width);
@@ -7356,7 +7368,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.offcanvas-end {
+  .offcanvas-lg.offcanvas-end, .offcanvas-lg.u-offcanvas-placement-end {
     top: 0;
     right: 0;
     width: var(--u-offcanvas-width);
@@ -7365,7 +7377,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.offcanvas-top {
+  .offcanvas-lg.offcanvas-top, .offcanvas-lg.u-offcanvas-placement-top {
     top: 0;
     right: 0;
     left: 0;
@@ -7376,7 +7388,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.offcanvas-bottom {
+  .offcanvas-lg.offcanvas-bottom, .offcanvas-lg.u-offcanvas-placement-bottom {
     right: 0;
     left: 0;
     height: var(--u-offcanvas-height);
@@ -7386,12 +7398,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding), .offcanvas-lg.u-tooltip:not(.hiding), .offcanvas-lg.u-toast-show:not(.hiding), .offcanvas-lg.u-tab-active:not(.hiding), .offcanvas-lg.u-popover:not(.hiding), .offcanvas-lg.u-dialog-open:not(.hiding), .offcanvas-lg.u-dialog-backdrop-open:not(.hiding), .offcanvas-lg.u-collapse-open:not(.hiding), .offcanvas-lg.u-el-show:not(.hiding) {
+  .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding), .offcanvas-lg.u-tooltip:not(.hiding), .offcanvas-lg.u-toast-show:not(.hiding), .offcanvas-lg.u-tab-active:not(.hiding), .offcanvas-lg.u-popover:not(.hiding), .offcanvas-lg.u-offcanvas-show:not(.hiding), .offcanvas-lg.u-dialog-open:not(.hiding), .offcanvas-lg.u-dialog-backdrop-open:not(.hiding), .offcanvas-lg.u-collapse-open:not(.hiding), .offcanvas-lg.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show, .offcanvas-lg.u-tooltip, .offcanvas-lg.u-toast-show, .offcanvas-lg.u-tab-active, .offcanvas-lg.u-popover, .offcanvas-lg.u-dialog-open, .offcanvas-lg.u-dialog-backdrop-open, .offcanvas-lg.u-collapse-open, .offcanvas-lg.u-el-show {
+  .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show, .offcanvas-lg.u-tooltip, .offcanvas-lg.u-toast-show, .offcanvas-lg.u-tab-active, .offcanvas-lg.u-popover, .offcanvas-lg.u-offcanvas-show, .offcanvas-lg.u-dialog-open, .offcanvas-lg.u-dialog-backdrop-open, .offcanvas-lg.u-collapse-open, .offcanvas-lg.u-el-show {
     visibility: visible;
   }
 }
@@ -7401,10 +7413,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     --u-offcanvas-border-width: 0;
     background-color: transparent !important;
   }
-  .offcanvas-lg .offcanvas-header {
+  .offcanvas-lg .offcanvas-header, .offcanvas-lg .u-offcanvas-header {
     display: none;
   }
-  .offcanvas-lg .offcanvas-body {
+  .offcanvas-lg .offcanvas-body, .offcanvas-lg .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -7435,7 +7447,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.offcanvas-start {
+  .offcanvas-xl.offcanvas-start, .offcanvas-xl.u-offcanvas-placement-start {
     top: 0;
     left: 0;
     width: var(--u-offcanvas-width);
@@ -7444,7 +7456,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.offcanvas-end {
+  .offcanvas-xl.offcanvas-end, .offcanvas-xl.u-offcanvas-placement-end {
     top: 0;
     right: 0;
     width: var(--u-offcanvas-width);
@@ -7453,7 +7465,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.offcanvas-top {
+  .offcanvas-xl.offcanvas-top, .offcanvas-xl.u-offcanvas-placement-top {
     top: 0;
     right: 0;
     left: 0;
@@ -7464,7 +7476,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.offcanvas-bottom {
+  .offcanvas-xl.offcanvas-bottom, .offcanvas-xl.u-offcanvas-placement-bottom {
     right: 0;
     left: 0;
     height: var(--u-offcanvas-height);
@@ -7474,12 +7486,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding), .offcanvas-xl.u-tooltip:not(.hiding), .offcanvas-xl.u-toast-show:not(.hiding), .offcanvas-xl.u-tab-active:not(.hiding), .offcanvas-xl.u-popover:not(.hiding), .offcanvas-xl.u-dialog-open:not(.hiding), .offcanvas-xl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xl.u-collapse-open:not(.hiding), .offcanvas-xl.u-el-show:not(.hiding) {
+  .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding), .offcanvas-xl.u-tooltip:not(.hiding), .offcanvas-xl.u-toast-show:not(.hiding), .offcanvas-xl.u-tab-active:not(.hiding), .offcanvas-xl.u-popover:not(.hiding), .offcanvas-xl.u-offcanvas-show:not(.hiding), .offcanvas-xl.u-dialog-open:not(.hiding), .offcanvas-xl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xl.u-collapse-open:not(.hiding), .offcanvas-xl.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show, .offcanvas-xl.u-tooltip, .offcanvas-xl.u-toast-show, .offcanvas-xl.u-tab-active, .offcanvas-xl.u-popover, .offcanvas-xl.u-dialog-open, .offcanvas-xl.u-dialog-backdrop-open, .offcanvas-xl.u-collapse-open, .offcanvas-xl.u-el-show {
+  .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show, .offcanvas-xl.u-tooltip, .offcanvas-xl.u-toast-show, .offcanvas-xl.u-tab-active, .offcanvas-xl.u-popover, .offcanvas-xl.u-offcanvas-show, .offcanvas-xl.u-dialog-open, .offcanvas-xl.u-dialog-backdrop-open, .offcanvas-xl.u-collapse-open, .offcanvas-xl.u-el-show {
     visibility: visible;
   }
 }
@@ -7489,10 +7501,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     --u-offcanvas-border-width: 0;
     background-color: transparent !important;
   }
-  .offcanvas-xl .offcanvas-header {
+  .offcanvas-xl .offcanvas-header, .offcanvas-xl .u-offcanvas-header {
     display: none;
   }
-  .offcanvas-xl .offcanvas-body {
+  .offcanvas-xl .offcanvas-body, .offcanvas-xl .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -7523,7 +7535,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.offcanvas-start {
+  .offcanvas-xxl.offcanvas-start, .offcanvas-xxl.u-offcanvas-placement-start {
     top: 0;
     left: 0;
     width: var(--u-offcanvas-width);
@@ -7532,7 +7544,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.offcanvas-end {
+  .offcanvas-xxl.offcanvas-end, .offcanvas-xxl.u-offcanvas-placement-end {
     top: 0;
     right: 0;
     width: var(--u-offcanvas-width);
@@ -7541,7 +7553,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.offcanvas-top {
+  .offcanvas-xxl.offcanvas-top, .offcanvas-xxl.u-offcanvas-placement-top {
     top: 0;
     right: 0;
     left: 0;
@@ -7552,7 +7564,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.offcanvas-bottom {
+  .offcanvas-xxl.offcanvas-bottom, .offcanvas-xxl.u-offcanvas-placement-bottom {
     right: 0;
     left: 0;
     height: var(--u-offcanvas-height);
@@ -7562,12 +7574,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding), .offcanvas-xxl.u-tooltip:not(.hiding), .offcanvas-xxl.u-toast-show:not(.hiding), .offcanvas-xxl.u-tab-active:not(.hiding), .offcanvas-xxl.u-popover:not(.hiding), .offcanvas-xxl.u-dialog-open:not(.hiding), .offcanvas-xxl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xxl.u-collapse-open:not(.hiding), .offcanvas-xxl.u-el-show:not(.hiding) {
+  .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding), .offcanvas-xxl.u-tooltip:not(.hiding), .offcanvas-xxl.u-toast-show:not(.hiding), .offcanvas-xxl.u-tab-active:not(.hiding), .offcanvas-xxl.u-popover:not(.hiding), .offcanvas-xxl.u-offcanvas-show:not(.hiding), .offcanvas-xxl.u-dialog-open:not(.hiding), .offcanvas-xxl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xxl.u-collapse-open:not(.hiding), .offcanvas-xxl.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show, .offcanvas-xxl.u-tooltip, .offcanvas-xxl.u-toast-show, .offcanvas-xxl.u-tab-active, .offcanvas-xxl.u-popover, .offcanvas-xxl.u-dialog-open, .offcanvas-xxl.u-dialog-backdrop-open, .offcanvas-xxl.u-collapse-open, .offcanvas-xxl.u-el-show {
+  .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show, .offcanvas-xxl.u-tooltip, .offcanvas-xxl.u-toast-show, .offcanvas-xxl.u-tab-active, .offcanvas-xxl.u-popover, .offcanvas-xxl.u-offcanvas-show, .offcanvas-xxl.u-dialog-open, .offcanvas-xxl.u-dialog-backdrop-open, .offcanvas-xxl.u-collapse-open, .offcanvas-xxl.u-el-show {
     visibility: visible;
   }
 }
@@ -7577,10 +7589,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     --u-offcanvas-border-width: 0;
     background-color: transparent !important;
   }
-  .offcanvas-xxl .offcanvas-header {
+  .offcanvas-xxl .offcanvas-header, .offcanvas-xxl .u-offcanvas-header {
     display: none;
   }
-  .offcanvas-xxl .offcanvas-body {
+  .offcanvas-xxl .offcanvas-body, .offcanvas-xxl .u-offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -7589,7 +7601,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 
-.offcanvas {
+.offcanvas, .u-offcanvas {
   position: fixed;
   bottom: 0;
   z-index: var(--u-offcanvas-zindex);
@@ -7604,25 +7616,25 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   transition: transform 0.3s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .offcanvas {
+  .offcanvas, .u-offcanvas {
     transition: none;
   }
 }
-.offcanvas.offcanvas-start {
+.offcanvas.offcanvas-start, .offcanvas.u-offcanvas-placement-start, .offcanvas-start.u-offcanvas, .u-offcanvas.u-offcanvas-placement-start {
   top: 0;
   left: 0;
   width: var(--u-offcanvas-width);
   border-right: var(--u-offcanvas-border-width) solid var(--u-offcanvas-border-color);
   transform: translateX(-100%);
 }
-.offcanvas.offcanvas-end {
+.offcanvas.offcanvas-end, .offcanvas.u-offcanvas-placement-end, .offcanvas-end.u-offcanvas, .u-offcanvas.u-offcanvas-placement-end {
   top: 0;
   right: 0;
   width: var(--u-offcanvas-width);
   border-left: var(--u-offcanvas-border-width) solid var(--u-offcanvas-border-color);
   transform: translateX(100%);
 }
-.offcanvas.offcanvas-top {
+.offcanvas.offcanvas-top, .offcanvas.u-offcanvas-placement-top, .offcanvas-top.u-offcanvas, .u-offcanvas.u-offcanvas-placement-top {
   top: 0;
   right: 0;
   left: 0;
@@ -7631,7 +7643,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-bottom: var(--u-offcanvas-border-width) solid var(--u-offcanvas-border-color);
   transform: translateY(-100%);
 }
-.offcanvas.offcanvas-bottom {
+.offcanvas.offcanvas-bottom, .offcanvas.u-offcanvas-placement-bottom, .offcanvas-bottom.u-offcanvas, .u-offcanvas.u-offcanvas-placement-bottom {
   right: 0;
   left: 0;
   height: var(--u-offcanvas-height);
@@ -7639,10 +7651,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-top: var(--u-offcanvas-border-width) solid var(--u-offcanvas-border-color);
   transform: translateY(100%);
 }
-.offcanvas.showing, .offcanvas.show:not(.hiding), .offcanvas.u-tooltip:not(.hiding), .offcanvas.u-toast-show:not(.hiding), .offcanvas.u-tab-active:not(.hiding), .offcanvas.u-popover:not(.hiding), .offcanvas.u-dialog-open:not(.hiding), .offcanvas.u-dialog-backdrop-open:not(.hiding), .offcanvas.u-collapse-open:not(.hiding), .offcanvas.u-el-show:not(.hiding) {
+.offcanvas.showing, .showing.u-offcanvas, .offcanvas.show:not(.hiding), .offcanvas.u-tooltip:not(.hiding), .offcanvas.u-toast-show:not(.hiding), .offcanvas.u-tab-active:not(.hiding), .offcanvas.u-popover:not(.hiding), .offcanvas.u-offcanvas-show:not(.hiding), .show.u-offcanvas:not(.hiding), .u-offcanvas.u-tooltip:not(.hiding), .u-offcanvas.u-toast-show:not(.hiding), .u-offcanvas.u-tab-active:not(.hiding), .u-offcanvas.u-popover:not(.hiding), .u-offcanvas.u-offcanvas-show:not(.hiding), .offcanvas.u-dialog-open:not(.hiding), .u-dialog-open.u-offcanvas:not(.hiding), .offcanvas.u-dialog-backdrop-open:not(.hiding), .u-dialog-backdrop-open.u-offcanvas:not(.hiding), .offcanvas.u-collapse-open:not(.hiding), .u-collapse-open.u-offcanvas:not(.hiding), .offcanvas.u-el-show:not(.hiding), .u-el-show.u-offcanvas:not(.hiding) {
   transform: none;
 }
-.offcanvas.showing, .offcanvas.hiding, .offcanvas.show, .offcanvas.u-tooltip, .offcanvas.u-toast-show, .offcanvas.u-tab-active, .offcanvas.u-popover, .offcanvas.u-dialog-open, .offcanvas.u-dialog-backdrop-open, .offcanvas.u-collapse-open, .offcanvas.u-el-show {
+.offcanvas.showing, .showing.u-offcanvas, .offcanvas.hiding, .hiding.u-offcanvas, .offcanvas.show, .offcanvas.u-tooltip, .offcanvas.u-toast-show, .offcanvas.u-tab-active, .offcanvas.u-popover, .offcanvas.u-offcanvas-show, .show.u-offcanvas, .u-offcanvas.u-tooltip, .u-offcanvas.u-toast-show, .u-offcanvas.u-tab-active, .u-offcanvas.u-popover, .u-offcanvas.u-offcanvas-show, .offcanvas.u-dialog-open, .u-dialog-open.u-offcanvas, .offcanvas.u-dialog-backdrop-open, .u-dialog-backdrop-open.u-offcanvas, .offcanvas.u-collapse-open, .u-collapse-open.u-offcanvas, .offcanvas.u-el-show, .u-el-show.u-offcanvas {
   visibility: visible;
 }
 
@@ -7658,29 +7670,29 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .offcanvas-backdrop.fade, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-dialog-backdrop, .offcanvas-backdrop.u-dialog {
   opacity: 0;
 }
-.offcanvas-backdrop.show, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-toast-show, .offcanvas-backdrop.u-tab-active, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-dialog-open, .offcanvas-backdrop.u-dialog-backdrop-open, .offcanvas-backdrop.u-collapse-open, .offcanvas-backdrop.u-el-show {
+.offcanvas-backdrop.show, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-toast-show, .offcanvas-backdrop.u-tab-active, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-offcanvas-show, .offcanvas-backdrop.u-dialog-open, .offcanvas-backdrop.u-dialog-backdrop-open, .offcanvas-backdrop.u-collapse-open, .offcanvas-backdrop.u-el-show {
   opacity: 0.24;
 }
 
-.offcanvas-header {
+.offcanvas-header, .u-offcanvas-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--u-offcanvas-padding-y) var(--u-offcanvas-padding-x);
 }
-.offcanvas-header .btn-close, .offcanvas-header .u-toast-close, .offcanvas-header .u-dialog-close, .offcanvas-header .u-alert-end {
+.offcanvas-header .btn-close, .offcanvas-header .u-toast-close, .offcanvas-header .u-offcanvas-header-btn, .u-offcanvas-header .btn-close, .u-offcanvas-header .u-toast-close, .u-offcanvas-header .u-offcanvas-header-btn, .offcanvas-header .u-dialog-close, .u-offcanvas-header .u-dialog-close, .offcanvas-header .u-alert-end, .u-offcanvas-header .u-alert-end {
   padding: calc(var(--u-offcanvas-padding-y) * 0.5) calc(var(--u-offcanvas-padding-x) * 0.5);
   margin-top: calc(-0.5 * var(--u-offcanvas-padding-y));
   margin-right: calc(-0.5 * var(--u-offcanvas-padding-x));
   margin-bottom: calc(-0.5 * var(--u-offcanvas-padding-y));
 }
 
-.offcanvas-title {
+.offcanvas-title, .u-offcanvas-header-title {
   margin-bottom: 0;
   line-height: 1.4285714286;
 }
 
-.offcanvas-body {
+.offcanvas-body, .u-offcanvas-body {
   flex-grow: 1;
   padding: var(--u-offcanvas-padding-y) var(--u-offcanvas-padding-x);
   overflow-y: auto;
@@ -13326,7 +13338,7 @@ Navbar
 .navbar .navbar-nav .nav-link.disabled, .navbar .navbar-nav .nav-link.u-tab-item-inner-disabled, .navbar .navbar-nav .disabled.u-tab-item-inner, .navbar .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .navbar .navbar-nav .nav-link.u-button-disabled, .navbar .navbar-nav .u-button-disabled.u-tab-item-inner, .u-app-header .navbar-nav .nav-link.disabled, .u-app-header .navbar-nav .nav-link.u-tab-item-inner-disabled, .u-app-header .navbar-nav .disabled.u-tab-item-inner, .u-app-header .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .u-app-header .navbar-nav .nav-link.u-button-disabled, .u-app-header .navbar-nav .u-button-disabled.u-tab-item-inner {
   color: var(--u-disabled-color);
 }
-.navbar .navbar-nav .show > .nav-link, .navbar .navbar-nav .u-tooltip > .nav-link, .navbar .navbar-nav .u-toast-show > .nav-link, .navbar .navbar-nav .show > .u-tab-item-inner, .navbar .navbar-nav .u-tooltip > .u-tab-item-inner, .navbar .navbar-nav .u-toast-show > .u-tab-item-inner, .navbar .navbar-nav .u-tab-active > .nav-link, .navbar .navbar-nav .u-tab-active > .u-tab-item-inner, .navbar .navbar-nav .u-popover > .nav-link, .navbar .navbar-nav .u-popover > .u-tab-item-inner, .navbar .navbar-nav .u-dialog-open > .nav-link, .navbar .navbar-nav .u-dialog-open > .u-tab-item-inner, .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .navbar .navbar-nav .u-collapse-open > .nav-link, .navbar .navbar-nav .u-collapse-open > .u-tab-item-inner, .navbar .navbar-nav .u-el-show > .nav-link, .navbar .navbar-nav .u-el-show > .u-tab-item-inner, .u-app-header .navbar-nav .show > .nav-link, .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-header .navbar-nav .show > .u-tab-item-inner, .u-app-header .navbar-nav .u-tooltip > .u-tab-item-inner, .u-app-header .navbar-nav .u-toast-show > .u-tab-item-inner, .u-app-header .navbar-nav .u-tab-active > .nav-link, .u-app-header .navbar-nav .u-tab-active > .u-tab-item-inner, .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-header .navbar-nav .u-popover > .u-tab-item-inner, .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-inner, .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .u-app-header .navbar-nav .u-collapse-open > .nav-link, .u-app-header .navbar-nav .u-collapse-open > .u-tab-item-inner, .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-header .navbar-nav .u-el-show > .u-tab-item-inner,
+.navbar .navbar-nav .show > .nav-link, .navbar .navbar-nav .u-tooltip > .nav-link, .navbar .navbar-nav .u-toast-show > .nav-link, .navbar .navbar-nav .show > .u-tab-item-inner, .navbar .navbar-nav .u-tooltip > .u-tab-item-inner, .navbar .navbar-nav .u-toast-show > .u-tab-item-inner, .navbar .navbar-nav .u-tab-active > .nav-link, .navbar .navbar-nav .u-tab-active > .u-tab-item-inner, .navbar .navbar-nav .u-popover > .nav-link, .navbar .navbar-nav .u-popover > .u-tab-item-inner, .navbar .navbar-nav .u-offcanvas-show > .nav-link, .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .navbar .navbar-nav .u-dialog-open > .nav-link, .navbar .navbar-nav .u-dialog-open > .u-tab-item-inner, .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .navbar .navbar-nav .u-collapse-open > .nav-link, .navbar .navbar-nav .u-collapse-open > .u-tab-item-inner, .navbar .navbar-nav .u-el-show > .nav-link, .navbar .navbar-nav .u-el-show > .u-tab-item-inner, .u-app-header .navbar-nav .show > .nav-link, .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-header .navbar-nav .show > .u-tab-item-inner, .u-app-header .navbar-nav .u-tooltip > .u-tab-item-inner, .u-app-header .navbar-nav .u-toast-show > .u-tab-item-inner, .u-app-header .navbar-nav .u-tab-active > .nav-link, .u-app-header .navbar-nav .u-tab-active > .u-tab-item-inner, .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-header .navbar-nav .u-popover > .u-tab-item-inner, .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-inner, .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .u-app-header .navbar-nav .u-collapse-open > .nav-link, .u-app-header .navbar-nav .u-collapse-open > .u-tab-item-inner, .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-header .navbar-nav .u-el-show > .u-tab-item-inner,
 .navbar .navbar-nav .active > .nav-link,
 .navbar .navbar-nav .u-tab-item-inner-active > .nav-link,
 .navbar .navbar-nav .active > .u-tab-item-inner,
@@ -13361,6 +13373,8 @@ Navbar
 .navbar .navbar-nav .u-tab-active.u-tab-item-inner,
 .navbar .navbar-nav .nav-link.u-popover,
 .navbar .navbar-nav .u-popover.u-tab-item-inner,
+.navbar .navbar-nav .nav-link.u-offcanvas-show,
+.navbar .navbar-nav .u-offcanvas-show.u-tab-item-inner,
 .navbar .navbar-nav .nav-link.u-dialog-open,
 .navbar .navbar-nav .u-dialog-open.u-tab-item-inner,
 .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -13379,6 +13393,8 @@ Navbar
 .u-app-header .navbar-nav .u-tab-active.u-tab-item-inner,
 .u-app-header .navbar-nav .nav-link.u-popover,
 .u-app-header .navbar-nav .u-popover.u-tab-item-inner,
+.u-app-header .navbar-nav .nav-link.u-offcanvas-show,
+.u-app-header .navbar-nav .u-offcanvas-show.u-tab-item-inner,
 .u-app-header .navbar-nav .nav-link.u-dialog-open,
 .u-app-header .navbar-nav .u-dialog-open.u-tab-item-inner,
 .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -13449,7 +13465,7 @@ Navbar
   .theme-dark .navbar .navbar-nav .nav-link.disabled, .theme-dark .navbar .navbar-nav .nav-link.u-tab-item-inner-disabled, .theme-dark .navbar .navbar-nav .disabled.u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .theme-dark .navbar .navbar-nav .nav-link.u-button-disabled, .theme-dark .navbar .navbar-nav .u-button-disabled.u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .nav-link.disabled, .theme-dark .u-app-header .navbar-nav .nav-link.u-tab-item-inner-disabled, .theme-dark .u-app-header .navbar-nav .disabled.u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .theme-dark .u-app-header .navbar-nav .nav-link.u-button-disabled, .theme-dark .u-app-header .navbar-nav .u-button-disabled.u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .nav-link.disabled, .u-app-theme-dark .navbar .navbar-nav .nav-link.u-tab-item-inner-disabled, .u-app-theme-dark .navbar .navbar-nav .disabled.u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .u-app-theme-dark .navbar .navbar-nav .nav-link.u-button-disabled, .u-app-theme-dark .navbar .navbar-nav .u-button-disabled.u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .nav-link.disabled, .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-tab-item-inner-disabled, .u-app-theme-dark .u-app-header .navbar-nav .disabled.u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-button-disabled, .u-app-theme-dark .u-app-header .navbar-nav .u-button-disabled.u-tab-item-inner {
     color: var(--u-disabled-color);
   }
-  .theme-dark .navbar .navbar-nav .show > .nav-link, .theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark .navbar .navbar-nav .show > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-tooltip > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-toast-show > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-tab-active > .nav-link, .theme-dark .navbar .navbar-nav .u-tab-active > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-popover > .nav-link, .theme-dark .navbar .navbar-nav .u-popover > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark .navbar .navbar-nav .u-dialog-open > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-collapse-open > .nav-link, .theme-dark .navbar .navbar-nav .u-collapse-open > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark .navbar .navbar-nav .u-el-show > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark .u-app-header .navbar-nav .show > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-tab-active > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tab-active > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark .u-app-header .navbar-nav .u-popover > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-collapse-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-collapse-open > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-el-show > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .show > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-tab-active > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tab-active > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-popover > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-collapse-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-collapse-open > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .show > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-active > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-active > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-collapse-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-collapse-open > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .u-tab-item-inner,
+  .theme-dark .navbar .navbar-nav .show > .nav-link, .theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark .navbar .navbar-nav .show > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-tooltip > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-toast-show > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-tab-active > .nav-link, .theme-dark .navbar .navbar-nav .u-tab-active > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-popover > .nav-link, .theme-dark .navbar .navbar-nav .u-popover > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark .navbar .navbar-nav .u-dialog-open > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-collapse-open > .nav-link, .theme-dark .navbar .navbar-nav .u-collapse-open > .u-tab-item-inner, .theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark .navbar .navbar-nav .u-el-show > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark .u-app-header .navbar-nav .show > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-tab-active > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tab-active > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark .u-app-header .navbar-nav .u-popover > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-collapse-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-collapse-open > .u-tab-item-inner, .theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-el-show > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .show > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-tab-active > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tab-active > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-popover > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-collapse-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-collapse-open > .u-tab-item-inner, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .show > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-active > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-active > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-collapse-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-collapse-open > .u-tab-item-inner, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .u-tab-item-inner,
   .theme-dark .navbar .navbar-nav .active > .nav-link,
   .theme-dark .navbar .navbar-nav .u-tab-item-inner-active > .nav-link,
   .theme-dark .navbar .navbar-nav .active > .u-tab-item-inner,
@@ -13516,6 +13532,8 @@ Navbar
   .theme-dark .navbar .navbar-nav .u-tab-active.u-tab-item-inner,
   .theme-dark .navbar .navbar-nav .nav-link.u-popover,
   .theme-dark .navbar .navbar-nav .u-popover.u-tab-item-inner,
+  .theme-dark .navbar .navbar-nav .nav-link.u-offcanvas-show,
+  .theme-dark .navbar .navbar-nav .u-offcanvas-show.u-tab-item-inner,
   .theme-dark .navbar .navbar-nav .nav-link.u-dialog-open,
   .theme-dark .navbar .navbar-nav .u-dialog-open.u-tab-item-inner,
   .theme-dark .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -13534,6 +13552,8 @@ Navbar
   .theme-dark .u-app-header .navbar-nav .u-tab-active.u-tab-item-inner,
   .theme-dark .u-app-header .navbar-nav .nav-link.u-popover,
   .theme-dark .u-app-header .navbar-nav .u-popover.u-tab-item-inner,
+  .theme-dark .u-app-header .navbar-nav .nav-link.u-offcanvas-show,
+  .theme-dark .u-app-header .navbar-nav .u-offcanvas-show.u-tab-item-inner,
   .theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-open,
   .theme-dark .u-app-header .navbar-nav .u-dialog-open.u-tab-item-inner,
   .theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -13552,6 +13572,8 @@ Navbar
   .u-app-theme-dark .navbar .navbar-nav .u-tab-active.u-tab-item-inner,
   .u-app-theme-dark .navbar .navbar-nav .nav-link.u-popover,
   .u-app-theme-dark .navbar .navbar-nav .u-popover.u-tab-item-inner,
+  .u-app-theme-dark .navbar .navbar-nav .nav-link.u-offcanvas-show,
+  .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show.u-tab-item-inner,
   .u-app-theme-dark .navbar .navbar-nav .nav-link.u-dialog-open,
   .u-app-theme-dark .navbar .navbar-nav .u-dialog-open.u-tab-item-inner,
   .u-app-theme-dark .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -13570,6 +13592,8 @@ Navbar
   .u-app-theme-dark .u-app-header .navbar-nav .u-tab-active.u-tab-item-inner,
   .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-popover,
   .u-app-theme-dark .u-app-header .navbar-nav .u-popover.u-tab-item-inner,
+  .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-offcanvas-show,
+  .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show.u-tab-item-inner,
   .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-open,
   .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open.u-tab-item-inner,
   .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -13697,7 +13721,7 @@ Navbar
     .theme-dark-auto .navbar .navbar-nav .nav-link.disabled, .theme-dark-auto .navbar .navbar-nav .nav-link.u-tab-item-inner-disabled, .theme-dark-auto .navbar .navbar-nav .disabled.u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .theme-dark-auto .navbar .navbar-nav .nav-link.u-button-disabled, .theme-dark-auto .navbar .navbar-nav .u-button-disabled.u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .nav-link.disabled, .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-tab-item-inner-disabled, .theme-dark-auto .u-app-header .navbar-nav .disabled.u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-button-disabled, .theme-dark-auto .u-app-header .navbar-nav .u-button-disabled.u-tab-item-inner {
       color: var(--u-disabled-color);
     }
-    .theme-dark-auto .navbar .navbar-nav .show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .show > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-tab-active > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tab-active > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-popover > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-popover > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-collapse-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-collapse-open > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-el-show > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .show > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-tab-active > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tab-active > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-collapse-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-collapse-open > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .u-tab-item-inner,
+    .theme-dark-auto .navbar .navbar-nav .show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .show > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-tab-active > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tab-active > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-popover > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-popover > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-collapse-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-collapse-open > .u-tab-item-inner, .theme-dark-auto .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-el-show > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .show > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-tab-active > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tab-active > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-collapse-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-collapse-open > .u-tab-item-inner, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .u-tab-item-inner,
     .theme-dark-auto .navbar .navbar-nav .active > .nav-link,
     .theme-dark-auto .navbar .navbar-nav .u-tab-item-inner-active > .nav-link,
     .theme-dark-auto .navbar .navbar-nav .active > .u-tab-item-inner,
@@ -13732,6 +13756,8 @@ Navbar
     .theme-dark-auto .navbar .navbar-nav .u-tab-active.u-tab-item-inner,
     .theme-dark-auto .navbar .navbar-nav .nav-link.u-popover,
     .theme-dark-auto .navbar .navbar-nav .u-popover.u-tab-item-inner,
+    .theme-dark-auto .navbar .navbar-nav .nav-link.u-offcanvas-show,
+    .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show.u-tab-item-inner,
     .theme-dark-auto .navbar .navbar-nav .nav-link.u-dialog-open,
     .theme-dark-auto .navbar .navbar-nav .u-dialog-open.u-tab-item-inner,
     .theme-dark-auto .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -13750,6 +13776,8 @@ Navbar
     .theme-dark-auto .u-app-header .navbar-nav .u-tab-active.u-tab-item-inner,
     .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-popover,
     .theme-dark-auto .u-app-header .navbar-nav .u-popover.u-tab-item-inner,
+    .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-offcanvas-show,
+    .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show.u-tab-item-inner,
     .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-dialog-open,
     .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open.u-tab-item-inner,
     .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -14916,7 +14944,7 @@ Navbar dark
 .navbar-dark .navbar-nav .nav-link.disabled, .navbar-dark .navbar-nav .nav-link.u-tab-item-inner-disabled, .navbar-dark .navbar-nav .disabled.u-tab-item-inner, .navbar-dark .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .navbar-dark .navbar-nav .nav-link.u-button-disabled, .navbar-dark .navbar-nav .u-button-disabled.u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .nav-link.disabled, .u-app-header-theme-dark .navbar-nav .nav-link.u-tab-item-inner-disabled, .u-app-header-theme-dark .navbar-nav .disabled.u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-tab-item-inner.u-tab-item-inner-disabled, .u-app-header-theme-dark .navbar-nav .nav-link.u-button-disabled, .u-app-header-theme-dark .navbar-nav .u-button-disabled.u-tab-item-inner {
   color: var(--u-disabled-color);
 }
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .u-tooltip > .nav-link, .navbar-dark .navbar-nav .u-toast-show > .nav-link, .navbar-dark .navbar-nav .show > .u-tab-item-inner, .navbar-dark .navbar-nav .u-tooltip > .u-tab-item-inner, .navbar-dark .navbar-nav .u-toast-show > .u-tab-item-inner, .navbar-dark .navbar-nav .u-tab-active > .nav-link, .navbar-dark .navbar-nav .u-tab-active > .u-tab-item-inner, .navbar-dark .navbar-nav .u-popover > .nav-link, .navbar-dark .navbar-nav .u-popover > .u-tab-item-inner, .navbar-dark .navbar-nav .u-dialog-open > .nav-link, .navbar-dark .navbar-nav .u-dialog-open > .u-tab-item-inner, .navbar-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-dark .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .navbar-dark .navbar-nav .u-collapse-open > .nav-link, .navbar-dark .navbar-nav .u-collapse-open > .u-tab-item-inner, .navbar-dark .navbar-nav .u-el-show > .nav-link, .navbar-dark .navbar-nav .u-el-show > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tooltip > .nav-link, .u-app-header-theme-dark .navbar-nav .u-toast-show > .nav-link, .u-app-header-theme-dark .navbar-nav .show > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-tooltip > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-toast-show > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-tab-active > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tab-active > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-popover > .nav-link, .u-app-header-theme-dark .navbar-nav .u-popover > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-dialog-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-dialog-open > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-collapse-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-collapse-open > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-el-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-el-show > .u-tab-item-inner,
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .u-tooltip > .nav-link, .navbar-dark .navbar-nav .u-toast-show > .nav-link, .navbar-dark .navbar-nav .show > .u-tab-item-inner, .navbar-dark .navbar-nav .u-tooltip > .u-tab-item-inner, .navbar-dark .navbar-nav .u-toast-show > .u-tab-item-inner, .navbar-dark .navbar-nav .u-tab-active > .nav-link, .navbar-dark .navbar-nav .u-tab-active > .u-tab-item-inner, .navbar-dark .navbar-nav .u-popover > .nav-link, .navbar-dark .navbar-nav .u-popover > .u-tab-item-inner, .navbar-dark .navbar-nav .u-offcanvas-show > .nav-link, .navbar-dark .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .navbar-dark .navbar-nav .u-dialog-open > .nav-link, .navbar-dark .navbar-nav .u-dialog-open > .u-tab-item-inner, .navbar-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-dark .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .navbar-dark .navbar-nav .u-collapse-open > .nav-link, .navbar-dark .navbar-nav .u-collapse-open > .u-tab-item-inner, .navbar-dark .navbar-nav .u-el-show > .nav-link, .navbar-dark .navbar-nav .u-el-show > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tooltip > .nav-link, .u-app-header-theme-dark .navbar-nav .u-toast-show > .nav-link, .u-app-header-theme-dark .navbar-nav .show > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-tooltip > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-toast-show > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-tab-active > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tab-active > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-popover > .nav-link, .u-app-header-theme-dark .navbar-nav .u-popover > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-dialog-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-dialog-open > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-collapse-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-collapse-open > .u-tab-item-inner, .u-app-header-theme-dark .navbar-nav .u-el-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-el-show > .u-tab-item-inner,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .u-tab-item-inner-active > .nav-link,
 .navbar-dark .navbar-nav .active > .u-tab-item-inner,
@@ -14951,6 +14979,8 @@ Navbar dark
 .navbar-dark .navbar-nav .u-tab-active.u-tab-item-inner,
 .navbar-dark .navbar-nav .nav-link.u-popover,
 .navbar-dark .navbar-nav .u-popover.u-tab-item-inner,
+.navbar-dark .navbar-nav .nav-link.u-offcanvas-show,
+.navbar-dark .navbar-nav .u-offcanvas-show.u-tab-item-inner,
 .navbar-dark .navbar-nav .nav-link.u-dialog-open,
 .navbar-dark .navbar-nav .u-dialog-open.u-tab-item-inner,
 .navbar-dark .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -14969,6 +14999,8 @@ Navbar dark
 .u-app-header-theme-dark .navbar-nav .u-tab-active.u-tab-item-inner,
 .u-app-header-theme-dark .navbar-nav .nav-link.u-popover,
 .u-app-header-theme-dark .navbar-nav .u-popover.u-tab-item-inner,
+.u-app-header-theme-dark .navbar-nav .nav-link.u-offcanvas-show,
+.u-app-header-theme-dark .navbar-nav .u-offcanvas-show.u-tab-item-inner,
 .u-app-header-theme-dark .navbar-nav .nav-link.u-dialog-open,
 .u-app-header-theme-dark .navbar-nav .u-dialog-open.u-tab-item-inner,
 .u-app-header-theme-dark .navbar-nav .nav-link.u-dialog-backdrop-open,
@@ -16144,7 +16176,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   .u-app-theme-dark .u-accordion-button {
     color: inherit;
   }
-  .theme-dark .btn-close, .theme-dark .u-toast-close, .theme-dark .u-dialog-close, .u-app-theme-dark .btn-close, .u-app-theme-dark .u-toast-close, .u-app-theme-dark .u-dialog-close, .theme-dark .u-alert-end, .u-app-theme-dark .u-alert-end,
+  .theme-dark .btn-close, .theme-dark .u-toast-close, .theme-dark .u-offcanvas-header-btn, .theme-dark .u-dialog-close, .u-app-theme-dark .btn-close, .u-app-theme-dark .u-toast-close, .u-app-theme-dark .u-offcanvas-header-btn, .u-app-theme-dark .u-dialog-close, .theme-dark .u-alert-end, .u-app-theme-dark .u-alert-end,
   .theme-dark .accordion-button:after,
   .theme-dark .u-collapse-toggler-accordion:after,
   .u-app-theme-dark .accordion-button:after,
@@ -16340,7 +16372,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     .theme-dark-auto .u-accordion-button {
       color: inherit;
     }
-    .theme-dark-auto .btn-close, .theme-dark-auto .u-toast-close, .theme-dark-auto .u-dialog-close, .theme-dark-auto .u-alert-end,
+    .theme-dark-auto .btn-close, .theme-dark-auto .u-toast-close, .theme-dark-auto .u-offcanvas-header-btn, .theme-dark-auto .u-dialog-close, .theme-dark-auto .u-alert-end,
     .theme-dark-auto .accordion-button:after,
     .theme-dark-auto .u-collapse-toggler-accordion:after,
     .theme-dark-auto .u-accordion-button:after {
@@ -18670,11 +18702,11 @@ a.badge, a.u-badge {
   outline: none;
   box-shadow: none;
 }
-.btn-action:hover, .btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-tab-active, .btn-action.u-popover, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-collapse-open, .btn-action.u-el-show {
+.btn-action:hover, .btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-tab-active, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-collapse-open, .btn-action.u-el-show {
   color: var(--u-body-color);
   background: var(--u-active-bg);
 }
-.btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-tab-active, .btn-action.u-popover, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-collapse-open, .btn-action.u-el-show {
+.btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-tab-active, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-collapse-open, .btn-action.u-el-show {
   color: var(--u-primary);
 }
 .btn-action .icon, .btn-action .u-icon {
@@ -19467,10 +19499,10 @@ Card list group
   border-top-left-radius: 0;
 }
 
-.btn-close, .u-toast-close, .u-dialog-close, .u-alert-end {
+.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-dialog-close, .u-alert-end {
   cursor: pointer;
 }
-.btn-close:focus, .u-toast-close:focus, .u-dialog-close:focus, .u-alert-end:focus {
+.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-dialog-close:focus, .u-alert-end:focus {
   outline: none;
 }
 
@@ -19484,7 +19516,7 @@ Card list group
   min-width: 25rem;
   display: none;
 }
-.dropdown-menu.card.show, .dropdown-menu.card.u-tooltip, .dropdown-menu.card.u-toast-show, .dropdown-menu.card.u-tab-active, .dropdown-menu.card.u-popover, .card.show.u-menu, .card.u-menu.u-tooltip, .card.u-menu.u-toast-show, .card.u-menu.u-tab-active, .card.u-menu.u-popover, .card.show.u-autocomplete-items, .card.u-autocomplete-items.u-tooltip, .card.u-autocomplete-items.u-toast-show, .card.u-autocomplete-items.u-tab-active, .card.u-autocomplete-items.u-popover, .dropdown-menu.card.u-dialog-open, .card.u-dialog-open.u-menu, .card.u-dialog-open.u-autocomplete-items, .dropdown-menu.card.u-dialog-backdrop-open, .card.u-dialog-backdrop-open.u-menu, .card.u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.card.u-collapse-open, .card.u-collapse-open.u-menu, .card.u-collapse-open.u-autocomplete-items, .dropdown-menu.show.u-card, .dropdown-menu.u-card.u-tooltip, .dropdown-menu.u-card.u-toast-show, .dropdown-menu.u-card.u-tab-active, .dropdown-menu.u-card.u-popover, .show.u-card.u-menu, .u-card.u-menu.u-tooltip, .u-card.u-menu.u-toast-show, .u-card.u-menu.u-tab-active, .u-card.u-menu.u-popover, .show.u-card.u-autocomplete-items, .u-card.u-autocomplete-items.u-tooltip, .u-card.u-autocomplete-items.u-toast-show, .u-card.u-autocomplete-items.u-tab-active, .u-card.u-autocomplete-items.u-popover, .dropdown-menu.u-card.u-dialog-open, .u-card.u-dialog-open.u-menu, .u-card.u-dialog-open.u-autocomplete-items, .dropdown-menu.u-card.u-dialog-backdrop-open, .u-card.u-dialog-backdrop-open.u-menu, .u-card.u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.u-card.u-collapse-open, .u-card.u-collapse-open.u-menu, .u-card.u-collapse-open.u-autocomplete-items, .dropdown-menu.card.u-el-show, .card.u-el-show.u-menu, .card.u-el-show.u-autocomplete-items, .dropdown-menu.u-el-show.u-card, .u-el-show.u-card.u-menu, .u-el-show.u-card.u-autocomplete-items {
+.dropdown-menu.card.show, .dropdown-menu.card.u-tooltip, .dropdown-menu.card.u-toast-show, .dropdown-menu.card.u-tab-active, .dropdown-menu.card.u-popover, .dropdown-menu.card.u-offcanvas-show, .card.show.u-menu, .card.u-menu.u-tooltip, .card.u-menu.u-toast-show, .card.u-menu.u-tab-active, .card.u-menu.u-popover, .card.u-menu.u-offcanvas-show, .card.show.u-autocomplete-items, .card.u-autocomplete-items.u-tooltip, .card.u-autocomplete-items.u-toast-show, .card.u-autocomplete-items.u-tab-active, .card.u-autocomplete-items.u-popover, .card.u-autocomplete-items.u-offcanvas-show, .dropdown-menu.card.u-dialog-open, .card.u-dialog-open.u-menu, .card.u-dialog-open.u-autocomplete-items, .dropdown-menu.card.u-dialog-backdrop-open, .card.u-dialog-backdrop-open.u-menu, .card.u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.card.u-collapse-open, .card.u-collapse-open.u-menu, .card.u-collapse-open.u-autocomplete-items, .dropdown-menu.show.u-card, .dropdown-menu.u-card.u-tooltip, .dropdown-menu.u-card.u-toast-show, .dropdown-menu.u-card.u-tab-active, .dropdown-menu.u-card.u-popover, .dropdown-menu.u-card.u-offcanvas-show, .show.u-card.u-menu, .u-card.u-menu.u-tooltip, .u-card.u-menu.u-toast-show, .u-card.u-menu.u-tab-active, .u-card.u-menu.u-popover, .u-card.u-menu.u-offcanvas-show, .show.u-card.u-autocomplete-items, .u-card.u-autocomplete-items.u-tooltip, .u-card.u-autocomplete-items.u-toast-show, .u-card.u-autocomplete-items.u-tab-active, .u-card.u-autocomplete-items.u-popover, .u-card.u-autocomplete-items.u-offcanvas-show, .dropdown-menu.u-card.u-dialog-open, .u-card.u-dialog-open.u-menu, .u-card.u-dialog-open.u-autocomplete-items, .dropdown-menu.u-card.u-dialog-backdrop-open, .u-card.u-dialog-backdrop-open.u-menu, .u-card.u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.u-card.u-collapse-open, .u-card.u-collapse-open.u-menu, .u-card.u-collapse-open.u-autocomplete-items, .dropdown-menu.card.u-el-show, .card.u-el-show.u-menu, .card.u-el-show.u-autocomplete-items, .dropdown-menu.u-el-show.u-card, .u-el-show.u-card.u-menu, .u-el-show.u-card.u-autocomplete-items {
   display: flex;
 }
 
@@ -20840,6 +20872,7 @@ Legend
 .list-group-hoverable .list-group-item-actions.u-toast-show,
 .list-group-hoverable .list-group-item-actions.u-tab-active,
 .list-group-hoverable .list-group-item-actions.u-popover,
+.list-group-hoverable .list-group-item-actions.u-offcanvas-show,
 .list-group-hoverable .list-group-item-actions.u-dialog-open,
 .list-group-hoverable .list-group-item-actions.u-dialog-backdrop-open,
 .list-group-hoverable .list-group-item-actions.u-collapse-open,
@@ -21041,7 +21074,7 @@ Dimmer
   animation: animated-dots 1.2s steps(4, jump-none) infinite;
 }
 
-.modal-content .btn-close, .modal-content .u-toast-close, .u-dialog-content .btn-close, .u-dialog-content .u-toast-close, .modal-content .u-dialog-close, .u-dialog-content .u-dialog-close, .modal-content .u-alert-end, .u-dialog-content .u-alert-end {
+.modal-content .btn-close, .modal-content .u-toast-close, .modal-content .u-offcanvas-header-btn, .u-dialog-content .btn-close, .u-dialog-content .u-toast-close, .u-dialog-content .u-offcanvas-header-btn, .modal-content .u-dialog-close, .u-dialog-content .u-dialog-close, .modal-content .u-alert-end, .u-dialog-content .u-alert-end {
   position: absolute;
   top: 0;
   right: 0;
@@ -21151,6 +21184,10 @@ Dimmer
 .nav-vertical .nav-item.u-popover .u-tab-item-inner,
 .nav-vertical .u-popover.u-tab-item .nav-link,
 .nav-vertical .u-popover.u-tab-item .u-tab-item-inner,
+.nav-vertical .nav-item.u-offcanvas-show .nav-link,
+.nav-vertical .nav-item.u-offcanvas-show .u-tab-item-inner,
+.nav-vertical .u-offcanvas-show.u-tab-item .nav-link,
+.nav-vertical .u-offcanvas-show.u-tab-item .u-tab-item-inner,
 .nav-vertical .nav-item.u-dialog-open .nav-link,
 .nav-vertical .nav-item.u-dialog-open .u-tab-item-inner,
 .nav-vertical .u-dialog-open.u-tab-item .nav-link,
@@ -21208,6 +21245,10 @@ Dimmer
 .nav-bordered .nav-item.u-popover .u-tab-item-inner,
 .nav-bordered .u-popover.u-tab-item .nav-link,
 .nav-bordered .u-popover.u-tab-item .u-tab-item-inner,
+.nav-bordered .nav-item.u-offcanvas-show .nav-link,
+.nav-bordered .nav-item.u-offcanvas-show .u-tab-item-inner,
+.nav-bordered .u-offcanvas-show.u-tab-item .nav-link,
+.nav-bordered .u-offcanvas-show.u-tab-item .u-tab-item-inner,
 .nav-bordered .nav-item.u-dialog-open .nav-link,
 .nav-bordered .nav-item.u-dialog-open .u-tab-item-inner,
 .nav-bordered .u-dialog-open.u-tab-item .nav-link,
@@ -23349,7 +23390,7 @@ Chart sparkline
   font-size: 1rem;
 }
 
-.offcanvas-header {
+.offcanvas-header, .u-offcanvas-header {
   border-bottom: var(--u-border-width) var(--u-border-style) rgba(97, 104, 118, 0.16);
 }
 
@@ -23357,7 +23398,7 @@ Chart sparkline
   padding: 1.5rem 1.5rem;
 }
 
-.offcanvas-title {
+.offcanvas-title, .u-offcanvas-header-title {
   font-size: 1rem;
   font-weight: var(--u-font-weight-medium);
   line-height: 1.5rem;
@@ -26068,6 +26109,26 @@ Antialiasing
 .u-icon-size-9x {
   width: 9rem !important;
   height: 9rem !important;
+}
+
+.u-offcanvas-backdrop {
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  z-index: 999;
+}
+
+body:has(.u-offcanvas-no-scroll) {
+  overflow-y: hidden !important;
+}
+
+.u-offcanvas-no-scroll {
+  visibility: hidden !important;
 }
 
 .u-preview {
