@@ -1,4 +1,4 @@
-<!-- <script lang="ts">
+<script lang="ts">
 	import Prism from 'prismjs'
 	import 'prismjs/themes/prism.css'
 
@@ -6,9 +6,10 @@
 
 	import { classname } from '$lib/utils'
 
+	import { El } from '../Base'
 	import { Card } from '../Card'
 	import { Icon } from '../Icon'
-	import { Tabs, TabsItem, TabsItems, TabsPanel, TabsPanels } from '../Tabs'
+	import { CardTabs, Tab } from '../Tabs'
 	import PreviewCopyButton from './PreviewCopyButton.svelte'
 
 	/**
@@ -65,48 +66,36 @@
 </script>
 
 <Card class={classes}>
-	<Tabs value="1">
-		<TabsItems>
-			<TabsItem value="1">Preview</TabsItem>
-			<TabsItem value="2">Markup</TabsItem>
-			<TabsItem value="3" if={!!script}>Script</TabsItem>
-			<TabsItem value="4" if={!!style}>Style</TabsItem>
-		</TabsItems>
-		<TabsPanels>
-			<TabsPanel value="1">
-				<div class={classname('preview-body')}>
-					<slot />
-				</div>
-			</TabsPanel>
-			<TabsPanel value="2">
-				<div class={classname('preview-code')}>
-					<PreviewCopyButton on:success={setChecked} value={markup}>
-						<Icon name={copyIcon} />
-					</PreviewCopyButton>
-					<pre class="language-svelte"><code>{@html markupHighlighted}</code></pre>
-				</div>
-			</TabsPanel>
-			{#if script}
-				<TabsPanel value="3">
-					<div class={classname('preview-code')}>
-						<PreviewCopyButton on:success={setChecked} value={script}>
-							<Icon name={copyIcon} />
-						</PreviewCopyButton>
-						<pre class="language-svelte"><code>{@html scriptHighlighted}</code></pre>
-					</div>
-				</TabsPanel>
-			{/if}
-			{#if script}
-				<TabsPanel value="4">
-					<div class={classname('preview-code')}>
-						<PreviewCopyButton on:success={setChecked} value={style}>
-							<Icon name={copyIcon} />
-						</PreviewCopyButton>
+	<CardTabs>
+		<Tab title="Preview">
+			<El cssPrefix="preview-body">
+				<slot />
+			</El>
+		</Tab>
+		<Tab title="Markup">
+			<El cssPrefix="preview-code">
+				<PreviewCopyButton on:success={setChecked} value={markup}>
+					<Icon name={copyIcon} />
+				</PreviewCopyButton>
+				<El tag="pre" class="language-svelte"><code>{@html markupHighlighted}</code></El>
+			</El>
+		</Tab>
+		<Tab if={!!script} title="Script">
+			<El cssPrefix="preview-code">
+				<PreviewCopyButton on:success={setChecked} value={script}>
+					<Icon name={copyIcon} />
+				</PreviewCopyButton>
+				<El tag="pre" class="language-svelte"><code>{@html scriptHighlighted}</code></El>
+			</El>
+		</Tab>
+		<Tab if={!!style} title="Style">
+			<El class={classname('preview-code')}>
+				<PreviewCopyButton on:success={setChecked} value={style}>
+					<Icon name={copyIcon} />
+				</PreviewCopyButton>
 
-						<pre class="language-svelte"><code>{@html styleHighlighted}</code></pre>
-					</div>
-				</TabsPanel>
-			{/if}
-		</TabsPanels>
-	</Tabs>
-</Card> -->
+				<El tag="pre" class="language-svelte"><code>{@html styleHighlighted}</code></El>
+			</El>
+		</Tab>
+	</CardTabs>
+</Card>

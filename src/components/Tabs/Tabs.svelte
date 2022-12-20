@@ -37,17 +37,20 @@
 
 	$: cssProps = {
 		pills,
+		fill,
 	}
 </script>
 
 <El {...$$restProps} {tag} {cssPrefix} {cssProps}>
-	{#if tabs.length > 0}
-		<El cssPrefix="{cssPrefix}-items">
-			{#each tabs as tab, index}
-				<TabItem {index} {tab} />
-			{/each}
-		</El>
-	{/if}
+	<slot name="header" {tabs}>
+		{#if tabs.length > 0}
+			<El cssPrefix="{cssPrefix}-items">
+				{#each tabs as tab, index}
+					<TabItem {index} {tab} />
+				{/each}
+			</El>
+		{/if}
+	</slot>
 	<El cssPrefix="{cssPrefix}-content">
 		<slot />
 	</El>

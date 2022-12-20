@@ -10,28 +10,37 @@
 	export let cssPrefix: $$Props['cssPrefix'] = 'tab-item'
 	export let tag: $$Props['tag'] = 'li'
 
-	export let tab: TabType | undefined = undefined
-	export let index: number
+	export let tab: $$Props['tab'] = undefined
+	export let index: $$Props['index'] = 0
 
 	const { selected }: TabsContext = getContext('TABS')
 
 	function onClick(e: any) {
 		e.preventDefault()
 		if (tab!.disabled) return
-		$selected = index
+		$selected = index!
 
 		console.log('click', tab)
 	}
 
+	$: active = $selected === index
+
 	$: cssProps = {
 		disabled: tab?.disabled,
-		active: $selected === index,
+		active,
+	}
+
+	$: otherProps = {
+		'href': '#',
+		'cssPrefix': cssPrefix + '-inner',
+		'aria-current': active ? 'page' : null,
+		'tabindex': tab!.disabled ? '-1' : null,
 	}
 </script>
 
 {#if tab}
 	<El {tag} {cssPrefix}>
-		<El on:click={onClick} href="#" tag="a" cssPrefix="{cssPrefix}-inner" {cssProps}>
+		<El on:click={onClick} tag="a" {...otherProps} {cssProps}>
 			{#if tab.icon}
 				<Icon name={tab.icon} />
 			{/if}

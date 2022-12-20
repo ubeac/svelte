@@ -1,5 +1,6 @@
 <script>
 	import { Card, Tab, TabBody, Tabs } from '../components'
+	import CardTabs from '../components/Tabs/CardTabs.svelte'
 </script>
 
 <a href="/docs">Documentation website</a>
@@ -7,7 +8,7 @@
 <a href="https://svelte.ubeac.io/storybook">Storybook</a>
 
 <Card>
-	<Tabs fill activeIndex={-1}>
+	<CardTabs fill activeIndex={2}>
 		<Tab title="Tab 1" disabled icon="user">
 			<TabBody>
 				1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptates ratione necessitatibus id saepe
@@ -29,5 +30,5 @@
 				amet optio?
 			</TabBody>
 		</Tab>
-	</Tabs>
+	</CardTabs>
 </Card>

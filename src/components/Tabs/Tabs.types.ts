@@ -34,8 +34,11 @@ export interface TabHeaderProps extends Partial<ElProps> {
 }
 export interface TabItemProps extends Partial<ElProps> {
 	tab?: TabType
+	index?: number
 	//
 }
+
+export interface CardTabsProps extends TabsProps {}
 
 export type TabsContext = {
 	register: (id: string, tab: Partial<TabType>) => number

@@ -1,13 +1,14 @@
 $tabs-props: (
 	null: ('.d-flex', '.flex-column'),
-	items: ('.nav', '.nav-tabs')
+	items: (null: ('.nav', '.nav-tabs'),
+		card: '.card-header-tabs')
 );
 
 $tab-item-props: (
 	null: '.nav-item',
 	inner: (null: ('.nav-link', '.d-inline-flex', '.gap-2'),
 		active: '.active',
-		disabled: '.disabled'
+		disabled: '.disabled',
 	)
 );
 
@@ -21,26 +22,28 @@ $tab-props: (
 .#{$prefix-tabs} {
 	@include apply-props($tabs-props);
 
-	.#{$prefix-tabs}-items {
-
-		.#{$prefix-tabs}-pills & {
-			@extend .nav-pills;
-		}
-
-		.#{$prefix-tabs}-fill {
+	&-fill {
+		.#{$prefix-tabs}-items {
 			@extend .nav-fill;
 		}
+	}
 
-		.#{$prefix-tab}-item {
-			@include apply-props($tab-item-props);
+	&-pills {
+		.#{$prefix-tabs}-items {
+			@extend .nav-pills;
 		}
 	}
+
 
 	.#{$prefix-tabs}-content {
 		@extend .tab-content;
-
-		.#{$prefix-tab} {
-			@include apply-props($tab-props);
-		}
 	}
+}
+
+.#{$prefix-tab} {
+	@include apply-props($tab-props);
+}
+
+.#{$prefix-tab}-item {
+	@include apply-props($tab-item-props);
 }
