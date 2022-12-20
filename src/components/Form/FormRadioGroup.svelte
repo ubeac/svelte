@@ -1,37 +1,31 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { FormField, RadioGroup } from '$lib/components'
+	import type { FormRadioGroupProps, RadioGroupProps } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = FormRadioGroupProps
 
-	import { FormField } from '.'
-	import { Label } from '../Label'
-	import { RadioGroup } from '../Radio'
+	export let color: $$Props['color'] = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-radio-group'
+	export let inline: $$Props['inline'] = undefined
+	export let items: $$Props['items'] = undefined
+	export let reverse: $$Props['reverse'] = undefined
+	export let value: $$Props['value'] = undefined
 
-	/**
-	 * Set Column width
-	 */
-	export let cols: string | number | boolean = '12'
-
-	/**
-	 * Label of radio group.
-	 */
-	export let label: string | undefined = undefined
-
-	/**
-	 * Value of selected radio item.
-	 */
-	export let value: any | undefined = undefined
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('form-radio-group', {}, $$props.class)
+	let radioGroupProps: RadioGroupProps = {}
+	$: {
+		radioGroupProps = {
+			color,
+			inline,
+			reverse,
+			items,
+		}
+	}
 </script>
 
-<FormField {cols} class={classes}>
-	{#if label}
-		<Label>{label}</Label>
-	{/if}
-
-	<RadioGroup {forwardEvents} {...$$restProps} bind:value />
+<FormField {...$$restProps} {cssPrefix}>
+	<slot name="label" />
+	<RadioGroup {...radioGroupProps} bind:value let:item let:index>
+		<slot {index} {item}>{item}</slot>
+	</RadioGroup>
+	<slot name="hint" />
 </FormField>

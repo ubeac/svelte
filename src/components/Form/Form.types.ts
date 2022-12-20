@@ -1,4 +1,4 @@
-import type { ElProps, InputSizes, InputStates } from '$lib/components'
+import type { ElProps, InputProps, InputStates, RadioGroupProps } from '$lib/components'
 
 export interface FormFieldProps extends Partial<ElProps> {
 	label?: string
@@ -7,16 +7,10 @@ export interface FormFieldProps extends Partial<ElProps> {
 	state?: InputStates
 }
 
-export interface FormInputProps extends Partial<FormFieldProps> {
-	disabled?: boolean
-	placeholder?: string
-	readonly?: boolean
-	size?: InputSizes
-	value?: any
-	borderRounded?: boolean
-	borderFlush?: boolean
-}
+export interface FormInputProps extends Partial<FormFieldProps>, Partial<InputProps> {}
 
 export interface FormTextAreaProps extends Partial<FormInputProps> {
 	rows?: number | string
 }
+
+export interface FormRadioGroupProps extends Partial<FormFieldProps>, Partial<RadioGroupProps> {}

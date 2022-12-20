@@ -1,14 +1,17 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '../Base'
+	import type { DialogContentProps } from './Dialog.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = DialogContentProps
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	export let cssPrefix: $$Props['cssPrefix'] = 'dialog-content'
+	export let tag: $$Props['tag'] = 'div'
 
-	$: classes = classname('dialog-content')
+	function onClick(e) {
+		e.stopPropagation()
+	}
 </script>
 
-<div use:forwardEvents on:click|stopPropagation {...$$restProps} class={classes}>
+<El {...$$restProps} {cssPrefix} {tag} on:click={onClick}>
 	<slot />
-</div>
+</El>
