@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { type FormCheckboxGroupProps, FormField } from '.'
-	import { CheckboxGroup } from '../Checkbox'
+	import { CheckboxGroup, type FormCheckboxGroupProps, FormField } from '$lib/components'
 
 	type $$Props = FormCheckboxGroupProps
 

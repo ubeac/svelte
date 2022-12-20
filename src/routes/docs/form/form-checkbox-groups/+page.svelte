@@ -11,22 +11,22 @@
 <h1>FormCheckboxGroup</h1>
 
 <Doc title="Basic usage">
-	FormCheckboxGroup is similar to <a href="">CheckboxGroup</a> component with some additional features.
+	FormCheckboxGroup is similar to <a href="../components/checkbox-groups">CheckboxGroup</a> component with decoration features
+	inside the form.
 </Doc>
 <Preview src="./FormCheckboxGroupBasic.svelte">
 	<FormCheckboxGroupBasic />
 </Preview>
 
 <Doc title="Custom label">
-	<!--  -->
+	You can use default slot to pass a custom label for <code>FormCheckboxGroup</code>.
 </Doc>
 <Preview src="./FormCheckboxGroupLabel.svelte">
 	<FormCheckboxGroupLabel />
 </Preview>
 
 <Doc title="Colors">
-	Set <code>color</code> property to define background color for all <code>Checkboxes</code> inside the
-	<code>CheckboxGroup</code>
+	Set <code>color</code> property to define background color for all <code>Checkboxes</code>.
 </Doc>
 <Preview src="./FormCheckboxGroupColor.svelte">
 	<FormCheckboxGroupColor />

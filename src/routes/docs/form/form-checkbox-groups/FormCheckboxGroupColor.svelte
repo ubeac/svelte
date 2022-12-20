@@ -10,7 +10,5 @@
 
 <FormCheckboxGroup label="Select Language" inline color="primary" {items} bind:value />
 <FormCheckboxGroup label="Select Language" inline color="secondary" {items} bind:value />
-<FormCheckboxGroup label="Select Language" inline color="success" {items} bind:value />
-<FormCheckboxGroup label="Select Language" inline color="danger" {items} bind:value />
 
 <i>value: {value}</i>
