@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import AlertColor from './AlertColor.svelte'
 	import AlertLink from './AlertLink.svelte'
 	import AlertDismissible from './AlertDismissible.svelte'
@@ -16,95 +16,59 @@
 	occurred. Good design of alert modals is very important for the overall user experience of a website or app.
 </p>
 
-<h2>Default markup</h2>
-<p>
-	Depending on the information you need to convey, you can use one of the following types of alert messages - <strong
-		>success</strong
-	>, <strong>info</strong>, <strong>warning</strong> or <strong>danger</strong>. Using the right type of alert modal
-	will help draw users’ attention to the message and prompt them to take action.
-</p>
-
+<Doc title="Default markup"
+	>Depending on the information you need to convey, you can use one of the following types of alert messages -
+	<strong>success</strong>, <strong>info</strong>, <strong>warning</strong> or <strong>danger</strong>. Using the right
+	type of alert modal will help draw users’ attention to the message and prompt them to take action.
+</Doc>
 <Preview src="./AlertColor.svelte">
-	<div class="example-alert-wrapper">
-		<AlertColor />
-	</div>
+	<AlertColor />
 </Preview>
 
-<h2>Alert links</h2>
-<p>
+<Doc title="Alert links">
 	Add a link to your alert message to redirect users to the details they need to complete or additional information they
 	should read.
-</p>
-
+</Doc>
 <Preview src="./AlertLink.svelte">
-	<div class="example-alert-wrapper">
-		<AlertLink />
-	</div>
+	<AlertLink />
 </Preview>
 
-<h2>Dismissible alerts</h2>
-<p>
+<Doc title="Dismissible alerts">
 	Add the <code>x</code> close button to make an alert modal dismissible. Thanks to that, your alert modal will disappear
 	only once the user closes it.
-</p>
+</Doc>
 <Preview src="./AlertDismissible.svelte">
-	<div class="example-alert-wrapper">
-		<AlertDismissible />
-	</div>
+	<AlertDismissible />
 </Preview>
 
-<h2>Alerts with icons</h2>
-<p>Add an icon to your alert modal to make it more user-friendly and help users easily identify the message.</p>
+<Doc title="Alerts with icons">
+	Add an icon to your alert modal to make it more user-friendly and help users easily identify the message.
+</Doc>
 <Preview src="./AlertIcon.svelte">
-	<div class="example-alert-wrapper">
-		<AlertIcon />
-	</div>
+	<AlertIcon />
 </Preview>
 
-<h2>Alert with avatar</h2>
-<p>Add an avatar to your alert modal to make it more personalized.</p>
+<Doc title="Alert with avatar">Add an avatar to your alert modal to make it more personalized.</Doc>
 <Preview src="./AlertAvatar.svelte">
-	<div class="example-alert-wrapper">
-		<AlertAvatar />
-	</div>
+	<AlertAvatar />
 </Preview>
 
-<h2>Alert with buttons</h2>
-<p>
+<Doc title="Alert with buttons">
 	Add primary and secondary buttons to your alert modals if you want users to take a particular action based on the
 	information included in the modal message.
-</p>
+</Doc>
 <Preview src="./AlertButton.svelte">
-	<div class="example-alert-wrapper">
-		<AlertButton />
-	</div>
+	<AlertButton />
 </Preview>
 
-<h2>Important alerts</h2>
-<p>If you want your alert to be really eye-catching, you can add a class <code>alert-important</code>.</p>
+<Doc title="Important alerts">
+	If you want your alert to be really eye-catching, you can add a class <code>alert-important</code>.
+</Doc>
 <Preview src="./AlertImportant.svelte">
-	<div class="example-alert-wrapper">
-		<AlertImportant />
-	</div>
+	<AlertImportant />
 </Preview>
 
-<h2>Alret Show/Hide</h2>
-<p>If you want show or hide your alert you can do it with if property.</p>
+<Doc title="Alret Show/Hide">If you want show or hide your alert you can do it with if property.</Doc>
 <Preview src="./AlertShow.svelte">
-	<div class="example-alert-wrapper">
-		<AlertShow />
-	</div>
+	<AlertShow />
 </Preview>
-
-<style global>
-	.u-alert {
-		width: 80%;
-		font-size: 0.875rem;
-	}
-	.example-alert-wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
-		gap: 0.5rem;
-	}
-</style>

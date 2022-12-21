@@ -7,38 +7,27 @@
 </script>
 
 <h1>Select</h1>
-<p>Add one of the available selects a dropdown select - to let users choose from a predefined set of options.</p>
-<Preview src="./SelectDefault.svelte">
+<p>Select component is used to let users choose from a predefined set of options.</p>
+
+<h2>Default</h2>
+<Preview vertical src="./SelectDefault.svelte">
 	<SelectDefault />
 </Preview>
 
-<h1>Select Items</h1>
+<h2>Select Items</h2>
 <p>Select can have custom item names.</p>
-<Preview src="./SelectItems.svelte">
+<Preview vertical src="./SelectItems.svelte">
 	<SelectItems />
 </Preview>
 
-<h1>Select Placeholder</h1>
+<h2>Select Placeholder</h2>
 <p>Select can have placeholders.</p>
-<Preview src="./SelectPlaceholder.svelte">
+<Preview vertical src="./SelectPlaceholder.svelte">
 	<SelectPlaceholder />
 </Preview>
 
-<h1>Multiple Select</h1>
-<p>
-	Add one of the available selects - either a multiple choice select - to let users choose from a predefined set of
-	options.
-</p>
-<Preview src="./SelectMultiple.svelte">
+<h2>Multiple Select</h2>
+<p>Enables users to choose multiple items from a predefined set of options.</p>
+<Preview vertical src="./SelectMultiple.svelte">
 	<SelectMultiple />
 </Preview>
-
-<style>
-	h1 {
-		margin-top: 2rem;
-	}
-
-	.example-formselect {
-		width: 100%;
-	}
-</style>

@@ -31,18 +31,19 @@ const config = {
 		adapter: adapter(),
 		files: {
 			lib: 'src',
+			assets: 'static',
 		},
 		alias: {
 			'@ubeac/svelte': path.resolve('./src'),
 		},
-		trailingSlash: 'always',
 	},
 	package: {
 		files(file) {
 			const items = [
 				'index.d.ts',
 				'index.ts',
-				'styles.css',
+				'bootstrap.css',
+				'tabler.css',
 				'components',
 				'preprocessors',
 				'directives',

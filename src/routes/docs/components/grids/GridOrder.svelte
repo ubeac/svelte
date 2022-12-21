@@ -1,9 +1,9 @@
 <script>
-	import { Container, Row, Col, Card } from '@ubeac/svelte'
+	import { Col, Card, El } from '@ubeac/svelte'
 </script>
 
-<Container class="container-example">
-	<Row class="row-example" noGutters>
+<El container class="container-example">
+	<El row class="row-example" noGutters>
 		<Col>
 			<Card class="card-example">First, but unordered</Card>
 		</Col>
@@ -13,10 +13,10 @@
 		<Col order="1">
 			<Card class="card-example">Third, but first</Card>
 		</Col>
-	</Row>
-</Container>
-<Container class="container-example">
-	<Row class="row-example" noGutters>
+	</El>
+</El>
+<El container class="container-example">
+	<El row class="row-example" noGutters>
 		<Col order="last">
 			<Card class="card-example">First, but last</Card>
 		</Col>
@@ -26,5 +26,5 @@
 		<Col order="first">
 			<Card class="card-example">Third, but first</Card>
 		</Col>
-	</Row>
-</Container>
+	</El>
+</El>

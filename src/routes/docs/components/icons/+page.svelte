@@ -1,42 +1,29 @@
 <script>
-	import { Icon, ICON_SIZES } from '$lib/components'
-	import { COLORS } from '$lib/types'
+	import { Doc, Preview } from '@ubeac/svelte'
+	import IconColors from './IconColors.svelte'
+	import IconDefault from './IconDefault.svelte'
+	import IconFilled from './IconFilled.svelte'
+	import IconSizes from './IconSizes.svelte'
 </script>
 
 <h1>Icons</h1>
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quae porro explicabo aliquam deleniti soluta doloremque
-	doloribus. Quidem fuga, magni a illo sequi qui sint quos doloremque debitis cupiditate! Vitae?
-</p>
 
-<h2>Default</h2>
-<p>
-	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae cumque nostrum similique nihil laudantium quasi
-	dolores accusantium quos nisi eveniet tempora, nemo tenetur perspiciatis accusamus natus dolorem perferendis
-	architecto aut.
-</p>
-<!-- <Example>
-	<Icon name="user" />
-</Example> -->
+<Doc title="Icon" />
+<Preview src="./IconDefault.svelte">
+	<IconDefault />
+</Preview>
 
-<h2>Size</h2>
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ab illum labore consequatur accusamus ut eveniet eius
-	asperiores, impedit placeat officia dolorem modi, maxime nostrum provident veritatis amet expedita dolores!
-</p>
-<!-- <Example>
-	{#each ICON_SIZES as size}
-		<Icon {size} name="sun" />
-	{/each}
-</Example> -->
+<Doc title="Icon colors" />
+<Preview src="./IconColors.svelte">
+	<IconColors />
+</Preview>
 
-<h2>Icon Colors</h2>
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ab illum labore consequatur accusamus ut eveniet eius
-	asperiores, impedit placeat officia dolorem modi, maxime nostrum provident veritatis amet expedita dolores!
-</p>
-<!-- <Example>
-	{#each COLORS as color}
-		<Icon size="3x" {color} name="book" />
-	{/each}
-</Example> -->
+<Doc title="Filled icons" />
+<Preview src="./IconFilled.svelte">
+	<IconFilled />
+</Preview>
+
+<Doc title="Icon sizes" />
+<Preview src="./IconSizes.svelte">
+	<IconSizes />
+</Preview>

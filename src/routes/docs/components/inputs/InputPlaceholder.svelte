@@ -1,6 +1,5 @@
 <script>
-
-    import {Input} from '@ubeac/svelte'
+	import { Input } from '@ubeac/svelte'
 </script>
 
 <Input placeholder="This is an input with placeholder" />

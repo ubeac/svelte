@@ -1,37 +1,73 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components'
 	import AvatarColors from './AvatarColors.svelte'
+	import AvatarDefault from './AvatarDefault.svelte'
+	import AvatarImage from './AvatarImage.svelte'
 	import AvatarShapes from './AvatarShapes.svelte'
+	import AvatarSize from './AvatarSize.svelte'
+	import AvatarStatus from './AvatarStatus.svelte'
+	import AvatarList from './AvatarList.svelte'
+	import AvatarListStacked from './AvatarListStacked.svelte'
 </script>
 
 <h1>Avatars</h1>
 <p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum ad doloribus fugiat incidunt esse quo fugit
-	architecto itaque! Voluptatem ducimus beatae maiores veritatis laborum libero pariatur quasi voluptates blanditiis?
-</p>
-<h2>Default</h2>
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nostrum corporis dolore voluptatum veniam illo
-	voluptatibus quia repudiandae reprehenderit laboriosam, recusandae aliquam illum eligendi quibusdam quo ducimus autem
-	facilis incidunt.
+	Avatars help customise various elements of a user interface and make the product experience more personalised. They
+	are often used in communication apps, collaboration tools and social media.
 </p>
 
-<h2>Colors</h2>
-<p>
-	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi eligendi ab, maxime minima repellendus labore ipsum
-	quas exercitationem tempore recusandae eveniet id animi voluptate vitae nisi aliquam saepe hic similique!
-</p>
+<Doc title="Default markup">
+	Use the <code>Avatar</code> component to add an avatar to your interface design for greater customisation.
+</Doc>
+<Preview src="./AvatarDefault.svelte">
+	<AvatarDefault />
+</Preview>
+
+<Doc title="Avatar Colors">Customize the color of the avatars.</Doc>
 
 <Preview src="./AvatarColors.svelte">
 	<AvatarColors />
 </Preview>
 
-<h2>Shapes</h2>
-<p>
-	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi eligendi ab, maxime minima repellendus labore ipsum
-	quas exercitationem tempore recusandae eveniet id animi voluptate vitae nisi aliquam saepe hic similique!
-</p>
+<Doc title="Avatar Shapes">You can make them round or square and change their border radius.</Doc>
 
 <Preview src="./AvatarShapes.svelte">
 	<AvatarShapes />
+</Preview>
+
+<Doc title="Avatar Size">
+	you can create a standard avatar or scale it up or down to different sizes based on what you need.
+</Doc>
+
+<Preview src="./AvatarSize.svelte">
+	<AvatarSize />
+</Preview>
+
+<Doc title="Avatar Image and Icon">
+	Set an <code>image</code> as the background to make users easy to indentify and create a personalised experience.
+</Doc>
+
+<Preview src="./AvatarImage.svelte">
+	<AvatarImage />
+</Preview>
+
+<Doc title="Avatar Status">
+	<!--  -->
+</Doc>
+<Preview src="./AvatarStatus.svelte">
+	<AvatarStatus />
+</Preview>
+
+<Doc title="Avatar List">
+	<!--  -->
+</Doc>
+<Preview src="./AvatarList.svelte">
+	<AvatarList />
+</Preview>
+
+<Doc title="Avatar List Stacked">
+	<!--  -->
+</Doc>
+<Preview src="./AvatarListStacked.svelte">
+	<AvatarListStacked />
 </Preview>

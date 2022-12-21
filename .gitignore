@@ -7,6 +7,7 @@ package
 .env
 .env.*
 !.env.example
-src/styles.css
 package
+static/css
 yarn-error.log
+package-lock.json

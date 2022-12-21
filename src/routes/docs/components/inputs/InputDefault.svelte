@@ -1,8 +1,8 @@
-<script>
-	import { Input } from '@ubeac/svelte'
+<script lang="ts">
+	import { El, Input } from '@ubeac/svelte'
 
-	let value
-	$: console.log(value)
+	let value: any
 </script>
 
-<Input bind:value />
+<Input bind:value placeholder="Try to type something..." />
+<El>You typed: {value ?? ''}</El>

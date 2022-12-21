@@ -1,5 +1,0 @@
-$prefix-select: $prefix + "select";
-
-.#{$prefix-select} {
-	@extend .form-select;
-}

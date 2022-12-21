@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Badge, BADGE_SHAPES } from '@ubeac/svelte'
+	import { Badge } from '@ubeac/svelte'
 </script>
 
-{#each BADGE_SHAPES as shape}
-	<Badge color="primary" {shape}>{shape}</Badge>
-{/each}
+<Badge bgColor="primary">Default</Badge>
+<Badge bgColor="primary" pill>Pill</Badge>
+<Badge bgColor="primary" tile>Tile</Badge>

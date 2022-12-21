@@ -1,77 +1,74 @@
-<script>
-	import { Avatar, Collapse, CollapseToggler, Icon, Card, CardBody } from '$lib/components'
-	import { Nav, Sidebar } from '../_layout-components'
+<script type="ts">
+	import { Card, CardBody, El, PageBody, PageHeader, ToC } from '@ubeac/svelte'
+
+	import { navigations } from '.'
+
+	let container: ContainerMaxWidths = 'md'
+
+	let cssPrefixPreTitle = `page-header-pretitle`
+	let cssPrefixTitle = `page-header-title`
 </script>
 
-<div class="page">
-	<div class="navbar navbar-vertical navbar-expand-lg navbar-dark">
-		<div class="container-fluid">
-			<CollapseToggler class="navbar-toggler" id="main-navbar">
-				<Icon name="menu-2" />
-			</CollapseToggler>
+<PageHeader>
+	<El {container}>
+		<El row>
+			<El col>
+				<El cssPrefix={cssPrefixPreTitle}><slot name="preTitle" /></El>
+				<El tag="h1" cssPrefix={cssPrefixTitle}><slot name="title">Documentation</slot></El>
+			</El>
+		</El>
+	</El>
+</PageHeader>
 
-			<h1 class="navbar-brand navbar-brand-autodark">
-				<img
-					class="navbar-brand-image"
-					width="110"
-					height="32"
-					src="https://preview.tabler.io/static/logo-white.svg"
-					alt="logo" />
-			</h1>
+<PageBody>
+	<El {container}>
+		<El row>
+			<El colLg="2" display="none" displayLg="block">
+				<ul class="nav nav-pills nav-vertical" id="docs">
+					{#each navigations as navigation}
+						<li class="nav-item">
+							<a
+								href={navigation.route ? navigation.route : `#${navigation.id}`}
+								class="nav-link"
+								data-bs-toggle="collapse"
+								aria-expanded="false">
+								{navigation.title}
+								{#if navigation.children}
+									<span class="nav-link-toggle" />
+								{/if}
+							</a>
+							{#if navigation.children}
+								<ul class="nav nav-pills collapse" data-bs-parent="#docs" id={navigation.id} style="">
+									{#each navigation.children as menu}
+										<li class="nav-item">
+											<a href={menu.route} class="nav-link">{menu.title}</a>
+										</li>
+									{/each}
+								</ul>
+							{/if}
+						</li>
+					{/each}
+				</ul>
+			</El>
+			<El colLg="8" col="12">
+				<Card size="lg">
+					<CardBody><slot /></CardBody>
+				</Card>
+			</El>
+			<El colLg="2" display="none" displayLg="block">
+				<ToC />
+			</El>
+		</El>
+	</El>
+</PageBody>
 
-			<div class="navbar-nav flex-row d-lg-none">
-				<Avatar>PR</Avatar>
-			</div>
-
-			<Collapse class="navbar-collapse" id="main-navbar">
-				<div class="navbar-nav pt-lg-3">
-					<ul class="navbar-nav">
-						<Nav>
-							<Sidebar />
-						</Nav>
-					</ul>
-				</div>
-			</Collapse>
-		</div>
-	</div>
-	<header class="navbar navbar-expand-md navbar-light d-none d-lg-flex">
-		<div class="container-fluid">
-			<div />
-			<Avatar>PR</Avatar>
-		</div>
-	</header>
-
-	<div class="page-wrapper">
-		<div class="page-body">
-			<div class="container-xl">
-				<div class="mx-2 row row-deck row-cards">
-					<Card>
-						<CardBody class="">
-							<slot />
-						</CardBody>
-					</Card>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<style lang="scss" global>
-	.example-box {
-		padding: 2rem;
-		display: flex;
-		flex-direction: row;
-		gap: 4px;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 2rem;
+<style global>
+	.u-preview-body > * {
+		margin: 0 0.2rem 0.8rem 0.2rem;
+		vertical-align: top;
 	}
-
-	.page-body p {
-		font-size: 16px;
-	}
-	.page-body h2 {
-		margin-top: 3rem;
+	.u-preview-body > :last-child {
+		margin: 0 0.2rem 0 0.2rem !important;
+		vertical-align: top !important;
 	}
 </style>

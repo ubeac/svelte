@@ -1,14 +1,18 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components/preview'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import PageHeaderSimple from './PageHeaderSimple.svelte'
 	import PageHeaderAction from './PageHeaderAction.svelte'
 </script>
 
-<h2>Simple header</h2>
+<Doc title="Simple header">
+	<!--  -->
+</Doc>
 <Preview vertical src="./PageHeaderSimple.svelte">
 	<PageHeaderSimple />
 </Preview>
-<h2>Header with action</h2>
+<Doc title="Header with action">
+	<!--  -->
+</Doc>
 <Preview vertical src="./PageHeaderAction.svelte">
 	<PageHeaderAction />
 </Preview>

@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte/components'
+	import { Preview } from '@ubeac/svelte'
 
 	import GridAlign from './GridAlign.svelte'
 	import GridAlignSelf from './GridAlignSelf.svelte'

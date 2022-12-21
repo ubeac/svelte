@@ -1,5 +1,5 @@
 <script>
-	import { Button, Spinner } from '@ubeac/svelte/components'
+	import { Button, Spinner } from '@ubeac/svelte'
 </script>
 
 <Button color="primary" loading>Button</Button>

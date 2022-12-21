@@ -1,11 +1,30 @@
 export const base_path: string = '/docs/'
 export const base_component_path: string = base_path + 'components/'
 export const base_common_path: string = base_path + 'common/'
+export const base_form_path: string = base_path + 'form/'
 
 export const navigations = [
+	{ title: 'Introduction', route: base_path },
+	{
+		title: 'Getting Started',
+		id: 'menu-base',
+		children: [
+			{
+				route: base_path + 'getting-started/installation',
+				title: 'Installation',
+				icon: 'icons',
+			},
+		],
+	},
 	{
 		title: 'Components',
+		id: 'menu-components',
 		children: [
+			{
+				route: base_component_path + 'accordion',
+				title: 'Accordion',
+				icon: 'star',
+			},
 			{
 				route: base_component_path + 'alert',
 				title: 'Alert',
@@ -27,8 +46,18 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'breadcrumb',
+				title: 'Bredcrumb',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'buttons',
 				title: 'Button',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'button-group',
+				title: 'ButtonGroup',
 				icon: 'star',
 			},
 			{
@@ -37,12 +66,17 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'checkbox',
+				route: base_component_path + 'carousel',
+				title: 'Carousel',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'checkboxes',
 				title: 'Checkbox',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'checkbox-group',
+				route: base_component_path + 'checkbox-groups',
 				title: 'CheckboxGroup',
 				icon: 'star',
 			},
@@ -52,53 +86,33 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'form-autocomplete',
-				title: 'Form Autocomplete',
+				route: base_component_path + 'dialog',
+				title: 'Dialog',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'form-checkbox',
-				title: 'FormCheckbox',
+				route: base_component_path + 'dividers',
+				title: 'Divider',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'form-checkbox-group',
-				title: 'FormCheckboxGroup',
+				route: base_component_path + 'dots',
+				title: 'Dot',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'form-datepicker',
-				title: 'FormDatePicker',
+				route: base_component_path + 'el',
+				title: 'El',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'form-input',
-				title: 'Form Input',
+				route: base_component_path + 'file-uploader',
+				title: 'FileUploader',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'form-radio',
-				title: 'FormRadio',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-radio-group',
-				title: 'FormRadioGroup',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-select',
-				title: 'FormSelect',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-switch',
-				title: 'FormSwitch',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'form-textarea',
-				title: 'FormTextarea',
+				route: base_component_path + 'footers',
+				title: 'Footer',
 				icon: 'star',
 			},
 			{
@@ -107,8 +121,18 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'icons',
+				title: 'Icon',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'inputs',
 				title: 'Input',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'input-groups',
+				title: 'Input group',
 				icon: 'star',
 			},
 			{
@@ -117,18 +141,43 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'menu',
+				title: 'Menu',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'offcanvases',
+				title: 'Offcanvas',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'page',
 				title: 'Page',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'radio',
+				route: base_component_path + 'popover',
+				title: 'Popover',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'progress',
+				title: 'Progress',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'radios',
 				title: 'Radio',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'radio-group',
+				route: base_component_path + 'radio-groups',
 				title: 'RadioGroup',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'ribbon',
+				title: 'Ribbon',
 				icon: 'star',
 			},
 			{
@@ -137,19 +186,50 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'stamp',
+				title: 'Stamp',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'spinners',
+				title: 'Spinner',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'statuses',
+				title: 'Status',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'switch',
 				title: 'Switch',
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'textarea',
+				route: base_component_path + 'tables',
+				title: 'Tables',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'textareas',
 				title: 'Textarea',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'toast',
+				title: 'Toast',
+				icon: 'star',
+			},
+			{
+				route: base_component_path + 'tooltip',
+				title: 'Tooltip',
 				icon: 'star',
 			},
 		],
 	},
 	{
 		title: 'Common',
+		id: 'menu-common',
 		children: [
 			{
 				route: base_common_path + 'if',
@@ -164,7 +244,70 @@ export const navigations = [
 		],
 	},
 	{
+		title: 'Form Components',
+		id: 'menu-forms',
+		children: [
+			{
+				route: base_form_path + 'form-autocomplete',
+				title: 'Form Autocomplete',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-checkboxes',
+				title: 'FormCheckbox',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-checkbox-groups',
+				title: 'FormCheckboxGroup',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-datepicker',
+				title: 'FormDatePicker',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-input',
+				title: 'Form Input',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-radio-groups',
+				title: 'FormRadioGroup',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-select',
+				title: 'FormSelect',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-switch',
+				title: 'FormSwitch',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-textareas',
+				title: 'FormTextarea',
+				icon: 'star',
+			},
+		],
+	},
+	{
+		title: 'Icons',
+		id: 'menu-icons',
+		children: [
+			{
+				route: base_path + 'icons',
+				title: 'Icons',
+				icon: 'icons',
+			},
+		],
+	},
+	{
 		title: 'Pages',
+		id: 'menu-pages',
 		children: [
 			{
 				route: base_path + '', // removed '/docs/components/login' to prevent error in prerender step

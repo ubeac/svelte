@@ -6,3 +6,5 @@
 </script>
 
 <Select bind:value {items} />
+
+<span>{value}</span>
