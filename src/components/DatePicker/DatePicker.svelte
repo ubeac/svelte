@@ -1,40 +1,81 @@
 <script lang="ts">
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
 
+	import type Litepicker from 'litepicker'
+	import type { ILPConfiguration } from 'litepicker/dist/types/interfaces'
 	import moment from 'moment'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	import { El } from '../Base'
+	import type { DatePickerProps } from './DatePicker.types'
+
+	type $$Props = DatePickerProps
+
+	export let tag: $$Props['tag'] = 'input'
+	export let cssPrefix: $$Props['cssPrefix'] = 'input'
 
 	/**
 	 * Changes display format of the date
 	 */
-	export let format: string = 'YYYY-MM-DD'
+	export let format: $$Props['format'] = 'YYYY-MM-DD'
 
 	/**
-	 * Forward all native Events
+	 * Set border of input rounded
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let borderRounded: $$Props['borderRounded'] = undefined
+
+	/**
+	 * Set order of date input flush (without border)
+	 */
+	export let borderFlush: $$Props['borderFlush'] = undefined
+
+	/**
+	 * Set the input disabled
+	 */
+	export let disabled: $$Props['disabled'] = undefined
+
+	/**
+	 * Litepicker options
+	 */
+	export let options: $$Props['options'] = undefined
+
+	/**
+	 * Set placeholder for the input
+	 */
+	export let placeholder: $$Props['placeholder'] = undefined
+
+	/**
+	 * Set the input read-only
+	 */
+	export let readonly: $$Props['readonly'] = undefined
+
+	/**
+	 * The size of Date picker input
+	 */
+	export let size: $$Props['size'] = undefined
+
+	/**
+	 * Set the validation state of input
+	 */
+	export let state: $$Props['state'] = undefined
 
 	/**
 	 * The date value of Date picker
 	 */
-	export let value: Date | string | undefined = undefined
+	export let value: $$Props['value'] = undefined
 
 	const dispatch = createEventDispatcher()
 
-	let element: HTMLElement | undefined = undefined
-
-	let instance: any = undefined
-
-	$: classes = classname('date-picker', $$props.class)
+	let element: HTMLElement
+	let instance: Litepicker | undefined = undefined
 
 	$: instance?.setDate(value)
 
+	let settings: ILPConfiguration
 	$: settings = {
+		...options,
 		element,
 		buttonText: {
+			...(options?.buttonText ?? {}),
 			apply: '',
 			cancel: '',
 			previousMonth: `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>`,
@@ -62,11 +103,25 @@
 		},
 	}
 
+	$: cssProps = {
+		size,
+		state,
+		borderRounded,
+		borderFlush,
+	}
+
+	$: otherProps = {
+		cssPrefix,
+		placeholder,
+		disabled,
+		readonly,
+	}
+
 	onMount(() => {
 		if (!element) return
 		if (typeof window == 'undefined') return
-		import('litepicker').then((Litepicker) => {
-			instance = new Litepicker.Litepicker(settings as any)
+		import('litepicker').then(({ Litepicker }) => {
+			instance = new Litepicker(settings)
 		})
 	})
 
@@ -75,4 +130,13 @@
 	})
 </script>
 
-<input bind:value bind:this={element} use:forwardEvents {...$$restProps} class={classes} />
+<El cssPrefix="{cssPrefix}-wrapper" cssProps={{ size }}>
+	{#if $$slots.start}
+		<slot name="start" />
+	{/if}
+	<slot />
+	<El {tag} bind:value bind:element {...$$restProps} {cssProps} {...otherProps} />
+	{#if $$slots.end}
+		<slot name="end" />
+	{/if}
+</El>

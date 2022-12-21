@@ -1,6 +1,2 @@
-import DatePicker from './DatePicker.svelte'
-
-export { DatePicker }
-export default {
-	DatePicker,
-}
+export { default as DatePicker } from './DatePicker.svelte'
+export * from './DatePicker.types'
