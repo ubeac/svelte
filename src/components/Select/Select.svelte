@@ -1,58 +1,100 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El, type SelectProps } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname, createOptions } from '$lib/utils'
+	type $$Props = SelectProps
+
+	/**
+	 * Set Css Prefix for the Select
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'select'
 
 	/**
 	 * Select items
 	 */
-	export let items: any[] = []
+	export let items: $$Props['items'] = []
+
+	/**
+	 * Set multiple attribute to select
+	 */
+	export let multiple: $$Props['multiple'] = false
 
 	/**
 	 * Value that selected options are bound to
 	 */
-	export let key: string = 'value'
+	export let value: $$Props['value'] = undefined
 
 	/**
-	 * Selected option's value
+	 * Set the selected option
 	 */
-	export let multiple: boolean = false
+	export let selected: $$Props['selected'] = undefined
 
 	/**
-	 * Set the field that should be used as each option label
+	 * Set the size of the select component
 	 */
-	export let text: string = 'text'
+	export let selectSize: $$Props['selectSize'] = undefined
 
 	/**
-	 * Value that selected checkboxes are bound to
+	 * Set size attribute of select
 	 */
-	export let value: any[] | string
+	export let size: $$Props['size'] = undefined
 
-	let forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * Set select as disabled
+	 */
+	export let disabled: $$Props['disabled'] = undefined
 
-	$: classes = classname('select', undefined, $$props.class, true)
+	/**
+	 * Set placeholder for the select
+	 */
+	export let placeholder: $$Props['placeholder'] = undefined
 
-	$: ({ getKey, getText } = createOptions({ items, key, text }))
+	/**
+	 * Set the size of select
+	 */
+	export let state: $$Props['state'] = undefined
+
+	let cssProps: any = {}
+	let props: any = {}
+
+	$: {
+		cssProps = { selectSize, state }
+
+		props = {
+			cssPrefix,
+			value,
+			selected,
+			multiple,
+			disabled,
+			size,
+			placeholder,
+		}
+	}
+
+	const onChange = (event: any) => {
+		if (!multiple) {
+			const selectedIndex = event.target.value
+			value = items && selectedIndex ? items[selectedIndex] : undefined
+		} else if (items != undefined && items.length > 0) {
+			let options = Array.from(event.target.options)
+			value = options
+				.filter((x: any) => x.selected)
+				.map((x: any) => (items ? items[x.value] : undefined))
+				.filter((e) => typeof e !== 'undefined')
+		}
+	}
 </script>
 
-{#if multiple}
-	<select bind:value multiple use:forwardEvents class={classes}>
-		{#each items as item}
-			<option value={getKey(item)}>
-				{getText(item)}
-			</option>
-		{/each}
-	</select>
-{:else}
-	<select bind:value use:forwardEvents {...$$restProps} class={classes}>
-		{#if $$props.placeholder}
-			<option disabled selected value="">{$$props.placeholder}</option>
+<El tag="select" bind:value {...$$restProps} {...props} {cssProps} on:change={onChange}>
+	{#if items}
+		{#if !multiple && value == undefined}
+			<option disabled selected>{placeholder ? placeholder : ''}</option>
 		{/if}
-		{#each items as item}
-			<option value={getKey(item)}>
-				{getText(item)}
+		{#each items as item, index}
+			<option value={index} selected={value === item}>
+				<slot {index} {item}>{item}</slot>
 			</option>
 		{/each}
-	</select>
-{/if}
+	{:else}
+		<slot />
+	{/if}
+</El>
