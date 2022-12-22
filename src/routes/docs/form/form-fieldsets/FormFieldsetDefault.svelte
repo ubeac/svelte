@@ -3,9 +3,9 @@
 </script>
 
 <FormFieldset label="Contact Information">
-	<FormInput placeholder="Full name" mb="2" />
-	<FormInput placeholder="Company" mb="2" />
-	<FormInput placeholder="Email" mb="2" />
-	<FormInput placeholder="Phone number" mb="2" />
-	<FormCheckbox>I agree to the terms and conditions</FormCheckbox>
+	<FormInput placeholder="Full name" label="Full name" required />
+	<FormInput placeholder="Company" label="Company" />
+	<FormInput placeholder="Email" label="Email" required />
+	<FormInput placeholder="Phone number" label="Phone number" />
+	<FormCheckbox required>I agree to the terms and conditions</FormCheckbox>
 </FormFieldset>
