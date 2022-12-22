@@ -41,9 +41,6 @@ declare type NamedColors =
 	| 'green'
 	| 'teal'
 	| 'cyan'
-	| 'black'
-	| 'white'
-	| 'transparent'
 	| undefined
 
 declare type SocialMediaColors =
@@ -60,13 +57,15 @@ declare type SocialMediaColors =
 	| 'rss'
 	| 'flickr'
 	| 'bitbucket'
+	| 'linkedin'
+	| 'tabler'
 	| undefined
 
 declare type Colors = ThemeColors | NamedColors | SocialMediaColors
 
 declare type TextColors = Colors
 
-declare type BackgroundColors = ThemeColors | NamedColors | 'body'
+declare type BackgroundColors = ThemeColors | NamedColors | SocialMediaColors | 'body'
 
 declare type Opacities = '10' | '25' | '50' | '75' | undefined
 declare type TextOpacities = '25' | '50' | '75' | undefined

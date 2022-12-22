@@ -183,9 +183,6 @@ export const NAMED_COLOR_TYPES: NamedColors[] = [
 	'green',
 	'teal',
 	'cyan',
-	'black',
-	'white',
-	'transparent',
 ]
 
 export const BACKGROUND_COLOR_TYPES: BackgroundColors[] = [...THEME_COLOR_TYPES, ...NAMED_COLOR_TYPES, 'body']
