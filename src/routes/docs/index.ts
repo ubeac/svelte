@@ -106,6 +106,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'fieldsets',
+				title: 'Fieldset',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'file-uploader',
 				title: 'FileUploader',
 				icon: 'star',
@@ -265,6 +270,11 @@ export const navigations = [
 			{
 				route: base_form_path + 'form-datepicker',
 				title: 'FormDatePicker',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-fieldsets',
+				title: 'FormFieldset',
 				icon: 'star',
 			},
 			{
