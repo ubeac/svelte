@@ -1,4 +1,4 @@
-import type { ElProps, InputProps, InputStates, RadioGroupProps, SelectProps } from '$lib/components'
+import type { CheckboxGroupProps, CheckboxProps, ElProps, InputProps, InputStates, RadioGroupProps, SelectProps } from '$lib/components'
 
 export interface FormFieldProps extends Partial<ElProps> {
 	label?: string
@@ -6,6 +6,9 @@ export interface FormFieldProps extends Partial<ElProps> {
 	hint?: string
 	state?: InputStates
 }
+
+export interface FormCheckboxGroupProps extends Partial<FormFieldProps>, Partial<CheckboxGroupProps> {}
+export interface FormCheckboxProps extends Partial<FormFieldProps>, Partial<CheckboxProps> {}
 
 export interface FormInputProps extends Partial<FormFieldProps>, Partial<InputProps> {}
 

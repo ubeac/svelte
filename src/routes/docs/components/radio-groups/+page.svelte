@@ -10,13 +10,15 @@
 
 <h1>RadioGroup</h1>
 
-<Doc title="Basic usage">Basic usage</Doc>
+<Doc title="Basic">
+	<code>RadioGroup</code> is a wrapper for <code>Radio</code> component, it can be used to group multiple radios in one component.
+</Doc>
 <Preview src="./RadioGroupBasic.svelte">
 	<RadioGroupBasic />
 </Preview>
 
 <Doc title="Custom label">
-	Set a function to the <code>labelFn</code> (return string) to customize the label.
+	You can use default slot to pass a custom label for <code>RadioGroup</code>.
 </Doc>
 <Preview src="./RadioGroupLabel.svelte">
 	<RadioGroupLabel />

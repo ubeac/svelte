@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { FormField, Input } from '$lib/components'
-	import type { FormInputProps } from '$lib/components'
+	import { FormField, type FormInputProps, Input } from '$lib/components'
 
 	type $$Props = FormInputProps
+
+	//#region
 
 	/**
 	 * Set the tag of FormInput
@@ -23,6 +24,15 @@
 	 * Set order of FormInput flush (without border)
 	 */
 	export let borderFlush: $$Props['borderFlush'] = undefined
+
+	/**
+	 * the mask Value of input
+	 */
+	export let mask: $$Props['mask'] = undefined
+	/**
+	 * the mask Value of input
+	 */
+	export let maskOptions: $$Props['maskOptions'] = undefined
 
 	/**
 	 * Set placeholder for the FormInput
@@ -69,6 +79,8 @@
 	 */
 	export let hint: $$Props['hint'] = undefined
 
+	//#endregion
+
 	$: props = {
 		required,
 		label,
@@ -87,6 +99,8 @@
 		state,
 		borderRounded,
 		borderFlush,
+		mask,
+		maskOptions,
 	}
 </script>
 

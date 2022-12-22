@@ -4,6 +4,7 @@
 	import FormInputDefault from './FormInputDefault.svelte'
 	import FormInputHint from './FormInputHint.svelte'
 	import FormInputState from './FormInputState.svelte'
+	import FormInputMask from './FormInputMask.svelte'
 </script>
 
 <h1>FormInput</h1>
@@ -35,6 +36,15 @@
 </Doc>
 <Preview src="./FormInputState.svelte">
 	<FormInputState />
+</Preview>
+
+<Doc title="Mask">
+	You can use the <code>mask</code> property to apply a mask to an input. You can also use the <code>maskOptions</code>
+	property to configure the mask. For more information about the mask options, see the
+	<a href="https://github.com/RobinHerbots/Inputmask#readme" target="_blank" rel="noreferrer">Inputmask</a> documentation.
+</Doc>
+<Preview src="./FormInputMask.svelte">
+	<FormInputMask />
 </Preview>
 
 <Doc title="Layout">

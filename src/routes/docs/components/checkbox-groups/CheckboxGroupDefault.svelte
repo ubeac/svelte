@@ -2,9 +2,9 @@
 	import { CheckboxGroup } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value: string[] = []
+	let value: string[] = ['Peach']
 </script>
 
 <CheckboxGroup {items} bind:value />
 
-<span>{value}</span>
+<i>value: {JSON.stringify(value)}</i>

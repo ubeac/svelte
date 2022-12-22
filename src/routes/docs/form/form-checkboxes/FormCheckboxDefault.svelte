@@ -3,6 +3,6 @@
 	let value = false
 </script>
 
-<FormCheckbox bind:value label="Form Checkbox" text="Check 1" />
+<FormCheckbox description="This is description" bind:value label="Form Checkbox">Check 1</FormCheckbox>
 
 <span if={value}>{value}</span>
