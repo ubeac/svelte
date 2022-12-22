@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Doc, Preview } from '@ubeac/svelte'
 
-	import ColorsBrand from './ColorsBrand.svelte'
 	import ColorsNamed from './ColorsNamed.svelte'
+	import ColorsSocial from './ColorsSocial.svelte'
 	import ColorsTheme from './ColorsTheme.svelte'
 </script>
 
@@ -22,10 +22,10 @@
 	</div>
 </Preview>
 
-<Doc title="Brancd colors" />
-<Preview src="./ColorsBrand.svelte">
+<Doc title="Social colors" />
+<Preview src="./ColorsSocial.svelte">
 	<div class="custom-class text-light">
-		<ColorsBrand />
+		<ColorsSocial />
 	</div>
 </Preview>
 
