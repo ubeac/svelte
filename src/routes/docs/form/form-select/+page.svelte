@@ -1,38 +1,35 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
-	import FormSelectLabel from './FormSelectLabel.svelte'
+	import { Preview, Doc } from '@ubeac/svelte'
+	import FormSelectDefault from './FormSelectDefault.svelte'
 	import FormSelectColumn from './FormSelectColumn.svelte'
-	import FormSelectRequired from './FormSelectRequired.svelte'
-	import FormSelectMessage from './FormSelectMessage.svelte'
+	import FormSelectState from './FormSelectState.svelte'
+	import FormSelectHint from './FormSelectHint.svelte'
 </script>
 
 <h1>FormSelect</h1>
 <p>Add one of the available selects a dropdown select - to let users choose from a predefined set of options.</p>
 
-<h2>Label</h2>
-<p>You can set a label for FormSelect.</p>
-<Preview src="./FormSelectLabel.svelte">
-	<div class="example-formselect">
-		<FormSelectLabel />
-	</div>
+<Doc title="Label"
+	>Set <code>label</code> property to show input label's and bind to its id automatically. <code>required</code> is a
+	booleanproperty which show an indicator on label as well. You can also use <code>label</code> slot.</Doc>
+<Preview src="./FormSelectDefault.svelte">
+	<FormSelectDefault />
 </Preview>
 
-<h2>Hint/Validation Message</h2>
-<p>You can set a message below of Select like this:</p>
-<Preview class="align-items-stretch" vertical src="./FormSelectMessage.svelte">
-	<FormSelectMessage />
+<Doc title="Hint/Validation Message"
+	>Set <code>hint</code> string property to show some useful information about the input. You can also use
+	<code>hint</code> slot.</Doc>
+<Preview class="align-items-stretch" src="./FormSelectHint.svelte">
+	<FormSelectHint />
 </Preview>
 
-<h2>Required</h2>
-<p>You can mark it as a required field like this:</p>
-<Preview src="./FormSelectRequired.svelte">
-	<div class="example-formselect">
-		<FormSelectRequired />
-	</div>
+<Doc title="State">Set <code>state</code> property to show a state indicator on the input.</Doc>
+<Preview src="./FormSelectState.svelte">
+	<FormSelectState />
 </Preview>
 
-<h2>Column Width</h2>
-<p>You can set Column width using <code>cols</code> prop.</p>
+<Doc title="Layout"
+	>Use default <code>row</code> and <code>col</code> properties to change layout of the FormSelects inside forms.</Doc>
 <Preview src="./FormSelectColumn.svelte">
 	<FormSelectColumn />
 </Preview>
