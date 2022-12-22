@@ -13,7 +13,7 @@ export const navigations = [
 			{
 				route: base_path + 'getting-started/installation',
 				title: 'Installation',
-				icon: 'icons',
+				icon: 'star',
 			},
 		],
 	},
@@ -24,12 +24,17 @@ export const navigations = [
 			{
 				route: base_core_path + 'contents/typography',
 				title: 'Typography',
-				icon: 'icons',
+				icon: 'star',
 			},
 			{
 				route: base_core_path + 'contents/colors',
 				title: 'Colors',
-				icon: 'icons',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/icons',
+				title: 'Icons',
+				icon: 'star',
 			},
 		],
 	},
@@ -130,11 +135,6 @@ export const navigations = [
 			{
 				route: base_component_path + 'grids',
 				title: 'Grid',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'icons',
-				title: 'Icon',
 				icon: 'star',
 			},
 			{
@@ -303,17 +303,6 @@ export const navigations = [
 				route: base_form_path + 'form-textareas',
 				title: 'FormTextarea',
 				icon: 'star',
-			},
-		],
-	},
-	{
-		title: 'Icons',
-		id: 'menu-icons',
-		children: [
-			{
-				route: base_path + 'icons',
-				title: 'Icons',
-				icon: 'icons',
 			},
 		],
 	},
