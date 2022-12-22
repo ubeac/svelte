@@ -176,6 +176,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'range-sliders',
+				title: 'RangeSlider',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'ribbon',
 				title: 'Ribbon',
 				icon: 'star',

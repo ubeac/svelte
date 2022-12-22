@@ -1,0 +1,19 @@
+//
+// Range Slider
+//
+
+$orientations: 'horizontal' 'vertical';
+
+// $props: (
+//     null: ('.noUi-target', '.noUi-horizontal', '.noUi-txt-dir-ltr'),
+// );
+
+.#{$prefix-range-slider} {
+
+    //@include apply-props($props);
+    @each $orientation in $orientations {
+        &-orientation-#{$orientation} {
+            @extend .noUi-#{$orientation};
+        }
+    }
+}
