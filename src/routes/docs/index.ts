@@ -1,5 +1,6 @@
 export const base_path: string = '/docs/'
 export const base_component_path: string = base_path + 'components/'
+export const base_core_path: string = base_path + 'core/'
 export const base_common_path: string = base_path + 'common/'
 export const base_form_path: string = base_path + 'form/'
 
@@ -12,6 +13,22 @@ export const navigations = [
 			{
 				route: base_path + 'getting-started/installation',
 				title: 'Installation',
+				icon: 'icons',
+			},
+		],
+	},
+	{
+		title: 'Core Features',
+		id: 'core-features',
+		children: [
+			{
+				route: base_core_path + 'contents/typography',
+				title: 'Typography',
+				icon: 'icons',
+			},
+			{
+				route: base_core_path + 'contents/colors',
+				title: 'Colors',
 				icon: 'icons',
 			},
 		],
@@ -98,11 +115,6 @@ export const navigations = [
 			{
 				route: base_component_path + 'dots',
 				title: 'Dot',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'el',
-				title: 'El',
 				icon: 'star',
 			},
 			{
