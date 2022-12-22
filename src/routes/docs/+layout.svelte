@@ -71,4 +71,12 @@
 		margin: 0 0.2rem 0 0.2rem !important;
 		vertical-align: top !important;
 	}
+
+	.u-card-body > h2 {
+		margin-top: 1.75rem !important;
+	}
+	.u-preview-body > :last-child {
+		margin: 0 0.2rem 0 0.2rem !important;
+		vertical-align: top !important;
+	}
 </style>

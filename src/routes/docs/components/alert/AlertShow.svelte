@@ -7,15 +7,7 @@
 	let value = false
 </script>
 
-<El row>
-	<El col mb="4">
-		<Alert dismissible bind:value title="Wow! Everything worked!" color="success">
-			<div class="text-muted">Your account has been saved!</div>
-		</Alert>
-	</El>
-</El>
-<El row>
-	<El col>
-		<Button on:click={toggle}>Toggle</Button>
-	</El>
-</El>
+<Alert dismissible bind:value title="Wow! Everything worked!" color="success">
+	<El textMuted>Your account has been saved!</El>
+</Alert>
+<Button on:click={toggle}>Toggle Alert</Button>
