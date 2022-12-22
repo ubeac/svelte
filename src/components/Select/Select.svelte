@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-	import type { SelectProps } from '$lib/components'
+	import { El, type SelectProps } from '$lib/components'
 
 	type $$Props = SelectProps
 
@@ -79,7 +78,7 @@
 			let options = Array.from(event.target.options)
 			value = options
 				.filter((x: any) => x.selected)
-				.map((x: any) => items[x.value])
+				.map((x: any) => (items ? items[x.value] : undefined))
 				.filter((e) => typeof e !== 'undefined')
 		}
 	}

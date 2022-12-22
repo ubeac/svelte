@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, FormSelect } from '@ubeac/svelte'
+	import { FormSelect } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
 	let value: any = undefined
@@ -7,4 +7,4 @@
 
 <FormSelect bind:value {items} label="Label" />
 <FormSelect bind:value {items} required label="Label" />
-<El>value: {value}</El>
+<i>value: {value}</i>

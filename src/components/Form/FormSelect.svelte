@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { FormField, Select } from '$lib/components'
-	import type { FormSelectProps, SelectProps } from '$lib/components'
+	import { FormField, type FormSelectProps, Select, type SelectProps } from '$lib/components'
 
 	type $$Props = FormSelectProps
 
@@ -12,7 +11,7 @@
 	/**
 	 * Select items
 	 */
-	export let items: $$Props['items'] = []
+	export let items: $$Props['items'] 
 
 	/**
 	 * Set multiple attribute to select

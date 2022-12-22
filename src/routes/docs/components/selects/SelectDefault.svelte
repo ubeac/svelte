@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { El, Select } from '@ubeac/svelte'
+	import { Select } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value: any = undefined
+	let value: any = items[2]
 </script>
 
 <Select bind:value {items} />
 
-<El>Selected value: {value}</El>
+<i>value: {value}</i>

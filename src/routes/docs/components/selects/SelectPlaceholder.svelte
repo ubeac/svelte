@@ -1,9 +1,9 @@
-<script>
-	import { Select, El } from '@ubeac/svelte'
+<script lang="ts">
+	import { Select } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value = ''
+	let value: any = undefined
 </script>
 
 <Select bind:value {items} placeholder="Please select an item" />
-<El>Selected value: {value}</El>
+<i>Selected value: {value}</i>

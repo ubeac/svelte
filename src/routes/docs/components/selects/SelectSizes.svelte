@@ -1,5 +1,5 @@
 <script type="ts">
-	import { El, Select } from '@ubeac/svelte'
+	import { Select } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
 	let value: any = undefined
@@ -9,4 +9,4 @@
 <Select bind:value {items} />
 <Select selectSize="sm" bind:value {items} />
 
-<El>Selected value: {value}</El>
+<i>Selected value: {value}</i>
