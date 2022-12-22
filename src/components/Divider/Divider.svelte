@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-	import type { DividerProps } from '$lib/components'
+	import { type DividerProps, El } from '$lib/components'
 
 	type $$Props = DividerProps
 
