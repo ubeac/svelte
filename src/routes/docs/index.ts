@@ -32,6 +32,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_core_path + 'contents/spacing',
+				title: 'Spacing',
+				icon: 'star',
+			},
+			{
 				route: base_core_path + 'contents/icons',
 				title: 'Icons',
 				icon: 'star',
