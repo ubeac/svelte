@@ -2,5 +2,5 @@ $prefix: 'u-' !default;
 @import './mixins';
 @import './variables';
 @import '@tabler/core/src/scss/core';
-@import 'nouislider/dist/nouislider';
+@import '@tabler/core/src/scss/vendor/nouislider';
 @import './components';

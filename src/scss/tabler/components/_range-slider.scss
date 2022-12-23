@@ -4,13 +4,14 @@
 
 $orientations: 'horizontal' 'vertical';
 
-// $props: (
-//     null: ('.noUi-target', '.noUi-horizontal', '.noUi-txt-dir-ltr'),
-// );
+$props: (
+    null: ('.form-range', '.noUi-target', '.noUi-txt-dir-ltr'),
+    color: generate_props($theme_colors, ('.text-')),
+);
 
 .#{$prefix-range-slider} {
+    @include apply-props($props);
 
-    //@include apply-props($props);
     @each $orientation in $orientations {
         &-orientation-#{$orientation} {
             @extend .noUi-#{$orientation};

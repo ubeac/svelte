@@ -24,59 +24,14 @@
 	export let color: $$Props['color'] = undefined
 
 	/**
-	 * the items of RangeSlider
-	 */
-	//export let items: $$Props['items'] = undefined
-
-	/**
-	 * the start value(s) of RangeSlider
-	 */
-	export let startValue: $$Props['startValue'] = undefined
-
-	/**
-	 * the value of step for RangeSlider
-	 */
-	export let step: $$Props['step'] = undefined
-
-	/**
-	 * the value formater function of RangeSlider
-	 */
-	export let format: $$Props['format'] = undefined
-
-	/**
-	 * the mode of RangeSlider
-	 */
-	export let mode: $$Props['mode'] = undefined
-
-	/**
-	 * the range (min, max) of RangeSlider
-	 */
-	export let range: $$Props['range'] = { min: 0, max: 100 }
-
-	/**
-	 * the pips value of RangeSlider
-	 */
-	export let pips: $$Props['pips'] = undefined
-
-	/**
-	 * show the RangeSlider to rtl
-	 */
-	export let rtl: $$Props['rtl'] = undefined
-
-	/**
-	 * show the RangeSlider to vertical
+	 * set the RangeSlider orientation
 	 */
 	export let orientation: $$Props['orientation'] = 'horizontal'
 
 	/**
-	 * show RangeSlider tooltip
+	 * set the RangeSlider options
 	 */
-	export let tooltips: $$Props['tooltips'] = undefined
-
-	/**
-	 * set connect value of RangeSlider
-	 */
-	export let connect: $$Props['connect'] = undefined
+	export let options: $$Props['options']
 
 	let cssProps: any = {}
 	let otherProps: any = {}
@@ -87,35 +42,21 @@
 		}
 		otherProps = {
 			cssPrefix,
-			tooltips,
-			rtl,
-			pips,
-			range,
-			mode,
-			format,
-			step,
-			startValue,
+			options,
 			value,
-			connect,
 		}
 	}
 
-	let element: HTMLInputElement
+	let element: HTMLElement
 	onMount(() => {
 		if (element !== undefined) {
-			noUiSlider.create(element, {
-				range: range,
-				step: step ? +step : undefined,
-				tooltips: tooltips,
-				orientation: orientation,
-				direction: rtl ? 'rtl' : 'ltr',
-				pips: pips,
-				format: format,
-				start: startValue,
-				connect: connect,
+			noUiSlider.create(element, options)
+
+			element.noUiSlider.on('update', function (values: any, handle: any) {
+				value = values
 			})
 		}
 	})
 </script>
 
-<El {...$$restProps} {cssProps} {...otherProps} bind:value bind:element class="noUi-target noUi-txt-dir-ltr" />
+<El {...$$restProps} {cssProps} {...otherProps} bind:value bind:element />
