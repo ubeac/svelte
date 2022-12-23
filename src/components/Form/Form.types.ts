@@ -2,10 +2,11 @@ import type {
 	CheckboxGroupProps,
 	CheckboxProps,
 	ElProps,
+	RangeSliderProps,
+	FieldsetProps,
 	InputProps,
 	InputStates,
 	RadioGroupProps,
-	RangeSliderProps,
 	SelectProps,
 } from '$lib/components'
 
@@ -30,3 +31,6 @@ export interface FormRadioGroupProps extends Partial<FormFieldProps>, Partial<Ra
 export interface FormSelectProps extends Partial<FormFieldProps>, Partial<SelectProps> {}
 
 export interface FormRangeSliderProps extends Partial<FormFieldProps>, Partial<RangeSliderProps> {}
+
+export interface FormFieldsetProps extends Partial<FormFieldProps>, Partial<FieldsetProps> {}
+
