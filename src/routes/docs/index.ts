@@ -283,6 +283,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_form_path + 'form-range-slider',
+				title: 'FormRangeSlider',
+				icon: 'star',
+			},
+			{
 				route: base_form_path + 'form-select',
 				title: 'FormSelect',
 				icon: 'star',
