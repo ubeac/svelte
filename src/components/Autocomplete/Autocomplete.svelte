@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createEventDispatcher, onDestroy, onMount, tick } from 'svelte'
+	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 
 	import TomSelect from 'tom-select'
 	import type { TomSettings } from 'tom-select/dist/types/types'
