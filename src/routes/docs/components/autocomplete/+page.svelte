@@ -2,12 +2,12 @@
 	import { Alert, Preview } from '@ubeac/svelte'
 
 	import AutocompleteDefault from './AutocompleteDefault.svelte'
-	import AutocompleteDisabledLoading from './AutocompleteDisabledLoading.svelte'
+	import AutocompleteDisabled from './AutocompleteDisabled.svelte'
 	import AutocompleteEvent from './AutocompleteEvent.svelte'
 	import AutocompleteMultiple from './AutocompleteMultiple.svelte'
-	import AutocompleteObject from './AutocompleteObject.svelte'
+	import AutocompleteCreate from './AutocompleteCreate.svelte'
 	import AutocompleteObjectItems from './AutocompleteObjectItems.svelte'
-	import AutocompletePreview from './AutocompletePreview.svelte'
+	import AutocompleteRemoteData from './AutocompleteRemoteData.svelte'
 </script>
 
 <h1>Auto Complete</h1>
@@ -28,18 +28,18 @@
 	</div>
 </Preview>
 
-<h2>Loading and Disabled</h2>
-<p>Autocomplete supports disabled and loading states</p>
+<h2>Disabled</h2>
+<p>Autocomplete supports disabled states</p>
 
-<Preview src="./AutocompleteDisabledLoading.svelte">
+<Preview src="./AutocompleteDisabled.svelte">
 	<div class="example-autocomplete">
-		<AutocompleteDisabledLoading />
+		<AutocompleteDisabled />
 	</div>
 </Preview>
 
 <h2>Events</h2>
 
-<p>Autocomplete dispatches <code>changed</code> when the value changed</p>
+<p>Autocomplete dispatches <code>change</code> event when the value changed</p>
 
 <Preview src="./AutocompleteEvent.svelte">
 	<div class="example-autocomplete">
@@ -47,9 +47,6 @@
 	</div>
 </Preview>
 <br />
-<Alert type="success" title="Note">
-	All @ubeac/svelte components support native DOM events like on:click, on:focus, on:blur, etc.
-</Alert>
 
 <h2>use Object for Item</h2>
 <p>
@@ -62,19 +59,19 @@
 	</div>
 </Preview>
 
-<h2>Items as Object</h2>
-<p>You can pass <code>items</code> prop as object (instead of array)</p>
-<Preview src="./AutocompleteObject.svelte">
+<h2>Create Items</h2>
+<p>Also you can create new Item</p>
+<Preview src="./AutocompleteCreate.svelte">
 	<div class="example-autocomplete">
-		<AutocompleteObject />
+		<AutocompleteCreate />
 	</div>
 </Preview>
 
-<h2>Preview Mode</h2>
-<p>Autocomplete supports preview mode by passing <code>preview</code> prop</p>
-<Preview src="./AutocompletePreview.svelte">
+<h2>Remote Data</h2>
+<p>Autocomplete supports loading data from async functions</p>
+<Preview src="./AutocompleteRemoteData.svelte">
 	<div class="example-autocomplete">
-		<AutocompletePreview />
+		<AutocompleteRemoteData />
 	</div>
 </Preview>
 
