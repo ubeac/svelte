@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { RangeSlider } from '$lib/components'
-
-	import { FormField, type FormRangeSliderProps } from '.'
+	import { FormField, type FormRangeSliderProps, RangeSlider } from '$lib/components'
 
 	type $$Props = FormRangeSliderProps
 
@@ -22,8 +20,6 @@
 
 <FormField {...$$restProps} {cssPrefix}>
 	<slot name="label" />
-	<RangeSlider {...rangeSliderProps} bind:value {options}>
-		<slot />
-	</RangeSlider>
+	<RangeSlider {...rangeSliderProps} bind:value />
 	<slot name="hint" />
 </FormField>

@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { RangeSlider } from '@ubeac/svelte'
-	import type { Options } from 'nouislider'
+	import { RangeSlider, type RangeSliderOptions } from '@ubeac/svelte'
 
-	let optionsLower: Options = {
+	let optionsLower: RangeSliderOptions = {
 		range: {
 			min: 10,
 			max: 100,
@@ -12,11 +11,10 @@
 		direction: 'ltr',
 		behaviour: 'tap-drag',
 		tooltips: false,
-		orientation: 'horizontal',
 		connect: 'lower',
 	}
 
-	let optionsUpper: Options = {
+	let optionsUpper: RangeSliderOptions = {
 		range: {
 			min: 10,
 			max: 100,
@@ -26,7 +24,6 @@
 		direction: 'ltr',
 		behaviour: 'tap-drag',
 		tooltips: false,
-		orientation: 'horizontal',
 		connect: 'upper',
 	}
 	let value: any

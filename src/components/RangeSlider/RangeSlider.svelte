@@ -3,8 +3,7 @@
 
 	import noUiSlider from 'nouislider'
 
-	import { El } from '$lib/components'
-	import type { RangeSliderProps } from '$lib/components'
+	import { El, type RangeSliderProps, type RangeSliderTarget } from '$lib/components'
 
 	type $$Props = RangeSliderProps
 
@@ -12,6 +11,11 @@
 	 * Set Css Prefix for the RangeSlider
 	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'range-slider'
+
+	/**
+	 * Target DOM element for RangeSlider
+	 */
+	export let element: $$Props['element'] = undefined
 
 	/**
 	 * the Value of RangeSlider
@@ -24,37 +28,36 @@
 	export let color: $$Props['color'] = undefined
 
 	/**
-	 * set the RangeSlider orientation
-	 */
-	export let orientation: $$Props['orientation'] = 'horizontal'
-
-	/**
 	 * set the RangeSlider options
 	 */
 	export let options: $$Props['options']
 
 	let cssProps: any = {}
 	let otherProps: any = {}
+
 	$: {
 		cssProps = {
 			color,
-			orientation,
+			orientation: options?.orientation ?? 'horizontal',
 		}
-		otherProps = {
-			cssPrefix,
-			options,
-			value,
+		otherProps = { cssPrefix }
+		if (element !== undefined && options !== undefined) {
+			element.noUiSlider?.updateOptions(options, true)
 		}
 	}
 
-	let element: HTMLElement
 	onMount(() => {
-		if (element !== undefined) {
+		if (element !== undefined && options !== undefined) {
 			noUiSlider.create(element, options)
 
-			element.noUiSlider.on('update', function (values: any, handle: any) {
+			element.noUiSlider?.on('update', (values: any, handle: any) => {
 				value = values
 			})
+		}
+		return () => {
+			if (element !== undefined) {
+				element.noUiSlider?.destroy()
+			}
 		}
 	})
 </script>

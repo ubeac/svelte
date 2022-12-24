@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El, RangeSlider } from '@ubeac/svelte'
-	import type { Options } from 'nouislider'
+	import { RangeSlider, type RangeSliderOptions } from '@ubeac/svelte'
 
 	let value1: any
 	let value2: any
@@ -14,7 +13,7 @@
 		},
 	}
 
-	let options1: Options = {
+	let options1: RangeSliderOptions = {
 		range: {
 			min: 10,
 			max: 100,
@@ -27,7 +26,7 @@
 		format: format,
 	}
 
-	let options2: Options = {
+	let options2: RangeSliderOptions = {
 		range: {
 			min: 10,
 			max: 100,
@@ -42,7 +41,7 @@
 </script>
 
 <RangeSlider color="primary" bind:value={value1} options={options1} />
-<El>Value: {value1}</El>
+<i>Value: {value1}</i>
 
 <RangeSlider options={options2} bind:value={value2} />
-<El>Values: {value2}</El>
+<i>Values: {value2}</i>
