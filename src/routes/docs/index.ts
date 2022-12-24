@@ -46,6 +46,11 @@ export const navigations = [
 				title: 'Grid',
 				icon: 'star',
 			},
+			{
+				route: base_core_path + 'contents/columns',
+				title: 'Columns',
+				icon: 'star',
+			},
 		],
 	},
 	{
