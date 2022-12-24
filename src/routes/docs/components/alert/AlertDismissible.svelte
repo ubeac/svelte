@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { Alert, COLORS } from '@ubeac/svelte'
+	import { Alert, El } from '@ubeac/svelte'
 </script>
 
 <Alert dismissible title="Wow! Everything worked!" color="success">
-	<div class="text-muted">Your account has been saved!</div>
+	<El textMuted>Your account has been saved!</El>
 </Alert>
 <Alert dismissible title="Wow! Everything worked!" color="info">
-	<div class="text-muted">Here is something that you might like to know.</div>
+	<El textMuted>Here is something that you might like to know.</El>
 </Alert>
 <Alert dismissible title="Wow! Everything worked!" color="warning">
-	<div class="text-muted">Sorry! There was a problem with your request.</div>
+	<El textMuted>Sorry! There was a problem with your request.</El>
 </Alert>
 <Alert dismissible title="I'm so sorry…" color="danger">
-	<div class="text-muted">Your account has been deleted and can't be restored.</div>
+	<El textMuted>Your account has been deleted and can't be restored.</El>
 </Alert>

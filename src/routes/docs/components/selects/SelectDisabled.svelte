@@ -1,9 +1,8 @@
-<script>
+<script lang="ts">
 	import { Select } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value = ''
+	let value: any = undefined
 </script>
 
-<Select bind:value {items} placeholder="this is placeholder" />
-<span>{value}</span>
+<Select disabled bind:value {items} />

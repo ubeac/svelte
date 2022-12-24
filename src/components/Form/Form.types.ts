@@ -1,11 +1,12 @@
 import type {
-	AutocompleteProps,
 	CheckboxGroupProps,
 	CheckboxProps,
 	ElProps,
+	FieldsetProps,
 	InputProps,
 	InputStates,
 	RadioGroupProps,
+	SelectProps,
 } from '$lib/components'
 
 export interface FormFieldProps extends Partial<ElProps> {
@@ -40,3 +41,7 @@ export interface FormTextAreaProps extends Partial<FormInputProps> {
 }
 
 export interface FormRadioGroupProps extends Partial<FormFieldProps>, Partial<RadioGroupProps> {}
+
+export interface FormSelectProps extends Partial<FormFieldProps>, Partial<SelectProps> {}
+
+export interface FormFieldsetProps extends Partial<FormFieldProps>, Partial<FieldsetProps> {}
