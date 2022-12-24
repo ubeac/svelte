@@ -4,14 +4,6 @@
 	let items = ['Red', 'Green', 'Blue', 'GHI', 'Cyan', 'DEF', 'Black', 'ABC']
 </script>
 
-<FormAutocomplete {items} label="First Color:">
-	<FormHint slot="message">choose your favorite color</FormHint>
-</FormAutocomplete>
-
-<FormAutocomplete {items} label="invalid:" value="GHI">
-	<FormHint state="invalid" slot="message">GHI is not a valid color name.</FormHint>
-</FormAutocomplete>
-
-<FormAutocomplete {items} label="valid:" value="black">
-	<FormHint state="valid" slot="message">This color name is valid.</FormHint>
-</FormAutocomplete>
+<FormAutocomplete {items} hint="choose your favorite color" label="First Color:" />
+<FormAutocomplete {items} label="invalid:" hint="GHI is not a valid color name." state="invalid" value="GHI" />
+<FormAutocomplete {items} label="valid:" hint="This color name is valid." state="valid" value="black" />

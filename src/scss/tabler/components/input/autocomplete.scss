@@ -14,17 +14,22 @@ select.#{$prefix-autocomplete}-loaded {
 	width: 1px !important;
 }
 
+$autocomplete-props: (
+	dropdown: ('.dropdown-menu', '.w-100'),
+	option: ".dropdown-item",
+	state:(valid: '.is-valid',
+		invalid: '.is-invalid'
+	)
+);
 
 .#{$prefix-autocomplete} {
+	@include apply-props($autocomplete-props);
+
 	&-dropdown {
-		@extend .dropdown-menu;
-		@extend .w-100;
 		top: 36px;
 	}
 
 	&-option {
-		@extend .dropdown-item;
-
 		&[data-selectable] {
 			display: block;
 		}

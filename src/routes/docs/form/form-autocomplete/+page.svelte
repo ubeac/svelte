@@ -1,7 +1,7 @@
 <script>
 	import { Preview } from '@ubeac/svelte'
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
-	import FormAutocompleteDisabledLoading from './FormAutocompleteDisabledLoading.svelte'
+	import FormAutocompleteDisabled from './FormAutocompleteDisabled.svelte'
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'
 	import FormAutocompleteMessage from './FormAutocompleteMessage.svelte'
 	import FormAutocompleteRequired from './FormAutocompleteRequired.svelte'
@@ -39,9 +39,9 @@
 	<FormAutocompleteColumn />
 </Preview>
 
-<h2>Disabled, Read-Only & Loading</h2>
-<p>FormAutocomplete supports disabled, Read-Only and loading states.</p>
+<h2>Disabled</h2>
+<p>FormAutocomplete supports disabled state.</p>
 
-<Preview vertical class="align-items-stretch" src="./FormAutocompleteDisabledLoading.svelte">
-	<FormAutocompleteDisabledLoading />
+<Preview vertical class="align-items-stretch" src="./FormAutocompleteDisabled.svelte">
+	<FormAutocompleteDisabled />
 </Preview>

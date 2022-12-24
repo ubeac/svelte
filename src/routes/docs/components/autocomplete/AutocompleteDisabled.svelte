@@ -9,6 +9,3 @@
 <Autocomplete disabled multiple {items} bind:value />
 
 <p if={value.length > 0}>You selected <b>{value.join(', ')}</b></p>
-
-<span>Loading:</span>
-<Autocomplete loading {items} />

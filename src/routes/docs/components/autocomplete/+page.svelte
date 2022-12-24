@@ -6,8 +6,9 @@
 	import AutocompleteEvent from './AutocompleteEvent.svelte'
 	import AutocompleteMultiple from './AutocompleteMultiple.svelte'
 	import AutocompleteCreate from './AutocompleteCreate.svelte'
-	import AutocompleteObjectItems from './AutocompleteObjectItems.svelte'
+	import AutocompleteObject from './AutocompleteObject.svelte'
 	import AutocompleteRemoteData from './AutocompleteRemoteData.svelte'
+  import FormAutocomplete from '@ubeac/svelte/components/Form/FormAutocomplete.svelte'
 </script>
 
 <h1>Auto Complete</h1>
@@ -53,11 +54,13 @@
 	You can have complex objects as item and you need to use <code>text</code> and <code>key</code> props to extract the data
 	that Autocomplete needs
 </p>
-<Preview src="./AutocompleteObjectItems.svelte">
+<Preview src="./AutocompleteObject.svelte">
 	<div class="example-autocomplete">
-		<AutocompleteObjectItems />
+		<AutocompleteObject />
 	</div>
 </Preview>
+
+<FormAutocomplete />
 
 <h2>Create Items</h2>
 <p>Also you can create new Item</p>

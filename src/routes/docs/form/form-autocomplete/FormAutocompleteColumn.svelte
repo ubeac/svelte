@@ -9,10 +9,10 @@
 		<FormAutocomplete {items} label="First" />
 		<FormAutocomplete {items} label="Second" />
 
-		<FormAutocomplete {items} cols="6" label="Third" />
-		<FormAutocomplete {items} cols="6" label="Fourth" />
-		<Col class="mt-3" offset="9" cols="3">
-			<Button block color="primary">Submit</Button>
+		<FormAutocomplete {items} col="6" label="Third" />
+		<FormAutocomplete {items} col="6" label="Fourth" />
+		<Col mt="3" offset="9" col="3">
+			<Button w="100" color="primary">Submit</Button>
 		</Col>
 	</El>
 </El>

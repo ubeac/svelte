@@ -6,6 +6,6 @@
 	let value: string
 </script>
 
-<FormAutocomplete {items} cols="6" label="color:" placeholder="choose a color" bind:value />
+<FormAutocomplete {items} col="6" label="color:" placeholder="choose a color" bind:value />
 
 <span if={!!value}>{value}</span>

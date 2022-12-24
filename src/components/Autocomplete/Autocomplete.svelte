@@ -21,6 +21,7 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let load: $$Props['load'] = undefined
 	export let sort: $$Props['sort'] = true
+	export let state: $$Props['state'] = undefined
 	export let key: $$Props['key'] = 'key'
 	export let text: $$Props['text'] = 'text'
 	export let value: $$Props['value'] = undefined
@@ -120,16 +121,17 @@
 		cssPrefix,
 		cssProps: {
 			loaded,
+			state,
 		},
 	}
-
-	$: console.log({ items })
 </script>
 
 <El {...$$restProps} bind:element bind:value {...props}>
 	{#each items ?? [] as item, index (index)}
 		<slot {index} {item}>
-			<El tag="option" value={getValue(item)}>{getText(item)}</El>
+			<El tag="option" value={getValue(item)}>
+				{getText(item)}
+			</El>
 		</slot>
 	{/each}
 </El>
