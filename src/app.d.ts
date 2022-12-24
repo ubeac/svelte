@@ -143,7 +143,7 @@ type ColOrders = '1' | '2' | '3' | '4' | '5' | 'first' | 'last' | undefined
 type ContainerMaxWidths = boolean | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'fluid' | undefined
 
 // Row sizes and settings
-type RowColSizes = '1' | '2' | '3' | '4' | '5' | undefined
+type RowColSizes = '1' | '2' | '3' | '4' | '5' | '6' | 'auto' | undefined
 type RowGutterSizes = '0' | '1' | '2' | '3' | '4' | '5' | undefined
 
 declare type HTMLTags =
