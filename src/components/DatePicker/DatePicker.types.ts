@@ -4,6 +4,7 @@ import type { ElProps } from '../Base'
 
 export interface DatePickerProps extends Partial<ElProps> {
 	format?: string
-	value?: Date | string | number
+	value?: Date | string | number | Array<Date | string | number>
 	options?: Partial<ILPConfiguration>
+	range?: boolean
 }

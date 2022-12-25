@@ -44,6 +44,11 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 
 	/**
+	 * Choose range of dates.
+	 */
+	export let range: $$Props['range'] = undefined
+
+	/**
 	 * Set the input read-only
 	 */
 	export let readonly: $$Props['readonly'] = undefined
@@ -62,6 +67,10 @@
 	 * The date value of Date picker
 	 */
 	export let value: $$Props['value'] = undefined
+
+	function formatDate(date) {
+		return moment(date).format(format)
+	}
 
 	const dispatch = createEventDispatcher()
 
@@ -82,21 +91,40 @@
 			nextMonth: `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>`,
 			reset: '',
 		},
+		singleMode: range ? false : true,
 		// format,
 		format: {
 			parse(date: any) {
+				console.log('format.parse', date)
 				if (date instanceof Date) return date
 				if (typeof date === 'string') return moment(date, format).toDate()
 				if (typeof date === 'number') return moment(date).toDate()
 				return moment().toDate()
 			},
 			output(date: any) {
-				return moment(date).format(format)
+				console.log('output', date)
+				return formatDate(date)
 			},
 		},
 		setup(picker: any) {
 			picker.on('selected', (date: any) => {
-				const newValue = date?.dateInstance ? moment(date.dateInstance).format(format) : value
+				const startDate = picker.getStartDate()?.toDateString()
+				const endDate = picker.getEndDate()?.toDateString()
+
+				console.log({
+					start: startDate,
+					end: endDate,
+				})
+
+				let newValue: any
+				if (range) {
+					newValue = [formatDate(startDate), formatDate(endDate)]
+				} else {
+					newValue = formatDate(startDate)
+				}
+
+				console.log({ newValue }, startDate, endDate)
+
 				if (value === newValue) return
 				dispatch('changed', (value = newValue))
 			})

@@ -4,6 +4,7 @@
 
 	import DatepickerDefault from './DatepickerDefault.svelte'
 	import DatepickerFormat from './DatepickerFormat.svelte'
+  import DatepickerRange from './DatepickerRange.svelte'
 	import DatepickerValue from './DatepickerValue.svelte'
 </script>
 
@@ -32,6 +33,15 @@
 <Preview src="./DatepickerValue.svelte">
 	<div class=".example-datepicker">
 		<DatepickerValue />
+	</div>
+</Preview>
+
+<Doc title="Range">
+	<!--  -->
+</Doc>
+<Preview src="./DatepickerRange.svelte">
+	<div class=".example-datepicker">
+		<DatepickerRange />
 	</div>
 </Preview>
 
