@@ -5,12 +5,20 @@
 	import type { ILPConfiguration } from 'litepicker/dist/types/interfaces'
 	import moment from 'moment'
 
-	import { El } from '../Base'
-	import type { DatePickerProps } from './DatePicker.types'
+	import { type DatePickerProps, El } from '$lib/components'
 
 	type $$Props = DatePickerProps
 
+	//#region Props
+
+	/**
+	 * The tag of Date picker input
+	 */
 	export let tag: $$Props['tag'] = 'input'
+
+	/**
+	 * The css prefix of Date picker
+	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'input'
 
 	/**
@@ -67,6 +75,8 @@
 	 * The date value of Date picker
 	 */
 	export let value: $$Props['value'] = undefined
+
+	//#endregion
 
 	function formatDate(date) {
 		return moment(date).format(format)

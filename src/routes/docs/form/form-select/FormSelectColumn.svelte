@@ -1,18 +1,16 @@
 <script>
-	import { FormSelect, Col, Button, El } from '@ubeac/svelte'
+	import { FormSelect, El, Button } from '@ubeac/svelte'
 
 	let items = ['Red', 'Green', 'Blue', 'Yellow', 'Cyan', 'Magenta', 'Black', 'White']
 </script>
 
-<El container>
-	<El row>
-		<FormSelect {items} label="First" />
-		<FormSelect {items} label="Second" />
+<El row>
+	<FormSelect {items} col="6" label="First" />
+	<FormSelect {items} col="6" label="Second" />
 
-		<FormSelect {items} cols="6" label="Third" />
-		<FormSelect {items} cols="6" label="Fourth" />
-		<Col class="mt-3" offset="9" cols="3">
-			<Button block color="primary">Submit</Button>
-		</Col>
+	<FormSelect {items} label="Third" />
+	<FormSelect {items} col="6" label="Fourth" />
+	<El col="12" textAlign="end">
+		<Button color="primary">Submit</Button>
 	</El>
 </El>

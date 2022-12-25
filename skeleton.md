@@ -77,7 +77,6 @@
 - DialogHeader
 - FormCheckboxGroup
 - FormFieldset
-- FormGroup
 - GoogleMapAutocomplete
 - Tab
 - TabHeader

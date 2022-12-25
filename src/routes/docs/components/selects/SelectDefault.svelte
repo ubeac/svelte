@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 	import { Select } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value = ''
+	let value: any = items[2]
 </script>
 
 <Select bind:value {items} />
 
-<span>{value}</span>
+<i>value: {value}</i>

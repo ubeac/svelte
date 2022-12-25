@@ -203,7 +203,9 @@ $container-breakpoints: (
 );
 
 $props: (
-    bg-gradient: '.bg-gradient',
+    bg:(color: generate_props($theme_colors, ('.bg-')),
+        gradient: '.bg-gradient',
+    ),
     border: '.border',
     max-width-100: '.mw-100',
     max-height-100: '.mh-100',
@@ -212,10 +214,19 @@ $props: (
     show: '.show',
     lead: '.lead',
     blockquote: '.blockquote',
-    container: (generate_props($container-breakpoints, ('.container-')))
+    container: (generate_props($container-breakpoints, ('.container-'))),
+    text:(truncate: '.text-truncate',
+        muted: '.text-muted',
+        color: (generate_props($theme_colors, ('.text-'))),
+        opacity: (generate_props($text-opacities, ('.text-'))),
+        transform:(lowercase: '.text-lowercase',
+            uppercase: '.text-uppercase',
+            capitalize: '.text-capitalize',
+        ))
 );
 
 .#{$prefix-el} {
+    @include apply-props($props);
 
     &-col {
         @extend .col;
@@ -269,24 +280,9 @@ $props: (
 
     @each $key,
     $value in $theme_colors {
-        &-bg-color-#{$key} {
-            @extend .bg-#{$key};
-        }
-
         &-border-color-#{$key} {
             @extend .border-#{$key};
         }
-    }
-
-    @each $key,
-    $value in $theme_colors {
-        &-text-color-#{$key} {
-            @extend .text-#{$key};
-        }
-    }
-
-    &-text-truncate {
-        @extend .text-truncate;
     }
 
     @each $key,
@@ -299,13 +295,6 @@ $props: (
         &-bg-border-opacity-#{$key} {
             @extend .border;
             @extend .border-opacity-#{$key};
-        }
-    }
-
-    @each $key,
-    $value in $text-opacities {
-        &-text-opacity-#{$key} {
-            @extend .text-opacity-#{$key};
         }
     }
 
@@ -490,5 +479,5 @@ $props: (
     }
 
 
-    @include apply-props($props);
+
 }
