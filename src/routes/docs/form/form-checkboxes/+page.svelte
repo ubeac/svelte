@@ -8,7 +8,7 @@
 
 <h1>FormCheckbox</h1>
 <p>
-	FormCheckbox is similar to <a href="/docs/components/checkbox">Checkbox</a> with additional Form related features.
+	FormCheckbox is similar to <a href="/docs/components/checkboxes">Checkbox</a> with additional Form related features.
 </p>
 
 <Doc title="Label">FormCheckbox can have a label on top.</Doc>

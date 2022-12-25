@@ -52,6 +52,6 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Autocomplete {...AutocompleteProps} bind:value />
+	<Autocomplete {...AutocompleteProps} on:change on:create bind:value />
 	<slot name="hint" />
 </FormField>

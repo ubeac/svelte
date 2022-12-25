@@ -53,7 +53,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'autocomplete',
+				route: base_component_path + 'autocompletes',
 				title: 'Autocomplete',
 				icon: 'star',
 			},
@@ -265,7 +265,7 @@ export const navigations = [
 		id: 'menu-forms',
 		children: [
 			{
-				route: base_form_path + 'form-autocomplete',
+				route: base_form_path + 'form-autocompletes',
 				title: 'Form Autocomplete',
 				icon: 'star',
 			},

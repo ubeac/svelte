@@ -14,14 +14,20 @@
 <h1>Auto Complete</h1>
 <p>You can use Autocomplete to search and filter large sets of data</p>
 
+<Doc title="Default">
+	<!--  -->
+</Doc>
+
 <Preview src="./AutocompleteDefault.svelte">
 	<div class="example-autocomplete">
 		<AutocompleteDefault />
 	</div>
 </Preview>
 
-<h2>Multiple Items</h2>
-<p>You can select multiple items using Autocomplete component using <code>multiple</code> prop</p>
+<Doc title="Multiple Items">
+	You can select multiple items using Autocomplete component using <code>multiple</code> prop</p>
+
+</Doc>
 
 <Preview src="./AutocompleteMultiple.svelte">
 	<div class="example-autocomplete">
@@ -29,8 +35,10 @@
 	</div>
 </Preview>
 
-<h2>Disabled</h2>
-<p>Autocomplete supports disabled states</p>
+<Doc title="Disabled">
+	Autocomplete supports disabled states
+
+</Doc>
 
 <Preview src="./AutocompleteDisabled.svelte">
 	<div class="example-autocomplete">
@@ -38,9 +46,11 @@
 	</div>
 </Preview>
 
-<h2>Events</h2>
+<Doc title="Events">
+	Autocomplete dispatches <code>change</code> event when the value changed
 
-<p>Autocomplete dispatches <code>change</code> event when the value changed</p>
+</Doc>
+
 
 <Preview src="./AutocompleteEvent.svelte">
 	<div class="example-autocomplete">
@@ -49,11 +59,13 @@
 </Preview>
 <br />
 
-<h2>use Object for Item</h2>
-<p>
+<Doc title="use Object for Item">
+
+
 	You can have complex objects as item and you need to use <code>text</code> and <code>key</code> props to extract the data
 	that Autocomplete needs
-</p>
+</Doc>
+
 <Preview src="./AutocompleteObject.svelte">
 	<div class="example-autocomplete">
 		<AutocompleteObject />
@@ -62,16 +74,19 @@
 
 <FormAutocomplete />
 
-<h2>Create Items</h2>
-<p>Also you can create new Item</p>
+<Doc title="Create Items">
+	Also you can create new Item
+</Doc>
+
 <Preview src="./AutocompleteCreate.svelte">
 	<div class="example-autocomplete">
 		<AutocompleteCreate />
 	</div>
 </Preview>
 
-<h2>Remote Data</h2>
-<p>Autocomplete supports loading data from async functions</p>
+<Doc title="Remote Data">
+	Autocomplete supports loading data from async functions
+</Doc>
 <Preview src="./AutocompleteRemoteData.svelte">
 	<div class="example-autocomplete">
 		<AutocompleteRemoteData />

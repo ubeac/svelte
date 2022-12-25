@@ -29,6 +29,11 @@ $autocomplete-props: (
 		top: 36px;
 	}
 
+	& .create {
+		@extend .dropdown-item;
+		display: block;
+	}
+
 	&-option {
 		&[data-selectable] {
 			display: block;
