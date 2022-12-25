@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { type FormCheckboxProps, FormField } from '.'
-	import { Checkbox } from '../Checkbox'
+	import { Checkbox, type FormCheckboxProps, FormField } from '$lib/components'
 
 	type $$Props = FormCheckboxProps
+
+	//#region Props
 
 	export let color: $$Props['color'] = undefined
 	export let label: $$Props['label'] = undefined
@@ -13,6 +14,8 @@
 	export let required: $$Props['required'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
+
+	//#endregion
 
 	$: props = {
 		required,
