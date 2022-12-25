@@ -117,7 +117,10 @@
 			},
 		},
 		setup(picker: any) {
+			console.log('setup')
 			picker.on('selected', (date: any) => {
+				console.log('selected')
+
 				const startDate = picker.getStartDate()?.toDateString()
 				const endDate = picker.getEndDate()?.toDateString()
 
@@ -135,8 +138,10 @@
 
 				console.log({ newValue }, startDate, endDate)
 
-				if (value === newValue) return
-				dispatch('changed', (value = newValue))
+				value = newValue
+
+				// if (value === newValue) return
+				dispatch('changed', value)
 			})
 		},
 	}
@@ -154,6 +159,8 @@
 		disabled,
 		readonly,
 	}
+
+	$: console.log({ value })
 
 	onMount(() => {
 		if (!element) return
