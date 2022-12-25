@@ -28,20 +28,79 @@
 	export let color: $$Props['color'] = undefined
 
 	/**
-	 * set the RangeSlider options
+	 * the start value(s) of RangeSlider
 	 */
-	export let options: $$Props['options']
+	export let startValue: $$Props['startValue']
+
+	/**
+	 * the value of step for RangeSlider
+	 */
+	export let step: $$Props['step'] = undefined
+
+	/**
+	 * the orientation of RangeSlider
+	 */
+	export let orientation: $$Props['orientation'] = undefined
+
+	/**
+	 * the mode of RangeSlider
+	 */
+	export let mode: $$Props['mode'] = undefined
+
+	/**
+	 * the minimum value of RangeSlider
+	 */
+	export let min: $$Props['min'] = 0
+
+	/**
+	 * the maximum value of RangeSlider
+	 */
+	export let max: $$Props['max'] = 10
+
+	/**
+	 * show the RangeSlider to rtl
+	 */
+	export let direction: $$Props['direction'] = undefined
+
+	/**
+	 * show RangeSlider tooltip
+	 */
+	export let tooltips: $$Props['tooltips'] = undefined
+
+	/**
+	 * set connect value of RangeSlider
+	 */
+	export let connect: $$Props['connect'] = undefined
+
+	/**
+	 * set connect value of RangeSlider
+	 */
+	export let behaviour: $$Props['behaviour'] = undefined
 
 	let cssProps: any = {}
 	let otherProps: any = {}
+	let options: any = {
+		range: {
+			min: typeof min !== 'number' ? parseInt(min?.toString()) : min,
+			max: typeof max !== 'number' ? parseInt(max?.toString()) : max,
+		},
+		connect: connect,
+		orientation: orientation ?? 'horizontal',
+		direction: direction ?? 'ltr',
+		start: startValue?.split(','),
+		tooltips: tooltips ?? false,
+		step: step !== undefined ? (typeof step !== 'number' ? parseInt(step?.toString()) : step) : undefined,
+		mode: mode,
+		behaviour: behaviour?.map((element) => element).join('-'),
+	}
 
 	$: {
 		cssProps = {
 			color,
-			orientation: options?.orientation ?? 'horizontal',
+			orientation: orientation ?? 'horizontal',
 		}
-		otherProps = { cssPrefix }
-		if (element !== undefined && options !== undefined) {
+		otherProps = { cssPrefix, options }
+		if (element !== undefined) {
 			element.noUiSlider?.updateOptions(options, true)
 		}
 	}
