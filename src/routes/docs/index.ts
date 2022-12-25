@@ -306,7 +306,7 @@ export const navigations = [
 			},
 			{
 				route: base_form_path + 'form-input',
-				title: 'Form Input',
+				title: 'FormInput',
 				icon: 'star',
 			},
 			{
