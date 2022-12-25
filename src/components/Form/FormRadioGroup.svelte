@@ -1,11 +1,9 @@
 <script lang="ts">
-	import { FormField, RadioGroup } from '$lib/components'
-	import type { FormRadioGroupProps, RadioGroupProps } from '$lib/components'
+	import { FormField, type FormRadioGroupProps, RadioGroup, type RadioGroupProps } from '$lib/components'
 
 	type $$Props = FormRadioGroupProps
 
 	export let color: $$Props['color'] = undefined
-	export let cssPrefix: $$Props['cssPrefix'] = 'form-radio-group'
 	export let inline: $$Props['inline'] = undefined
 	export let items: $$Props['items'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
@@ -22,7 +20,7 @@
 	}
 </script>
 
-<FormField {...$$restProps} {cssPrefix}>
+<FormField {...$$restProps}>
 	<slot name="label" />
 	<RadioGroup {...radioGroupProps} bind:value let:item let:index>
 		<slot {index} {item}>{item}</slot>
