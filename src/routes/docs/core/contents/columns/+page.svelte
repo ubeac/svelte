@@ -20,7 +20,7 @@
 	or <code>end</code>.
 </Doc>
 <Preview src="./ColumnsAlignItems.svelte">
-	<div class="custom-class">
+	<div class="custom-class custom-class-expanded-row">
 		<ColumnsAlignItems />
 	</div>
 </Preview>
@@ -31,7 +31,7 @@
 	or <code>end</code>.
 </Doc>
 <Preview src="./ColumnsAlignSelf.svelte">
-	<div class="custom-class custom-class-align-self">
+	<div class="custom-class custom-class-expanded-row">
 		<ColumnsAlignSelf />
 	</div>
 </Preview>
@@ -107,12 +107,7 @@
 	.custom-class :global([class*='u-el-row']) {
 		margin-bottom: 0.75rem;
 	}
-	.custom-class-align-self :global([class*='u-el-row']) {
-		min-height: 5rem;
-		background-color: rgba(238, 130, 238, 0.05);
-		border: 1px solid rgba(238, 130, 238, 0.2);
-	}
-	.custom-class :global([class*='u-el-align-items']) {
+	.custom-class-expanded-row :global([class*='u-el-row']) {
 		min-height: 5rem;
 		background-color: rgba(238, 130, 238, 0.05);
 		border: 1px solid rgba(238, 130, 238, 0.2);
