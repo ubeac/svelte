@@ -6,6 +6,11 @@
 	//#region
 
 	/**
+	 * Set the cssPrefix of FormInput
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-input'
+
+	/**
 	 * Set the tag of FormInput
 	 */
 	export let tag: $$Props['tag'] = 'input'
@@ -86,6 +91,7 @@
 		label,
 		hint,
 		state,
+		cssPrefix,
 	}
 
 	$: inputProps = {

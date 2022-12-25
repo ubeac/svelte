@@ -4,6 +4,7 @@
 	type $$Props = FormCheckboxGroupProps
 
 	export let color: $$Props['color'] = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-checkbox-group'
 	export let inline: $$Props['inline'] = undefined
 	export let items: $$Props['items'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
@@ -17,7 +18,7 @@
 	}
 </script>
 
-<FormField {...$$restProps}>
+<FormField {...$$restProps} {cssPrefix}>
 	<slot name="label" />
 	<CheckboxGroup {...checkboxGroupProps} bind:value let:item let:index>
 		<slot {index} {item}>{item}</slot>

@@ -8,6 +8,7 @@
 	export let items: $$Props['items'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-radio-group'
 
 	let radioGroupProps: RadioGroupProps = {}
 	$: {
@@ -16,11 +17,12 @@
 			inline,
 			reverse,
 			items,
+			cssPrefix,
 		}
 	}
 </script>
 
-<FormField {...$$restProps}>
+<FormField {...$$restProps} {cssPrefix}>
 	<slot name="label" />
 	<RadioGroup {...radioGroupProps} bind:value let:item let:index>
 		<slot {index} {item}>{item}</slot>
