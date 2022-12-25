@@ -1,28 +1,35 @@
 <script>
-	import { Button, Col, FormFieldset, FormCheckboxGroup, El } from '@ubeac/svelte'
+	import { Button, FormCheckboxGroup, El } from '@ubeac/svelte'
 	let value = false
 
-	let items = ['HTML', 'CSS', 'JS', 'SVELTE']
-	let items2 = ['Dark', 'Light']
-	let items3 = ['Red', 'Green', 'Blue', 'Yellow']
-	let items4 = ['Apple', 'Banana', 'Cherry']
-	let items5 = ['Active', 'Inactive', 'Online', 'Offline']
+	let languages = ['HTML', 'CSS', 'JS', 'SVELTE']
+	let colors = ['Red', 'Green', 'Blue', 'Yellow']
+	let fruits = ['Apple', 'Banana', 'Cherry']
+	let status = ['Active', 'Inactive', 'Online', 'Offline']
+
+	let model = {
+		languages: ['CSS'],
+		colors: ['Blue', 'Yellow'],
+		fruits: [],
+		status: undefined,
+	}
+
+	const onClick = () => {
+		console.log(model)
+	}
 </script>
 
 <El container>
-	<FormFieldset label="Form checkbox Groups">
-		<El row>
-			<FormCheckboxGroup col="8" inline {items} label="Choose Languages (inline):" />
-			<FormCheckboxGroup col="4" items={items2} value={[items[1]]} label="Choose Theme:" />
-			<FormCheckboxGroup col="4" items={items3} value={[items[1], items[2]]} label="Colors:" />
-			<FormCheckboxGroup col="4" items={items4} label="Fruits:" required />
-			<FormCheckboxGroup col="4" items={items5} label="State:" required />
+	<El row>
+		<FormCheckboxGroup col="6" inline items={languages} bind:value={model.languages} label="Languages" />
+		<FormCheckboxGroup col="6" inline items={colors} bind:value={model.colors} label="Colors" />
+		<FormCheckboxGroup col="6" inline items={fruits} bind:value={model.fruits} label="Fruits" required />
+		<FormCheckboxGroup col="6" inline items={status} bind:value={model.status} label="Status" required />
 
-			<Col offset="9" cols="auto">
-				<Button>Submit</Button>
-			</Col>
+		<El col textAlign="end">
+			<Button color="primary" on:click={onClick}>Submit</Button>
 		</El>
-	</FormFieldset>
+	</El>
 </El>
 
-<span if={value}>{value}</span>
+<i>{JSON.stringify(model)}</i>

@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
 	import { FormCheckbox } from '@ubeac/svelte'
-	let value = false
+
+	let value: string = 'agree'
+	let checked: boolean = false
 </script>
 
-<FormCheckbox description="This is description" bind:value label="Form Checkbox">Check 1</FormCheckbox>
+<FormCheckbox description="This is description" bind:value bind:checked label="Form Checkbox">I agree</FormCheckbox>
 
-<span if={value}>{value}</span>
+<i>value: {value}, checked={checked}</i>
