@@ -35,6 +35,7 @@ const config = {
 		},
 		alias: {
 			'@ubeac/svelte': path.resolve('./src'),
+			'$lib/components': path.resolve(path.join('./src', 'components', 'index.js'))
 		},
 	},
 	package: {

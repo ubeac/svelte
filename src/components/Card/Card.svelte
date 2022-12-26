@@ -1,8 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-
-	import { CardHeader, CardTitle } from '.'
-	import type { CardProps } from './Card.types'
+	import { CardHeader, type CardProps, CardTitle, El } from '$lib/components/index.js'
 
 	type $$Props = CardProps
 	export let cssPrefix: $$Props['cssPrefix'] = 'card'

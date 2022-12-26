@@ -1,3 +1,3 @@
-export * from './classname'
-export * from './createOptions'
-export * from './requestAnimationFrame'
+export * from './classname.js'
+export * from './createOptions.js'
+export * from './requestAnimationFrame.js'
