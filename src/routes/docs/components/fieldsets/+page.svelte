@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components/index.js'
 	import FieldsetDefault from './FieldsetDefault.svelte'
 </script>
 

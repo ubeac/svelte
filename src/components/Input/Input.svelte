@@ -3,7 +3,7 @@
 
 	import Inputmask from 'inputmask'
 
-	import { El, type InputProps } from '$lib/components'
+	import { El, type InputProps } from '$lib/components/index.js'
 
 	type $$Props = InputProps
 

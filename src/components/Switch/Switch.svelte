@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, Label } from '$lib/components'
+	import { El, Label } from '$lib/components/index.js'
 
 	import type { SwitchProps } from './Switch.types'
 

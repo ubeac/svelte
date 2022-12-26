@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '$lib/components/index.js'
 
 	import FileUploaderDefault from './FileUploaderDefault.svelte'
 	import FileUploaderDisabled from './FileUploaderDisabled.svelte'

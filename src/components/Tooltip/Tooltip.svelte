@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { El, Popup } from '$lib/components'
+	import { El, Popup } from '$lib/components/index.js'
 	import { forwardEventsBuilder } from '$lib/directives'
 
+	import PopupArrow from '../Popup/PopupArrow.svelte'
 	import type { TooltipProps } from './Tooltip.types'
-  import PopupArrow from '../Popup/PopupArrow.svelte'
 
 	export let cssPrefix: $$Props['cssPrefix'] = 'tooltip'
 	export let tag: $$Props['tag'] = 'div'

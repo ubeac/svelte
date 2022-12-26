@@ -1,8 +1,8 @@
 import type { Writable } from 'svelte/store'
 
-import type { ElProps } from '$lib/components'
+import type { ElProps } from '$lib/components/index.js'
 
-type TableResponsiveTypes = boolean | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+type TableResponsiveTypes = boolean | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 type TableSizes = 'sm' | 'md'
 
 export interface TableProps extends Partial<ElProps> {
@@ -45,7 +45,7 @@ export interface TableProps extends Partial<ElProps> {
 }
 
 export interface TableHeadProps extends Partial<ElProps> {
-    // 
+	//
 }
 
 export interface TableBodyProps extends Partial<ElProps> {
@@ -56,19 +56,19 @@ export interface TableCellProps extends Partial<ElProps> {
 	/**
 	 * Sets color of table cell.
 	 */
-	 color?: ThemeColors
-	 /**
+	color?: ThemeColors
+	/**
 	 * TODO
 	 */
-     active?: boolean
-	  /**
-	  * TODO
-	  */
-	 truncate?: boolean
-	 /**
-	  * TODO
-	  */
-	 colspan?: string | number
+	active?: boolean
+	/**
+	 * TODO
+	 */
+	truncate?: boolean
+	/**
+	 * TODO
+	 */
+	colspan?: string | number
 }
 
 export interface TableFootProps extends Partial<ElProps> {
@@ -78,9 +78,9 @@ export interface TableRowProps extends Partial<ElProps> {
 	/**
 	 * Sets color of table row.
 	 */
-	 color?: ThemeColors
-	 /**
-	  * TODO
-	  */
-	 active?: boolean
+	color?: ThemeColors
+	/**
+	 * TODO
+	 */
+	active?: boolean
 }

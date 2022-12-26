@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components/index.js'
 	import StampColor from './StampColor.svelte'
 	import StampSize from './StampSize.svelte'
 	import StampPositions from './StampPositions.svelte'

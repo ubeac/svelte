@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
-	import { El } from '$lib/components'
+	import { El } from '$lib/components/index.js'
 
 	import type { PageProps } from './Page.types'
 

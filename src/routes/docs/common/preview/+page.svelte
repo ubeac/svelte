@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '$lib/components/index.js'
 	import Example1 from '../example1.svelte'
 </script>
 

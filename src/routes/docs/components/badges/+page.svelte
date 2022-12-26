@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components/index.js'
 
 	import BadgeButtons from './BadgeButtons.svelte'
 	import BadgeColors from './BadgeColors.svelte'
@@ -82,8 +82,7 @@
 </Preview>
 
 <Doc title="Badge inside Button">Badges can be used as part of links or buttons to provide a counter.</Doc>
-<Preview
-	src="./BadgeButtons.svelte">
+<Preview src="./BadgeButtons.svelte">
 	<BadgeButtons />
 </Preview>
 

@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/components'
+import type { ElProps } from '$lib/components/index.js'
 
 // Button Types
 declare type ButtonTypes = 'submit' | 'button' | 'reset' | undefined

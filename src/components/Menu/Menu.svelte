@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Popup } from '$lib/components'
+	import { Popup } from '$lib/components/index.js'
 	import { forwardEventsBuilder } from '$lib/directives'
 
 	import type { MenuProps } from './Menu.types'

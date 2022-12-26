@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/components/index.js'
 	import ProgressDefault from './ProgressDefault.svelte'
 	import ProgressIndeterminate from './ProgressIndeterminate.svelte'
 	import ProgressColors from './ProgressColors.svelte'

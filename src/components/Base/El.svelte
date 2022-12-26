@@ -5,7 +5,7 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import type { CssProps } from '$lib/components'
+	import type { CssProps } from '$lib/components/index.js'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 

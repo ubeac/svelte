@@ -3,7 +3,7 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { DatePicker, FormField, FormHint, Icon, Label, Spinner } from '$lib/components'
+	import { DatePicker, FormField, FormHint, Icon, Label, Spinner } from '$lib/components/index.js'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 

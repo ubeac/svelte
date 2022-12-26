@@ -1,5 +1,5 @@
 <script>
-	import { Button } from '$lib/components'
+	import { Button } from '$lib/components/index.js'
 
 	let count = 0
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/components'
+	import { El } from '$lib/components/index.js'
 
 	import type { PageBodyProps } from './Page.types'
 

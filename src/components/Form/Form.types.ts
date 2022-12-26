@@ -7,7 +7,7 @@ import type {
 	InputStates,
 	RadioGroupProps,
 	SelectProps,
-} from '$lib/components'
+} from '$lib/components/index.js'
 
 export interface FormFieldProps extends Partial<ElProps> {
 	label?: string

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
-	import { El } from '$lib/components'
+	import { El } from '$lib/components/index.js'
 	import { classname } from '$lib/utils'
 
 	import type { AppProps } from './App.types'

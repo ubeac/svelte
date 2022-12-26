@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '$lib/components'
+	import { Preview } from '$lib/components/index.js'
 	import IfNative from './IfNative.svelte'
 	import IfComponents from './IfComponents.svelte'
 	import IfMultiline from './IfMultiline.svelte'

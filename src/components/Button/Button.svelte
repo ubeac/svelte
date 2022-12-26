@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-	import type { ButtonProps } from '$lib/components'
+	import { El } from '$lib/components/index.js'
+	import type { ButtonProps } from '$lib/components/index.js'
 
 	type $$Props = ButtonProps
 

@@ -3,7 +3,7 @@
 
 	import { nanoid } from 'nanoid'
 
-	import { Switch } from '$lib/components'
+	import { Switch } from '$lib/components/index.js'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'

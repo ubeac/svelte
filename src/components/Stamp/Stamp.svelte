@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, Icon } from '$lib/components'
+	import { El, Icon } from '$lib/components/index.js'
 
 	import type { StampProps } from './Stamp.types'
 
