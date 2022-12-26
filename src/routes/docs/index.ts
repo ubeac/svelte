@@ -208,6 +208,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'range-sliders',
+				title: 'RangeSlider',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'ribbon',
 				title: 'Ribbon',
 				icon: 'star',
@@ -312,6 +317,11 @@ export const navigations = [
 			{
 				route: base_form_path + 'form-radio-groups',
 				title: 'FormRadioGroup',
+				icon: 'star',
+			},
+			{
+				route: base_form_path + 'form-range-slider',
+				title: 'FormRangeSlider',
 				icon: 'star',
 			},
 			{

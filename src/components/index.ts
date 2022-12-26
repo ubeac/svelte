@@ -49,5 +49,6 @@ export * from './Radio'
 export * from './Select'
 export * from './Textarea'
 export * from './DatePicker'
+export * from './RangeSlider'
 
 export * from './Status'

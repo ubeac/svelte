@@ -6,6 +6,8 @@ import type {
 	InputProps,
 	InputStates,
 	RadioGroupProps,
+	RangeSliderProps,
+	RangeSliderTarget,
 	SelectProps,
 } from '$lib/components'
 
@@ -28,5 +30,9 @@ export interface FormTextAreaProps extends Partial<FormInputProps> {
 export interface FormRadioGroupProps extends Partial<FormFieldProps>, Partial<RadioGroupProps> {}
 
 export interface FormSelectProps extends Partial<FormFieldProps>, Partial<SelectProps> {}
+
+export interface FormRangeSliderProps extends Partial<FormFieldProps>, Partial<RangeSliderProps> {
+	element?: RangeSliderTarget
+}
 
 export interface FormFieldsetProps extends Partial<FormFieldProps>, Partial<FieldsetProps> {}

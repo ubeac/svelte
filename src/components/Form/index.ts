@@ -11,5 +11,6 @@ export { default as FormSelect } from './FormSelect.svelte'
 export { default as FormSwitch } from './FormSwitch.svelte'
 export { default as FormTextarea } from './FormTextarea.svelte'
 export { default as FormField } from './FormField.svelte'
+export { default as FormRangeSlider } from './FormRangeSlider.svelte'
 
 export * from './Form.types'
