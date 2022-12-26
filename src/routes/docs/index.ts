@@ -32,8 +32,23 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_core_path + 'contents/spacing',
+				title: 'Spacing',
+				icon: 'star',
+			},
+			{
 				route: base_core_path + 'contents/icons',
 				title: 'Icons',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/grid',
+				title: 'Grid',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/columns',
+				title: 'Columns',
 				icon: 'star',
 			},
 		],
@@ -291,7 +306,7 @@ export const navigations = [
 			},
 			{
 				route: base_form_path + 'form-input',
-				title: 'Form Input',
+				title: 'FormInput',
 				icon: 'star',
 			},
 			{

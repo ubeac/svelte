@@ -120,12 +120,12 @@ export interface CssProps {
 	orderXxl: ColOrders
 
 	//Col Offset
-	offset: ColSizes
-	offsetSm: ColSizes
-	offsetMd: ColSizes
-	offsetLg: ColSizes
-	offsetXl: ColSizes
-	offsetXxl: ColSizes
+	offset: OffsetSizes
+	offsetSm: OffsetSizes
+	offsetMd: OffsetSizes
+	offsetLg: OffsetSizes
+	offsetXl: OffsetSizes
+	offsetXxl: OffsetSizes
 
 	// Row
 	row?: boolean | 'deck'
@@ -145,6 +145,13 @@ export interface CssProps {
 	gXxl: RowGutterSizes
 	gx: RowGutterSizes
 	gy: RowGutterSizes
+
+	// Align Items
+	alignItems: AlignItemsTypes
+	alignSelf: AlignSelfTypes
+
+	// Justify Content
+	justifyContent: JustifyContentTypes
 }
 
 export interface ElProps extends CssProps {
