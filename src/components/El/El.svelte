@@ -9,7 +9,7 @@
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
-	type $$Props = ElProps
+	type $$Props = Partial<ElProps>
 
 	// default properties
 	export let element: $$Props['element'] = undefined
