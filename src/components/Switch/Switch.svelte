@@ -9,11 +9,19 @@
 	export let tag: $$Props['tag'] = 'input'
 	export let id: $$Props['id'] = undefined
 	export let color: $$Props['color'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let description: $$Props['description'] = undefined
 	export let inline: $$Props['inline'] = undefined
 	export let text: $$Props['text'] = undefined
-	export let value: $$Props['value'] = undefined
+	export let value: $$Props['value'] = false
+	export let checked: $$Props['checked'] = false
 	export let role: $$Props['role'] = 'switch'
 	export let type: $$Props['type'] = 'checkbox'
+
+	function onChange(event: any) {
+		checked = event.target.checked
+		value = event.target.checked
+	}
 
 	$: _for = id
 	$: cssProps = {
@@ -31,13 +39,19 @@
 </script>
 
 <El cssPrefix="{cssPrefix}-wrapper">
-	<El bind:value bind:checked={value} bind:id {...$$restProps} {cssProps} {...otherProps} />
-
-	{#if text}
+	<El {checked} bind:id {...$$restProps} {cssProps} {...otherProps} on:change={onChange} />
+	{#if text || $$slots['default']}
 		<Label for={_for} cssPrefix="{cssPrefix}-label">
-			{text}
+			<slot>
+				{text}
+			</slot>
 		</Label>
 	{/if}
-
-	<slot />
+	{#if description || $$slots['description']}
+		<El cssPrefix="{cssPrefix}-description">
+			<slot name="description">
+				{text}
+			</slot>
+		</El>
+	{/if}
 </El>

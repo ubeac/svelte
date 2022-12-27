@@ -25,6 +25,8 @@ export interface SwitchProps extends Partial<ElProps> {
 	 * Value of Switch
 	 */
 	value?: boolean
+	checked?: boolean
+	description?: string
 	role?: string
 	type?: string
 }

@@ -4,4 +4,4 @@
 	let value = false
 </script>
 
-<Switch bind:value text="Switch: {value}" />
+<Switch bind:value label="Switch: {value}" />

@@ -6,5 +6,5 @@
 </script>
 
 {#each COLORS as color}
-	<Switch {value} text={color} {color} />
+	<Switch {value} label={color} {color} />
 {/each}

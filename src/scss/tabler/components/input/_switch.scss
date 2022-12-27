@@ -2,6 +2,7 @@ $switch-props: (
 	null: ".form-check-input",
 	wrapper: ".form-check" ".form-switch",
 	label: ".form-check-label",
+	description: ".form-check-description",
 	inline: ".form-check-inline",
 	color: generate_props($theme_colors, ('.alert-')),
 );
