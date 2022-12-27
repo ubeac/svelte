@@ -1,12 +1,12 @@
 <script type="ts">
 	import { onMount } from 'svelte'
 
-	import { browser } from '$app/environment'
 	import { afterNavigate } from '$app/navigation'
 
 	let sections: any = []
+
 	const init = () => {
-		if (browser) {
+		if (typeof window !== 'undefined') {
 			const nodes = document.getElementsByTagName('h2')
 			sections = Array.from(nodes)
 				.filter((node: HTMLHeadingElement) => node.hasAttribute('href'))
