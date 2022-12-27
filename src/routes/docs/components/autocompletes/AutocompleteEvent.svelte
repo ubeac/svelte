@@ -6,12 +6,12 @@
 
 	let fromEvent: any = undefined
 
-	function onChanged(event: any) {
+	function onChange(event: any) {
 		fromEvent = event.detail
 	}
 </script>
 
-<Autocomplete on:changed={onChanged} {items} bind:value />
+<Autocomplete on:change={onChange} {items} bind:value />
 
 <i>
 	Event: {JSON.stringify(fromEvent)}

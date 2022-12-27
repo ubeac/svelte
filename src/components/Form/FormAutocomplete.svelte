@@ -34,7 +34,7 @@
 		state,
 	}
 
-	$: AutocompleteProps = {
+	$: autocompleteProps = {
 		tag,
 		load,
 		create,
@@ -52,6 +52,6 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Autocomplete {...AutocompleteProps} on:change on:create bind:value />
+	<Autocomplete {...autocompleteProps} bind:value on:change on:create />
 	<slot name="hint" />
 </FormField>
