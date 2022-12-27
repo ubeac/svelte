@@ -34,14 +34,13 @@
 		description,
 		reverse,
 		indeterminate,
-		checked,
 		disabled,
 	}
 </script>
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Checkbox {...checkboxProps} bind:value>
+	<Checkbox {...checkboxProps} bind:checked bind:value on:change>
 		<slot />
 	</Checkbox>
 	<slot name="hint" />
