@@ -1,9 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment'
-	import { El } from '$lib/components'
 	import { classname } from '$lib/utils'
 
-	import type { AppProps } from './App.types'
+	import { type AppProps, El } from '$lib/components'
 
 	type $$Props = AppProps
 
@@ -25,7 +23,7 @@
 	$: cssProps = { theme }
 	$: otherProps = { cssPrefix, tag }
 
-	$: if (browser) document.body.className = classname(cssPrefix, { theme }, [], true) ?? ''
+	$: if (typeof window !== 'undefined') document.body.className = classname(cssPrefix, { theme }, [], true) ?? ''
 </script>
 
 <El {...$$restProps} {cssProps} {...otherProps}><slot /></El>
