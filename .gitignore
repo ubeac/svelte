@@ -10,3 +10,4 @@ package
 package
 static/css
 yarn-error.log
+package-lock.json

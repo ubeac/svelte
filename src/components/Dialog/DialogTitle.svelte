@@ -1,14 +1,13 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El } from '../Base'
+	import type { DialogTitleProps } from './Dialog.types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = DialogTitleProps
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('dialog-title')
+	export let cssPrefix: $$Props['cssPrefix'] = 'dialog-title'
+	export let tag: $$Props['tag'] = 'div'
 </script>
 
-<h5 use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} {cssPrefix} {tag}>
 	<slot />
-</h5>
+</El>

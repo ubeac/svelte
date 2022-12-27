@@ -1,9 +1,13 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-	import type { RadioProps } from '$lib/components'
+	import { El, type RadioProps } from '$lib/components'
 
 	type $$Props = RadioProps
 
+	//#region Props
+
+	/**
+	 * Set color of radio when it is checked
+	 */
 	export let color: $$Props['color'] = undefined
 
 	/**
@@ -50,6 +54,8 @@
 	 * the value of radio
 	 */
 	export let value: $$Props['value'] = undefined
+
+	//#endregion
 
 	/**
 	 * id for inner input radio to be used outside the component

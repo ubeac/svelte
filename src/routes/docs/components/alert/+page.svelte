@@ -68,7 +68,7 @@
 	<AlertImportant />
 </Preview>
 
-<Doc title="Alret Show/Hide">If you want show or hide your alert you can do it with if property.</Doc>
+<Doc title="Alert Show/Hide">If you want show or hide your alert you can do it with if property.</Doc>
 <Preview src="./AlertShow.svelte">
 	<AlertShow />
 </Preview>

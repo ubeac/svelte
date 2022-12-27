@@ -4,6 +4,8 @@
 
 	type $$Props = FormTextAreaProps
 
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-textarea'
+
 	/**
 	 * Set the tag of FormTextarea
 	 */
@@ -79,6 +81,7 @@
 		label,
 		hint,
 		state,
+		cssPrefix,
 	}
 
 	$: inputProps = {

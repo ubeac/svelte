@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-	import type { DividerProps } from '$lib/components'
+	import { type DividerProps, El } from '$lib/components'
 
 	type $$Props = DividerProps
 
@@ -15,6 +14,11 @@
 	export let color: $$Props['color'] = undefined
 
 	/**
+	 * Set direction of Divider
+	 */
+	export let direction: $$Props['direction'] = undefined
+
+	/**
 	 * Set alignment of Divider
 	 */
 	export let alignment: $$Props['alignment'] = undefined
@@ -25,6 +29,7 @@
 		cssProps = {
 			alignment,
 			color,
+			direction,
 		}
 		otherProps = {
 			cssPrefix,

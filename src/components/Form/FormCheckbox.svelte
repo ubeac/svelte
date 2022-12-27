@@ -1,79 +1,48 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { Checkbox, type FormCheckboxProps, FormField } from '$lib/components'
 
-	import { nanoid } from 'nanoid'
+	type $$Props = FormCheckboxProps
 
-	import { Checkbox } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	//#region Props
+	export let label: $$Props['label'] = undefined
+	export let hint: $$Props['hint'] = undefined
+	export let state: $$Props['state'] = undefined
+	export let required: $$Props['required'] = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-checkbox'
 
-	import { FormField, FormHint } from '.'
-	import { Label } from '../Label'
+	export let color: $$Props['color'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let description: $$Props['description'] = undefined
+	export let reverse: $$Props['reverse'] = undefined
+	export let value: $$Props['value'] = undefined
+	export let checked: $$Props['checked'] = undefined
+	export let indeterminate: $$Props['indeterminate'] = undefined
+	export let inline: $$Props['inline'] = undefined
+	//#endregion
 
-	/**
-	 * Set Column width
-	 */
-	export let cols: string | number | boolean = '12'
+	$: props = {
+		required,
+		label,
+		hint,
+		state,
+		cssPrefix,
+	}
 
-	/**
-	 * Set color of checkbox
-	 */
-	export let color: Colors = 'default'
-
-	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
-
-	/**
-	 * Set id for HTML element
-	 */
-	export let id: string = 'form-checkbox-' + nanoid(10)
-
-	/**
-	 * Value of checkbox in group
-	 */
-	export let key: string | undefined = undefined
-
-	/**
-	 * label for Form checkbox
-	 */
-	export let label: string | undefined = undefined
-
-	/**
-	 * Show Message at bottom of Input
-	 */
-	export let message: string | undefined = undefined
-
-	/**
-	 * Mark this as required field in form
-	 */
-	export let required: boolean = false
-
-	/**
-	 * Set text of checkbox
-	 */
-	export let text: string | undefined = undefined
-
-	/**
-	 * Show checked state of checkbox
-	 */
-	export let value: boolean = false
-
-	$: classes = classname('form-checkbox', {}, $$props.class, true)
+	$: checkboxProps = {
+		color,
+		inline,
+		description,
+		reverse,
+		indeterminate,
+		checked,
+		disabled,
+	}
 </script>
 
-<FormField {cols} class={classes}>
-	<slot name="label">
-		{#if label}
-			<Label for={id} {required}>{label}</Label>
-		{/if}
-	</slot>
-	<Checkbox bind:value {id} {forwardEvents} {key} {color} {text} {...$$restProps} />
-	<slot name="message">
-		{#if message}
-			<FormHint>{message}</FormHint>
-		{/if}
-	</slot>
+<FormField {...props} {...$$restProps}>
+	<slot name="label" />
+	<Checkbox {...checkboxProps} bind:value>
+		<slot />
+	</Checkbox>
+	<slot name="hint" />
 </FormField>

@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El, Radio } from '$lib/components'
-	import type { RadioGroupProps } from '$lib/components'
+	import { El, Radio, type RadioGroupProps } from '$lib/components'
 
 	type $$Props = RadioGroupProps
 	/**
@@ -53,8 +52,8 @@
 
 <El {cssPrefix} bind:element {...$$restProps}>
 	{#if items}
-		{#each items as item, index}
-			<Radio {...radioProps} value={index} checked={value === item} on:change={onChange}>
+		{#each items as item, index (index)}
+			<Radio {...radioProps} value={index} checked={value === item} on:change={onChange} on:change>
 				<slot {index} {item}>{item}</slot>
 			</Radio>
 		{/each}
