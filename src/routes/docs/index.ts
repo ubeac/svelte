@@ -37,6 +37,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_core_path + 'contents/borders',
+				title: 'Borders',
+				icon: 'star',
+			},
+			{
 				route: base_core_path + 'contents/icons',
 				title: 'Icons',
 				icon: 'star',

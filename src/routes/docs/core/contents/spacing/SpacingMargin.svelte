@@ -2,22 +2,30 @@
 	import { El } from '@ubeac/svelte'
 </script>
 
-<El bgColor="azure" border>
-	<El border m="2" p="2" bgColor="light">m="2"</El>
+<El>
+	<El m="3">m="3"</El>
 </El>
 
-<El bgColor="azure" border>
-	<El border mb="2" p="2" bgColor="light">mb="2"</El>
+<El>
+	<El ms="3">ms="3"</El>
 </El>
 
-<El bgColor="azure" border>
-	<El border ms="2" p="2" bgColor="light">ms="2"</El>
+<El>
+	<El me="3">me="3"</El>
 </El>
 
-<El bgColor="azure" border>
-	<El border me="2" p="2" bgColor="light">me="2"</El>
+<El>
+	<El mt="3">mt="3"</El>
 </El>
 
-<El bgColor="azure" border>
-	<El border mt="2" p="2" bgColor="light">mt="2"</El>
+<El>
+	<El mb="3">mb="3"</El>
+</El>
+
+<El>
+	<El mx="3">mx="3"</El>
+</El>
+
+<El>
+	<El my="3">my="3"</El>
 </El>
