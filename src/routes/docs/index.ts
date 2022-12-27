@@ -123,6 +123,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'dropdown-buttons',
+				title: 'Dropdown Button',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'fieldsets',
 				title: 'Fieldset',
 				icon: 'star',

@@ -1,0 +1,21 @@
+//
+// Dropdown Button
+//
+
+$props: (
+    null: '.btn-group',
+    items: '.dropdown-menu' '.d-block',
+    item:'.dropdown-item',
+    button: '.btn' '.d-inline-block'
+);
+
+.#{$prefix-dropdown-button} {
+    @include apply-props($props);
+
+    @each $color,
+    $value in $theme-colors {
+        >button {
+            @extend .btn-#{$color};
+        }
+    }
+}
