@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { Switch } from '$lib/components'
+	import { type Colors, Switch } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
 	import { classname } from '$lib/utils'
 
 	import { FormField, FormHint } from '.'

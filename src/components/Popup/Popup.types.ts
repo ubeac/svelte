@@ -1,4 +1,4 @@
-import type { ElProps } from '../Base'
+import type { ElProps } from '$lib/components'
 
 export const POPUP_PLACEMENTS = [
 	'auto',

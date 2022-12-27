@@ -1,18 +1,14 @@
 <script lang="ts">
+	import { El, type PopupArrowProps } from '$lib/components'
 
-  import { El } from "../Base"
-  import type { PopupArrowProps } from "./Popup.types"
+	type $$Props = PopupArrowProps
 
-  type $$Props = PopupArrowProps;
+	export let tag: $$Props['tag'] = 'div'
+	export let cssPrefix: $$Props['cssPrefix'] = 'popover-arrow'
 
-  export let tag: $$Props['tag'] = 'div'
-  export let cssPrefix: $$Props['cssPrefix'] = 'popover-arrow';
-
-  $: cssProps = {
-    // 
-  }
-
+	$: cssProps = {
+		//
+	}
 </script>
 
 <El {...$$restProps} {tag} {cssPrefix} {cssProps} data-popper-arrow />
-	
