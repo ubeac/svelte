@@ -52,11 +52,6 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 
 	/**
-	 * Choose range of dates.
-	 */
-	export let range: $$Props['range'] = undefined
-
-	/**
 	 * Set the input read-only
 	 */
 	export let readonly: $$Props['readonly'] = undefined
@@ -74,13 +69,9 @@
 	/**
 	 * The date value of Date picker
 	 */
-	export let value: $$Props['value'] = undefined
+	export let value: $$Props['value'] = new Date()
 
 	//#endregion
-
-	function formatDate(date) {
-		return moment(date).format(format)
-	}
 
 	const dispatch = createEventDispatcher()
 
@@ -101,7 +92,6 @@
 			nextMonth: `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>`,
 			reset: '',
 		},
-		singleMode: range ? false : true,
 		// format,
 		format: {
 			parse(date: any) {
@@ -112,36 +102,18 @@
 				return moment().toDate()
 			},
 			output(date: any) {
-				console.log('output', date)
-				return formatDate(date)
+				return moment(date).format(format)
 			},
 		},
 		setup(picker: any) {
-			console.log('setup')
-			picker.on('selected', (date: any) => {
-				console.log('selected')
+			picker.on('selected', (event: any) => {
+				const date = event.dateInstance?.toDateString()
 
-				const startDate = picker.getStartDate()?.toDateString()
-				const endDate = picker.getEndDate()?.toDateString()
+				const newValue = moment(date).format(format)
 
-				console.log({
-					start: startDate,
-					end: endDate,
-				})
+				if (value === newValue) return
 
-				let newValue: any
-				if (range) {
-					newValue = [formatDate(startDate), formatDate(endDate)]
-				} else {
-					newValue = formatDate(startDate)
-				}
-
-				console.log({ newValue }, startDate, endDate)
-
-				value = newValue
-
-				// if (value === newValue) return
-				dispatch('changed', value)
+				dispatch('changed', (value = newValue))
 			})
 		},
 	}
@@ -159,8 +131,6 @@
 		disabled,
 		readonly,
 	}
-
-	$: console.log({ value })
 
 	onMount(() => {
 		if (!element) return

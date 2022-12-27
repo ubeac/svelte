@@ -1,10 +1,16 @@
 import type { ILPConfiguration } from 'litepicker/dist/types/interfaces'
 
-import type { ElProps } from '$lib/components'
+import type { ElProps, InputSizes, InputStates } from '$lib/components'
 
 export interface DatePickerProps extends Partial<ElProps> {
 	format?: string
 	value?: Date | string | number | Array<Date | string | number>
 	options?: Partial<ILPConfiguration>
-	range?: boolean
+	disabled?: boolean
+	placeholder?: string
+	readonly?: boolean
+	size?: InputSizes
+	state?: InputStates
+	borderRounded?: boolean
+	borderFlush?: boolean
 }

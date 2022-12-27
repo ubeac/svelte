@@ -36,15 +36,6 @@
 	</div>
 </Preview>
 
-<Doc title="Range">
-	<!--  -->
-</Doc>
-<Preview src="./DatepickerRange.svelte">
-	<div class=".example-datepicker">
-		<DatepickerRange />
-	</div>
-</Preview>
-
 <Doc title="Custom Options"
 	>DatePicker component internally uses <a href="https://litepicker.com/docs/options">LitePicker</a>. which you can pass
 	options to Litepicker instance using <code>options</code> prop.</Doc>
