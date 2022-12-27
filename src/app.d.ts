@@ -41,9 +41,6 @@ declare type NamedColors =
 	| 'green'
 	| 'teal'
 	| 'cyan'
-	| 'black'
-	| 'white'
-	| 'transparent'
 	| undefined
 
 declare type SocialMediaColors =
@@ -60,13 +57,15 @@ declare type SocialMediaColors =
 	| 'rss'
 	| 'flickr'
 	| 'bitbucket'
+	| 'linkedin'
+	| 'tabler'
 	| undefined
 
 declare type Colors = ThemeColors | NamedColors | SocialMediaColors
 
 declare type TextColors = Colors
 
-declare type BackgroundColors = ThemeColors | NamedColors | 'body'
+declare type BackgroundColors = ThemeColors | NamedColors | SocialMediaColors | 'body'
 
 declare type Opacities = '10' | '25' | '50' | '75' | undefined
 declare type TextOpacities = '25' | '50' | '75' | undefined
@@ -139,13 +138,21 @@ declare type VerticalAligns = 'baseline' | 'top' | 'middle' | 'bottom' | 'text-b
 // Col Sizes and settings
 type ColSizes = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | 'auto' | undefined | boolean
 type ColOrders = '1' | '2' | '3' | '4' | '5' | 'first' | 'last' | undefined
+type OffsetSizes = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | 'auto' | undefined
 
 // Container Sizes and settings
 type ContainerMaxWidths = boolean | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'fluid' | undefined
 
 // Row sizes and settings
-type RowColSizes = '1' | '2' | '3' | '4' | '5' | undefined
+type RowColSizes = '1' | '2' | '3' | '4' | '5' | '6' | 'auto' | undefined
 type RowGutterSizes = '0' | '1' | '2' | '3' | '4' | '5' | undefined
+
+// Align items
+type AlignItemsTypes = 'start' | 'end' | 'center' | undefined
+
+type AlignSelfTypes = 'start' | 'end' | 'center' | undefined
+
+type JustifyContentTypes = 'start' | 'end' | 'center' | 'between' | 'around' | 'evenly' | undefined
 
 declare type HTMLTags =
 	| 'a'

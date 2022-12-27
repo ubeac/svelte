@@ -1,59 +1,102 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { FormField, type FormSelectProps, Select, type SelectProps } from '$lib/components'
 
-	import { nanoid } from 'nanoid'
-
-	import { FormField, FormHint, Label, Select } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = FormSelectProps
 
 	/**
-	 * Set column width of component
+	 * Set the tag of FormSelect
 	 */
-	export let cols: string | number | boolean = '12'
+	export let tag: $$Props['tag'] = 'select'
 
 	/**
-	 * Sets id for HTML component
+	 * Select items
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let items: $$Props['items'] 
 
 	/**
-	 * Set label for select component
+	 * Set multiple attribute to select
 	 */
-	export let label: string | undefined = undefined
+	export let multiple: $$Props['multiple'] = false
 
 	/**
-	 * Show Message at bottom of Input
+	 * Value that selected options are bound to
 	 */
-	export let message: string | undefined = undefined
+	export let value: $$Props['value'] = undefined
 
 	/**
-	 * Mark this as required field in form
+	 * Set the selected option
 	 */
-	export let required: boolean = false
+	export let selected: $$Props['selected'] = undefined
 
 	/**
-	 * Value of selcted option
+	 * Set the size of the select component
 	 */
-	export let value: any = undefined
+	export let selectSize: $$Props['selectSize'] = undefined
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * Set size attribute of select
+	 */
+	export let size: $$Props['size'] = undefined
 
-	$: classes = classname('form-select', undefined, $$props.class, true)
+	/**
+	 * Set select as disabled
+	 */
+	export let disabled: $$Props['disabled'] = undefined
+
+	/**
+	 * Set the text label of FormSelect
+	 */
+	export let label: $$Props['label'] = undefined
+
+	/**
+	 * Define hint for the FormField
+	 */
+	export let hint: $$Props['hint'] = undefined
+
+	/**
+	 * Set the FormSelect required
+	 */
+	export let required: $$Props['required'] = undefined
+
+	/**
+	 * Set placeholder for the select
+	 */
+	export let placeholder: $$Props['placeholder'] = undefined
+
+	/**
+	 * Set the state of FormSelect
+	 */
+	export let state: $$Props['state'] = undefined
+
+	let selectProps: SelectProps = {}
+	let props: any = {}
+
+	$: {
+		selectProps = {
+			tag,
+			placeholder,
+			disabled,
+			size,
+			items,
+			selectSize,
+			selected,
+			multiple,
+			state,
+		}
+
+		props = {
+			required,
+			label,
+			hint,
+			state,
+		}
+	}
 </script>
 
-<FormField {cols} class={classes}>
-	<slot name="label">
-		{#if label}
-			<Label for="form-select-{id}" {required}>{label}</Label>
-		{/if}
-	</slot>
-	<div class={classname('form-field-body')}>
-		<Select id="form-select-{id}" {forwardEvents} {...$$restProps} bind:value />
-	</div>
-	<slot name="message">
-		{#if message}
-			<FormHint>{message}</FormHint>
-		{/if}
-	</slot>
+<FormField {...props} {...$$restProps}>
+	<slot name="label" />
+	<Select {...selectProps} bind:value let:item let:index>
+		<slot {index} {item}>{item}</slot>
+	</Select>
+	<slot name="hint" />
 </FormField>

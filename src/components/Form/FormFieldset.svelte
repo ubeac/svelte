@@ -1,32 +1,14 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { Fieldset, FormField, type FormFieldsetProps } from '$lib/components'
 
-	import { nanoid } from 'nanoid'
-
-	import { Label } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
-
-	/**
-	 * Set id for HTML element
-	 */
-	export let id: string = nanoid(10)
-
-	/**
-	 * Set label for filedset
-	 */
-	export let label: string | undefined = undefined
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('form-fieldset', undefined, $$props.class)
+	type $$Props = FormFieldsetProps
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-fieldset'
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
-	{#if label}
-		<Label for={id}>{label}</Label>
-	{/if}
-	<fieldset>
+<FormField {...$$restProps} {cssPrefix}>
+	<slot name="label" />
+	<Fieldset>
 		<slot />
-	</fieldset>
-</div>
+	</Fieldset>
+	<slot name="hint" />
+</FormField>

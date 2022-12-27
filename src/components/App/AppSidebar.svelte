@@ -4,9 +4,8 @@
 
 	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
 	import { classname } from '@ubeac/svelte/utils'
-	import { nanoid } from 'nanoid'
 
-	export let id = 'sidebar-' + nanoid(5)
+	export let id = 'sidebar'
 	/**
 	 * Set mode to one of 'temporary' or 'permanent'
 	 */

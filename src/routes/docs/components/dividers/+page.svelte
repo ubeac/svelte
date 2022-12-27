@@ -3,6 +3,7 @@
 	import DividerDefault from './DividerDefault.svelte'
 	import DividerPositions from './DividerPositions.svelte'
 	import DividerColors from './DividerColors.svelte'
+	import DividerDirection from './DividerDirection.svelte'
 </script>
 
 <h1>Divider</h1>
@@ -27,9 +28,12 @@
 	<DividerPositions />
 </Preview>
 
-<Doc title="Colors">
-	Customize the color of the divider to suit your design.
-</Doc>
+<Doc title="Colors">Customize the color of the divider to suit your design.</Doc>
 <Preview src="./DividerColors.svelte">
 	<DividerColors />
+</Preview>
+
+<Doc title="Vertical">Direction of divider also can be vertical.</Doc>
+<Preview src="./DividerDirection.svelte">
+	<DividerDirection />
 </Preview>

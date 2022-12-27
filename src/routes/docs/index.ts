@@ -1,6 +1,6 @@
 export const base_path: string = '/docs/'
 export const base_component_path: string = base_path + 'components/'
-export const base_common_path: string = base_path + 'common/'
+export const base_core_path: string = base_path + 'core/'
 export const base_form_path: string = base_path + 'form/'
 
 export const navigations = [
@@ -12,7 +12,48 @@ export const navigations = [
 			{
 				route: base_path + 'getting-started/installation',
 				title: 'Installation',
-				icon: 'icons',
+				icon: 'star',
+			},
+		],
+	},
+	{
+		title: 'Core Features',
+		id: 'core-features',
+		children: [
+			{
+				route: base_core_path + 'contents/typography',
+				title: 'Typography',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/colors',
+				title: 'Colors',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/spacing',
+				title: 'Spacing',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/borders',
+				title: 'Borders',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/icons',
+				title: 'Icons',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/grid',
+				title: 'Grid',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/columns',
+				title: 'Columns',
+				icon: 'star',
 			},
 		],
 	},
@@ -101,8 +142,8 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'el',
-				title: 'El',
+				route: base_component_path + 'fieldsets',
+				title: 'Fieldset',
 				icon: 'star',
 			},
 			{
@@ -113,16 +154,6 @@ export const navigations = [
 			{
 				route: base_component_path + 'footers',
 				title: 'Footer',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'grids',
-				title: 'Grid',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'icons',
-				title: 'Icon',
 				icon: 'star',
 			},
 			{
@@ -151,11 +182,6 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'page',
-				title: 'Page',
-				icon: 'star',
-			},
-			{
 				route: base_component_path + 'popover',
 				title: 'Popover',
 				icon: 'star',
@@ -181,7 +207,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'select',
+				route: base_component_path + 'selects',
 				title: 'Select',
 				icon: 'star',
 			},
@@ -228,22 +254,6 @@ export const navigations = [
 		],
 	},
 	{
-		title: 'Common',
-		id: 'menu-common',
-		children: [
-			{
-				route: base_common_path + 'if',
-				title: 'If',
-				icon: 'package',
-			},
-			{
-				route: base_common_path + 'preview',
-				title: 'Preview',
-				icon: 'package',
-			},
-		],
-	},
-	{
 		title: 'Form Components',
 		id: 'menu-forms',
 		children: [
@@ -268,8 +278,13 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_form_path + 'form-fieldsets',
+				title: 'FormFieldset',
+				icon: 'star',
+			},
+			{
 				route: base_form_path + 'form-input',
-				title: 'Form Input',
+				title: 'FormInput',
 				icon: 'star',
 			},
 			{
@@ -291,28 +306,6 @@ export const navigations = [
 				route: base_form_path + 'form-textareas',
 				title: 'FormTextarea',
 				icon: 'star',
-			},
-		],
-	},
-	{
-		title: 'Icons',
-		id: 'menu-icons',
-		children: [
-			{
-				route: base_path + 'icons',
-				title: 'Icons',
-				icon: 'icons',
-			},
-		],
-	},
-	{
-		title: 'Pages',
-		id: 'menu-pages',
-		children: [
-			{
-				route: base_path + '', // removed '/docs/components/login' to prevent error in prerender step
-				title: '(TODO) Login',
-				icon: 'package',
 			},
 		],
 	},

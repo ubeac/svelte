@@ -140,12 +140,12 @@
 	export let orderXxl: ColOrders = undefined
 
 	// offset
-	export let offset: ColSizes = undefined
-	export let offsetSm: ColSizes = undefined
-	export let offsetMd: ColSizes = undefined
-	export let offsetLg: ColSizes = undefined
-	export let offsetXl: ColSizes = undefined
-	export let offsetXxl: ColSizes = undefined
+	export let offset: OffsetSizes = undefined
+	export let offsetSm: OffsetSizes = undefined
+	export let offsetMd: OffsetSizes = undefined
+	export let offsetLg: OffsetSizes = undefined
+	export let offsetXl: OffsetSizes = undefined
+	export let offsetXxl: OffsetSizes = undefined
 
 	// Row
 	export let row: boolean | 'deck' | undefined = undefined
@@ -165,6 +165,11 @@
 	export let gXxl: RowGutterSizes = undefined
 	export let gx: RowGutterSizes = undefined
 	export let gy: RowGutterSizes = undefined
+
+	// Align items
+	export let alignItems: AlignItemsTypes = undefined
+	export let alignSelf: AlignSelfTypes = undefined
+	export let justifyContent: JustifyContentTypes = undefined
 
 	// forward events
 	export let forwardEvents: (node: HTMLElement) => any = () => ({})
@@ -303,6 +308,10 @@
 			gXxl,
 			gx,
 			gy,
+			// align items
+			alignItems,
+			alignSelf,
+			justifyContent,
 		}
 		classes = classname(defaultCssPrefix, defaultCssProps, '', true)
 		if (cssPrefix) classes += ' ' + classname(cssPrefix, cssProps, $$props.class, true)
