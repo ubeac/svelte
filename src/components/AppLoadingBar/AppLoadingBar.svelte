@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { tweened } from 'svelte/motion'
 
-	import { El } from '../Base'
-	import type { AppLoadingBarProps } from './AppLoadingBar.types'
+	import { El, type AppLoadingBarProps } from '$lib/components'
 
 	type $$Props = AppLoadingBarProps
 

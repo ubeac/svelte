@@ -27,7 +27,7 @@
 </svelte:head>
 
 <App {theme}>
-	<AppLoadingBar fixed color="primary" bind:this={loadingBar} />
+	<AppLoadingBar fixedPosition color="primary" bind:this={loadingBar} />
 
 	<header class="navbar navbar-expand-md navbar-light d-print-none">
 		<div class="container-xl">
