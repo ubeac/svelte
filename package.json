@@ -47,10 +47,12 @@
 	},
 	"dependencies": {
 		"@googlemaps/js-api-loader": "^1.14.3",
+		"@iconify/svelte": "^3.0.1",
 		"@popperjs/core": "^2.11.6",
 		"@tabler/core": "^1.0.0-beta16",
 		"bootstrap": "^5.2.3",
 		"change-case": "^4.1.2",
+		"inputmask": "^5.0.7",
 		"litepicker": "^2.0.12",
 		"moment": "^2.29.4",
 		"prism-svelte": "^0.5.0",
@@ -59,14 +61,12 @@
 		"tom-select": "^2.1.0"
 	},
 	"devDependencies": {
-		"@iconify/svelte": "^3.0.1",
 		"@sveltejs/adapter-static": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
 		"@sveltejs/package": "^1.0.0",
 		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
 		"@types/bootstrap": "^5.2.6",
 		"@types/prismjs": "^1.26.0",
-		"inputmask": "^5.0.7",
 		"magic-string": "^0.26.3",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
