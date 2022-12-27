@@ -3,7 +3,6 @@
 	import type { Themes } from '@ubeac/svelte'
 	import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
-	import { browser } from '$app/environment'
 	import { afterNavigate, beforeNavigate } from '$app/navigation'
 
 	let container: ContainerMaxWidths = 'md'
@@ -23,7 +22,7 @@
 		return 0.00001
 	}
 	const startInterval = () => {
-		if (browser) {
+		if (typeof window !== 'undefined') {
 			updater = setInterval(() => {
 				const randomStep = stepSizes[Math.floor(Math.random() * stepSizes.length)]
 				const step = getIncrement(progressValue) + randomStep
