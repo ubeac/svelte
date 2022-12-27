@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/components'
+import type { Colors, ElProps } from '$lib/components'
 
 export type SpinnerSizes = 'sm' | 'lg'
 export type SpinnerShapes = 'border' | 'grow'

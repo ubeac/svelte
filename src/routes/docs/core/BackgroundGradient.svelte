@@ -1,5 +1,5 @@
 <script>
-	import { El, BACKGROUND_COLOR_TYPES } from '@ubeac/svelte'
+	import { El } from '@ubeac/svelte'
 </script>
 
 <El bgGradient bgColor="primary">primary</El>

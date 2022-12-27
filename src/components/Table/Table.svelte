@@ -1,8 +1,5 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
-
 	import { El, type TableProps } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
 
 	type $$Props = TableProps
 
@@ -18,8 +15,6 @@
 	export let responsive: $$Props['responsive'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let sort: $$Props['sort'] = undefined
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	$: cssProps = {
 		color,
@@ -42,7 +37,7 @@
 </script>
 
 <El cssPrefix={tableParentCssPrefix} cssProps={parentCssProps} tag="div">
-	<El {forwardEvents} {...$$restProps} {cssProps} {...otherProps}>
+	<El {...$$restProps} {cssProps} {...otherProps}>
 		<slot />
 	</El>
 </El>

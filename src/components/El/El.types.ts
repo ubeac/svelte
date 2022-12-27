@@ -1,5 +1,3 @@
-import type { ComponentType } from 'svelte'
-
 export type BooleanValues = boolean | undefined
 
 // Theme Colors
