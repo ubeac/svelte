@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { nanoid } from 'nanoid'
-
 	import { FileUploader, FormField, Icon, Label, Spinner } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
@@ -22,7 +20,7 @@
 	/**
 	 * Set id for HTML element
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let id: string | undefined
 
 	/**
 	 * Set Label on top of File Uploader

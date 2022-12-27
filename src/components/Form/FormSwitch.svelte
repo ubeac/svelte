@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { nanoid } from 'nanoid'
-
 	import { Switch } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { Colors } from '$lib/types'
@@ -19,7 +17,7 @@
 	/**
 	 * Set id for HTML element
 	 */
-	export let id: string = 'form-switch-' + nanoid(10)
+	export let id: string = 'form-switch-'
 
 	/**
 	 * Show Message at bottom of Input

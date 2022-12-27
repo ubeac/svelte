@@ -1,7 +1,6 @@
 export const base_path: string = '/docs/'
 export const base_component_path: string = base_path + 'components/'
 export const base_core_path: string = base_path + 'core/'
-export const base_common_path: string = base_path + 'common/'
 export const base_form_path: string = base_path + 'form/'
 
 export const navigations = [
@@ -34,6 +33,11 @@ export const navigations = [
 			{
 				route: base_core_path + 'contents/spacing',
 				title: 'Spacing',
+				icon: 'star',
+			},
+			{
+				route: base_core_path + 'contents/borders',
+				title: 'Borders',
 				icon: 'star',
 			},
 			{
@@ -153,11 +157,6 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'grids',
-				title: 'Grid',
-				icon: 'star',
-			},
-			{
 				route: base_component_path + 'inputs',
 				title: 'Input',
 				icon: 'star',
@@ -180,11 +179,6 @@ export const navigations = [
 			{
 				route: base_component_path + 'offcanvases',
 				title: 'Offcanvas',
-				icon: 'star',
-			},
-			{
-				route: base_component_path + 'page',
-				title: 'Page',
 				icon: 'star',
 			},
 			{
@@ -260,22 +254,6 @@ export const navigations = [
 		],
 	},
 	{
-		title: 'Common',
-		id: 'menu-common',
-		children: [
-			{
-				route: base_common_path + 'if',
-				title: 'If',
-				icon: 'package',
-			},
-			{
-				route: base_common_path + 'preview',
-				title: 'Preview',
-				icon: 'package',
-			},
-		],
-	},
-	{
 		title: 'Form Components',
 		id: 'menu-forms',
 		children: [
@@ -328,17 +306,6 @@ export const navigations = [
 				route: base_form_path + 'form-textareas',
 				title: 'FormTextarea',
 				icon: 'star',
-			},
-		],
-	},
-	{
-		title: 'Pages',
-		id: 'menu-pages',
-		children: [
-			{
-				route: base_path + '', // removed '/docs/components/login' to prevent error in prerender step
-				title: '(TODO) Login',
-				icon: 'package',
 			},
 		],
 	},

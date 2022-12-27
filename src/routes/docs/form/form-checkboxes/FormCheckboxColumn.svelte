@@ -16,4 +16,4 @@
 	</El>
 </El>
 
-<span if={value}>{value}</span>
+<i>{value}</i>

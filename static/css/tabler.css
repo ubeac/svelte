@@ -1111,7 +1111,7 @@ progress {
   }
 }
 
-.col, .u-col, .u-el-col {
+.col, .u-el-col {
   flex: 1 0 0%;
 }
 
@@ -1150,112 +1150,112 @@ progress {
   width: 16.6666666667%;
 }
 
-.col-auto, .u-col-auto, .u-el-col-auto {
+.col-auto, .u-el-col-auto {
   flex: 0 0 auto;
   width: auto;
 }
 
-.col-1, .u-col-cols-1, .u-el-col-1 {
+.col-1, .u-el-col-1 {
   flex: 0 0 auto;
   width: 8.33333333%;
 }
 
-.col-2, .u-col-cols-2, .u-el-col-2 {
+.col-2, .u-el-col-2 {
   flex: 0 0 auto;
   width: 16.66666667%;
 }
 
-.col-3, .u-col-cols-3, .u-el-col-3 {
+.col-3, .u-el-col-3 {
   flex: 0 0 auto;
   width: 25%;
 }
 
-.col-4, .u-col-cols-4, .u-el-col-4 {
+.col-4, .u-el-col-4 {
   flex: 0 0 auto;
   width: 33.33333333%;
 }
 
-.col-5, .u-col-cols-5, .u-el-col-5 {
+.col-5, .u-el-col-5 {
   flex: 0 0 auto;
   width: 41.66666667%;
 }
 
-.col-6, .u-col-cols-6, .u-el-col-6 {
+.col-6, .u-el-col-6 {
   flex: 0 0 auto;
   width: 50%;
 }
 
-.col-7, .u-col-cols-7, .u-el-col-7 {
+.col-7, .u-el-col-7 {
   flex: 0 0 auto;
   width: 58.33333333%;
 }
 
-.col-8, .u-col-cols-8, .u-el-col-8 {
+.col-8, .u-el-col-8 {
   flex: 0 0 auto;
   width: 66.66666667%;
 }
 
-.col-9, .u-col-cols-9, .u-el-col-9 {
+.col-9, .u-el-col-9 {
   flex: 0 0 auto;
   width: 75%;
 }
 
-.col-10, .u-col-cols-10, .u-el-col-10 {
+.col-10, .u-el-col-10 {
   flex: 0 0 auto;
   width: 83.33333333%;
 }
 
-.col-11, .u-col-cols-11, .u-el-col-11 {
+.col-11, .u-el-col-11 {
   flex: 0 0 auto;
   width: 91.66666667%;
 }
 
-.col-12, .u-col-cols-12, .u-el-col-12 {
+.col-12, .u-el-col-12 {
   flex: 0 0 auto;
   width: 100%;
 }
 
-.offset-1, .u-col-offset-1 {
+.offset-1 {
   margin-left: 8.33333333%;
 }
 
-.offset-2, .u-col-offset-2 {
+.offset-2 {
   margin-left: 16.66666667%;
 }
 
-.offset-3, .u-col-offset-3 {
+.offset-3 {
   margin-left: 25%;
 }
 
-.offset-4, .u-col-offset-4 {
+.offset-4 {
   margin-left: 33.33333333%;
 }
 
-.offset-5, .u-col-offset-5 {
+.offset-5 {
   margin-left: 41.66666667%;
 }
 
-.offset-6, .u-col-offset-6 {
+.offset-6 {
   margin-left: 50%;
 }
 
-.offset-7, .u-col-offset-7 {
+.offset-7 {
   margin-left: 58.33333333%;
 }
 
-.offset-8, .u-col-offset-8 {
+.offset-8 {
   margin-left: 66.66666667%;
 }
 
-.offset-9, .u-col-offset-9 {
+.offset-9 {
   margin-left: 75%;
 }
 
-.offset-10, .u-col-offset-10 {
+.offset-10 {
   margin-left: 83.33333333%;
 }
 
-.offset-11, .u-col-offset-11 {
+.offset-11 {
   margin-left: 91.66666667%;
 }
 
@@ -1320,7 +1320,7 @@ progress {
 }
 
 @media (min-width: 576px) {
-  .col-sm, .u-col-cols-sm, .u-el-col-sm {
+  .col-sm, .u-el-col-sm {
     flex: 1 0 0%;
   }
   .row-cols-sm-auto > *, .u-el-row-cols-sm-auto > * {
@@ -1355,88 +1355,88 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .col-sm-1, .u-col-sm-1, .u-el-col-sm-1 {
+  .col-sm-1, .u-el-col-sm-1 {
     flex: 0 0 auto;
     width: 8.33333333%;
   }
-  .col-sm-2, .u-col-sm-2, .u-el-col-sm-2 {
+  .col-sm-2, .u-el-col-sm-2 {
     flex: 0 0 auto;
     width: 16.66666667%;
   }
-  .col-sm-3, .u-col-sm-3, .u-el-col-sm-3 {
+  .col-sm-3, .u-el-col-sm-3 {
     flex: 0 0 auto;
     width: 25%;
   }
-  .col-sm-4, .u-col-sm-4, .u-el-col-sm-4 {
+  .col-sm-4, .u-el-col-sm-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
-  .col-sm-5, .u-col-sm-5, .u-el-col-sm-5 {
+  .col-sm-5, .u-el-col-sm-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
-  .col-sm-6, .u-col-sm-6, .u-el-col-sm-6 {
+  .col-sm-6, .u-el-col-sm-6 {
     flex: 0 0 auto;
     width: 50%;
   }
-  .col-sm-7, .u-col-sm-7, .u-el-col-sm-7 {
+  .col-sm-7, .u-el-col-sm-7 {
     flex: 0 0 auto;
     width: 58.33333333%;
   }
-  .col-sm-8, .u-col-sm-8, .u-el-col-sm-8 {
+  .col-sm-8, .u-el-col-sm-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
-  .col-sm-9, .u-col-sm-9, .u-el-col-sm-9 {
+  .col-sm-9, .u-el-col-sm-9 {
     flex: 0 0 auto;
     width: 75%;
   }
-  .col-sm-10, .u-col-sm-10, .u-el-col-sm-10 {
+  .col-sm-10, .u-el-col-sm-10 {
     flex: 0 0 auto;
     width: 83.33333333%;
   }
-  .col-sm-11, .u-col-sm-11, .u-el-col-sm-11 {
+  .col-sm-11, .u-el-col-sm-11 {
     flex: 0 0 auto;
     width: 91.66666667%;
   }
-  .col-sm-12, .u-col-sm-12, .u-el-col-sm-12 {
+  .col-sm-12, .u-el-col-sm-12 {
     flex: 0 0 auto;
     width: 100%;
   }
   .offset-sm-0 {
     margin-left: 0;
   }
-  .offset-sm-1, .u-col-offset-sm-1, .u-el-offset-1, .u-el-offset-sm-1 {
+  .offset-sm-1, .u-el-offset-1, .u-el-offset-sm-1 {
     margin-left: 8.33333333%;
   }
-  .offset-sm-2, .u-col-offset-sm-2, .u-el-offset-2, .u-el-offset-sm-2 {
+  .offset-sm-2, .u-el-offset-2, .u-el-offset-sm-2 {
     margin-left: 16.66666667%;
   }
-  .offset-sm-3, .u-col-offset-sm-3, .u-el-offset-3, .u-el-offset-sm-3 {
+  .offset-sm-3, .u-el-offset-3, .u-el-offset-sm-3 {
     margin-left: 25%;
   }
-  .offset-sm-4, .u-col-offset-sm-4, .u-el-offset-4, .u-el-offset-sm-4 {
+  .offset-sm-4, .u-el-offset-4, .u-el-offset-sm-4 {
     margin-left: 33.33333333%;
   }
-  .offset-sm-5, .u-col-offset-sm-5, .u-el-offset-5, .u-el-offset-sm-5 {
+  .offset-sm-5, .u-el-offset-5, .u-el-offset-sm-5 {
     margin-left: 41.66666667%;
   }
-  .offset-sm-6, .u-col-offset-sm-6, .u-el-offset-6, .u-el-offset-sm-6 {
+  .offset-sm-6, .u-el-offset-6, .u-el-offset-sm-6 {
     margin-left: 50%;
   }
-  .offset-sm-7, .u-col-offset-sm-7, .u-el-offset-7, .u-el-offset-sm-7 {
+  .offset-sm-7, .u-el-offset-7, .u-el-offset-sm-7 {
     margin-left: 58.33333333%;
   }
-  .offset-sm-8, .u-col-offset-sm-8, .u-el-offset-8, .u-el-offset-sm-8 {
+  .offset-sm-8, .u-el-offset-8, .u-el-offset-sm-8 {
     margin-left: 66.66666667%;
   }
-  .offset-sm-9, .u-col-offset-sm-9, .u-el-offset-9, .u-el-offset-sm-9 {
+  .offset-sm-9, .u-el-offset-9, .u-el-offset-sm-9 {
     margin-left: 75%;
   }
-  .offset-sm-10, .u-col-offset-sm-10, .u-el-offset-10, .u-el-offset-sm-10 {
+  .offset-sm-10, .u-el-offset-10, .u-el-offset-sm-10 {
     margin-left: 83.33333333%;
   }
-  .offset-sm-11, .u-col-offset-sm-11, .u-el-offset-11, .u-el-offset-sm-11 {
+  .offset-sm-11, .u-el-offset-11, .u-el-offset-sm-11 {
     margin-left: 91.66666667%;
   }
   .g-sm-0,
@@ -1489,7 +1489,7 @@ progress {
   }
 }
 @media (min-width: 768px) {
-  .col-md, .u-col-cols-md, .u-el-col-md {
+  .col-md, .u-el-col-md {
     flex: 1 0 0%;
   }
   .row-cols-md-auto > *, .u-el-row-cols-md-auto > * {
@@ -1524,88 +1524,88 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .col-md-1, .u-col-md-1, .u-el-col-md-1 {
+  .col-md-1, .u-el-col-md-1 {
     flex: 0 0 auto;
     width: 8.33333333%;
   }
-  .col-md-2, .u-col-md-2, .u-el-col-md-2 {
+  .col-md-2, .u-el-col-md-2 {
     flex: 0 0 auto;
     width: 16.66666667%;
   }
-  .col-md-3, .u-col-md-3, .u-el-col-md-3 {
+  .col-md-3, .u-el-col-md-3 {
     flex: 0 0 auto;
     width: 25%;
   }
-  .col-md-4, .u-col-md-4, .u-el-col-md-4 {
+  .col-md-4, .u-el-col-md-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
-  .col-md-5, .u-col-md-5, .u-el-col-md-5 {
+  .col-md-5, .u-el-col-md-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
-  .col-md-6, .u-col-md-6, .u-el-col-md-6 {
+  .col-md-6, .u-el-col-md-6 {
     flex: 0 0 auto;
     width: 50%;
   }
-  .col-md-7, .u-col-md-7, .u-el-col-md-7 {
+  .col-md-7, .u-el-col-md-7 {
     flex: 0 0 auto;
     width: 58.33333333%;
   }
-  .col-md-8, .u-col-md-8, .u-el-col-md-8 {
+  .col-md-8, .u-el-col-md-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
-  .col-md-9, .u-col-md-9, .u-el-col-md-9 {
+  .col-md-9, .u-el-col-md-9 {
     flex: 0 0 auto;
     width: 75%;
   }
-  .col-md-10, .u-col-md-10, .u-el-col-md-10 {
+  .col-md-10, .u-el-col-md-10 {
     flex: 0 0 auto;
     width: 83.33333333%;
   }
-  .col-md-11, .u-col-md-11, .u-el-col-md-11 {
+  .col-md-11, .u-el-col-md-11 {
     flex: 0 0 auto;
     width: 91.66666667%;
   }
-  .col-md-12, .u-col-md-12, .u-el-col-md-12 {
+  .col-md-12, .u-el-col-md-12 {
     flex: 0 0 auto;
     width: 100%;
   }
   .offset-md-0 {
     margin-left: 0;
   }
-  .offset-md-1, .u-col-offset-md-1, .u-el-offset-1, .u-el-offset-md-1 {
+  .offset-md-1, .u-el-offset-1, .u-el-offset-md-1 {
     margin-left: 8.33333333%;
   }
-  .offset-md-2, .u-col-offset-md-2, .u-el-offset-2, .u-el-offset-md-2 {
+  .offset-md-2, .u-el-offset-2, .u-el-offset-md-2 {
     margin-left: 16.66666667%;
   }
-  .offset-md-3, .u-col-offset-md-3, .u-el-offset-3, .u-el-offset-md-3 {
+  .offset-md-3, .u-el-offset-3, .u-el-offset-md-3 {
     margin-left: 25%;
   }
-  .offset-md-4, .u-col-offset-md-4, .u-el-offset-4, .u-el-offset-md-4 {
+  .offset-md-4, .u-el-offset-4, .u-el-offset-md-4 {
     margin-left: 33.33333333%;
   }
-  .offset-md-5, .u-col-offset-md-5, .u-el-offset-5, .u-el-offset-md-5 {
+  .offset-md-5, .u-el-offset-5, .u-el-offset-md-5 {
     margin-left: 41.66666667%;
   }
-  .offset-md-6, .u-col-offset-md-6, .u-el-offset-6, .u-el-offset-md-6 {
+  .offset-md-6, .u-el-offset-6, .u-el-offset-md-6 {
     margin-left: 50%;
   }
-  .offset-md-7, .u-col-offset-md-7, .u-el-offset-7, .u-el-offset-md-7 {
+  .offset-md-7, .u-el-offset-7, .u-el-offset-md-7 {
     margin-left: 58.33333333%;
   }
-  .offset-md-8, .u-col-offset-md-8, .u-el-offset-8, .u-el-offset-md-8 {
+  .offset-md-8, .u-el-offset-8, .u-el-offset-md-8 {
     margin-left: 66.66666667%;
   }
-  .offset-md-9, .u-col-offset-md-9, .u-el-offset-9, .u-el-offset-md-9 {
+  .offset-md-9, .u-el-offset-9, .u-el-offset-md-9 {
     margin-left: 75%;
   }
-  .offset-md-10, .u-col-offset-md-10, .u-el-offset-10, .u-el-offset-md-10 {
+  .offset-md-10, .u-el-offset-10, .u-el-offset-md-10 {
     margin-left: 83.33333333%;
   }
-  .offset-md-11, .u-col-offset-md-11, .u-el-offset-11, .u-el-offset-md-11 {
+  .offset-md-11, .u-el-offset-11, .u-el-offset-md-11 {
     margin-left: 91.66666667%;
   }
   .g-md-0,
@@ -1658,7 +1658,7 @@ progress {
   }
 }
 @media (min-width: 992px) {
-  .col-lg, .u-col-cols-lg, .u-el-col-lg {
+  .col-lg, .u-el-col-lg {
     flex: 1 0 0%;
   }
   .row-cols-lg-auto > *, .u-el-row-cols-lg-auto > * {
@@ -1693,88 +1693,88 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .col-lg-1, .u-col-lg-1, .u-el-col-lg-1 {
+  .col-lg-1, .u-el-col-lg-1 {
     flex: 0 0 auto;
     width: 8.33333333%;
   }
-  .col-lg-2, .u-col-lg-2, .u-el-col-lg-2 {
+  .col-lg-2, .u-el-col-lg-2 {
     flex: 0 0 auto;
     width: 16.66666667%;
   }
-  .col-lg-3, .u-col-lg-3, .u-el-col-lg-3 {
+  .col-lg-3, .u-el-col-lg-3 {
     flex: 0 0 auto;
     width: 25%;
   }
-  .col-lg-4, .u-col-lg-4, .u-el-col-lg-4 {
+  .col-lg-4, .u-el-col-lg-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
-  .col-lg-5, .u-col-lg-5, .u-el-col-lg-5 {
+  .col-lg-5, .u-el-col-lg-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
-  .col-lg-6, .u-col-lg-6, .u-el-col-lg-6 {
+  .col-lg-6, .u-el-col-lg-6 {
     flex: 0 0 auto;
     width: 50%;
   }
-  .col-lg-7, .u-col-lg-7, .u-el-col-lg-7 {
+  .col-lg-7, .u-el-col-lg-7 {
     flex: 0 0 auto;
     width: 58.33333333%;
   }
-  .col-lg-8, .u-col-lg-8, .u-el-col-lg-8 {
+  .col-lg-8, .u-el-col-lg-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
-  .col-lg-9, .u-col-lg-9, .u-el-col-lg-9 {
+  .col-lg-9, .u-el-col-lg-9 {
     flex: 0 0 auto;
     width: 75%;
   }
-  .col-lg-10, .u-col-lg-10, .u-el-col-lg-10 {
+  .col-lg-10, .u-el-col-lg-10 {
     flex: 0 0 auto;
     width: 83.33333333%;
   }
-  .col-lg-11, .u-col-lg-11, .u-el-col-lg-11 {
+  .col-lg-11, .u-el-col-lg-11 {
     flex: 0 0 auto;
     width: 91.66666667%;
   }
-  .col-lg-12, .u-col-lg-12, .u-el-col-lg-12 {
+  .col-lg-12, .u-el-col-lg-12 {
     flex: 0 0 auto;
     width: 100%;
   }
   .offset-lg-0 {
     margin-left: 0;
   }
-  .offset-lg-1, .u-col-offset-lg-1, .u-el-offset-1, .u-el-offset-lg-1 {
+  .offset-lg-1, .u-el-offset-1, .u-el-offset-lg-1 {
     margin-left: 8.33333333%;
   }
-  .offset-lg-2, .u-col-offset-lg-2, .u-el-offset-2, .u-el-offset-lg-2 {
+  .offset-lg-2, .u-el-offset-2, .u-el-offset-lg-2 {
     margin-left: 16.66666667%;
   }
-  .offset-lg-3, .u-col-offset-lg-3, .u-el-offset-3, .u-el-offset-lg-3 {
+  .offset-lg-3, .u-el-offset-3, .u-el-offset-lg-3 {
     margin-left: 25%;
   }
-  .offset-lg-4, .u-col-offset-lg-4, .u-el-offset-4, .u-el-offset-lg-4 {
+  .offset-lg-4, .u-el-offset-4, .u-el-offset-lg-4 {
     margin-left: 33.33333333%;
   }
-  .offset-lg-5, .u-col-offset-lg-5, .u-el-offset-5, .u-el-offset-lg-5 {
+  .offset-lg-5, .u-el-offset-5, .u-el-offset-lg-5 {
     margin-left: 41.66666667%;
   }
-  .offset-lg-6, .u-col-offset-lg-6, .u-el-offset-6, .u-el-offset-lg-6 {
+  .offset-lg-6, .u-el-offset-6, .u-el-offset-lg-6 {
     margin-left: 50%;
   }
-  .offset-lg-7, .u-col-offset-lg-7, .u-el-offset-7, .u-el-offset-lg-7 {
+  .offset-lg-7, .u-el-offset-7, .u-el-offset-lg-7 {
     margin-left: 58.33333333%;
   }
-  .offset-lg-8, .u-col-offset-lg-8, .u-el-offset-8, .u-el-offset-lg-8 {
+  .offset-lg-8, .u-el-offset-8, .u-el-offset-lg-8 {
     margin-left: 66.66666667%;
   }
-  .offset-lg-9, .u-col-offset-lg-9, .u-el-offset-9, .u-el-offset-lg-9 {
+  .offset-lg-9, .u-el-offset-9, .u-el-offset-lg-9 {
     margin-left: 75%;
   }
-  .offset-lg-10, .u-col-offset-lg-10, .u-el-offset-10, .u-el-offset-lg-10 {
+  .offset-lg-10, .u-el-offset-10, .u-el-offset-lg-10 {
     margin-left: 83.33333333%;
   }
-  .offset-lg-11, .u-col-offset-lg-11, .u-el-offset-11, .u-el-offset-lg-11 {
+  .offset-lg-11, .u-el-offset-11, .u-el-offset-lg-11 {
     margin-left: 91.66666667%;
   }
   .g-lg-0,
@@ -1827,7 +1827,7 @@ progress {
   }
 }
 @media (min-width: 1200px) {
-  .col-xl, .u-col-cols-xl, .u-el-col-xl {
+  .col-xl, .u-el-col-xl {
     flex: 1 0 0%;
   }
   .row-cols-xl-auto > *, .u-el-row-cols-xl-auto > * {
@@ -1862,88 +1862,88 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .col-xl-1, .u-col-xl-1, .u-el-col-xl-1 {
+  .col-xl-1, .u-el-col-xl-1 {
     flex: 0 0 auto;
     width: 8.33333333%;
   }
-  .col-xl-2, .u-col-xl-2, .u-el-col-xl-2 {
+  .col-xl-2, .u-el-col-xl-2 {
     flex: 0 0 auto;
     width: 16.66666667%;
   }
-  .col-xl-3, .u-col-xl-3, .u-el-col-xl-3 {
+  .col-xl-3, .u-el-col-xl-3 {
     flex: 0 0 auto;
     width: 25%;
   }
-  .col-xl-4, .u-col-xl-4, .u-el-col-xl-4 {
+  .col-xl-4, .u-el-col-xl-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
-  .col-xl-5, .u-col-xl-5, .u-el-col-xl-5 {
+  .col-xl-5, .u-el-col-xl-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
-  .col-xl-6, .u-col-xl-6, .u-el-col-xl-6 {
+  .col-xl-6, .u-el-col-xl-6 {
     flex: 0 0 auto;
     width: 50%;
   }
-  .col-xl-7, .u-col-xl-7, .u-el-col-xl-7 {
+  .col-xl-7, .u-el-col-xl-7 {
     flex: 0 0 auto;
     width: 58.33333333%;
   }
-  .col-xl-8, .u-col-xl-8, .u-el-col-xl-8 {
+  .col-xl-8, .u-el-col-xl-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
-  .col-xl-9, .u-col-xl-9, .u-el-col-xl-9 {
+  .col-xl-9, .u-el-col-xl-9 {
     flex: 0 0 auto;
     width: 75%;
   }
-  .col-xl-10, .u-col-xl-10, .u-el-col-xl-10 {
+  .col-xl-10, .u-el-col-xl-10 {
     flex: 0 0 auto;
     width: 83.33333333%;
   }
-  .col-xl-11, .u-col-xl-11, .u-el-col-xl-11 {
+  .col-xl-11, .u-el-col-xl-11 {
     flex: 0 0 auto;
     width: 91.66666667%;
   }
-  .col-xl-12, .u-col-xl-12, .u-el-col-xl-12 {
+  .col-xl-12, .u-el-col-xl-12 {
     flex: 0 0 auto;
     width: 100%;
   }
   .offset-xl-0 {
     margin-left: 0;
   }
-  .offset-xl-1, .u-col-offset-xl-1, .u-el-offset-1, .u-el-offset-xl-1 {
+  .offset-xl-1, .u-el-offset-1, .u-el-offset-xl-1 {
     margin-left: 8.33333333%;
   }
-  .offset-xl-2, .u-col-offset-xl-2, .u-el-offset-2, .u-el-offset-xl-2 {
+  .offset-xl-2, .u-el-offset-2, .u-el-offset-xl-2 {
     margin-left: 16.66666667%;
   }
-  .offset-xl-3, .u-col-offset-xl-3, .u-el-offset-3, .u-el-offset-xl-3 {
+  .offset-xl-3, .u-el-offset-3, .u-el-offset-xl-3 {
     margin-left: 25%;
   }
-  .offset-xl-4, .u-col-offset-xl-4, .u-el-offset-4, .u-el-offset-xl-4 {
+  .offset-xl-4, .u-el-offset-4, .u-el-offset-xl-4 {
     margin-left: 33.33333333%;
   }
-  .offset-xl-5, .u-col-offset-xl-5, .u-el-offset-5, .u-el-offset-xl-5 {
+  .offset-xl-5, .u-el-offset-5, .u-el-offset-xl-5 {
     margin-left: 41.66666667%;
   }
-  .offset-xl-6, .u-col-offset-xl-6, .u-el-offset-6, .u-el-offset-xl-6 {
+  .offset-xl-6, .u-el-offset-6, .u-el-offset-xl-6 {
     margin-left: 50%;
   }
-  .offset-xl-7, .u-col-offset-xl-7, .u-el-offset-7, .u-el-offset-xl-7 {
+  .offset-xl-7, .u-el-offset-7, .u-el-offset-xl-7 {
     margin-left: 58.33333333%;
   }
-  .offset-xl-8, .u-col-offset-xl-8, .u-el-offset-8, .u-el-offset-xl-8 {
+  .offset-xl-8, .u-el-offset-8, .u-el-offset-xl-8 {
     margin-left: 66.66666667%;
   }
-  .offset-xl-9, .u-col-offset-xl-9, .u-el-offset-9, .u-el-offset-xl-9 {
+  .offset-xl-9, .u-el-offset-9, .u-el-offset-xl-9 {
     margin-left: 75%;
   }
-  .offset-xl-10, .u-col-offset-xl-10, .u-el-offset-10, .u-el-offset-xl-10 {
+  .offset-xl-10, .u-el-offset-10, .u-el-offset-xl-10 {
     margin-left: 83.33333333%;
   }
-  .offset-xl-11, .u-col-offset-xl-11, .u-el-offset-11, .u-el-offset-xl-11 {
+  .offset-xl-11, .u-el-offset-11, .u-el-offset-xl-11 {
     margin-left: 91.66666667%;
   }
   .g-xl-0,
@@ -3668,12 +3668,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   outline: 0;
   box-shadow: var(--u-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, .btn-check:checked + .u-button, :not(.btn-check) + .btn:active, :not(.btn-check) + .u-button:active, .btn:first-child:active, .u-button:first-child:active, .btn.active, .u-tabs .u-tabs-panels .btn.u-tabs-panel-active, .u-tabs .u-tabs-items .btn.u-tabs-item-active, .btn.u-carousel-item-active, .btn.u-button-active, .active.u-button, .u-tabs .u-tabs-panels .u-button.u-tabs-panel-active, .u-tabs .u-tabs-items .u-button.u-tabs-item-active, .u-button.u-carousel-item-active, .u-button.u-button-active, .btn.u-breadcrumb-item-active, .u-breadcrumb-item-active.u-button, .btn.u-avatar-active, .u-avatar-active.u-button, .btn.show, .btn.u-tooltip, .btn.u-toast-show, .btn.u-popover, .btn.u-offcanvas-show, .btn.u-dialog-open, .btn.u-dialog-backdrop-open, .btn.u-collapse-open, .show.u-button, .u-button.u-tooltip, .u-button.u-toast-show, .u-button.u-popover, .u-button.u-offcanvas-show, .u-button.u-dialog-open, .u-button.u-dialog-backdrop-open, .u-button.u-collapse-open, .btn.u-el-show, .u-el-show.u-button {
+.btn-check:checked + .btn, .btn-check:checked + .u-button, :not(.btn-check) + .btn:active, :not(.btn-check) + .u-button:active, .btn:first-child:active, .u-button:first-child:active, .btn.active, .u-tabs .u-tabs-panels .btn.u-tabs-panel-active, .u-tabs .u-tabs-items .btn.u-tabs-item-active, .btn.u-carousel-item-active, .btn.u-button-active, .active.u-button, .u-tabs .u-tabs-panels .u-button.u-tabs-panel-active, .u-tabs .u-tabs-items .u-button.u-tabs-item-active, .u-button.u-carousel-item-active, .u-button.u-button-active, .btn.u-breadcrumb-item-active, .u-breadcrumb-item-active.u-button, .btn.u-avatar-active, .u-avatar-active.u-button, .btn.show, .btn.u-tooltip, .btn.u-toast-show, .btn.u-popover, .btn.u-offcanvas-show, .btn.u-dialog-open, .btn.u-dialog-backdrop-open, .show.u-button, .u-button.u-tooltip, .u-button.u-toast-show, .u-button.u-popover, .u-button.u-offcanvas-show, .u-button.u-dialog-open, .u-button.u-dialog-backdrop-open, .btn.u-el-show, .u-el-show.u-button {
   color: var(--u-btn-active-color);
   background-color: var(--u-btn-active-bg);
   border-color: var(--u-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, .btn-check:checked + .u-button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .u-button:active:focus-visible, .btn:first-child:active:focus-visible, .u-button:first-child:active:focus-visible, .btn.active:focus-visible, .u-tabs .u-tabs-panels .btn.u-tabs-panel-active:focus-visible, .u-tabs .u-tabs-items .btn.u-tabs-item-active:focus-visible, .btn.u-carousel-item-active:focus-visible, .btn.u-button-active:focus-visible, .active.u-button:focus-visible, .u-tabs .u-tabs-panels .u-button.u-tabs-panel-active:focus-visible, .u-tabs .u-tabs-items .u-button.u-tabs-item-active:focus-visible, .u-button.u-carousel-item-active:focus-visible, .u-button.u-button-active:focus-visible, .btn.u-breadcrumb-item-active:focus-visible, .u-breadcrumb-item-active.u-button:focus-visible, .btn.u-avatar-active:focus-visible, .u-avatar-active.u-button:focus-visible, .btn.show:focus-visible, .btn.u-tooltip:focus-visible, .btn.u-toast-show:focus-visible, .btn.u-popover:focus-visible, .btn.u-offcanvas-show:focus-visible, .btn.u-dialog-open:focus-visible, .btn.u-dialog-backdrop-open:focus-visible, .btn.u-collapse-open:focus-visible, .show.u-button:focus-visible, .u-button.u-tooltip:focus-visible, .u-button.u-toast-show:focus-visible, .u-button.u-popover:focus-visible, .u-button.u-offcanvas-show:focus-visible, .u-button.u-dialog-open:focus-visible, .u-button.u-dialog-backdrop-open:focus-visible, .u-button.u-collapse-open:focus-visible, .btn.u-el-show:focus-visible, .u-el-show.u-button:focus-visible {
+.btn-check:checked + .btn:focus-visible, .btn-check:checked + .u-button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .u-button:active:focus-visible, .btn:first-child:active:focus-visible, .u-button:first-child:active:focus-visible, .btn.active:focus-visible, .u-tabs .u-tabs-panels .btn.u-tabs-panel-active:focus-visible, .u-tabs .u-tabs-items .btn.u-tabs-item-active:focus-visible, .btn.u-carousel-item-active:focus-visible, .btn.u-button-active:focus-visible, .active.u-button:focus-visible, .u-tabs .u-tabs-panels .u-button.u-tabs-panel-active:focus-visible, .u-tabs .u-tabs-items .u-button.u-tabs-item-active:focus-visible, .u-button.u-carousel-item-active:focus-visible, .u-button.u-button-active:focus-visible, .btn.u-breadcrumb-item-active:focus-visible, .u-breadcrumb-item-active.u-button:focus-visible, .btn.u-avatar-active:focus-visible, .u-avatar-active.u-button:focus-visible, .btn.show:focus-visible, .btn.u-tooltip:focus-visible, .btn.u-toast-show:focus-visible, .btn.u-popover:focus-visible, .btn.u-offcanvas-show:focus-visible, .btn.u-dialog-open:focus-visible, .btn.u-dialog-backdrop-open:focus-visible, .show.u-button:focus-visible, .u-button.u-tooltip:focus-visible, .u-button.u-toast-show:focus-visible, .u-button.u-popover:focus-visible, .u-button.u-offcanvas-show:focus-visible, .u-button.u-dialog-open:focus-visible, .u-button.u-dialog-backdrop-open:focus-visible, .btn.u-el-show:focus-visible, .u-el-show.u-button:focus-visible {
   box-shadow: var(--u-btn-focus-box-shadow);
 }
 .btn:disabled, .u-button:disabled, .btn.disabled, .btn.u-button-disabled, .disabled.u-button, .u-button.u-button-disabled, fieldset:disabled .btn, fieldset:disabled .u-button {
@@ -3731,11 +3731,11 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     transition: none;
   }
 }
-.fade:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-tooltip:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-popover:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-dialog-backdrop:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-dialog:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show) {
+.fade:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-tooltip:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-popover:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-dialog-backdrop:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-dialog:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show) {
   opacity: 0;
 }
 
-.collapse:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show) {
+.collapse:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show) {
   display: none;
 }
 
@@ -4030,7 +4030,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   background-color: transparent;
 }
 
-.dropdown-menu.show, .dropdown-menu.u-tooltip, .dropdown-menu.u-toast-show, .dropdown-menu.u-popover, .dropdown-menu.u-offcanvas-show, .show.u-menu, .u-menu.u-tooltip, .u-menu.u-toast-show, .u-menu.u-popover, .u-menu.u-offcanvas-show, .show.u-autocomplete-items, .u-autocomplete-items.u-tooltip, .u-autocomplete-items.u-toast-show, .u-autocomplete-items.u-popover, .u-autocomplete-items.u-offcanvas-show, .dropdown-menu.u-dialog-open, .u-dialog-open.u-menu, .u-dialog-open.u-autocomplete-items, .dropdown-menu.u-dialog-backdrop-open, .u-dialog-backdrop-open.u-menu, .u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.u-collapse-open, .u-collapse-open.u-menu, .u-collapse-open.u-autocomplete-items, .dropdown-menu.u-el-show, .u-el-show.u-menu, .u-el-show.u-autocomplete-items {
+.dropdown-menu.show, .dropdown-menu.u-tooltip, .dropdown-menu.u-toast-show, .dropdown-menu.u-popover, .dropdown-menu.u-offcanvas-show, .show.u-menu, .u-menu.u-tooltip, .u-menu.u-toast-show, .u-menu.u-popover, .u-menu.u-offcanvas-show, .show.u-autocomplete-items, .u-autocomplete-items.u-tooltip, .u-autocomplete-items.u-toast-show, .u-autocomplete-items.u-popover, .u-autocomplete-items.u-offcanvas-show, .dropdown-menu.u-dialog-open, .u-dialog-open.u-menu, .u-dialog-open.u-autocomplete-items, .dropdown-menu.u-dialog-backdrop-open, .u-dialog-backdrop-open.u-menu, .u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.u-el-show, .u-el-show.u-menu, .u-el-show.u-autocomplete-items {
   display: block;
 }
 
@@ -4384,10 +4384,6 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .nav-tabs .nav-item.u-dialog-backdrop-open .u-tabs .u-tabs-items .u-tabs-item,
 .u-tabs .u-tabs-items .nav-item.u-dialog-backdrop-open .nav-link,
 .u-tabs .u-tabs-items .nav-item.u-dialog-backdrop-open .u-tabs-item,
-.nav-tabs .nav-item.u-collapse-open .nav-link,
-.nav-tabs .nav-item.u-collapse-open .u-tabs .u-tabs-items .u-tabs-item,
-.u-tabs .u-tabs-items .nav-item.u-collapse-open .nav-link,
-.u-tabs .u-tabs-items .nav-item.u-collapse-open .u-tabs-item,
 .nav-tabs .nav-item.u-el-show .nav-link,
 .nav-tabs .nav-item.u-el-show .u-tabs .u-tabs-items .u-tabs-item,
 .u-tabs .u-tabs-items .nav-item.u-el-show .nav-link,
@@ -4439,9 +4435,6 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .nav-pills .u-dialog-backdrop-open > .nav-link,
 .nav-pills .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item,
 .u-tabs .u-tabs-items .nav-pills .u-dialog-backdrop-open > .u-tabs-item,
-.nav-pills .u-collapse-open > .nav-link,
-.nav-pills .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item,
-.u-tabs .u-tabs-items .nav-pills .u-collapse-open > .u-tabs-item,
 .nav-pills .u-el-show > .nav-link,
 .nav-pills .u-tabs .u-tabs-items .u-el-show > .u-tabs-item,
 .u-tabs .u-tabs-items .nav-pills .u-el-show > .u-tabs-item {
@@ -4560,7 +4553,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   margin-bottom: 0;
   list-style: none;
 }
-.navbar-nav .show > .nav-link, .navbar-nav .u-tooltip > .nav-link, .navbar-nav .u-toast-show > .nav-link, .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-toast-show > .u-tabs-item, .navbar-nav .u-popover > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-popover > .u-tabs-item, .navbar-nav .u-offcanvas-show > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-offcanvas-show > .u-tabs-item, .navbar-nav .u-dialog-open > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-dialog-open > .u-tabs-item, .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .navbar-nav .u-collapse-open > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-collapse-open > .u-tabs-item, .navbar-nav .u-el-show > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-el-show > .u-tabs-item,
+.navbar-nav .show > .nav-link, .navbar-nav .u-tooltip > .nav-link, .navbar-nav .u-toast-show > .nav-link, .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-toast-show > .u-tabs-item, .navbar-nav .u-popover > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-popover > .u-tabs-item, .navbar-nav .u-offcanvas-show > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-offcanvas-show > .u-tabs-item, .navbar-nav .u-dialog-open > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-dialog-open > .u-tabs-item, .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .navbar-nav .u-el-show > .nav-link, .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-nav .u-el-show > .u-tabs-item,
 .navbar-nav .nav-link.active,
 .navbar-nav .u-tabs .u-tabs-panels .nav-link.u-tabs-panel-active,
 .u-tabs .u-tabs-panels .navbar-nav .nav-link.u-tabs-panel-active,
@@ -5170,7 +5163,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   --u-accordion-active-bg: transparent;
 }
 
-.accordion-button, .u-collapse-toggler-accordion, .u-accordion-button {
+.accordion-button, .u-accordion-button {
   position: relative;
   display: flex;
   align-items: center;
@@ -5186,20 +5179,20 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   transition: var(--u-accordion-transition);
 }
 @media (prefers-reduced-motion: reduce) {
-  .accordion-button, .u-collapse-toggler-accordion, .u-accordion-button {
+  .accordion-button, .u-accordion-button {
     transition: none;
   }
 }
-.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed), .u-collapse-toggler-accordion:not(.collapsed):not(.u-accordion-button-collapsed), .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed) {
+.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed), .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed) {
   color: var(--u-accordion-active-color);
   background-color: var(--u-accordion-active-bg);
   box-shadow: inset 0 calc(-1 * var(--u-accordion-border-width)) 0 var(--u-accordion-border-color);
 }
-.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed)::after, .u-collapse-toggler-accordion:not(.collapsed):not(.u-accordion-button-collapsed)::after, .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed)::after {
+.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed)::after, .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed)::after {
   background-image: var(--u-accordion-btn-active-icon);
   transform: var(--u-accordion-btn-icon-transform);
 }
-.accordion-button::after, .u-collapse-toggler-accordion::after, .u-accordion-button::after {
+.accordion-button::after, .u-accordion-button::after {
   flex-shrink: 0;
   width: var(--u-accordion-btn-icon-width);
   height: var(--u-accordion-btn-icon-width);
@@ -5211,14 +5204,14 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   transition: var(--u-accordion-btn-icon-transition);
 }
 @media (prefers-reduced-motion: reduce) {
-  .accordion-button::after, .u-collapse-toggler-accordion::after, .u-accordion-button::after {
+  .accordion-button::after, .u-accordion-button::after {
     transition: none;
   }
 }
-.accordion-button:hover, .u-collapse-toggler-accordion:hover, .u-accordion-button:hover {
+.accordion-button:hover, .u-accordion-button:hover {
   z-index: 2;
 }
-.accordion-button:focus, .u-collapse-toggler-accordion:focus, .u-accordion-button:focus {
+.accordion-button:focus, .u-accordion-button:focus {
   z-index: 3;
   border-color: var(--u-accordion-btn-focus-border-color);
   outline: 0;
@@ -5238,7 +5231,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-top-left-radius: var(--u-accordion-border-radius);
   border-top-right-radius: var(--u-accordion-border-radius);
 }
-.accordion-item:first-of-type .accordion-button, .accordion-item:first-of-type .u-collapse-toggler-accordion, .accordion-item:first-of-type .u-accordion-button, .u-accordion:first-of-type .accordion-button, .u-accordion:first-of-type .u-collapse-toggler-accordion, .u-accordion:first-of-type .u-accordion-button {
+.accordion-item:first-of-type .accordion-button, .accordion-item:first-of-type .u-accordion-button, .u-accordion:first-of-type .accordion-button, .u-accordion:first-of-type .u-accordion-button {
   border-top-left-radius: var(--u-accordion-inner-border-radius);
   border-top-right-radius: var(--u-accordion-inner-border-radius);
 }
@@ -5249,11 +5242,11 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-bottom-right-radius: var(--u-accordion-border-radius);
   border-bottom-left-radius: var(--u-accordion-border-radius);
 }
-.accordion-item:last-of-type .accordion-button.collapsed, .accordion-item:last-of-type .collapsed.u-collapse-toggler-accordion, .accordion-item:last-of-type .accordion-button.u-accordion-button-collapsed, .accordion-item:last-of-type .u-accordion-button-collapsed.u-collapse-toggler-accordion, .accordion-item:last-of-type .collapsed.u-accordion-button, .accordion-item:last-of-type .u-accordion-button.u-accordion-button-collapsed, .u-accordion:last-of-type .accordion-button.collapsed, .u-accordion:last-of-type .collapsed.u-collapse-toggler-accordion, .u-accordion:last-of-type .accordion-button.u-accordion-button-collapsed, .u-accordion:last-of-type .u-accordion-button-collapsed.u-collapse-toggler-accordion, .u-accordion:last-of-type .collapsed.u-accordion-button, .u-accordion:last-of-type .u-accordion-button.u-accordion-button-collapsed {
+.accordion-item:last-of-type .accordion-button.collapsed, .accordion-item:last-of-type .accordion-button.u-accordion-button-collapsed, .accordion-item:last-of-type .collapsed.u-accordion-button, .accordion-item:last-of-type .u-accordion-button.u-accordion-button-collapsed, .u-accordion:last-of-type .accordion-button.collapsed, .u-accordion:last-of-type .accordion-button.u-accordion-button-collapsed, .u-accordion:last-of-type .collapsed.u-accordion-button, .u-accordion:last-of-type .u-accordion-button.u-accordion-button-collapsed {
   border-bottom-right-radius: var(--u-accordion-inner-border-radius);
   border-bottom-left-radius: var(--u-accordion-inner-border-radius);
 }
-.accordion-item:last-of-type .accordion-collapse, .accordion-item:last-of-type .u-collapse-accordion, .u-accordion:last-of-type .accordion-collapse, .u-accordion:last-of-type .u-collapse-accordion {
+.accordion-item:last-of-type .accordion-collapse, .u-accordion:last-of-type .accordion-collapse {
   border-bottom-right-radius: var(--u-accordion-border-radius);
   border-bottom-left-radius: var(--u-accordion-border-radius);
 }
@@ -5262,7 +5255,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   padding: var(--u-accordion-body-padding-y) var(--u-accordion-body-padding-x);
 }
 
-.accordion-flush .accordion-collapse, .accordion-flush .u-collapse-accordion {
+.accordion-flush .accordion-collapse {
   border-width: 0;
 }
 .accordion-flush .accordion-item, .accordion-flush .u-accordion {
@@ -5276,7 +5269,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .accordion-flush .accordion-item:last-child, .accordion-flush .u-accordion:last-child {
   border-bottom: 0;
 }
-.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .u-collapse-toggler-accordion, .accordion-flush .accordion-item .u-accordion-button, .accordion-flush .u-accordion .accordion-button, .accordion-flush .u-accordion .u-collapse-toggler-accordion, .accordion-flush .u-accordion .u-accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .u-accordion-button, .accordion-flush .u-accordion .accordion-button, .accordion-flush .u-accordion .u-accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
   border-radius: 0;
 }
 
@@ -6326,7 +6319,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .toast.showing, .showing.u-toast {
   opacity: 0;
 }
-.toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show), .u-toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-collapse-open):not(.u-el-show) {
+.toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show) {
   display: none;
 }
 
@@ -6412,7 +6405,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
     transition: none;
   }
 }
-.modal.show .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-toast-show .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-offcanvas-show .modal-dialog, .modal.u-dialog-open .modal-dialog, .modal.u-dialog-backdrop-open .modal-dialog, .modal.show .u-dialog-container, .modal.u-tooltip .u-dialog-container, .modal.u-toast-show .u-dialog-container, .modal.u-popover .u-dialog-container, .modal.u-offcanvas-show .u-dialog-container, .modal.u-dialog-open .u-dialog-container, .modal.u-dialog-backdrop-open .u-dialog-container, .show.u-dialog .modal-dialog, .u-dialog.u-tooltip .modal-dialog, .u-dialog.u-toast-show .modal-dialog, .u-dialog.u-popover .modal-dialog, .u-dialog.u-offcanvas-show .modal-dialog, .u-dialog.u-dialog-open .modal-dialog, .u-dialog.u-dialog-backdrop-open .modal-dialog, .show.u-dialog .u-dialog-container, .u-dialog.u-tooltip .u-dialog-container, .u-dialog.u-toast-show .u-dialog-container, .u-dialog.u-popover .u-dialog-container, .u-dialog.u-offcanvas-show .u-dialog-container, .u-dialog.u-dialog-open .u-dialog-container, .u-dialog.u-dialog-backdrop-open .u-dialog-container, .modal.u-collapse-open .modal-dialog, .modal.u-collapse-open .u-dialog-container, .u-collapse-open.u-dialog .modal-dialog, .u-collapse-open.u-dialog .u-dialog-container, .modal.u-el-show .modal-dialog, .modal.u-el-show .u-dialog-container, .u-el-show.u-dialog .modal-dialog, .u-el-show.u-dialog .u-dialog-container {
+.modal.show .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-toast-show .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-offcanvas-show .modal-dialog, .modal.u-dialog-open .modal-dialog, .modal.u-dialog-backdrop-open .modal-dialog, .modal.show .u-dialog-container, .modal.u-tooltip .u-dialog-container, .modal.u-toast-show .u-dialog-container, .modal.u-popover .u-dialog-container, .modal.u-offcanvas-show .u-dialog-container, .modal.u-dialog-open .u-dialog-container, .modal.u-dialog-backdrop-open .u-dialog-container, .show.u-dialog .modal-dialog, .u-dialog.u-tooltip .modal-dialog, .u-dialog.u-toast-show .modal-dialog, .u-dialog.u-popover .modal-dialog, .u-dialog.u-offcanvas-show .modal-dialog, .u-dialog.u-dialog-open .modal-dialog, .u-dialog.u-dialog-backdrop-open .modal-dialog, .show.u-dialog .u-dialog-container, .u-dialog.u-tooltip .u-dialog-container, .u-dialog.u-toast-show .u-dialog-container, .u-dialog.u-popover .u-dialog-container, .u-dialog.u-offcanvas-show .u-dialog-container, .u-dialog.u-dialog-open .u-dialog-container, .u-dialog.u-dialog-backdrop-open .u-dialog-container, .modal.u-el-show .modal-dialog, .modal.u-el-show .u-dialog-container, .u-el-show.u-dialog .modal-dialog, .u-el-show.u-dialog .u-dialog-container {
   transform: none;
 }
 .modal.modal-static .modal-dialog, .modal.modal-static .u-dialog-container, .modal-static.u-dialog .modal-dialog, .modal-static.u-dialog .u-dialog-container {
@@ -6465,7 +6458,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .modal-backdrop.fade, .modal-backdrop.u-tooltip, .modal-backdrop.u-popover, .u-dialog-backdrop, .modal-backdrop.u-dialog {
   opacity: 0;
 }
-.modal-backdrop.show, .modal-backdrop.u-tooltip, .modal-backdrop.u-toast-show, .modal-backdrop.u-popover, .modal-backdrop.u-offcanvas-show, .modal-backdrop.u-dialog-open, .modal-backdrop.u-dialog-backdrop-open, .show.u-dialog-backdrop, .u-dialog-backdrop.u-tooltip, .u-dialog-backdrop.u-toast-show, .u-dialog-backdrop.u-popover, .u-dialog-backdrop.u-offcanvas-show, .u-dialog-backdrop.u-dialog-open, .u-dialog-backdrop.u-dialog-backdrop-open, .modal-backdrop.u-collapse-open, .u-collapse-open.u-dialog-backdrop, .modal-backdrop.u-el-show, .u-el-show.u-dialog-backdrop {
+.modal-backdrop.show, .modal-backdrop.u-tooltip, .modal-backdrop.u-toast-show, .modal-backdrop.u-popover, .modal-backdrop.u-offcanvas-show, .modal-backdrop.u-dialog-open, .modal-backdrop.u-dialog-backdrop-open, .show.u-dialog-backdrop, .u-dialog-backdrop.u-tooltip, .u-dialog-backdrop.u-toast-show, .u-dialog-backdrop.u-popover, .u-dialog-backdrop.u-offcanvas-show, .u-dialog-backdrop.u-dialog-open, .u-dialog-backdrop.u-dialog-backdrop-open, .modal-backdrop.u-el-show, .u-el-show.u-dialog-backdrop {
   opacity: var(--u-backdrop-opacity);
 }
 
@@ -6697,7 +6690,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   word-wrap: break-word;
   opacity: 0;
 }
-.tooltip.show, .u-tooltip, .tooltip.u-toast-show, .tooltip.u-popover, .tooltip.u-offcanvas-show, .tooltip.u-dialog-open, .tooltip.u-dialog-backdrop-open, .tooltip.u-collapse-open, .tooltip.u-el-show {
+.tooltip.show, .u-tooltip, .tooltip.u-toast-show, .tooltip.u-popover, .tooltip.u-offcanvas-show, .tooltip.u-dialog-open, .tooltip.u-dialog-backdrop-open, .tooltip.u-el-show {
   opacity: var(--u-tooltip-opacity);
 }
 .tooltip .tooltip-arrow, .tooltip .u-tooltip-arrow, .u-tooltip .tooltip-arrow, .u-tooltip .u-tooltip-arrow {
@@ -7297,12 +7290,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding), .offcanvas-sm.u-tooltip:not(.hiding), .offcanvas-sm.u-toast-show:not(.hiding), .offcanvas-sm.u-popover:not(.hiding), .offcanvas-sm.u-offcanvas-show:not(.hiding), .offcanvas-sm.u-dialog-open:not(.hiding), .offcanvas-sm.u-dialog-backdrop-open:not(.hiding), .offcanvas-sm.u-collapse-open:not(.hiding), .offcanvas-sm.u-el-show:not(.hiding) {
+  .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding), .offcanvas-sm.u-tooltip:not(.hiding), .offcanvas-sm.u-toast-show:not(.hiding), .offcanvas-sm.u-popover:not(.hiding), .offcanvas-sm.u-offcanvas-show:not(.hiding), .offcanvas-sm.u-dialog-open:not(.hiding), .offcanvas-sm.u-dialog-backdrop-open:not(.hiding), .offcanvas-sm.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show, .offcanvas-sm.u-tooltip, .offcanvas-sm.u-toast-show, .offcanvas-sm.u-popover, .offcanvas-sm.u-offcanvas-show, .offcanvas-sm.u-dialog-open, .offcanvas-sm.u-dialog-backdrop-open, .offcanvas-sm.u-collapse-open, .offcanvas-sm.u-el-show {
+  .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show, .offcanvas-sm.u-tooltip, .offcanvas-sm.u-toast-show, .offcanvas-sm.u-popover, .offcanvas-sm.u-offcanvas-show, .offcanvas-sm.u-dialog-open, .offcanvas-sm.u-dialog-backdrop-open, .offcanvas-sm.u-el-show {
     visibility: visible;
   }
 }
@@ -7385,12 +7378,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.showing, .offcanvas-md.show:not(.hiding), .offcanvas-md.u-tooltip:not(.hiding), .offcanvas-md.u-toast-show:not(.hiding), .offcanvas-md.u-popover:not(.hiding), .offcanvas-md.u-offcanvas-show:not(.hiding), .offcanvas-md.u-dialog-open:not(.hiding), .offcanvas-md.u-dialog-backdrop-open:not(.hiding), .offcanvas-md.u-collapse-open:not(.hiding), .offcanvas-md.u-el-show:not(.hiding) {
+  .offcanvas-md.showing, .offcanvas-md.show:not(.hiding), .offcanvas-md.u-tooltip:not(.hiding), .offcanvas-md.u-toast-show:not(.hiding), .offcanvas-md.u-popover:not(.hiding), .offcanvas-md.u-offcanvas-show:not(.hiding), .offcanvas-md.u-dialog-open:not(.hiding), .offcanvas-md.u-dialog-backdrop-open:not(.hiding), .offcanvas-md.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show, .offcanvas-md.u-tooltip, .offcanvas-md.u-toast-show, .offcanvas-md.u-popover, .offcanvas-md.u-offcanvas-show, .offcanvas-md.u-dialog-open, .offcanvas-md.u-dialog-backdrop-open, .offcanvas-md.u-collapse-open, .offcanvas-md.u-el-show {
+  .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show, .offcanvas-md.u-tooltip, .offcanvas-md.u-toast-show, .offcanvas-md.u-popover, .offcanvas-md.u-offcanvas-show, .offcanvas-md.u-dialog-open, .offcanvas-md.u-dialog-backdrop-open, .offcanvas-md.u-el-show {
     visibility: visible;
   }
 }
@@ -7473,12 +7466,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding), .offcanvas-lg.u-tooltip:not(.hiding), .offcanvas-lg.u-toast-show:not(.hiding), .offcanvas-lg.u-popover:not(.hiding), .offcanvas-lg.u-offcanvas-show:not(.hiding), .offcanvas-lg.u-dialog-open:not(.hiding), .offcanvas-lg.u-dialog-backdrop-open:not(.hiding), .offcanvas-lg.u-collapse-open:not(.hiding), .offcanvas-lg.u-el-show:not(.hiding) {
+  .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding), .offcanvas-lg.u-tooltip:not(.hiding), .offcanvas-lg.u-toast-show:not(.hiding), .offcanvas-lg.u-popover:not(.hiding), .offcanvas-lg.u-offcanvas-show:not(.hiding), .offcanvas-lg.u-dialog-open:not(.hiding), .offcanvas-lg.u-dialog-backdrop-open:not(.hiding), .offcanvas-lg.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show, .offcanvas-lg.u-tooltip, .offcanvas-lg.u-toast-show, .offcanvas-lg.u-popover, .offcanvas-lg.u-offcanvas-show, .offcanvas-lg.u-dialog-open, .offcanvas-lg.u-dialog-backdrop-open, .offcanvas-lg.u-collapse-open, .offcanvas-lg.u-el-show {
+  .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show, .offcanvas-lg.u-tooltip, .offcanvas-lg.u-toast-show, .offcanvas-lg.u-popover, .offcanvas-lg.u-offcanvas-show, .offcanvas-lg.u-dialog-open, .offcanvas-lg.u-dialog-backdrop-open, .offcanvas-lg.u-el-show {
     visibility: visible;
   }
 }
@@ -7561,12 +7554,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding), .offcanvas-xl.u-tooltip:not(.hiding), .offcanvas-xl.u-toast-show:not(.hiding), .offcanvas-xl.u-popover:not(.hiding), .offcanvas-xl.u-offcanvas-show:not(.hiding), .offcanvas-xl.u-dialog-open:not(.hiding), .offcanvas-xl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xl.u-collapse-open:not(.hiding), .offcanvas-xl.u-el-show:not(.hiding) {
+  .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding), .offcanvas-xl.u-tooltip:not(.hiding), .offcanvas-xl.u-toast-show:not(.hiding), .offcanvas-xl.u-popover:not(.hiding), .offcanvas-xl.u-offcanvas-show:not(.hiding), .offcanvas-xl.u-dialog-open:not(.hiding), .offcanvas-xl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xl.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show, .offcanvas-xl.u-tooltip, .offcanvas-xl.u-toast-show, .offcanvas-xl.u-popover, .offcanvas-xl.u-offcanvas-show, .offcanvas-xl.u-dialog-open, .offcanvas-xl.u-dialog-backdrop-open, .offcanvas-xl.u-collapse-open, .offcanvas-xl.u-el-show {
+  .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show, .offcanvas-xl.u-tooltip, .offcanvas-xl.u-toast-show, .offcanvas-xl.u-popover, .offcanvas-xl.u-offcanvas-show, .offcanvas-xl.u-dialog-open, .offcanvas-xl.u-dialog-backdrop-open, .offcanvas-xl.u-el-show {
     visibility: visible;
   }
 }
@@ -7649,12 +7642,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding), .offcanvas-xxl.u-tooltip:not(.hiding), .offcanvas-xxl.u-toast-show:not(.hiding), .offcanvas-xxl.u-popover:not(.hiding), .offcanvas-xxl.u-offcanvas-show:not(.hiding), .offcanvas-xxl.u-dialog-open:not(.hiding), .offcanvas-xxl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xxl.u-collapse-open:not(.hiding), .offcanvas-xxl.u-el-show:not(.hiding) {
+  .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding), .offcanvas-xxl.u-tooltip:not(.hiding), .offcanvas-xxl.u-toast-show:not(.hiding), .offcanvas-xxl.u-popover:not(.hiding), .offcanvas-xxl.u-offcanvas-show:not(.hiding), .offcanvas-xxl.u-dialog-open:not(.hiding), .offcanvas-xxl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xxl.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show, .offcanvas-xxl.u-tooltip, .offcanvas-xxl.u-toast-show, .offcanvas-xxl.u-popover, .offcanvas-xxl.u-offcanvas-show, .offcanvas-xxl.u-dialog-open, .offcanvas-xxl.u-dialog-backdrop-open, .offcanvas-xxl.u-collapse-open, .offcanvas-xxl.u-el-show {
+  .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show, .offcanvas-xxl.u-tooltip, .offcanvas-xxl.u-toast-show, .offcanvas-xxl.u-popover, .offcanvas-xxl.u-offcanvas-show, .offcanvas-xxl.u-dialog-open, .offcanvas-xxl.u-dialog-backdrop-open, .offcanvas-xxl.u-el-show {
     visibility: visible;
   }
 }
@@ -7726,10 +7719,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   border-top: var(--u-offcanvas-border-width) solid var(--u-offcanvas-border-color);
   transform: translateY(100%);
 }
-.offcanvas.showing, .showing.u-offcanvas, .offcanvas.show:not(.hiding), .offcanvas.u-tooltip:not(.hiding), .offcanvas.u-toast-show:not(.hiding), .offcanvas.u-popover:not(.hiding), .offcanvas.u-offcanvas-show:not(.hiding), .show.u-offcanvas:not(.hiding), .u-offcanvas.u-tooltip:not(.hiding), .u-offcanvas.u-toast-show:not(.hiding), .u-offcanvas.u-popover:not(.hiding), .u-offcanvas.u-offcanvas-show:not(.hiding), .offcanvas.u-dialog-open:not(.hiding), .u-dialog-open.u-offcanvas:not(.hiding), .offcanvas.u-dialog-backdrop-open:not(.hiding), .u-dialog-backdrop-open.u-offcanvas:not(.hiding), .offcanvas.u-collapse-open:not(.hiding), .u-collapse-open.u-offcanvas:not(.hiding), .offcanvas.u-el-show:not(.hiding), .u-el-show.u-offcanvas:not(.hiding) {
+.offcanvas.showing, .showing.u-offcanvas, .offcanvas.show:not(.hiding), .offcanvas.u-tooltip:not(.hiding), .offcanvas.u-toast-show:not(.hiding), .offcanvas.u-popover:not(.hiding), .offcanvas.u-offcanvas-show:not(.hiding), .show.u-offcanvas:not(.hiding), .u-offcanvas.u-tooltip:not(.hiding), .u-offcanvas.u-toast-show:not(.hiding), .u-offcanvas.u-popover:not(.hiding), .u-offcanvas.u-offcanvas-show:not(.hiding), .offcanvas.u-dialog-open:not(.hiding), .u-dialog-open.u-offcanvas:not(.hiding), .offcanvas.u-dialog-backdrop-open:not(.hiding), .u-dialog-backdrop-open.u-offcanvas:not(.hiding), .offcanvas.u-el-show:not(.hiding), .u-el-show.u-offcanvas:not(.hiding) {
   transform: none;
 }
-.offcanvas.showing, .showing.u-offcanvas, .offcanvas.hiding, .hiding.u-offcanvas, .offcanvas.show, .offcanvas.u-tooltip, .offcanvas.u-toast-show, .offcanvas.u-popover, .offcanvas.u-offcanvas-show, .show.u-offcanvas, .u-offcanvas.u-tooltip, .u-offcanvas.u-toast-show, .u-offcanvas.u-popover, .u-offcanvas.u-offcanvas-show, .offcanvas.u-dialog-open, .u-dialog-open.u-offcanvas, .offcanvas.u-dialog-backdrop-open, .u-dialog-backdrop-open.u-offcanvas, .offcanvas.u-collapse-open, .u-collapse-open.u-offcanvas, .offcanvas.u-el-show, .u-el-show.u-offcanvas {
+.offcanvas.showing, .showing.u-offcanvas, .offcanvas.hiding, .hiding.u-offcanvas, .offcanvas.show, .offcanvas.u-tooltip, .offcanvas.u-toast-show, .offcanvas.u-popover, .offcanvas.u-offcanvas-show, .show.u-offcanvas, .u-offcanvas.u-tooltip, .u-offcanvas.u-toast-show, .u-offcanvas.u-popover, .u-offcanvas.u-offcanvas-show, .offcanvas.u-dialog-open, .u-dialog-open.u-offcanvas, .offcanvas.u-dialog-backdrop-open, .u-dialog-backdrop-open.u-offcanvas, .offcanvas.u-el-show, .u-el-show.u-offcanvas {
   visibility: visible;
 }
 
@@ -7745,7 +7738,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
 .offcanvas-backdrop.fade, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-dialog-backdrop, .offcanvas-backdrop.u-dialog {
   opacity: 0;
 }
-.offcanvas-backdrop.show, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-toast-show, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-offcanvas-show, .offcanvas-backdrop.u-dialog-open, .offcanvas-backdrop.u-dialog-backdrop-open, .offcanvas-backdrop.u-collapse-open, .offcanvas-backdrop.u-el-show {
+.offcanvas-backdrop.show, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-toast-show, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-offcanvas-show, .offcanvas-backdrop.u-dialog-open, .offcanvas-backdrop.u-dialog-backdrop-open, .offcanvas-backdrop.u-el-show {
   opacity: 0.24;
 }
 
@@ -9218,7 +9211,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   align-self: stretch !important;
 }
 
-.order-first, .u-col-order-first, .u-el-order-first {
+.order-first, .u-el-order-first {
   order: -1 !important;
 }
 
@@ -9226,27 +9219,27 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-input-size-lg,
   order: 0 !important;
 }
 
-.order-1, .u-col-order-1, .u-el-order-1 {
+.order-1, .u-el-order-1 {
   order: 1 !important;
 }
 
-.order-2, .u-col-order-2, .u-el-order-2 {
+.order-2, .u-el-order-2 {
   order: 2 !important;
 }
 
-.order-3, .u-col-order-3, .u-el-order-3 {
+.order-3, .u-el-order-3 {
   order: 3 !important;
 }
 
-.order-4, .u-col-order-4, .u-el-order-4 {
+.order-4, .u-el-order-4 {
   order: 4 !important;
 }
 
-.order-5, .u-col-order-5, .u-el-order-5 {
+.order-5, .u-el-order-5 {
   order: 5 !important;
 }
 
-.order-last, .u-col-order-last, .u-el-order-last {
+.order-last, .u-el-order-last {
   order: 6 !important;
 }
 
@@ -13413,7 +13406,7 @@ Navbar
 .navbar .navbar-nav .nav-link.disabled, .navbar .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .disabled.u-tabs-item, .navbar .navbar-nav .nav-link.u-button-disabled, .navbar .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-button-disabled.u-tabs-item, .u-app-header .navbar-nav .nav-link.disabled, .u-app-header .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .disabled.u-tabs-item, .u-app-header .navbar-nav .nav-link.u-button-disabled, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-button-disabled.u-tabs-item {
   color: var(--u-disabled-color);
 }
-.navbar .navbar-nav .show > .nav-link, .navbar .navbar-nav .u-tooltip > .nav-link, .navbar .navbar-nav .u-toast-show > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .navbar .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .navbar .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-toast-show > .u-tabs-item, .navbar .navbar-nav .u-popover > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-popover > .u-tabs-item, .navbar .navbar-nav .u-offcanvas-show > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-offcanvas-show > .u-tabs-item, .navbar .navbar-nav .u-dialog-open > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-dialog-open > .u-tabs-item, .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .navbar .navbar-nav .u-collapse-open > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-collapse-open > .u-tabs-item, .navbar .navbar-nav .u-el-show > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-el-show > .u-tabs-item, .u-app-header .navbar-nav .show > .nav-link, .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-toast-show > .u-tabs-item, .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-popover > .u-tabs-item, .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-offcanvas-show > .u-tabs-item, .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-dialog-open > .u-tabs-item, .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .u-app-header .navbar-nav .u-collapse-open > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-collapse-open > .u-tabs-item, .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-el-show > .u-tabs-item,
+.navbar .navbar-nav .show > .nav-link, .navbar .navbar-nav .u-tooltip > .nav-link, .navbar .navbar-nav .u-toast-show > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .navbar .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .navbar .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-toast-show > .u-tabs-item, .navbar .navbar-nav .u-popover > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-popover > .u-tabs-item, .navbar .navbar-nav .u-offcanvas-show > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-offcanvas-show > .u-tabs-item, .navbar .navbar-nav .u-dialog-open > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-dialog-open > .u-tabs-item, .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .navbar .navbar-nav .u-el-show > .nav-link, .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar .navbar-nav .u-el-show > .u-tabs-item, .u-app-header .navbar-nav .show > .nav-link, .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-toast-show > .u-tabs-item, .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-popover > .u-tabs-item, .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-offcanvas-show > .u-tabs-item, .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-dialog-open > .u-tabs-item, .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-el-show > .u-tabs-item,
 .navbar .navbar-nav .active > .nav-link,
 .navbar .navbar-nav .u-tabs .u-tabs-panels .u-tabs-panel-active > .nav-link,
 .u-tabs .u-tabs-panels .navbar .navbar-nav .u-tabs-panel-active > .nav-link,
@@ -13485,9 +13478,6 @@ Navbar
 .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
 .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
 .u-tabs .u-tabs-items .navbar .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-.navbar .navbar-nav .nav-link.u-collapse-open,
-.navbar .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-.u-tabs .u-tabs-items .navbar .navbar-nav .u-collapse-open.u-tabs-item,
 .navbar .navbar-nav .nav-link.u-el-show,
 .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
 .u-tabs .u-tabs-items .navbar .navbar-nav .u-el-show.u-tabs-item,
@@ -13512,9 +13502,6 @@ Navbar
 .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
 .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
 .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-.u-app-header .navbar-nav .nav-link.u-collapse-open,
-.u-app-header .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-.u-tabs .u-tabs-items .u-app-header .navbar-nav .u-collapse-open.u-tabs-item,
 .u-app-header .navbar-nav .nav-link.u-el-show,
 .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
 .u-tabs .u-tabs-items .u-app-header .navbar-nav .u-el-show.u-tabs-item,
@@ -13606,7 +13593,7 @@ Navbar
   .theme-dark .navbar .navbar-nav .nav-link.disabled, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .disabled.u-tabs-item, .theme-dark .navbar .navbar-nav .nav-link.u-button-disabled, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-button-disabled.u-tabs-item, .theme-dark .u-app-header .navbar-nav .nav-link.disabled, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .disabled.u-tabs-item, .theme-dark .u-app-header .navbar-nav .nav-link.u-button-disabled, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-button-disabled.u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .nav-link.disabled, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .disabled.u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .nav-link.u-button-disabled, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-button-disabled.u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .nav-link.disabled, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .disabled.u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-button-disabled, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-button-disabled.u-tabs-item {
     color: var(--u-disabled-color);
   }
-  .theme-dark .navbar .navbar-nav .show > .nav-link, .theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-toast-show > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-popover > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-popover > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-dialog-open > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-collapse-open > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-collapse-open > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-el-show > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-popover > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-collapse-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-collapse-open > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-el-show > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-popover > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-collapse-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-collapse-open > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-el-show > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-collapse-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-collapse-open > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .u-tabs-item,
+  .theme-dark .navbar .navbar-nav .show > .nav-link, .theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-toast-show > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-popover > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-popover > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-dialog-open > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-el-show > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-popover > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-el-show > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-popover > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-el-show > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .u-tabs-item,
   .theme-dark .navbar .navbar-nav .active > .nav-link,
   .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-panels .u-tabs-panel-active > .nav-link,
   .u-tabs .u-tabs-panels .theme-dark .navbar .navbar-nav .u-tabs-panel-active > .nav-link,
@@ -13728,9 +13715,6 @@ Navbar
   .theme-dark .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
   .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
   .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-  .theme-dark .navbar .navbar-nav .nav-link.u-collapse-open,
-  .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-  .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-collapse-open.u-tabs-item,
   .theme-dark .navbar .navbar-nav .nav-link.u-el-show,
   .theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
   .u-tabs .u-tabs-items .theme-dark .navbar .navbar-nav .u-el-show.u-tabs-item,
@@ -13755,9 +13739,6 @@ Navbar
   .theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
   .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
   .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-  .theme-dark .u-app-header .navbar-nav .nav-link.u-collapse-open,
-  .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-  .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-collapse-open.u-tabs-item,
   .theme-dark .u-app-header .navbar-nav .nav-link.u-el-show,
   .theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
   .u-tabs .u-tabs-items .theme-dark .u-app-header .navbar-nav .u-el-show.u-tabs-item,
@@ -13782,9 +13763,6 @@ Navbar
   .u-app-theme-dark .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
   .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
   .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-  .u-app-theme-dark .navbar .navbar-nav .nav-link.u-collapse-open,
-  .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-  .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-collapse-open.u-tabs-item,
   .u-app-theme-dark .navbar .navbar-nav .nav-link.u-el-show,
   .u-app-theme-dark .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
   .u-tabs .u-tabs-items .u-app-theme-dark .navbar .navbar-nav .u-el-show.u-tabs-item,
@@ -13809,9 +13787,6 @@ Navbar
   .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
   .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
   .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-  .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-collapse-open,
-  .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-  .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-collapse-open.u-tabs-item,
   .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-el-show,
   .u-app-theme-dark .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
   .u-tabs .u-tabs-items .u-app-theme-dark .u-app-header .navbar-nav .u-el-show.u-tabs-item,
@@ -13978,7 +13953,7 @@ Navbar
     .theme-dark-auto .navbar .navbar-nav .nav-link.disabled, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .disabled.u-tabs-item, .theme-dark-auto .navbar .navbar-nav .nav-link.u-button-disabled, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-button-disabled.u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .nav-link.disabled, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .disabled.u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-button-disabled, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-button-disabled.u-tabs-item {
       color: var(--u-disabled-color);
     }
-    .theme-dark-auto .navbar .navbar-nav .show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-toast-show > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-popover > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-popover > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-collapse-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-collapse-open > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-el-show > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-popover > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-collapse-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-collapse-open > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .u-tabs-item,
+    .theme-dark-auto .navbar .navbar-nav .show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-toast-show > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-popover > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-popover > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .theme-dark-auto .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-el-show > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-popover > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .u-tabs-item,
     .theme-dark-auto .navbar .navbar-nav .active > .nav-link,
     .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-panels .u-tabs-panel-active > .nav-link,
     .u-tabs .u-tabs-panels .theme-dark-auto .navbar .navbar-nav .u-tabs-panel-active > .nav-link,
@@ -14050,9 +14025,6 @@ Navbar
     .theme-dark-auto .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
     .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
     .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-    .theme-dark-auto .navbar .navbar-nav .nav-link.u-collapse-open,
-    .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-    .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-collapse-open.u-tabs-item,
     .theme-dark-auto .navbar .navbar-nav .nav-link.u-el-show,
     .theme-dark-auto .navbar .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
     .u-tabs .u-tabs-items .theme-dark-auto .navbar .navbar-nav .u-el-show.u-tabs-item,
@@ -14077,9 +14049,6 @@ Navbar
     .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
     .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
     .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-    .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-collapse-open,
-    .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-    .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-collapse-open.u-tabs-item,
     .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-el-show,
     .theme-dark-auto .u-app-header .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
     .u-tabs .u-tabs-items .theme-dark-auto .u-app-header .navbar-nav .u-el-show.u-tabs-item,
@@ -15127,7 +15096,7 @@ Navbar dark
 .navbar-dark .navbar-nav .nav-link.disabled, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .disabled.u-tabs-item, .navbar-dark .navbar-nav .nav-link.u-button-disabled, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-button-disabled.u-tabs-item, .u-app-header-theme-dark .navbar-nav .nav-link.disabled, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .disabled.u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .disabled.u-tabs-item, .u-app-header-theme-dark .navbar-nav .nav-link.u-button-disabled, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-button-disabled.u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-button-disabled.u-tabs-item {
   color: var(--u-disabled-color);
 }
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .u-tooltip > .nav-link, .navbar-dark .navbar-nav .u-toast-show > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-toast-show > .u-tabs-item, .navbar-dark .navbar-nav .u-popover > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-popover > .u-tabs-item, .navbar-dark .navbar-nav .u-offcanvas-show > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-offcanvas-show > .u-tabs-item, .navbar-dark .navbar-nav .u-dialog-open > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-dialog-open > .u-tabs-item, .navbar-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .navbar-dark .navbar-nav .u-collapse-open > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-collapse-open > .u-tabs-item, .navbar-dark .navbar-nav .u-el-show > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-el-show > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tooltip > .nav-link, .u-app-header-theme-dark .navbar-nav .u-toast-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-toast-show > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-popover > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-popover > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-dialog-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-dialog-open > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-collapse-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-collapse-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-collapse-open > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-el-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-el-show > .u-tabs-item,
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .u-tooltip > .nav-link, .navbar-dark .navbar-nav .u-toast-show > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-toast-show > .u-tabs-item, .navbar-dark .navbar-nav .u-popover > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-popover > .u-tabs-item, .navbar-dark .navbar-nav .u-offcanvas-show > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-offcanvas-show > .u-tabs-item, .navbar-dark .navbar-nav .u-dialog-open > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-dialog-open > .u-tabs-item, .navbar-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .navbar-dark .navbar-nav .u-el-show > .nav-link, .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-el-show > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tooltip > .nav-link, .u-app-header-theme-dark .navbar-nav .u-toast-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .show > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-tooltip > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-toast-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-tooltip > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-toast-show > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-popover > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-popover > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-popover > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-offcanvas-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-dialog-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-dialog-open > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .u-tabs-item, .u-app-header-theme-dark .navbar-nav .u-el-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-el-show > .u-tabs-item, .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-el-show > .u-tabs-item,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .u-tabs .u-tabs-panels .u-tabs-panel-active > .nav-link,
 .u-tabs .u-tabs-panels .navbar-dark .navbar-nav .u-tabs-panel-active > .nav-link,
@@ -15199,9 +15168,6 @@ Navbar dark
 .navbar-dark .navbar-nav .nav-link.u-dialog-backdrop-open,
 .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
 .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-.navbar-dark .navbar-nav .nav-link.u-collapse-open,
-.navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-.u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-collapse-open.u-tabs-item,
 .navbar-dark .navbar-nav .nav-link.u-el-show,
 .navbar-dark .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
 .u-tabs .u-tabs-items .navbar-dark .navbar-nav .u-el-show.u-tabs-item,
@@ -15226,9 +15192,6 @@ Navbar dark
 .u-app-header-theme-dark .navbar-nav .nav-link.u-dialog-backdrop-open,
 .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-dialog-backdrop-open.u-tabs-item,
 .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open.u-tabs-item,
-.u-app-header-theme-dark .navbar-nav .nav-link.u-collapse-open,
-.u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-collapse-open.u-tabs-item,
-.u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-collapse-open.u-tabs-item,
 .u-app-header-theme-dark .navbar-nav .nav-link.u-el-show,
 .u-app-header-theme-dark .navbar-nav .u-tabs .u-tabs-items .u-el-show.u-tabs-item,
 .u-tabs .u-tabs-items .u-app-header-theme-dark .navbar-nav .u-el-show.u-tabs-item,
@@ -16420,18 +16383,14 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   .theme-dark .markdown > *,
   .u-app-theme-dark .markdown > *,
   .theme-dark .accordion-button,
-  .theme-dark .u-collapse-toggler-accordion,
   .u-app-theme-dark .accordion-button,
-  .u-app-theme-dark .u-collapse-toggler-accordion,
   .theme-dark .u-accordion-button,
   .u-app-theme-dark .u-accordion-button {
     color: inherit;
   }
   .theme-dark .btn-close, .theme-dark .u-toast-close, .theme-dark .u-offcanvas-header-btn, .theme-dark .u-dialog-close, .u-app-theme-dark .btn-close, .u-app-theme-dark .u-toast-close, .u-app-theme-dark .u-offcanvas-header-btn, .u-app-theme-dark .u-dialog-close, .theme-dark .u-alert-end, .u-app-theme-dark .u-alert-end,
   .theme-dark .accordion-button:after,
-  .theme-dark .u-collapse-toggler-accordion:after,
   .u-app-theme-dark .accordion-button:after,
-  .u-app-theme-dark .u-collapse-toggler-accordion:after,
   .theme-dark .u-accordion-button:after,
   .u-app-theme-dark .u-accordion-button:after {
     filter: invert(1) grayscale(100%) brightness(200%);
@@ -16620,13 +16579,11 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     .theme-dark-auto .markdown,
     .theme-dark-auto .markdown > *,
     .theme-dark-auto .accordion-button,
-    .theme-dark-auto .u-collapse-toggler-accordion,
     .theme-dark-auto .u-accordion-button {
       color: inherit;
     }
     .theme-dark-auto .btn-close, .theme-dark-auto .u-toast-close, .theme-dark-auto .u-offcanvas-header-btn, .theme-dark-auto .u-dialog-close, .theme-dark-auto .u-alert-end,
     .theme-dark-auto .accordion-button:after,
-    .theme-dark-auto .u-collapse-toggler-accordion:after,
     .theme-dark-auto .u-accordion-button:after {
       filter: invert(1) grayscale(100%) brightness(200%);
     }
@@ -16688,19 +16645,19 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   --u-accordion-color: var(--u-body-color);
 }
 
-.accordion-button:focus:not(:focus-visible), .u-collapse-toggler-accordion:focus:not(:focus-visible), .u-accordion-button:focus:not(:focus-visible) {
+.accordion-button:focus:not(:focus-visible), .u-accordion-button:focus:not(:focus-visible) {
   outline: none;
   box-shadow: none;
 }
-.accordion-button:after, .u-collapse-toggler-accordion:after, .u-accordion-button:after {
+.accordion-button:after, .u-accordion-button:after {
   opacity: 0.7;
 }
-.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed), .u-collapse-toggler-accordion:not(.collapsed):not(.u-accordion-button-collapsed), .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed) {
+.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed), .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed) {
   font-weight: var(--u-font-weight-bold);
   border-bottom-color: transparent;
   box-shadow: none;
 }
-.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed):after, .u-collapse-toggler-accordion:not(.collapsed):not(.u-accordion-button-collapsed):after, .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed):after {
+.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed):after, .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed):after {
   opacity: 1;
 }
 
@@ -18954,11 +18911,11 @@ a.badge, a.u-badge {
   outline: none;
   box-shadow: none;
 }
-.btn-action:hover, .btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-collapse-open, .btn-action.u-el-show {
+.btn-action:hover, .btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-el-show {
   color: var(--u-body-color);
   background: var(--u-active-bg);
 }
-.btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-collapse-open, .btn-action.u-el-show {
+.btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-el-show {
   color: var(--u-primary);
 }
 .btn-action .icon, .btn-action .u-icon {
@@ -19768,7 +19725,7 @@ Card list group
   min-width: 25rem;
   display: none;
 }
-.dropdown-menu.card.show, .dropdown-menu.card.u-tooltip, .dropdown-menu.card.u-toast-show, .dropdown-menu.card.u-popover, .dropdown-menu.card.u-offcanvas-show, .card.show.u-menu, .card.u-menu.u-tooltip, .card.u-menu.u-toast-show, .card.u-menu.u-popover, .card.u-menu.u-offcanvas-show, .card.show.u-autocomplete-items, .card.u-autocomplete-items.u-tooltip, .card.u-autocomplete-items.u-toast-show, .card.u-autocomplete-items.u-popover, .card.u-autocomplete-items.u-offcanvas-show, .dropdown-menu.card.u-dialog-open, .card.u-dialog-open.u-menu, .card.u-dialog-open.u-autocomplete-items, .dropdown-menu.card.u-dialog-backdrop-open, .card.u-dialog-backdrop-open.u-menu, .card.u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.card.u-collapse-open, .card.u-collapse-open.u-menu, .card.u-collapse-open.u-autocomplete-items, .dropdown-menu.show.u-card, .dropdown-menu.u-card.u-tooltip, .dropdown-menu.u-card.u-toast-show, .dropdown-menu.u-card.u-popover, .dropdown-menu.u-card.u-offcanvas-show, .show.u-card.u-menu, .u-card.u-menu.u-tooltip, .u-card.u-menu.u-toast-show, .u-card.u-menu.u-popover, .u-card.u-menu.u-offcanvas-show, .show.u-card.u-autocomplete-items, .u-card.u-autocomplete-items.u-tooltip, .u-card.u-autocomplete-items.u-toast-show, .u-card.u-autocomplete-items.u-popover, .u-card.u-autocomplete-items.u-offcanvas-show, .dropdown-menu.u-card.u-dialog-open, .u-card.u-dialog-open.u-menu, .u-card.u-dialog-open.u-autocomplete-items, .dropdown-menu.u-card.u-dialog-backdrop-open, .u-card.u-dialog-backdrop-open.u-menu, .u-card.u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.u-card.u-collapse-open, .u-card.u-collapse-open.u-menu, .u-card.u-collapse-open.u-autocomplete-items, .dropdown-menu.card.u-el-show, .card.u-el-show.u-menu, .card.u-el-show.u-autocomplete-items, .dropdown-menu.u-el-show.u-card, .u-el-show.u-card.u-menu, .u-el-show.u-card.u-autocomplete-items {
+.dropdown-menu.card.show, .dropdown-menu.card.u-tooltip, .dropdown-menu.card.u-toast-show, .dropdown-menu.card.u-popover, .dropdown-menu.card.u-offcanvas-show, .card.show.u-menu, .card.u-menu.u-tooltip, .card.u-menu.u-toast-show, .card.u-menu.u-popover, .card.u-menu.u-offcanvas-show, .card.show.u-autocomplete-items, .card.u-autocomplete-items.u-tooltip, .card.u-autocomplete-items.u-toast-show, .card.u-autocomplete-items.u-popover, .card.u-autocomplete-items.u-offcanvas-show, .dropdown-menu.card.u-dialog-open, .card.u-dialog-open.u-menu, .card.u-dialog-open.u-autocomplete-items, .dropdown-menu.card.u-dialog-backdrop-open, .card.u-dialog-backdrop-open.u-menu, .card.u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.show.u-card, .dropdown-menu.u-card.u-tooltip, .dropdown-menu.u-card.u-toast-show, .dropdown-menu.u-card.u-popover, .dropdown-menu.u-card.u-offcanvas-show, .show.u-card.u-menu, .u-card.u-menu.u-tooltip, .u-card.u-menu.u-toast-show, .u-card.u-menu.u-popover, .u-card.u-menu.u-offcanvas-show, .show.u-card.u-autocomplete-items, .u-card.u-autocomplete-items.u-tooltip, .u-card.u-autocomplete-items.u-toast-show, .u-card.u-autocomplete-items.u-popover, .u-card.u-autocomplete-items.u-offcanvas-show, .dropdown-menu.u-card.u-dialog-open, .u-card.u-dialog-open.u-menu, .u-card.u-dialog-open.u-autocomplete-items, .dropdown-menu.u-card.u-dialog-backdrop-open, .u-card.u-dialog-backdrop-open.u-menu, .u-card.u-dialog-backdrop-open.u-autocomplete-items, .dropdown-menu.card.u-el-show, .card.u-el-show.u-menu, .card.u-el-show.u-autocomplete-items, .dropdown-menu.u-el-show.u-card, .u-el-show.u-card.u-menu, .u-el-show.u-card.u-autocomplete-items {
   display: flex;
 }
 
@@ -19999,7 +19956,7 @@ Card list group
   margin-right: 0;
   margin-left: 0;
 }
-.row-0 > .col, .row-0 > .u-col, .row-0 > .u-el-col,
+.row-0 > .col, .row-0 > .u-el-col,
 .row-0 > [class*=col-] {
   padding-right: 0;
   padding-left: 0;
@@ -20012,7 +19969,7 @@ Card list group
   margin-right: -0.375rem;
   margin-left: -0.375rem;
 }
-.row-sm > .col, .row-sm > .u-col, .row-sm > .u-el-col,
+.row-sm > .col, .row-sm > .u-el-col,
 .row-sm > [class*=col-] {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
@@ -20025,7 +19982,7 @@ Card list group
   margin-right: -1.5rem;
   margin-left: -1.5rem;
 }
-.row-md > .col, .row-md > .u-col, .row-md > .u-el-col,
+.row-md > .col, .row-md > .u-el-col,
 .row-md > [class*=col-] {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -20038,7 +19995,7 @@ Card list group
   margin-right: -3rem;
   margin-left: -3rem;
 }
-.row-lg > .col, .row-lg > .u-col, .row-lg > .u-el-col,
+.row-lg > .col, .row-lg > .u-el-col,
 .row-lg > [class*=col-] {
   padding-right: 3rem;
   padding-left: 3rem;
@@ -20047,13 +20004,13 @@ Card list group
   margin-bottom: 6rem;
 }
 
-.row-deck > .col, .row-deck > .u-col, .row-deck > .u-el-col, .u-el-row-deck > .col, .u-el-row-deck > .u-col, .u-el-row-deck > .u-el-col,
+.row-deck > .col, .row-deck > .u-el-col, .u-el-row-deck > .col, .u-el-row-deck > .u-el-col,
 .row-deck > [class*=col-],
 .u-el-row-deck > [class*=col-] {
   display: flex;
   align-items: stretch;
 }
-.row-deck > .col .card, .row-deck > .u-col .card, .row-deck > .col .u-card, .row-deck > .u-col .u-card, .row-deck > .u-el-col .card, .row-deck > .u-el-col .u-card, .u-el-row-deck > .col .card, .u-el-row-deck > .u-col .card, .u-el-row-deck > .col .u-card, .u-el-row-deck > .u-col .u-card, .u-el-row-deck > .u-el-col .card, .u-el-row-deck > .u-el-col .u-card,
+.row-deck > .col .card, .row-deck > .col .u-card, .row-deck > .u-el-col .card, .row-deck > .u-el-col .u-card, .u-el-row-deck > .col .card, .u-el-row-deck > .col .u-card, .u-el-row-deck > .u-el-col .card, .u-el-row-deck > .u-el-col .u-card,
 .row-deck > [class*=col-] .card,
 .row-deck > [class*=col-] .u-card,
 .u-el-row-deck > [class*=col-] .card,
@@ -21128,7 +21085,6 @@ Legend
 .list-group-hoverable .list-group-item-actions.u-offcanvas-show,
 .list-group-hoverable .list-group-item-actions.u-dialog-open,
 .list-group-hoverable .list-group-item-actions.u-dialog-backdrop-open,
-.list-group-hoverable .list-group-item-actions.u-collapse-open,
 .list-group-hoverable .list-group-item-actions.u-el-show {
   opacity: 1;
 }
@@ -21439,9 +21395,6 @@ Dimmer
 .nav-vertical .nav-item.u-dialog-backdrop-open .nav-link,
 .nav-vertical .nav-item.u-dialog-backdrop-open .u-tabs .u-tabs-items .u-tabs-item,
 .u-tabs .u-tabs-items .nav-vertical .nav-item.u-dialog-backdrop-open .u-tabs-item,
-.nav-vertical .nav-item.u-collapse-open .nav-link,
-.nav-vertical .nav-item.u-collapse-open .u-tabs .u-tabs-items .u-tabs-item,
-.u-tabs .u-tabs-items .nav-vertical .nav-item.u-collapse-open .u-tabs-item,
 .nav-vertical .nav-item.u-el-show .nav-link,
 .nav-vertical .nav-item.u-el-show .u-tabs .u-tabs-items .u-tabs-item,
 .u-tabs .u-tabs-items .nav-vertical .nav-item.u-el-show .u-tabs-item {
@@ -21487,9 +21440,6 @@ Dimmer
 .nav-bordered .nav-item.u-dialog-backdrop-open .nav-link,
 .nav-bordered .nav-item.u-dialog-backdrop-open .u-tabs .u-tabs-items .u-tabs-item,
 .u-tabs .u-tabs-items .nav-bordered .nav-item.u-dialog-backdrop-open .u-tabs-item,
-.nav-bordered .nav-item.u-collapse-open .nav-link,
-.nav-bordered .nav-item.u-collapse-open .u-tabs .u-tabs-items .u-tabs-item,
-.u-tabs .u-tabs-items .nav-bordered .nav-item.u-collapse-open .u-tabs-item,
 .nav-bordered .nav-item.u-el-show .nav-link,
 .nav-bordered .nav-item.u-el-show .u-tabs .u-tabs-items .u-tabs-item,
 .u-tabs .u-tabs-items .nav-bordered .nav-item.u-el-show .u-tabs-item {
@@ -25038,22 +24988,6 @@ Antialiasing
 .u-card-status-size-lg.u-card-status-position-start {
   width: 3px;
 }
-.u-col-align-self-start {
-  align-self: start;
-}
-.u-col-align-self-center {
-  align-self: center;
-}
-.u-col-align-self-end {
-  align-self: end;
-}
-.u-col-align-self-baseline {
-  align-self: baseline;
-}
-.u-col-align-self-stretch {
-  align-self: stretch;
-}
-
 .u-confirm-title {
   text-align: center;
   margin-bottom: 0.75rem;

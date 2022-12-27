@@ -1,18 +1,18 @@
-<script>
+<script lang="ts">
 	import { Autocomplete } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value = ''
+	let value: any = undefined
 
-	let fromEvent = undefined
+	let fromEvent: any = undefined
 
-	function onChanged(event) {
+	function onChanged(event: any) {
 		fromEvent = event.detail
 	}
 </script>
 
 <Autocomplete on:changed={onChanged} {items} bind:value />
 
-<p if={!!fromEvent}>
+<i>
 	Event: {JSON.stringify(fromEvent)}
-</p>
+</i>
