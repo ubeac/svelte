@@ -188,11 +188,6 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'page',
-				title: 'Page',
-				icon: 'star',
-			},
-			{
 				route: base_component_path + 'popover',
 				title: 'Popover',
 				icon: 'star',
@@ -269,11 +264,6 @@ export const navigations = [
 		id: 'menu-common',
 		children: [
 			{
-				route: base_common_path + 'if',
-				title: 'If',
-				icon: 'package',
-			},
-			{
 				route: base_common_path + 'preview',
 				title: 'Preview',
 				icon: 'package',
@@ -333,17 +323,6 @@ export const navigations = [
 				route: base_form_path + 'form-textareas',
 				title: 'FormTextarea',
 				icon: 'star',
-			},
-		],
-	},
-	{
-		title: 'Pages',
-		id: 'menu-pages',
-		children: [
-			{
-				route: base_path + '', // removed '/docs/components/login' to prevent error in prerender step
-				title: '(TODO) Login',
-				icon: 'package',
 			},
 		],
 	},

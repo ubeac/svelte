@@ -69,8 +69,12 @@
 		<TabsItems>
 			<TabsItem value="1">Preview</TabsItem>
 			<TabsItem value="2">Markup</TabsItem>
-			<TabsItem value="3" if={!!script}>Script</TabsItem>
-			<TabsItem value="4" if={!!style}>Style</TabsItem>
+			{#if !!script}
+				<TabsItem value="3">Script</TabsItem>
+			{/if}
+			{#if !!style}
+				<TabsItem value="4">Style</TabsItem>
+			{/if}
 		</TabsItems>
 		<TabsPanels>
 			<TabsPanel value="1">
