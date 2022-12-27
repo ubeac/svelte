@@ -1,7 +1,6 @@
 export const base_path: string = '/docs/'
 export const base_component_path: string = base_path + 'components/'
 export const base_core_path: string = base_path + 'core/'
-export const base_common_path: string = base_path + 'common/'
 export const base_form_path: string = base_path + 'form/'
 
 export const navigations = [
@@ -251,17 +250,6 @@ export const navigations = [
 				route: base_component_path + 'tooltip',
 				title: 'Tooltip',
 				icon: 'star',
-			},
-		],
-	},
-	{
-		title: 'Common',
-		id: 'menu-common',
-		children: [
-			{
-				route: base_common_path + 'preview',
-				title: 'Preview',
-				icon: 'package',
 			},
 		],
 	},
