@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { setContext } from 'svelte'
 
-	import { El } from '../Base'
-	import type { TableHeadProps } from './Table.types'
+	import { El, type TableHeadProps } from '$lib/components'
 
 	type $$Props = TableHeadProps
 

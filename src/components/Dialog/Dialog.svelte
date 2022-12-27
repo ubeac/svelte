@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { setContext } from 'svelte/internal'
-
 	import { classname } from '@ubeac/svelte/utils'
 
-	import { El } from '../Base'
-	import type { DialogPlacements, DialogSizes } from './Dialog.types'
+	import { El, type DialogProps } from '$lib/components'
 
 	type $$Props = DialogProps
 

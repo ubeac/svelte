@@ -1,7 +1,8 @@
 <script>
-	import { El, OPACITY_TYPES } from '@ubeac/svelte'
+	import { El } from '@ubeac/svelte'
 </script>
 
-{#each OPACITY_TYPES as opacity}
-	<El bgOpacity={opacity} bgColor="blue">{opacity}</El>
-{/each}
+<El bgOpacity="10" bgColor="blue">10</El>
+<El bgOpacity="25" bgColor="blue">25</El>
+<El bgOpacity="50" bgColor="blue">50</El>
+<El bgOpacity="75" bgColor="blue">75</El>
