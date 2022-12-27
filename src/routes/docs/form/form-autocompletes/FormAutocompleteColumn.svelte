@@ -1,5 +1,5 @@
 <script>
-	import { FormAutocomplete, Col, Button, El } from '@ubeac/svelte'
+	import { FormAutocomplete, Button, El } from '@ubeac/svelte'
 
 	let items = ['Red', 'Green', 'Blue', 'Yellow', 'Cyan', 'Magenta', 'Black', 'White']
 </script>
@@ -11,8 +11,8 @@
 
 		<FormAutocomplete {items} col="6" label="Third" />
 		<FormAutocomplete {items} col="6" label="Fourth" />
-		<Col mt="3" offset="9" col="3">
+		<El mt="3" offset="9" col="3">
 			<Button w="100" color="primary">Submit</Button>
-		</Col>
+		</El>
 	</El>
 </El>

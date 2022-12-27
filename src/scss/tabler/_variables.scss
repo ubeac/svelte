@@ -20,6 +20,7 @@ $prefix-divider: $prefix + 'divider' !default;
 $prefix-dialog: $prefix + 'dialog' !default;
 $prefix-dialog-container: $prefix + 'dialog-container' !default;
 $prefix-dot: $prefix + 'dot' !default;
+$prefix-el: $prefix + 'el';
 $prefix-fieldset: $prefix + 'fieldset' !default;
 $prefix-footer: $prefix + 'footer' !default;
 $prefix-icon: $prefix + 'icon' !default;
@@ -48,5 +49,8 @@ $prefix-textarea: $prefix + 'textarea' !default;
 $prefix-textarea-wrapper: $prefix-textarea + '-wrapper' !default;
 // Form
 $prefix-form-field: $prefix + 'form-field' !default;
+$prefix-form-input: $prefix + 'form-input' !default;
 $prefix-form-checkbox: $prefix + 'form-checkbox' !default;
 $prefix-form-checkbox-group: $prefix + 'form-checkbox-group' !default;
+$prefix-form-radio-group: $prefix + 'form-radio-group' !default;
+$prefix-form-textarea: $prefix + 'form-textarea' !default;

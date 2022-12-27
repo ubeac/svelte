@@ -1,5 +1,5 @@
 <script>
-	import { FormDatePicker, Col, Button, El } from '@ubeac/svelte'
+	import { FormDatePicker, Button, El } from '@ubeac/svelte'
 </script>
 
 <El container>
@@ -9,8 +9,8 @@
 
 		<FormDatePicker cols="6" label="Start Date" />
 		<FormDatePicker cols="6" label="End Date" />
-		<Col class="mt-3" offset="9" cols="3">
-			<Button block color="primary">Submit</Button>
-		</Col>
+		<El offset="9" col="3">
+			<Button color="primary">Submit</Button>
+		</El>
 	</El>
 </El>

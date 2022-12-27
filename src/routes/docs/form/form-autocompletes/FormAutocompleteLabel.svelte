@@ -8,4 +8,4 @@
 
 <FormAutocomplete {items} col="6" label="color:" placeholder="choose a color" bind:value />
 
-<span if={!!value}>{value}</span>
+<i>{value}</i>

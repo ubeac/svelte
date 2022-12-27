@@ -7,4 +7,4 @@
 
 <Autocomplete multiple {items} bind:value />
 
-<p if={value.length > 0}>You selected <b>{value.join(', ')}</b></p>
+<i>You selected <b>{value.join(', ')}</b></i>

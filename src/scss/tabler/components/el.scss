@@ -1,63 +1,25 @@
-$prefix-el: $prefix + 'el';
-
 $opacities: (
     10: .1,
     25: .25,
     50: .5,
     75: .75,
     100: 1) !default;
+
 $text-opacities: (
     25: .25,
     50: .5,
     75: .75,
     100: 1) !default;
-$border-sizes: (
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5') !default;
-$border-round-sizes: (
-    '0',
-    '1',
-    '2',
-    '3') !default;
-$border-positions: (
-    'top',
-    'start',
-    'end',
-    'bottom') !default;
-$border-radius-positions: (
-    'top',
-    'start',
-    'end',
-    'bottom',
-    'circle',
-    'pill') !default;
-$padding-sizes: (
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5') !default;
-$top-position: (
-    '0',
-    '50',
-    '100') !default;
-$bottom-position: (
-    '0',
-    '50',
-    '100') !default;
-$start-position: (
-    '0',
-    '50',
-    '100') !default;
-$end-position: (
-    '0',
-    '50',
-    '100') !default;
+
+$border-sizes: 0 1 2 3 4 5 !default;
+$border-round-sizes: 0 1 2 3 !default;
+$border-positions: top start end bottom !default;
+$border-radius-positions: top start end bottom circle pill !default;
+$padding-sizes: 0 1 2 3 4 5 !default;
+$top-position: 0 50 100 !default;
+$bottom-position: 0 50 100 !default;
+$start-position: 0 50 100 !default;
+$end-position: 0 50 100 !default;
 $padding-positions: (
     't': 't',
     's': 's',
@@ -66,14 +28,8 @@ $padding-positions: (
     'x': 'x',
     'y': 'y'
     ) !default;
-$margin-sizes: (
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    'auto') !default;
+$margin-sizes: 0 1 2 3 4 5 auto !default;
+
 $margin-positions: (
     't': 't',
     's': 's',
@@ -83,130 +39,38 @@ $margin-positions: (
     'y': 'y',
     ) !default;
 
-$gap-sizes: (
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5') !default;
-
-$shadow-sizes: (
-    'none',
-    'sm',
-    'lg') !default;
-
-$width-height-sizes: (
-    '25',
-    '50',
-    '75',
-    '100',
-    'auto') !default;
-
-$displays: (
-    'none',
-    'inline',
-    'inline-block',
-    'block',
-    'grid',
-    'table-cell',
-    'table-row',
-    'flex',
-    'inline-flex',
-    'table'
-    ) !default;
-
-$displays-sizes: (
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    'xxl') !default;
-
-$col-sizes: (
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
-    '12',
-    'auto'
-);
-$breakpoints: (
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    'xxl'
-);
-
-$positions: (
-    'static',
-    'relative',
-    'absolute',
-    'fixed',
-    'sticky') !default;
-
-$overflow-types: (
-    'auto',
-    'hidden',
-    'visible',
-    'scroll') !default;
-
-$translate-middle-types: (
-    'x',
-    'y') !default;
-
-$float-positions: (
-    'start',
-    'end',
-    'none') !default;
-
-$heading-display-sizes: (
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6') !default;
+$gap-sizes: 0 1 2 3 4 5 !default;
+$shadow-sizes: none sm lg !default;
+$width-height-sizes: 25 50 75 100 auto !default;
+$displays: none inline inline-block block grid table-cell table-row flex inline-flex table !default;
+$displays-sizes: sm md lg xl xxl !default;
+$col-sizes: 1 2 3 4 5 6 7 8 9 10 11 12 auto !default;
+$breakpoints: sm md lg xl xxl !default;
+$positions: static relative absolute fixed sticky !default;
+$overflow-types: auto hidden visible scroll !default;
+$translate-middle-types: x y !default;
+$float-positions: start end none !default;
+$heading-display-sizes: 1 2 3 4 5 6 !default;
+$text-aligns: start center end !default;
+$align-items: start center end !default;
+$orders: first last -1 1 2 3 4 5 6 !default;
+$justify-content: start center end around between evenly !default;
+$align-self: start center end !default;
+$row-cols-sizes: 1 2 3 4 5 6 auto !default;
+$container-breakpoints: null fluid sm md lg xl xxl;
 
 .border {
     border-width: var(--#{$prefix}border-width) !important;
 }
 
-$text-aligns: (
-    'start',
-    'center',
-    'end') !default;
-
-$row-cols-sizes: 1,
-    2,
-    3,
-    4,
-    5,
-    6 !default;
-
-$container-breakpoints: (
-    null,
-    fluid,
-    sm,
-    md,
-    lg,
-    xl,
-    xxl
-);
 
 $props: (
     bg:(color: generate_props($theme_colors, ('.bg-')),
         gradient: '.bg-gradient',
     ),
-    border: '.border',
+    border: (null: '.border',
+        color: (generate_props($theme_colors, ('.border-'))),
+    ),
     max-width-100: '.mw-100',
     max-height-100: '.mh-100',
     row: (null: '.row',
@@ -222,14 +86,58 @@ $props: (
         transform:(lowercase: '.text-lowercase',
             uppercase: '.text-uppercase',
             capitalize: '.text-capitalize',
-        ))
+        )),
+    align-items: (generate_props($align-items, ('.align-items-'))),
+    align-self: (generate_props($align-self, ('.align-self-'))),
+    justify-content: (generate_props($justify-content, ('.justify-content-'))),
+    order: (generate_props($orders, ('.order-'))),
+    shadow: (generate_props($shadow-sizes, ('.shadow-'))),
+    position :(generate_props($positions, ('.position-'))),
+    top: (generate_props($top-position, ('.top-'))),
+    bottom: (generate_props($bottom-position, ('.bottom-'))),
+    start: (generate_props($start-position, ('.start-'))),
+    end: (generate_props($end-position, ('.end-'))),
+    gap: (generate_props($gap-sizes, ('.gap-'))),
+    heading-display-size: (generate_props($heading-display-sizes, ('.heading-display-size-'))),
+    display: (generate_props($displays, ('.d-'))),
+    print: (generate_props($displays, ('.d-print-'))),
+    hidden: '.invisible',
+    overflow: (generate_props($overflow-types, ('.overflow-'))),
+    translate:(middle-xy: '.translate-middle',
+        middle: (generate_props($translate-middle-types, ('.translate-middle-'))),
+    ),
+    float: (generate_props($float-positions, ('.float-'))),
+    p: (generate_props($padding-sizes, ('.p-'))),
+    ps: (generate_props($padding-sizes, ('.ps-'))),
+    pe: (generate_props($padding-sizes, ('.pe-'))),
+    pt: (generate_props($padding-sizes, ('.pt-'))),
+    pb: (generate_props($padding-sizes, ('.pb-'))),
+    px: (generate_props($padding-sizes, ('.px-'))),
+    py: (generate_props($padding-sizes, ('.py-'))),
+    m: (generate_props($margin-sizes, ('.m-'))),
+    ms: (generate_props($margin-sizes, ('.ms-'))),
+    me: (generate_props($margin-sizes, ('.me-'))),
+    mt: (generate_props($margin-sizes, ('.mt-'))),
+    mb: (generate_props($margin-sizes, ('.mb-'))),
+    mx: (generate_props($margin-sizes, ('.mx-'))),
+    my: (generate_props($margin-sizes, ('.my-'))),
 );
 
 .#{$prefix-el} {
     @include apply-props($props);
 
+    &-shadow {
+        @extend .shadow;
+    }
+
     &-col {
         @extend .col;
+
+        @each $breakpoint in $breakpoints {
+            &-#{$breakpoint} {
+                @extend .col-#{$breakpoint};
+            }
+        }
 
         @each $size in $col-sizes {
             &-#{$size} {
@@ -272,19 +180,6 @@ $props: (
         }
     }
 
-    @each $size in $heading-display-sizes {
-        &-heading-display-size-#{$size} {
-            @extend .display-#{$size};
-        }
-    }
-
-    @each $key,
-    $value in $theme_colors {
-        &-border-color-#{$key} {
-            @extend .border-#{$key};
-        }
-    }
-
     @each $key,
     $value in $opacities {
         &-bg-opacity-#{$key} {
@@ -303,14 +198,6 @@ $props: (
             &-display-#{$size}-#{$display} {
                 @extend .d-#{$size}-#{$display};
             }
-        }
-
-        &-display-#{$display} {
-            @extend .d-#{$display};
-        }
-
-        &-print-#{$display} {
-            @extend .d-print-#{$display};
         }
     }
 
@@ -360,101 +247,7 @@ $props: (
         }
     }
 
-    @each $size in $padding-sizes {
-        &-p-#{$size} {
-            @extend .p-#{$size};
-        }
-
-        @each $position,
-        $value in $padding-positions {
-            &-p#{$position}-#{$size} {
-                @extend .p#{$value}-#{$size};
-            }
-        }
-    }
-
-    @each $size in $margin-sizes {
-        &-m-#{$size} {
-            @extend .m-#{$size};
-        }
-
-        @each $position,
-        $value in $margin-positions {
-            &-m#{$position}-#{$size} {
-                @extend .m#{$value}-#{$size};
-            }
-        }
-    }
-
-
-    @each $size in $gap-sizes {
-        &-gap-#{$size} {
-            @extend .gap-#{$size};
-        }
-    }
-
-
-    @each $size in $shadow-sizes {
-        &-shadow-#{$size} {
-            @extend .shadow-#{$size};
-        }
-    }
-
-    @each $overflow in $overflow-types {
-        &-overflow-#{$overflow} {
-            @extend .overflow-#{$overflow};
-        }
-    }
-
-    @each $position in $top-position {
-        &-top-#{$position} {
-            @extend .top-#{$position};
-        }
-    }
-
-    @each $position in $bottom-position {
-        &-bottom-#{$position} {
-            @extend .bottom-#{$position};
-        }
-    }
-
-    @each $position in $start-position {
-        &-start-#{$position} {
-            @extend .start-#{$position};
-        }
-    }
-
-    @each $position in $end-position {
-        &-end-#{$position} {
-            @extend .end-#{$position};
-        }
-    }
-
-    @each $position in $positions {
-        &-position-#{$position} {
-            @extend .position-#{$position};
-        }
-    }
-
-    @each $translate in $translate-middle-types {
-        &-translate-middle-xy {
-            @extend .translate-middle;
-        }
-
-        &-translate-middle-#{$translate} {
-            @extend .translate-middle-#{$translate};
-        }
-    }
-
-    &-hidden {
-        @extend .invisible;
-    }
-
     @each $position in $float-positions {
-        &-float-#{$position} {
-            @extend .float-#{$position};
-        }
-
         @each $size in $displays-sizes {
             &-float-#{$size}-#{$position} {
                 @extend .float-#{$size}-#{$position};
@@ -477,7 +270,4 @@ $props: (
             }
         }
     }
-
-
-
 }
