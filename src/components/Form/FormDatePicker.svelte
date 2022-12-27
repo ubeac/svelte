@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { nanoid } from 'nanoid'
-
 	import { DatePicker, FormField, FormHint, Icon, Label, Spinner } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
@@ -25,7 +23,7 @@
 	/**
 	 * Sets id for HTML element
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let id: string | undefined
 
 	/**
 	 * Sets label for Date Picker
