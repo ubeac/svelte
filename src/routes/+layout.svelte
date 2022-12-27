@@ -9,7 +9,7 @@
 
 	let container: ContainerMaxWidths = 'md'
 	let theme: Themes = 'light'
-	let loadingBar: SvelteComponentDev
+	let loadingBar: any
 
 	beforeNavigate(() => {
 		loadingBar.start()
