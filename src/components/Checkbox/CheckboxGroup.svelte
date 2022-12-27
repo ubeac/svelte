@@ -33,7 +33,7 @@
 	/**
 	 * The value of CheckboxGroup
 	 */
-	export let value: $$Props['value'] = []
+	export let value: $$Props['value'] = undefined
 
 	//#endregion
 
@@ -50,8 +50,8 @@
 		if (value === undefined) value = []
 
 		if (items != undefined && items?.length > 0) {
-			const selectedIndex = event.target.value
-			const selectedChecked = event.target.checked
+			const selectedIndex = event.target?.value
+			const selectedChecked = event.target?.checked
 			if (selectedChecked) {
 				value.push(items[selectedIndex])
 			} else {
