@@ -2,8 +2,6 @@
 	import { setContext } from 'svelte/internal'
 	import { classname } from '@ubeac/svelte/utils'
 
-	import { browser } from '$app/environment'
-
 	import { El, type DialogProps } from '$lib/components'
 
 	type $$Props = DialogProps
@@ -60,7 +58,7 @@
 
 	setContext('DIALOG', { hide })
 
-	$: if (browser) {
+	$: if (typeof window !== 'undefined') {
 		if (open) {
 			document.body.classList.add(classname('body-dialog-open') ?? '')
 		} else {
