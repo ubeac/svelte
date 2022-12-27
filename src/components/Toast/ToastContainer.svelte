@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '../Base'
-	import type { ToastContainerProps } from './Toast.types'
+	import { El, type  ToastContainerProps } from '$lib/components'
 
 	type $$Props = ToastContainerProps
 

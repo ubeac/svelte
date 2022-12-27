@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '../Base'
-	import type { StatusProps } from './Status.types'
+	import {El, type StatusProps } from '$lib/components'
 
 	type $$Props = StatusProps
 

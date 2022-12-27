@@ -3,8 +3,7 @@
 
 	import { forwardEventsBuilder } from '$lib/directives'
 
-	import { El } from '../Base'
-	import type { PopoverBodyProps } from './Popover.types'
+	import  {type PopoverBodyProps, El } from '$lib/components'
 
 	type $$Props = PopoverBodyProps
 
