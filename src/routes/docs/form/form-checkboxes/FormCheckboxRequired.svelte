@@ -15,4 +15,4 @@
 	I accept Terms of service and Privacy policy.
 </FormCheckbox>
 
-<span if={value}>{value}</span>
+<i>{value}</i>
