@@ -2,7 +2,10 @@
 	import { Doc, Preview } from '@ubeac/svelte'
 	import SwitchColor from './SwitchColor.svelte'
 	import SwitchDefault from './SwitchDefault.svelte'
-  import SwitchDescription from './SwitchDescription.svelte'
+	import SwitchDescription from './SwitchDescription.svelte'
+	import SwitchDisabled from './SwitchDisabled.svelte'
+	import SwitchInline from './SwitchInline.svelte'
+	import SwitchReverse from './SwitchReverse.svelte'
 </script>
 
 <Doc title="Switch">
@@ -18,7 +21,6 @@
 	<SwitchColor />
 </Preview>
 
-
 <Doc title="Switch Description">Switch components (Switch and FormSwitch) can have description.</Doc>
 <Preview src="./SwitchDescription.svelte">
 	<SwitchDescription />
@@ -27,6 +29,20 @@
 <Doc title="Switch Disabled">
 	<!--  -->
 </Doc>
-<Preview src="./SwitchDescription.svelte">
-	<SwitchDescription />
+<Preview src="./SwitchDisabled.svelte">
+	<SwitchDisabled />
+</Preview>
+
+<Doc title="Switch Inline">
+	<!--  -->
+</Doc>
+<Preview src="./SwitchInline.svelte">
+	<SwitchInline />
+</Preview>
+
+<Doc title="Switch Reverse">
+	<!--  -->
+</Doc>
+<Preview src="./SwitchReverse.svelte">
+	<SwitchReverse />
 </Preview>

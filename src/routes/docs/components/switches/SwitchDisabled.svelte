@@ -1,13 +1,13 @@
 <script>
 	import { Switch } from '@ubeac/svelte'
 
-	let value1 = false
-	let value2 = false
-	let value3 = false
-	let value4 = false
+	let checked1 = false
+	let checked2 = true
+	let checked3 = true
+	let checked4 = false
 </script>
 
-<Switch bind:value={value1} label="Switch 1: {value1}" />
-<Switch bind:value={value2} checked label="Switch 2: {value2}" />
-<Switch bind:value={value3} disabled checked label="Switch 3: {value3}" />
-<Switch bind:value={value4} disabled label="Switch 4: {value4}" />
+<Switch bind:checked={checked1} text="Switch 1: {checked1}" />
+<Switch bind:checked={checked2} text="Switch 2: {checked2}" />
+<Switch bind:checked={checked3} disabled text="Switch disabled 3: {checked3}" />
+<Switch bind:checked={checked4} disabled text="Switch disabled 4: {checked4}" />

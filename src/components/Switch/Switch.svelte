@@ -14,6 +14,7 @@
 	export let inline: $$Props['inline'] = undefined
 	export let text: $$Props['text'] = undefined
 	export let value: $$Props['value'] = false
+	export let reverse: $$Props['reverse'] = false
 	export let checked: $$Props['checked'] = false
 	export let role: $$Props['role'] = 'switch'
 	export let type: $$Props['type'] = 'checkbox'
@@ -25,21 +26,22 @@
 
 	$: _for = id
 	$: cssProps = {
-		inline,
 		color,
 	}
 
 	$: otherProps = {
 		tag,
+		checked,
 		cssPrefix,
 		text,
 		role,
+		disabled,
 		type,
 	}
 </script>
 
-<El cssPrefix="{cssPrefix}-wrapper">
-	<El {checked} bind:id {...$$restProps} {cssProps} {...otherProps} on:change={onChange} />
+<El cssPrefix="{cssPrefix}-wrapper" cssProps={{ inline, reverse }}>
+	<El bind:id {...$$restProps} {cssProps} {...otherProps} on:change={onChange} />
 	{#if text || $$slots['default']}
 		<Label for={_for} cssPrefix="{cssPrefix}-label">
 			<slot>
@@ -50,7 +52,7 @@
 	{#if description || $$slots['description']}
 		<El cssPrefix="{cssPrefix}-description">
 			<slot name="description">
-				{text}
+				{description}
 			</slot>
 		</El>
 	{/if}
