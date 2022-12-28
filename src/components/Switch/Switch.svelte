@@ -41,7 +41,7 @@
 </script>
 
 <El cssPrefix="{cssPrefix}-wrapper" cssProps={{ inline, reverse }}>
-	<El bind:id {...$$restProps} {cssProps} {...otherProps} on:change={onChange} />
+	<El bind:id {...$$restProps} {cssProps} {...otherProps} on:change={onChange} on:change/>
 	{#if text || $$slots['default']}
 		<Label for={_for} cssPrefix="{cssPrefix}-label">
 			<slot>

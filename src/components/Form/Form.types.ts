@@ -7,6 +7,7 @@ import type {
 	InputStates,
 	RadioGroupProps,
 	SelectProps,
+	SwitchProps,
 } from '$lib/components'
 
 export interface FormFieldProps extends Partial<ElProps> {
@@ -28,5 +29,7 @@ export interface FormTextAreaProps extends Partial<FormInputProps> {
 export interface FormRadioGroupProps extends Partial<FormFieldProps>, Partial<RadioGroupProps> {}
 
 export interface FormSelectProps extends Partial<FormFieldProps>, Partial<SelectProps> {}
+
+export interface FormSwitchProps extends Partial<FormFieldProps>, Partial<SwitchProps> {}
 
 export interface FormFieldsetProps extends Partial<FormFieldProps>, Partial<FieldsetProps> {}
