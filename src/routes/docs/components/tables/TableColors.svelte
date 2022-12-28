@@ -1,7 +1,5 @@
 <script>
 	import { Table, TableBody, TableCell, TableHead, TableRow } from '@ubeac/svelte'
-    import { COLORS } from '@ubeac/svelte/types'
-
 </script>
 
 <Table color="primary">
@@ -21,14 +19,14 @@
 			<TableCell>User</TableCell>
 		</TableRow>
 
-        {#each COLORS.slice(0, 8) as color}
-		<TableRow {color}>
-			<TableCell>Jeffie Lewzey</TableCell>
-			<TableCell>Chemical Engineer, Support</TableCell>
-			<TableCell>jlewzey1@seesaa.net</TableCell>
-			<TableCell>Admin</TableCell>
-		</TableRow>
-        {/each}
+		{#each ['primary', 'secondary', 'success', 'warning', 'danger', 'info'] as color}
+			<TableRow {color}>
+				<TableCell>Jeffie Lewzey</TableCell>
+				<TableCell>Chemical Engineer, Support</TableCell>
+				<TableCell>jlewzey1@seesaa.net</TableCell>
+				<TableCell>Admin</TableCell>
+			</TableRow>
+		{/each}
 
 		<TableRow>
 			<TableCell color="succes">Mallory Hulme</TableCell>
@@ -36,6 +34,5 @@
 			<TableCell color="danger">mhulme2@domainmarket.com</TableCell>
 			<TableCell color="warning">User</TableCell>
 		</TableRow>
-
 	</TableBody>
 </Table>

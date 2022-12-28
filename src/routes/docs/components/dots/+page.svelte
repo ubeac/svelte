@@ -8,23 +8,29 @@
 <h1>Dots</h1>
 <p>Dots are particularly useful if you want to make an interface element more noticeable.</p>
 
-<Doc title="Dot colors">
-	<!--  -->
-</Doc>
+<Doc title="Dot colors" />
 <Preview src="./DotColors.svelte">
-	<DotColors />
+	<div class="custom-class">
+		<DotColors />
+	</div>
 </Preview>
 
-<Doc title="Animated dots">
-	<!--  -->
-</Doc>
+<Doc title="Animated dots" />
 <Preview src="./DotAnimations.svelte">
-	<DotAnimations />
+	<div class="custom-class">
+		<DotAnimations />
+	</div>
 </Preview>
 
-<Doc title="Animated dots radius">
-	<!--  -->
-</Doc>
+<Doc title="Animated dots radius" />
 <Preview src="./DotIndicators.svelte">
-	<DotIndicators />
+	<div class="custom-class">
+		<DotIndicators />
+	</div>
 </Preview>
+
+<style>
+	.custom-class > :global(.u-dot) {
+		margin-right: 0.5rem;
+	}
+</style>

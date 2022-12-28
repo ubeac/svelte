@@ -2,5 +2,5 @@
 	import { Button } from '@ubeac/svelte'
 </script>
 
-<Button color="secondary">Button2</Button>
-<Button>Anchor</Button>
+<Button color="primary">Submit</Button>
+<Button color="secondary" href="#">Link</Button>
