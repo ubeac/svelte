@@ -28,10 +28,6 @@ $props-form-field: (
 	@extend .#{$prefix-form-field}
 }
 
-.#{$prefix-form-checkbox} {
-	@extend .#{$prefix-form-field}
-}
-
 .#{$prefix-form-checkbox-group} {
 	@extend .#{$prefix-form-field}
 }

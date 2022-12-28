@@ -263,11 +263,6 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_form_path + 'form-checkboxes',
-				title: 'FormCheckbox',
-				icon: 'star',
-			},
-			{
 				route: base_form_path + 'form-checkbox-groups',
 				title: 'FormCheckboxGroup',
 				icon: 'star',
