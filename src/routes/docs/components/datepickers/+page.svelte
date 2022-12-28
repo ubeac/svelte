@@ -1,10 +1,8 @@
 <script>
 	import { Doc, Preview } from '@ubeac/svelte'
 	import DatepickerCustom from './DatepickerCustom.svelte'
-
 	import DatepickerDefault from './DatepickerDefault.svelte'
 	import DatepickerFormat from './DatepickerFormat.svelte'
-  import DatepickerRange from './DatepickerRange.svelte'
 	import DatepickerValue from './DatepickerValue.svelte'
 </script>
 

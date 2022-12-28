@@ -19,7 +19,7 @@
 	/**
 	 * The css prefix of Date picker
 	 */
-	export let cssPrefix: $$Props['cssPrefix'] = 'input'
+	export let cssPrefix: $$Props['cssPrefix'] = 'date-picker'
 
 	/**
 	 * Changes display format of the date
