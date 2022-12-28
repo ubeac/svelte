@@ -59,9 +59,9 @@
 
 	onMount(() => {
 		if (element && autoClose) {
-			document.addEventListener('keyup', handleEscapeKey, true)
+			element.addEventListener('keyup', handleEscapeKey, true)
 			return () => {
-				document.removeEventListener('keyup', handleEscapeKey, true)
+				element.removeEventListener('keyup', handleEscapeKey, true)
 			}
 		}
 	})
@@ -70,7 +70,9 @@
 		props = { cssPrefix, ...$$restProps }
 		cssProps = { placement, show }
 		if (element && show) {
-			element.focus()
+			window.setTimeout(function () {
+				element.focus()
+			}, 0)
 		} else if (element && !show) {
 			element.blur()
 		}
@@ -78,7 +80,7 @@
 </script>
 
 <El cssPrefix="{cssPrefix}-wrapper">
-	<El {...props} {cssProps} bind:element>
+	<El {...props} {cssProps} bind:element tabindex="0">
 		<slot />
 	</El>
 	{#if show}

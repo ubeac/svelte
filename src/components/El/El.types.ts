@@ -336,4 +336,5 @@ export interface ElProps extends CssProps {
 	cssProps?: Record<string, any>
 	style?: any
 	[key: string]: any // used when we pass props to DOM Elements using ...$$restProps
+	tabindex?: string | number
 }

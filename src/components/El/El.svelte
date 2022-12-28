@@ -173,6 +173,9 @@
 	export let alignSelf: $$Props['alignSelf'] = undefined
 	export let justifyContent: $$Props['justifyContent'] = undefined
 
+	// Tab Index
+	export let tabindex: $$Props['tabindex'] = undefined
+
 	// forward events
 	export let forwardEvents: (element: HTMLElement) => any = () => ({})
 
@@ -322,6 +325,7 @@
 			id,
 			class: classes,
 			style,
+			tabindex,
 		}
 	}
 </script>
