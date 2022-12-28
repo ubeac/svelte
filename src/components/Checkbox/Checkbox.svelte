@@ -83,6 +83,8 @@
 		checked,
 		value,
 		name,
+		type: 'checkbox',
+		tag: 'input',
 		cssProps: {
 			color,
 			indeterminate,
@@ -98,10 +100,14 @@
 	$: descriptionProps = {
 		cssPrefix: cssPrefix + '-description',
 	}
+
+	const onChange = (event: any) => {
+		checked = event.target.checked
+	}
 </script>
 
 <El {...wrapperProps}>
-	<El tag="input" type="checkbox" {...checkboxProps} bind:element on:change />
+	<El {...checkboxProps} bind:element on:change={onChange} on:change />
 	{#if label || $$slots['default']}
 		<El {...labelProps}>
 			<slot>

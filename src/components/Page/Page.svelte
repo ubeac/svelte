@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { browser } from '$app/environment'
 	import { El } from '$lib/components'
 
 	import type { PageProps } from './Page.types'
@@ -24,7 +23,7 @@
 	$: cssProps = { container }
 	$: otherProps = { title, cssPrefix }
 
-	$: if (browser) document.title = title ?? ''
+	$: if (typeof window !== 'undefined') document.title = title ?? ''
 </script>
 
 <El {...$$restProps} {cssProps} {...otherProps}>

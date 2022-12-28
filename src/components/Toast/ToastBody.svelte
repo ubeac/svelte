@@ -1,17 +1,12 @@
 <script lang="ts">
-	import { El } from '../Base'
-	import type { ToastBodyProps } from './Toast.types'
+	import { El, type ToastBodyProps } from '$lib/components'
 
 	type $$Props = ToastBodyProps
 
 	export let cssPrefix: $$Props['cssPrefix'] = 'toast-body'
 	export let tag: $$Props['tag'] = 'div'
-
-	$: cssProps = {
-		// 
-	}
 </script>
 
-<El {...$$restProps} {cssPrefix} {cssProps} {tag}>
+<El {...$$restProps} {cssPrefix} {tag}>
 	<slot />
 </El>

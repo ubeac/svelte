@@ -4,11 +4,8 @@
 	import { createPopper } from '@popperjs/core'
 	import type { Instance } from '@popperjs/core'
 
+	import { El, type PopupProps } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-
-	import { El } from '../Base'
-	import type { PopupProps } from './Popup.types'
-	import type { PopupPlacements, PopupTriggers } from './Popup.types'
 
 	type $$Props = PopupProps
 
@@ -43,12 +40,12 @@
 	/**
 	 * Set where the Popup should be opened (relative to target element)
 	 */
-	export let placement: PopupPlacements = 'auto'
+	export let placement: $$Props['placement'] = 'auto'
 
 	/**
 	 * Set which actions should be responsible for opening/closing the Popup
 	 */
-	export let trigger: PopupTriggers = ['focus', 'hover']
+	export let trigger: $$Porps['trigger'] = ['focus', 'hover']
 
 	let instance: Instance
 	let element: HTMLElement

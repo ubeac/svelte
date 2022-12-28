@@ -1,4 +1,4 @@
-import type { ElProps } from '../Base'
+import type { Colors, ElProps } from '$lib/components'
 
 export interface SwitchProps extends Partial<ElProps> {
 	/**
