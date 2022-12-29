@@ -80,22 +80,26 @@
 				<El tag="pre" class="language-svelte"><code>{@html markupHighlighted}</code></El>
 			</El>
 		</Tab>
-		<Tab if={!!script} title="Script">
-			<El cssPrefix="preview-code">
-				<PreviewCopyButton on:success={setChecked} value={script}>
-					<Icon name={copyIcon} />
-				</PreviewCopyButton>
-				<El tag="pre" class="language-svelte"><code>{@html scriptHighlighted}</code></El>
-			</El>
-		</Tab>
-		<Tab if={!!style} title="Style">
-			<El class={classname('preview-code')}>
-				<PreviewCopyButton on:success={setChecked} value={style}>
-					<Icon name={copyIcon} />
-				</PreviewCopyButton>
+		{#if !!script}
+			<Tab title="Script">
+				<El cssPrefix="preview-code">
+					<PreviewCopyButton on:success={setChecked} value={script}>
+						<Icon name={copyIcon} />
+					</PreviewCopyButton>
+					<El tag="pre" class="language-svelte"><code>{@html scriptHighlighted}</code></El>
+				</El>
+			</Tab>
+		{/if}
+		{#if !!style}
+			<Tab if={!!style} title="Style">
+				<El class={classname('preview-code')}>
+					<PreviewCopyButton on:success={setChecked} value={style}>
+						<Icon name={copyIcon} />
+					</PreviewCopyButton>
 
-				<El tag="pre" class="language-svelte"><code>{@html styleHighlighted}</code></El>
-			</El>
-		</Tab>
+					<El tag="pre" class="language-svelte"><code>{@html styleHighlighted}</code></El>
+				</El>
+			</Tab>
+		{/if}
 	</CardTabs>
 </Card>
