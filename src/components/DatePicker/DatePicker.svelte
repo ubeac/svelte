@@ -90,7 +90,6 @@
 		// format,
 		format: {
 			parse(date: any) {
-				console.log('format.parse', date)
 				if (date instanceof Date) return date
 				if (typeof date === 'string') return moment(date, format).toDate()
 				if (typeof date === 'number') return moment(date).toDate()
@@ -102,7 +101,7 @@
 		},
 		setup(picker: any) {
 			picker.on('selected', (event: any) => {
-				const date = event.dateInstance?.toDateString()
+				const date = event?.dateInstance?.toDateString()
 
 				const newValue = moment(date).format(format)
 
