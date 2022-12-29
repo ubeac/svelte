@@ -91,7 +91,7 @@
 			</Tab>
 		{/if}
 		{#if !!style}
-			<Tab if={!!style} title="Style">
+			<Tab title="Style">
 				<El class={classname('preview-code')}>
 					<PreviewCopyButton on:success={setChecked} value={style}>
 						<Icon name={copyIcon} />
