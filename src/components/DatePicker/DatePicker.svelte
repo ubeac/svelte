@@ -52,11 +52,6 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 
 	/**
-	 * Set the input read-only
-	 */
-	export let readonly: $$Props['readonly'] = undefined
-
-	/**
 	 * The size of Date picker input
 	 */
 	export let size: $$Props['size'] = undefined
@@ -129,7 +124,6 @@
 		cssPrefix,
 		placeholder,
 		disabled,
-		readonly,
 	}
 
 	onMount(() => {

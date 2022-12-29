@@ -13,4 +13,6 @@
 <DatePicker options={{ numberOfMonths: 2 }} />
 
 <small>pick ranges</small>
-<DatePicker options={{ singleMode: false }} bind:value={rangeValue} />
+<!-- Bind:value isn't working yet on range date,
+	 you can use LitePicker's api to get start and end dates -->
+<DatePicker options={{ singleMode: false }} />

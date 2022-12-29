@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { DatePicker } from '@ubeac/svelte'
 
-	let value: Date
+	let value: Date;
 </script>
 
-<DatePicker bind:value />
+<DatePicker borderFlush bind:value/>
 
 value: <b>{value}</b>

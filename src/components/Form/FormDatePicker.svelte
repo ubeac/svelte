@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FormField, type FormDatePickerProps, DatePicker } from '$lib/components'
+	import { DatePicker, type FormDatePickerProps, FormField } from '$lib/components'
 
 	type $$Props = FormDatePickerProps
 
@@ -29,11 +29,6 @@
 	 * Set placeholder for the FormDatePicker
 	 */
 	export let placeholder: $$Props['placeholder'] = undefined
-
-	/**
-	 * Set the FormDatePicker read-only
-	 */
-	export let readonly: $$Props['readonly'] = undefined
 
 	/**
 	 * Set the FormDatePicker required
@@ -83,7 +78,6 @@
 		tag,
 		placeholder,
 		disabled,
-		readonly,
 		type,
 		required,
 		size,
@@ -95,7 +89,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<DatePicker {...DatePickerProps} bind:value>
+	<DatePicker {...DatePickerProps} bind:value on:changed>
 		<slot />
 	</DatePicker>
 	<slot name="hint" />

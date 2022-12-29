@@ -1,8 +1,7 @@
 <script>
 	import { Preview } from '@ubeac/svelte'
 	import FormDatePickerColumn from './FormDatePickerColumn.svelte'
-	import FormDatePickerDisabledLoading from './FormDatePickerDisabledLoading.svelte'
-	import FormDatePickerIcon from './FormDatePickerIcon.svelte'
+	import FormDatePickerDisabled from './FormDatePickerDisabled.svelte'
 	import FormDatePickerLabel from './FormDatePickerLabel.svelte'
 	import FormDatePickerMessage from './FormDatePickerMessage.svelte'
 	import FormDatePickerRequired from './FormDatePickerRequired.svelte'
@@ -40,16 +39,9 @@
 	<FormDatePickerColumn />
 </Preview>
 
-<h2>Disabled, Read-Only & Loading</h2>
-<p>FormDatePicker supports disabled, Read-Only and loading states.</p>
+<h2>Disabled</h2>
+<p>FormDatePicker supports disabled states.</p>
 
-<Preview vertical class="align-items-stretch" src="./FormDatePickerDisabledLoading.svelte">
-	<FormDatePickerDisabledLoading />
-</Preview>
-
-<h2>Icon</h2>
-<p>You can set Icon for FormDatePicker by setting <code>icon</code> and <code>iconEnd</code> props.</p>
-
-<Preview vertical class="align-items-stretch" src="./FormDatePickerIcon.svelte">
-	<FormDatePickerIcon />
+<Preview vertical class="align-items-stretch" src="./FormDatePickerDisabled.svelte">
+	<FormDatePickerDisabled />
 </Preview>
