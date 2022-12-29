@@ -1,5 +1,5 @@
 <script>
-	import { Spinner, COLORS } from '@ubeac/svelte'
+	import { Spinner } from '@ubeac/svelte'
 </script>
 
 <Spinner animate="border" size="md" color="primary" />

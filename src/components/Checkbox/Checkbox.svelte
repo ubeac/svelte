@@ -1,100 +1,126 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { type CheckboxProps, El, type ElProps } from '$lib/components'
 
-	import { nanoid } from 'nanoid'
+	type $$Props = CheckboxProps
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Colors } from '$lib/types'
-	import { classname } from '$lib/utils'
+	//#region Props
+
+	/**
+	 * Set Css Prefix for the Input
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'checkbox'
 
 	/**
 	 * Set color of checkbox when it is checked
 	 */
-	export let color: Colors = 'primary'
+	export let color: $$Props['color'] = undefined
+
+	/**
+	 * Set the checkbox checked attribute
+	 */
+	export let checked: $$Props['checked'] = false
 
 	/**
 	 * Description of checkbox
 	 */
-	export let description: string | undefined = ''
+	export let description: $$Props['description'] = undefined
 
 	/**
-	 * Forward all native Events
+	 * Set the checkbox disabled
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
-	 * Binding result of selected items
+	 * Set the checkbox indeterminate
 	 */
-	export let group: any = []
-
-	/**
-	 * Set id for Checkbox element
-	 */
-	export let id: string = 'checkbox-' + nanoid(10)
+	export let indeterminate: $$Props['indeterminate'] = false
 
 	/**
 	 * Show multiple items in same line
 	 */
-	export let inline: boolean = false
+	export let inline: $$Props['inline'] = false
 
 	/**
-	 * Set checkbox's key
+	 * Label of checkbox
 	 */
-	export let key: string | undefined = undefined
+	export let label: $$Props['label'] = undefined
 
 	/**
-	 * Set text of checkbox
+	 * Name of checkbox
 	 */
-	export let text: string | undefined = undefined
+	export let name: $$Props['name'] = undefined
 
 	/**
-	 * Checked status of checkbox
+	 * Put your checkboxes on the opposite side with reverse property.
 	 */
-	export let value: boolean = false
+	export let reverse: $$Props['reverse'] = undefined
 
-	$: classes = classname('checkbox', { inline }, $$props.class, true)
+	/**
+	 * Set the checkbox value
+	 */
+	export let value: $$Props['value'] = undefined
 
-	$: updateGroup(value)
-	$: updateChekbox(group)
+	//#endregion
 
-	function updateChekbox(group: any) {
-		value = group.indexOf(key) >= 0
+	let element: HTMLElement
+	let checkboxProps: Partial<ElProps>
+	let labelProps: Partial<ElProps>
+
+	$: id = element?.id
+
+	$: wrapperProps = {
+		cssPrefix: cssPrefix + '-wrapper',
+		cssProps: {
+			inline,
+			reverse,
+		},
 	}
 
-	function updateGroup(value: boolean) {
-		const index = group.indexOf(key)
-		if (value) {
-			if (index < 0) {
-				group = [...group, key]
-			}
-		} else {
-			if (index >= 0) {
-				group.splice(index, 1)
-				group = group
-			}
-		}
+	$: checkboxProps = {
+		...$$restProps,
+		cssPrefix,
+		disabled,
+		checked,
+		value,
+		name,
+		type: 'checkbox',
+		tag: 'input',
+		cssProps: {
+			color,
+			indeterminate,
+		},
+	}
+
+	$: labelProps = {
+		cssPrefix: cssPrefix + '-label',
+		tag: 'label',
+		for: id,
+	}
+
+	$: descriptionProps = {
+		cssPrefix: cssPrefix + '-description',
+	}
+
+	const onChange = (event: any) => {
+		checked = event.target.checked
 	}
 </script>
 
-<div class={classes}>
-	<input
-		type="checkbox"
-		{id}
-		bind:checked={value}
-		value={key}
-		use:forwardEvents
-		{...$$restProps}
-		class={classname('checkbox-input', { color }, undefined, true)} />
-	<label for={id} class={classname('checkbox-label')}>
-		<slot>
-			{text}
-		</slot>
-	</label>
+<El {...wrapperProps}>
+	<El {...checkboxProps} bind:element on:change={onChange} on:change />
+	{#if label || $$slots['default']}
+		<El {...labelProps}>
+			<slot>
+				{label}
+			</slot>
+		</El>
+	{/if}
+
 	{#if description || $$slots['description']}
-		<div class={classname('checkbox-description')}>
+		<El {...descriptionProps}>
 			<slot name="description">
 				{description}
 			</slot>
-		</div>
+		</El>
 	{/if}
-</div>
+</El>

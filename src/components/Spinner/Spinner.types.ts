@@ -1,8 +1,11 @@
-import type { ElProps } from '$lib/components'
+import type { Colors, ElProps } from '$lib/components'
+
+export type SpinnerSizes = 'sm' | 'md' | 'lg'
+export type SpinnerShapes = 'border' | 'grow'
 
 export interface SpinnerProps extends Partial<ElProps> {
 	color?: Colors
-	size?: 'sm' | 'md'
+	size?: SpinnerSizes
 	role?: string
-	animate?: 'border' | 'grow'
+	animate?: SpinnerShapes
 }

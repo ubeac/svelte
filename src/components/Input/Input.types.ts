@@ -1,4 +1,4 @@
-import type { ElProps } from '../Base'
+import type { ElProps } from '$lib/components'
 
 export const INPUT_SIZES = ['sm', 'md', 'lg'] as const
 export type InputSizes = typeof INPUT_SIZES[number]
@@ -19,4 +19,6 @@ export interface InputProps extends Partial<ElProps> {
 	borderRounded?: boolean
 	borderFlush?: boolean
 	type?: InputTypes
+	mask?: string
+	maskOptions?: object
 }

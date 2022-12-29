@@ -7,4 +7,4 @@
 
 <Autocomplete {items} bind:value />
 
-<p if={!!value}>You selected <b>{value}</b></p>
+<i>You selected <b>{value}</b></i>

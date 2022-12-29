@@ -13,37 +13,47 @@
 	space.
 </p>
 
-<Doc title="Status colors">
-	<!--  -->
-</Doc>
+<Doc title="Status colors" />
 <Preview src="./StatusDefault.svelte">
-	<StatusDefault />
+	<div class="custom-class">
+		<StatusDefault />
+	</div>
 </Preview>
 
 <Doc title="Status with dot">
 	Set the <code>style</code> prop to dot to change status mode to circle shape.
 </Doc>
 <Preview src="./StatusDots.svelte">
-	<StatusDots />
+	<div class="custom-class">
+		<StatusDots />
+	</div>
 </Preview>
 
-<Doc title="Lite status">
-	<!--  -->
-</Doc>
+<Doc title="Lite status" />
 <Preview src="./StatusLite.svelte">
-	<StatusLite />
+	<div class="custom-class">
+		<StatusLite />
+	</div>
 </Preview>
 
 <Doc title="Status with animated dots">
 	Set the <code>animated</code> prop to change status mode to animated.
 </Doc>
 <Preview src="./StatusDotsAnimated.svelte">
-	<StatusDotsAnimated />
+	<div class="custom-class">
+		<StatusDotsAnimated />
+	</div>
 </Preview>
 
-<Doc title="Lite status with animated dots">
-	<!--  -->
-</Doc>
+<Doc title="Lite status with animated dots" />
 <Preview src="./StatusLiteAnimated.svelte">
-	<StatusLiteAnimated />
+	<div class="custom-class">
+		<StatusLiteAnimated />
+	</div>
 </Preview>
+
+<style>
+	.custom-class > :global(.u-status) {
+		margin-bottom: 0.5rem;
+	}
+</style>
