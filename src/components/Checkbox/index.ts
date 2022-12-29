@@ -1,8 +1,3 @@
-import Checkbox from './Checkbox.svelte'
-import CheckboxGroup from './CheckboxGroup.svelte'
-
-export { Checkbox, CheckboxGroup }
-export default {
-	Checkbox,
-	CheckboxGroup,
-}
+export {default as Checkbox} from './Checkbox.svelte'
+export {default as CheckboxGroup} from './CheckboxGroup.svelte'
+export * from './Checkbox.types'

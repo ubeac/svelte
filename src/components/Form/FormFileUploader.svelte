@@ -1,19 +1,11 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { nanoid } from 'nanoid'
-
-	import { FormGroup, Icon, FileUploader, Label, Spinner } from '$lib/components'
+	import { FileUploader, FormField, Icon, Label, Spinner } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import { classname } from '$lib/utils'
 
 	import { FormHint } from '.'
-	import FormField from './FormField.svelte'
-
-	/**
-	 * Set Column width
-	 */
-	export let cols: string | number | boolean = '12'
 
 	/**
 	 * Sets an icon inside component
@@ -28,7 +20,7 @@
 	/**
 	 * Set id for HTML element
 	 */
-	export let id: string | undefined = nanoid(10)
+	export let id: string | undefined
 
 	/**
 	 * Set Label on top of File Uploader
@@ -60,7 +52,7 @@
 	$: classes = classname('form-file-uploader', undefined, $$props.class)
 </script>
 
-<FormField {cols} class={classes}>
+<FormField class={classes}>
 	<slot name="label">
 		{#if label}
 			<Label for="form-file-uploader-{id}" {required}>{label}</Label>

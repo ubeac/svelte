@@ -35,7 +35,11 @@
 </script>
 
 <El {...$$restProps} {cssProps} {...otherProps}>
-	<slot name="label"><Label cssProps={{ labelCssProps }} {...labelCssProps}>{label}</Label></slot>
+	<slot name="label">
+		{#if label}
+			<Label cssProps={{ labelCssProps }} {...labelCssProps}>{label}</Label>
+		{/if}
+	</slot>
 	<slot />
 	<slot name="hint">
 		{#if hint}

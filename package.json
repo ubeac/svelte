@@ -1,6 +1,33 @@
 {
 	"name": "@ubeac/svelte",
-	"version": "0.0.3-next.158",
+	"version": "0.0.6-next.7",
+	"description": "uBeac's Opinionated Svelte Component library",
+	"keywords": [
+		"svelte",
+		"sveltejs",
+		"bootstrap",
+		"tabler",
+		"svelte components",
+		"svelte-components",
+		"svelte-kit",
+		"sveltekit",
+		"ubeac",
+		"ubeac svelte",
+		"ubeac svelte components",
+		"ubeac svelte kit",
+		"tabler"
+	],
+	"homepage": "https://svelte.ubeac.io/",
+	"bugs": {
+		"url": "https://github.com/ubeac/svelte/issues",
+		"email": "ap@ubeac.io"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ubeac/svelte.git"
+	},
+	"license": "Apache-2.0",
+	"author": "Amir Pournasserian <ap@ubeac.io>",
 	"type": "module",
 	"svelte": "index.js",
 	"publishConfig": {
@@ -20,20 +47,20 @@
 	},
 	"dependencies": {
 		"@googlemaps/js-api-loader": "^1.14.3",
+		"@iconify/svelte": "^3.0.1",
 		"@popperjs/core": "^2.11.6",
 		"@tabler/core": "^1.0.0-beta16",
 		"bootstrap": "^5.2.3",
 		"change-case": "^4.1.2",
+		"inputmask": "^5.0.7",
 		"litepicker": "^2.0.12",
 		"moment": "^2.29.4",
-		"nanoid": "^3.3.4",
 		"prism-svelte": "^0.5.0",
 		"prismjs": "^1.29.0",
 		"swiper": "^8.4.2",
 		"tom-select": "^2.1.0"
 	},
 	"devDependencies": {
-		"@iconify/svelte": "^3.0.1",
 		"@sveltejs/adapter-static": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
 		"@sveltejs/package": "^1.0.0",

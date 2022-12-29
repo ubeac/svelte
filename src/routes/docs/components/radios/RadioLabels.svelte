@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { Radio } from '@ubeac/svelte'
-
-	let _for: string | undefined = undefined
 </script>
 
 <Radio name="lang3" label="HTML" checked />

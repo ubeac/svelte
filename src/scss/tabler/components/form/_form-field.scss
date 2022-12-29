@@ -23,3 +23,23 @@ $props-form-field: (
 		}
 	}
 }
+
+.#{$prefix-form-input} {
+	@extend .#{$prefix-form-field}
+}
+
+.#{$prefix-form-checkbox} {
+	@extend .#{$prefix-form-field}
+}
+
+.#{$prefix-form-checkbox-group} {
+	@extend .#{$prefix-form-field}
+}
+
+.#{$prefix-form-radio-group} {
+	@extend .#{$prefix-form-field}
+}
+
+.#{$prefix-form-textarea} {
+	@extend .#{$prefix-form-field}
+}
