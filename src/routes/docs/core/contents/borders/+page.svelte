@@ -75,8 +75,10 @@
 		min-width: 100%;
 	}
 	.custom-class > :global(.u-el) {
+		justify-content: center;
+		align-items: center;
 		text-align: center;
-		display: inline-block;
+		display: inline-flex;
 		width: 5rem;
 		height: 5rem;
 		margin: 0.25rem;
