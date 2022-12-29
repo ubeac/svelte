@@ -55,6 +55,11 @@ export const navigations = [
 				title: 'Columns',
 				icon: 'star',
 			},
+			{
+				route: base_core_path + 'contents/backgrounds',
+				title: 'Background',
+				icon: 'star',
+			},
 		],
 	},
 	{
