@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '../Base'
-	import type { TableFootProps } from './Table.types'
+	import { El, type TableFootProps } from '$lib/components'
 
 	type $$Props = TableFootProps
 

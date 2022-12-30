@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
+	import { El, type PopoverBodyProps } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
-
-	import { El } from '../Base'
-	import type { PopoverBodyProps } from './Popover.types'
 
 	type $$Props = PopoverBodyProps
 

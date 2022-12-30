@@ -1,5 +1,3 @@
-import Autocomplete from './Autocomplete.svelte'
+export {default as Autocomplete} from './Autocomplete.svelte'
 
-export { Autocomplete }
-
-export default Autocomplete
+export * from './Autocomplete.types'

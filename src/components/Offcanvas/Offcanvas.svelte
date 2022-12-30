@@ -45,24 +45,23 @@
 
 	setContext('OFFCANVAS', { close })
 
-	onMount(() => {
-		const handleOutsideClick = (event: any) => {
-			if (element && backdrop && !element.contains(event.target) && !event.defaultPrevented) {
-				close()
-			}
+	const handleEscapeKey = (event: any) => {
+		if (element && autoClose && event.key === 'Escape' && !event.defaultPrevented) {
+			close()
 		}
+	}
 
-		const handleEscapeKey = (event: any) => {
-			if (element && autoClose && event.key === 'Escape' && !event.defaultPrevented) {
-				close()
-			}
+	const handleOutsideClick = (event: any) => {
+		if (element && backdrop && !element.contains(event.target) && !event.defaultPrevented) {
+			close()
 		}
+	}
+
+	onMount(() => {
 		if (element && autoClose) {
-			document.addEventListener('click', handleOutsideClick, true)
-			document.addEventListener('keyup', handleEscapeKey, true)
+			element.addEventListener('keyup', handleEscapeKey, true)
 			return () => {
-				document.removeEventListener('click', handleOutsideClick, true)
-				document.removeEventListener('keyup', handleEscapeKey, true)
+				element.removeEventListener('keyup', handleEscapeKey, true)
 			}
 		}
 	})
@@ -70,17 +69,26 @@
 	$: {
 		props = { cssPrefix, ...$$restProps }
 		cssProps = { placement, show }
+		if (element && show) {
+			window.setTimeout(function () {
+				element.focus()
+			}, 0)
+		} else if (element && !show) {
+			element.blur()
+		}
 	}
 </script>
 
-<El {...props} {cssProps} bind:element>
-	<slot />
+<El cssPrefix="{cssPrefix}-wrapper">
+	<El {...props} {cssProps} bind:element tabindex="0">
+		<slot />
+	</El>
+	{#if show}
+		{#if backdrop}
+			<El cssPrefix="{cssPrefix}-backdrop" on:click={handleOutsideClick} />
+		{/if}
+		{#if noScroll}
+			<El cssPrefix="{cssPrefix}-no-scroll" />
+		{/if}
+	{/if}
 </El>
-{#if show}
-	{#if backdrop}
-		<El cssPrefix="{cssPrefix}-backdrop" />
-	{/if}
-	{#if noScroll}
-		<El cssPrefix="{cssPrefix}-no-scroll" />
-	{/if}
-{/if}

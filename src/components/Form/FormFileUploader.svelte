@@ -1,88 +1,96 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { FileUploader, FormField, type FormFileUploaderProps } from '$lib/components'
 
-	import { FileUploader, FormField, Icon, Label, Spinner } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = FormFileUploaderProps
 
-	import { FormHint } from '.'
+	//#region
 
 	/**
-	 * Sets an icon inside component
+	 * Set the cssPrefix of FormFileUploader
 	 */
-	export let icon: string | undefined = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-file-uploader'
 
 	/**
-	 * Sets an icon inside component
+	 * Set the tag of FormFileUploader
 	 */
-	export let iconEnd: string | undefined = undefined
+	export let tag: $$Props['tag'] = 'input'
 
 	/**
-	 * Set id for HTML element
+	 * Set the FormFileUploader disabled
 	 */
-	export let id: string | undefined
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
-	 * Set Label on top of File Uploader
+	 * Set the FormFileUploader read-only
 	 */
-	export let label: string | undefined = undefined
+	export let readonly: $$Props['readonly'] = undefined
 
 	/**
-	 * Show loading indicator inside component
+	 * Set the FormFileUploader required
 	 */
-	export let loading: boolean = false
+	export let required: $$Props['required'] = undefined
 
 	/**
-	 * Show Message at bottom of File Uploader input
+	 * Set the size of FormFileUploader
 	 */
-	export let message: string | undefined = undefined
+	export let size: $$Props['size'] = undefined
 
 	/**
-	 * Mark this as required field in form
+	 * Set the state of FormFileUploader
 	 */
-	export let required: boolean = false
+	export let state: $$Props['state'] = undefined
 
 	/**
-	 * The selected Files
+	 * Set the type of input
 	 */
-	export let value: any = undefined
+	export let type: $$Props['type'] = undefined
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * TODO
+	 */
+	export let multiple: $$Props['multiple'] = undefined
 
-	$: classes = classname('form-file-uploader', undefined, $$props.class)
+	/**
+	 * the text Value of FormFileUploader
+	 */
+	export let value: $$Props['value'] = undefined
+
+	/**
+	 * Set the text label of FormFileUploader
+	 */
+	export let label: $$Props['label'] = undefined
+
+	/**
+	 * Define hint for the FormField
+	 */
+	export let hint: $$Props['hint'] = undefined
+
+	//#endregion
+
+	$: props = {
+		required,
+		label,
+		hint,
+		state,
+		cssPrefix,
+	}
+
+	$: fileUploaderProps = {
+		tag,
+		multiple,
+		disabled,
+		readonly,
+		type,
+		required,
+		size,
+		state,
+	}
 </script>
 
-<FormField class={classes}>
-	<slot name="label">
-		{#if label}
-			<Label for="form-file-uploader-{id}" {required}>{label}</Label>
-		{/if}
-	</slot>
-	<div class={classname('form-field-body')}>
-		<slot name="start">
-			{#if icon}
-				<span class={classname('form-field-icon')}>
-					<Icon name={icon} />
-				</span>
-			{/if}
-		</slot>
-		<FileUploader id="form-file-uploader-{id}" {required} {forwardEvents} {...$$restProps} bind:value />
-		<slot name="end">
-			{#if iconEnd && !loading}
-				<span class={classname('form-field-icon')}>
-					<Icon name={iconEnd} />
-				</span>
-			{/if}
-			{#if loading}
-				<span class={classname('form-field-icon')}>
-					<Spinner />
-				</span>
-			{/if}
-		</slot>
-	</div>
-	<slot name="message">
-		{#if message}
-			<FormHint>{message}</FormHint>
-		{/if}
-	</slot>
+<FormField {...props} {...$$restProps}>
+	<slot name="label" />
+	<FileUploader {...fileUploaderProps} bind:value>
+		<slot />
+	</FileUploader>
+	<slot name="hint" />
 </FormField>

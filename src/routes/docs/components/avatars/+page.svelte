@@ -20,54 +20,64 @@
 	Use the <code>Avatar</code> component to add an avatar to your interface design for greater customisation.
 </Doc>
 <Preview src="./AvatarDefault.svelte">
-	<AvatarDefault />
+	<div class="custom-class">
+		<AvatarDefault />
+	</div>
 </Preview>
 
 <Doc title="Avatar Colors">Customize the color of the avatars.</Doc>
 
 <Preview src="./AvatarColors.svelte">
-	<AvatarColors />
+	<div class="custom-class">
+		<AvatarColors />
+	</div>
 </Preview>
 
 <Doc title="Avatar Shapes">You can make them round or square and change their border radius.</Doc>
 
 <Preview src="./AvatarShapes.svelte">
-	<AvatarShapes />
+	<div class="custom-class">
+		<AvatarShapes />
+	</div>
 </Preview>
 
 <Doc title="Avatar Size">
 	you can create a standard avatar or scale it up or down to different sizes based on what you need.
 </Doc>
-
 <Preview src="./AvatarSize.svelte">
-	<AvatarSize />
+	<div class="custom-class">
+		<AvatarSize />
+	</div>
 </Preview>
 
 <Doc title="Avatar Image and Icon">
 	Set an <code>image</code> as the background to make users easy to indentify and create a personalised experience.
 </Doc>
-
 <Preview src="./AvatarImage.svelte">
-	<AvatarImage />
+	<div class="custom-class">
+		<AvatarImage />
+	</div>
 </Preview>
 
-<Doc title="Avatar Status">
-	<!--  -->
-</Doc>
+<Doc title="Avatar Status" />
 <Preview src="./AvatarStatus.svelte">
-	<AvatarStatus />
+	<div class="custom-class">
+		<AvatarStatus />
+	</div>
 </Preview>
 
-<Doc title="Avatar List">
-	<!--  -->
-</Doc>
+<Doc title="Avatar List" />
 <Preview src="./AvatarList.svelte">
 	<AvatarList />
 </Preview>
 
-<Doc title="Avatar List Stacked">
-	<!--  -->
-</Doc>
+<Doc title="Avatar List Stacked" />
 <Preview src="./AvatarListStacked.svelte">
 	<AvatarListStacked />
 </Preview>
+
+<style>
+	.custom-class > :global(.u-avatar) {
+		margin-bottom: 0.2rem;
+	}
+</style>

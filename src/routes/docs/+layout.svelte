@@ -1,29 +1,15 @@
 <script type="ts">
-	import { Card, CardBody, El, PageBody, PageHeader, ToC } from '@ubeac/svelte'
+	import { Card, CardBody, type ContainerMaxWidths, El, PageBody, PageHeader, ToC } from '@ubeac/svelte'
 
 	import { navigations } from '.'
 
-	let container: ContainerMaxWidths = 'md'
-
-	let cssPrefixPreTitle = `page-header-pretitle`
-	let cssPrefixTitle = `page-header-title`
+	let container: ContainerMaxWidths = 'lg'
 </script>
-
-<PageHeader>
-	<El {container}>
-		<El row>
-			<El col>
-				<El cssPrefix={cssPrefixPreTitle}><slot name="preTitle" /></El>
-				<El tag="h1" cssPrefix={cssPrefixTitle}><slot name="title">Documentation</slot></El>
-			</El>
-		</El>
-	</El>
-</PageHeader>
 
 <PageBody>
 	<El {container}>
 		<El row>
-			<El colLg="2" display="none" displayLg="block">
+			<El colLg="2" colMd="3" display="none" displayMd="block">
 				<ul class="nav nav-pills nav-vertical" id="docs">
 					{#each navigations as navigation}
 						<li class="nav-item">
@@ -50,7 +36,7 @@
 					{/each}
 				</ul>
 			</El>
-			<El colLg="8" col="12">
+			<El colLg="8" colMd="9" col="12">
 				<Card size="lg">
 					<CardBody><slot /></CardBody>
 				</Card>
@@ -61,22 +47,3 @@
 		</El>
 	</El>
 </PageBody>
-
-<style global>
-	.u-preview-body > * {
-		margin: 0 0.2rem 0.8rem 0.2rem;
-		vertical-align: top;
-	}
-	.u-preview-body > :last-child {
-		margin: 0 0.2rem 0 0.2rem !important;
-		vertical-align: top !important;
-	}
-
-	.u-card-body > h2 {
-		margin-top: 1.75rem !important;
-	}
-	.u-preview-body > :last-child {
-		margin: 0 0.2rem 0 0.2rem !important;
-		vertical-align: top !important;
-	}
-</style>
