@@ -3,6 +3,8 @@
 
 	type $$Props = FileUploaderProps
 
+	//#region Props
+
 	/**
 	 * Set Css Prefix for the FileUploader
 	 */
@@ -24,9 +26,9 @@
 	export let disabled: $$Props['disabled'] = undefined
 
 	/**
-	 * Set placeholder for the input
+	 * Allow choosing multiple files
 	 */
-	export let placeholder: $$Props['placeholder'] = undefined
+	export let multiple: $$Props['multiple'] = undefined
 
 	/**
 	 * Set the input read only
@@ -39,23 +41,28 @@
 	export let size: $$Props['size'] = 'md'
 
 	/**
+	 * Set the validation state of input
+	 */
+	export let state: $$Props['state'] = undefined
+
+	/**
 	 * List of selected files.
 	 */
 	export let value: $$Props['value'] = undefined
 
+	// #endregion
+
 	$: cssProps = {
 		size,
-		disabled,
-		readonly,
+		state,
 	}
 
 	$: props = {
 		tag,
 		cssPrefix,
-		cssProps,
 		readonly,
 		disabled,
-		placeholder,
+		multiple,
 		accept,
 		type: 'file',
 	}
@@ -65,4 +72,13 @@
 	}
 </script>
 
-<El {...$$restProps} {...props} on:change={onChange} />
+<El cssPrefix="{cssPrefix}-wrapper" cssProps={{ size }}>
+	{#if $$slots.start}
+		<slot name="start" />
+	{/if}
+	<slot />
+	<El {...$$restProps} {...props} {cssProps} on:change={onChange} />
+	{#if $$slots.end}
+		<slot name="end" />
+	{/if}
+</El>

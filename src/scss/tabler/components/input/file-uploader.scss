@@ -1,16 +1,30 @@
 //
 // File Uploader
 //
-$prefix-file-uploader: $prefix + 'file-uploader';
+
+$file-uploader-wrapper-props: (
+	null: '.input-group',
+	size: (sm: '.input-group-sm',
+		md: '.input-group',
+		lg: '.input-group-lg',
+	),
+);
+
+$file-uploader-props: (
+	null: '.form-control',
+	size: (sm: '.form-control-sm',
+		md: '.form-control',
+		lg: '.form-control-lg',
+	),
+	state:(valid: '.is-valid',
+		invalid: '.is-invalid'
+	),
+);
+
+.#{$prefix-file-uploader-wrapper} {
+	@include apply-props($file-uploader-wrapper-props);
+}
 
 .#{$prefix-file-uploader} {
-	@extend .form-control;
-
-	&.#{$prefix-file-uploader}-size-sm {
-		@extend .form-control-sm;
-	}
-
-	&.#{$prefix-file-uploader}-size-lg {
-		@extend .form-control-lg;
-	}
+	@include apply-props($file-uploader-props);
 }
