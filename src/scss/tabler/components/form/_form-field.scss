@@ -36,7 +36,15 @@ $props-form-field: (
 	@extend .#{$prefix-form-field}
 }
 
+.#{$prefix-form-file-uploader} {
+	@extend .#{$prefix-form-field}
+}
+
 .#{$prefix-form-radio-group} {
+	@extend .#{$prefix-form-field}
+}
+
+.#{$prefix-form-switch} {
 	@extend .#{$prefix-form-field}
 }
 

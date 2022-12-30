@@ -7,15 +7,26 @@
 
 	type $$Props = IconProps
 
+	//#region Props
+
+	/**
+	 * The prefix of the component CSS class
+	 * @default icon
+	 * @type string
+	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'icon'
 
 	/**
 	 * Set color of the Icon
+	 * @default undefined
+	 * @type string
 	 */
 	export let color: $$Props['color'] = undefined
 
 	/**
 	 * Set color of the Icon
+	 * @default false
+	 * @type boolean
 	 */
 	export let filled: $$Props['filled'] = false
 
@@ -31,8 +42,13 @@
 
 	/**
 	 * Set Size of the Icon
+	 * @default undefined
+	 * @type string
+	 * @see https://icon-sets.iconify.design/ for list of icon sizes
 	 */
 	export let size: $$Props['size'] = undefined
+
+	//#endregion
 
 	$: classes = classname(
 		cssPrefix,

@@ -4,11 +4,9 @@
 
 	import 'prism-svelte'
 
+	import { Card, CardHeader, Icon, TabContent, TabItem, TabList, TabPanel, Tabs } from '$lib/components'
 	import { classname } from '$lib/utils'
 
-	import { Card } from '../Card'
-	import { Icon } from '../Icon'
-	import { Tabs, TabsItem, TabsItems, TabsPanel, TabsPanels } from '../Tabs'
 	import PreviewCopyButton from './PreviewCopyButton.svelte'
 
 	/**
@@ -65,52 +63,54 @@
 </script>
 
 <Card class={classes}>
-	<Tabs value="1">
-		<TabsItems>
-			<TabsItem value="1">Preview</TabsItem>
-			<TabsItem value="2">Markup</TabsItem>
-			{#if !!script}
-				<TabsItem value="3">Script</TabsItem>
-			{/if}
-			{#if !!style}
-				<TabsItem value="4">Style</TabsItem>
-			{/if}
-		</TabsItems>
-		<TabsPanels>
-			<TabsPanel value="1">
+	<Tabs>
+		<CardHeader>
+			<TabList card>
+				<TabItem>Preview</TabItem>
+				<TabItem>Markup</TabItem>
+				{#if !!script}
+					<TabItem>Script</TabItem>
+				{/if}
+				{#if !!style}
+					<TabItem>Style</TabItem>
+				{/if}
+			</TabList>
+		</CardHeader>
+
+		<TabContent>
+			<TabPanel>
 				<div class={classname('preview-body')}>
 					<slot />
 				</div>
-			</TabsPanel>
-			<TabsPanel value="2">
+			</TabPanel>
+			<TabPanel>
 				<div class={classname('preview-code')}>
 					<PreviewCopyButton on:success={setChecked} value={markup}>
 						<Icon name={copyIcon} />
 					</PreviewCopyButton>
 					<pre class="language-svelte"><code>{@html markupHighlighted}</code></pre>
 				</div>
-			</TabsPanel>
+			</TabPanel>
 			{#if script}
-				<TabsPanel value="3">
+				<TabPanel>
 					<div class={classname('preview-code')}>
 						<PreviewCopyButton on:success={setChecked} value={script}>
 							<Icon name={copyIcon} />
 						</PreviewCopyButton>
 						<pre class="language-svelte"><code>{@html scriptHighlighted}</code></pre>
 					</div>
-				</TabsPanel>
+				</TabPanel>
 			{/if}
 			{#if script}
-				<TabsPanel value="4">
+				<TabPanel>
 					<div class={classname('preview-code')}>
 						<PreviewCopyButton on:success={setChecked} value={style}>
 							<Icon name={copyIcon} />
 						</PreviewCopyButton>
-
 						<pre class="language-svelte"><code>{@html styleHighlighted}</code></pre>
 					</div>
-				</TabsPanel>
+				</TabPanel>
 			{/if}
-		</TabsPanels>
+		</TabContent>
 	</Tabs>
 </Card>
