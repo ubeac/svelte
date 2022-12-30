@@ -40,7 +40,7 @@
 	}
 </script>
 
-<El bind:id {cssPrefix} {tag} on:click={onClick}>
+<El {...$$restProps} bind:id {cssPrefix} {tag} on:click={onClick}>
 	<El tag="button" cssPrefix="{cssPrefix}-link" {...linkProps} {cssProps}>
 		<slot />
 	</El>

@@ -6,6 +6,8 @@
 	import TabsVertical from './TabsVertical.svelte'
 	import TabsIcons from './TabsIcons.svelte'
 	import TabsPills from './TabsPills.svelte'
+  import TabsDropdown from './TabsDropdown.svelte'
+  import TabsEnd from './TabsEnd.svelte'
 </script>
 
 <h1>Tabs</h1>
@@ -40,6 +42,22 @@
 <Preview src="./TabsIcons.svelte">
 	<TabsIcons />
 </Preview>
+
+<Doc title="With Dropdown">
+	<!--  -->
+</Doc>
+<Preview src="./TabsDropdown.svelte">
+	<TabsDropdown />
+</Preview>
+
+
+<Doc title="Some Items at the end">
+	<!--  -->
+</Doc>
+<Preview src="./TabsEnd.svelte">
+	<TabsEnd />
+</Preview>
+
 
 <Doc title="Tabs inside card">
 	<!--  -->
