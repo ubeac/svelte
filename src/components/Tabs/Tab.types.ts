@@ -16,10 +16,14 @@ export interface TabListProps extends Partial<ElProps> {
 }
 export interface TabContentProps extends Partial<ElProps> {}
 
-export interface TabPaneProps extends Partial<ElProps> {}
+export interface TabPanelProps extends Partial<ElProps> {
+	role?: string
+}
 
 export type TabsContext = {
-	register: (id: string, active: boolean) => void
-	registerPane: (id: string) => string
-	unregister: (id: string) => void
+	registerTab: (tab: any) => void
+	registerPanel: (pane: any) => void
+	selectTab: (tab: any) => void
+	selectedTab: any
+	selectedPanel: any
 }

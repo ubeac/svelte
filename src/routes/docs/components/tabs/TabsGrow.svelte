@@ -1,18 +1,24 @@
 <script>
-	import { TabList, TabItem, TabContent, TabPane, Tabs } from '@ubeac/svelte/components'
+	import { TabList, TabItem, TabContent, TabPanel, Tabs, Card, CardHeader, CardBody } from '@ubeac/svelte'
 </script>
 
-<Tabs>
-	<TabList grow>
-		<TabItem active>Active</TabItem>
-		<TabItem>Link</TabItem>
-		<TabItem>Link</TabItem>
-		<TabItem disabled>Disabled</TabItem>
-	</TabList>
-	<TabContent>
-		<TabPane>Content of Active</TabPane>
-		<TabPane>Content of Link 1</TabPane>
-		<TabPane>Content of Link 2</TabPane>
-		<TabPane>Content of Disabled</TabPane>
-	</TabContent>
-</Tabs>
+<Card>
+	<Tabs>
+		<CardHeader>
+			<TabList grow>
+				<TabItem active>Home</TabItem>
+				<TabItem>Profile</TabItem>
+				<TabItem>Settings</TabItem>
+				<TabItem disabled>Disbaled</TabItem>
+			</TabList>
+		</CardHeader>
+		<CardBody>
+			<TabContent>
+				<TabPanel>Here is the content of the first tab.</TabPanel>
+				<TabPanel>Here is the content of the second tab.</TabPanel>
+				<TabPanel>Here is the content of the third tab.</TabPanel>
+				<TabPanel>Here is the content of the fourth tab.</TabPanel>
+			</TabContent>
+		</CardBody>
+	</Tabs>
+</Card>

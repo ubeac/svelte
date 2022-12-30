@@ -3,10 +3,18 @@
 
 	type $$Props = TabContentProps
 
+	//#region Props
+
+	/**
+	 * The prefix of the component CSS class
+	 * @default tab-content
+	 * @type string
+	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'tab-content'
-	export let tag: $$Props['tag'] = 'div'
+
+	//#endregion
 </script>
 
-<El {...$$restProps} {cssPrefix} {tag}>
+<El {...$$restProps} {cssPrefix}>
 	<slot />
 </El>

@@ -4,7 +4,7 @@
 
 	import 'prism-svelte'
 
-	import { Card, CardHeader, Icon, TabContent, TabItem, TabList, TabPane, Tabs } from '$lib/components'
+	import { Card, CardHeader, Icon, TabContent, TabItem, TabList, TabPanel, Tabs } from '$lib/components'
 	import { classname } from '$lib/utils'
 
 	import PreviewCopyButton from './PreviewCopyButton.svelte'
@@ -78,39 +78,38 @@
 		</CardHeader>
 
 		<TabContent>
-			<TabPane>
+			<TabPanel>
 				<div class={classname('preview-body')}>
 					<slot />
 				</div>
-			</TabPane>
-			<TabPane>
+			</TabPanel>
+			<TabPanel>
 				<div class={classname('preview-code')}>
 					<PreviewCopyButton on:success={setChecked} value={markup}>
 						<Icon name={copyIcon} />
 					</PreviewCopyButton>
 					<pre class="language-svelte"><code>{@html markupHighlighted}</code></pre>
 				</div>
-			</TabPane>
+			</TabPanel>
 			{#if script}
-				<TabPane>
+				<TabPanel>
 					<div class={classname('preview-code')}>
 						<PreviewCopyButton on:success={setChecked} value={script}>
 							<Icon name={copyIcon} />
 						</PreviewCopyButton>
 						<pre class="language-svelte"><code>{@html scriptHighlighted}</code></pre>
 					</div>
-				</TabPane>
+				</TabPanel>
 			{/if}
 			{#if script}
-				<TabPane>
+				<TabPanel>
 					<div class={classname('preview-code')}>
 						<PreviewCopyButton on:success={setChecked} value={style}>
 							<Icon name={copyIcon} />
 						</PreviewCopyButton>
-
 						<pre class="language-svelte"><code>{@html styleHighlighted}</code></pre>
 					</div>
-				</TabPane>
+				</TabPanel>
 			{/if}
 		</TabContent>
 	</Tabs>

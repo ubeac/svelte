@@ -1,47 +1,60 @@
 <script lang="ts">
-	import { getContext, onDestroy, onMount } from 'svelte'
+	import { getContext } from 'svelte'
 
-	import { El, type TabItemProps } from '$lib/components'
+	import { El, type TabItemProps, type TabsContext } from '$lib/components'
+
+	//#endregion
+	import { TABS } from './Tabs.svelte'
 
 	type $$Props = TabItemProps
 
+	//#region Props
+
+	/**
+	 * The prefix of the component CSS class
+	 * @default tab-item
+	 * @type string
+	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'tab-item'
+
+	/**
+	 * The tag of the component
+	 * @default li
+	 * @type string
+	 */
 	export let tag: $$Props['tag'] = 'li'
 
+	/**
+	 * The id of the tab
+	 * @default undefined
+	 * @type string
+	 */
 	export let active: $$Props['active'] = undefined
+
+	/**
+	 * Whether the tab is disabled
+	 * @default undefined
+	 * @type boolean
+	 */
 	export let disabled: $$Props['disabled'] = undefined
 
-	const { selected, register, unregister } = getContext<any>('TABS')
+	//#endregion
 
-	let id: string | undefined = undefined
+	const tab = {}
+	const { registerTab, selectTab, selectedTab } = getContext<TabsContext>(TABS)
 
-	onMount(() => {
-		register(id, active)
-	})
-
-	onDestroy(() => {
-		unregister(id)
-	})
-
-	function onClick() {
-		if (disabled) return
-		$selected = id
-	}
+	registerTab(tab)
 
 	$: cssProps = {
-		active: $selected === id,
 		disabled,
+		active: $selectedTab === tab,
 	}
 
-	$: linkProps = {
-		'aria-current': cssProps.active ? 'page' : null,
-		'tabindex': disabled ? '-1' : null,
-		'aria-disabled': disabled ? 'true' : null,
-	}
+	$: active ? selectTab(tab) : null
 </script>
 
-<El {...$$restProps} bind:id {cssPrefix} {tag} on:click={onClick}>
-	<El tag="button" cssPrefix="{cssPrefix}-link" {...linkProps} {cssProps}>
+<El {...$$restProps} {cssPrefix} {tag} on:click={() => (!disabled ? selectTab(tab) : null)}>
+	<El tag="button" cssPrefix="{cssPrefix}-link" {cssProps}>
 		<slot />
 	</El>
 </El>

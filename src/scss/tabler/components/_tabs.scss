@@ -11,9 +11,7 @@ $tab-props: (
 		card: '.card-header-tabs',
 	),
 	content: '.tab-content',
-	pane: (null: ('.tab-pane', '.fade'),
-		active: ('.show', '.active'),
-	),
+	pane: '.tab-pane' '.show' '.active',
 	item: (null: '.nav-item',
 		link: (null: '.nav-link',
 			active: '.active',
@@ -34,61 +32,13 @@ $tab-props: (
 
 .#{$prefix-tab} {
 	@include apply-props($tab-props);
+
+	&-item-link>.#{$prefix-icon} {
+		@extend .me-2;
+	}
+
 }
 
-
-// .u-tabs {
-// 	display: flex;
-// 	flex-direction: column;
-
-// 	&-vertical {
-// 		flex-direction: row;
-
-// 		.u-tabs-items {
-// 			flex-direction: column;
-
-// 			.u-tabs-item {
-// 				justify-content: center;
-// 			}
-// 		}
-// 	}
-
-// 	.u-tabs-items {
-// 		@extend .nav, .nav-tabs;
-
-// 		@each $key in start, center, end {
-// 			&-justify-#{$key} {
-// 				justify-content: #{$key};
-// 			}
-// 		}
-
-// 		.u-tabs-item {
-// 			@extend .nav-link;
-
-// 			&-active {
-// 				@extend .active;
-// 			}
-
-// 			&-disabled {
-// 				cursor: default;
-// 				pointer-events: none;
-// 			}
-// 		}
-
-// 		&-grow .u-tabs-item {
-// 			flex-grow: 1;
-// 		}
-// 	}
-
-// 	.u-tabs-panels {
-// 		@extend .tab-content;
-
-// 		.u-tabs-panel {
-// 			@extend .tab-pane;
-
-// 			&-active {
-// 				@extend .active;
-// 			}
-// 		}
-// 	}
-// }
+.#{$prefix-card}-header>.#{$prefix-tab}-list {
+	@extend .card-header-tabs;
+}
