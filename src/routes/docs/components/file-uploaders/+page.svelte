@@ -1,19 +1,20 @@
-<script>
+<script lang="ts">
 	import { Doc, Preview } from '@ubeac/svelte'
 
+	import FileUploaderAccept from './FileUploaderAccept.svelte'
 	import FileUploaderDefault from './FileUploaderDefault.svelte'
 	import FileUploaderDisabled from './FileUploaderDisabled.svelte'
-	import FileUploaderReadOnly from './FileUploaderReadOnly.svelte'
 	import FileUploaderMultiple from './FileUploaderMultiple.svelte'
-	import FileUploaderAccept from './FileUploaderAccept.svelte'
+	import FileUploaderReadOnly from './FileUploaderReadOnly.svelte'
 	import FileUploaderSizes from './FileUploaderSizes.svelte'
 	import FileUploaderStates from './FileUploaderStates.svelte'
 </script>
 
 <h1>FileUploader</h1>
+<p>FileUploader is a component that allows you to upload files.</p>
 
-<Doc title="Default">
-	<!--  -->
+<Doc title="Basic usage">
+	To use a fileUploader, simply add the <code>&lt;FileUploader /&gt;</code> tag to your component.
 </Doc>
 <Preview src="./FileUploaderDefault.svelte">
 	<FileUploaderDefault />
@@ -24,7 +25,9 @@
 	<code>lg</code>.
 </Doc>
 <Preview src="./FileUploaderSizes.svelte">
-	<FileUploaderSizes />
+	<div class="custom-class">
+		<FileUploaderSizes />
+	</div>
 </Preview>
 
 <Doc title="Disabled">
@@ -51,16 +54,18 @@
 	<FileUploaderStates />
 </Preview>
 
-<Doc title="Accept">
-    Limit file types that a user can select.
-</Doc>
+<Doc title="Accept">Limit file types that a user can select.</Doc>
 <Preview src="./FileUploaderAccept.svelte">
 	<FileUploaderAccept />
 </Preview>
 
-<Doc title="Multiple">
-    Allow choosing Multiple files.
-</Doc>
+<Doc title="Multiple">Allow choosing Multiple files.</Doc>
 <Preview src="./FileUploaderMultiple.svelte">
 	<FileUploaderMultiple />
 </Preview>
+
+<style>
+	.custom-class > :global(.u-file-uploader-wrapper) {
+		margin-bottom: 1rem;
+	}
+</style>
