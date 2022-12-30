@@ -21,16 +21,18 @@
 
 	let container: ContainerMaxWidths = 'md'
 	let theme: Themes = 'light'
+	let showDocs = false
+	let showTopNav = false
 	let loadingBar: any
 
 	beforeNavigate(() => {
-		loadingBar.start()
+		loadingBar?.start()
 		showDocs = false
 		showTopNav = false
 	})
 
 	afterNavigate(() => {
-		loadingBar.done()
+		loadingBar?.done()
 	})
 
 	const onThemeChange = () => (theme === 'light' ? (theme = 'dark') : (theme = 'light'))
@@ -49,6 +51,7 @@
 </svelte:head>
 
 <App {theme}>
+	<AppLoadingBar bind:this={loadingBar} fixedPosition color="primary" />
 	<header class="navbar navbar-expand-md navbar-light d-print-none align-items-center px-3">
 		<div class="container-xl d-none d-md-block">
 			<div class="row">
