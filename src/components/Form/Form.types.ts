@@ -6,6 +6,7 @@ import type {
 	ElProps,
 	FieldsetProps,
 	InputProps,
+	FileUploaderProps,
 	InputStates,
 	RadioGroupProps,
 	SelectProps,
@@ -37,6 +38,7 @@ export interface FormCheckboxGroupProps extends Partial<FormFieldProps>, Partial
 export interface FormCheckboxProps extends Partial<FormFieldProps>, Partial<CheckboxProps> {}
 
 export interface FormInputProps extends Partial<FormFieldProps>, Partial<InputProps> {}
+export interface FormFileUploaderProps extends Partial<FormFieldProps>, Partial<FileUploaderProps> {}
 
 export interface FormTextAreaProps extends Partial<FormInputProps> {
 	rows?: number | string
