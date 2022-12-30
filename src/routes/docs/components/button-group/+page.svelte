@@ -7,10 +7,8 @@
 	import ButtonGroupIcons from './ButtonGroupIcons.svelte'
 </script>
 
-<h1>Buttons</h1>
-<p>
-	Buttons are the most important UI Element in each page, @ubeac/svelte buttons are beautiful and fully customizable.
-</p>
+<h1>Button Groups</h1>
+<p>Group a series of buttons together on a single line or stack them in a vertical column.</p>
 
 <Doc title="List of buttons">
 	Create a list of buttons using the <code>ButtonGroup</code> component to display different actions a user can take.

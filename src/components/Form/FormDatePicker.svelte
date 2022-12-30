@@ -1,92 +1,96 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { DatePicker, type FormDatePickerProps, FormField } from '$lib/components'
 
-	import { DatePicker, FormField, FormHint, Icon, Label, Spinner } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = FormDatePickerProps
 
-	/**
-	 * Sets column width
-	 */
-	export let cols: string | number | false = '12'
+	//#region
 
 	/**
-	 * Sets an icon for the Component
+	 * Set the tag of FormDatePicker
 	 */
-	export let icon: string | undefined = undefined
+	export let tag: $$Props['tag'] = 'input'
 
 	/**
-	 * Sets an icon at right side of the Component
+	 * Set the FormDatePicker disabled
 	 */
-	export let iconEnd: string | undefined = undefined
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
-	 * Sets id for HTML element
+	 * Set border of FormDatePicker rounded
 	 */
-	export let id: string | undefined
+	export let borderRounded: $$Props['borderRounded'] = undefined
 
 	/**
-	 * Sets label for Date Picker
+	 * Set order of FormDatePicker flush (without border)
 	 */
-	export let label: string | undefined = undefined
+	export let borderFlush: $$Props['borderFlush'] = undefined
 
 	/**
-	 * Show loading indicator inside component
+	 * Set placeholder for the FormDatePicker
 	 */
-	export let loading: boolean = false
+	export let placeholder: $$Props['placeholder'] = undefined
 
 	/**
-	 * Show a message below of component
+	 * Set the FormDatePicker required
 	 */
-	export let message: string | undefined = undefined
+	export let required: $$Props['required'] = undefined
 
 	/**
-	 * Mark this as a required field in form
+	 * Set the size of FormDatePicker
 	 */
-	export let required: boolean = false
+	export let size: $$Props['size'] = undefined
 
 	/**
-	 * Selected date value
+	 * Set the state of FormDatePicker
 	 */
-	export let value: any = undefined
+	export let state: $$Props['state'] = undefined
 
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * Set the type of DatePicker
+	 */
+	export let type: $$Props['type'] = undefined
 
-	$: classes = classname('form-datepicker', undefined, $$props.class)
+	/**
+	 * the text Value of FormDatePicker
+	 */
+	export let value: $$Props['value'] = undefined
+
+	/**
+	 * Set the text label of FormDatePicker
+	 */
+	export let label: $$Props['label'] = undefined
+
+	/**
+	 * Define hint for the FormField
+	 */
+	export let hint: $$Props['hint'] = undefined
+
+	//#endregion
+
+	$: props = {
+		required,
+		label,
+		hint,
+		state,
+	}
+
+	$: DatePickerProps = {
+		tag,
+		placeholder,
+		disabled,
+		type,
+		required,
+		size,
+		state,
+		borderRounded,
+		borderFlush,
+	}
 </script>
 
-<FormField {cols} class={classes}>
-	<slot name="label">
-		{#if label}
-			<Label for="form-datepicker-{id}" {required}>{label}</Label>
-		{/if}
-	</slot>
-	<div class={classname('form-field-body')}>
-		<slot name="start">
-			{#if icon}
-				<span class={classname('form-field-icon')}>
-					<Icon name={icon} />
-				</span>
-			{/if}
-		</slot>
-		<DatePicker bind:value id="form-datepicker-{id}" {required} {forwardEvents} {...$$restProps} />
-		<slot name="end">
-			{#if iconEnd}
-				<span class={classname('form-field-icon')}>
-					<Icon name={iconEnd} />
-				</span>
-			{/if}
-
-			{#if loading}
-				<span class={classname('form-field-icon')}>
-					<Spinner />
-				</span>
-			{/if}
-		</slot>
-	</div>
-	<slot name="message">
-		{#if message}
-			<FormHint>{message}</FormHint>
-		{/if}
-	</slot>
+<FormField {...props} {...$$restProps}>
+	<slot name="label" />
+	<DatePicker {...DatePickerProps} bind:value on:changed>
+		<slot />
+	</DatePicker>
+	<slot name="hint" />
 </FormField>
