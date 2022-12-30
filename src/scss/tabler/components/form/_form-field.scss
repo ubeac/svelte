@@ -44,6 +44,10 @@ $props-form-field: (
 	@extend .#{$prefix-form-field}
 }
 
+.#{$prefix-form-switch} {
+	@extend .#{$prefix-form-field}
+}
+
 .#{$prefix-form-textarea} {
 	@extend .#{$prefix-form-field}
 }

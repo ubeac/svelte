@@ -232,7 +232,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'switch',
+				route: base_component_path + 'switches',
 				title: 'Switch',
 				icon: 'star',
 			},
@@ -308,7 +308,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_form_path + 'form-switch',
+				route: base_form_path + 'form-switches',
 				title: 'FormSwitch',
 				icon: 'star',
 			},

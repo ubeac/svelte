@@ -1,77 +1,46 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { FormField, type FormSwitchProps, Switch } from '$lib/components'
 
-	import { type Colors, Switch } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = FormSwitchProps
 
-	import { FormField, FormHint } from '.'
-	import { Label } from '../Label'
+	//#region Props
+	export let label: $$Props['label'] = undefined
+	export let hint: $$Props['hint'] = undefined
+	export let state: $$Props['state'] = undefined
+	export let required: $$Props['required'] = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'form-switch'
 
-	/**
-	 * Set Column width
-	 */
-	export let cols: string | number | boolean = '12'
+	export let color: $$Props['color'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let description: $$Props['description'] = undefined
+	export let reverse: $$Props['reverse'] = undefined
+	export let value: $$Props['value'] = undefined
+	export let checked: $$Props['checked'] = undefined
+	export let inline: $$Props['inline'] = undefined
+	//#endregion
 
-	/**
-	 * Set id for HTML element
-	 */
-	export let id: string = 'form-switch-'
+	$: props = {
+		required,
+		label,
+		hint,
+		state,
+		cssPrefix,
+	}
 
-	/**
-	 * Show Message at bottom of Input
-	 */
-	export let message: string | undefined = undefined
-
-	/**
-	 * Mark this as required field in form
-	 */
-	export let required: boolean = false
-
-	/**
-	 * Color of Radio button
-	 */
-	export let color: Colors = 'default'
-
-	/**
-	 * Description of Switch
-	 */
-	export let description: string | undefined = undefined
-
-	/**
-	 * Show multiple Switches in same horozontal line
-	 */
-	export let inline: boolean = false
-
-	/**
-	 * label for FormSwitch
-	 */
-	export let label: string | undefined = undefined
-	/**
-	 * Set text of Switch
-	 */
-	export let text: string | undefined = undefined
-
-	/**
-	 * Set checked state of Switch
-	 */
-	export let value: boolean | undefined = undefined
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('form-switch', {}, $$props.class)
+	$: switchProps = {
+		color,
+		inline,
+		description,
+		reverse,
+		checked,
+		disabled,
+	}
 </script>
 
-<FormField {cols} class={classes}>
-	<slot name="label">
-		{#if label}
-			<Label for={id} {required}>{label}</Label>
-		{/if}
-	</slot>
-	<Switch {id} bind:value {text} {color} {inline} {description} {forwardEvents} {...$$restProps} />
-	<slot name="message">
-		{#if message}
-			<FormHint>{message}</FormHint>
-		{/if}
-	</slot>
+<FormField {...props} {...$$restProps}>
+	<slot name="label" />
+	<Switch {...switchProps} bind:checked bind:value on:change>
+		<slot />
+	</Switch>
+	<slot name="hint" />
 </FormField>
