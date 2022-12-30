@@ -77,7 +77,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'autocomplete',
+				route: base_component_path + 'autocompletes',
 				title: 'Autocomplete',
 				icon: 'star',
 			},
@@ -152,7 +152,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'file-uploader',
+				route: base_component_path + 'file-uploaders',
 				title: 'FileUploader',
 				icon: 'star',
 			},
@@ -232,7 +232,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_component_path + 'switch',
+				route: base_component_path + 'switches',
 				title: 'Switch',
 				icon: 'star',
 			},
@@ -268,7 +268,7 @@ export const navigations = [
 		id: 'menu-forms',
 		children: [
 			{
-				route: base_form_path + 'form-autocomplete',
+				route: base_form_path + 'form-autocompletes',
 				title: 'Form Autocomplete',
 				icon: 'star',
 			},
@@ -293,6 +293,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_form_path + 'form-file-uploader',
+				title: 'FormFileUploader',
+				icon: 'star',
+			},
+			{
 				route: base_form_path + 'form-input',
 				title: 'FormInput',
 				icon: 'star',
@@ -308,7 +313,7 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
-				route: base_form_path + 'form-switch',
+				route: base_form_path + 'form-switches',
 				title: 'FormSwitch',
 				icon: 'star',
 			},

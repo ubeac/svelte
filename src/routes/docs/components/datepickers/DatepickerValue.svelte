@@ -1,7 +1,12 @@
-<script>
-	import { DatePicker } from '@ubeac/svelte'
+<script lang="ts">
+	import { DatePicker, El } from '@ubeac/svelte'
+
+	let value1: string = '1900/04/24'
+	let value2: Date = new Date(2000, 5, 3)
 </script>
 
-<DatePicker value="1900/04/24" />
+<DatePicker bind:value={value1} />
+<El mb="3">value: {value1}</El>
 
-<DatePicker value={new Date(2000, 5, 3)} />
+<DatePicker bind:value={value2} />
+<El mb="3">value: {value2}</El>
