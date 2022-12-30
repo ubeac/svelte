@@ -1,6 +1,6 @@
 import type { PopupProps, ElProps } from "$lib/components";
 
-export interface PopoverProps extends PopupProps {
+export interface PopoverProps extends Partial<PopupProps> {
     // 
 }
 

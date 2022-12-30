@@ -1,18 +1,25 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { type PopoverProps, Popup, PopupArrow } from '$lib/components'
 
-	import { El, Popup } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
+	type $$Props = PopoverProps
 
-	import type { PopoverProps } from './Popover.types'
-  import PopupArrow from '../Popup/PopupArrow.svelte'
+	/**
+	 * Set Css Prefix for the Popover
+	 */
+	export let cssPrefix: $$Props['cssPrefix'] = 'popover'
 
-	type $$Props = PopoverProps;
-	
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	/**
+	 * Set tag for the Popover
+	 */
+	export let tag: $$Props['tag'] = 'div'
+
+	$: props = {
+		cssPrefix,
+		tag,
+	}
 </script>
 
-<Popup {forwardEvents} {...$$restProps} cssPrefix="popover" tag="div">
-	<PopupArrow cssPrefix="popover-arrow"/>
+<Popup {...$$restProps} {...props}>
+	<PopupArrow cssPrefix="{cssPrefix}-arrow" />
 	<slot />
 </Popup>
