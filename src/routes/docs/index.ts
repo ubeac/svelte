@@ -237,6 +237,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'tabs',
+				title: 'Tabs',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'tables',
 				title: 'Tables',
 				icon: 'star',
