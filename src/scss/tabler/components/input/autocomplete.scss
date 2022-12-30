@@ -1,14 +1,45 @@
 @import '@tabler/core/src/scss/vendor/tom-select';
 
-.u-autocomplete {
-	&-items {
-		@extend .dropdown-menu;
-		@extend .w-100;
+$prefix-autocomplete: $prefix + 'autocomplete';
+
+select.#{$prefix-autocomplete}-loaded {
+	clip: rect(0 0 0 0) !important;
+	border: 0 !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	width: 1px !important;
+}
+
+$autocomplete-props: (
+	dropdown: ('.dropdown-menu', '.w-100'),
+	option: ".dropdown-item",
+	state:(valid: '.is-valid',
+		invalid: '.is-invalid'
+	)
+);
+
+.#{$prefix-autocomplete} {
+	@include apply-props($autocomplete-props);
+
+	&-dropdown {
 		top: 36px;
 	}
-	&-item {
+
+	& .create {
 		@extend .dropdown-item;
+		display: block;
 	}
+
+	&-option {
+		&[data-selectable] {
+			display: block;
+		}
+	}
+
 	.no-results {
 		padding-left: 6px;
 	}
