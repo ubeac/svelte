@@ -91,11 +91,11 @@
 		<div class="container-xl d-none d-md-block">
 			<div class="row">
 				<div class="col">
-					<h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+					<div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
 						<a href=".">
 							<img src="/logo.svg" width="110" height="32" alt="uBeac" class="navbar-brand-image" />
 						</a>
-					</h1>
+					</div>
 				</div>
 				<div class="navbar-nav col-auto">
 					<a
@@ -171,11 +171,11 @@
 				</button>
 			</div>
 			<div class="col text-center">
-				<h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+				<div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
 					<a href=".">
 						<img src="/logo.svg" width="110" height="32" alt="uBeac" class="navbar-brand-image" />
 					</a>
-				</h1>
+				</div>
 			</div>
 			<div class="col-auto">
 				<button
