@@ -3,22 +3,24 @@
 
 	/**
 	 * Set Css Prefix for the Tooltip
+	 * @default 'tooltip'
+	 * @type string
+	 * @example 'tooltip'
 	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'tooltip'
 
 	/**
-	 * Set tag for the Tooltip
+	 * Set Placement for the Tooltip
+	 * @default 'top'
+	 * @type 'top' | 'bottom' | 'left' | 'right'
+	 * @example 'top'
 	 */
-	export let tag: $$Props['tag'] = 'div'
+	export let placement: $$Props['placement'] = 'top'
 
 	type $$Props = TooltipProps
-
-	$: cssProps = {
-		//
-	}
 </script>
 
-<Popup {...$$restProps} {cssPrefix} {cssProps} {tag}>
+<Popup {...$$restProps} {cssPrefix} {placement}>
 	<PopupArrow cssPrefix="{cssPrefix}-arrow" />
 	<El cssPrefix="{cssPrefix}-inner">
 		<slot />
