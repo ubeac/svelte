@@ -64,7 +64,7 @@
 	/**
 	 * The date value of Date picker
 	 */
-	export let value: $$Props['value'] = new Date()
+	export let value: $$Props['value'] = undefined
 
 	//#endregion
 

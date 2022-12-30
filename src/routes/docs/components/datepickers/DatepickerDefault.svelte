@@ -5,5 +5,4 @@
 </script>
 
 <DatePicker bind:value />
-
-value: <b>{value}</b>
+<i>value: {value}</i>

@@ -2,4 +2,4 @@
 	import { FormDatePicker } from '@ubeac/svelte'
 </script>
 
-<FormDatePicker disabled label="disabled" value="2022/04/02" />
+<FormDatePicker disabled label="Last login (disabled)" value="2022/04/02" />

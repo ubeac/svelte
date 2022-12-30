@@ -10,6 +10,4 @@
 </script>
 
 <DatePicker bind:value on:changed={onChange} />
-
-value: <b>{value}</b>
-changed: <b>{changed}</b>
+<i>value: {value}, changed: {changed}</i>

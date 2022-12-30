@@ -1,5 +1,6 @@
-<script>
-	import { Doc, Preview } from '@ubeac/svelte'
+<script lang="ts">
+	import { Doc, El, Preview } from '@ubeac/svelte'
+
 	import DatepickerCustom from './DatepickerCustom.svelte'
 	import DatepickerDefault from './DatepickerDefault.svelte'
 	import DatepickerDisabled from './DatepickerDisabled.svelte'
@@ -14,27 +15,31 @@
 <h1>Date Pickers</h1>
 <p>Date Picker is a fully featured date selection component that lets users select a date.</p>
 
-<Doc title="Default">
-	<!--  -->
+<Doc title="Basic usage">
+	<p>
+		To use Date Picker, import <code>DatePicker</code> component and bind <code>value</code> to a variable. The variable
+		will be updated with the selected date.
+	</p>
 </Doc>
 <Preview src="./DatepickerDefault.svelte">
-	<div class=".example-datepicker">
+	<div>
 		<DatepickerDefault />
 	</div>
 </Preview>
 
-<Doc title="Date Format">
-	You can change display <a href="https://momentjs.com/docs/#/displaying/format/">Format</a> of the date.
+<Doc title="Date format">
+	You can change display format of the date using <code>format</code> prop. The format is based on
+	<a href="https://momentjs.com/docs/#/displaying/format/">Format</a> of Moment.js.
 </Doc>
 <Preview src="./DatepickerFormat.svelte">
-	<div class=".example-datepicker">
+	<div>
 		<DatepickerFormat />
 	</div>
 </Preview>
 
-<Doc title="Initial Value">You can set initial value for DatePicker.</Doc>
+<Doc title="Initial Value">You can set initial value for <code>DatePicker</code>.</Doc>
 <Preview src="./DatepickerValue.svelte">
-	<div class=".example-datepicker">
+	<div>
 		<DatepickerValue />
 	</div>
 </Preview>

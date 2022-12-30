@@ -6,7 +6,7 @@
 </script>
 
 <DatePicker bind:value={value1} />
-<El mb="3">Value: <b>{value1}</b></El>
+<El mb="3">value: {value1}</El>
 
 <DatePicker bind:value={value2} />
-<El>Value: <b>{value2}</b></El>
+<El mb="3">value: {value2}</El>

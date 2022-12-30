@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '@ubeac/svelte'
 	import FormDatePickerColumn from './FormDatePickerColumn.svelte'
 	import FormDatePickerDisabled from './FormDatePickerDisabled.svelte'
 	import FormDatePickerLabel from './FormDatePickerLabel.svelte'
@@ -9,39 +9,43 @@
 
 <h1>Form DatePicker</h1>
 <p>
-	FormDatePicker supports all props and events of <a href="/docs/components/datepickers">DatePicker</a> and also have some
-	additional features
+	<code>FormDatePicker</code> component supports all props and events of
+	<a href="/docs/components/datepickers">DatePicker</a>
+	and also have some additional features like <code>label</code>, <code>hint</code>, <code>required</code>,
+	<code>cols</code>, etc. to make it easy to use in a form.
 </p>
 
-<h2>Label</h2>
-<p>You can set a label for FormDatePicker.</p>
-<Preview vertical src="./FormDatePickerLabel.svelte">
+<Doc title="Label">
+	<code>label</code> prop is used to set the label of the FormDatePicker.
+</Doc>
+<Preview src="./FormDatePickerLabel.svelte">
 	<FormDatePickerLabel />
 </Preview>
 
-<h2>Hint/Validation Message</h2>
-<p>You can set a message below of DatePicker like this:</p>
-<Preview class="align-items-stretch" vertical src="./FormDatePickerMessage.svelte">
-	<FormDatePickerMessage />
-</Preview>
-
-<h2>Required</h2>
-<p>You can mark it as a required field like this:</p>
-
-<Preview vertical class="align-items-stretch" src="./FormDatePickerRequired.svelte">
+<Doc title="Required">
+	<code>required</code> prop is used to set the required state of the FormDatePicker.
+</Doc>
+<Preview src="./FormDatePickerRequired.svelte">
 	<FormDatePickerRequired />
 </Preview>
 
-<h2>Set Column Width</h2>
-<p>You can set width of each Form elements in a form using <code>cols</code> prop.</p>
-
-<Preview vertical class="align-items-stretch" src="./FormDatePickerColumn.svelte">
-	<FormDatePickerColumn />
+<Doc title="Disabled">
+	<code>disabled</code> prop is used to set the disabled state of the FormDatePicker.
+</Doc>
+<Preview src="./FormDatePickerDisabled.svelte">
+	<FormDatePickerDisabled />
 </Preview>
 
-<h2>Disabled</h2>
-<p>FormDatePicker supports disabled states.</p>
+<Doc title="Hint/Validation Message">
+	<code>hint</code> prop is used to set the hint of the FormDatePicker.
+</Doc>
+<Preview src="./FormDatePickerMessage.svelte">
+	<FormDatePickerMessage />
+</Preview>
 
-<Preview vertical class="align-items-stretch" src="./FormDatePickerDisabled.svelte">
-	<FormDatePickerDisabled />
+<Doc title="Layout">
+	<code>cols</code> prop is used to set the layout of the FormDatePicker.
+</Doc>
+<Preview src="./FormDatePickerColumn.svelte">
+	<FormDatePickerColumn />
 </Preview>

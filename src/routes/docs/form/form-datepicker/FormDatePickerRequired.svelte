@@ -2,6 +2,5 @@
 	import { FormDatePicker } from '@ubeac/svelte'
 </script>
 
-<FormDatePicker required label="start date" />
-<FormDatePicker label="finish date" />
-	
+<FormDatePicker required label="Start date" />
+<FormDatePicker label="End date" />
