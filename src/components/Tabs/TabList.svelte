@@ -6,12 +6,14 @@
 	export let cssPrefix: $$Props['cssPrefix'] = 'tab-list'
 	export let tag: $$Props['tag'] = 'ul'
 	export let pills: $$Props['pills'] = undefined
+	export let card: $$Props['card'] = undefined
 	export let grow: $$Props['grow'] = undefined
 
 	$: cssProps = {
 		pills,
 		tabs: !pills,
 		grow,
+		card,
 	}
 	$: props = {
 		cssPrefix,

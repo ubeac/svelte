@@ -12,6 +12,7 @@ export interface TabItemProps extends Partial<ElProps> {
 export interface TabListProps extends Partial<ElProps> {
 	pills?: boolean
 	grow?: boolean
+	card?: boolean
 }
 export interface TabContentProps extends Partial<ElProps> {}
 
