@@ -1,47 +1,68 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El, type FileUploaderProps } from '$lib/components'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
-
-	import type { InputSizes } from './input.types'
-
-    /**
-     * Set allowed file types
-    */
-    export let accept: string | undefined = undefined
+	type $$Props = FileUploaderProps
 
 	/**
-	 * Forward all native Events
+	 * Set Css Prefix for the FileUploader
 	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	export let cssPrefix: $$Props['cssPrefix'] = 'file-uploader'
+
+	/**
+	 * Set the tag of FileUploader
+	 */
+	export let tag: $$Props['tag'] = 'input'
+
+	/**
+	 * Set allowed file types
+	 */
+	export let accept: $$Props['accept'] = undefined
 
 	/**
 	 * Set the input disabled
 	 */
-	export let disabled: boolean = false
+	export let disabled: $$Props['disabled'] = undefined
 
 	/**
 	 * Set placeholder for the input
 	 */
-	export let placeholder: string | undefined = undefined
+	export let placeholder: $$Props['placeholder'] = undefined
 
 	/**
 	 * Set the input read only
 	 */
-	export let readOnly: boolean = false
+	export let readonly: $$Props['readonly'] = undefined
 
 	/**
 	 * Set the size of input
 	 */
-	export let size: InputSizes = 'md'
+	export let size: $$Props['size'] = 'md'
 
 	/**
 	 * List of selected files.
 	 */
-	export let value: any = undefined
+	export let value: $$Props['value'] = undefined
 
-	$: classes = classname('file-uploader', { size, disabled, readOnly }, $$props.class, true)
+	$: cssProps = {
+		size,
+		disabled,
+		readonly,
+	}
+
+	$: props = {
+		tag,
+		cssPrefix,
+		cssProps,
+		readonly,
+		disabled,
+		placeholder,
+		accept,
+		type: 'file',
+	}
+
+	function onChange(e: any) {
+		value = e.target.files
+	}
 </script>
 
-<input type="file" bind:files={value} use:forwardEvents {...$$restProps} {accept} class={classes} {placeholder} {readOnly} {disabled} />
+<El {...$$restProps} {...props} on:change={onChange} />
