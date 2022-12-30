@@ -5,18 +5,13 @@
 
 	/**
 	 * Set Css Prefix for the Menu
+	 * @default menu
 	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'menu'
-
-	/**
-	 * Set tag for the Menu
-	 */
-	export let tag: $$Props['tag'] = 'div'
 
 	export let trigger: $$Props['trigger'] = ['click']
 
 	$: props = {
-		tag,
 		cssPrefix,
 		trigger,
 		cssProps: {
