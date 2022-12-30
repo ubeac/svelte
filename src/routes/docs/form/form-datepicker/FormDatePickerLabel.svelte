@@ -4,6 +4,5 @@
 	let value: string
 </script>
 
-<FormDatePicker cols="6" label="date:" placeholder="Enter a date" bind:value />
-
+<FormDatePicker label="Hiring date" placeholder="Enter a date" bind:value />
 <i>{value}</i>

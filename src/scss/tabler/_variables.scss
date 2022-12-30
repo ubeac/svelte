@@ -16,6 +16,8 @@ $prefix-breadcrumb: $prefix + 'breadcrumb' !default;
 $prefix-card: $prefix + 'card' !default;
 $prefix-checkbox: $prefix + 'checkbox' !default;
 $prefix-checkbox-group: $prefix + 'checkbox-group' !default;
+$prefix-date-picker: $prefix + 'date-picker' !default;
+$prefix-date-picker-wrapper: $prefix-date-picker + '-wrapper' !default;
 $prefix-divider: $prefix + 'divider' !default;
 $prefix-dialog: $prefix + 'dialog' !default;
 $prefix-dialog-container: $prefix + 'dialog-container' !default;

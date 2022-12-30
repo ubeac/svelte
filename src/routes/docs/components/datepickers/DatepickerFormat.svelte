@@ -1,7 +1,14 @@
-<script>
-	import { DatePicker } from '@ubeac/svelte'
+<script lang="ts">
+	import { DatePicker, El } from '@ubeac/svelte'
+
+	let value: Date
 </script>
 
-<DatePicker value={new Date()} format="yyyy/MM/DD" />
-<DatePicker value={new Date()} format="Do [of] MMMM" />
-<DatePicker value={new Date()} format="D MMM YYYY" />
+<DatePicker bind:value format="yyyy/MM/DD" />
+<El mb="3">format: yyyy/MM/DD, value: {value}</El>
+
+<DatePicker bind:value format="Do [of] MMMM" />
+<El mb="3">format: Do [of] MMMM, value: {value}</El>
+
+<DatePicker bind:value format="D MMM YYYY" />
+<El mb="3">format: D MMM YYYY, value: {value}</El>
