@@ -1,44 +1,42 @@
 <script lang="ts">
-	import { get_current_component, setContext } from 'svelte/internal'
+	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	import { El, type TabsProps } from '$lib/components'
 
-	/**
-	 * Forward All native Events.
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	type $$Props = TabsProps
 
-	/**
-	 * TODO
-	 */
-	export let value: any
+	export let cssPrefix: $$Props['cssPrefix'] = 'tabs'
+	export let tag: $$Props['tag'] = 'div'
+	export let vertical: $$Props['vertical'] = false
 
-	/**
-	 * TODO
-	 */
-	export let vertical: boolean = false
+	let active: string | undefined = undefined
 
-	const active = writable<any>(value)
+	const selected = writable(active ?? '')
+	let tabs: any[] = []
+	let panes: any[] = []
 
-	$: active.set(value)
-
-	$: classes = classname('tabs', { vertical }, $$props.class, true)
-
-	function change(next: any) {
-		value = next
+	function register(id: string, active: boolean) {
+		if (active || tabs.length === 0) {
+			$selected = id
+		}
+		tabs = [...tabs, id]
 	}
 
-	function update(next: any, prev: any) {
-		if (typeof prev == 'undefined') return
-		if ($active !== prev) return
-		change(next)
+	function unregister(id: string) {
+		tabs = tabs.filter((tab) => tab !== id)
 	}
 
-	setContext('TABS', { active, change, update })
+	function registerPane(id: string) {
+		const index = panes.length
+		panes = [...panes, id]
+
+		return tabs[index]
+	}
+
+	setContext('TABS', { selected, registerPane, register, unregister })
 </script>
 
-<div use:forwardEvents {...$$restProps} class={classes}>
+<El {...$$restProps} cssPrefix="tabs" cssProps={{ vertical }}>
 	<slot />
-</div>
+</El>

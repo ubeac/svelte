@@ -8,7 +8,7 @@
 
 	import { Card } from '../Card'
 	import { Icon } from '../Icon'
-	import { Tabs, TabsItem, TabsItems, TabsPanel, TabsPanels } from '../Tabs'
+	import { Tabs, TabsItem, TabsItems, TabsPanel, TabsPanels } from '../TabsOld'
 	import PreviewCopyButton from './PreviewCopyButton.svelte'
 
 	/**
