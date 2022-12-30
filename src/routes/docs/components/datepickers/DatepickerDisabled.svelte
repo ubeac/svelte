@@ -4,5 +4,6 @@
 	let value: Date
 </script>
 
-<DatePicker bind:value />
-<i>value: {value}</i>
+<DatePicker disabled bind:value />
+
+value: <b>{value}</b>

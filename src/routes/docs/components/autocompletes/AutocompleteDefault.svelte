@@ -6,5 +6,4 @@
 </script>
 
 <Autocomplete {items} bind:value />
-
-<i>You selected <b>{value}</b></i>
+<i>value: {value}</i>

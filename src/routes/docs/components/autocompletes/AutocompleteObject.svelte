@@ -13,5 +13,4 @@
 </script>
 
 <Autocomplete {items} key="id" text="value" bind:value />
-
-<i>You selected <b>{value}</b></i>
+<i>value: {value}</i>

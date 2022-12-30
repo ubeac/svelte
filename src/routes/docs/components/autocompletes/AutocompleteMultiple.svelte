@@ -1,11 +1,9 @@
-<script>
+<script lang="ts">
 	import { Autocomplete } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value = ['Apple', 'Orange']
+	let value: any[] = []
 </script>
 
-<span>Default</span>
 <Autocomplete multiple {items} bind:value />
-<span>preview</span>
-<Autocomplete preview multiple {items} bind:value />
+<i>You selected: {value.join(', ')}</i>
