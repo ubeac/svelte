@@ -1,5 +1,5 @@
-import type { PopupProps } from "../Popup";
+import type { PopupProps } from '../Popup'
 
-export interface MenuProps extends PopupProps {
-	// 
+export interface MenuProps extends Partial<PopupProps> {
+	//
 }
