@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { El, Label } from '$lib/components'
-
-	import type { SwitchProps } from './Switch.types'
+	import { El, Label, type SwitchProps } from '$lib/components'
 
 	type $$Props = SwitchProps
 
@@ -41,7 +39,7 @@
 </script>
 
 <El cssPrefix="{cssPrefix}-wrapper" cssProps={{ inline, reverse }}>
-	<El bind:id {...$$restProps} {cssProps} {...otherProps} on:change={onChange} on:change/>
+	<El bind:id {...$$restProps} {cssProps} {...otherProps} on:change={onChange} on:change />
 	{#if text || $$slots['default']}
 		<Label for={_for} cssPrefix="{cssPrefix}-label">
 			<slot>
