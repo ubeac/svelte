@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Autocomplete } from '@ubeac/svelte'
+	import { Autocomplete, El } from '@ubeac/svelte'
 
 	function load(query: string) {
 		const url = 'https://api.github.com/search/repositories?q=' + encodeURIComponent(query)
@@ -14,7 +14,8 @@
 	let value = ''
 </script>
 
-<p>Search Github repositories</p>
+<El mb="2">Search Github repositories</El>
 <Autocomplete {load} key="id" text="full_name" bind:value />
-
-<div if={!!value}>id={value}</div>
+{#if value}
+	<i>id={value}</i>
+{/if}
