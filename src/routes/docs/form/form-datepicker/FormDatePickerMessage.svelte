@@ -1,15 +1,11 @@
 <script>
-	import { FormHint, FormDatePicker } from '@ubeac/svelte'
+	import { FormDatePicker } from '@ubeac/svelte'
 </script>
 
-<FormDatePicker label="Start from:">
-	<FormHint slot="message">choose a day from next week.</FormHint>
-</FormDatePicker>
+<FormDatePicker
+	label="Birth day"
+	hint="We'll never share your birthday date with anyone else."
+	placeholder="Choose a date..." />
 
-<FormDatePicker type="Until:" label="invalid:" value="2020/05/01">
-	<FormHint state="invalid" slot="message">this date should not be greater than today.</FormHint>
-</FormDatePicker>
-
-<FormDatePicker type="email" label="valid:" value={new Date()}>
-	<FormHint state="valid" slot="message">This field is valid.</FormHint>
-</FormDatePicker>
+<FormDatePicker label="Date" state="valid" hint="date is validated!" value="1985/05/02" />
+<FormDatePicker label="Date of birth" state="invalid" hint="date is not valid!" value="2022/12/06" />

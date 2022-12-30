@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '../Base'
-	import type { TableBodyProps } from './Table.types'
+	import { El, type TableBodyProps } from '$lib/components'
 
 	type $$Props = TableBodyProps
 
