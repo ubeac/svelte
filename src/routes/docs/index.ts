@@ -77,6 +77,11 @@ export const navigations = [
 				icon: 'star',
 			},
 			{
+				route: base_component_path + 'app-loading-bars',
+				title: 'AppLoadingBar',
+				icon: 'star',
+			},
+			{
 				route: base_component_path + 'autocompletes',
 				title: 'Autocomplete',
 				icon: 'star',

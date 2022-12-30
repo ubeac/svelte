@@ -3,6 +3,7 @@
 		App,
 		AppBody,
 		AppFooter,
+		AppLoadingBar,
 		type ContainerMaxWidths,
 		El,
 		Offcanvas,
@@ -20,47 +21,18 @@
 
 	let container: ContainerMaxWidths = 'md'
 	let theme: Themes = 'light'
-	let progressValue = 0
-	let updater: any
 	let showDocs = false
 	let showTopNav = false
-
-	export let maximum = 0.999
-	export let intervalTime = 700
-	export let stepSizes = [0, 0.005, 0.01, 0.02]
-
-	const getIncrement = (number: number) => {
-		if (number >= 0 && number < 0.2) return 0.1
-		else if (number >= 0.2 && number < 0.5) return 0.04
-		else if (number >= 0.5 && number < 0.8) return 0.02
-		else if (number >= 0.8 && number < 0.99) return 0.005
-		return 0.00001
-	}
-	const startInterval = () => {
-		if (typeof window !== 'undefined') {
-			updater = setInterval(() => {
-				const randomStep = stepSizes[Math.floor(Math.random() * stepSizes.length)]
-				const step = getIncrement(progressValue) + randomStep
-				if (progressValue < maximum) {
-					progressValue = progressValue + step
-				}
-				if (progressValue > maximum) {
-					clearInterval(updater)
-				}
-			}, intervalTime)
-		}
-	}
+	let loadingBar: any
 
 	beforeNavigate(() => {
-		progressValue = 0
+		loadingBar?.start()
 		showDocs = false
 		showTopNav = false
-		startInterval()
 	})
 
 	afterNavigate(() => {
-		progressValue = 1
-		clearInterval(updater)
+		loadingBar?.done()
 	})
 
 	const onThemeChange = () => (theme === 'light' ? (theme = 'dark') : (theme = 'light'))
@@ -79,14 +51,7 @@
 </svelte:head>
 
 <App {theme}>
-	{#if progressValue < 1}
-		<div class="sticky-top">
-			<div class="position-relative">
-				<Progress col position="absolute" color="primary" style="height: 3px;" value={progressValue * 100} />
-			</div>
-		</div>
-	{/if}
-
+	<AppLoadingBar bind:this={loadingBar} fixedPosition color="primary" />
 	<header class="navbar navbar-expand-md navbar-light d-print-none align-items-center px-3">
 		<div class="container-xl d-none d-md-block">
 			<div class="row">

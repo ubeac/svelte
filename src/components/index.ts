@@ -1,6 +1,7 @@
 export * from './Accordion'
 export * from './Alert'
 export * from './App'
+export * from './AppLoadingBar'
 export * from './Avatar'
 export * from './Badge'
 export * from './El'
