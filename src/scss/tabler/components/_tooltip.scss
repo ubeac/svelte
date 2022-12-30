@@ -1,4 +1,6 @@
-$prefix-tooltip: $prefix + 'tooltip';
+// --------------------------------------------------
+// Tooltip component
+// --------------------------------------------------
 
 $tooltip-props: (
 	null: (".tooltip", ".bs-tooltip-auto", ".fade", ".show"),

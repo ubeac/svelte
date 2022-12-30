@@ -68,10 +68,3 @@
 <Preview src="./DialogNoBackdrop.svelte">
 	<DialogNoBackdrop />
 </Preview>
-
-<style global>
-	.example-absolute .u-preview-body {
-		position: relative;
-		height: 400px;
-	}
-</style>

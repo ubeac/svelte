@@ -30,7 +30,9 @@
 	You can create a soft colour variant of a corresponding contextual badge variation, to make it look more subtle.
 </Doc>
 <Preview src="./BadgeColors.svelte">
-	<BadgeColors />
+	<div class="custom-class">
+		<BadgeColors />
+	</div>
 </Preview>
 
 <Doc title="Outline">
@@ -38,14 +40,18 @@
 	look.
 </Doc>
 <Preview src="./BadgeOutlines.svelte">
-	<BadgeOutlines />
+	<div class="custom-class">
+		<BadgeOutlines />
+	</div>
 </Preview>
 
 <Doc title="Ghost">
 	Use the <code>ghost</code> prop to make your badge look simple yet aesthetically appealing.
 </Doc>
 <Preview src="./BadgeGhosts.svelte">
-	<BadgeGhosts />
+	<div class="custom-class">
+		<BadgeGhosts />
+	</div>
 </Preview>
 
 <Doc title="Badge Shapes">
@@ -81,15 +87,20 @@
 	<BadgeLinks />
 </Preview>
 
-<Doc title="Badge inside Button">Badges can be used as part of links or buttons to provide a counter.</Doc>
-<Preview
-	src="./BadgeButtons.svelte">
+<Doc title="Inside Button">Badges can be used as part of links or buttons to provide a counter.</Doc>
+<Preview src="./BadgeButtons.svelte">
 	<BadgeButtons />
 </Preview>
 
-<Doc title="Badge with blinking effect">
+<Doc title="With blinking effect">
 	<!--  -->
 </Doc>
 <Preview src="./BadgeBlink.svelte">
 	<BadgeBlink />
 </Preview>
+
+<style>
+	.custom-class > :global(.u-badge) {
+		margin-bottom: 0.2rem;
+	}
+</style>
