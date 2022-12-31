@@ -1,5 +1,7 @@
 import { navigations } from '../docs'
 
+export const prerender = true;
+
 let result = ''
 let hostName = ''
 
