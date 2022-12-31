@@ -18,6 +18,10 @@
 	})
 </script>
 
+<svelte:head>
+	<link rel="stylesheet" href="/css/tabler.css" />
+</svelte:head>
+
 <El
 	textAlign="center"
 	bgColor="secondary"
@@ -32,11 +36,11 @@
 	h="100">
 	<El mb="3" display="flex" alignItems="center" justifyContent="center">
 		<El col="5">
-			<El class="img img-ubeac" tag="img" src="/ubeac.png" />
+			<El class="img img-ubeac" tag="img" src="/images/ubeac.png" />
 		</El>
 		<El class="plus" col="2">+</El>
 		<El col="5">
-			<El class="img img-svelte" tag="img" src="/svelte.png" />
+			<El class="img img-svelte" tag="img" src="/images/svelte.png" />
 		</El>
 	</El>
 
@@ -45,7 +49,7 @@
 		<El mt="3" tag="h3" class="medium-text" textMuted>Opinionated Svelte component UI library by uBeac</El>
 	</El>
 
-	<El class="container-400" row>
+	<El class="custom-container" row>
 		<El p="1" col="12" colSm="6">
 			<Button col="12" href="https://svelte.ubeac.io/docs" size="lg" color="primary">
 				<Icon size="xl" name="book" />
@@ -108,8 +112,8 @@
 		font-size: 18px;
 	}
 
-	:global(.container-400) {
-		width: 450px;
+	:global(.custom-container) {
+		max-width: 450px;
 	}
 
 	:global(.img) {

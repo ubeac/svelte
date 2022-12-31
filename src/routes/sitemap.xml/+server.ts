@@ -1,4 +1,4 @@
-import { navigations } from '../docs'
+import { navigations } from '../(docs)/docs'
 
 export const prerender = true;
 
