@@ -227,8 +227,9 @@
 							{#if navigation.children}
 								<ul class="nav nav-pills collapse" data-bs-parent="#docs" id={navigation.id} style="">
 									{#each navigation.children as menu}
+										{@const [pack, icon] = (menu.icon ?? ':').split(':')}
 										<li class="nav-item">
-											<a href={menu.route} class="nav-link">{menu.title}</a>
+											<a href={menu.route} class="nav-link gap-2"><Icon pack={pack} name={icon} /> {menu.title}</a>
 										</li>
 									{/each}
 								</ul>
