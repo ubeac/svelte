@@ -19,9 +19,9 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="/css/tabler.css" />
 	<title>{title}</title>
-	<description>{description}</description>
+	<meta name="description" content={description} />
+	<meta name="author" content="uBeac" />
 </svelte:head>
 
 <PageBody>
@@ -46,7 +46,7 @@
 									{#each navigation.children as menu}
 										{@const [pack, icon] = (menu.icon ?? ':').split(':')}
 										<li class="nav-item">
-											<a href={menu.route} class="nav-link gap-2"><Icon pack={pack} name={icon} /> {menu.title}</a>
+											<a href={menu.route} class="nav-link gap-2"><Icon {pack} name={icon} /> {menu.title}</a>
 										</li>
 									{/each}
 								</ul>
