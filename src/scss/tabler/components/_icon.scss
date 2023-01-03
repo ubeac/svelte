@@ -36,4 +36,8 @@ $props: (
 			height: #{$value} !important;
 		}
 	}
+
+	* {
+		stroke-width: 1.5px;
+	}
 }
