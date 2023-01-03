@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
 	import { Select } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']

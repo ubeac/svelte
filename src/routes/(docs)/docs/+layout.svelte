@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
 	import { afterUpdate } from 'svelte'
 
 	import { Card, CardBody, type ContainerMaxWidths, El, Icon, PageBody, PageHeader } from '@ubeac/svelte'
