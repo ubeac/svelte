@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import SwitchColor from './SwitchColor.svelte'
 	import SwitchDefault from './SwitchDefault.svelte'
 	import SwitchDescription from './SwitchDescription.svelte'

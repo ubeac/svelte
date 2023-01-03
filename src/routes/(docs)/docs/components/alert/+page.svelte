@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import AlertColor from './AlertColor.svelte'
 	import AlertLink from './AlertLink.svelte'
 	import AlertDismissible from './AlertDismissible.svelte'

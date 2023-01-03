@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
 	import FormAutocompleteCreate from './FormAutocompleteCreate.svelte'
 	import FormAutocompleteDisabled from './FormAutocompleteDisabled.svelte'
@@ -13,23 +13,17 @@
 	some additional features
 </Doc>
 
-<Doc title="Label">
-	You can set a label for FormAutocomplete.
-</Doc>
+<Doc title="Label">You can set a label for FormAutocomplete.</Doc>
 <Preview vertical src="./FormAutocompleteLabel.svelte">
 	<FormAutocompleteLabel />
 </Preview>
 
-<Doc title="Hint/Validation Message">
-	You can set a message below of Autocomplete like this
-</Doc>
+<Doc title="Hint/Validation Message">You can set a message below of Autocomplete like this</Doc>
 <Preview class="align-items-stretch" vertical src="./FormAutocompleteMessage.svelte">
 	<FormAutocompleteMessage />
 </Preview>
 
-<Doc title="Required">
-	You can mark it as a required field like this:
-</Doc>
+<Doc title="Required">You can mark it as a required field like this:</Doc>
 
 <Preview vertical class="align-items-stretch" src="./FormAutocompleteRequired.svelte">
 	<FormAutocompleteRequired />
@@ -42,23 +36,17 @@
 	<FormAutocompleteColumn />
 </Preview>
 
-<Doc title="Disabled">
-	FormAutocomplete supports disabled state.
-</Doc>
+<Doc title="Disabled">FormAutocomplete supports disabled state.</Doc>
 <Preview vertical class="align-items-stretch" src="./FormAutocompleteDisabled.svelte">
 	<FormAutocompleteDisabled />
 </Preview>
 
-<Doc title="Remote Data">
-	You can load items from external api using async function.
-</Doc>
+<Doc title="Remote Data">You can load items from external api using async function.</Doc>
 <Preview vertical class="align-items-stretch" src="./FormAutocompleteCreate.svelte">
 	<FormAutocompleteCreate />
 </Preview>
 
-<Doc title="Create new item">
-	You can create new item if item is not in the list.
-</Doc>
+<Doc title="Create new item">You can create new item if item is not in the list.</Doc>
 <Preview vertical class="align-items-stretch" src="./FormAutocompleteCreate.svelte">
 	<FormAutocompleteCreate />
 </Preview>

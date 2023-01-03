@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import OffcanvasDefault from './OffcanvasDefault.svelte'
 	import OffcanvasPlacements from './OffcanvasPlacements.svelte'
 	import OffcanvasBackdrop from './OffcanvasBackdrop.svelte'

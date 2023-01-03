@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import Footer1 from './Footer1.svelte'
 	import Footer2 from './Footer2.svelte'
 	import Footer3 from './Footer3.svelte'

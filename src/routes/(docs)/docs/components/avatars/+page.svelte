@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/docs-components'
 	import AvatarColors from './AvatarColors.svelte'
 	import AvatarDefault from './AvatarDefault.svelte'
 	import AvatarImage from './AvatarImage.svelte'

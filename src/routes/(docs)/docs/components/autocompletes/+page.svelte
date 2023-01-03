@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 
 	import AutocompleteDefault from './AutocompleteDefault.svelte'
 	import AutocompleteDisabled from './AutocompleteDisabled.svelte'

@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import ToastDefault from './ToastDefault.svelte'
 	import ToastWithOutCloseButton from './ToastWithOutCloseButton.svelte'
 	import ToastToggleShow from './ToastToggleShow.svelte'

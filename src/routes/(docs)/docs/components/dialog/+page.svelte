@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import DialogAbsolute from './DialogAbsolute.svelte'
 	import DialogCenter from './DialogCenter.svelte'
 	import DialogDefault from './DialogDefault.svelte'

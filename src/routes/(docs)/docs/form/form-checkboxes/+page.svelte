@@ -1,10 +1,10 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import FormCheckboxDefault from './FormCheckboxDefault.svelte'
 	import FormCheckboxColumn from './FormCheckboxColumn.svelte'
 	import FormCheckboxDescription from './FormCheckboxDescription.svelte'
 	import FormCheckboxReverse from './FormCheckboxReverse.svelte'
-  import FormCheckboxRequired from './FormCheckboxRequired.svelte'
+	import FormCheckboxRequired from './FormCheckboxRequired.svelte'
 </script>
 
 <h1>FormCheckbox</h1>
@@ -21,7 +21,6 @@
 <Preview vertical src="./FormCheckboxRequired.svelte">
 	<FormCheckboxRequired />
 </Preview>
-
 
 <Doc title="Description">FormCheckbox can have descriptions.</Doc>
 <Preview vertical src="./FormCheckboxDescription.svelte">

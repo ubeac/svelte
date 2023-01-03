@@ -1,7 +1,9 @@
 <script type="ts">
 	import { afterUpdate } from 'svelte'
 
-	import { Card, CardBody, type ContainerMaxWidths, El, Icon, PageBody, PageHeader, ToC } from '@ubeac/svelte'
+	import { Card, CardBody, type ContainerMaxWidths, El, Icon, PageBody, PageHeader } from '@ubeac/svelte'
+
+	import { ToC } from '$lib/docs-components'
 
 	import { navigations } from '.'
 
@@ -46,7 +48,7 @@
 									{#each navigation.children as menu}
 										{@const [pack, icon] = (menu.icon ?? ':').split(':')}
 										<li class="nav-item">
-											<a href={menu.route} class="nav-link gap-2"><Icon pack={pack} name={icon} /> {menu.title}</a>
+											<a href={menu.route} class="nav-link gap-2"><Icon {pack} name={icon} /> {menu.title}</a>
 										</li>
 									{/each}
 								</ul>

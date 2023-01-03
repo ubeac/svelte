@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/docs-components'
 
 	import ButtonGroupDefault from './ButtonGroupDefault.svelte'
 	import ButtonGroupSizes from './ButtonGroupSizes.svelte'

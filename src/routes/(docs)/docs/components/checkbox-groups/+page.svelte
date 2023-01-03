@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import CheckboxGroupInline from './CheckboxGroupInline.svelte'
 	import CheckboxGroupItems from './CheckboxGroupItems.svelte'
 	import CheckboxGroupDefault from './CheckboxGroupDefault.svelte'

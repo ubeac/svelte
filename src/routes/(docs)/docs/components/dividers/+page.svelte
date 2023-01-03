@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/docs-components'
 	import DividerDefault from './DividerDefault.svelte'
 	import DividerPositions from './DividerPositions.svelte'
 	import DividerColors from './DividerColors.svelte'

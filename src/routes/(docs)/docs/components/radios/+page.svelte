@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import RadioColors from './RadioColors.svelte'
 	import RadioLabels from './RadioLabels.svelte'
 	import RadioDisabled from './RadioDisabled.svelte'

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 
 	import Grid1 from './Grid1.svelte'
 	import Grid2 from './Grid2.svelte'

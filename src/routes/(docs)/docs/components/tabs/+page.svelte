@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import TabsDefault from './TabsDefault.svelte'
 	import TabsGrow from './TabsGrow.svelte'
 	import TabsVertical from './TabsVertical.svelte'

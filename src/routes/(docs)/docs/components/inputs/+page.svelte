@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 
 	import InputDefault from './InputDefault.svelte'
 	import InputDisabled from './InputDisabled.svelte'

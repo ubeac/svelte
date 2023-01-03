@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import FormTextareaLayout from './FormTextareaLayout.svelte'
 	import FormTextareaDefault from './FormTextareaDefault.svelte'
 	import FormTextareaHint from './FormTextareaHint.svelte'

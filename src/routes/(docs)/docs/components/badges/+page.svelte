@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/docs-components'
 
 	import BadgeButtons from './BadgeButtons.svelte'
 	import BadgeColors from './BadgeColors.svelte'

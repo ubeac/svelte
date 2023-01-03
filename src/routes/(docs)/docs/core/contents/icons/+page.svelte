@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import IconColors from './IconColors.svelte'
 	import IconDefault from './IconDefault.svelte'
 	import IconFilled from './IconFilled.svelte'

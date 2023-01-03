@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import FormFileUploaderLayout from './FormFileUploaderLayout.svelte'
 	import FormFileUploaderDefault from './FormFileUploaderDefault.svelte'
 	import FormFileUploaderHint from './FormFileUploaderHint.svelte'

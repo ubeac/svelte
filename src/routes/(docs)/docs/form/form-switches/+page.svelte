@@ -1,10 +1,10 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import FormSwitchDefault from './FormSwitchDefault.svelte'
 	import FormSwitchColumn from './FormSwitchColumn.svelte'
 	import FormSwitchDescription from './FormSwitchDescription.svelte'
 	import FormSwitchReverse from './FormSwitchReverse.svelte'
-  import FormSwitchRequired from './FormSwitchRequired.svelte'
+	import FormSwitchRequired from './FormSwitchRequired.svelte'
 </script>
 
 <h1>FormSwitch</h1>
@@ -21,7 +21,6 @@
 <Preview vertical src="./FormSwitchRequired.svelte">
 	<FormSwitchRequired />
 </Preview>
-
 
 <Doc title="Description">FormSwitch can have descriptions.</Doc>
 <Preview vertical src="./FormSwitchDescription.svelte">
