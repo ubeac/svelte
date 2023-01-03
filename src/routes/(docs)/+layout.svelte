@@ -5,6 +5,7 @@
 		AppFooter,
 		type ContainerMaxWidths,
 		El,
+		Icon,
 		Offcanvas,
 		OffcanvasBody,
 		OffcanvasHeader,
@@ -91,11 +92,11 @@
 		<div class="container-xl d-none d-md-block">
 			<div class="row">
 				<div class="col">
-					<h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+					<div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
 						<a href=".">
 							<img src="/logo.svg" width="110" height="32" alt="uBeac" class="navbar-brand-image" />
 						</a>
-					</h1>
+					</div>
 				</div>
 				<div class="navbar-nav col-auto">
 					<a
@@ -171,11 +172,11 @@
 				</button>
 			</div>
 			<div class="col text-center">
-				<h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+				<div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
 					<a href=".">
 						<img src="/logo.svg" width="110" height="32" alt="uBeac" class="navbar-brand-image" />
 					</a>
-				</h1>
+				</div>
 			</div>
 			<div class="col-auto">
 				<button
@@ -227,8 +228,9 @@
 							{#if navigation.children}
 								<ul class="nav nav-pills collapse" data-bs-parent="#docs" id={navigation.id} style="">
 									{#each navigation.children as menu}
+										{@const [pack, icon] = (menu.icon ?? ':').split(':')}
 										<li class="nav-item">
-											<a href={menu.route} class="nav-link">{menu.title}</a>
+											<a href={menu.route} class="nav-link gap-2"><Icon {pack} name={icon} /> {menu.title}</a>
 										</li>
 									{/each}
 								</ul>
