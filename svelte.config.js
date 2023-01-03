@@ -6,6 +6,8 @@ import path from 'path'
 import ifProcessor from './src/preprocessors/if.js'
 import previewProcessor from './src/preprocessors/preview.js'
 
+import purgeCss from '@fullhuman/postcss-purgecss'
+
 /**
  * @type {import('@sveltejs/kit').Config}
  */
@@ -15,7 +17,21 @@ const config = {
 	preprocess: [
 		ifProcessor(),
 		previewProcessor(),
-		vitePreprocess(),
+		vitePreprocess({
+			script: true,
+			style: {			
+				
+				css: {
+					postcss: {
+						plugins: [
+							purgeCss({
+								content: ['./src/routes/**/*.svelte']
+							})
+						]
+					}
+				}
+			}
+		}),
 	],
 
 	kit: {
