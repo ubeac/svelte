@@ -1,91 +1,57 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { Autocomplete, type FormAutocompleteProps, FormField } from '$lib/components'
 
-	import { Autocomplete, FormField, FormHint, Icon, Label, Spinner } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils'
+	type $$Props = FormAutocompleteProps
 
-	/**
-	 * Set Column width
-	 */
-	export let cols: string | number | boolean = '12'
+	//#region
 
 	/**
-	 * Sets an icon for the Component
+	 * Set the tag of FormAutocomplete
 	 */
-	export let icon: string | undefined = undefined
+	export let tag: $$Props['tag'] = 'select'
 
-	/**
-	 * Sets an icon inside component
-	 */
-	export let iconEnd: string | undefined = undefined
+	export let create: $$Props['create'] = undefined
+	export let items: $$Props['items'] = []
+	export let multiple: $$Props['multiple'] = undefined
+	export let load: $$Props['load'] = undefined
+	export let sort: $$Props['sort'] = true
+	export let key: $$Props['key'] = 'key'
+	export let text: $$Props['text'] = 'text'
+	export let disabled: $$Props['disabled'] = undefined
+	export let placeholder: $$Props['placeholder'] = undefined
+	export let required: $$Props['required'] = undefined
+	export let state: $$Props['state'] = undefined
+	export let value: $$Props['value'] = undefined
+	export let label: $$Props['label'] = undefined
+	export let hint: $$Props['hint'] = undefined
 
-	/**
-	 * Sets id for HTML element
-	 */
-	export let id: string
+	//#endregion
 
-	/**
-	 * Sets label for Autocomplete
-	 */
-	export let label: string | undefined = undefined
+	$: props = {
+		required,
+		label,
+		hint,
+		state,
+	}
 
-	/**
-	 * Show loading indicator inside component
-	 */
-	export let loading: boolean = false
-
-	/**
-	 * Show Message at bottom of Input
-	 */
-	export let message: string | undefined = undefined
-
-	/**
-	 * Marks this as required field in form
-	 */
-	export let required: boolean = false
-
-	/**
-	 * Selected option
-	 */
-	export let value: any = undefined
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: classes = classname('form-autocomplete', undefined, $$props.class)
+	$: autocompleteProps = {
+		tag,
+		load,
+		create,
+		items,
+		multiple,
+		sort,
+		key,
+		text,
+		placeholder,
+		disabled,
+		required,
+		state,
+	}
 </script>
 
-<FormField {cols} class={classes}>
-	<slot name="label">
-		{#if label}
-			<Label for="form-autocomplete-{id}" {required}>{label}</Label>
-		{/if}
-	</slot>
-	<div class={classname('form-field-body')}>
-		<slot name="start">
-			{#if icon}
-				<span class={classname('form-field-icon')}>
-					<Icon name={icon} />
-				</span>
-			{/if}
-		</slot>
-		<Autocomplete bind:value id="form-autocomplete-{id}" {required} {forwardEvents} {...$$restProps} on:changed />
-		<slot name="end">
-			{#if iconEnd && !loading}
-				<span class={classname('form-field-icon')}>
-					<Icon name={iconEnd} />
-				</span>
-			{/if}
-			{#if loading}
-				<span class={classname('form-field-icon')}>
-					<Spinner />
-				</span>
-			{/if}
-		</slot>
-	</div>
-	<slot name="message">
-		{#if message}
-			<FormHint>{message}</FormHint>
-		{/if}
-	</slot>
+<FormField {...props} {...$$restProps}>
+	<slot name="label" />
+	<Autocomplete {...autocompleteProps} bind:value on:change on:create />
+	<slot name="hint" />
 </FormField>
