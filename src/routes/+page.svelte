@@ -20,6 +20,11 @@
 
 <svelte:head>
 	<link rel="stylesheet" href="/css/tabler.css" />
+	<title>uBeac Svelte Components</title>
+	<meta
+		name="description"
+		content="@ubeac/svlete is a UI component library and kit that speeds up the development process and makes it easier than ever! Built on the latest version of tabler, it helps you create templates based on fully customizable and ready-to-use UI components, which can be used by both simple websites and sophisticated systems." />
+	<meta name="author" content="uBeac" />
 </svelte:head>
 
 <El
@@ -36,11 +41,11 @@
 	h="100">
 	<El mb="3" display="flex" alignItems="center" justifyContent="center">
 		<El col="5">
-			<El class="img img-ubeac" tag="img" src="/images/ubeac.png" />
+			<El class="img img-ubeac" tag="img" alt="uBeac" src="/images/ubeac.png" />
 		</El>
 		<El class="plus" col="2">+</El>
 		<El col="5">
-			<El class="img img-svelte" tag="img" src="/images/svelte.png" />
+			<El class="img img-svelte" tag="img" alt="uBeac" src="/images/svelte.png" />
 		</El>
 	</El>
 
