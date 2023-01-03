@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
 	import { onMount } from 'svelte'
 
 	import { afterNavigate } from '$app/navigation'
