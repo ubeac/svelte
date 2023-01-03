@@ -1,7 +1,9 @@
 <script type="ts">
 	import { afterUpdate } from 'svelte'
 
-	import { Card, CardBody, type ContainerMaxWidths, El, Icon, PageBody, PageHeader, ToC } from '@ubeac/svelte'
+	import { Card, CardBody, type ContainerMaxWidths, El, Icon, PageBody, PageHeader } from '@ubeac/svelte'
+
+	import { ToC } from '$lib/docs-components'
 
 	import { navigations } from '.'
 

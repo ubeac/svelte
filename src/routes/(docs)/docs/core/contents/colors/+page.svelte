@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 
 	import ColorsNamed from './ColorsNamed.svelte'
 	import ColorsSocial from './ColorsSocial.svelte'

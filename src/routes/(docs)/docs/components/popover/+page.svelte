@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import PopoverComponents from './PopoverComponents.svelte'
 	import PopoverDefault from './PopoverDefault.svelte'
 	import PopoverDirections from './PopoverDirections.svelte'

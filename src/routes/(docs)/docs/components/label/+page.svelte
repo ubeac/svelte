@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import LabelDefault from './LabelDefault.svelte'
 	import LabelFor from './LabelFor.svelte'
 	import LabelRequired from './LabelRequired.svelte'

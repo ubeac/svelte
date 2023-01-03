@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import BreadcrumbDefault from './BreadcrumbDefault.svelte'
 	import BreadcrumbHeader from './BreadcrumbHeader.svelte'
 	import BreadcrumbSeperator from './BreadcrumbSeperator.svelte'

@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import DotColors from './DotColors.svelte'
 	import DotAnimations from './DotAnimations.svelte'
 	import DotIndicators from './DotIndicators.svelte'

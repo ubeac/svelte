@@ -1,5 +1,5 @@
 <script>
-	import { Preview } from '@ubeac/svelte'
+	import { Preview } from '$lib/docs-components'
 	import CarouselAutoplay from './CarouselAutoplay.svelte'
 	import CarouselDefault from './CarouselDefault.svelte'
 	import CarouselNavigation from './CarouselNavigation.svelte'

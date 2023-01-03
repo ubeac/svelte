@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/docs-components'
 
 	import ButtonColors from './ButtonColors.svelte'
 	import ButtonDefault from './ButtonDefault.svelte'

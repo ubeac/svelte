@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import SpinnerColors from './SpinnerColors.svelte'
 	import SpinnerSizes from './SpinnerSizes.svelte'
 	import SpinnerGrow from './SpinnerGrow.svelte'

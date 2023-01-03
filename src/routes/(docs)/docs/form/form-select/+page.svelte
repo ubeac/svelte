@@ -1,5 +1,5 @@
 <script>
-	import { Preview, Doc } from '@ubeac/svelte'
+	import { Preview, Doc } from '$lib/docs-components'
 	import FormSelectDefault from './FormSelectDefault.svelte'
 	import FormSelectColumn from './FormSelectColumn.svelte'
 	import FormSelectState from './FormSelectState.svelte'

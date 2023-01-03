@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import FormCheckboxGroupBasic from './FormCheckboxGroupBasic.svelte'
 	import FormCheckboxGroupLabel from './FormCheckboxGroupLabel.svelte'
 	import FormCheckboxGroupColor from './FormCheckboxGroupColor.svelte'

@@ -1,5 +1,5 @@
 <script>
-	import { Preview, Doc } from '@ubeac/svelte'
+	import { Preview, Doc } from '$lib/docs-components'
 	import SelectDefault from './SelectDefault.svelte'
 	import SelectItems from './SelectItems.svelte'
 	import SelectMultiple from './SelectMultiple.svelte'

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Doc, El, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 
 	import DatepickerCustom from './DatepickerCustom.svelte'
 	import DatepickerDefault from './DatepickerDefault.svelte'

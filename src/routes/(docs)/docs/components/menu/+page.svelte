@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import BottomMenu from './BottomMenu.svelte'
 	import MenuDefault from './MenuDefault.svelte'
 </script>

@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import TooltipDefault from './TooltipDefault.svelte'
 	import TooltipHtml from './TooltipHTML.svelte'
 	import TooltipPlacement from './TooltipPlacement.svelte'

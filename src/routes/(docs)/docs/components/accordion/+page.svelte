@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import AccordionDefault from './AccordionDefault.svelte'
 	import AccordionOpen from './AccordionOpen.svelte'
 	import AccordionPersistent from './AccordionPersistent.svelte'

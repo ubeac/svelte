@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 
 	import TypographyDivider from './TypographyDivider.svelte'
 	import TypographyHeadings from './TypographyHeadings.svelte'

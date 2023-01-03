@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import BorderAdditive from './BorderAdditive.svelte'
 	import BorderSubtractive from './BorderSubtractive.svelte'
 	import BorderColor from './BorderColor.svelte'

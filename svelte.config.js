@@ -1,4 +1,4 @@
-import preprocess from 'svelte-preprocess'
+import {vitePreprocess} from '@sveltejs/kit/vite'
 
 import adapter from '@sveltejs/adapter-static'
 import path from 'path'
@@ -15,16 +15,7 @@ const config = {
 	preprocess: [
 		ifProcessor(),
 		previewProcessor(),
-		preprocess({
-			scss: {
-				importer(url) {
-					if (url[0] === '~') {
-						url = path.resolve('node_modules', url.substr(1))
-					}
-					return { file: url }
-				},
-			},
-		}),
+		vitePreprocess(),
 	],
 
 	kit: {

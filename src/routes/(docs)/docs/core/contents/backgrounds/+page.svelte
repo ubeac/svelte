@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import BackgroundColor from './BackgroundColor.svelte'
 	import BackgroundGradient from './BackgroundGradient.svelte'
 	import BackgroundOpacity from './BackgroundOpacity.svelte'

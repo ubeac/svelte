@@ -1,5 +1,5 @@
 <script>
-	import { Doc, Preview } from '@ubeac/svelte'
+	import { Doc, Preview } from '$lib/docs-components'
 	import FormInputLayout from './FormInputLayout.svelte'
 	import FormInputDefault from './FormInputDefault.svelte'
 	import FormInputHint from './FormInputHint.svelte'
