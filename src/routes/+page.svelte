@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte'
 	import { Button, Icon, El } from '@ubeac/svelte'
 
+	import './landing.css'
+
 	let icon = 'copy'
 
 	async function copy() {
@@ -68,7 +70,7 @@
 			</Button>
 		</El>
 
-		<El col="12" mt="3" px="2">
+		<El col="12" mt="3" px="1">
 			<El
 				col="12"
 				class="text-terminal"
@@ -90,61 +92,3 @@
 		</El>
 	</El>
 </El>
-
-<style lang="postcss" global>
-	@use '/css/tabler.css';
-
-	.large-text {
-		letter-spacing: -1px;
-		line-height: 34px;
-		font-size: 42px;
-		font-weight: bold;
-	}
-
-	.medium-text {
-		margin-top: 16px;
-		line-height: 24px;
-		font-size: 22px;
-		font-weight: 300;
-	}
-
-	.plus {
-		font-size: 52px;
-		font-weight: bold;
-	}
-
-	.text-terminal {
-		font-family: monospace;
-		font-size: 18px;
-	}
-
-	.custom-container {
-		max-width: 450px;
-	}
-
-	.img {
-		width: 180px;
-	}
-
-	.img-ubeac {
-		filter: drop-shadow(0 0 3rem #376ccf90);
-	}
-	.img-svelte {
-		scale: 0.7;
-		filter: drop-shadow(0 0 3rem #fe3c0060);
-	}
-
-	.clipboard-icon {
-		cursor: pointer;
-	}
-
-	@media (max-width: 500px) {
-		.img {
-			width: 130px;
-		}
-
-		.main-buttons {
-			flex-direction: column;
-		}
-	}
-</style>
