@@ -65,13 +65,13 @@
 	export let ratio: $$Props['ratio'] = undefined
 	export let sticky: $$Props['sticky'] = undefined
 	export let fixed: $$Props['fixed'] = undefined
-	export let display: $$Props['display'] = undefined
-	export let displaySm: $$Props['displaySm'] = undefined
-	export let displayMd: $$Props['displayMd'] = undefined
-	export let displayLg: $$Props['displayLg'] = undefined
-	export let displayXl: $$Props['displayXl'] = undefined
-	export let displayXxl: $$Props['displayXxl'] = undefined
-	export let print: $$Props['print'] = undefined
+	export let d: $$Props['d'] = undefined
+	export let dSm: $$Props['dSm'] = undefined
+	export let dMd: $$Props['dMd'] = undefined
+	export let dLg: $$Props['dLg'] = undefined
+	export let dXl: $$Props['dXl'] = undefined
+	export let dXxl: $$Props['dXxl'] = undefined
+	export let dPrint: $$Props['dPrint'] = undefined
 
 	// shadow
 	export let shadow: $$Props['shadow'] = undefined
@@ -224,13 +224,13 @@
 			ratio,
 			sticky,
 			fixed,
-			display,
-			displaySm,
-			displayMd,
-			displayLg,
-			displayXl,
-			displayXxl,
-			print,
+			d,
+			dSm,
+			dMd,
+			dLg,
+			dXl,
+			dXxl,
+			dPrint,
 			// shadow
 			shadow,
 			// sizing

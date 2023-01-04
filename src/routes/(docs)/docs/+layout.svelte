@@ -29,7 +29,7 @@
 <PageBody>
 	<El {container}>
 		<El row>
-			<El colLg="2" colMd="3" display="none" displayMd="block">
+			<El colLg="2" colMd="3" d="none" dMd="block">
 				<ul class="nav nav-pills nav-vertical" id="docs">
 					{#each navigations as navigation}
 						<li class="nav-item">
@@ -62,7 +62,7 @@
 					<CardBody><slot /></CardBody>
 				</Card>
 			</El>
-			<El colLg="2" display="none" displayLg="block">
+			<El colLg="2" d="none" dLg="block">
 				<ToC />
 			</El>
 		</El>

@@ -25,6 +25,7 @@
 	let updater: any
 	let showDocs = false
 	let showTopNav = false
+	let url = window.location.origin
 
 	export let maximum = 0.999
 	export let intervalTime = 700
@@ -93,7 +94,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-						<a href=".">
+						<a href={url}>
 							<img src="/logo.svg" width="110" height="32" alt="uBeac" class="navbar-brand-image" />
 						</a>
 					</div>
@@ -208,7 +209,7 @@
 		</div>
 	</header>
 
-	<El displayMd="none">
+	<El dMd="none">
 		<Offcanvas bind:show={showDocs} noScroll backdrop autoClose>
 			<OffcanvasHeader title="Documentation" />
 			<OffcanvasBody>
@@ -749,7 +750,7 @@
 		</Offcanvas>
 	</El>
 
-	<El display="none" displayMd="block">
+	<El d="none" dMd="block">
 		<div class="navbar-expand-md">
 			<div class="collapse navbar-collapse show" id="navbar-menu">
 				<div class="navbar navbar-light">

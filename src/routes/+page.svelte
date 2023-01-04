@@ -32,14 +32,14 @@
 	bgColor="secondary"
 	bgGradient
 	bgOpacity="10"
-	display="flex"
+	d="flex"
 	class="el-1 flex-column"
 	alignItems="center"
 	justifyContent="center"
 	p="3"
 	gap="4"
 	h="100">
-	<El mb="3" display="flex" alignItems="center" justifyContent="center">
+	<El mb="3" d="flex" alignItems="center" justifyContent="center">
 		<El col="5">
 			<El class="img img-ubeac" tag="img" alt="uBeac" src="/images/ubeac.png" />
 		</El>
@@ -56,7 +56,7 @@
 
 	<El class="custom-container" row>
 		<El p="1" col="12" colSm="6">
-			<Button col="12" href="https://svelte.ubeac.io/docs" size="lg" color="primary">
+			<Button col="12" href="/docs" size="lg" color="primary">
 				<Icon size="xl" name="book" />
 				Get Started
 			</Button>
@@ -74,7 +74,7 @@
 				col="12"
 				class="text-terminal"
 				border
-				display="flex"
+				d="flex"
 				justifyContent="between"
 				gap="3"
 				shadow="lg"
@@ -84,7 +84,7 @@
 				borderRoundSize="3"
 				bgColor="github">
 				<El>npm install @ubeac/svelte</El>
-				<El class="clipboard-icon" display="flex" on:click={copy}>
+				<El class="clipboard-icon" d="flex" on:click={copy}>
 					<Icon name={icon} />
 				</El>
 			</El>

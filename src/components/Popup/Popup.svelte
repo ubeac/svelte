@@ -147,6 +147,6 @@
 	}
 </script>
 
-<El {...$$restProps} bind:element display={hidden ? 'none' : 'block'} {cssProps} {cssPrefix} {tag}>
+<El {...$$restProps} bind:element d={hidden ? 'none' : 'block'} {cssProps} {cssPrefix} {tag}>
 	<slot />
 </El>

@@ -49,7 +49,7 @@
 	to the same radius. You can also set the border radius individually.
 </Doc>
 <Preview src="./BorderRadius.svelte">
-	<div class="custom-class">
+	<div class="custom-class radius-sample">
 		<BorderRadius />
 	</div>
 </Preview>
@@ -83,5 +83,8 @@
 		height: 5rem;
 		margin: 0.25rem;
 		background-color: #f8f9fa;
+	}
+	.radius-sample > :global(.u-el:last-child) {
+		width: 7rem !important;
 	}
 </style>
