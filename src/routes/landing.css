@@ -184,6 +184,7 @@
 	}
 
 	.img {
+		object-fit: contain;
 		width: 180px;
 	}
 
@@ -191,7 +192,7 @@
 		filter: drop-shadow(0 0 3rem #376ccf90);
 	}
 	.img-svelte {
-		scale: 0.7;
+		scale: 0.8;
 		filter: drop-shadow(0 0 3rem #fe3c0060);
 	}
 

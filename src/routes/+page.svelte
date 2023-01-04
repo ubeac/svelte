@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte'
 	import { Button, Icon, El } from '@ubeac/svelte'
 
 	import './landing.css'
@@ -14,10 +13,6 @@
 			icon = 'copy'
 		}, 3000)
 	}
-
-	onMount(() => {
-		document.body.classList.add('u-el-overflow-hidden')
-	})
 </script>
 
 <svelte:head>
@@ -42,11 +37,11 @@
 	h="100">
 	<El mb="3" display="flex" alignItems="center" justifyContent="center">
 		<El col="5">
-			<El class="img img-ubeac" tag="img" alt="uBeac" src="/images/ubeac.png" />
+			<El class="img img-ubeac" tag="img" width="180" height="180" alt="uBeac" src="/images/ubeac.png" />
 		</El>
 		<El class="plus" col="2">+</El>
 		<El col="5">
-			<El class="img img-svelte" tag="img" alt="uBeac" src="/images/svelte.png" />
+			<El class="img img-svelte" tag="img" width="180" height="180" alt="uBeac" src="/images/svelte.png" />
 		</El>
 	</El>
 

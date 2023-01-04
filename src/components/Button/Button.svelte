@@ -37,7 +37,7 @@
 		otherProps = {
 			tag: href ? 'a' : tag,
 			cssPrefix,
-			role: href ? 'a' : 'button',
+			role: 'button',
 			type: type ?? 'button',
 			href,
 		}
