@@ -37,11 +37,11 @@
 	h="100">
 	<El mb="3" display="flex" alignItems="center" justifyContent="center">
 		<El col="5">
-			<El class="img img-ubeac" tag="img" width="180" height="180" alt="uBeac" src="/images/ubeac.png" />
+			<El class="img img-ubeac" tag="img" width="180" height="180" alt="uBeac" src="/images/ubeac.webp" />
 		</El>
 		<El class="plus" col="2">+</El>
 		<El col="5">
-			<El class="img img-svelte" tag="img" width="180" height="180" alt="uBeac" src="/images/svelte.png" />
+			<El class="img img-svelte" tag="img" width="180" height="180" alt="uBeac" src="/images/svelte.webp" />
 		</El>
 	</El>
 
