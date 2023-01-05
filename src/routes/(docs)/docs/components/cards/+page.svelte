@@ -29,7 +29,9 @@
 </Doc>
 
 <Preview src="./CardBody.svelte">
-	<CardBody />
+	<div class="custom-class">
+		<CardBody />
+	</div>
 </Preview>
 
 <Doc title="Card with title">
@@ -38,7 +40,7 @@
 </Doc>
 <p />
 <Preview src="./CardTitle.svelte">
-	<CardTitle />
+	<div class="custom-class"><CardTitle /></div>
 </Preview>
 
 <Doc title="Card with title and image">
@@ -47,7 +49,7 @@
 </Doc>
 <p />
 <Preview src="./CardImage.svelte">
-	<CardImage />
+	<div class="custom-class"><CardImage /></div>
 </Preview>
 
 <Doc title="Blog post card">
@@ -56,7 +58,7 @@
 </Doc>
 <p />
 <Preview src="./CardBlog.svelte">
-	<CardBlog />
+	<div class="custom-class"><CardBlog /></div>
 </Preview>
 
 <Doc title="Row deck">
@@ -64,7 +66,7 @@
 	to that, they will all have the same height.
 </Doc>
 <Preview src="./CardRow.svelte">
-	<CardRow />
+	<div class="custom-class"><CardRow /></div>
 </Preview>
 
 <Doc title="Post card with aside image">
@@ -73,14 +75,14 @@
 	the right size.
 </Doc>
 <Preview src="./CardAside.svelte">
-	<CardAside />
+	<div class="custom-class"><CardAside /></div>
 </Preview>
 
 <Doc title="Card with background color">
 	<!--  -->
 </Doc>
 <Preview src="./CardBackground.svelte">
-	<CardBackground />
+	<div class="custom-class"><CardBackground /></div>
 </Preview>
 
 <Doc title="Color variations">
@@ -88,17 +90,17 @@
 	eye-catching.
 </Doc>
 <Preview src="./CardColor.svelte">
-	<CardColor />
+	<div class="custom-class"><CardColor /></div>
 </Preview>
 
 <Doc title="Card Stamp">Add a CardStamp.</Doc>
 <Preview src="./CardStamp.svelte">
-	<CardStamp />
+	<div class="custom-class"><CardStamp /></div>
 </Preview>
 
 <Doc title="Card Ribbon">Add a Ribbon to your card.</Doc>
 <Preview src="./CardRibbon.svelte">
-	<CardRibbon />
+	<div class="custom-class"><CardRibbon /></div>
 </Preview>
 
 <Doc title="Stacked Card">
@@ -106,17 +108,26 @@
 	effect.
 </Doc>
 <Preview src="./CardStacked.svelte">
-	<CardStacked />
+	<div class="custom-class"><CardStacked /></div>
 </Preview>
 
 <Doc title="Card Media">Add a CardMedia to show image and other medias inside our card.</Doc>
 <Preview src="./CardMedia.svelte">
-	<CardMedia />
+	<div class="custom-class"><CardMedia /></div>
 </Preview>
 
 <Doc title="Card Footer">
 	<!--  -->
 </Doc>
 <Preview src="./CardFooter.svelte">
-	<CardFooter />
+	<div class="custom-class"><CardFooter /></div>
 </Preview>
+
+<style>
+	.custom-class > :global(.u-el-row > .u-card) {
+		margin: 0.25rem 0;
+	}
+	.custom-class > :global(.u-el-row > .u-el > .u-card) {
+		margin: 0.25rem 0;
+	}
+</style>

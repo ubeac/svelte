@@ -3,7 +3,7 @@
 </script>
 
 <El row>
-	<El colSm="12" colMd="3">
+	<El colSm="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Ribbon color: primary</CardTitle>
@@ -16,7 +16,7 @@
 			<Ribbon bgColor="primary" elementPosition="start"><Icon name="star" color="light" /></Ribbon>
 		</Card>
 	</El>
-	<El colSm="12" colMd="3">
+	<El colSm="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Ribbon color: warning</CardTitle>
@@ -29,7 +29,7 @@
 			<Ribbon bgColor="warning" elementPosition="top">New</Ribbon>
 		</Card>
 	</El>
-	<El colSm="12" colMd="3">
+	<El colSm="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Ribbon color: success</CardTitle>
@@ -42,7 +42,7 @@
 			<Ribbon bgColor="success" elementPosition="end"><Icon name="bell" color="light" /></Ribbon>
 		</Card>
 	</El>
-	<El colSm="12" colMd="3">
+	<El colSm="12" colMd="6">
 		<Card>
 			<Ribbon bgColor="danger" elementPosition="bottom">Hot</Ribbon>
 			<CardBody>

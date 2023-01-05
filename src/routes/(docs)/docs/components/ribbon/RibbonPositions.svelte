@@ -3,7 +3,7 @@
 </script>
 
 <El row>
-	<El colSm="12" colMd="3">
+	<El colSm="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Ribbon position: Start</CardTitle>
@@ -16,7 +16,7 @@
 			<Ribbon bgColor="warning" elementPosition="start"><Icon name="star" color="light" /></Ribbon>
 		</Card>
 	</El>
-	<El colSm="12" colMd="3">
+	<El colSm="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Ribbon position: Top</CardTitle>
@@ -29,7 +29,7 @@
 			<Ribbon bgColor="warning" elementPosition="top"><Icon name="star" color="light" /></Ribbon>
 		</Card>
 	</El>
-	<El colSm="12" colMd="3">
+	<El colSm="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Ribbon position: End</CardTitle>
@@ -42,7 +42,7 @@
 			<Ribbon bgColor="warning" elementPosition="end"><Icon name="star" color="light" /></Ribbon>
 		</Card>
 	</El>
-	<El colSm="12" colMd="3">
+	<El colSm="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Ribbon position: Bottom</CardTitle>

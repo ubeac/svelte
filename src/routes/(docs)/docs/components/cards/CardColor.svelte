@@ -3,7 +3,7 @@
 </script>
 
 <El row>
-	<El col>
+	<El col="12" colMd="6" colXl="4">
 		<Card status statusColor="danger" statusPosition="top" statusSize="lg">
 			<CardBody>
 				<CardTitle>Card with top status</CardTitle>
@@ -14,7 +14,7 @@
 			</CardBody>
 		</Card>
 	</El>
-	<El col>
+	<El col="12" colMd="6" colXl="4">
 		<Card status statusColor="green" statusPosition="start" statusSize="md">
 			<CardBody>
 				<CardTitle>Card with side status</CardTitle>
@@ -25,7 +25,7 @@
 			</CardBody>
 		</Card>
 	</El>
-	<El col>
+	<El col="12" colMd="6" colXl="4">
 		<Card status statusColor="pink" statusPosition="bottom" statusSize="sm">
 			<CardBody>
 				<CardTitle>Card with bottom status</CardTitle>
