@@ -21,7 +21,7 @@
 		</El>
 		<El col="auto">
 			<ButtonGroup>
-				<Button display="none" displayMd="inline-flex">
+				<Button d="none" dMd="inline-flex">
 					<Icon name="edit" />
 					Edit
 				</Button>

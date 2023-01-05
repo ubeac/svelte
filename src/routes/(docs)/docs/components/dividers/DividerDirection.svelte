@@ -2,7 +2,7 @@
 	import { Divider, El } from '@ubeac/svelte'
 </script>
 
-<El display="flex" gap="2">
+<El d="flex" gap="2">
 	<El textColor="primary">Primary</El>
 	<Divider direction="vertical" />
 	<El textColor="secondary">Secondary</El>

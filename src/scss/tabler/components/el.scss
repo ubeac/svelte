@@ -88,8 +88,8 @@ $props: (
     end: generate_props($end-position, ('.end-')),
     gap: generate_props($gap-sizes, ('.gap-')),
     heading-display-size: generate_props($heading-display-sizes, ('.heading-display-size-')),
-    display: generate_props($displays, ('.d-')),
-    print: generate_props($displays, ('.d-print-')),
+    d: generate_props($displays, ('.d-')),
+    d-print: generate_props($displays, ('.d-print-')),
     hidden: '.invisible',
     overflow: generate_props($overflow-types, ('.overflow-')),
     translate:(middle-xy: '.translate-middle',
@@ -180,7 +180,7 @@ $props-extend: (
 
     @each $display in $displays {
         @each $size in $displays-sizes {
-            &-display-#{$size}-#{$display} {
+            &-d-#{$size}-#{$display} {
                 @extend .d-#{$size}-#{$display};
             }
         }

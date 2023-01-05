@@ -37,7 +37,7 @@
 				standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
 				a type specimen book.</CardBody>
 			<CardFooter>
-				<El display="flex" w="100">
+				<El d="flex" w="100">
 					<Button color="secondary">Cancel</Button>
 					<Button color="primary" ms="auto">Go somewhere</Button>
 				</El>
