@@ -3,6 +3,8 @@ export const base_component_path: string = base_path + 'components/'
 export const base_core_path: string = base_path + 'core/'
 export const base_form_path: string = base_path + 'form/'
 
+export const site_base_url: string = 'https://svelte.ubeac.io'
+
 export const navigations = [
 	{ title: 'Introduction', route: base_path },
 	{
