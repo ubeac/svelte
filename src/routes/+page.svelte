@@ -1,5 +1,7 @@
 <script>
-	import { Button, Icon, El } from '@ubeac/svelte'
+	import El from '@ubeac/svelte/components/El/El.svelte'
+	import Button from '@ubeac/svelte/components/Button/Button.svelte'
+	import Icon from '@ubeac/svelte/components/Icon/Icon.svelte'
 
 	import './landing.css'
 

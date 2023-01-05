@@ -19,7 +19,9 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			precompress: true
+		}),
 		files: {
 			lib: 'src',
 			assets: 'static',
