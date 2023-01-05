@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte'
 	import { Button, Icon, El } from '@ubeac/svelte'
 
 	let icon = 'copy'
@@ -12,10 +11,6 @@
 			icon = 'copy'
 		}, 3000)
 	}
-
-	onMount(() => {
-		document.body.classList.add('u-el-overflow-hidden')
-	})
 </script>
 
 <svelte:head>
