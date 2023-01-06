@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 
-	import Inputmask from 'inputmask'
-
 	import { El, type InputProps } from '$lib/components'
 
 	type $$Props = InputProps
@@ -86,11 +84,14 @@
 	}
 
 	let element: HTMLInputElement
-	onMount(() => {
+	onMount(async () => {
+		const Inputmask = await import('inputmask')
+
 		if (element !== undefined && mask) {
-			var im = new Inputmask(mask, maskOptions)
+			var im = new Inputmask.default(mask, maskOptions)
 			im.mask(element)
 		}
+
 		return () => {
 			if (element !== undefined && mask) {
 				Inputmask.remove(element)
