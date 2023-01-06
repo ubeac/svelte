@@ -1,5 +1,5 @@
 
-	.u-button {
+	/* .u-button {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -16,7 +16,7 @@
 	}
 
 	.u-el {
-		/*  */
+		
 	}
 	.u-el-text-align-center {
 		text-align: center;
@@ -90,7 +90,7 @@
 
 	.u-el-p-1 {
 		padding: 0.25rem;
-	}
+	} */
 
 	.flex-column {
 		flex-direction: column;
@@ -108,7 +108,7 @@
 		margin: 0;
 		box-sizing: border-box;
 	}
-
+/* 
 
 	.u-button-color-github {
 		background-color: #181717;
@@ -152,7 +152,7 @@
 	.u-el-gap-4 {
 		gap: 2rem;
 	}
-	
+	 */
 	.large-text {
 		letter-spacing: -1px;
 		line-height: 34px;
