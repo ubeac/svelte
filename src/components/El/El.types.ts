@@ -122,6 +122,8 @@ export type AlignSelfTypes = 'start' | 'end' | 'center'
 
 export type JustifyContentTypes = 'start' | 'end' | 'center' | 'between' | 'around' | 'evenly'
 
+export type FlexDirections = 'row' | 'row-reverse' | 'column' | 'column-reverse'
+
 // HTML Tags
 export type HTMLTags = keyof HTMLElementTagNameMap
 
@@ -280,6 +282,13 @@ export interface CssProps {
 
 	// Justify Content
 	justifyContent?: JustifyContentTypes
+
+	flexDirection?: FlexDirections
+	flexDirectionSm?: FlexDirections
+	flexDirectionMd?: FlexDirections
+	flexDirectionLg?: FlexDirections
+	flexDirectionXl?: FlexDirections
+	flexDirectionXxl?: FlexDirections
 }
 
 export interface ElProps extends CssProps {

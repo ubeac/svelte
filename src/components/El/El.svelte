@@ -173,6 +173,14 @@
 	export let alignSelf: $$Props['alignSelf'] = undefined
 	export let justifyContent: $$Props['justifyContent'] = undefined
 
+	// Flex directions
+	export let flexDirection: $$Props['flexDirection'] = undefined
+	export let flexDirectionSm: $$Props['flexDirectionSm'] = undefined
+	export let flexDirectionMd: $$Props['flexDirectionMd'] = undefined
+	export let flexDirectionLg: $$Props['flexDirectionLg'] = undefined
+	export let flexDirectionXl: $$Props['flexDirectionXl'] = undefined
+	export let flexDirectionXxl: $$Props['flexDirectionXxl'] = undefined
+
 	// Tab Index
 	export let tabindex: $$Props['tabindex'] = undefined
 
@@ -317,6 +325,13 @@
 			alignItems,
 			alignSelf,
 			justifyContent,
+			// flex directions
+			flexDirection,
+			flexDirectionSm,
+			flexDirectionMd,
+			flexDirectionLg,
+			flexDirectionXl,
+			flexDirectionXxl
 		}
 		classes = classname(defaultCssPrefix, defaultCssProps, '', true)
 		if (cssPrefix) classes += ' ' + classname(cssPrefix, cssProps, $$props.class, true)

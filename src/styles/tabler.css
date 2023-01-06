@@ -10302,27 +10302,27 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   font-family: var(--u-font-monospace) !important;
 }
 
-.fs-1 {
+.fs-1, .u-el-font-size-1 {
   font-size: 1.5rem !important;
 }
 
-.fs-2 {
+.fs-2, .u-el-font-size-2 {
   font-size: 1.25rem !important;
 }
 
-.fs-3 {
+.fs-3, .u-el-font-size-3 {
   font-size: 1rem !important;
 }
 
-.fs-4 {
+.fs-4, .u-el-font-size-4 {
   font-size: 0.875rem !important;
 }
 
-.fs-5 {
+.fs-5, .u-el-font-size-5 {
   font-size: 0.75rem !important;
 }
 
-.fs-6 {
+.fs-6, .u-el-font-size-6 {
   font-size: 0.625rem !important;
 }
 
@@ -11136,16 +11136,16 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   .flex-sm-fill {
     flex: 1 1 auto !important;
   }
-  .flex-sm-row {
+  .flex-sm-row, .u-el-flex-direction-sm-row {
     flex-direction: row !important;
   }
-  .flex-sm-column {
+  .flex-sm-column, .u-el-flex-direction-sm-column {
     flex-direction: column !important;
   }
-  .flex-sm-row-reverse {
+  .flex-sm-row-reverse, .u-el-flex-direction-sm-row-reverse {
     flex-direction: row-reverse !important;
   }
-  .flex-sm-column-reverse {
+  .flex-sm-column-reverse, .u-el-flex-direction-sm-column-reverse {
     flex-direction: column-reverse !important;
   }
   .flex-sm-grow-0 {
@@ -11641,16 +11641,16 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   .flex-md-fill {
     flex: 1 1 auto !important;
   }
-  .flex-md-row {
+  .flex-md-row, .u-el-flex-direction-md-row {
     flex-direction: row !important;
   }
-  .flex-md-column {
+  .flex-md-column, .u-el-flex-direction-md-column {
     flex-direction: column !important;
   }
-  .flex-md-row-reverse {
+  .flex-md-row-reverse, .u-el-flex-direction-md-row-reverse {
     flex-direction: row-reverse !important;
   }
-  .flex-md-column-reverse {
+  .flex-md-column-reverse, .u-el-flex-direction-md-column-reverse {
     flex-direction: column-reverse !important;
   }
   .flex-md-grow-0 {
@@ -12146,16 +12146,16 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   .flex-lg-fill {
     flex: 1 1 auto !important;
   }
-  .flex-lg-row {
+  .flex-lg-row, .u-el-flex-direction-lg-row {
     flex-direction: row !important;
   }
-  .flex-lg-column {
+  .flex-lg-column, .u-el-flex-direction-lg-column {
     flex-direction: column !important;
   }
-  .flex-lg-row-reverse {
+  .flex-lg-row-reverse, .u-el-flex-direction-lg-row-reverse {
     flex-direction: row-reverse !important;
   }
-  .flex-lg-column-reverse {
+  .flex-lg-column-reverse, .u-el-flex-direction-lg-column-reverse {
     flex-direction: column-reverse !important;
   }
   .flex-lg-grow-0 {
@@ -12651,16 +12651,16 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   .flex-xl-fill {
     flex: 1 1 auto !important;
   }
-  .flex-xl-row {
+  .flex-xl-row, .u-el-flex-direction-xl-row {
     flex-direction: row !important;
   }
-  .flex-xl-column {
+  .flex-xl-column, .u-el-flex-direction-xl-column {
     flex-direction: column !important;
   }
-  .flex-xl-row-reverse {
+  .flex-xl-row-reverse, .u-el-flex-direction-xl-row-reverse {
     flex-direction: row-reverse !important;
   }
-  .flex-xl-column-reverse {
+  .flex-xl-column-reverse, .u-el-flex-direction-xl-column-reverse {
     flex-direction: column-reverse !important;
   }
   .flex-xl-grow-0 {
@@ -13156,16 +13156,16 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   .flex-xxl-fill {
     flex: 1 1 auto !important;
   }
-  .flex-xxl-row {
+  .flex-xxl-row, .u-el-flex-direction-xxl-row {
     flex-direction: row !important;
   }
-  .flex-xxl-column {
+  .flex-xxl-column, .u-el-flex-direction-xxl-column {
     flex-direction: column !important;
   }
-  .flex-xxl-row-reverse {
+  .flex-xxl-row-reverse, .u-el-flex-direction-xxl-row-reverse {
     flex-direction: row-reverse !important;
   }
-  .flex-xxl-column-reverse {
+  .flex-xxl-column-reverse, .u-el-flex-direction-xxl-column-reverse {
     flex-direction: column-reverse !important;
   }
   .flex-xxl-grow-0 {

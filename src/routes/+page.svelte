@@ -49,7 +49,7 @@
 		</El>
 	</El>
 
-	<El fontSize="4">
+	<El>
 		<El tag="h1" class="large-text">uBeac Svelte components</El>
 		<El mt="3" tag="h3" class="medium-text" textMuted>Opinionated Svelte component UI library by uBeac</El>
 	</El>

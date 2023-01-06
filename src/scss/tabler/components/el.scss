@@ -43,6 +43,8 @@ $justify-content: start center end around between evenly !default;
 $align-self: start center end !default;
 $row-cols-sizes: 1 2 3 4 5 6 auto !default;
 $container-breakpoints: null fluid sm md lg xl xxl;
+$font-sizes: 1 2 3 4 5 6 !default;
+$flex-directions: row row-reverse column column-reverse !default;
 
 .border {
     border-width: var(--#{$prefix}border-width) !important;
@@ -112,7 +114,8 @@ $props: (
     my: generate_props($margin-sizes, ('.my-')),
     col: generate_props($col-sizes, ('.col-')),
     w: generate_props($width-height-sizes, ('.w-')),
-    h: generate_props($width-height-sizes, ('.h-'))
+    h: generate_props($width-height-sizes, ('.h-')),
+    font-size: generate_props($font-sizes, ('.fs-')),
 );
 
 $props-null: (
@@ -160,6 +163,16 @@ $props-extend: (
             @each $breakpoint in $breakpoints {
                 &-#{$breakpoint}-#{$text-align} {
                     @extend .offset-#{$breakpoint}-#{$text-align} !optional;
+                }
+            }
+        }
+    }
+
+    &-flex-direction {
+        @each $flex-direction in $flex-directions {
+            @each $breakpoint in $breakpoints {
+                &-#{$breakpoint}-#{$flex-direction} {
+                    @extend .flex-#{$breakpoint}-#{$flex-direction} !optional;
                 }
             }
         }
