@@ -14,21 +14,21 @@
 	You can control the visibility of the Offcanvas by using the <code>show</code> property.
 </Doc>
 <Preview src="./OffcanvasDefault.svelte">
-	<OffcanvasDefault />
+	<div class="custom-class"><OffcanvasDefault /></div>
 </Preview>
 
 <Doc title="Placements">
 	<code>placement</code> property can be <code>top</code>, <code>right</code>, <code>bottom</code> or <code>left</code>.
 </Doc>
 <Preview src="./OffcanvasPlacements.svelte">
-	<OffcanvasPlacements />
+	<div class="custom-class"><OffcanvasPlacements /></div>
 </Preview>
 
 <Doc title="Backdrop">
 	<code>backdrop</code> property will activate a backdrop behind Offcanvas.
 </Doc>
 <Preview src="./OffcanvasBackdrop.svelte">
-	<OffcanvasBackdrop />
+	<div class="custom-class"><OffcanvasBackdrop /></div>
 </Preview>
 
 <Doc title="AutoClose">
@@ -38,12 +38,18 @@
 	the close button .
 </Doc>
 <Preview src="./OffcanvasAutoClose.svelte">
-	<OffcanvasAutoClose />
+	<div class="custom-class"><OffcanvasAutoClose /></div>
 </Preview>
 
 <Doc title="NoScroll">
 	<code>noScroll</code> property will disable scrolling on the body when Offcanvas is open.
 </Doc>
 <Preview src="./OffcanvasNoScroll.svelte">
-	<OffcanvasNoScroll />
+	<div class="custom-class"><OffcanvasNoScroll /></div>
 </Preview>
+
+<style>
+	.custom-class > :global(.u-button) {
+		margin: 0.25rem 0;
+	}
+</style>

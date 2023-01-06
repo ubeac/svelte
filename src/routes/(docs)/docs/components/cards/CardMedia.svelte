@@ -3,7 +3,7 @@
 </script>
 
 <El row>
-	<El col class="mb-6">
+	<El col="12" colMd="6" class="mb-6">
 		<Card class="example-column example-column-1">
 			<CardMedia elementPosition="top">
 				<img
@@ -16,7 +16,7 @@
 			</CardBody>
 		</Card>
 	</El>
-	<El col class="mb-6">
+	<El col="12" colMd="6" class="mb-6">
 		<Card class="example-column example-column-1">
 			<CardBody>
 				<CardTitle>Title</CardTitle>

@@ -12,6 +12,4 @@
 	<El textColor="info">Info</El>
 	<Divider direction="vertical" />
 	<El textColor="danger">Danger</El>
-	<Divider direction="vertical" />
-	<El textColor="warning">Warning</El>
 </El>

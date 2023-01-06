@@ -3,7 +3,7 @@
 </script>
 
 <El row>
-	<El col>
+	<El col="12" colMd="6">
 		<Card>
 			<Stamp bgColor="primary" icon="bell" size="md" iconPosition="top-start" />
 			<CardBody>
@@ -16,7 +16,7 @@
 			</CardBody>
 		</Card>
 	</El>
-	<El col>
+	<El col="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Stamp color: warning</CardTitle>
@@ -29,7 +29,7 @@
 			<Stamp bgColor="warning" icon="bell" size="sm" iconPosition="bottom-start" />
 		</Card>
 	</El>
-	<El col>
+	<El col="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Stamp color: secondary</CardTitle>
@@ -42,7 +42,7 @@
 			<Stamp bgColor="secondary" icon="bell" size="md" iconPosition="top-end" />
 		</Card>
 	</El>
-	<El col>
+	<El col="12" colMd="6">
 		<Card>
 			<CardBody>
 				<CardTitle>Stamp color: success</CardTitle>
