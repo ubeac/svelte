@@ -1,6 +1,9 @@
 <script>
-	import { onMount } from 'svelte'
-	import { Button, Icon, El } from '@ubeac/svelte'
+	import El from '@ubeac/svelte/components/El/El.svelte'
+	import Button from '@ubeac/svelte/components/Button/Button.svelte'
+	import Icon from '@ubeac/svelte/components/Icon/Icon.svelte'
+
+	import './landing.css'
 
 	let icon = 'copy'
 
@@ -12,14 +15,9 @@
 			icon = 'copy'
 		}, 3000)
 	}
-
-	onMount(() => {
-		document.body.classList.add('u-el-overflow-hidden')
-	})
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="/css/tabler.css" />
 	<title>uBeac Svelte Components</title>
 	<meta
 		name="description"
@@ -41,11 +39,11 @@
 	h="100">
 	<El mb="3" d="flex" alignItems="center" justifyContent="center">
 		<El col="5">
-			<El class="img img-ubeac" tag="img" alt="uBeac" src="/images/ubeac.png" />
+			<El class="img img-ubeac" tag="img" width="180" height="180" alt="uBeac" src="/images/ubeac.webp" />
 		</El>
 		<El class="plus" col="2">+</El>
 		<El col="5">
-			<El class="img img-svelte" tag="img" alt="uBeac" src="/images/svelte.png" />
+			<El class="img img-svelte" tag="img" width="180" height="180" alt="uBeac" src="/images/svelte.webp" />
 		</El>
 	</El>
 
@@ -69,7 +67,7 @@
 			</Button>
 		</El>
 
-		<El col="12" mt="3" px="2">
+		<El col="12" mt="3" px="1">
 			<El
 				col="12"
 				class="text-terminal"
@@ -91,59 +89,3 @@
 		</El>
 	</El>
 </El>
-
-<style>
-	:global(.large-text) {
-		letter-spacing: -1px;
-		line-height: 34px;
-		font-size: 42px;
-		font-weight: bold;
-	}
-
-	:global(.medium-text) {
-		margin-top: 16px;
-		line-height: 24px;
-		font-size: 22px;
-		font-weight: 300;
-	}
-
-	:global(.plus) {
-		font-size: 52px;
-		font-weight: bold;
-	}
-
-	:global(.text-terminal) {
-		font-family: monospace;
-		font-size: 18px;
-	}
-
-	:global(.custom-container) {
-		max-width: 450px;
-	}
-
-	:global(.img) {
-		width: 180px;
-	}
-
-	:global(.img-ubeac) {
-		filter: drop-shadow(0 0 3rem #376ccf90);
-	}
-	:global(.img-svelte) {
-		scale: 0.7;
-		filter: drop-shadow(0 0 3rem #fe3c0060);
-	}
-
-	:global(.clipboard-icon) {
-		cursor: pointer;
-	}
-
-	@media (max-width: 500px) {
-		:global(.img) {
-			width: 130px;
-		}
-
-		:global(.main-buttons) {
-			flex-direction: column;
-		}
-	}
-</style>
