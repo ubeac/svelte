@@ -19,47 +19,53 @@
 
 <Doc title="Basic Table">Table component has basic styles.</Doc>
 <Preview src="./TableDefault.svelte">
-	<TableDefault />
+	<div class="custom-class"><TableDefault /></div>
 </Preview>
 
 <Doc title="Bordered Tables">You can add borders for table rows using <code>border</code> prop.</Doc>
 <Preview src="./TableBorder.svelte">
-	<TableBorder />
+	<div class="custom-class"><TableBorder /></div>
 </Preview>
 
 <Doc title="Borderless Tables">You can disable borders by setting border to 0.</Doc>
 <Preview src="./TableBorderless.svelte">
-	<TableBorderless />
+	<div class="custom-class"><TableBorderless /></div>
 </Preview>
 
 <Doc title="Hover effect">Table rows can change it's color if yo hover on them.</Doc>
 <Preview src="./TableHover.svelte">
-	<TableHover />
+	<div class="custom-class"><TableHover /></div>
 </Preview>
 
 <Doc title="Truncate cells">TODO</Doc>
 <Preview src="./TableTruncate.svelte">
-	<TableTruncate />
+	<div class="custom-class"><TableTruncate /></div>
 </Preview>
 
 <Doc title="Striped Tables">
 	You can change colors of Even/Odd rows by adding <code>striped</code> prop.
 </Doc>
 <Preview src="./TableStriped.svelte">
-	<TableStriped />
+	<div class="custom-class"><TableStriped /></div>
 </Preview>
 
 <Doc title="Responsive Tables">TODO</Doc>
 <Preview src="./TableResponsive.svelte">
-	<TableResponsive />
+	<div class="custom-class"><TableResponsive /></div>
 </Preview>
 
 <Doc title="Table Colors">TODO</Doc>
 <Preview src="./TableColors.svelte">
-	<TableColors />
+	<div class="custom-class"><TableColors /></div>
 </Preview>
 
 <Doc title="Sortable Table">TODO</Doc>
 <Preview src="./TableSort.svelte">
-	<TableSort />
+	<div class="custom-class"><TableSort /></div>
 </Preview>
+
+<style>
+	.custom-class > :global(.u-table-parent) {
+		overflow-x: auto;
+	}
+</style>

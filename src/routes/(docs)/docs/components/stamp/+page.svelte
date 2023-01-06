@@ -12,19 +12,25 @@
 	<!--  -->
 </Doc>
 <Preview src="./StampColor.svelte">
-	<StampColor />
+	<div class="custom-class"><StampColor /></div>
 </Preview>
 
 <Doc title="Sizes">
 	<!--  -->
 </Doc>
 <Preview src="./StampSize.svelte">
-	<StampSize />
+	<div class="custom-class"><StampSize /></div>
 </Preview>
 
 <Doc title="Positions">
 	<!--  -->
 </Doc>
 <Preview src="./StampPositions.svelte">
-	<StampPositions />
+	<div class="custom-class"><StampPositions /></div>
 </Preview>
+
+<style>
+	.custom-class > :global(.u-el-row > .u-el > .u-card) {
+		margin: 0.25rem 0;
+	}
+</style>

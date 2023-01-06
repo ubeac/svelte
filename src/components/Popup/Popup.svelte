@@ -22,11 +22,6 @@
 	export let fixedPosition: $$Props['fixedPosition'] = false
 
 	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
-
-	/**
 	 * Distance between Popup and target element
 	 */
 	export let popupOffset: $$Props['popupOffset'] = [0, 16]

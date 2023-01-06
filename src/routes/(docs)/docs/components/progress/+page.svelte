@@ -20,38 +20,44 @@
 	<!--  -->
 </Doc>
 <Preview src="./ProgressDefault.svelte">
-	<ProgressDefault />
+	<div class="custom-class"><ProgressDefault /></div>
 </Preview>
 
 <Doc title="Colors">Customize the color of the progress bar to suit your design.</Doc>
 
 <Preview src="./ProgressColors.svelte">
-	<ProgressColors />
+	<div class="custom-class"><ProgressColors /></div>
 </Preview>
 
 <Doc title="Sizes">Customize the size of the progress bar.</Doc>
 <Preview src="./ProgressSizes.svelte">
-	<ProgressSizes />
+	<div class="custom-class"><ProgressSizes /></div>
 </Preview>
 
 <Doc title="Indeterminate">
 	You can create a progress bar which shows indeterminate progress by adding <code>indeterminate</code> to the progress component.
 </Doc>
 <Preview src="./ProgressIndeterminate.svelte">
-	<ProgressIndeterminate />
+	<div class="custom-class"><ProgressIndeterminate /></div>
 </Preview>
 
 <Doc title="Striped progress">Set striped property to show striped background</Doc>
 <Preview src="./ProgressStriped.svelte">
-	<ProgressStriped />
+	<div class="custom-class"><ProgressStriped /></div>
 </Preview>
 
 <Doc title="Animated striped">The striped gradient can also be animated.</Doc>
 <Preview src="./ProgressStripedAnimated.svelte">
-	<ProgressStripedAnimated />
+	<div class="custom-class"><ProgressStripedAnimated /></div>
 </Preview>
 
 <Doc title="Labels">Add labels to your progress bars by setting label property.</Doc>
 <Preview src="./ProgressLabel.svelte">
-	<ProgressLabel />
+	<div class="custom-class"><ProgressLabel /></div>
 </Preview>
+
+<style>
+	.custom-class > :global(.u-progress) {
+		margin: 0.25rem 0;
+	}
+</style>

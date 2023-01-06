@@ -11,12 +11,18 @@
 	<!--  -->
 </Doc>
 <Preview src="./RibbonColor.svelte">
-	<RibbonColor />
+	<div class="custom-class"><RibbonColor /></div>
 </Preview>
 
 <Doc title="Positions">
 	<!--  -->
 </Doc>
 <Preview src="./RibbonPositions.svelte">
-	<RibbonPositions />
+	<div class="custom-class"><RibbonPositions /></div>
 </Preview>
+
+<style>
+	.custom-class > :global(.u-el-row > .u-el > .u-card) {
+		margin: 0.25rem 0;
+	}
+</style>

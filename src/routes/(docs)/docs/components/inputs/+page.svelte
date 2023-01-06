@@ -19,7 +19,7 @@
 	emails, and more.
 </Doc>
 <Preview src="./InputDefault.svelte">
-	<InputDefault />
+	<div class="custom-class"><InputDefault /></div>
 </Preview>
 
 <Doc title="Placeholder">
@@ -27,7 +27,7 @@
 	until the user enters a value.
 </Doc>
 <Preview src="./InputPlaceholder.svelte">
-	<InputPlaceholder />
+	<div class="custom-class"><InputPlaceholder /></div>
 </Preview>
 
 <Doc title="Types">
@@ -36,7 +36,7 @@
 	<code>url</code>.
 </Doc>
 <Preview src="./InputTypes.svelte">
-	<InputTypes />
+	<div class="custom-class"><InputTypes /></div>
 </Preview>
 
 <Doc title="Sizing">
@@ -44,7 +44,7 @@
 	<code>lg</code>.
 </Doc>
 <Preview src="./InputSizes.svelte">
-	<InputSizes />
+	<div class="custom-class"><InputSizes /></div>
 </Preview>
 
 <Doc title="Disabled">
@@ -52,7 +52,7 @@
 	focusing.
 </Doc>
 <Preview src="./InputDisabled.svelte">
-	<InputDisabled />
+	<div class="custom-class"><InputDisabled /></div>
 </Preview>
 
 <Doc title="Readonly">
@@ -60,7 +60,7 @@
 	be focused and selected, while disabled inputs cannot.
 </Doc>
 <Preview src="./InputReadOnly.svelte">
-	<InputReadOnly />
+	<div class="custom-class"><InputReadOnly /></div>
 </Preview>
 
 <Doc title="States">
@@ -68,14 +68,14 @@
 	input.
 </Doc>
 <Preview src="./InputStates.svelte">
-	<InputStates />
+	<div class="custom-class"><InputStates /></div>
 </Preview>
 
 <Doc title="Borders">
 	Set <code>borderRounded</code> or <code>borderFlush</code> boolean properties to apply rounded borders or remove the borders.
 </Doc>
 <Preview src="./InputBorderShapes.svelte">
-	<InputBorderShapes />
+	<div class="custom-class"><InputBorderShapes /></div>
 </Preview>
 
 <Doc title="Masks">
@@ -84,5 +84,11 @@
 	<a href="https://github.com/RobinHerbots/Inputmask#readme" target="_blank" rel="noreferrer">Inputmask</a> documentation.
 </Doc>
 <Preview src="./InputMasks.svelte">
-	<InputMasks />
+	<div class="custom-class"><InputMasks /></div>
 </Preview>
+
+<style>
+	.custom-class > :global(.u-input-wrapper) {
+		margin: 0.25rem 0;
+	}
+</style>

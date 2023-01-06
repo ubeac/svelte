@@ -4,7 +4,7 @@
 
 <El row>
 	{#each ['sm', 'md', 'lg'] as size}
-		<El col>
+		<El col="12" colMd="6">
 			<Card>
 				<CardBody>
 					<CardTitle>Stamp size: {size}</CardTitle>
