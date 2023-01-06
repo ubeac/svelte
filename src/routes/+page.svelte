@@ -1,8 +1,4 @@
 <script>
-	import El from '@ubeac/svelte/components/El/El.svelte'
-	import Button from '@ubeac/svelte/components/Button/Button.svelte'
-	import Icon from '@ubeac/svelte/components/Icon/Icon.svelte'
-
 	import './landing.css'
 
 	let icon = 'copy'
@@ -25,67 +21,111 @@
 	<meta name="author" content="uBeac" />
 </svelte:head>
 
-<El
-	textAlign="center"
-	bgColor="secondary"
-	bgGradient
-	bgOpacity="10"
-	d="flex"
-	class="el-1 flex-column"
-	alignItems="center"
-	justifyContent="center"
-	p="3"
-	gap="4"
-	h="100">
-	<El mb="3" d="flex" alignItems="center" justifyContent="center">
-		<El col="5">
-			<El class="img img-ubeac" tag="img" width="180" height="180" alt="uBeac" src="/images/ubeac.webp" />
-		</El>
-		<El class="plus" col="2">+</El>
-		<El col="5">
-			<El class="img img-svelte" tag="img" width="180" height="180" alt="uBeac" src="/images/svelte.webp" />
-		</El>
-	</El>
+<div
+	class="u-el-text-align-center u-el-bg-color-secondary u-el-bg-gradient u-el-bg-opacity-10 u-el-d-flex el-1 flex-column u-el-align-items-center u-el-justify-content-center u-el-p-3 u-el-gap-4 u-el-h-100">
+	<div class="u-el-mb-3 u-el-d-flex u-el-align-items-center u-el-justify-content-center">
+		<div class="u-el-col-5">
+			<img class="img img-ubeac" width="180" height="180" alt="uBeac" src="/images/ubeac.webp" />
+		</div>
+		<div class="plus u-el-col-2">+</div>
+		<div class="u-el-col-5">
+			<img class="img img-svelte" width="180" height="180" alt="uBeac" src="/images/svelte.webp" />
+		</div>
+	</div>
 
-	<El fontSize="4">
-		<El tag="h1" class="large-text">uBeac Svelte components</El>
-		<El mt="3" tag="h3" class="medium-text" textMuted>Opinionated Svelte component UI library by uBeac</El>
-	</El>
+	<div>
+		<h1 class="large-text">uBeac Svelte components</h1>
+		<h2 class="u-el-mt-3 u-el-text-muted medium-text">Opinionated Svelte component UI library by uBeac</h2>
+	</div>
 
-	<El class="custom-container" row>
-		<El p="1" col="12" colSm="6">
-			<Button col="12" href="/docs" size="lg" color="primary">
-				<Icon size="xl" name="book" />
+	<div class="custom-container u-el-row">
+		<div class="u-el-p-1 u-el-col-12 u-el-col-sm-6">
+			<a role="button" class="u-button u-el-col-12 u-button-size-lg u-button-color-primary" href="/docs">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					aria-hidden="true"
+					role="img"
+					class="u-icon u-icon-size-xl iconify iconify--tabler"
+					width="1em"
+					height="1em"
+					viewBox="0 0 24 24"
+					><path
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13m9-13v13m9-13v13" /></svg>
 				Get Started
-			</Button>
-		</El>
+			</a>
+		</div>
 
-		<El p="1" col="12" colSm="6">
-			<Button col="12" href="https://github.com/ubeac/svelte" size="lg" color="github">
-				<Icon size="xl" name="brand-github" />
+		<div class="u-el-p-1 u-el-col-12 u-el-col-sm-6">
+			<a
+				role="button"
+				class="u-button u-el-col-12 u-button-size-lg u-button-color-github"
+				href="https://github.com/ubeac/svelte">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					aria-hidden="true"
+					role="img"
+					class="u-icon u-icon-size-xl iconify iconify--tabler"
+					width="1em"
+					height="1em"
+					viewBox="0 0 24 24"
+					><path
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21" /></svg>
 				Source Code
-			</Button>
-		</El>
+			</a>
+		</div>
 
-		<El col="12" mt="3" px="1">
-			<El
-				col="12"
-				class="text-terminal"
-				border
-				d="flex"
-				justifyContent="between"
-				gap="3"
-				shadow="lg"
-				textColor="light"
-				p="3"
-				mb="5"
-				borderRoundSize="3"
-				bgColor="github">
-				<El>npm install @ubeac/svelte</El>
-				<El class="clipboard-icon" d="flex" on:click={copy}>
-					<Icon name={icon} />
-				</El>
-			</El>
-		</El>
-	</El>
-</El>
+		<div class="u-el-col-12 u-el-mt-3 u-el-px-1">
+			<div
+				class="u-el-col-12 text-terminal u-el-border u-el-d-flex u-el-justify-content-between u-el-gap-3 u-el-shadow-lg u-el-text-color-light u-el-p-3 u-el-mb-5 u-el-border-round-size-3 u-el-bg-color-github">
+				<div>npm install @ubeac/svelte</div>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<div class="u-el-d-flex clipboard-icon" on:click={copy}>
+					{#if icon === 'copy'}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							aria-hidden="true"
+							role="img"
+							class="u-icon iconify iconify--tabler"
+							width="1em"
+							height="1em"
+							viewBox="0 0 24 24"
+							><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								><rect width="12" height="12" x="8" y="8" rx="2" /><path
+									d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" /></g
+							></svg>
+					{:else}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							aria-hidden="true"
+							role="img"
+							class="u-icon iconify iconify--tabler"
+							width="1em"
+							height="1em"
+							viewBox="0 0 24 24"
+							><path
+								fill="none"
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="m5 12l5 5L20 7" /></svg>
+					{/if}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
