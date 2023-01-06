@@ -1,9 +1,8 @@
-import { navigations } from '../(docs)/docs'
+import { navigations, site_base_url } from '../(docs)/docs'
 
 export const prerender = true;
 
 let result = ''
-let hostName = ''
 
 function GetNodes(navs: any[]) {
 	navs.forEach((navigation) => {
@@ -12,7 +11,7 @@ function GetNodes(navs: any[]) {
 		} else {
 			result += `
           <url>
-            <loc>${hostName + navigation.route}</loc>
+            <loc>${site_base_url + navigation.route}</loc>
             <changefreq>weekly</changefreq>
             <priority>0.5</priority>
           </url>`
@@ -23,7 +22,6 @@ function GetNodes(navs: any[]) {
 }
 
 export async function GET(event: any) {
-	hostName = event.url.origin
 	const headers = {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
 		'Content-Type': 'application/xml',
