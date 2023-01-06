@@ -1,0 +1,30 @@
+@import './mixins';
+@import './variables';
+
+@import "@tabler/core/src/scss/config";
+// @import "bootstrap-components";
+
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/bootstrap-utilities";
+@import "~bootstrap/scss/bootstrap-grid";
+
+
+@import "@tabler/core/src/scss/ui/grid";
+
+// botostrap Helpers
+@import "~bootstrap/scss/helpers";
+
+// bootstrap Utilities
+@import "~bootstrap/scss/utilities/api";
+
+@import "@tabler/core/src/scss/fonts/webfonts";
+
+@import "@tabler/core/src/scss/utils/background";
+@import "@tabler/core/src/scss/utils/colors";
+@import "@tabler/core/src/scss/utils/scroll";
+@import "@tabler/core/src/scss/utils/sizing";
+@import "@tabler/core/src/scss/utils/opacity";
+@import "@tabler/core/src/scss/utils/shadow";
+@import "@tabler/core/src/scss/utils/text";
+
+@import './components/el';

@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="/css/tabler.css" />
+	<!-- <link rel="stylesheet" href="/css/tabler.css" /> -->
 	<title>uBeac Svelte Components</title>
 	<meta
 		name="description"
@@ -92,57 +92,62 @@
 	</El>
 </El>
 
-<style>
-	:global(.large-text) {
+<style lang="scss" global>
+	@import '../scss/tabler/core.scss';
+
+	@import '../scss/tabler/components/button';
+	@import '../scss/tabler/components/icon';
+
+	.large-text {
 		letter-spacing: -1px;
 		line-height: 34px;
 		font-size: 42px;
 		font-weight: bold;
 	}
 
-	:global(.medium-text) {
+	.medium-text {
 		margin-top: 16px;
 		line-height: 24px;
 		font-size: 22px;
 		font-weight: 300;
 	}
 
-	:global(.plus) {
+	.plus {
 		font-size: 52px;
 		font-weight: bold;
 	}
 
-	:global(.text-terminal) {
+	.text-terminal {
 		font-family: monospace;
 		font-size: 18px;
 	}
 
-	:global(.custom-container) {
+	.custom-container {
 		max-width: 450px;
 	}
 
-	:global(.img) {
+	.img {
 		width: 180px;
 	}
 
-	:global(.img-ubeac) {
+	.img-ubeac {
 		filter: drop-shadow(0 0 3rem #376ccf90);
 	}
-	:global(.img-svelte) {
+	.img-svelte {
 		scale: 0.7;
 		filter: drop-shadow(0 0 3rem #fe3c0060);
 	}
 
-	:global(.clipboard-icon) {
+	.clipboard-icon {
 		cursor: pointer;
 	}
 
 	@media (max-width: 500px) {
-		:global(.img) {
+		.img {
 			width: 130px;
 		}
 
-		:global(.main-buttons) {
+		.main-buttons {
 			flex-direction: column;
 		}
 	}

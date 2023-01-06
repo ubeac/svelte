@@ -1,6 +1,8 @@
 //
 // Button
 //
+@import '~bootstrap/scss/buttons';
+@import '@tabler/core/src/scss/ui/buttons';
 
 $props: (
 	null: '.btn' '.gap-2',
