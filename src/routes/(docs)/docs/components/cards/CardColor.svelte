@@ -31,7 +31,7 @@
 				<CardTitle>Card with bottom status</CardTitle>
 				<p class="text-muted">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
-					neque pariatur perferendis sed suscipit velit vitae voluptatem.
+					neque pariatur perferendis sed suscipit velit vitae.
 				</p>
 			</CardBody>
 		</Card>

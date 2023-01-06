@@ -2,7 +2,7 @@
 // Card
 //
 
-$media-positions: 'top' 'bottom';
+$media-positions: 'top' 'bottom' 'start' 'end';
 $rotate-directions: 'right' 'left';
 $card-states: 'active' 'inactive';
 $card-sizes: 'sm' 'md' 'lg';
@@ -87,8 +87,14 @@ $props: (
 	}
 
 	&-media {
+		@extend .h-100;
+		@extend .w-100;
+
 		@each $position in $media-positions {
 			&-element-position-#{$position}>* {
+				@extend .h-100;
+				@extend .w-100;
+				@extend .object-cover;
 				@extend .card-img-#{$position};
 			}
 		}

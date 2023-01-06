@@ -5,7 +5,6 @@
 	import CardImage from './CardImage.svelte'
 	import CardBlog from './CardBlog.svelte'
 	import CardRow from './CardRow.svelte'
-	import CardAside from './CardAside.svelte'
 	import CardColor from './CardColor.svelte'
 	import CardStamp from './CardStamp.svelte'
 	import CardMedia from './CardMedia.svelte'
@@ -69,15 +68,6 @@
 	<div class="custom-class"><CardRow /></div>
 </Preview>
 
-<Doc title="Post card with aside image">
-	You can also add an image on the left side of the card. To do it, add the .card-aside class to the element with the
-	.card class. Then add the image in the .card-aside-column element and it will be automatically centered and scaled to
-	the right size.
-</Doc>
-<Preview src="./CardAside.svelte">
-	<div class="custom-class"><CardAside /></div>
-</Preview>
-
 <Doc title="Card with background color">
 	<!--  -->
 </Doc>
@@ -124,8 +114,8 @@
 </Preview>
 
 <style>
-	.custom-class > :global(.u-el-row > .u-card) {
-		margin: 0.25rem 0;
+	.custom-class > :global(.u-card) {
+		margin: 0.5rem 0;
 	}
 	.custom-class > :global(.u-el-row > .u-el > .u-card) {
 		margin: 0.25rem 0;
