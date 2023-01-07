@@ -1,5 +1,5 @@
 //
-// Radio 
+// Radio
 //
 
 $wrapper-props: (
@@ -20,13 +20,12 @@ $props: (
 .#{$prefix-radio} {
 	@include apply-props($props);
 
-	@each $key,
-	$value in $theme-colors {
+	@each $key, $value in $theme-colors {
 		&-color-#{$key}:checked {
 			background-color: #{$value} !important;
 		}
 	}
 }
 
-
-.#{$prefix-radio-group} {}
+.#{$prefix-radio-group} {
+}

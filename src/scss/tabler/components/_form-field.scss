@@ -2,7 +2,7 @@
 // FormField
 //
 $props-form-field: (
-	null: '.mb-3',
+	null: '.mb-3'
 );
 
 .#{$prefix-form-field} {
@@ -25,29 +25,29 @@ $props-form-field: (
 }
 
 .#{$prefix-form-input} {
-	@extend .#{$prefix-form-field}
+	@extend .#{$prefix-form-field};
 }
 
 .#{$prefix-form-checkbox} {
-	@extend .#{$prefix-form-field}
+	@extend .#{$prefix-form-field};
 }
 
 .#{$prefix-form-checkbox-group} {
-	@extend .#{$prefix-form-field}
+	@extend .#{$prefix-form-field};
 }
 
 .#{$prefix-form-file-uploader} {
-	@extend .#{$prefix-form-field}
+	@extend .#{$prefix-form-field};
 }
 
 .#{$prefix-form-radio-group} {
-	@extend .#{$prefix-form-field}
+	@extend .#{$prefix-form-field};
 }
 
 .#{$prefix-form-switch} {
-	@extend .#{$prefix-form-field}
+	@extend .#{$prefix-form-field};
 }
 
 .#{$prefix-form-textarea} {
-	@extend .#{$prefix-form-field}
+	@extend .#{$prefix-form-field};
 }

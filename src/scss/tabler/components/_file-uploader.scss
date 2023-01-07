@@ -4,21 +4,24 @@
 
 $file-uploader-wrapper-props: (
 	null: '.input-group',
-	size: (sm: '.input-group-sm',
+	size: (
+		sm: '.input-group-sm',
 		md: '.input-group',
-		lg: '.input-group-lg',
-	),
+		lg: '.input-group-lg'
+	)
 );
 
 $file-uploader-props: (
 	null: '.form-control',
-	size: (sm: '.form-control-sm',
+	size: (
+		sm: '.form-control-sm',
 		md: '.form-control',
-		lg: '.form-control-lg',
+		lg: '.form-control-lg'
 	),
-	state:(valid: '.is-valid',
+	state: (
+		valid: '.is-valid',
 		invalid: '.is-invalid'
-	),
+	)
 );
 
 .#{$prefix-file-uploader-wrapper} {

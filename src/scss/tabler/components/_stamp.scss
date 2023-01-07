@@ -7,32 +7,30 @@ $props: (
 );
 
 $card-stamp-sizes: (
-	sm:'5rem',
-	md:'6rem',
-	lg:'7rem'
+	sm: '5rem',
+	md: '6rem',
+	lg: '7rem'
 );
 
 .#{$prefix-stamp} {
 	@include apply-props($props);
 
-	>.icon {
+	> .icon {
 		@extend .card-stamp-icon;
 	}
 
-	@each $key,
-	$value in $card-stamp-sizes {
+	@each $key, $value in $card-stamp-sizes {
 		&-size-#{$key} {
 			--u-stamp-size: #{$value};
 		}
 	}
 
-	@each $key,
-	$value in $theme-colors {
-		&-bg-color-#{$key}>.icon {
+	@each $key, $value in $theme-colors {
+		&-bg-color-#{$key} > .icon {
 			@extend .bg-#{$key};
 		}
 
-		&-text-color-#{$key}>.icon {
+		&-text-color-#{$key} > .icon {
 			@extend .text-#{$key};
 		}
 	}

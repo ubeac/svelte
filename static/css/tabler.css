@@ -9628,7 +9628,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   width: 75% !important;
 }
 
-.w-100, .u-autocomplete-dropdown, .u-el-w-100 {
+.w-100, .u-autocomplete-dropdown, .u-card-media-element-position-end > *, .u-card-media-element-position-start > *, .u-card-media-element-position-bottom > *, .u-card-media-element-position-top > *, .u-card-media, .u-el-w-100 {
   width: 100% !important;
 }
 
@@ -9692,7 +9692,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   height: 75% !important;
 }
 
-.h-100, .u-el-h-100 {
+.h-100, .u-card-media-element-position-end > *, .u-card-media-element-position-start > *, .u-card-media-element-position-bottom > *, .u-card-media-element-position-top > *, .u-card-media, .u-el-h-100 {
   height: 100% !important;
 }
 
@@ -10963,7 +10963,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   object-fit: contain !important;
 }
 
-.object-cover {
+.object-cover, .u-card-media-element-position-end > *, .u-card-media-element-position-start > *, .u-card-media-element-position-bottom > *, .u-card-media-element-position-top > * {
   object-fit: cover !important;
 }
 
@@ -14714,11 +14714,13 @@ Navbar
   }
   .navbar-expand-sm.navbar-vertical ~ .navbar, .navbar-expand-sm.navbar-vertical ~ .u-app-header,
   .navbar-expand-sm.navbar-vertical ~ .page-wrapper,
+  .navbar-expand-sm.navbar-vertical ~ .u-page,
   .navbar-expand-sm.navbar-vertical ~ .u-app-body {
     margin-left: 15rem;
   }
   .navbar-expand-sm.navbar-vertical.navbar-right ~ .navbar, .navbar-expand-sm.navbar-vertical.navbar-right ~ .u-app-header,
   .navbar-expand-sm.navbar-vertical.navbar-right ~ .page-wrapper,
+  .navbar-expand-sm.navbar-vertical.navbar-right ~ .u-page,
   .navbar-expand-sm.navbar-vertical.navbar-right ~ .u-app-body {
     margin-left: 0;
     margin-right: 15rem;
@@ -14918,14 +14920,18 @@ Navbar
   }
   .navbar-expand-md.navbar-vertical ~ .navbar, .navbar-vertical.u-app-header ~ .navbar, .navbar-expand-md.navbar-vertical ~ .u-app-header, .navbar-vertical.u-app-header ~ .u-app-header,
   .navbar-expand-md.navbar-vertical ~ .page-wrapper,
+  .navbar-expand-md.navbar-vertical ~ .u-page,
   .navbar-vertical.u-app-header ~ .page-wrapper,
+  .navbar-vertical.u-app-header ~ .u-page,
   .navbar-expand-md.navbar-vertical ~ .u-app-body,
   .navbar-vertical.u-app-header ~ .u-app-body {
     margin-left: 15rem;
   }
   .navbar-expand-md.navbar-vertical.navbar-right ~ .navbar, .navbar-vertical.navbar-right.u-app-header ~ .navbar, .navbar-expand-md.navbar-vertical.navbar-right ~ .u-app-header, .navbar-vertical.navbar-right.u-app-header ~ .u-app-header,
   .navbar-expand-md.navbar-vertical.navbar-right ~ .page-wrapper,
+  .navbar-expand-md.navbar-vertical.navbar-right ~ .u-page,
   .navbar-vertical.navbar-right.u-app-header ~ .page-wrapper,
+  .navbar-vertical.navbar-right.u-app-header ~ .u-page,
   .navbar-expand-md.navbar-vertical.navbar-right ~ .u-app-body,
   .navbar-vertical.navbar-right.u-app-header ~ .u-app-body {
     margin-left: 0;
@@ -15070,11 +15076,13 @@ Navbar
   }
   .navbar-expand-lg.navbar-vertical ~ .navbar, .navbar-expand-lg.navbar-vertical ~ .u-app-header,
   .navbar-expand-lg.navbar-vertical ~ .page-wrapper,
+  .navbar-expand-lg.navbar-vertical ~ .u-page,
   .navbar-expand-lg.navbar-vertical ~ .u-app-body {
     margin-left: 15rem;
   }
   .navbar-expand-lg.navbar-vertical.navbar-right ~ .navbar, .navbar-expand-lg.navbar-vertical.navbar-right ~ .u-app-header,
   .navbar-expand-lg.navbar-vertical.navbar-right ~ .page-wrapper,
+  .navbar-expand-lg.navbar-vertical.navbar-right ~ .u-page,
   .navbar-expand-lg.navbar-vertical.navbar-right ~ .u-app-body {
     margin-left: 0;
     margin-right: 15rem;
@@ -15218,11 +15226,13 @@ Navbar
   }
   .navbar-expand-xl.navbar-vertical ~ .navbar, .navbar-expand-xl.navbar-vertical ~ .u-app-header,
   .navbar-expand-xl.navbar-vertical ~ .page-wrapper,
+  .navbar-expand-xl.navbar-vertical ~ .u-page,
   .navbar-expand-xl.navbar-vertical ~ .u-app-body {
     margin-left: 15rem;
   }
   .navbar-expand-xl.navbar-vertical.navbar-right ~ .navbar, .navbar-expand-xl.navbar-vertical.navbar-right ~ .u-app-header,
   .navbar-expand-xl.navbar-vertical.navbar-right ~ .page-wrapper,
+  .navbar-expand-xl.navbar-vertical.navbar-right ~ .u-page,
   .navbar-expand-xl.navbar-vertical.navbar-right ~ .u-app-body {
     margin-left: 0;
     margin-right: 15rem;
@@ -15366,11 +15376,13 @@ Navbar
   }
   .navbar-expand-xxl.navbar-vertical ~ .navbar, .navbar-expand-xxl.navbar-vertical ~ .u-app-header,
   .navbar-expand-xxl.navbar-vertical ~ .page-wrapper,
+  .navbar-expand-xxl.navbar-vertical ~ .u-page,
   .navbar-expand-xxl.navbar-vertical ~ .u-app-body {
     margin-left: 15rem;
   }
   .navbar-expand-xxl.navbar-vertical.navbar-right ~ .navbar, .navbar-expand-xxl.navbar-vertical.navbar-right ~ .u-app-header,
   .navbar-expand-xxl.navbar-vertical.navbar-right ~ .page-wrapper,
+  .navbar-expand-xxl.navbar-vertical.navbar-right ~ .u-page,
   .navbar-expand-xxl.navbar-vertical.navbar-right ~ .u-app-body {
     margin-left: 0;
     margin-right: 15rem;
@@ -15511,11 +15523,13 @@ Navbar
 }
 .navbar-expand.navbar-vertical ~ .navbar, .navbar-expand.navbar-vertical ~ .u-app-header,
 .navbar-expand.navbar-vertical ~ .page-wrapper,
+.navbar-expand.navbar-vertical ~ .u-page,
 .navbar-expand.navbar-vertical ~ .u-app-body {
   margin-left: 15rem;
 }
 .navbar-expand.navbar-vertical.navbar-right ~ .navbar, .navbar-expand.navbar-vertical.navbar-right ~ .u-app-header,
 .navbar-expand.navbar-vertical.navbar-right ~ .page-wrapper,
+.navbar-expand.navbar-vertical.navbar-right ~ .u-page,
 .navbar-expand.navbar-vertical.navbar-right ~ .u-app-body {
   margin-left: 0;
   margin-right: 15rem;
@@ -16568,13 +16582,13 @@ Navbar vertical
   justify-content: center;
 }
 
-.page-wrapper, .u-app-body {
+.page-wrapper, .u-page, .u-app-body {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 @media print {
-  .page-wrapper, .u-app-body {
+  .page-wrapper, .u-page, .u-app-body {
     margin: 0 !important;
   }
 }
@@ -16635,7 +16649,7 @@ Navbar vertical
   flex-direction: column;
   justify-content: center;
 }
-.page-wrapper .page-header, .page-wrapper .u-page-header, .u-app-body .page-header, .u-app-body .u-page-header {
+.page-wrapper .page-header, .page-wrapper .u-page-header, .u-page .page-header, .u-page .u-page-header, .u-app-body .page-header, .u-app-body .u-page-header {
   margin: 1.25rem 0 0;
 }
 
@@ -19756,13 +19770,15 @@ a.card:hover, a.u-card:hover {
 }
 
 .card-img,
-.card-img-start {
+.card-img-start,
+.u-card-media-element-position-start > * {
   border-top-left-radius: calc(var(--u-border-radius) - (var(--u-border-width)));
   border-bottom-left-radius: calc(var(--u-border-radius) - (var(--u-border-width)));
 }
 
 .card-img,
-.card-img-end {
+.card-img-end,
+.u-card-media-element-position-end > * {
   border-top-right-radius: calc(var(--u-border-radius) - (var(--u-border-width)));
   border-bottom-right-radius: calc(var(--u-border-radius) - (var(--u-border-width)));
 }
