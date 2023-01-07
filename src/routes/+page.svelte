@@ -25,11 +25,11 @@
 	class="home-el-text-align-center home-el-bg-color-secondary home-el-bg-gradient home-el-bg-opacity-10 home-el-d-flex el-1 flex-column home-el-align-items-center home-el-justify-content-center home-el-p-3 home-el-gap-4 home-el-h-100">
 	<div class="home-el-mb-3 home-el-d-flex home-el-align-items-center home-el-justify-content-center">
 		<div class="home-el-col-5">
-			<img class="img img-ubeac" width="180" height="180" alt="uBeac" src="/images/ubeac.webp" />
+			<img class="img img-ubeac" width="180" height="180" alt="uBeac" src="/images/ubeac.png" />
 		</div>
 		<div class="plus home-el-col-2">+</div>
 		<div class="home-el-col-5">
-			<img class="img img-svelte" width="180" height="180" alt="uBeac" src="/images/svelte.webp" />
+			<img class="img img-svelte" width="180" height="180" alt="uBeac" src="/images/svelte.png" />
 		</div>
 	</div>
 
