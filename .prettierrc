@@ -3,7 +3,7 @@
 	"bracketSameLine": false,
 	"bracketSpacing": true,
 	"embeddedLanguageFormatting": "auto",
-	"endOfLine": "lf",
+	"endOfLine": "auto",
 	"htmlWhitespaceSensitivity": "css",
 	"importOrder": [
 		"^svelte",
