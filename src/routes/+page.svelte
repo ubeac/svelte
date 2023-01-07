@@ -22,31 +22,31 @@
 </svelte:head>
 
 <div
-	class="u-el-text-align-center u-el-bg-color-secondary u-el-bg-gradient u-el-bg-opacity-10 u-el-d-flex el-1 flex-column u-el-align-items-center u-el-justify-content-center u-el-p-3 u-el-gap-4 u-el-h-100">
-	<div class="u-el-mb-3 u-el-d-flex u-el-align-items-center u-el-justify-content-center">
-		<div class="u-el-col-5">
+	class="home-el-text-align-center home-el-bg-color-secondary home-el-bg-gradient home-el-bg-opacity-10 home-el-d-flex el-1 flex-column home-el-align-items-center home-el-justify-content-center home-el-p-3 home-el-gap-4 home-el-h-100">
+	<div class="home-el-mb-3 home-el-d-flex home-el-align-items-center home-el-justify-content-center">
+		<div class="home-el-col-5">
 			<img class="img img-ubeac" width="180" height="180" alt="uBeac" src="/images/ubeac.webp" />
 		</div>
-		<div class="plus u-el-col-2">+</div>
-		<div class="u-el-col-5">
+		<div class="plus home-el-col-2">+</div>
+		<div class="home-el-col-5">
 			<img class="img img-svelte" width="180" height="180" alt="uBeac" src="/images/svelte.webp" />
 		</div>
 	</div>
 
 	<div>
 		<h1 class="large-text">uBeac Svelte components</h1>
-		<h2 class="u-el-mt-3 u-el-text-muted medium-text">Opinionated Svelte component UI library by uBeac</h2>
+		<h2 class="home-el-mt-3 home-el-text-muted medium-text">Opinionated Svelte component UI library by uBeac</h2>
 	</div>
 
-	<div class="custom-container u-el-row">
-		<div class="u-el-p-1 u-el-col-12 u-el-col-sm-6">
-			<a role="button" class="u-button u-el-col-12 u-button-size-lg u-button-color-primary" href="/docs">
+	<div class="custom-container home-el-row">
+		<div class="home-el-p-1 home-el-col-12 home-el-col-sm-6">
+			<a role="button" class="home-button home-el-col-12 home-button-size-lg home-button-color-primary" href="/docs">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink"
 					aria-hidden="true"
 					role="img"
-					class="u-icon u-icon-size-xl iconify iconify--tabler"
+					class="home-icon home-icon-size-xl iconify iconify--tabler"
 					width="1em"
 					height="1em"
 					viewBox="0 0 24 24"
@@ -61,17 +61,17 @@
 			</a>
 		</div>
 
-		<div class="u-el-p-1 u-el-col-12 u-el-col-sm-6">
+		<div class="home-el-p-1 home-el-col-12 home-el-col-sm-6">
 			<a
 				role="button"
-				class="u-button u-el-col-12 u-button-size-lg u-button-color-github"
+				class="home-button home-el-col-12 home-button-size-lg home-button-color-github"
 				href="https://github.com/ubeac/svelte">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink"
 					aria-hidden="true"
 					role="img"
-					class="u-icon u-icon-size-xl iconify iconify--tabler"
+					class="home-icon home-icon-size-xl iconify iconify--tabler"
 					width="1em"
 					height="1em"
 					viewBox="0 0 24 24"
@@ -86,19 +86,19 @@
 			</a>
 		</div>
 
-		<div class="u-el-col-12 u-el-mt-3 u-el-px-1">
+		<div class="home-el-col-12 home-el-mt-3 home-el-px-1">
 			<div
-				class="u-el-col-12 text-terminal u-el-border u-el-d-flex u-el-justify-content-between u-el-gap-3 u-el-shadow-lg u-el-text-color-light u-el-p-3 u-el-mb-5 u-el-border-round-size-3 u-el-bg-color-github">
+				class="home-el-col-12 text-terminal home-el-border home-el-d-flex home-el-justify-content-between home-el-gap-3 home-el-shadow-lg home-el-text-color-light home-el-p-3 home-el-mb-5 home-el-border-round-size-3 home-el-bg-color-github">
 				<div>npm install @ubeac/svelte</div>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<div class="u-el-d-flex clipboard-icon" on:click={copy}>
+				<div class="home-el-d-flex clipboard-icon" on:click={copy}>
 					{#if icon === 'copy'}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink"
 							aria-hidden="true"
 							role="img"
-							class="u-icon iconify iconify--tabler"
+							class="home-icon iconify iconify--tabler"
 							width="1em"
 							height="1em"
 							viewBox="0 0 24 24"
@@ -112,7 +112,7 @@
 							xmlns:xlink="http://www.w3.org/1999/xlink"
 							aria-hidden="true"
 							role="img"
-							class="u-icon iconify iconify--tabler"
+							class="home-icon iconify iconify--tabler"
 							width="1em"
 							height="1em"
 							viewBox="0 0 24 24"

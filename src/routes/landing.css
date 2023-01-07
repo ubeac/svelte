@@ -1,5 +1,5 @@
 
-	.u-button {
+	.home-button {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -10,82 +10,82 @@
 		text-decoration: none;
 	}
 
-	.u-button-color-primary {
+	.home-button-color-primary {
 		background-color: #206bc4;
 		color: white;
 	}
 
-	.u-el-text-align-center {
+	.home-el-text-align-center {
 		text-align: center;
 	}
 
-	.u-el-bg-color-secondary {
+	.home-el-bg-color-secondary {
 		background-color: #e3e8ed;
 	}
 
-	.u-el-d-flex {
+	.home-el-d-flex {
 		display: flex;
 	}
-	.u-el-align-items-center {
+	.home-el-align-items-center {
 		align-items: center;
 	}
 
-	.u-el-justify-content-center {
+	.home-el-justify-content-center {
 		justify-content: center;
 	}
-	.u-el-justify-content-between {
+	.home-el-justify-content-between {
 		justify-content: space-between;
 	}
 
-	.u-el-px-1 {
+	.home-el-px-1 {
 		padding-left: 0.25rem;
 		padding-right: 0.25rem;
 	}
 
-	.u-button-size-lg {
+	.home-button-size-lg {
 		font-size: 20px;
 	}
 
-	.u-el-row {
+	.home-el-row {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
-	.u-el-gap-3 {
+	.home-el-gap-3 {
 		gap: 1rem;
 	}
 
-	.u-el-p-3 {
+	.home-el-p-3 {
 		padding: 1rem;
 	}
 
-	.u-el-h-100 {
+	.home-el-h-100 {
 		height: 100%;
 	}
 	
-	.u-el-mb-3 {
+	.home-el-mb-3 {
 		margin-bottom: 1rem;
 	}
 
-	.u-el-col-5 {
+	.home-el-col-5 {
 		width: 41.6%;
 	}
-	.u-el-col-2 {
+	.home-el-col-2 {
 		width: 16.6%;
 	}
 
-	.u-el-mt-3 {
+	.home-el-mt-3 {
 		margin-top: 1rem;
 	}
-	.u-el-text-muted {
+	.home-el-text-muted {
 		opacity: 0.7;
 	}
 
-	.u-el-col-12 {
+	.home-el-col-12 {
 		width: 100%;
 	}
 
-	.u-el-p-1 {
+	.home-el-p-1 {
 		padding: 0.25rem;
 	}
 
@@ -107,46 +107,46 @@
 	}
 
 
-	.u-button-color-github {
+	.home-button-color-github {
 		background-color: #181717;
 		color: white;
 	}
 
 	@media (min-width: 576px) {
-		.u-el-col-sm-6 {
+		.home-el-col-sm-6 {
 			flex-basis: 0 0 auto;
 			width: 50%;
 		}
 	}
 
-	.u-el-border-round-size-3 {
+	.home-el-border-round-size-3 {
 		border-radius: 8px;
 	}
 
-	.u-el-mb-5 {
+	.home-el-mb-5 {
 		margin-bottom: 4rem;
 	}
 
-	.u-icon-size-xl {
+	.home-icon-size-xl {
 		width: 24px;
 		height: 24px;
 	}
 
-	.u-el-px-2 {
+	.home-el-px-2 {
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
 	}
 
-	.u-el-bg-color-github {
+	.home-el-bg-color-github {
 		background-color: #181717;
 		color: white;
 	}
 	
-	.u-el-shadow-lg {
+	.home-el-shadow-lg {
 		box-shadow: 0 1rem 3rem #00000018;
 	}
 
-	.u-el-gap-4 {
+	.home-el-gap-4 {
 		gap: 2rem;
 	}
 	
