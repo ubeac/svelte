@@ -4,7 +4,8 @@
 
 $wrapper-props: (
 	null: '.input-group',
-	size:(sm: '.input-group-sm',
+	size: (
+		sm: '.input-group-sm',
 		md: '.input-group',
 		lg: '.input-group-lg'
 	)
@@ -12,18 +13,20 @@ $wrapper-props: (
 
 $props: (
 	null: '.form-control',
-	size:(sm: '.form-control-sm',
+	size: (
+		sm: '.form-control-sm',
 		md: '.form-control',
 		lg: '.form-control-lg'
 	),
-	state:(valid: '.is-valid',
+	state: (
+		valid: '.is-valid',
 		invalid: '.is-invalid'
 	),
-	border:(rounded: '.form-control-rounded',
+	border: (
+		rounded: '.form-control-rounded',
 		flush: '.form-control-flush'
-	),
+	)
 );
-
 
 .#{$prefix-textarea} {
 	@include apply-props($props);
@@ -32,7 +35,7 @@ $props: (
 .#{$prefix-textarea-wrapper} {
 	@include apply-props($wrapper-props);
 
-	&>span {
+	& > span {
 		@extend .input-group-text;
 	}
 }

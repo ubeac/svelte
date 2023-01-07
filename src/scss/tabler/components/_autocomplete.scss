@@ -15,9 +15,13 @@ select.#{$prefix-autocomplete}-loaded {
 }
 
 $autocomplete-props: (
-	dropdown: ('.dropdown-menu', '.w-100'),
-	option: ".dropdown-item",
-	state:(valid: '.is-valid',
+	dropdown: (
+		'.dropdown-menu',
+		'.w-100'
+	),
+	option: '.dropdown-item',
+	state: (
+		valid: '.is-valid',
 		invalid: '.is-invalid'
 	)
 );

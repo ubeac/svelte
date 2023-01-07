@@ -1,16 +1,18 @@
 //
-// Select 
+// Select
 //
 
 $props: (
 	null: '.form-select',
-	select-size:(sm: '.form-select-sm',
+	select-size: (
+		sm: '.form-select-sm',
 		md: '.form-select',
 		lg: '.form-select-lg'
 	),
-	state:(valid: '.is-valid',
+	state: (
+		valid: '.is-valid',
 		invalid: '.is-invalid'
-	),
+	)
 );
 
 .#{$prefix-select} {

@@ -37,7 +37,8 @@
 								href={navigation.route ? navigation.route : `#${navigation.id}`}
 								class="nav-link"
 								data-bs-toggle="collapse"
-								aria-expanded="false">
+								aria-expanded="false"
+							>
 								{navigation.title}
 								{#if navigation.children}
 									<span class="nav-link-toggle" />

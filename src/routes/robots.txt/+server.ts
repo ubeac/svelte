@@ -1,6 +1,6 @@
-import { site_base_url } from "../(docs)/docs";
+import { site_base_url } from '../(docs)/docs'
 
-export const prerender = true;
+export const prerender = true
 
 export async function GET(event: any) {
 	const headers = {

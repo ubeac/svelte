@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { setContext } from 'svelte/internal'
+
 	import { classname } from '@ubeac/svelte/utils'
 
-	import { El, type DialogProps } from '$lib/components'
+	import { type DialogProps, El } from '$lib/components'
 
 	type $$Props = DialogProps
 
