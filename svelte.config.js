@@ -23,13 +23,13 @@ const config = {
 					}
 					return { file: url }
 				},
-			}
+			},
 		}),
 	],
 
 	kit: {
 		adapter: adapter({
-			precompress: true
+			precompress: true,
 		}),
 		files: {
 			lib: 'src',

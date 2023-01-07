@@ -7,7 +7,8 @@
 	description="Pushes will be rejected if they attempt to update more than this. Learn more about this setting, and send us your feedback."
 	required
 	bind:value
-	label="Pushes">
+	label="Pushes"
+>
 	Limit how many branches and tags can be updated in a single push
 </FormCheckbox>
 

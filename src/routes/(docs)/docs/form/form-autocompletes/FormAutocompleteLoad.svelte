@@ -24,6 +24,7 @@
 	text="login"
 	label="Github User:"
 	placeholder="find github user by username"
-	bind:value />
+	bind:value
+/>
 
 <span if={!!value}>{value}</span>

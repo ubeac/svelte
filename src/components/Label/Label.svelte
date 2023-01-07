@@ -11,7 +11,7 @@
 	export let required: $$Props['required'] = false
 
 	let fore: $$Props['for'] = undefined
-	export {fore as for}
+	export { fore as for }
 
 	$: cssProps = {
 		required,

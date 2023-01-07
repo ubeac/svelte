@@ -56,6 +56,7 @@
 		Virtual,
 		Zoom,
 	]}
-	{...$$restProps}>
+	{...$$restProps}
+>
 	<slot />
 </Swiper>

@@ -7,7 +7,8 @@
 		<CardMedia elementPosition="top">
 			<img
 				src="https://preview.tabler.io/static/photos/home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg"
-				alt="" />
+				alt=""
+			/>
 		</CardMedia>
 		<CardBody>
 			<CardTitle>Card with title and image</CardTitle>

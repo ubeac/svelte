@@ -8,7 +8,8 @@
 			<CardMedia elementPosition="top">
 				<img
 					alt=""
-					src="https://preview.tabler.io/static/photos/home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg" />
+					src="https://preview.tabler.io/static/photos/home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg"
+				/>
 			</CardMedia>
 			<CardBody>
 				<CardTitle>Title</CardTitle>
@@ -25,7 +26,8 @@
 			<CardMedia elementPosition="bottom">
 				<img
 					alt=""
-					src="https://preview.tabler.io/static/photos/home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg" />
+					src="https://preview.tabler.io/static/photos/home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg"
+				/>
 			</CardMedia>
 		</Card>
 	</El>
