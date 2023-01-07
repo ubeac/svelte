@@ -1,5 +1,5 @@
 <script>
-	import { Input, Textarea } from '@ubeac/svelte'
+	import { Textarea } from '@ubeac/svelte'
 </script>
 
 <Textarea placeholder="this is default size" rows="3" />

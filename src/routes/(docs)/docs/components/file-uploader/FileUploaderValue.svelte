@@ -1,8 +1,7 @@
-<script>
+<script lang="ts">
 	import { FileUploader } from '@ubeac/svelte'
 
-	let value
-	$: console.log(value)
+	let value: any = undefined
 </script>
 
 <FileUploader bind:value />

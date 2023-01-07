@@ -1,6 +1,5 @@
 <script>
 	import { Button, FormCheckboxGroup, El, FormCheckbox } from '@ubeac/svelte'
-	let value = false
 
 	let languages = ['HTML', 'CSS', 'JS', 'SVELTE']
 	let colors = ['Red', 'Green', 'Blue', 'Yellow']

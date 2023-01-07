@@ -10,7 +10,7 @@
 <h1>Icons</h1>
 <p>
 	Free and open source icons designed to make your website or app attractive, visually consistent and simply beautiful.
-	See the icons documentation from <a href="https://tabler-icons.io/" target="_blank">tabler-icons</a>.
+	See the icons documentation from <a href="https://tabler-icons.io/" target="_blank" rel="noreferrer">tabler-icons</a>.
 </p>
 
 <Doc title="Name">

@@ -233,11 +233,11 @@ export interface CssProps {
 
 	// Col
 	col?: ColSizesBool
-	colSm?: ColSizes
-	colMd?: ColSizes
-	colLg?: ColSizes
-	colXl?: ColSizes
-	colXxl?: ColSizes
+	colSm?: ColSizesBool
+	colMd?: ColSizesBool
+	colLg?: ColSizesBool
+	colXl?: ColSizesBool
+	colXxl?: ColSizesBool
 
 	// Col Order
 	order?: ColOrders
