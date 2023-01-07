@@ -45,7 +45,7 @@
 		"start": "npm run style && vite",
 		"style": "node scripts/styles.generator.js"
 	},
-	"dependencies": {
+	"devDependencies": {
 		"@googlemaps/js-api-loader": "^1.14.3",
 		"@iconify/svelte": "^3.0.1",
 		"@popperjs/core": "^2.11.6",
@@ -58,9 +58,7 @@
 		"prism-svelte": "^0.5.0",
 		"prismjs": "^1.29.0",
 		"swiper": "^8.4.2",
-		"tom-select": "^2.1.0"
-	},
-	"devDependencies": {
+		"tom-select": "^2.1.0",
 		"@sveltejs/adapter-static": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
 		"@sveltejs/package": "^1.0.0",
