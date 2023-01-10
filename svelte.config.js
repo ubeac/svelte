@@ -1,6 +1,6 @@
 import sveltePreprocess from 'svelte-preprocess'
 
-import adapter from '@sveltejs/adapter-static'
+import adapter from '@sveltejs/adapter-vercel'
 import path from 'path'
 
 import ifProcessor from './src/preprocessors/if.js'
@@ -29,7 +29,7 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			precompress: true,
+			edge: true,
 		}),
 		files: {
 			lib: 'src',
