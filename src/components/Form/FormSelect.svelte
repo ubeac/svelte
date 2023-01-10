@@ -11,7 +11,7 @@
 	/**
 	 * Select items
 	 */
-	export let items: $$Props['items'] 
+	export let items: $$Props['items']
 
 	/**
 	 * Set multiple attribute to select

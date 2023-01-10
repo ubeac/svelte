@@ -5,6 +5,7 @@ declare type CardStatusSizes = undefined | 'sm' | 'md' | 'lg'
 declare type CardSizes = undefined | 'sm' | 'md' | 'lg'
 declare type CardRotateDirections = undefined | 'left' | 'right'
 declare type CardStates = undefined | 'active' | 'inactive'
+declare type CardMediaPositions = 'top' | 'bottom' | 'start' | 'end'
 
 export interface CardProps extends Partial<ElProps> {
 	title?: string
@@ -24,11 +25,11 @@ export interface CardProps extends Partial<ElProps> {
 export interface CardHeaderProps extends Partial<ElProps> {
 	light?: boolean
 }
+
 export interface CardFooterProps extends Partial<ElProps> {
 	transparent?: boolean
 }
 
-declare type CardMediaPositions = undefined | 'top' | 'bottom'
 export interface CardMediaProps extends Partial<ElProps> {
 	elementPosition?: CardMediaPositions
 }

@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { get_current_component, onDestroy, onMount, tick } from 'svelte/internal'
+	import { onDestroy, onMount, tick } from 'svelte/internal'
 
 	import { createPopper } from '@popperjs/core'
 	import type { Instance } from '@popperjs/core'
 
 	import { El, type PopupProps } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
 
 	type $$Props = PopupProps
 
@@ -21,11 +20,6 @@
 	 * Open Popup in Fixed position of the page
 	 */
 	export let fixedPosition: $$Props['fixedPosition'] = false
-
-	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	/**
 	 * Distance between Popup and target element
@@ -45,7 +39,7 @@
 	/**
 	 * Set which actions should be responsible for opening/closing the Popup
 	 */
-	export let trigger: $$Porps['trigger'] = ['focus', 'hover']
+	export let trigger: $$Props['trigger'] = ['focus', 'hover']
 
 	let instance: Instance
 	let element: HTMLElement
@@ -78,11 +72,11 @@
 	function eventsName() {
 		const events = []
 
-		if (trigger.includes('click')) events.push(['', 'click'])
+		if (trigger!.includes('click')) events.push(['', 'click'])
 
-		if (trigger.includes('focus')) events.push(['blur', 'focus'])
+		if (trigger!.includes('focus')) events.push(['blur', 'focus'])
 
-		if (trigger.includes('hover')) events.push(['mouseleave', 'mouseenter'])
+		if (trigger!.includes('hover')) events.push(['mouseleave', 'mouseenter'])
 
 		return events
 	}
@@ -148,6 +142,6 @@
 	}
 </script>
 
-<El {...$$restProps} bind:element display={hidden ? 'none' : 'block'} {forwardEvents} {cssProps} {cssPrefix} {tag}>
+<El {...$$restProps} bind:element d={hidden ? 'none' : 'block'} {cssProps} {cssPrefix} {tag}>
 	<slot />
 </El>

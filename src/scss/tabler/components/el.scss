@@ -1,15 +1,17 @@
 $opacities: (
-    10: .1,
-    25: .25,
-    50: .5,
-    75: .75,
-    100: 1) !default;
+	10: 0.1,
+	25: 0.25,
+	50: 0.5,
+	75: 0.75,
+	100: 1
+) !default;
 
 $text-opacities: (
-    25: .25,
-    50: .5,
-    75: .75,
-    100: 1) !default;
+	25: 0.25,
+	50: 0.5,
+	75: 0.75,
+	100: 1
+) !default;
 
 $border-sizes: 0 1 2 3 4 5 !default;
 $border-round-sizes: 0 1 2 3 !default;
@@ -20,24 +22,9 @@ $top-position: 0 50 100 !default;
 $bottom-position: 0 50 100 !default;
 $start-position: 0 50 100 !default;
 $end-position: 0 50 100 !default;
-$padding-positions: (
-    't': 't',
-    's': 's',
-    'e': 'e',
-    'b': 'b',
-    'x': 'x',
-    'y': 'y'
-    ) !default;
+$padding-positions: 't' 's' 'e' 'b' 'x' 'y' !default;
 $margin-sizes: 0 1 2 3 4 5 auto !default;
-
-$margin-positions: (
-    't': 't',
-    's': 's',
-    'e': 'e',
-    'b': 'b',
-    'x': 'x',
-    'y': 'y',
-    ) !default;
+$margin-positions: 't' 's' 'e' 'b' 'x' 'y' !default;
 
 $gap-sizes: 0 1 2 3 4 5 !default;
 $shadow-sizes: none sm lg !default;
@@ -60,214 +47,196 @@ $row-cols-sizes: 1 2 3 4 5 6 auto !default;
 $container-breakpoints: null fluid sm md lg xl xxl;
 
 .border {
-    border-width: var(--#{$prefix}border-width) !important;
+	border-width: var(--#{$prefix}border-width) !important;
 }
 
-
 $props: (
-    bg:(color: generate_props($theme_colors, ('.bg-')),
-        gradient: '.bg-gradient',
-    ),
-    border: (null: '.border',
-        color: (generate_props($theme_colors, ('.border-'))),
-    ),
-    max-width-100: '.mw-100',
-    max-height-100: '.mh-100',
-    row: (null: '.row',
-        deck: '.row' '.row-deck'),
-    show: '.show',
-    lead: '.lead',
-    blockquote: '.blockquote',
-    container: (generate_props($container-breakpoints, ('.container-'))),
-    text:(truncate: '.text-truncate',
-        muted: '.text-muted',
-        color: (generate_props($theme_colors, ('.text-'))),
-        opacity: (generate_props($text-opacities, ('.text-'))),
-        transform:(lowercase: '.text-lowercase',
-            uppercase: '.text-uppercase',
-            capitalize: '.text-capitalize',
-        )),
-    align-items: (generate_props($align-items, ('.align-items-'))),
-    align-self: (generate_props($align-self, ('.align-self-'))),
-    justify-content: (generate_props($justify-content, ('.justify-content-'))),
-    order: (generate_props($orders, ('.order-'))),
-    shadow: (generate_props($shadow-sizes, ('.shadow-'))),
-    position :(generate_props($positions, ('.position-'))),
-    top: (generate_props($top-position, ('.top-'))),
-    bottom: (generate_props($bottom-position, ('.bottom-'))),
-    start: (generate_props($start-position, ('.start-'))),
-    end: (generate_props($end-position, ('.end-'))),
-    gap: (generate_props($gap-sizes, ('.gap-'))),
-    heading-display-size: (generate_props($heading-display-sizes, ('.heading-display-size-'))),
-    display: (generate_props($displays, ('.d-'))),
-    print: (generate_props($displays, ('.d-print-'))),
-    hidden: '.invisible',
-    overflow: (generate_props($overflow-types, ('.overflow-'))),
-    translate:(middle-xy: '.translate-middle',
-        middle: (generate_props($translate-middle-types, ('.translate-middle-'))),
-    ),
-    float: (generate_props($float-positions, ('.float-'))),
-    p: (generate_props($padding-sizes, ('.p-'))),
-    ps: (generate_props($padding-sizes, ('.ps-'))),
-    pe: (generate_props($padding-sizes, ('.pe-'))),
-    pt: (generate_props($padding-sizes, ('.pt-'))),
-    pb: (generate_props($padding-sizes, ('.pb-'))),
-    px: (generate_props($padding-sizes, ('.px-'))),
-    py: (generate_props($padding-sizes, ('.py-'))),
-    m: (generate_props($margin-sizes, ('.m-'))),
-    ms: (generate_props($margin-sizes, ('.ms-'))),
-    me: (generate_props($margin-sizes, ('.me-'))),
-    mt: (generate_props($margin-sizes, ('.mt-'))),
-    mb: (generate_props($margin-sizes, ('.mb-'))),
-    mx: (generate_props($margin-sizes, ('.mx-'))),
-    my: (generate_props($margin-sizes, ('.my-'))),
+	bg: (
+		color: generate_props($theme_colors, ('.bg-')),
+		gradient: '.bg-gradient'
+	),
+	border: (
+		null: '.border',
+		color: (
+			generate_props($theme_colors, ('.border-'))
+		)
+	),
+	border-radius: generate_props($border-radius-positions, ('.rounded-')),
+	border-round-size: generate_props($border-round-sizes, ('.rounded-')),
+	max-width-100: '.mw-100',
+	max-height-100: '.mh-100',
+	row: (
+		null: '.row',
+		deck: '.row' '.row-deck',
+		cols: generate_props($row-cols-sizes, ('.row-cols-'))
+	),
+	show: '.show',
+	lead: '.lead',
+	blockquote: '.blockquote',
+	container: generate_props($container-breakpoints, ('.container-')),
+	text: (
+		truncate: '.text-truncate',
+		muted: '.text-muted',
+		color: (
+			generate_props($theme_colors, ('.text-'))
+		),
+		opacity: (
+			generate_props($text-opacities, ('.text-'))
+		),
+		transform: (
+			lowercase: '.text-lowercase',
+			uppercase: '.text-uppercase',
+			capitalize: '.text-capitalize'
+		),
+		align: generate_props($text-aligns, ('.text-'))
+	),
+	align-items: generate_props($align-items, ('.align-items-')),
+	align-self: generate_props($align-self, ('.align-self-')),
+	justify-content: generate_props($justify-content, ('.justify-content-')),
+	order: generate_props($orders, ('.order-')),
+	shadow: generate_props($shadow-sizes, ('.shadow-')),
+	position: generate_props($positions, ('.position-')),
+	top: generate_props($top-position, ('.top-')),
+	bottom: generate_props($bottom-position, ('.bottom-')),
+	start: generate_props($start-position, ('.start-')),
+	end: generate_props($end-position, ('.end-')),
+	gap: generate_props($gap-sizes, ('.gap-')),
+	heading-display-size: generate_props($heading-display-sizes, ('.heading-display-size-')),
+	d: generate_props($displays, ('.d-')),
+	d-print: generate_props($displays, ('.d-print-')),
+	hidden: '.invisible',
+	overflow: generate_props($overflow-types, ('.overflow-')),
+	translate: (
+		middle-xy: '.translate-middle',
+		middle: (
+			generate_props($translate-middle-types, ('.translate-middle-'))
+		)
+	),
+	float: generate_props($float-positions, ('.float-')),
+	p: generate_props($padding-sizes, ('.p-')),
+	ps: generate_props($padding-sizes, ('.ps-')),
+	pe: generate_props($padding-sizes, ('.pe-')),
+	pt: generate_props($padding-sizes, ('.pt-')),
+	pb: generate_props($padding-sizes, ('.pb-')),
+	px: generate_props($padding-sizes, ('.px-')),
+	py: generate_props($padding-sizes, ('.py-')),
+	m: generate_props($margin-sizes, ('.m-')),
+	ms: generate_props($margin-sizes, ('.ms-')),
+	me: generate_props($margin-sizes, ('.me-')),
+	mt: generate_props($margin-sizes, ('.mt-')),
+	mb: generate_props($margin-sizes, ('.mb-')),
+	mx: generate_props($margin-sizes, ('.mx-')),
+	my: generate_props($margin-sizes, ('.my-')),
+	col: generate_props($col-sizes, ('.col-')),
+	w: generate_props($width-height-sizes, ('.w-')),
+	h: generate_props($width-height-sizes, ('.h-'))
+);
+
+$props-null: (
+	shadow: '.shadow',
+	col: '.col',
+	row: '.row'
+);
+
+$props-extend: (
+	border: generate_props($border-positions, ('.border-')),
+	col: generate_props($breakpoints, ('.col-'))
 );
 
 .#{$prefix-el} {
-    @include apply-props($props);
+	@include apply-props($props-null);
+	@include apply-props($props);
+	@include apply-props($props-extend);
 
-    &-shadow {
-        @extend .shadow;
-    }
+	&-col {
+		@each $size in $col-sizes {
+			@each $breakpoint in $breakpoints {
+				&-#{$breakpoint}-#{$size} {
+					@extend .col-#{$breakpoint}-#{$size};
+				}
+			}
+		}
+	}
 
-    &-col {
-        @extend .col;
+	&-offset {
+		@each $breakpoint in $breakpoints {
+			@each $size in $col-sizes {
+				&-#{$breakpoint}-#{$size} {
+					@extend .offset-#{$breakpoint}-#{$size} !optional;
+				}
 
-        @each $breakpoint in $breakpoints {
-            &-#{$breakpoint} {
-                @extend .col-#{$breakpoint};
-            }
-        }
+				&-#{$size} {
+					@extend .offset-#{$breakpoint}-#{$size} !optional;
+				}
+			}
+		}
+	}
 
-        @each $size in $col-sizes {
-            &-#{$size} {
-                @extend .col-#{$size};
-            }
+	&-text-align {
+		@each $text-align in $text-aligns {
+			@each $breakpoint in $breakpoints {
+				&-#{$breakpoint}-#{$text-align} {
+					@extend .offset-#{$breakpoint}-#{$text-align} !optional;
+				}
+			}
+		}
+	}
 
-            @each $breakpoint in $breakpoints {
-                &-#{$breakpoint}-#{$size} {
-                    @extend .col-#{$breakpoint}-#{$size};
-                }
-            }
-        }
-    }
+	@each $key, $value in $opacities {
+		&-bg-opacity-#{$key} {
+			--#{$prefix}bg-opacity: #{$value};
+			@extend .bg-opacity-#{$key};
+		}
 
-    &-offset {
-        @each $breakpoint in $breakpoints {
-            @each $size in $col-sizes {
-                &-#{$breakpoint}-#{$size} {
-                    @extend .offset-#{$breakpoint}-#{$size} !optional;
-                }
+		&-bg-border-opacity-#{$key} {
+			@extend .border;
+			@extend .border-opacity-#{$key};
+		}
+	}
 
-                &-#{$size} {
-                    @extend .offset-#{$breakpoint}-#{$size} !optional;
-                }
-            }
-        }
-    }
+	@each $display in $displays {
+		@each $size in $displays-sizes {
+			&-d-#{$size}-#{$display} {
+				@extend .d-#{$size}-#{$display};
+			}
+		}
+	}
 
-    &-text-align {
-        @each $text-align in $text-aligns {
-            @each $breakpoint in $breakpoints {
-                &-#{$breakpoint}-#{$text-align} {
-                    @extend .offset-#{$breakpoint}-#{$text-align} !optional;
-                }
-            }
+	@each $size in $border-sizes {
+		&-border-#{$size} {
+			--#{$prefix}border-width: #{$size}px;
+			@extend .border;
+			@extend .border-#{$size};
+		}
+	}
 
-            &-#{$text-align} {
-                @extend .text-#{$text-align} !optional;
-            }
-        }
-    }
+	@each $position in $border-positions {
+		@each $size in $border-sizes {
+			&-border-#{$position}-#{$size} {
+				@extend .border-#{$position}-0;
+			}
+		}
 
-    @each $key,
-    $value in $opacities {
-        &-bg-opacity-#{$key} {
-            --#{$prefix}bg-opacity: #{$value};
-            @extend .bg-opacity-#{$key};
-        }
+		&-border-#{$position}-0 {
+			@extend .border-#{$position}-0;
+		}
+	}
 
-        &-bg-border-opacity-#{$key} {
-            @extend .border;
-            @extend .border-opacity-#{$key};
-        }
-    }
+	@each $position in $float-positions {
+		@each $size in $displays-sizes {
+			&-float-#{$size}-#{$position} {
+				@extend .float-#{$size}-#{$position};
+			}
+		}
+	}
 
-    @each $display in $displays {
-        @each $size in $displays-sizes {
-            &-display-#{$size}-#{$display} {
-                @extend .d-#{$size}-#{$display};
-            }
-        }
-    }
-
-    @each $size in $border-sizes {
-        &-border-#{$size} {
-            --#{$prefix}border-width: #{$size}px;
-            @extend .border;
-            @extend .border-#{$size};
-        }
-    }
-
-    @each $position in $border-positions {
-        &-border-#{$position} {
-            @extend .border-#{$position};
-        }
-
-        @each $size in $border-sizes {
-            &-border-#{$position}-#{$size} {
-                @extend .border-#{$position}-0;
-            }
-        }
-
-        &-border-#{$position}-0 {
-            @extend .border-#{$position}-0;
-        }
-    }
-
-    @each $position in $border-radius-positions {
-        &-border-radius-#{$position} {
-            @extend .rounded-#{$position};
-        }
-    }
-
-    @each $size in $border-round-sizes {
-        &-border-round-size-#{$size} {
-            @extend .rounded-#{$size};
-        }
-    }
-
-    @each $size in $width-height-sizes {
-        &-w-#{$size} {
-            @extend .w-#{$size};
-        }
-
-        &-h-#{$size} {
-            @extend .h-#{$size};
-        }
-    }
-
-    @each $position in $float-positions {
-        @each $size in $displays-sizes {
-            &-float-#{$size}-#{$position} {
-                @extend .float-#{$size}-#{$position};
-            }
-        }
-    }
-
-    &-row {
-        @extend .row;
-
-        @each $size in $row-cols-sizes {
-            &-cols-#{$size} {
-                @extend .row-cols-#{$size};
-            }
-
-            @each $breakpoint in $breakpoints {
-                &-cols-#{$breakpoint}-#{$size} {
-                    @extend .row-cols-#{$breakpoint}-#{$size};
-                }
-            }
-        }
-    }
+	&-row {
+		@each $size in $row-cols-sizes {
+			@each $breakpoint in $breakpoints {
+				&-cols-#{$breakpoint}-#{$size} {
+					@extend .row-cols-#{$breakpoint}-#{$size};
+				}
+			}
+		}
+	}
 }

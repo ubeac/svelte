@@ -14,7 +14,7 @@ $props: (
 .#{$prefix-avatar} {
 	@include apply-props($props);
 
-	&>.#{$prefix}img {
+	& > .#{$prefix}img {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -31,18 +31,13 @@ $props: (
 		border-radius: inherit;
 	}
 
-	@each $key,
-	$value in $theme-colors {
+	@each $key, $value in $theme-colors {
 		&-color-#{$key} {
 			@extend .bg-#{$key + ''}-lt;
 		}
 	}
 
-	@each $size in xs,
-	sm,
-	md,
-	lg,
-	xl {
+	@each $size in xs, sm, md, lg, xl {
 		&-size-#{$size} {
 			@extend .avatar-#{$size};
 		}

@@ -16,24 +16,27 @@ $icon-sizes: (
 	6x: 6rem,
 	7x: 7rem,
 	8x: 8rem,
-	9x: 9rem,
+	9x: 9rem
 );
 
 $props: (
-	null: ".icon",
-	filled: ".icon-filled",
-	color: generate_props($theme_colors, (".text-")),
-	size: generate_props($icon-sizes, (".icon-size-"))
+	null: '.icon',
+	filled: '.icon-filled',
+	color: generate_props($theme_colors, ('.text-')),
+	size: generate_props($icon-sizes, ('.icon-size-'))
 );
 
 .#{$prefix-icon} {
 	@include apply-props($props);
 
-	@each $key,
-	$value in $icon-sizes {
+	@each $key, $value in $icon-sizes {
 		&-size-#{$key} {
 			width: #{$value} !important;
 			height: #{$value} !important;
 		}
+	}
+
+	* {
+		stroke-width: 1.5px;
 	}
 }

@@ -2,34 +2,33 @@
 // Card
 //
 
-$media-positions: 'top' 'bottom';
+$media-positions: 'top' 'bottom' 'start' 'end';
 $rotate-directions: 'right' 'left';
 $card-states: 'active' 'inactive';
 $card-sizes: 'sm' 'md' 'lg';
 $card-status-sizes: (
 	sm: 1px,
 	md: 2px,
-	lg: 3px,
+	lg: 3px
 );
 
 $props: (
 	null: '.card',
 	body: '.card-body',
 	header: '.card-header',
-	title:'.card-title',
-	actions:'.card-actions',
+	title: '.card-title',
+	actions: '.card-actions',
 	stacked: '.card-stacked',
 	borderless: '.card-borderless',
 	rotate: generate_props($rotate-directions, ('.card-rotate-')),
 	size: generate_props($card-sizes, ('.card-')),
-	state: generate_props($card-states, ('.card-')),
+	state: generate_props($card-states, ('.card-'))
 );
 
 .#{$prefix-card} {
 	@include apply-props($props);
 
-	@each $key,
-	$value in $theme_colors {
+	@each $key, $value in $theme_colors {
 		&-bg-color-#{$key} {
 			@extend .text-bg-#{$key};
 		}
@@ -52,26 +51,20 @@ $props: (
 	}
 
 	&-status {
-
-		@each $key,
-		$value in $theme-colors {
+		@each $key, $value in $theme-colors {
 			&-color-#{$key} {
 				@extend .bg-#{$key};
 			}
 		}
 
-		@each $key in top,
-		start,
-		bottom {
+		@each $key in top, start, bottom {
 			&-position-#{$key} {
 				@extend .card-status-#{$key};
 			}
 		}
 
-		@each $key,
-		$value in $card-status-sizes {
+		@each $key, $value in $card-status-sizes {
 			&-size-#{$key} {
-
 				&.#{$prefix-card}-status-position-top,
 				&.#{$prefix-card}-status-position-bottom {
 					height: $value;
@@ -87,8 +80,14 @@ $props: (
 	}
 
 	&-media {
+		@extend .h-100;
+		@extend .w-100;
+
 		@each $position in $media-positions {
-			&-element-position-#{$position}>* {
+			&-element-position-#{$position} > * {
+				@extend .h-100;
+				@extend .w-100;
+				@extend .object-cover;
 				@extend .card-img-#{$position};
 			}
 		}
