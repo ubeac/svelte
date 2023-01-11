@@ -1,6 +1,34 @@
 {
 	"name": "@ubeac/svelte",
-	"version": "0.0.3-next.169",
+	"version": "0.0.9-next.4",
+	"description": "uBeac's Opinionated Svelte Component library",
+	"sideEffects": false,
+	"keywords": [
+		"svelte",
+		"sveltejs",
+		"bootstrap",
+		"tabler",
+		"svelte components",
+		"svelte-components",
+		"svelte-kit",
+		"sveltekit",
+		"ubeac",
+		"ubeac svelte",
+		"ubeac svelte components",
+		"ubeac svelte kit",
+		"tabler"
+	],
+	"homepage": "https://svelte.ubeac.io/",
+	"bugs": {
+		"url": "https://github.com/ubeac/svelte/issues",
+		"email": "ap@ubeac.io"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ubeac/svelte.git"
+	},
+	"license": "Apache-2.0",
+	"author": "Amir Pournasserian <ap@ubeac.io>",
 	"type": "module",
 	"svelte": "index.js",
 	"publishConfig": {
@@ -20,30 +48,32 @@
 	},
 	"dependencies": {
 		"@googlemaps/js-api-loader": "^1.14.3",
+		"@iconify/svelte": "^3.0.1",
 		"@popperjs/core": "^2.11.6",
-		"@tabler/core": "^1.0.0-beta16",
-		"bootstrap": "^5.2.3",
 		"change-case": "^4.1.2",
+		"inputmask": "^5.0.7",
 		"litepicker": "^2.0.12",
 		"moment": "^2.29.4",
-		"nanoid": "^3.3.4",
-		"prism-svelte": "^0.5.0",
-		"prismjs": "^1.29.0",
-		"swiper": "^8.4.2",
-		"tom-select": "^2.1.0"
+		"swiper": "^8.4.5",
+		"tom-select": "^2.2.2"
+	},
+	"peerDependencies": {
+		"svelte": "^3.55.0"
 	},
 	"devDependencies": {
-		"@iconify/svelte": "^3.0.1",
-		"@sveltejs/adapter-static": "^1.0.0",
+		"@sveltejs/adapter-static": "^1.0.1",
 		"@sveltejs/kit": "^1.0.0",
 		"@sveltejs/package": "^1.0.0",
+		"@tabler/core": "^1.0.0-beta16",
 		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
 		"@types/bootstrap": "^5.2.6",
 		"@types/prismjs": "^1.26.0",
-		"inputmask": "^5.0.7",
+		"bootstrap": "^5.2.3",
 		"magic-string": "^0.26.3",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
+		"prism-svelte": "^0.5.0",
+		"prismjs": "^1.29.0",
 		"sass": "^1.56.2",
 		"svelte": "^3.55.0",
 		"svelte-check": "^2.10.2",

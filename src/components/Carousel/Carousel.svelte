@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import {
 		A11y,
 		Autoplay,
@@ -56,6 +56,7 @@
 		Virtual,
 		Zoom,
 	]}
-	{...$$restProps}>
+	{...$$restProps}
+>
 	<slot />
-</Swiper>
+</Swiper> -->

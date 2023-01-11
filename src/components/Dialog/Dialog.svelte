@@ -1,13 +1,9 @@
 <script lang="ts">
-	import { get_current_component, setContext } from 'svelte/internal'
+	import { setContext } from 'svelte/internal'
 
-	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
 	import { classname } from '@ubeac/svelte/utils'
 
-	import { browser } from '$app/environment'
-
-	import { El } from '../Base'
-	import type { DialogPlacements, DialogSizes } from './Dialog.types'
+	import { type DialogProps, El } from '$lib/components'
 
 	type $$Props = DialogProps
 
@@ -63,7 +59,7 @@
 
 	setContext('DIALOG', { hide })
 
-	$: if (browser) {
+	$: if (typeof window !== 'undefined') {
 		if (open) {
 			document.body.classList.add(classname('body-dialog-open') ?? '')
 		} else {

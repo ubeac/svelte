@@ -1,105 +1,137 @@
 <script lang="ts">
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
 
 	import TomSelect from 'tom-select'
 	import type { TomSettings } from 'tom-select/dist/types/types'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-	import type { Items } from '$lib/types'
-	import { classname, createOptions, requestAnimationFrame } from '$lib/utils'
+	import { type AutocompleteProps, El } from '$lib/components'
+	import { classname } from '$lib/utils'
 
-	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents = forwardEventsBuilder(get_current_component())
+	type $$Props = AutocompleteProps
 
-	/**
-	 * Control disabled state of component
-	 */
-	export let disabled: boolean = false
+	// #region Props
 
-	/**
-	 * TODO
-	 */
-	export let items: Items = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'autocomplete'
+	export let tag: $$Props['tag'] = 'select'
 
-	/**
-	 * an existing field in object (if item is array of object)
-	 */
-	export let key: string | undefined = undefined
+	export let create: $$Props['create'] = undefined
+	export let items: $$Props['items'] = []
+	export let multiple: $$Props['multiple'] = undefined
+	export let placeholder: $$Props['placeholder'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let load: $$Props['load'] = undefined
+	export let sort: $$Props['sort'] = true
+	export let state: $$Props['state'] = undefined
+	export let key: $$Props['key'] = 'key'
+	export let text: $$Props['text'] = 'text'
+	export let value: $$Props['value'] = undefined
 
-	/**
-	 * Show loading indicator
-	 */
-	export let loading: boolean = false
+	// #endregion
 
-	/**
-	 * Show value in Preview mode
-	 */
-	export let preview: boolean = false
+	let element: HTMLSelectElement
+	let settings: Partial<TomSettings>
 
-	/**
-	 * If items is array of objects, you should set text prop to an existing field in objects
-	 */
-	export let text: string | undefined = undefined
+	let loaded: boolean = false
 
-	/**
-	 * Selected option
-	 */
-	export let value: Array<any> | string | number | undefined = undefined
+	let instance: TomSelect
 
 	const dispatch = createEventDispatcher()
 
-	let element: HTMLSelectElement | undefined = undefined
-	let instance: TomSelect
-	let settings: Partial<TomSettings>
-
-	$: classes = classname('autocomplete', { preview }, $$props.class)
-
-	$: items && requestAnimationFrame(() => instance?.sync())
-	$: value && requestAnimationFrame(() => instance?.setValue(fromValue(value), true))
-
-	$: if (disabled || loading) {
-		instance?.disable()
-	} else {
-		instance?.enable()
-	}
-
 	$: settings = {
-		dropdownClass: classname('autocomplete-items'),
-		optionClass: classname('autocomplete-item'),
-		onChange: (event) => {
-			dispatch('changed', (value = toValue(event)))
+		dropdownClass: classname(cssPrefix + '-dropdown'),
+		optionClass: classname(cssPrefix + '-option'),
+		create,
+		valueField: key!,
+		labelField: text!,
+		searchField: [text!, key!],
+		onInitialize: () => {
+			loaded = true
+		},
+		onOptionAdd: (event) => {
+			dispatch('create', event)
+		},
+		onChange: (event: any) => {
+			if (multiple) {
+				dispatch('change', (value = event.map(getValue)))
+			} else {
+				dispatch('change', (value = getValue(event)))
+			}
+		},
+		load(query: string, callback: any) {
+			if (load) {
+				load(query)
+					.then((newItems) => {
+						callback(newItems)
+					})
+					.catch((err) => callback())
+			}
 		},
 	}
 
-	$: ({ options, fromValue, getKey, getText, toValue } = createOptions({ items, key, text }))
+	$: if (sort === false) {
+		settings.sortField = [{ field: '$order' }, { field: '$score' }]
+	}
 
-	function bind() {
+	$: instance?.setupOptions(items)
+
+	async function bind(deps?: any) {
 		if (!element) return
 		instance = new TomSelect(element, settings)
 	}
 
-	function unbind() {
-		instance?.destroy()
+	function getValue(item: any) {
+		return typeof item === 'object' ? item[key!] : item
 	}
 
-	onMount(bind)
+	function getText(item: any) {
+		return typeof item === 'object' ? item[text!] : item
+	}
 
-	// onDestroy(unbind)
+	function unbind() {
+		if (instance) {
+			instance.destroy()
+			loaded = false
+		}
+	}
+
+	$: {
+		settings
+		if (instance) {
+			unbind()
+			bind()
+		}
+	}
+
+	$: if (instance && typeof value !== 'undefined') {
+		instance.setValue(value, true)
+	}
+
+	$: if (instance) {
+		disabled ? instance.disable() : instance.enable()
+	}
+
+	onMount(() => bind())
+	onDestroy(() => unbind())
+
+	$: props = {
+		placeholder,
+		disabled,
+		multiple,
+		tag,
+		cssPrefix,
+		cssProps: {
+			loaded,
+			state,
+		},
+	}
 </script>
 
-{#if preview}
-	<div use:forwardEvents {...$$restProps} class={classes}>
-		{value}
-	</div>
-{:else}
-	<select bind:this={element} value="" use:forwardEvents {...$$restProps} class={classes}>
-		{#each $options as option}
-			<option value={getKey(option)}>
-				{getText(option)}
-			</option>
-		{/each}
-	</select>
-{/if}
+<El {...$$restProps} bind:element bind:value {...props}>
+	{#each items ?? [] as item, index (index)}
+		<slot {index} {item}>
+			<El tag="option" value={getValue(item)}>
+				{getText(item)}
+			</El>
+		</slot>
+	{/each}
+</El>

@@ -8,6 +8,7 @@ package
 .env.*
 !.env.example
 package
-static/css
+static/css/tabler.css
 yarn-error.log
 package-lock.json
+.vercel

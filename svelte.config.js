@@ -1,4 +1,4 @@
-import preprocess from 'svelte-preprocess'
+import sveltePreprocess from 'svelte-preprocess'
 
 import adapter from '@sveltejs/adapter-static'
 import path from 'path'
@@ -15,7 +15,7 @@ const config = {
 	preprocess: [
 		ifProcessor(),
 		previewProcessor(),
-		preprocess({
+		sveltePreprocess({
 			scss: {
 				importer(url) {
 					if (url[0] === '~') {
@@ -28,7 +28,9 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			precompress: true,
+		}),
 		files: {
 			lib: 'src',
 			assets: 'static',
@@ -42,8 +44,7 @@ const config = {
 			const items = [
 				'index.d.ts',
 				'index.ts',
-				'bootstrap.css',
-				'tabler.css',
+				'styles',
 				'components',
 				'preprocessors',
 				'directives',

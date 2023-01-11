@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-	import type { BadgeProps } from '$lib/components'
+	import { type BadgeProps, El } from '$lib/components'
 
 	type $$Props = BadgeProps
+
+	//#region Props
 
 	/**
 	 * Set Css Prefix for the Badge
@@ -59,6 +60,8 @@
 	 */
 	export let notification: $$Props['notification'] = undefined
 
+	//#endregion
+
 	$: cssProps = {
 		notification,
 		tile,
@@ -68,12 +71,16 @@
 		dot,
 		color,
 		blink,
-		href,
 	}
-	$: otherProps = { href, tag, cssPrefix }
+
+	$: otherProps = {
+		href,
+		tag: href ? 'a' : tag,
+		cssPrefix,
+	}
 </script>
 
-<El this={href ? 'a' : 'span'} {...$$restProps} {cssProps} {...otherProps}>
+<El {...$$restProps} {cssProps} {...otherProps} tag={href ? 'a' : tag}>
 	{#if !dot}
 		<slot />
 	{/if}

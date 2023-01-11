@@ -14,6 +14,11 @@
 	export let color: $$Props['color'] = undefined
 
 	/**
+	 * Set direction of Divider
+	 */
+	export let direction: $$Props['direction'] = undefined
+
+	/**
 	 * Set alignment of Divider
 	 */
 	export let alignment: $$Props['alignment'] = undefined
@@ -24,6 +29,7 @@
 		cssProps = {
 			alignment,
 			color,
+			direction,
 		}
 		otherProps = {
 			cssPrefix,

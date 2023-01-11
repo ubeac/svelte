@@ -1,8 +1,8 @@
 $props: (
 	null: '.alert' '.d-flex',
-	title:'.alert-title',
-	dismissible:'.alert-dismissible',
-	end:'.btn-close',
+	title: '.alert-title',
+	dismissible: '.alert-dismissible',
+	end: '.btn-close',
 	color: generate_props($theme_colors, ('.alert-')),
 	start: '.alert-icon',
 	filled: '.alert-important'

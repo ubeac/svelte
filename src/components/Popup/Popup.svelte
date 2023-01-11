@@ -1,14 +1,10 @@
 <script lang="ts">
-	import { get_current_component, onDestroy, onMount, tick } from 'svelte/internal'
+	import { onDestroy, onMount, tick } from 'svelte/internal'
 
 	import { createPopper } from '@popperjs/core'
 	import type { Instance } from '@popperjs/core'
 
-	import { forwardEventsBuilder } from '$lib/directives'
-
-	import { El } from '../Base'
-	import type { PopupProps } from './Popup.types'
-	import type { PopupPlacements, PopupTriggers } from './Popup.types'
+	import { El, type PopupProps } from '$lib/components'
 
 	type $$Props = PopupProps
 
@@ -26,11 +22,6 @@
 	export let fixedPosition: $$Props['fixedPosition'] = false
 
 	/**
-	 * Forward all native Events
-	 */
-	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
-
-	/**
 	 * Distance between Popup and target element
 	 */
 	export let popupOffset: $$Props['popupOffset'] = [0, 16]
@@ -43,12 +34,12 @@
 	/**
 	 * Set where the Popup should be opened (relative to target element)
 	 */
-	export let placement: PopupPlacements = 'auto'
+	export let placement: $$Props['placement'] = 'auto'
 
 	/**
 	 * Set which actions should be responsible for opening/closing the Popup
 	 */
-	export let trigger: PopupTriggers = ['focus', 'hover']
+	export let trigger: $$Props['trigger'] = ['focus', 'hover']
 
 	let instance: Instance
 	let element: HTMLElement
@@ -81,11 +72,11 @@
 	function eventsName() {
 		const events = []
 
-		if (trigger.includes('click')) events.push(['', 'click'])
+		if (trigger!.includes('click')) events.push(['', 'click'])
 
-		if (trigger.includes('focus')) events.push(['blur', 'focus'])
+		if (trigger!.includes('focus')) events.push(['blur', 'focus'])
 
-		if (trigger.includes('hover')) events.push(['mouseleave', 'mouseenter'])
+		if (trigger!.includes('hover')) events.push(['mouseleave', 'mouseenter'])
 
 		return events
 	}
@@ -151,6 +142,6 @@
 	}
 </script>
 
-<El {...$$restProps} bind:element display={hidden ? 'none' : 'block'} {forwardEvents} {cssProps} {cssPrefix} {tag}>
+<El {...$$restProps} bind:element d={hidden ? 'none' : 'block'} {cssProps} {cssPrefix} {tag}>
 	<slot />
 </El>

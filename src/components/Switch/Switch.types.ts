@@ -1,4 +1,4 @@
-import type { ElProps } from '../Base'
+import type { Colors, ElProps } from '$lib/components'
 
 export interface SwitchProps extends Partial<ElProps> {
 	/**
@@ -19,12 +19,16 @@ export interface SwitchProps extends Partial<ElProps> {
 	/**
 	 * Sets text of Switch
 	 */
-	label?: string
+	text?: string
 
 	/**
 	 * Value of Switch
 	 */
 	value?: boolean
+	checked?: boolean
+	reverse?: boolean
+	disabled?: boolean
+	description?: string
 	role?: string
 	type?: string
 }

@@ -3,7 +3,7 @@
 	"bracketSameLine": false,
 	"bracketSpacing": true,
 	"embeddedLanguageFormatting": "auto",
-	"endOfLine": "lf",
+	"endOfLine": "auto",
 	"htmlWhitespaceSensitivity": "css",
 	"importOrder": [
 		"^svelte",
@@ -21,7 +21,6 @@
 	"importOrderSortSpecifiers": true,
 	"insertPragma": false,
 	"jsxSingleQuote": false,
-	"overrides": [],
 	"plugins": [],
 	"printWidth": 120,
 	"proseWrap": "preserve",
@@ -36,5 +35,13 @@
 	"svelteStrictMode": false,
 	"trailingComma": "es5",
 	"tabWidth": 2,
-	"useTabs": true
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": "*.scss",
+			"options": {
+				"trailingComma": "none"
+			}
+		}
+	]
 }

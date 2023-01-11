@@ -1,27 +1,28 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
+	import { El, Popup, PopupArrow, type TooltipProps } from '$lib/components'
 
-	import { El, Popup } from '$lib/components'
-	import { forwardEventsBuilder } from '$lib/directives'
-
-	import type { TooltipProps } from './Tooltip.types'
-  import PopupArrow from '../Popup/PopupArrow.svelte'
-
+	/**
+	 * Set Css Prefix for the Tooltip
+	 * @default 'tooltip'
+	 * @type string
+	 * @example 'tooltip'
+	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'tooltip'
-	export let tag: $$Props['tag'] = 'div'
+
+	/**
+	 * Set Placement for the Tooltip
+	 * @default 'top'
+	 * @type 'top' | 'bottom' | 'left' | 'right'
+	 * @example 'top'
+	 */
+	export let placement: $$Props['placement'] = 'top'
 
 	type $$Props = TooltipProps
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
-
-	$: cssProps = {
-		//
-	}
 </script>
 
-<Popup {forwardEvents} {...$$restProps} {cssPrefix} {cssProps} {tag}>
-	<PopupArrow cssPrefix="tooltip-arrow" />
-	<El tag="div" cssPrefix="tooltip-inner">
+<Popup {...$$restProps} {cssPrefix} {placement}>
+	<PopupArrow cssPrefix="{cssPrefix}-arrow" />
+	<El cssPrefix="{cssPrefix}-inner">
 		<slot />
 	</El>
 </Popup>
