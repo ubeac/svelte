@@ -10,7 +10,7 @@
 
 <Doc title="Label">
 	Set <code>label</code> property to show textarea label's and bind to its id automatically.
-	<code>required</code> is a booleanproperty which show an indicator on label as well. You can also use
+	<code>required</code> is a boolean property which show an indicator on label as well. You can also use
 	<code>label</code> slot.
 </Doc>
 <Preview src="./FormTextareaDefault.svelte">

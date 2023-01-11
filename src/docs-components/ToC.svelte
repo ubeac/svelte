@@ -3,19 +3,17 @@
 
 	import { afterNavigate } from '$app/navigation'
 
-	let sections: any = []
+	let sections: any[] = []
 
 	const init = () => {
 		if (typeof window !== 'undefined') {
-			const nodes = document.getElementsByTagName('h2')
-			sections = Array.from(nodes)
-				.filter((node: HTMLHeadingElement) => node.hasAttribute('href'))
-				.map((node: HTMLHeadingElement) => {
-					return {
-						name: node.innerText,
-						href: node.getAttribute('href'),
-					}
-				})
+			const nodes = document.querySelectorAll('[data-href]') as NodeListOf<HTMLHeadingElement>;
+			sections = Array.from(nodes).map((node: HTMLHeadingElement) => {
+				return {
+					name: node.innerText,
+					href: node.getAttribute('data-href'),
+				}
+			})
 		}
 	}
 
