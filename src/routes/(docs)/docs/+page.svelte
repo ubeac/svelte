@@ -19,7 +19,7 @@
 		<div class="row">
 			{#each navigations as navigation}
 				<div class="col-sm-6">
-					<h3>{navigation.title}</h3>
+					<h2>{navigation.title}</h2>
 					{#if navigation.children}
 						<ul class="list-unstyled">
 							{#each navigation.children as menu}

@@ -810,7 +810,7 @@
 
 	<El d="none" dMd="block">
 		<div class="navbar-expand-md">
-			<div class="collapse navbar-collapse show" id="navbar-menu">
+			<div class="collapse navbar-collapse show">
 				<div class="navbar navbar-light">
 					<div class="container-xl">
 						<ul class="navbar-nav">
