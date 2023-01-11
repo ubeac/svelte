@@ -11,7 +11,7 @@
 <h1>FormCheckboxGroup</h1>
 
 <Doc title="Basic usage">
-	FormCheckboxGroup is similar to <a href="../components/checkbox-groups">CheckboxGroup</a> component with decoration features
+	FormCheckboxGroup is similar to <a href="/docs/components/checkbox-groups">CheckboxGroup</a> component with decoration features
 	inside the form.
 </Doc>
 <Preview src="./FormCheckboxGroupBasic.svelte">

@@ -11,3 +11,4 @@ package
 static/css/tabler.css
 yarn-error.log
 package-lock.json
+.vercel

@@ -295,7 +295,7 @@ export const navigations = [
 				icon: 'fluent-mdl2:field-empty',
 			},
 			{
-				route: base_form_path + 'form-file-uploader',
+				route: base_form_path + 'form-file-uploaders',
 				title: 'FormFileUploader',
 				icon: 'material-symbols:upload-file',
 			},
