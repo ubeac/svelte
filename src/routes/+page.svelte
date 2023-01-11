@@ -27,11 +27,11 @@
 >
 	<div class="home-el-mb-3 home-el-d-flex home-el-align-items-center home-el-justify-content-center">
 		<div class="home-el-col-5">
-			<img class="img img-ubeac" width="180" height="180" alt="uBeac" src="/images/ubeac.webp" />
+			<img class="img img-ubeac" width="180" height="180" alt="uBeac" src="/images/ubeac.svg" />
 		</div>
 		<div class="plus home-el-col-2">+</div>
 		<div class="home-el-col-5">
-			<img class="img img-svelte" width="180" height="180" alt="Svelte" src="/images/svelte.webp" />
+			<img class="img img-svelte" width="180" height="180" alt="Svelte" src="/images/svelte.svg" />
 		</div>
 	</div>
 
