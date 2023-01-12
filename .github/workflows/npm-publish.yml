@@ -1,7 +1,5 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
-name: Node.js Package
+name: Publish NPM Package
 
 on:
   push:
@@ -9,17 +7,29 @@ on:
       - main
 
 jobs:
-  build:
+  commit:
     runs-on: ubuntu-latest
+    if: ${{ !startsWith(github.event.head_commit.message, 'Release') }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm install
+
+      # setup git user
+      - run: git config user.name "$GITHUB_ACTOR"
+      - run: git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      # incremnet package version and create a commit
+      - run: npm version minor -m "Release minor %s"
+
+      - uses: CasperWA/push-protected@v2
+        with:
+          token: ${{ secrets.PUSH_ON_NEXT_BRANCH_TOKEN }}
+          branch: main
 
   publish-npm:
-    needs: build
+    if: ${{ startsWith(github.event.head_commit.message, 'Release minor ') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -31,3 +41,32 @@ jobs:
       - run: npm run publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  deploy-ftp:
+    name: Deploy
+    if: ${{ !startsWith(github.event.head_commit.message, 'Release minor') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: 🔨 Build Project
+        run: |
+          npm install
+          npm run build
+
+      - name: 📂 Upload Site
+        uses: SamKirkland/FTP-Deploy-Action@4.3.1
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          port: ${{ secrets.FTP_PORT }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: build/
+          server-dir: /
