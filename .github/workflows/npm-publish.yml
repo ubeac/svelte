@@ -21,7 +21,7 @@ jobs:
       - run: git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       # incremnet package version and create a commit
-      - run: npm version minor -m "Release minor %s"
+      - run: npm version patch -m "Release patch %s"
 
       - uses: CasperWA/push-protected@v2
         with:
@@ -44,7 +44,7 @@ jobs:
 
   deploy-ftp:
     name: Deploy
-    if: ${{ !startsWith(github.event.head_commit.message, 'Release minor') }}
+    if: ${{ !startsWith(github.event.head_commit.message, 'Release patch') }}
     runs-on: ubuntu-latest
     steps:
       - name: Get latest code
