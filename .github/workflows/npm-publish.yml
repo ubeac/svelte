@@ -29,7 +29,7 @@ jobs:
           branch: main
 
   publish-npm:
-    if: ${{ startsWith(github.event.head_commit.message, 'Release minor ') }}
+    if: ${{ startsWith(github.event.head_commit.message, 'Release patch ') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
