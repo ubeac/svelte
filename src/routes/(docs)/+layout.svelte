@@ -82,7 +82,7 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="/css/tabler.css" />
+	<link rel="stylesheet" href="/css/tabler.clean.css" />
 </svelte:head>
 
 <App {theme}>

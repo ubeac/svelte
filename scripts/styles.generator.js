@@ -39,9 +39,9 @@ async function process(file) {
 	const cleanedCss = await clean(css)
 
 	fs.writeFileSync(`./static/css/${file}.clean.css`, cleanedCss, {})
-	fs.writeFileSync(`./static/css/${file}.clean.css`, cleanedCss, {})
+	fs.writeFileSync(`./src/styles/${file}.clean.css`, cleanedCss, {})
 
-	fs.writeFileSync(`./src/styles/${file}.css`, css, {})
+	fs.writeFileSync(`./static/css/${file}.css`, css, {})
 	fs.writeFileSync(`./src/styles/${file}.css`, css, {})
 
 }
