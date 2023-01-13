@@ -1,2 +1,6 @@
 export { default as Dropdown } from './Dropdown.svelte'
+export { default as DropdownColumn } from './DropdownColumn.svelte'
+export { default as DropdownColumns } from './DropdownColumns.svelte'
+export { default as DropdownToggler } from './DropdownToggler.svelte'
+export { default as DropdownItems } from './DropdownItems.svelte'
 export * from './Dropdown.types'

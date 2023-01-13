@@ -1,88 +1,29 @@
 <script lang="ts">
-	import { Button, type DropdownButtonProps, El } from '$lib/components'
+	import { setContext } from 'svelte'
+	import { writable } from 'svelte/store'
 
-	type $$Props = DropdownButtonProps
+	import { type DropdownProps, El } from '$lib/components'
 
-	/**
-	 * Set Css Prefix for the Divider
-	 */
-	export let cssPrefix: $$Props['cssPrefix'] = 'dropdown-button'
+	type $$Props = DropdownProps
 
 	/**
-	 * Set color of Divider
+	 * Set Css Prefix for the Dropdown button
 	 */
-	export let color: $$Props['color'] = undefined
+	export let cssPrefix: $$Props['cssPrefix'] = 'dropdown'
 
-	/**
-	 * Set color of Divider
-	 */
-	export let items: $$Props['items'] = undefined
+	export let show: $$Props['show'] = false
+	export let margin: $$Props['margin'] = 0
 
-	/**
-	 * Set color of Divider
-	 */
-	export let split: $$Props['split'] = false
+	setContext('DROPDOWN', writable({ show, margin }))
 
-	// /**
-	//  * Set alignment of Divider
-	//  */
-	// export let alignment: $$Props['alignment'] = undefined
-
-	let show = false
-	const toggle = () => {
-		console.log(items)
-		show = !show
-		console.log(show)
-	}
-
-	let cssProps: any = {}
 	let otherProps: any = {}
 	$: {
-		cssProps = {
-			color,
-			show,
-		}
 		otherProps = {
 			cssPrefix,
-			split,
-			items,
 		}
 	}
 </script>
 
-<!-- <El {...$$restProps} {...otherProps}>
-	
-	<El
-		tag="button"
-		cssPrefix={cssPrefix + '-button'}
-		{cssProps}
-		type="button"
-		aria-expanded={show}
-		on:click={toggle}
-		class="btn btn-secondary dropdown-toggle">
-		<slot />
-	</El>
-	{#if show && items !== undefined}
-		<El cssPrefix={cssPrefix + '-items'} class="dropdown-menu">
-			{#each items as item}
-				<El cssPrefix={cssPrefix + '-item'}><a href={item.href}>{item.title}</a></El>
-			{/each}
-		</El>
-	{/if}
-</El> -->
-
-<El {...$$restProps} {...otherProps} {cssProps} on:click={toggle} aria-expanded={show}>
+<El {...$$restProps} {...otherProps}>
 	<slot />
 </El>
-
-<!-- <ButtonGroup>
-	<Button></Button>
-	<DropDown type="button">
-		<DropdownBody></DropdownBody>
-	</DropDown>
-</ButtonGroup>
-
-
-<DropDown type="dropdown">
-	<DropdownBody></DropdownBody>
-</DropDown> -->

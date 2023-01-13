@@ -2,20 +2,75 @@
 // Dropdown Button
 //
 
+$prefix-dropdown-columns: $prefix + 'dropdown-columns' !default;
+$prefix-dropdown-column: $prefix + 'dropdown-column' !default;
+$dropdown-alignments: 'start' 'end' !default;
+
 $props: (
-    null: '.btn-group',
-    items: '.dropdown-menu' '.d-block',
-    item:'.dropdown-item',
-    button: '.btn' '.d-inline-block'
+    null: '.btn-group'
 );
 
-.#{$prefix-dropdown-button} {
+.#{$prefix-dropdown} {
     @include apply-props($props);
 
-    @each $color,
-    $value in $theme-colors {
-        >button {
-            @extend .btn-#{$color};
+    &>.#{$prefix-dropdown-items} {
+        @extend .dropdown-menu;
+        @extend .d-block;
+
+        &-dark {
+            @extend .dropdown-menu-dark;
+        }
+
+        &>*:not(.#{$prefix-dropdown-columns}):not(.#{$prefix-dropdown-column}):not(hr) {
+            @extend .dropdown-item;
+        }
+
+        &>hr {
+            @extend .dropdown-divider;
+        }
+
+        &>.#{$prefix-dropdown-columns} {
+            @extend .dropdown-menu-columns;
+
+            &>.#{$prefix-dropdown-column} {
+                @extend .dropdown-menu-column;
+
+                &>*:not(hr) {
+                    @extend .dropdown-item;
+                }
+            }
+        }
+
+        &-dropdown-alignment {
+            @each $alignment in $dropdown-alignments {
+                &-#{$alignment} {
+                    @extend .dropdown-menu-#{$alignment};
+                }
+
+                @each $breakpoint in $breakpoints {
+                    &-#{$breakpoint}-#{$alignment} {
+                        @extend .dropdown-menu-#{$breakpoint}-#{$alignment};
+                    }
+                }
+            }
+        }
+    }
+
+    &>.#{$prefix-dropdown-toggler} {
+        &>* {
+            @extend .d-inline-flex;
+        }
+
+        &>*:last-child {
+            @extend .dropdown-toggle;
+
+            &-split {
+                @extend .dropdown-toggle-split;
+            }
+        }
+
+        &>*:last-child:after {
+            margin-top: 5px;
         }
     }
 }

@@ -1,20 +1,14 @@
 <script>
-	import { Doc, Preview } from '$lib/components'
+	import { Doc, Preview } from '$lib/docs-components'
 	import DropdownButtonDefault from './DropdownButtonDefault.svelte'
 	// import DividerPositions from './DividerPositions.svelte'
 	// import DividerColors from './DividerColors.svelte'
 </script>
 
-<h1>Divider</h1>
-<p>
-	Dividers help organize content and make the interface layout clear and uncluttered. Greater clarity adds up to better
-	user experience and enhanced interaction with a website or app.
-</p>
+<h1>Dropdown Button</h1>
+<p />
 
-<Doc title="Defaults">
-	Use dividers to visually separate content into parts. You can use a line only or add text that will be centered by
-	default.
-</Doc>
+<Doc title="Defaults">blah blah</Doc>
 <Preview src="./DropdownButtonDefault.svelte">
 	<DropdownButtonDefault />
 </Preview>
