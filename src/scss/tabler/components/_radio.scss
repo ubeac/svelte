@@ -14,7 +14,8 @@ $wrapper-props: (
 
 $props: (
 	null: '.form-check-input',
-	label: '.form-check-label'
+	label: '.form-check-label',
+	description: '.form-check-description'
 );
 
 .#{$prefix-radio} {

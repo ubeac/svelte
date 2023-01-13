@@ -6,6 +6,7 @@
 	import RadioInline from './RadioInline.svelte'
 	import RadioReverse from './RadioReverse.svelte'
 	import RadioExample from './RadioExample.svelte'
+	import RadioDescription from './RadioDescription.svelte'
 </script>
 
 <h1>Radio</h1>
@@ -26,7 +27,14 @@
 	<RadioColors />
 </Preview>
 
-<Doc title="Diabled">
+<Doc title="Description">
+	You can set Description for Radio component using <code>Description</code> property.
+</Doc>
+<Preview src="./RadioDescription.svelte">
+	<RadioDescription />
+</Preview>
+
+<Doc title="Disabled">
 	<code>disabled</code> property prevent users to check the radio. But, clicking in a group, will uncheck the disabled radio.
 </Doc>
 <Preview src="./RadioDisabled.svelte">

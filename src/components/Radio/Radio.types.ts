@@ -5,6 +5,7 @@ export interface RadioProps extends Partial<ElProps> {
 	readonly?: boolean
 	value?: any
 	checked?: boolean
+	description?: string
 	name?: string
 	label?: string
 	color?: Colors
