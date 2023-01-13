@@ -68,6 +68,7 @@
 		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
 		"@types/bootstrap": "^5.2.6",
 		"@types/prismjs": "^1.26.0",
+		"@ubeac/svelte-preprocessors": "^0.0.1",
 		"bootstrap": "^5.2.3",
 		"magic-string": "^0.26.3",
 		"prettier": "^2.5.1",

@@ -3,8 +3,7 @@ import sveltePreprocess from 'svelte-preprocess'
 import adapter from '@sveltejs/adapter-static'
 import path from 'path'
 
-import ifProcessor from './src/preprocessors/if.js'
-import previewProcessor from './src/preprocessors/preview.js'
+import {ifProcessor, previewProcessor} from '@ubeac/svelte-preprocessors'
 
 /**
  * @type {import('@sveltejs/kit').Config}
@@ -46,7 +45,6 @@ const config = {
 				'index.ts',
 				'styles',
 				'components',
-				'preprocessors',
 				'directives',
 				'scss',
 				'types',
