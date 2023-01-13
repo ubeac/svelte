@@ -54,6 +54,7 @@
 		"inputmask": "^5.0.7",
 		"litepicker": "^2.0.12",
 		"moment": "^2.29.4",
+		"postcss-filter-rules": "^0.6.2",
 		"swiper": "^8.4.5",
 		"tom-select": "^2.2.2"
 	},
