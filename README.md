@@ -27,7 +27,7 @@ Once installed, you can import the components and use them in your Svelte applic
 	import { Button } from '@ubeac/svelte'
 </script>
 
-<button>Hello uBeac</button>
+<Button>Hello uBeac</Button>
 ```
 
 ## Demo
