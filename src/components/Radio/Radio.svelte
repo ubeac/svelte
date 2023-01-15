@@ -11,6 +11,11 @@
 	export let color: $$Props['color'] = undefined
 
 	/**
+	 * Set description of radio
+	 */
+	export let description: $$Props['description'] = undefined
+
+	/**
 	 * Set Css Prefix for the Input
 	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'radio'
@@ -85,11 +90,21 @@
 
 <El cssPrefix="{cssPrefix}-wrapper" cssProps={{ inline, reverse }}>
 	<El tag="input" type="radio" bind:element={inputElement} {...$$restProps} {...otherProps} {cssProps} on:change />
-	<El tag="label" cssPrefix="{cssPrefix}-label" for={labelForId}>
-		<slot>
-			{#if label}
-				{label}
-			{/if}
-		</slot>
-	</El>
+	{#if label || $$slots['default']}
+		<El tag="label" cssPrefix="{cssPrefix}-label" for={labelForId}>
+			<slot>
+				{#if label}
+					{label}
+				{/if}
+			</slot>
+		</El>
+	{/if}
+
+	{#if description || $$slots['description']}
+		<El cssPrefix="{cssPrefix}-description">
+			<slot name="description">
+				{description}
+			</slot>
+		</El>
+	{/if}
 </El>
