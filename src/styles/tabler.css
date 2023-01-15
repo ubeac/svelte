@@ -17687,8 +17687,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-primary-rgb), .8);
   --u-btn-disabled-bg: var(--u-primary);
   --u-btn-disabled-color: var(--u-primary-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-primary, .u-button-color-primary.u-button-outline {
@@ -17716,8 +17715,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-secondary-rgb), .8);
   --u-btn-disabled-bg: var(--u-secondary);
   --u-btn-disabled-color: var(--u-secondary-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-secondary, .u-button-color-secondary.u-button-outline {
@@ -17745,8 +17743,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-success-rgb), .8);
   --u-btn-disabled-bg: var(--u-success);
   --u-btn-disabled-color: var(--u-success-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-success, .u-button-color-success.u-button-outline {
@@ -17774,8 +17771,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-info-rgb), .8);
   --u-btn-disabled-bg: var(--u-info);
   --u-btn-disabled-color: var(--u-info-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-info, .u-button-color-info.u-button-outline {
@@ -17803,8 +17799,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-warning-rgb), .8);
   --u-btn-disabled-bg: var(--u-warning);
   --u-btn-disabled-color: var(--u-warning-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-warning, .u-button-color-warning.u-button-outline {
@@ -17832,8 +17827,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-danger-rgb), .8);
   --u-btn-disabled-bg: var(--u-danger);
   --u-btn-disabled-color: var(--u-danger-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-danger, .u-button-color-danger.u-button-outline {
@@ -17861,8 +17855,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-light-rgb), .8);
   --u-btn-disabled-bg: var(--u-light);
   --u-btn-disabled-color: var(--u-light-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-light, .u-button-color-light.u-button-outline {
@@ -17890,8 +17883,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-dark-rgb), .8);
   --u-btn-disabled-bg: var(--u-dark);
   --u-btn-disabled-color: var(--u-dark-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-dark, .u-button-color-dark.u-button-outline {
@@ -17919,8 +17911,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-muted-rgb), .8);
   --u-btn-disabled-bg: var(--u-muted);
   --u-btn-disabled-color: var(--u-muted-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-muted, .u-button-color-muted.u-button-outline {
@@ -17948,8 +17939,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-blue-rgb), .8);
   --u-btn-disabled-bg: var(--u-blue);
   --u-btn-disabled-color: var(--u-blue-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-blue, .u-button-color-blue.u-button-outline {
@@ -17977,8 +17967,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-azure-rgb), .8);
   --u-btn-disabled-bg: var(--u-azure);
   --u-btn-disabled-color: var(--u-azure-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-azure, .u-button-color-azure.u-button-outline {
@@ -18006,8 +17995,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-indigo-rgb), .8);
   --u-btn-disabled-bg: var(--u-indigo);
   --u-btn-disabled-color: var(--u-indigo-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-indigo, .u-button-color-indigo.u-button-outline {
@@ -18035,8 +18023,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-purple-rgb), .8);
   --u-btn-disabled-bg: var(--u-purple);
   --u-btn-disabled-color: var(--u-purple-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-purple, .u-button-color-purple.u-button-outline {
@@ -18064,8 +18051,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-pink-rgb), .8);
   --u-btn-disabled-bg: var(--u-pink);
   --u-btn-disabled-color: var(--u-pink-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-pink, .u-button-color-pink.u-button-outline {
@@ -18093,8 +18079,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-red-rgb), .8);
   --u-btn-disabled-bg: var(--u-red);
   --u-btn-disabled-color: var(--u-red-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-red, .u-button-color-red.u-button-outline {
@@ -18122,8 +18107,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-orange-rgb), .8);
   --u-btn-disabled-bg: var(--u-orange);
   --u-btn-disabled-color: var(--u-orange-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-orange, .u-button-color-orange.u-button-outline {
@@ -18151,8 +18135,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-yellow-rgb), .8);
   --u-btn-disabled-bg: var(--u-yellow);
   --u-btn-disabled-color: var(--u-yellow-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-yellow, .u-button-color-yellow.u-button-outline {
@@ -18180,8 +18163,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-lime-rgb), .8);
   --u-btn-disabled-bg: var(--u-lime);
   --u-btn-disabled-color: var(--u-lime-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-lime, .u-button-color-lime.u-button-outline {
@@ -18209,8 +18191,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-green-rgb), .8);
   --u-btn-disabled-bg: var(--u-green);
   --u-btn-disabled-color: var(--u-green-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-green, .u-button-color-green.u-button-outline {
@@ -18238,8 +18219,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-teal-rgb), .8);
   --u-btn-disabled-bg: var(--u-teal);
   --u-btn-disabled-color: var(--u-teal-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-teal, .u-button-color-teal.u-button-outline {
@@ -18267,8 +18247,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-cyan-rgb), .8);
   --u-btn-disabled-bg: var(--u-cyan);
   --u-btn-disabled-color: var(--u-cyan-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-cyan, .u-button-color-cyan.u-button-outline {
@@ -18296,8 +18275,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-facebook-rgb), .8);
   --u-btn-disabled-bg: var(--u-facebook);
   --u-btn-disabled-color: var(--u-facebook-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-facebook, .u-button-color-facebook.u-button-outline {
@@ -18325,8 +18303,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-twitter-rgb), .8);
   --u-btn-disabled-bg: var(--u-twitter);
   --u-btn-disabled-color: var(--u-twitter-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-twitter, .u-button-color-twitter.u-button-outline {
@@ -18354,8 +18331,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-linkedin-rgb), .8);
   --u-btn-disabled-bg: var(--u-linkedin);
   --u-btn-disabled-color: var(--u-linkedin-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-linkedin, .u-button-color-linkedin.u-button-outline {
@@ -18383,8 +18359,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-google-rgb), .8);
   --u-btn-disabled-bg: var(--u-google);
   --u-btn-disabled-color: var(--u-google-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-google, .u-button-color-google.u-button-outline {
@@ -18412,8 +18387,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-youtube-rgb), .8);
   --u-btn-disabled-bg: var(--u-youtube);
   --u-btn-disabled-color: var(--u-youtube-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-youtube, .u-button-color-youtube.u-button-outline {
@@ -18441,8 +18415,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-vimeo-rgb), .8);
   --u-btn-disabled-bg: var(--u-vimeo);
   --u-btn-disabled-color: var(--u-vimeo-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-vimeo, .u-button-color-vimeo.u-button-outline {
@@ -18470,8 +18443,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-dribbble-rgb), .8);
   --u-btn-disabled-bg: var(--u-dribbble);
   --u-btn-disabled-color: var(--u-dribbble-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-dribbble, .u-button-color-dribbble.u-button-outline {
@@ -18499,8 +18471,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-github-rgb), .8);
   --u-btn-disabled-bg: var(--u-github);
   --u-btn-disabled-color: var(--u-github-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-github, .u-button-color-github.u-button-outline {
@@ -18528,8 +18499,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-instagram-rgb), .8);
   --u-btn-disabled-bg: var(--u-instagram);
   --u-btn-disabled-color: var(--u-instagram-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-instagram, .u-button-color-instagram.u-button-outline {
@@ -18557,8 +18527,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-pinterest-rgb), .8);
   --u-btn-disabled-bg: var(--u-pinterest);
   --u-btn-disabled-color: var(--u-pinterest-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-pinterest, .u-button-color-pinterest.u-button-outline {
@@ -18586,8 +18555,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-vk-rgb), .8);
   --u-btn-disabled-bg: var(--u-vk);
   --u-btn-disabled-color: var(--u-vk-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-vk, .u-button-color-vk.u-button-outline {
@@ -18615,8 +18583,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-rss-rgb), .8);
   --u-btn-disabled-bg: var(--u-rss);
   --u-btn-disabled-color: var(--u-rss-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-rss, .u-button-color-rss.u-button-outline {
@@ -18644,8 +18611,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-flickr-rgb), .8);
   --u-btn-disabled-bg: var(--u-flickr);
   --u-btn-disabled-color: var(--u-flickr-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-flickr, .u-button-color-flickr.u-button-outline {
@@ -18673,8 +18639,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-bitbucket-rgb), .8);
   --u-btn-disabled-bg: var(--u-bitbucket);
   --u-btn-disabled-color: var(--u-bitbucket-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-bitbucket, .u-button-color-bitbucket.u-button-outline {
@@ -18702,8 +18667,7 @@ a.badge, a.u-badge {
   --u-btn-active-bg: rgba(var(--u-tabler-rgb), .8);
   --u-btn-disabled-bg: var(--u-tabler);
   --u-btn-disabled-color: var(--u-tabler-fg);
-  --u-btn-box-shadow: var(--u-shadow-button),
-  var(--u-shadow-button-inset);
+  --u-btn-box-shadow: var(--u-shadow-button), var(--u-shadow-button-inset);
 }
 
 .btn-outline-tabler, .u-button-color-tabler.u-button-outline {
@@ -19367,20 +19331,12 @@ a.badge, a.u-badge {
   --u-btn-box-shadow: none;
 }
 
-.btn-sm, .u-button-size-sm,
-.btn-group-sm > .btn,
-.u-button-group-size-sm > .btn,
-.btn-group-sm > .u-button,
-.u-button-group-size-sm > .u-button {
+.btn-sm, .u-button-size-sm, .btn-group-sm > .btn, .u-button-group-size-sm > .btn, .btn-group-sm > .u-button, .u-button-group-size-sm > .u-button {
   --u-btn-line-height: 1.5;
   --u-btn-icon-size: .75rem;
 }
 
-.btn-lg, .u-button-size-lg,
-.btn-group-lg > .btn,
-.u-button-group-size-lg > .btn,
-.btn-group-lg > .u-button,
-.u-button-group-size-lg > .u-button {
+.btn-lg, .u-button-size-lg, .btn-group-lg > .btn, .u-button-group-size-lg > .btn, .btn-group-lg > .u-button, .u-button-group-size-lg > .u-button {
   --u-btn-line-height: 1.5;
   --u-btn-icon-size: 2rem;
 }
