@@ -6,11 +6,11 @@ export const base_form_path: string = base_path + 'form/'
 export const site_base_url: string = 'https://svelte.ubeac.io'
 
 export const navigations = [
-	{ title: 'Introduction', route: base_path },
 	{
 		title: 'Getting Started',
 		id: 'menu-base',
 		children: [
+			{ title: 'Introduction', route: base_path },
 			{
 				route: base_path + 'getting-started/installation',
 				title: 'Installation',
@@ -41,11 +41,6 @@ export const navigations = [
 				route: base_core_path + 'contents/borders',
 				title: 'Borders',
 				icon: 'material-symbols:border-style',
-			},
-			{
-				route: base_core_path + 'contents/icons',
-				title: 'Icons',
-				icon: 'tabler:star',
 			},
 			{
 				route: base_core_path + 'contents/grid',
@@ -162,6 +157,11 @@ export const navigations = [
 				route: base_component_path + 'footers',
 				title: 'Footer',
 				icon: 'mdi:page-layout-footer',
+			},
+			{
+				route: base_core_path + 'contents/icons',
+				title: 'Icon',
+				icon: 'tabler:star',
 			},
 			{
 				route: base_component_path + 'inputs',
