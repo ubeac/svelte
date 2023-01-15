@@ -15,3 +15,15 @@ To install uBeac, you can use npm:
 ```bash
 npm install @ubeac/svelte
 ```
+
+## Demo
+
+Check out the [documentation website](https://svelte.ubeac.io/) for live demos of each component and detailed usage instructions.
+
+You can also see a number of example applications that have been built with uBeac in the [examples](https://github.com/ubeac/svelte/tree/master/examples) directory of the GitHub repository.
+
+## Badges
+
+[![npm version](https://img.shields.io/npm/v/@ubeac/svelte.svg?style=flat-square)](https://www.npmjs.com/package/@ubeac/svelte)
+[![Build Status](https://img.shields.io/travis/ubeac/svelte.svg?style=flat-square)](https://travis-ci.org/ubeac/svelte)
+[![License](https://img.shields.io/npm/l/@ubeac/svelte.svg?style=flat-square)](https://github.com/ubeac/svelte/blob/master/LICENSE)
