@@ -5,6 +5,7 @@
 	import FormAutocompleteDisabled from './FormAutocompleteDisabled.svelte'
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'
 	import FormAutocompleteMessage from './FormAutocompleteMessage.svelte'
+  import FormAutocompleteRemoteData from './FormAutocompleteRemoteData.svelte'
 	import FormAutocompleteRequired from './FormAutocompleteRequired.svelte'
 </script>
 
@@ -42,8 +43,8 @@
 </Preview>
 
 <Doc title="Remote Data">You can load items from external api using async function.</Doc>
-<Preview vertical class="align-items-stretch" src="./FormAutocompleteCreate.svelte">
-	<FormAutocompleteCreate />
+<Preview vertical class="align-items-stretch" src="./FormAutocompleteRemoteData.svelte">
+	<FormAutocompleteRemoteData />
 </Preview>
 
 <Doc title="Create new item">You can create new item if item is not in the list.</Doc>
