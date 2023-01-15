@@ -1,6 +1,6 @@
 {
 	"name": "@ubeac/svelte",
-	"version": "0.1.2-next.3",
+	"version": "0.1.2-next.4",
 	"description": "uBeac's Opinionated Svelte Component library",
 	"sideEffects": false,
 	"keywords": [
