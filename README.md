@@ -33,5 +33,3 @@ Once installed, you can import the components and use them in your Svelte applic
 ## Demo
 
 Check out the [documentation website](https://svelte.ubeac.io/) for live demos of each component and detailed usage instructions.
-
-You can also see a number of example applications that have been built with uBeac in the [examples](https://github.com/ubeac/svelte/tree/master/examples) directory of the GitHub repository.
