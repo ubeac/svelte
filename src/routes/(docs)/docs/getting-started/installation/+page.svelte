@@ -20,7 +20,7 @@
 		<pre><code
 				>{'<!-- src/routes/+layout.ts -->'}
 
-{'<script>'}
+{'<scr' + 'ipt>'}
 	import {'{'} Button {'}'} from '@ubeac/svelte';
 	import '@ubeac/svelte/styles/tabler.css';
 {'</script>'}
