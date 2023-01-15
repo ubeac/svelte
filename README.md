@@ -8,9 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/ubeac/svelte.svg?style=flat-square)](https://github.com/ubeac/svelte/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/ubeac/svelte.svg?style=flat-square)](https://github.com/ubeac/svelte/network)
 
-uBeac is a powerful and flexible Svelte UI component library, designed to help developers build enterprise-grade web applications quickly and easily. With a focus on rapid application development and framework independence, uBeac is the perfect complement to any CSS framework.
-
-The component's UI is inspired by [Tabler](https://tabler.github.io/) UI Kit built on top of Bootstrap css.
+uBeac is a powerful and flexible Svelte UI component library, designed to help developers build enterprise-grade web applications quickly and easily. With a focus on rapid application development and framework independence, uBeac is the perfect complement to any CSS framework. The component's UI is inspired by [Tabler](https://tabler.github.io/) UI Kit built on top of Bootstrap css.
 
 ## Installation
 
@@ -18,6 +16,18 @@ To install uBeac, you can use npm:
 
 ```bash
 npm install @ubeac/svelte
+```
+
+## Usage
+
+Once installed, you can import the components and use them in your Svelte application:
+
+```bash
+<script>
+	import { Button } from '@ubeac/svelte'
+</script>
+
+<Button>Hello uBeac</Button>
 ```
 
 ## Demo
