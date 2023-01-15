@@ -22,12 +22,12 @@ npm install @ubeac/svelte
 
 Once installed, you can import the components and use them in your Svelte application:
 
-```bash
+```html
 <script>
 	import { Button } from '@ubeac/svelte'
 </script>
 
-<Button>Hello uBeac</Button>
+<button>Hello uBeac</button>
 ```
 
 ## Demo
