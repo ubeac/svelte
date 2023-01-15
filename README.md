@@ -1,46 +1,17 @@
-# create-svelte
+# uBeac - Svelte UI Component Library
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+[![npm version](https://img.shields.io/npm/v/@ubeac/svelte.svg?style=flat-square)](https://www.npmjs.com/package/@ubeac/svelte)
+[![Build Status](https://img.shields.io/travis/ubeac/svelte.svg?style=flat-square)](https://travis-ci.org/ubeac/svelte)
+[![License](https://img.shields.io/npm/l/@ubeac/svelte.svg?style=flat-square)](https://github.com/ubeac/svelte/blob/master/LICENSE)
 
-## Creating a project
+uBeac is a powerful and flexible Svelte UI component library, designed to help developers build enterprise-grade web applications quickly and easily. With a focus on rapid application development and framework independence, uBeac is the perfect complement to any CSS framework.
 
-If you're seeing this, you've probably already done this step. Congrats!
+The component's UI is inspired by [Tabler](https://tabler.github.io/) UI Kit built on top of Bootstrap css.
 
-```bash
-# create a new project in the current directory
-npm init svelte
+## Installation
 
-# create a new project in my-app
-npm init svelte my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To install uBeac, you can use npm:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm install @ubeac/svelte
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## ToDo List
-
-- [ ] Util function return unique id
-- [ ] Mixin for Reuse functions
-- [ ] Add Scss build on runtime
-- [ ] Prevent storybook crash onError
-- [ ] Write some directive to forward all events like on:\*="$listeners"
