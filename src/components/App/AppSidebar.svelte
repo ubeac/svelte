@@ -2,8 +2,7 @@
 	import { getContext, onDestroy, onMount } from 'svelte'
 	import { get_current_component } from 'svelte/internal'
 
-	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
-	import { classname } from '@ubeac/svelte'
+	import { classname, forwardEventsBuilder } from '$lib/components'
 
 	export let id = 'sidebar'
 	/**
