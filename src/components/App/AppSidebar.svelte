@@ -3,7 +3,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	import { forwardEventsBuilder } from '@ubeac/svelte/directives'
-	import { classname } from '@ubeac/svelte/utils'
+	import { classname } from '@ubeac/svelte'
 
 	export let id = 'sidebar'
 	/**

@@ -48,7 +48,6 @@ const config = {
 				'directives',
 				'scss',
 				'types',
-				'utils',
 			]
 			return items.some((item) => file.startsWith(item))
 		},

@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte'
 
-	import { El, Icon } from '$lib/components'
-	import { classname } from '$lib/utils'
+	import { classname, El, Icon } from '$lib/components'
 
 	import type { AlertProps } from './Alert.types'
 

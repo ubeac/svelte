@@ -4,9 +4,9 @@
 
 	import { Loader } from '@googlemaps/js-api-loader'
 
+	import { classname } from '$lib/components'
 	import { forwardEventsBuilder } from '$lib/directives'
 	import type { GoogleMapCoordinate } from '$lib/types'
-	import { classname } from '$lib/utils'
 
 	/**
 	 * ApiKey for Google Maps api
