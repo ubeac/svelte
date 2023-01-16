@@ -1,9 +1,8 @@
 import sveltePreprocess from 'svelte-preprocess'
 
 import adapter from '@sveltejs/adapter-static'
+import { ifProcessor, previewProcessor } from '@ubeac/svelte-preprocessors'
 import path from 'path'
-
-import {ifProcessor, previewProcessor} from '@ubeac/svelte-preprocessors'
 
 /**
  * @type {import('@sveltejs/kit').Config}
@@ -40,15 +39,7 @@ const config = {
 	},
 	package: {
 		files(file) {
-			const items = [
-				'index.d.ts',
-				'index.ts',
-				'styles',
-				'components',
-				'directives',
-				'scss',
-				'types',
-			]
+			const items = ['index.d.ts', 'index.ts', 'styles', 'components', 'directives', 'scss']
 			return items.some((item) => file.startsWith(item))
 		},
 	},
