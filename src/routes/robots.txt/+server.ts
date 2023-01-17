@@ -7,7 +7,7 @@ export async function GET(event: any) {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
 		'Content-Type': 'application/xml',
 	}
-	return new Response(`User-agent: * \nSitemap: ${site_base_url}/sitemap.xml \nDisallow: / `.trim(), {
+	return new Response(`User-agent: * \nSitemap: ${site_base_url}/sitemap.xml`.trim(), {
 		headers: {
 			'Content-Type': 'text/plain',
 		},
