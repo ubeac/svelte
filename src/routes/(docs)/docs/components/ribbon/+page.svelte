@@ -5,7 +5,9 @@
 </script>
 
 <h1>Ribbons</h1>
-<p>Ribbon container should have <code>relative</code> position.</p>
+<p>
+	Ribbons are used to express something special on a card. Ribbon container should have <code>relative</code> position.
+</p>
 
 <Doc title="Colors">
 	<!--  -->

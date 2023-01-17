@@ -6,7 +6,10 @@
 </script>
 
 <h1>Stamps</h1>
-<p>Stamp container should have <code>relative</code> position.</p>
+<p>
+	Use stamp component to make the card view more attractive and eye catching. Stamp container should have
+	<code>relative</code> position.
+</p>
 
 <Doc title="Colors">
 	<!--  -->

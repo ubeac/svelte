@@ -17,6 +17,7 @@
 	import type { Themes } from '@ubeac/svelte'
 
 	import { afterNavigate, beforeNavigate } from '$app/navigation'
+	import { page } from '$app/stores'
 
 	import { navigations } from './docs'
 
@@ -82,6 +83,8 @@
 </script>
 
 <svelte:head>
+	<title>{$page.data.metaData.title}</title>
+	<meta name="description" content={$page.data.metaData.description} />
 	<link rel="stylesheet" href="/css/tabler.css" />
 </svelte:head>
 
