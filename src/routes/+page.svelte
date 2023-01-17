@@ -18,6 +18,9 @@
 	<meta
 		name="keywords"
 		content="uBeac, Svelte, UI components, web development, enterprise web applications, rapid application development, framework independent, Bootstrap, Tabler, CSS framework" />
+	<meta
+		name="description"
+		content=" uBeac is a powerful and flexible Svelte UI component library, designed to help developers build enterprise-grade web applications quickly and easily. With a focus on rapid application development and framework independence, uBeac is the perfect complement to any CSS framework." />
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="Amir Pournasserian" />
 </svelte:head>
