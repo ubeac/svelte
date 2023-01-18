@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte/internal'
 
-	import { Button } from '$lib/components/index.js'
-	import { Icon } from '$lib/components/index.js'
+	import { Button } from '$lib/index.js'
+	import { Icon } from '$lib/index.js'
 	import { classname } from '$lib/utils/index.js'
 
 	/**

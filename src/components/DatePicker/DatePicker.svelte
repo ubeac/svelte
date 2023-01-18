@@ -5,7 +5,7 @@
 	import type { ILPConfiguration } from 'litepicker/dist/types/interfaces'
 	import moment from 'moment'
 
-	import { type DatePickerProps, El } from '$lib/components/index.js'
+	import { type DatePickerProps, El } from '$lib/index.js'
 
 	type $$Props = DatePickerProps
 

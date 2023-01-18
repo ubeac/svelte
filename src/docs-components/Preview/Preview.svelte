@@ -4,7 +4,7 @@
 
 	import 'prism-svelte'
 
-	import { Card, CardHeader, Icon, TabContent, TabItem, TabList, TabPanel, Tabs } from '$lib/components/index.js'
+	import { Card, CardHeader, Icon, TabContent, TabItem, TabList, TabPanel, Tabs } from '$lib/index.js'
 	import { classname } from '$lib/utils/index.js'
 
 	import PreviewCopyButton from './PreviewCopyButton.svelte'

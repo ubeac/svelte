@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { El } from '$lib/components/index.js'
-	import type { ProgressProps } from '$lib/components/index.js'
+	import { El } from '$lib/index.js'
+	import type { ProgressProps } from '$lib/index.js'
 
 	type $$Props = ProgressProps
 
@@ -62,8 +62,7 @@
 		aria-valuenow={value}
 		aria-valuemin="0"
 		aria-valuemax="100"
-		aria-label={_label}
-	>
+		aria-label={_label}>
 		{#if label}
 			<El tag="span">{_label}</El>
 		{:else}

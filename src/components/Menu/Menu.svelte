@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type MenuProps, Popup } from '$lib/components/index.js'
+	import { type MenuProps, Popup } from '$lib/index.js'
 
 	type $$Props = MenuProps
 
