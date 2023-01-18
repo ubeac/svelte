@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/index.js'
+import type { Colors, ElProps } from '$lib/components'
 
 declare type DividerAlignments = 'start' | 'center' | 'end'
 declare type DividerDirections = 'horizontal' | 'vertical'

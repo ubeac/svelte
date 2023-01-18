@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Footer } from '$lib/index.js'
+	import { Footer } from '$lib/components'
 
 	import type { AppFooterProps } from './App.types'
 

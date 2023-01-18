@@ -1,3 +1,3 @@
-export * from './create-options.js'
-export * from './google-map.js'
-export * from './placement.js'
+export * from './create-options'
+export * from './google-map'
+export * from './placement'

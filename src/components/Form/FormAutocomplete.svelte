@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Autocomplete, type FormAutocompleteProps, FormField } from '$lib/index.js'
+	import { Autocomplete, type FormAutocompleteProps, FormField } from '$lib/components'
 
 	type $$Props = FormAutocompleteProps
 

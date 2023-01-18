@@ -5,7 +5,7 @@
 	import { Loader } from '@googlemaps/js-api-loader'
 
 	import { forwardEventsBuilder } from '$lib/directives'
-	import { classname } from '$lib/utils/index.js'
+	import { classname } from '$lib/utils'
 
 	/**
 	 * ApiKey for Google Maps api

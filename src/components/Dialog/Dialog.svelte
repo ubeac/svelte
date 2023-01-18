@@ -3,7 +3,7 @@
 
 	import { classname } from '@ubeac/svelte/utils'
 
-	import { type DialogProps, El } from '$lib/index.js'
+	import { type DialogProps, El } from '$lib/components'
 
 	type $$Props = DialogProps
 
