@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { type AppProps, El } from '$lib/components'
-	import { classname } from '$lib/utils'
+	import { type AppProps, El } from '$lib/components/index.js'
+	import { classname } from '$lib/utils/index.js'
 
 	type $$Props = AppProps
 

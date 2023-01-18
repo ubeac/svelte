@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte'
 
-	import { El, type TableCellProps } from '$lib/components'
+	import { El, type TableCellProps } from '$lib/components/index.js'
 
 	type $$Props = TableCellProps
 

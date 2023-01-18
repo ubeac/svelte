@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { El, Label } from '$lib/components'
-	import type { FormFieldProps } from '$lib/components'
+	import { El, Label } from '$lib/components/index.js'
+	import type { FormFieldProps } from '$lib/components/index.js'
 
 	type $$Props = FormFieldProps
 

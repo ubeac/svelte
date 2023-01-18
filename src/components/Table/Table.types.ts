@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/components'
+import type { ElProps } from '$lib/components/index.js'
 
 type TableResponsiveTypes = boolean | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 type TableSizes = 'sm' | 'md'

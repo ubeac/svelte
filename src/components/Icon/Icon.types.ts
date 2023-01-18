@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/components'
+import type { Colors, ElProps } from '$lib/components/index.js'
 
 export const ICON_SIZES = [
 	'auto',

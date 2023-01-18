@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type PopoverBodyProps } from '$lib/components'
+	import { El, type PopoverBodyProps } from '$lib/components/index.js'
 
 	type $$Props = PopoverBodyProps
 

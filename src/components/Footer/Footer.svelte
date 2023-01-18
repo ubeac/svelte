@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type FooterProps } from '$lib/components'
+	import { El, type FooterProps } from '$lib/components/index.js'
 
 	type $$Props = FooterProps
 

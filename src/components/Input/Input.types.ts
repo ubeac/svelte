@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/components'
+import type { ElProps } from '$lib/components/index.js'
 
 export const INPUT_SIZES = ['sm', 'md', 'lg'] as const
 export type InputSizes = typeof INPUT_SIZES[number]

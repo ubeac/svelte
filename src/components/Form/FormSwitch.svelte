@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FormField, type FormSwitchProps, Switch } from '$lib/components'
+	import { FormField, type FormSwitchProps, Switch } from '$lib/components/index.js'
 
 	type $$Props = FormSwitchProps
 

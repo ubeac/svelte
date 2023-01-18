@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte/internal'
 
-	import { Button } from '$lib/components'
-	import { Icon } from '$lib/components'
-	import { classname } from '$lib/utils'
+	import { Button } from '$lib/components/index.js'
+	import { Icon } from '$lib/components/index.js'
+	import { classname } from '$lib/utils/index.js'
 
 	/**
 	 * Value to copy if button clicked

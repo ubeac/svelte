@@ -21480,7 +21480,7 @@ Form check
   color: #d63939;
 }
 
-.form-check-description, .u-switch-description, .u-checkbox-description {
+.form-check-description, .u-switch-description, .u-radio-description, .u-checkbox-description {
   display: block;
   color: var(--u-muted);
   font-size: 0.75rem;

@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/components'
+import type { Colors, ElProps } from '$lib/components/index.js'
 
 export interface CheckboxProps extends Partial<ElProps> {
 	color?: Colors

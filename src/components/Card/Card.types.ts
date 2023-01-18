@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/components'
+import type { Colors, ElProps } from '$lib/components/index.js'
 
 declare type CardStatusPositions = undefined | 'top' | 'bottom' | 'start'
 declare type CardStatusSizes = undefined | 'sm' | 'md' | 'lg'

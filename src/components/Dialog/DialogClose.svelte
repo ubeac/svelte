@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte'
 
-	import { El } from '$lib/components'
+	import { El } from '$lib/components/index.js'
 
 	import type { DialogCloseProps, DialogContext } from './Dialog.types'
 

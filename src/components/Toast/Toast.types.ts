@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/components'
+import type { ElProps } from '$lib/components/index.js'
 
 export interface ToastProps extends Partial<ElProps> {
 	show?: boolean

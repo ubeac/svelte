@@ -1,4 +1,4 @@
-import type { ElProps, PopupProps } from '$lib/components'
+import type { ElProps, PopupProps } from '$lib/components/index.js'
 
 export interface PopoverProps extends Partial<PopupProps> {
 	//

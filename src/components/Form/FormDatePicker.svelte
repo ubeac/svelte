@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DatePicker, type FormDatePickerProps, FormField } from '$lib/components'
+	import { DatePicker, type FormDatePickerProps, FormField } from '$lib/components/index.js'
 
 	type $$Props = FormDatePickerProps
 
