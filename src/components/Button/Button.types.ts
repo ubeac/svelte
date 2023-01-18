@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/components/index.js'
+import type { Colors, ElProps } from '$lib/index.js'
 
 // Button Types
 declare type ButtonTypes = 'submit' | 'button' | 'reset' | undefined

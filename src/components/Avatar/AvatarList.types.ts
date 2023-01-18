@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/components/index.js'
+import type { ElProps } from '$lib/index.js'
 
 export interface AvatarListProps extends Partial<ElProps> {
 	/**

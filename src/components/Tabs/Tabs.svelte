@@ -6,7 +6,7 @@
 	import { onDestroy, setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 
-	import { El, type TabsContext, type TabsProps } from '$lib/components/index.js'
+	import { El, type TabsContext, type TabsProps } from '$lib/index.js'
 
 	type $$Props = TabsProps
 

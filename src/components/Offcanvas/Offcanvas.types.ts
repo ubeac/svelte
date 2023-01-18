@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/components/index.js'
+import type { ElProps } from '$lib/index.js'
 
 export type OffcanvasPlacements = 'top' | 'end' | 'bottom' | 'start'
 

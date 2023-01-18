@@ -1,4 +1,4 @@
-import type { ElProps, FooterProps } from '$lib/components/index.js'
+import type { ElProps, FooterProps } from '$lib/index.js'
 
 export const THEME_NAMES = ['dark', 'light'] as const
 export type Themes = typeof THEME_NAMES[number]

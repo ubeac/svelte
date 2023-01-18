@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type BadgeProps, El } from '$lib/components/index.js'
+	import { type BadgeProps, El } from '$lib/index.js'
 
 	type $$Props = BadgeProps
 
