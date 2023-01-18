@@ -52,15 +52,15 @@ export * from './components/Card/Card.types'
 // // export { default as Carousel } from './components/Carousel/Carousel.svelte'
 // // export { default as CarouselItem } from './components/CarouselItem/CarouselItem.svelte'
 
-export { default as Checkbox } from './components/Checkbox/Checkbox.svelte'
-export { default as CheckboxGroup } from './components/Checkbox/CheckboxGroup.svelte'
-export * from './components/Checkbox/Checkbox.types'
+// export { default as Checkbox } from './components/Checkbox/Checkbox.svelte'
+// export { default as CheckboxGroup } from './components/Checkbox/CheckboxGroup.svelte'
+// export * from './components/Checkbox/Checkbox.types'
 
 // export { default as Confirm } from './components/Confirm/Confirm.svelte'
 // export * from './components/Confirm/Confirm.types'
 
-export { default as DatePicker } from './components/DatePicker/DatePicker.svelte'
-export * from './components/DatePicker/DatePicker.types'
+// export { default as DatePicker } from './components/DatePicker/DatePicker.svelte'
+// export * from './components/DatePicker/DatePicker.types'
 
 // export { default as Dialog } from './components/Dialog/Dialog.svelte'
 // export { default as DialogBody } from './components/Dialog/DialogBody.svelte'
@@ -105,18 +105,18 @@ export * from './components/Dot/Dot.types'
 export { default as Icon } from './components/Icon/Icon.svelte'
 export * from './components/Icon/Icon.types'
 
-export { default as Input} from './components/Input/Input.svelte'
-export * from './components/Input/Input.types'
+// export { default as Input} from './components/Input/Input.svelte'
+// export * from './components/Input/Input.types'
 
-export { default as Label } from './components/Label/Label.svelte'
+// export { default as Label } from './components/Label/Label.svelte'
 
 // export { default as Menu } from './components/Menu/Menu.svelte'
 // export * from './components/Menu/Menu.types'
 
-export { default as Offcanvas } from './components/Offcanvas/Offcanvas.svelte'
-export { default as OffcanvasBody } from './components/Offcanvas/OffcanvasBody.svelte'
-export { default as OffcanvasHeader } from './components/Offcanvas/OffcanvasHeader.svelte'
-export * from './components/Offcanvas/Offcanvas.types'
+// export { default as Offcanvas } from './components/Offcanvas/Offcanvas.svelte'
+// export { default as OffcanvasBody } from './components/Offcanvas/OffcanvasBody.svelte'
+// export { default as OffcanvasHeader } from './components/Offcanvas/OffcanvasHeader.svelte'
+// export * from './components/Offcanvas/Offcanvas.types'
 
 // export { default as Page } from './components/Page/Page.svelte'
 // export { default as PageBody } from './components/Page/PageBody.svelte'
