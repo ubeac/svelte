@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte'
 
 	import { El, Icon } from '$lib/index.js'
-	import { classname } from '$lib/utils'
+	import { classname } from '$lib/utils/index.js'
 
 	import type { AlertProps } from './Alert.types'
 
