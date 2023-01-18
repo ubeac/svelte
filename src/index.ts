@@ -18,8 +18,8 @@ export { default as AppHeader } from './components/App/AppHeader.svelte'
 // export { default as AppSidebar } from './components/App/AppSidebar.svelte'
 export * from './components/App/App.types'
 
-// export { default as Autocomplete } from './components/Autocomplete/Autocomplete.svelte'
-// export * from './components/Autocomplete/Autocomplete.types'
+export { default as Autocomplete } from './components/Autocomplete/Autocomplete.svelte'
+export * from './components/Autocomplete/Autocomplete.types'
 
 export { default as Avatar } from './components/Avatar/Avatar.svelte'
 export * from './components/Avatar/Avatar.types'
