@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type DotProps, El } from '$lib/components'
+	import { type DotProps, El } from '$lib/index.js'
 
 	type $$Props = DotProps
 

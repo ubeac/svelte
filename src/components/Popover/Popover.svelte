@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type PopoverProps, Popup, PopupArrow } from '$lib/components'
+	import { type PopoverProps, Popup, PopupArrow } from '$lib/index.js'
 
 	type $$Props = PopoverProps
 

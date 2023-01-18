@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/components'
+import type { Colors, ElProps } from '$lib/index.js'
 
 export interface AlertProps extends Partial<ElProps> {
 	color?: Colors

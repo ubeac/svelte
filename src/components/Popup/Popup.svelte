@@ -4,7 +4,7 @@
 	import { createPopper } from '@popperjs/core'
 	import type { Instance } from '@popperjs/core'
 
-	import { El, type PopupProps } from '$lib/components'
+	import { El, type PopupProps } from '$lib/index.js'
 
 	type $$Props = PopupProps
 

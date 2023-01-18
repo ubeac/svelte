@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, Popup, PopupArrow, type TooltipProps } from '$lib/components'
+	import { El, Popup, PopupArrow, type TooltipProps } from '$lib/index.js'
 
 	/**
 	 * Set Css Prefix for the Tooltip

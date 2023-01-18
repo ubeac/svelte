@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type TextareaProps } from '$lib/components'
+	import { El, type TextareaProps } from '$lib/index.js'
 
 	type $$Props = TextareaProps
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type FileUploaderProps } from '$lib/components'
+	import { El, type FileUploaderProps } from '$lib/index.js'
 
 	type $$Props = FileUploaderProps
 

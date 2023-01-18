@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type SelectProps } from '$lib/components'
+	import { El, type SelectProps } from '$lib/index.js'
 
 	type $$Props = SelectProps
 

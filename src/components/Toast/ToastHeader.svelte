@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type ElProps, type ToastHeaderProps } from '$lib/components'
+	import { El, type ElProps, type ToastHeaderProps } from '$lib/index.js'
 
 	type $$Props = ToastHeaderProps
 

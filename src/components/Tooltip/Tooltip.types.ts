@@ -1,4 +1,4 @@
-import type { PopupProps } from '$lib/components'
+import type { PopupProps } from '$lib/index.js'
 
 export interface TooltipProps extends PopupProps {
 	//
