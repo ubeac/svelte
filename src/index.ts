@@ -108,7 +108,7 @@ export * from './components/Icon/Icon.types'
 // export { default as Input} from './components/Input/Input.svelte'
 // export * from './components/Input/Input.types'
 
-// export { default as Label } from './components/Label/Label.svelte'
+export { default as Label } from './components/Label/Label.svelte'
 
 // export { default as Menu } from './components/Menu/Menu.svelte'
 // export * from './components/Menu/Menu.types'
