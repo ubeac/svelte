@@ -102,8 +102,8 @@ export * from './components/Button/Button.types'
 
 // // export { default as GoogleMapAutocomplete } from './components/GoogleMapAutocomplete/GoogleMapAutocomplete.svelte'
 // // export { default as GoogleMap } from './components/GoogleMap/GoogleMap.svelte'
-// export { default as Icon } from './components/Icon/Icon.svelte'
-// export * from './components/Icon/Icon.types'
+export { default as Icon } from './components/Icon/Icon.svelte'
+export * from './components/Icon/Icon.types'
 
 // export { default as Input} from './components/Input/Input.svelte'
 // export * from './components/Input/Input.types'
