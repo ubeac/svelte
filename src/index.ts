@@ -20,17 +20,29 @@
 // export { default as AvatarList } from './components/Avatar/AvatarList.svelte'
 // export * from './components/Avatar/AvatarList.types'
 
+<<<<<<< HEAD
 // export { default as Badge } from './components/Badge/Badge.svelte'
 // export * from './components/Badge/Badge.types'
 
 // export { default as El } from './components/El/El.svelte'
+=======
+export { default as Badge } from './components/Badge/Badge.svelte'
+// export * from './components/Badge/Badge.types'
+
+export { default as El } from './components/El/El.svelte'
+>>>>>>> dc21ff2623807374501b81b8ffe93321dd01fd15
 // export * from './components/El/El.types'
 
 // export { default as Breadcrumb } from './components/Breadcrumbs/Breadcrumb.svelte'
 // export { default as BreadcrumbItem } from './components/Breadcrumbs/BreadcrumbItem.svelte'
 // export * from './components/Breadcrumbs/Breadcrumb.types'
+<<<<<<< HEAD
 // 
 // export { default as Button } from './components/Button/Button.svelte'
+=======
+
+export { default as Button } from './components/Button/Button.svelte'
+>>>>>>> dc21ff2623807374501b81b8ffe93321dd01fd15
 // export * from './components/Button/Button.types'
 
 // export { default as Autocomplete } from './components/Autocomplete/Autocomplete.svelte'
@@ -168,5 +180,10 @@
 // export * from './components/Tooltip/Tooltip.types'
 
 
+<<<<<<< HEAD
 export * from './components/index.js'
 export * from './types/index.js'
+=======
+// // export * from './components/components/index.js'
+// export * from './types/index.js'
+>>>>>>> dc21ff2623807374501b81b8ffe93321dd01fd15

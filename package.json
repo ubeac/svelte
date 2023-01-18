@@ -1,6 +1,10 @@
 {
 	"name": "ubeac-svelte",
+<<<<<<< HEAD
 	"version": "0.0.12",
+=======
+	"version": "0.0.11",
+>>>>>>> dc21ff2623807374501b81b8ffe93321dd01fd15
 	"description": "uBeac's Opinionated Svelte Component library",
 	"sideEffects": false,
 	"keywords": [
