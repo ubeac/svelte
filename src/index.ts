@@ -59,8 +59,8 @@ export * from './components/Checkbox/Checkbox.types'
 export { default as Confirm } from './components/Confirm/Confirm.svelte'
 export * from './components/Confirm/Confirm.types'
 
-// export { default as DatePicker } from './components/DatePicker/DatePicker.svelte'
-// export * from './components/DatePicker/DatePicker.types'
+export { default as DatePicker } from './components/DatePicker/DatePicker.svelte'
+export * from './components/DatePicker/DatePicker.types'
 
 export { default as Dialog } from './components/Dialog/Dialog.svelte'
 export { default as DialogBody } from './components/Dialog/DialogBody.svelte'
