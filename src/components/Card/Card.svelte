@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { El } from '$lib/index.js'
+	import { CardHeader, CardTitle, El } from '$lib/index.js'
 
-	import { CardHeader, CardTitle } from '.'
 	import type { CardProps } from './Card.types'
 
 	type $$Props = CardProps
