@@ -18,8 +18,8 @@ export { default as AppHeader } from './components/App/AppHeader.svelte'
 // export { default as AppSidebar } from './components/App/AppSidebar.svelte'
 export * from './components/App/App.types'
 
-// export { default as Autocomplete } from './components/Autocomplete/Autocomplete.svelte'
-// export * from './components/Autocomplete/Autocomplete.types'
+export { default as Autocomplete } from './components/Autocomplete/Autocomplete.svelte'
+export * from './components/Autocomplete/Autocomplete.types'
 
 export { default as Avatar } from './components/Avatar/Avatar.svelte'
 export * from './components/Avatar/Avatar.types'
@@ -52,15 +52,15 @@ export * from './components/Card/Card.types'
 // // export { default as Carousel } from './components/Carousel/Carousel.svelte'
 // // export { default as CarouselItem } from './components/CarouselItem/CarouselItem.svelte'
 
-// export { default as Checkbox } from './components/Checkbox/Checkbox.svelte'
-// export { default as CheckboxGroup } from './components/Checkbox/CheckboxGroup.svelte'
-// export * from './components/Checkbox/Checkbox.types'
+export { default as Checkbox } from './components/Checkbox/Checkbox.svelte'
+export { default as CheckboxGroup } from './components/Checkbox/CheckboxGroup.svelte'
+export * from './components/Checkbox/Checkbox.types'
 
 export { default as Confirm } from './components/Confirm/Confirm.svelte'
 export * from './components/Confirm/Confirm.types'
 
-// export { default as DatePicker } from './components/DatePicker/DatePicker.svelte'
-// export * from './components/DatePicker/DatePicker.types'
+export { default as DatePicker } from './components/DatePicker/DatePicker.svelte'
+export * from './components/DatePicker/DatePicker.types'
 
 export { default as Dialog } from './components/Dialog/Dialog.svelte'
 export { default as DialogBody } from './components/Dialog/DialogBody.svelte'
