@@ -110,8 +110,8 @@ export * from './components/Icon/Icon.types'
 
 export { default as Label } from './components/Label/Label.svelte'
 
-// export { default as Menu } from './components/Menu/Menu.svelte'
-// export * from './components/Menu/Menu.types'
+export { default as Menu } from './components/Menu/Menu.svelte'
+export * from './components/Menu/Menu.types'
 
 export { default as Offcanvas } from './components/Offcanvas/Offcanvas.svelte'
 export { default as OffcanvasBody } from './components/Offcanvas/OffcanvasBody.svelte'
@@ -123,14 +123,14 @@ export { default as PageBody } from './components/Page/PageBody.svelte'
 export { default as PageHeader } from './components/Page/PageHeader.svelte'
 export * from './components/Page/Page.types'
 
-// export { default as Popover } from './components/Popover/Popover.svelte'
-// export { default as PopoverBody } from './components/Popover/PopoverBody.svelte'
-// export { default as PopoverHeader } from './components/Popover/PopoverHeader.svelte'
-// export * from './components/Popover/Popover.types'
+export { default as Popover } from './components/Popover/Popover.svelte'
+export { default as PopoverBody } from './components/Popover/PopoverBody.svelte'
+export { default as PopoverHeader } from './components/Popover/PopoverHeader.svelte'
+export * from './components/Popover/Popover.types'
 
-// export { default as Popup } from './components/Popup/Popup.svelte'
-// export { default as PopupArrow } from './components/Popup/PopupArrow.svelte'
-// export * from './components/Popup/Popup.types'
+export { default as Popup } from './components/Popup/Popup.svelte'
+export { default as PopupArrow } from './components/Popup/PopupArrow.svelte'
+export * from './components/Popup/Popup.types'
 
 export { default as Progress } from './components/Progress/Progress.svelte'
 export * from './components/Progress/Progress.types'
@@ -181,7 +181,7 @@ export * from './components/Tabs/Tab.types'
 // export { default as ToastHeader } from './components/Toast/ToastHeader.svelte'
 // export * from './components/Toast/Toast.types'
 
-// export { default as Tooltip } from './components/Tooltip/Tooltip.svelte'
-// export * from './components/Tooltip/Tooltip.types'
+export { default as Tooltip } from './components/Tooltip/Tooltip.svelte'
+export * from './components/Tooltip/Tooltip.types'
 
 export * from './types/index.js'
