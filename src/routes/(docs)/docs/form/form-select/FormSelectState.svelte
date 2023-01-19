@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { FormSelect } from '@ubeac/svelte'
 
-	let items = ['Red', 'Green', 'Blue', 'GHI', 'Cyan', 'DEF', 'Black']
+	let items = ['Red', 'Green', 'Blue', 'Cyan', 'Black']
 	let value: any = undefined
 </script>
 
