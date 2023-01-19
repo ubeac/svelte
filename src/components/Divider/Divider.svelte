@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type DividerProps, El } from '$lib/index.js'
+	import { type DividerProps, El } from '$lib'
 
 	type $$Props = DividerProps
 

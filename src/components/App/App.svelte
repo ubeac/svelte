@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type AppProps, El } from '$lib/index.js'
+	import { type AppProps, El } from '$lib'
 	import { classname } from '$lib/utils'
 
 	type $$Props = AppProps

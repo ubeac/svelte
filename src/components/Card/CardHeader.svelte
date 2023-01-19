@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/index.js'
+	import { El } from '$lib'
 
 	import type { CardHeaderProps } from './Card.types'
 

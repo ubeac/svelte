@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type OffcanvasBodyProps } from '$lib/index.js'
+	import { El, type OffcanvasBodyProps } from '$lib'
 
 	type $$Props = OffcanvasBodyProps
 	/**

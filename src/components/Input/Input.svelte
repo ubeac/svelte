@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 
 	// import Inputmask from 'inputmask'
-	import { El, type InputProps } from '$lib/index.js'
+	import { El, type InputProps } from '$lib'
 
 	type $$Props = InputProps
 

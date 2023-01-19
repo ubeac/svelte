@@ -1,3 +1,3 @@
-import type { ElProps } from '$lib/index.js'
+import type { ElProps } from '$lib'
 
 export interface FooterProps extends Partial<ElProps> {}

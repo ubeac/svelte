@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type TableProps } from '$lib/index.js'
+	import { El, type TableProps } from '$lib'
 
 	type $$Props = TableProps
 

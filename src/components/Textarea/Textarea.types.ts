@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/index.js'
+import type { ElProps } from '$lib'
 
 export const TEXTAREA_SIZES = ['sm', 'md', 'lg'] as const
 export type TextareaSizes = typeof TEXTAREA_SIZES[number]

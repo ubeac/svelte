@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type DialogTitleProps, El } from '$lib/index.js'
+	import { type DialogTitleProps, El } from '$lib'
 
 	type $$Props = DialogTitleProps
 

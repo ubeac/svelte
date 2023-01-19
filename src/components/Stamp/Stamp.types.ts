@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/index.js'
+import type { Colors, ElProps } from '$lib'
 
 declare type CardStampPositions = undefined | 'top-start' | 'top-end' | 'bottom-start' | 'bottom-end'
 declare type CardStampSizes = undefined | 'sm' | 'md' | 'lg'

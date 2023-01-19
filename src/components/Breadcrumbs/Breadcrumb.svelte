@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type BreadcrumbProps, El } from '$lib/index.js'
+	import { type BreadcrumbProps, El } from '$lib'
 
 	type $$Props = BreadcrumbProps
 

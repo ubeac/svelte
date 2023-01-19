@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte'
 
-	import { Button, El, type OffcanvasHeaderProps } from '$lib/index.js'
+	import { Button, El, type OffcanvasHeaderProps } from '$lib'
 
 	type $$Props = OffcanvasHeaderProps
 

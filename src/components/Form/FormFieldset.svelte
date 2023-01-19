@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, FormField, type FormFieldsetProps } from '$lib/index.js'
+	import { Fieldset, FormField, type FormFieldsetProps } from '$lib'
 
 	type $$Props = FormFieldsetProps
 	export let cssPrefix: $$Props['cssPrefix'] = 'form-fieldset'

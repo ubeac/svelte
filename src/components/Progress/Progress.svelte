@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { El } from '$lib/index.js'
-	import type { ProgressProps } from '$lib/index.js'
+	import { El } from '$lib'
+	import type { ProgressProps } from '$lib'
 
 	type $$Props = ProgressProps
 

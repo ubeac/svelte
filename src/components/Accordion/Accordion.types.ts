@@ -1,6 +1,6 @@
 import type { Writable } from 'svelte/store'
 
-import type { ElProps } from '$lib/index.js'
+import type { ElProps } from '$lib'
 
 export interface AccordionsProps extends Partial<ElProps> {
 	group?: string

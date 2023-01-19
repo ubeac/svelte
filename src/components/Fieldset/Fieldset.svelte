@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type FieldsetProps } from '$lib/index.js'
+	import { El, type FieldsetProps } from '$lib'
 
 	type $$Props = FieldsetProps
 

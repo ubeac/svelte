@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/index.js'
+import type { Colors, ElProps } from '$lib'
 
 export interface DotProps extends Partial<ElProps> {
 	color?: Colors

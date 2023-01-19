@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type TableFootProps } from '$lib/index.js'
+	import { El, type TableFootProps } from '$lib'
 
 	type $$Props = TableFootProps
 

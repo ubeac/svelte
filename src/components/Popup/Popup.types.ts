@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/index.js'
+import type { ElProps } from '$lib'
 
 export const POPUP_PLACEMENTS = [
 	'auto',

@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/index.js'
+import type { Colors, ElProps } from '$lib'
 
 declare type progressSizes = 'sm' | 'md'
 
