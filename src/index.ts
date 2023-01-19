@@ -50,7 +50,7 @@ export { default as CardTitle } from './components/Card/CardTitle.svelte'
 export * from './components/Card/Card.types'
 
 export { default as Carousel } from './components/Carousel/Carousel.svelte'
-export { default as CarouselItem } from './components/CarouselItem/CarouselItem.svelte'
+export { default as CarouselItem } from './components/Carousel/CarouselItem.svelte'
 
 export { default as Checkbox } from './components/Checkbox/Checkbox.svelte'
 export { default as CheckboxGroup } from './components/Checkbox/CheckboxGroup.svelte'
