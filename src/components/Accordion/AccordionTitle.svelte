@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type AccordionTitleProps, El } from '$lib'
+	import { type AccordionTitleProps, El } from '$lib/index.js'
 
 	type $$Props = AccordionTitleProps
 

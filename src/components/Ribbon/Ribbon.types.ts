@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib'
+import type { Colors, ElProps } from '$lib/index.js'
 
 declare type RibbonPositions = undefined | 'top' | 'start' | 'end' | 'bottom'
 

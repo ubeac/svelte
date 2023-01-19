@@ -2,7 +2,7 @@
 	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 
-	import { type AccordionsProps, El } from '$lib'
+	import { type AccordionsProps, El } from '$lib/index.js'
 
 	type $$Props = AccordionsProps
 

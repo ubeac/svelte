@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib'
+import type { ElProps } from '$lib/index.js'
 
 export const SELECT_SIZES = ['sm', 'md', 'lg'] as const
 export type SelectSizes = typeof SELECT_SIZES[number]

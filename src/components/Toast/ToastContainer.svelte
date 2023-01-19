@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type ToastContainerProps } from '$lib'
+	import { El, type ToastContainerProps } from '$lib/index.js'
 
 	type $$Props = ToastContainerProps
 

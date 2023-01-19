@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib'
+	import { El } from '$lib/index.js'
 
 	import type { AppHeaderProps } from './App.types'
 

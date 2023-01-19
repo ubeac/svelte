@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, Label, type SwitchProps } from '$lib'
+	import { El, Label, type SwitchProps } from '$lib/index.js'
 
 	type $$Props = SwitchProps
 

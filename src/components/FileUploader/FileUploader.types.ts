@@ -1,4 +1,4 @@
-import type { ElProps, InputSizes, InputStates } from '$lib'
+import type { ElProps, InputSizes, InputStates } from '$lib/index.js'
 
 export interface FileUploaderProps extends Partial<ElProps> {
 	accept?: string

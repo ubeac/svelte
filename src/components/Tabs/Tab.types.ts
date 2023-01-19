@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib'
+import type { ElProps } from '$lib/index.js'
 
 export interface TabsProps extends Partial<ElProps> {
 	vertical?: boolean

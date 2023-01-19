@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type RadioProps } from '$lib'
+	import { El, type RadioProps } from '$lib/index.js'
 
 	type $$Props = RadioProps
 

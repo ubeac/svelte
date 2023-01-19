@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Checkbox, type FormCheckboxProps, FormField } from '$lib'
+	import { Checkbox, type FormCheckboxProps, FormField } from '$lib/index.js'
 
 	type $$Props = FormCheckboxProps
 

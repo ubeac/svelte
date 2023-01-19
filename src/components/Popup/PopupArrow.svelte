@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type PopupArrowProps } from '$lib'
+	import { El, type PopupArrowProps } from '$lib/index.js'
 
 	type $$Props = PopupArrowProps
 

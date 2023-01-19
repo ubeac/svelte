@@ -1,6 +1,6 @@
 import type { ILPConfiguration } from 'litepicker/dist/types/interfaces'
 
-import type { ElProps, InputSizes, InputStates } from '$lib'
+import type { ElProps, InputSizes, InputStates } from '$lib/index.js'
 
 export interface DatePickerProps extends Partial<ElProps> {
 	format?: string

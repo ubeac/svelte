@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FileUploader, FormField, type FormFileUploaderProps } from '$lib'
+	import { FileUploader, FormField, type FormFileUploaderProps } from '$lib/index.js'
 
 	type $$Props = FormFileUploaderProps
 

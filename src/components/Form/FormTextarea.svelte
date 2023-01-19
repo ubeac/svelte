@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { FormField, Textarea } from '$lib'
-	import type { FormTextAreaProps } from '$lib'
+	import { FormField, Textarea } from '$lib/index.js'
+	import type { FormTextAreaProps } from '$lib/index.js'
 
 	type $$Props = FormTextAreaProps
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FormField, type FormSelectProps, Select, type SelectProps } from '$lib'
+	import { FormField, type FormSelectProps, Select, type SelectProps } from '$lib/index.js'
 
 	type $$Props = FormSelectProps
 
