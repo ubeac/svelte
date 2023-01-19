@@ -100,8 +100,6 @@ export { default as FormTextarea } from './components/Form/FormTextarea.svelte'
 export { default as FormField } from './components/Form/FormField.svelte'
 export * from './components/Form/Form.types'
 
-export { default as GoogleMapAutocomplete } from './components/GoogleMapAutocomplete/GoogleMapAutocomplete.svelte'
-export { default as GoogleMap } from './components/GoogleMap/GoogleMap.svelte'
 export { default as Icon } from './components/Icon/Icon.svelte'
 export * from './components/Icon/Icon.types'
 
