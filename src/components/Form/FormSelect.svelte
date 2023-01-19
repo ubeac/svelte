@@ -4,19 +4,9 @@
 	type $$Props = FormSelectProps
 
 	/**
-	 * Set the tag of FormSelect
-	 */
-	export let tag: $$Props['tag'] = 'select'
-
-	/**
 	 * Select items
 	 */
 	export let items: $$Props['items']
-
-	/**
-	 * Set multiple attribute to select
-	 */
-	export let multiple: $$Props['multiple'] = false
 
 	/**
 	 * Value that selected options are bound to
@@ -24,17 +14,7 @@
 	export let value: $$Props['value'] = undefined
 
 	/**
-	 * Set the selected option
-	 */
-	export let selected: $$Props['selected'] = undefined
-
-	/**
 	 * Set the size of the select component
-	 */
-	export let selectSize: $$Props['selectSize'] = undefined
-
-	/**
-	 * Set size attribute of select
 	 */
 	export let size: $$Props['size'] = undefined
 
@@ -73,14 +53,10 @@
 
 	$: {
 		selectProps = {
-			tag,
 			placeholder,
 			disabled,
 			size,
 			items,
-			selectSize,
-			selected,
-			multiple,
 			state,
 		}
 
