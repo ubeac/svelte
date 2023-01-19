@@ -4,8 +4,7 @@
 	import TomSelect from 'tom-select'
 	import type { TomSettings } from 'tom-select/dist/types/types'
 
-	import { type AutocompleteProps, El } from '$lib/index.js'
-	import { classname } from '$lib/utils'
+	import { type AutocompleteProps, classname, El } from '$lib/index.js'
 
 	type $$Props = AutocompleteProps
 

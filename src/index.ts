@@ -184,4 +184,4 @@ export * from './components/Toast/Toast.types'
 export { default as Tooltip } from './components/Tooltip/Tooltip.svelte'
 export * from './components/Tooltip/Tooltip.types'
 
-export * from './types/index.js'
+export * from './components/utils'

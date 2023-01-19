@@ -10,6 +10,7 @@
 </script>
 
 <h1>Radio</h1>
+<p>Use more advanced Radio control to display the range of available options.</p>
 
 <Doc title="Label">
 	<code>label</code> string property is used to set the radio's label. Also, label <code>slot</code> provides for
