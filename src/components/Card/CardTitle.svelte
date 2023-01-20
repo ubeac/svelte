@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { El } from '$lib/index.js'
-	import type { ElProps } from '$lib/index.js'
+	import { El } from '$lib/components'
+	import type { ElProps } from '$lib/components'
 
 	type $$Props = Partial<ElProps>
 

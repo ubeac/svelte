@@ -11,7 +11,7 @@ import type {
 	RadioGroupProps,
 	SelectProps,
 	SwitchProps,
-} from '$lib/index.js'
+} from '$lib/components'
 
 export interface FormFieldProps extends Partial<ElProps> {
 	/**

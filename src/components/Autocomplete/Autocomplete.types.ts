@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/index.js'
+import type { ElProps } from '$lib/components'
 
 export const AUTOCOMPLETE_SIZES = ['sm', 'md', 'lg'] as const
 export type AutocompleteSizes = typeof AUTOCOMPLETE_SIZES[number]

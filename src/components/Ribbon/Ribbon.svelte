@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/index.js'
+	import { El } from '$lib/components'
 
 	import type { RibbonProps } from './Ribbon.types'
 

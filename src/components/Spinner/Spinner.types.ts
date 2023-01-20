@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '$lib/index.js'
+import type { Colors, ElProps } from '$lib/components'
 
 export type SpinnerSizes = 'sm' | 'md' | 'lg'
 export type SpinnerShapes = 'border' | 'grow'

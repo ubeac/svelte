@@ -1,7 +1,7 @@
 <svelte:options accessors />
 
 <script lang="ts">
-	import { Button, classname, Dialog, DialogBody, DialogContent } from '$lib/index.js'
+	import { Button, classname, Dialog, DialogBody, DialogContent } from '$lib/components'
 
 	import type { ConfirmTypes } from './Confirm.types'
 

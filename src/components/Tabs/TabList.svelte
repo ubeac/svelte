@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, type TabListProps } from '$lib/index.js'
+	import { El, type TabListProps } from '$lib/components'
 
 	type $$Props = TabListProps
 

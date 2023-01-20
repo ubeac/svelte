@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/index.js'
+	import { El } from '$lib/components'
 
 	import type { PageProps } from './Page.types'
 

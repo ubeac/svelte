@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, Radio, type RadioGroupProps } from '$lib/index.js'
+	import { El, Radio, type RadioGroupProps } from '$lib/components'
 
 	type $$Props = RadioGroupProps
 	/**

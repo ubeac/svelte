@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/index.js'
+import type { ElProps } from '$lib/components'
 
 export interface BreadcrumbProps extends Partial<ElProps> {
 	/**
