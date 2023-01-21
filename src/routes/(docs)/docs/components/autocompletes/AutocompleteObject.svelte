@@ -9,8 +9,8 @@
 		{ id: 'fifth', value: 'Fifth Item' },
 	]
 
-	let value = ''
+	let value = []
 </script>
 
-<Autocomplete {items} key="id" text="value" bind:value />
-<i>value: {value}</i>
+<Autocomplete {items} itemKey="id" itemValue="value" bind:value />
+<i>value: {JSON.stringify(value)}</i>
