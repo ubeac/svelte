@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { El, Icon } from '$lib/components'
-
-	import type { StampProps } from './Stamp.types'
+	import { El, Icon, type StampProps } from '$lib/components'
 
 	type $$Props = StampProps
 

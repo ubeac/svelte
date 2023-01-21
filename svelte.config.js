@@ -39,7 +39,7 @@ const config = {
 	},
 	package: {
 		files(file) {
-			const items = ['index.d.ts', 'index.ts', 'styles', 'components', 'scss']
+			const items = ['index.ts', 'styles', 'components', 'scss']
 			return items.some((item) => file.startsWith(item))
 		},
 	},
