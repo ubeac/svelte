@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { type DialogTitleProps, El } from '$lib/components'
+	import type { DialogTitleProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = DialogTitleProps
 

@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { type AppProps, classname, El } from '$lib/components'
+	import type { AppProps } from '$lib/components'
+	import El from '$lib/components/El/El.svelte'
+	import { classname } from '$lib/components/utils'
 
 	type $$Props = AppProps
 

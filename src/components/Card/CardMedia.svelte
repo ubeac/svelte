@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-
+	import El from '../El/El.svelte'
 	import type { CardMediaProps } from './Card.types'
 
 	type $$Props = CardMediaProps

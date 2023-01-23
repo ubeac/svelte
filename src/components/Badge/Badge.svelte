@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { type BadgeProps, El } from '$lib/components'
+	import type { BadgeProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = BadgeProps
 

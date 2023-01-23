@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { Footer } from '$lib/components'
-
+	import Footer from '../Footer/Footer.svelte'
 	import type { AppFooterProps } from './App.types'
 
 	type $$Props = AppFooterProps

@@ -1,8 +1,12 @@
 <svelte:options accessors />
 
 <script lang="ts">
-	import { Button, classname, Dialog, DialogBody, DialogContent } from '$lib/components'
+	import { classname } from '$lib/components/utils'
 
+	import Button from '../Button/Button.svelte'
+	import Dialog from '../Dialog/Dialog.svelte'
+	import DialogBody from '../Dialog/DialogBody.svelte'
+	import DialogContent from '../Dialog/DialogContent.svelte'
 	import type { ConfirmTypes } from './Confirm.types'
 
 	/**

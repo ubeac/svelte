@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { createEventDispatcher, getContext } from 'svelte'
 
-	import { type AccordionContext, type AccordionHeaderProps, type AccordionsContext, El } from '$lib/components'
+	import type { AccordionContext, AccordionHeaderProps, AccordionsContext } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	const dispatch = createEventDispatcher()
 

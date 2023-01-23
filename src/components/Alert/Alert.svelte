@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte'
 
-	import { classname, El, Icon } from '$lib/components'
+	import { classname } from '$lib/components/utils'
 
+	import El from '../El/El.svelte'
+	import Icon from '../Icon/Icon.svelte'
 	import type { AlertProps } from './Alert.types'
 
 	type $$Props = AlertProps
@@ -55,11 +57,11 @@
 		dismissible,
 		filled,
 	}
-	$: otherProps = { cssPrefix }
+	$: otherProps = { cssPrefix, role: "alert" }
 </script>
 
 {#if value}
-	<El {...$$restProps} {cssProps} {...otherProps} role="alert">
+	<El {...$$restProps} {cssProps} {...otherProps}>
 		{#if icon || $$slots.start}
 			<div class={classname(cssPrefix + '-start')}>
 				<slot name="start">

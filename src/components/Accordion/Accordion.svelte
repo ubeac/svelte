@@ -2,7 +2,9 @@
 	import { getContext, setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 
-	import { AccordionHeader, El } from '$lib/components'
+	import El from '$lib/components/El/El.svelte'
+	import AccordionHeader from './AccordionHeader.svelte'
+	
 	import type { AccordionContext, AccordionProps, AccordionsContext } from '$lib/components'
 
 	type $$Props = AccordionProps

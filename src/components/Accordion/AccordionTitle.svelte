@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { type AccordionTitleProps, El } from '$lib/components'
+	import type { AccordionTitleProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = AccordionTitleProps
 
