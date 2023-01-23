@@ -68,7 +68,7 @@
 
 	let instance: TomSelect
 
-	let loaded = true
+	let loaded = false
 
 	let options = items
 
@@ -83,36 +83,22 @@
 	$: settings = {
 		dropdownClass: classname(cssPrefix + '-dropdown'),
 		optionClass: classname(cssPrefix + '-option'),
-		valueField: itemKey!,
-		labelField: itemValue!,
-		searchField: [itemKey!, itemValue!],
-		load(query: string, callback: any) {
-			if (load) {
-				load(query)
-					.then((data) => {
-						callback(data)
-					})
-					.catch(() => callback())
-			}
-		},
-		onInitialize: () => {
-			loaded = true
-		},
 		onChange: (selected: any) => {
 			const filterd = items?.filter((item) => {
 				return selected.includes(`${getKey(item)}`)
 			})
 			value = multiple ? filterd : filterd?.[0]
 		},
+		onInitialize: () => {
+			loaded = true
+		},
 	} as Partial<TomSettings>
 
 	$: disabled ? instance?.disable() : instance?.enable()
 
-	$: update(items)
+	$: update('value', value)
 
-	$: if (typeof value != 'undefined') {
-		instance?.setValue(value, true)
-	}
+	$: update('items', items)
 
 	function getKey(item: any) {
 		return typeof item === 'object' ? item[itemKey!] : item
@@ -131,24 +117,41 @@
 		instance?.destroy()
 	}
 
-	function update(items: any) {
-		options = items
+	function update(key: string, input: any) {
+		if (!instance) return
 
-		if (typeof window == 'undefined') return
+		if (key === 'items') {
+			if (typeof window === 'undefined' || options === input) return
 
-		requestAnimationFrame(() => {
-			instance?.clear()
-			instance?.clearOptions()
-			instance?.sync()
-		})
+			const current = value
+
+			options = input
+
+			requestAnimationFrame(() => {
+				instance.clear(true)
+				instance.clearOptions()
+				instance.sync()
+				requestAnimationFrame(() => update('value', current))
+			})
+		}
+
+		if (key === 'value') {
+			if (typeof input === 'undefined') return
+
+			const mapped = [input].flat().map(getKey)
+
+			const keys = multiple ? mapped : mapped?.[0]
+
+			instance.setValue(keys, true)
+		}
 	}
 
-	onMount(() => bind())
+	onMount(bind)
 
-	onDestroy(() => unbind())
+	onDestroy(unbind)
 </script>
 
-<El tag="select" bind:element bind:value {...$$restProps} {...props}>
+<El tag="select" bind:element {...$$restProps} {...props}>
 	{#each options || [] as item, index}
 		<slot {index} {item}>
 			<!-- DON'T USE 'El' INSTEAD OF 'option' -->
