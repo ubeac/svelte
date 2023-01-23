@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { CardHeader, CardTitle, El } from '$lib/components'
-
-	import type { CardProps } from './Card.types'
+	import { CardHeader, type CardProps, CardTitle, El } from '$lib/components'
 
 	type $$Props = CardProps
+
 	export let cssPrefix: $$Props['cssPrefix'] = 'card'
 
 	export let statusCssPrefix: $$Props['statusCssPrefix'] = 'card-status'

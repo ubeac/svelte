@@ -1,6 +1,6 @@
 <script lang="ts">
 	// import Icon from '@iconify/svelte'
-	import { type IconProps, classname } from '$lib/components'
+	import { classname, type IconProps } from '$lib/components'
 
 	type $$Props = IconProps
 
