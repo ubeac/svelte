@@ -70,8 +70,6 @@
 
 	let loaded = false
 
-	let options = items
-
 	$: props = {
 		cssPrefix,
 		disabled,
@@ -83,14 +81,19 @@
 	$: settings = {
 		dropdownClass: classname(cssPrefix + '-dropdown'),
 		optionClass: classname(cssPrefix + '-option'),
-		sortField(a, b) {
-			const i = items?.findIndex((item) => getKey(item) === a.id) || -1
-			const j = items?.findIndex((item) => getKey(item) === b.id) || -1
-			return i < j ? -1 : +1
+		valueField: itemKey!,
+		labelField: itemValue!,
+		searchField: [itemValue!],
+		load(query: string, callback: Function) {
+			load?.(query)
+				.then((items) => {
+					callback(convert(items))
+				})
+				.catch(() => callback([]))
 		},
-		onChange(selected: any) {
-			const filterd = items?.filter((item) => {
-				return selected.includes(`${getKey(item)}`)
+		onChange(keys) {
+			const filterd = [keys].flat().map((key: any) => {
+				return instance.options[key]?.item
 			})
 			value = multiple ? filterd : filterd?.[0]
 		},
@@ -104,6 +107,16 @@
 	$: instance && update('items', items)
 
 	$: instance && update('value', value)
+
+	function convert(items: any) {
+		return items.map((item: any) => {
+			return {
+				[itemKey!]: getKey(item),
+				[itemValue!]: getValue(item),
+				item,
+			}
+		})
+	}
 
 	function getKey(item: any) {
 		const key = typeof item === 'object' ? item[itemKey!] : item
@@ -129,15 +142,13 @@
 
 	function update(key: string, input: any) {
 		if (key === 'items') {
-			if (typeof window === 'undefined' || options === input) return
-
-			options = input
-
 			instance.clear(true)
 
 			instance.clearOptions()
 
-			requestAnimationFrame(() => instance.sync())
+			instance.addOptions(convert(input))
+
+			update('value', value)
 		}
 
 		if (key === 'value') {
@@ -155,7 +166,7 @@
 </script>
 
 <El tag="select" bind:element {...$$restProps} {...props}>
-	{#each options || [] as item, index}
+	{#each items || [] as item, index}
 		<slot {index} {item}>
 			<!-- DON'T USE 'El' INSTEAD OF 'option' -->
 			<option value={getKey(item)} selected={getSelected(item)}>
