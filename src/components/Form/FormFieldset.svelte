@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { FormFieldsetProps } from '$lib/components'
 
-	import Fieldset from './Fieldset.svelte'
+	import Fieldset from '../Fieldset/Fieldset.svelte'
 	import FormField from './FormField.svelte'
 
 	type $$Props = FormFieldsetProps

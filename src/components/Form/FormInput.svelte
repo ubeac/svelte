@@ -2,7 +2,7 @@
 	import type { FormInputProps } from '$lib/components'
 
 	import FormField from './FormField.svelte'
-	import Input from './Input.svelte'
+	import Input from './../Input/Input.svelte'
 
 	type $$Props = FormInputProps
 
