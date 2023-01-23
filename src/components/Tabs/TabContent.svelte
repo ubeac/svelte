@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type TabContentProps } from '$lib/components'
+	import type { TabContentProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = TabContentProps
 

@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type SelectProps } from '$lib/components'
+	import type { SelectProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = SelectProps
 

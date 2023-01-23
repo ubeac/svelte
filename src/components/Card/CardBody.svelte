@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { El } from '$lib/components'
 	import type { ElProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = Partial<ElProps>
 

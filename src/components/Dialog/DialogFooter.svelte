@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { type DialogFooterProps, El } from '$lib/components'
+	import type { DialogFooterProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = DialogFooterProps
 

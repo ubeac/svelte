@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type TextareaProps } from '$lib/components'
+	import type { TextareaProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = TextareaProps
 

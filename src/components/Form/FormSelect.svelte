@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { FormField, type FormSelectProps, Select, type SelectProps } from '$lib/components'
+	import type { FormSelectProps, SelectProps } from '$lib/components'
+
+	import Select from '../Select/Select.svelte'
+	import FormField from './FormField.svelte'
 
 	type $$Props = FormSelectProps
 

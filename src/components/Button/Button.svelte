@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { type ButtonProps, El } from '$lib/components'
+	import type { ButtonProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = ButtonProps
 

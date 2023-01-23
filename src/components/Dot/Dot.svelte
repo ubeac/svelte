@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { type DotProps, El } from '$lib/components'
+	import type { DotProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = DotProps
 

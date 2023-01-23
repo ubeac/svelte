@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { El, Label } from '$lib/components'
 	import type { FormFieldProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
+	import Label from '../Label/Label.svelte'
 
 	type $$Props = FormFieldProps
 

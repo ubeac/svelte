@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { CardHeader, type CardProps, CardTitle, El } from '$lib/components'
+	import type { CardProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
+	import CardHeader from './CardHeader.svelte'
+	import CardTitle from './CardTitle.svelte'
 
 	type $$Props = CardProps
 

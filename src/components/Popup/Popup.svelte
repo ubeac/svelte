@@ -4,7 +4,9 @@
 	import { createPopper } from '@popperjs/core'
 	import type { Instance } from '@popperjs/core'
 
-	import { El, type PopupProps } from '$lib/components'
+	import type { PopupProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = PopupProps
 

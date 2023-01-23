@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { Checkbox, type CheckboxGroupProps, El } from '$lib/components'
+	import type { CheckboxGroupProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
+	import Checkbox from './Checkbox.svelte'
 
 	type $$Props = CheckboxGroupProps
 

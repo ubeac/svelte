@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-
+	import El from '../El/El.svelte'
 	import type { AppBodyProps } from './App.types'
 
 	type $$Props = AppBodyProps

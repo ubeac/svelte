@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { FormField, type FormRadioGroupProps, RadioGroup, type RadioGroupProps } from '$lib/components'
+	import type { FormRadioGroupProps, RadioGroupProps } from '$lib/components'
+
+	import RadioGroup from '../Radio/RadioGroup.svelte'
+	import FormField from './FormField.svelte'
 
 	type $$Props = FormRadioGroupProps
 

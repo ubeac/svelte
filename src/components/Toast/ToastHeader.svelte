@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type ElProps, type ToastHeaderProps } from '$lib/components'
+	import type { ElProps, ToastHeaderProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = ToastHeaderProps
 

@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { type DialogHeaderProps, El } from '$lib/components'
+	import type { DialogHeaderProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = DialogHeaderProps
 
