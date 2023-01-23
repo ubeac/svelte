@@ -3,7 +3,7 @@
 	import { writable } from 'svelte/store'
 
 	import type { AccordionContext, AccordionProps, AccordionsContext } from '$lib/components'
-	import El from '$lib/components/El/El.svelte'
+	import El from '../El/El.svelte'
 
 	import AccordionHeader from './AccordionHeader.svelte'
 
