@@ -1,5 +1,6 @@
 <script lang="ts">
-	// import Icon from '@iconify/svelte'
+	import 'iconify-icon'
+
 	import type { IconProps } from '$lib/components'
 	import { classname } from '$lib/components/utils'
 
@@ -60,5 +61,4 @@
 	)
 </script>
 
-ICON
-<!-- <Icon icon="{pack}:{name}" {...$$restProps} class={classes} /> -->
+<iconify-icon icon="{pack}:{name}" {...$$restProps} class={classes} width="100%" height="100%" />
