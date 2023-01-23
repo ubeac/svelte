@@ -4,8 +4,16 @@
 
 	import 'prism-svelte'
 
-	import { Card, CardHeader, classname, Icon, TabContent, TabItem, TabList, TabPanel, Tabs } from '$lib/components'
-
+	import Card from '../../components/Card/Card.svelte'
+	import CardHeader from '../../components/Card/CardHeader.svelte'
+	import Icon from '../../components/Icon/Icon.svelte'
+	import TabContent from '../../components/Tabs/TabContent.svelte'
+	import TabItem from '../../components/Tabs/TabItem.svelte'
+	import TabList from '../../components/Tabs/TabList.svelte'
+	import TabPanel from '../../components/Tabs/TabPanel.svelte'
+	import Tabs from '../../components/Tabs/Tabs.svelte'
+	import { classname } from '../../components/utils'
+	
 	import PreviewCopyButton from './PreviewCopyButton.svelte'
 
 	/**

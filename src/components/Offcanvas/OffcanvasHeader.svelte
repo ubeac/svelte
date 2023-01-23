@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { getContext } from 'svelte'
 
-	import { Button, El, type OffcanvasHeaderProps } from '$lib/components'
-
+	import type { OffcanvasHeaderProps } from '$lib/components'
+	import Button from '../Button/Button.svelte'
+	import El from '../El/El.svelte'
+	
 	type $$Props = OffcanvasHeaderProps
 
 	/**
