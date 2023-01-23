@@ -9,7 +9,7 @@
 		{ id: 'fifth', value: 'Fifth Item' },
 	]
 
-	let value = []
+	let value
 </script>
 
 <Autocomplete {items} itemKey="id" itemValue="value" bind:value />
