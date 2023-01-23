@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { type MenuProps, Popup } from '$lib/components'
+	import type { MenuProps } from '$lib/components'
+
+	import Popup from '../Popup/Popup.svelte'
 
 	type $$Props = MenuProps
 

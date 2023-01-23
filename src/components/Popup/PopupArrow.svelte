@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type PopupArrowProps } from '$lib/components'
+	import type { PopupArrowProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = PopupArrowProps
 

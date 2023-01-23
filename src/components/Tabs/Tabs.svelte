@@ -6,7 +6,9 @@
 	import { onDestroy, setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 
-	import { El, type TabsContext, type TabsProps } from '$lib/components'
+	import type { TabsContext, TabsProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = TabsProps
 

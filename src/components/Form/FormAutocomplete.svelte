@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { Autocomplete, type FormAutocompleteProps, FormField } from '$lib/components'
+	import type { FormAutocompleteProps } from '$lib/components'
+
+	import Autocomplete from '../Autocomplete/Autocomplete.svelte'
+	import FormField from './FormField.svelte'
 
 	type $$Props = FormAutocompleteProps
 

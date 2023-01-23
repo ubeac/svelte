@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { FormField, Textarea } from '$lib/components'
 	import type { FormTextAreaProps } from '$lib/components'
+
+	import Textarea from '../Textarea/Textarea.svelte'
+	import FormField from './FormField.svelte'
 
 	type $$Props = FormTextAreaProps
 

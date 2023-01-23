@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type TableRowProps } from '$lib/components'
+	import type { TableRowProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = TableRowProps
 

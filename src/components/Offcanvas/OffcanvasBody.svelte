@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type OffcanvasBodyProps } from '$lib/components'
+	import type { OffcanvasBodyProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = OffcanvasBodyProps
 	/**

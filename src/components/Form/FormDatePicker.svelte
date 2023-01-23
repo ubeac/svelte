@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { DatePicker, type FormDatePickerProps, FormField } from '$lib/components'
+	import type { FormDatePickerProps } from '$lib/components'
+
+	import DatePicker from '../DatePicker/DatePicker.svelte'
+	import FormField from './FormField.svelte'
 
 	type $$Props = FormDatePickerProps
 

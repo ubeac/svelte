@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type TableBodyProps } from '$lib/components'
+	import type { TableBodyProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = TableBodyProps
 

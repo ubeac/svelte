@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type PopoverBodyProps } from '$lib/components'
+	import type { PopoverBodyProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = PopoverBodyProps
 

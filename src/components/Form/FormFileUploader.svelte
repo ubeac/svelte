@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { FileUploader, FormField, type FormFileUploaderProps } from '$lib/components'
+	import type { FormFileUploaderProps } from '$lib/components'
+
+	import FileUploader from '../FileUploader/FileUploader.svelte'
+	import FormField from './FormField.svelte'
 
 	type $$Props = FormFileUploaderProps
 

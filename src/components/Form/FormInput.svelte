@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { FormField, type FormInputProps, Input } from '$lib/components'
+	import type { FormInputProps } from '$lib/components'
+
+	import FormField from './FormField.svelte'
+	import Input from './Input.svelte'
 
 	type $$Props = FormInputProps
 

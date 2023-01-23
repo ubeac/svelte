@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { El, type StatusProps } from '$lib/components'
+	import type { StatusProps } from '$lib/components'
+
+	import El from '../El/El.svelte'
 
 	type $$Props = StatusProps
 

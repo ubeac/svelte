@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onMount, setContext } from 'svelte'
 
-	import { El, type OffcanvasProps } from '$lib/components'
+	import type { OffcanvasProps } from '$lib/components'
+	import El from '../El/El.svelte'
 
 	type $$Props = OffcanvasProps
 
