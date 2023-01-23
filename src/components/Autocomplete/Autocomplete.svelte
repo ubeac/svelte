@@ -83,8 +83,10 @@
 	$: settings = {
 		dropdownClass: classname(cssPrefix + '-dropdown'),
 		optionClass: classname(cssPrefix + '-option'),
-		sortField() {
-			return 0
+		sortField(a, b) {
+			const i = items?.findIndex((item) => getKey(item) === a.id) || -1
+			const j = items?.findIndex((item) => getKey(item) === b.id) || -1
+			return i < j ? -1 : +1
 		},
 		onChange(selected: any) {
 			const filterd = items?.filter((item) => {
@@ -104,7 +106,8 @@
 	$: instance && update('value', value)
 
 	function getKey(item: any) {
-		return typeof item === 'object' ? item[itemKey!] : item
+		const key = typeof item === 'object' ? item[itemKey!] : item
+		return `${typeof key}:${key}`
 	}
 
 	function getSelected(item: any) {
