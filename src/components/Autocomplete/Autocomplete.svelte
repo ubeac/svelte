@@ -83,25 +83,32 @@
 	$: settings = {
 		dropdownClass: classname(cssPrefix + '-dropdown'),
 		optionClass: classname(cssPrefix + '-option'),
-		onChange: (selected: any) => {
+		sortField() {
+			return 0
+		},
+		onChange(selected: any) {
 			const filterd = items?.filter((item) => {
 				return selected.includes(`${getKey(item)}`)
 			})
 			value = multiple ? filterd : filterd?.[0]
 		},
-		onInitialize: () => {
+		onInitialize() {
 			loaded = true
 		},
 	} as Partial<TomSettings>
 
 	$: disabled ? instance?.disable() : instance?.enable()
 
-	$: update('value', value)
+	$: instance && update('items', items)
 
-	$: update('items', items)
+	$: instance && update('value', value)
 
 	function getKey(item: any) {
 		return typeof item === 'object' ? item[itemKey!] : item
+	}
+
+	function getSelected(item: any) {
+		return [value].flat().map(getKey).includes(getKey(item))
 	}
 
 	function getValue(item: any) {
@@ -118,12 +125,8 @@
 	}
 
 	function update(key: string, input: any) {
-		if (!instance) return
-
 		if (key === 'items') {
 			if (typeof window === 'undefined' || options === input) return
-
-			const current = value
 
 			options = input
 
@@ -131,13 +134,10 @@
 				instance.clear(true)
 				instance.clearOptions()
 				instance.sync()
-				requestAnimationFrame(() => update('value', current))
 			})
 		}
 
 		if (key === 'value') {
-			if (typeof input === 'undefined') return
-
 			const mapped = [input].flat().map(getKey)
 
 			const keys = multiple ? mapped : mapped?.[0]
@@ -155,7 +155,7 @@
 	{#each options || [] as item, index}
 		<slot {index} {item}>
 			<!-- DON'T USE 'El' INSTEAD OF 'option' -->
-			<option value={getKey(item)}>
+			<option value={getKey(item)} selected={getSelected(item)}>
 				{getValue(item)}
 			</option>
 		</slot>
