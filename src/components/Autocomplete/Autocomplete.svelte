@@ -133,11 +133,11 @@
 
 			options = input
 
-			requestAnimationFrame(() => {
-				instance.clear(true)
-				instance.clearOptions()
-				instance.sync()
-			})
+			instance.clear(true)
+
+			instance.clearOptions()
+
+			requestAnimationFrame(() => instance.sync())
 		}
 
 		if (key === 'value') {
