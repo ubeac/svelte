@@ -11,7 +11,7 @@ function GetNodes(navs: any[]) {
 		} else {
 			result += `
           <url>
-            <loc>${site_base_url + navigation.route}</loc>
+            <loc>${site_base_url + navigation.route + (navigation.route === '/docs/' ? '' : '/')}</loc>
             <changefreq>weekly</changefreq>
             <priority>0.5</priority>
           </url>`

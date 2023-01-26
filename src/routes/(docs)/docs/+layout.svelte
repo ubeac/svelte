@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Card, CardBody, type ContainerMaxWidths, El, Icon, PageBody } from '@ubeac/svelte'
 
+	import { page } from '$app/stores'
 	import { ToC } from '$lib/docs-components'
 
 	import { navigations } from '.'
@@ -10,6 +11,8 @@
 
 <svelte:head>
 	<meta name="author" content="Amir Pournasserian" />
+	<title>{$page.data.metaData.title}</title>
+	<meta name="description" content={$page.data.metaData.description} />
 </svelte:head>
 
 <PageBody>

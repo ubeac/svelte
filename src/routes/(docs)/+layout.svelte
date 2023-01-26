@@ -647,7 +647,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="/docs">
+										<a class="nav-link" href="/docs/">
 											<span class="nav-link-icon d-md-none d-lg-inline-block"
 												><!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
 												<svg
@@ -731,7 +731,7 @@
 												<span class="nav-link-title"> Help </span>
 											</a>
 											<div class="dropdown-menu">
-												<a class="dropdown-item" href="/docs"> Documentation </a>
+												<a class="dropdown-item" href="/docs/"> Documentation </a>
 												<!-- <a
 												class="dropdown-item"
 												href="https://github.com/ubeac/svelte/tree/next"
@@ -1200,7 +1200,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="/docs">
+								<a class="nav-link" href="/docs/">
 									<span class="nav-link-icon d-md-none d-lg-inline-block"
 										><!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
 										<svg
@@ -1279,7 +1279,7 @@
 										<span class="nav-link-title"> Help </span>
 									</a>
 									<div class="dropdown-menu">
-										<a class="dropdown-item" href="/docs"> Documentation </a>
+										<a class="dropdown-item" href="/docs/"> Documentation </a>
 										<a
 											class="dropdown-item"
 											href="https://github.com/ubeac/svelte/tree/next"
@@ -1307,7 +1307,7 @@
 			<div class="row text-center align-items-center flex-row-reverse">
 				<div class="col-lg-auto ms-lg-auto">
 					<ul class="list-inline list-inline-dots mb-0">
-						<li class="list-inline-item"><a href="/docs" class="link-secondary">Documentation</a></li>
+						<li class="list-inline-item"><a href="/docs/" class="link-secondary">Documentation</a></li>
 						<li class="list-inline-item">
 							<a
 								href="https://github.com/ubeac/svelte/tree/next"

@@ -18,7 +18,7 @@ export function load(params) {
 	let route = params.url.pathname
 	let currentRout: any
 	Object.keys(routeMap).forEach((k) => {
-		if (route === k || route === k + '/') {
+		if (route === k || route + '/' === k) {
 			currentRout = routeMap[k]
 		}
 	})
