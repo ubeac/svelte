@@ -4,7 +4,7 @@
 	function load(query: string) {
 		const url = 'https://api.github.com/search/repositories?q=' + encodeURIComponent(query)
 		return fetch(url)
-			.then((res) => res.json())
+			.then((response) => response.json())
 			.then((json) => json.items)
 			.catch(() => {
 				return []
@@ -14,4 +14,8 @@
 	let value = ''
 </script>
 
-<FormAutocomplete label="Search Github repositories" {load} key="id" text="full_name" bind:value hint="id = {value}" />
+<El mb="2">Search Github repositories</El>
+<FormAutocomplete {load} itemKey="id" itemValue="full_name" bind:value />
+{#if value}
+	<i>id={value}</i>
+{/if}

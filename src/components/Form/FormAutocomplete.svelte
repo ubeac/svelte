@@ -6,24 +6,69 @@
 	//#region
 
 	/**
-	 * Set the tag of FormAutocomplete
+	 * Set autocomplete as disabled
 	 */
-	export let tag: $$Props['tag'] = 'select'
-
-	export let create: $$Props['create'] = undefined
-	export let items: $$Props['items'] = []
-	export let multiple: $$Props['multiple'] = undefined
-	export let load: $$Props['load'] = undefined
-	export let sort: $$Props['sort'] = true
-	export let key: $$Props['key'] = 'key'
-	export let text: $$Props['text'] = 'text'
 	export let disabled: $$Props['disabled'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let label: $$Props['label'] = undefined
+
+	/**
+	 * Define hint for the FormField
+	 */
 	export let hint: $$Props['hint'] = undefined
+
+	/**
+	 * Autocomplete items
+	 */
+	export let items: $$Props['items'] = []
+
+	/**
+	 * Specifies the key of the object
+	 */
+	export let itemKey: $$Props['itemKey'] = 'key'
+
+	/**
+	 * Specifies the label of the object
+	 */
+	export let itemValue: $$Props['itemValue'] = 'value'
+
+	/**
+	 * Set the text label of FormSelect
+	 */
+	export let label: $$Props['label'] = undefined
+
+	/**
+	 * Load more options using async function.
+	 */
+	export let load: $$Props['load'] = undefined
+
+	/**
+	 * Choose multiple items
+	 */
+	export let multiple: $$Props['multiple'] = undefined
+
+	/**
+	 * Set placeholder for the autocomplete
+	 */
+	export let placeholder: $$Props['placeholder'] = undefined
+
+	/**
+	 * Set the FormSelect required
+	 */
+	export let required: $$Props['required'] = undefined
+
+	/**
+	 * Set the size of the autocomplete component
+	 */
+	export let size: $$Props['size'] = undefined
+
+	/**
+	 * Set the state of autocomplete
+	 */
+	export let state: $$Props['state'] = undefined
+
+	/**
+	 * Value that selected options are bound to
+	 */
+	export let value: $$Props['value'] = undefined
 
 	//#endregion
 
@@ -35,23 +80,24 @@
 	}
 
 	$: autocompleteProps = {
-		tag,
-		load,
-		create,
-		items,
-		multiple,
-		sort,
-		key,
-		text,
-		placeholder,
 		disabled,
-		required,
+		items,
+		itemKey,
+		itemValue,
+		load,
+		multiple,
+		placeholder,
+		// required, // TODO
+		size,
 		state,
+		value,
 	}
 </script>
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Autocomplete {...autocompleteProps} bind:value on:change on:create />
+	<Autocomplete {...autocompleteProps} bind:value let:item let:index>
+		<slot {index} {item}>{item}</slot>
+	</Autocomplete>
 	<slot name="hint" />
 </FormField>

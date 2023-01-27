@@ -5,6 +5,5 @@
 	let value: any = undefined
 </script>
 
-<FormAutocomplete bind:value {items} label="Label" />
-<FormAutocomplete bind:value {items} required label="Label" />
-<i>value: {value}</i>
+<FormAutocomplete label="Label" bind:value {items} placeholder="Please select an item" />
+<i>Selected value: {value}</i>
