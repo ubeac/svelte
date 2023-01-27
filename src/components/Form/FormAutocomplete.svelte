@@ -90,7 +90,6 @@
 		// required, // TODO
 		size,
 		state,
-		value,
 	}
 </script>
 
