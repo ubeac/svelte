@@ -30,6 +30,20 @@ Once installed, you can import the components and use them in your Svelte applic
 <Button>Hello uBeac</Button>
 ```
 
+## Styles
+
+uBeac components have default styles which is based on tabler. which you can use like this:
+
+```svelte
+<script>
+	import {Button} from '@ubeac/svelte'
+	import '@ubeac/svelte/styles/tabler.css'
+
+</script>
+
+<Button>Hello World!</Button>
+```
+
 ## Demo
 
 Check out the [documentation website](https://svelte.ubeac.io/) for live demos of each component and detailed usage instructions.
