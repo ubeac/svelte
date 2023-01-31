@@ -9,7 +9,7 @@
 
 	export let cssPrefix: $$Props['cssPrefix'] = 'accordion-header'
 	export let buttonCssPrefix: $$Props['cssPrefix'] = 'accordion-button'
-	export let tag: $$Props['tag'] = 'h2'
+	export let tag: $$Props['tag'] = 'div'
 
 	const parentCtx = getContext<AccordionsContext>('ACCORDIONS')
 	const ctx = getContext<AccordionContext>('ACCORDION')
