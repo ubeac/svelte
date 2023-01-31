@@ -90,7 +90,7 @@ export const navigations = [
 			},
 			{
 				route: base_component_path + 'breadcrumb',
-				title: 'Bredcrumb',
+				title: 'Breadcrumb',
 				icon: 'fluent-mdl2:breadcrumb',
 			},
 			{
