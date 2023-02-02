@@ -13,7 +13,9 @@
     OffcanvasHeader,
     Page,
     Progress,
+    Input
   } from '@ubeac/svelte'
+
   import type { Themes } from '@ubeac/svelte'
 
   import { afterNavigate, beforeNavigate } from '$app/navigation'
@@ -1055,9 +1057,9 @@
                   <div class="dropdown-menu-columns">
                     <div class="dropdown-menu-column">
                       <!--                      <a class="dropdown-item" href="../empty.html"> Empty page </a>-->
-                      <a class="dropdown-item" href="../accordion.html"> Accordion </a>
+                      <a class="dropdown-item" href="/interface/accordion"> Accordion </a>
                       <!--                      <a class="dropdown-item" href="../blank.html"> Blank page </a>-->
-                      <a class="dropdown-item" href="../badges.html">
+                      <a class="dropdown-item" href="/interface/badge">
                         Badges
                         <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
                       </a>
@@ -1092,7 +1094,7 @@
                         <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
                       </a>
                       <a class="dropdown-item d-none" href="../dropdowns.html"> Dropdowns </a>
-                      <a class="dropdown-item" href="../modals.html"> Modals </a>
+                      <a class="dropdown-item" href="/interface/modals"> Modals </a>
                       <a class="dropdown-item d-none" href="../maps.html"> Maps </a>
                       <a class="dropdown-item d-none" href="../map-fullsize.html"> Map fullsize </a>
                       <a class="dropdown-item d-none" href="../maps-vector.html">
@@ -1321,6 +1323,9 @@
                 </li>
               {/if}
             </ul>
+            <div>
+              <Input placeholder="Search..." />
+            </div>
           </div>
         </div>
       </div>
