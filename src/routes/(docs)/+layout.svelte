@@ -1059,7 +1059,7 @@
                       <!--                      <a class="dropdown-item" href="../empty.html"> Empty page </a>-->
                       <a class="dropdown-item" href="/interface/accordion"> Accordion </a>
                       <!--                      <a class="dropdown-item" href="../blank.html"> Blank page </a>-->
-                      <a class="dropdown-item" href="/interface/badge">
+                      <a class="dropdown-item" href="/interface/badges">
                         Badges
                         <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
                       </a>
