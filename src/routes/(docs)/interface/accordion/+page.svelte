@@ -7,7 +7,7 @@
 </script>
 <h1>Accordion</h1>
 <Card size="lg">
-  <CardBody class="px-3 py-2">
+  <CardBody class="px-4 py-3">
     <Accordions>
       {#each Array(5) as _, index}
         <Accordion title="{title}{index +1}">

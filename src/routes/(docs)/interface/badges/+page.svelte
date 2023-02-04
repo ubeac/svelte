@@ -25,7 +25,7 @@
   <El row>
     <El col="4" d="none" dMd="block">
       <Card size="lg">
-        <CardBody class="px-3 py-2">
+        <CardBody class="px-4 py-3">
           <El tag="h1">
             Example heading
             <Badge color="secondary">New</Badge>
