@@ -22902,7 +22902,7 @@ Dimmer
   backdrop-filter: blur(4px);
 }
 
-.modal-full-width {
+.modal-full-width, .u-dialog-size-full .u-dialog-container {
   max-width: none;
   margin: 0 0.5rem;
 }
