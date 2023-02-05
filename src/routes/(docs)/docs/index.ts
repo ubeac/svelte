@@ -121,7 +121,7 @@ export const navigations = [
 			},
 			{
 				route: base_component_path + 'breadcrumb/',
-				title: 'Bredcrumb',
+				title: 'Breadcrumb',
 				icon: 'fluent-mdl2:breadcrumb',
 				description:
 					'Breadcrumbs are used to show the current website or app location and reduce the number of actions users have to take. Thanks to breadcrumbs, they can easily navigate within the website hierarchy and better understand its structure.',
