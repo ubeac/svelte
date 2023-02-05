@@ -26577,6 +26577,10 @@ Antialiasing
 .u-button-color-tabler.u-button-ghost {
   --u-btn-bg: transparent;
 }
+.u-button.u-button-outline {
+  --u-btn-bg: transparent;
+  --u-btn-disabled-bg: transparent;
+}
 .u-button > .u-icon {
   margin: 0 !important;
 }
