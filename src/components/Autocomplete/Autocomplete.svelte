@@ -1,136 +1,177 @@
 <script lang="ts">
-	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
+	import { onDestroy, onMount } from 'svelte'
 
 	import TomSelect from 'tom-select'
 	import type { TomSettings } from 'tom-select/dist/types/types'
 
-	import { type AutocompleteProps, classname, El } from '$lib/components'
+	import { classname, El } from '$lib/components'
+	import type { AutocompleteProps } from '$lib/components'
 
 	type $$Props = AutocompleteProps
 
-	// #region Props
-
+	/**
+	 * Set Css Prefix for the autocomplete
+	 */
 	export let cssPrefix: $$Props['cssPrefix'] = 'autocomplete'
-	export let tag: $$Props['tag'] = 'select'
 
-	export let create: $$Props['create'] = undefined
-	export let items: $$Props['items'] = []
-	export let multiple: $$Props['multiple'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
+	/**
+	 * Set autocomplete as disabled
+	 */
 	export let disabled: $$Props['disabled'] = undefined
+
+	/**
+	 * Autocomplete items
+	 */
+	export let items: $$Props['items'] = []
+
+	/**
+	 * Specifies the key of the object
+	 */
+	export let itemKey: $$Props['itemKey'] = 'key'
+
+	/**
+	 * Specifies the label of the object
+	 */
+	export let itemValue: $$Props['itemValue'] = 'value'
+
+	/**
+	 * Load more options using async function.
+	 */
 	export let load: $$Props['load'] = undefined
-	export let sort: $$Props['sort'] = true
+
+	/**
+	 * Choose multiple items
+	 */
+	export let multiple: $$Props['multiple'] = undefined
+
+	/**
+	 * Set placeholder for the autocomplete
+	 */
+	export let placeholder: $$Props['placeholder'] = undefined
+
+	/**
+	 * Set the size of the autocomplete component
+	 */
+	export let size: $$Props['size'] = undefined
+
+	/**
+	 * Set the state of autocomplete
+	 */
 	export let state: $$Props['state'] = undefined
-	export let key: $$Props['key'] = 'key'
-	export let text: $$Props['text'] = 'text'
+
+	/**
+	 * Value that selected options are bound to
+	 */
 	export let value: $$Props['value'] = undefined
 
-	// #endregion
-
 	let element: HTMLSelectElement
-	let settings: Partial<TomSettings>
-
-	let loaded: boolean = false
 
 	let instance: TomSelect
 
-	const dispatch = createEventDispatcher()
+	let loaded = false
+
+	$: props = {
+		cssPrefix,
+		disabled,
+		multiple,
+		placeholder,
+		cssProps: { loaded, size, state },
+	}
 
 	$: settings = {
 		dropdownClass: classname(cssPrefix + '-dropdown'),
 		optionClass: classname(cssPrefix + '-option'),
-		create,
-		valueField: key!,
-		labelField: text!,
-		searchField: [text!, key!],
-		onInitialize: () => {
+		valueField: itemKey!,
+		labelField: itemValue!,
+		searchField: [itemValue!],
+		load(query: string, callback: Function) {
+			load?.(query)
+				.then((items) => {
+					callback(convert(items))
+				})
+				.catch(() => callback([]))
+		},
+		onChange(keys) {
+			const filterd = [keys].flat().map((key: any) => {
+				return instance.options[key]?.item
+			})
+			value = multiple ? filterd : filterd?.[0]
+		},
+		onInitialize() {
 			loaded = true
 		},
-		onOptionAdd: (event) => {
-			dispatch('create', event)
-		},
-		onChange: (event: any) => {
-			if (multiple) {
-				dispatch('change', (value = event.map(getValue)))
-			} else {
-				dispatch('change', (value = getValue(event)))
+	} as Partial<TomSettings>
+
+	$: disabled ? instance?.disable() : instance?.enable()
+
+	$: instance && update('items', items)
+
+	$: instance && update('value', value)
+
+	function convert(items: any) {
+		return items.map((item: any) => {
+			return {
+				[itemKey!]: getKey(item),
+				[itemValue!]: getValue(item),
+				item,
 			}
-		},
-		load(query: string, callback: any) {
-			if (load) {
-				load(query)
-					.then((newItems) => {
-						callback(newItems)
-					})
-					.catch((err) => callback())
-			}
-		},
+		})
 	}
 
-	$: if (sort === false) {
-		settings.sortField = [{ field: '$order' }, { field: '$score' }]
+	function getKey(item: any) {
+		const key = typeof item === 'object' ? item[itemKey!] : item
+		return `${typeof key}:${key}`
 	}
 
-	$: instance?.setupOptions(items)
-
-	async function bind(deps?: any) {
-		if (!element) return
-		instance = new TomSelect(element, settings)
+	function getSelected(item: any) {
+		return [value].flat().map(getKey).includes(getKey(item))
 	}
 
 	function getValue(item: any) {
-		return typeof item === 'object' ? item[key!] : item
+		return typeof item === 'object' ? item[itemValue!] : item
 	}
 
-	function getText(item: any) {
-		return typeof item === 'object' ? item[text!] : item
+	function bind() {
+		if (!element) return
+		instance = new TomSelect(element, settings as any)
 	}
 
 	function unbind() {
-		if (instance) {
-			instance.destroy()
-			loaded = false
+		instance?.destroy()
+	}
+
+	function update(key: string, input: any) {
+		if (key === 'items') {
+			instance.clear(true)
+
+			instance.clearOptions()
+
+			instance.addOptions(convert(input))
+
+			update('value', value)
+		}
+
+		if (key === 'value') {
+			const mapped = [input].flat().map(getKey)
+
+			const keys = multiple ? mapped : mapped?.[0]
+
+			instance.setValue(keys, true)
 		}
 	}
 
-	$: {
-		settings
-		if (instance) {
-			unbind()
-			bind()
-		}
-	}
+	onMount(bind)
 
-	$: if (instance && typeof value !== 'undefined') {
-		instance.setValue(value, true)
-	}
-
-	$: if (instance) {
-		disabled ? instance.disable() : instance.enable()
-	}
-
-	onMount(() => bind())
-	onDestroy(() => unbind())
-
-	$: props = {
-		placeholder,
-		disabled,
-		multiple,
-		tag,
-		cssPrefix,
-		cssProps: {
-			loaded,
-			state,
-		},
-	}
+	onDestroy(unbind)
 </script>
 
-<El {...$$restProps} bind:element bind:value {...props}>
-	{#each items ?? [] as item, index (index)}
+<El tag="select" bind:element {...$$restProps} {...props}>
+	{#each items || [] as item, index}
 		<slot {index} {item}>
-			<El tag="option" value={getValue(item)}>
-				{getText(item)}
-			</El>
+			<!-- DON'T USE 'El' INSTEAD OF 'option' -->
+			<option value={getKey(item)} selected={getSelected(item)}>
+				{getValue(item)}
+			</option>
 		</slot>
 	{/each}
 </El>

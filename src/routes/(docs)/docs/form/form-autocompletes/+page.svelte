@@ -1,12 +1,17 @@
 <script>
 	import { Doc, Preview } from '$lib/docs-components'
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
-	import FormAutocompleteCreate from './FormAutocompleteCreate.svelte'
 	import FormAutocompleteDisabled from './FormAutocompleteDisabled.svelte'
+	import FormAutocompleteItems from './FormAutocompleteItems.svelte'
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'
 	import FormAutocompleteMessage from './FormAutocompleteMessage.svelte'
-  import FormAutocompleteRemoteData from './FormAutocompleteRemoteData.svelte'
+	import FormAutocompleteMultiple from './FormAutocompleteMultiple.svelte'
+	import FormAutocompleteObject from './FormAutocompleteObject.svelte'
+	import FormAutocompletePlaceholder from './FormAutocompletePlaceholder.svelte'
+	import FormAutocompleteRemoteData from './FormAutocompleteRemoteData.svelte'
 	import FormAutocompleteRequired from './FormAutocompleteRequired.svelte'
+	import FormAutocompleteSizes from './FormAutocompleteSizes.svelte'
+	import FormAutocompleteStates from './FormAutocompleteStates.svelte'
 </script>
 
 <Doc title="Form Autocomplete">
@@ -15,39 +20,73 @@
 </Doc>
 
 <Doc title="Label">You can set a label for FormAutocomplete.</Doc>
-<Preview vertical src="./FormAutocompleteLabel.svelte">
+<Preview src="./FormAutocompleteLabel.svelte">
 	<FormAutocompleteLabel />
 </Preview>
 
-<Doc title="Hint/Validation Message">You can set a message below of Autocomplete like this</Doc>
-<Preview class="align-items-stretch" vertical src="./FormAutocompleteMessage.svelte">
-	<FormAutocompleteMessage />
+<Doc title="Disabled">FormAutocomplete supports disabled state.</Doc>
+<Preview src="./FormAutocompleteDisabled.svelte">
+	<FormAutocompleteDisabled />
 </Preview>
 
-<Doc title="Required">You can mark it as a required field like this:</Doc>
+<Doc title="Placeholder">Autocomplete can have placeholders.</Doc>
+<Preview src="./FormAutocompletePlaceholder.svelte">
+	<FormAutocompletePlaceholder />
+</Preview>
 
-<Preview vertical class="align-items-stretch" src="./FormAutocompleteRequired.svelte">
-	<FormAutocompleteRequired />
+<Doc title="Sizes">
+	You may also choose from small and large custom Autocomplete to match our similarly sized text inputs.
+</Doc>
+<Preview vertical src="./FormAutocompleteSizes.svelte">
+	<FormAutocompleteSizes />
+</Preview>
+
+<Doc title="Multiple Items">
+	You can select multiple items using Autocomplete component using <code>multiple</code> prop.
+</Doc>
+<Preview src="./FormAutocompleteMultiple.svelte">
+	<FormAutocompleteMultiple />
+</Preview>
+
+<Doc title="Complex Items">
+	You can have complex objects as item and you need to use <code>itemKey</code> and <code>itemValue</code> props to extract
+	the data that Autocomplete needs
+</Doc>
+<Preview src="./FormAutocompleteObject.svelte">
+	<FormAutocompleteObject />
+</Preview>
+
+<Doc title="Remote Data">Loads from remote data</Doc>
+<Preview src="./FormAutocompleteRemoteData.svelte">
+	<FormAutocompleteRemoteData />
+</Preview>
+
+<Doc title="States">
+	You can set the <code>valid</code> or <code>invalid</code> boolean properties to apply the valid or invalid state to a
+	Autocomplete.
+</Doc>
+<Preview src="./FormAutocompleteStates.svelte">
+	<FormAutocompleteStates />
+</Preview>
+
+<Doc title="Hint/Validation Message">You can set a message below of Autocomplete like this</Doc>
+<Preview src="./FormAutocompleteMessage.svelte">
+	<FormAutocompleteMessage />
 </Preview>
 
 <Doc title="Layout">
 	You can set width of each Form elements in a form using <code>cols</code> prop.
 </Doc>
-<Preview vertical class="align-items-stretch" src="./FormAutocompleteColumn.svelte">
+<Preview src="./FormAutocompleteColumn.svelte">
 	<FormAutocompleteColumn />
 </Preview>
 
-<Doc title="Disabled">FormAutocomplete supports disabled state.</Doc>
-<Preview vertical class="align-items-stretch" src="./FormAutocompleteDisabled.svelte">
-	<FormAutocompleteDisabled />
+<Doc title="Items">Autocomplete can have custom item names.</Doc>
+<Preview src="./FormAutocompleteItems.svelte">
+	<FormAutocompleteItems />
 </Preview>
 
-<Doc title="Remote Data">You can load items from external api using async function.</Doc>
-<Preview vertical class="align-items-stretch" src="./FormAutocompleteRemoteData.svelte">
-	<FormAutocompleteRemoteData />
-</Preview>
-
-<Doc title="Create new item">You can create new item if item is not in the list.</Doc>
-<Preview vertical class="align-items-stretch" src="./FormAutocompleteCreate.svelte">
-	<FormAutocompleteCreate />
+<Doc title="Required">You can mark it as a required field like this</Doc>
+<Preview src="./FormAutocompleteRequired.svelte">
+	<FormAutocompleteRequired />
 </Preview>
