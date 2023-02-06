@@ -12,5 +12,5 @@
 	let value = items[2]
 </script>
 
-<Autocomplete {items} bind:value let:item let:index>{index} - {item.value}</Autocomplete>
+<Autocomplete key="id" {items} bind:value let:item let:index>{index} - {item.value}</Autocomplete>
 <i>value: {JSON.stringify(value)}</i>

@@ -3,10 +3,9 @@
 
 	import AutocompleteDefault from './AutocompleteDefault.svelte'
 	import AutocompleteDisabled from './AutocompleteDisabled.svelte'
-	import AutocompleteMultiple from './AutocompleteMultiple.svelte'
+	import AutocompleteKey from './AutocompleteKey.svelte'
 	import AutocompleteObject from './AutocompleteObject.svelte'
 	import AutocompletePlaceholder from './AutocompletePlaceholder.svelte'
-	import AutocompleteRemoteData from './AutocompleteRemoteData.svelte'
 	import AutocompleteSizes from './AutocompleteSizes.svelte'
 	import AutocompleteStates from './AutocompleteStates.svelte'
 </script>
@@ -38,13 +37,6 @@
 	<div class="custom-class"><AutocompleteSizes /></div>
 </Preview>
 
-<Doc title="Multiple Items">
-	You can select multiple items using Autocomplete component using <code>multiple</code> prop.
-</Doc>
-<Preview src="./AutocompleteMultiple.svelte">
-	<AutocompleteMultiple />
-</Preview>
-
 <Doc title="Complex Items">
 	You can have complex objects as item and you need to use <code>itemKey</code> and <code>itemValue</code> props to extract
 	the data that Autocomplete needs
@@ -53,17 +45,17 @@
 	<AutocompleteObject />
 </Preview>
 
-<Doc title="Remote Data">Loads from remote data</Doc>
-<Preview src="./AutocompleteRemoteData.svelte">
-	<AutocompleteRemoteData />
-</Preview>
-
 <Doc title="States">
 	You can set the <code>valid</code> or <code>invalid</code> boolean properties to apply the valid or invalid state to a
 	Autocomplete.
 </Doc>
 <Preview src="./AutocompleteStates.svelte">
 	<div class="custom-class"><AutocompleteStates /></div>
+</Preview>
+
+<Doc title="Custom Key">You can choose a key to increase performance.</Doc>
+<Preview src="./AutocompleteKey.svelte">
+	<AutocompleteKey />
 </Preview>
 
 <style>

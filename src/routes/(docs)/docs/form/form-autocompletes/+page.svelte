@@ -2,13 +2,11 @@
 	import { Doc, Preview } from '$lib/docs-components'
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
 	import FormAutocompleteDisabled from './FormAutocompleteDisabled.svelte'
-	import FormAutocompleteItems from './FormAutocompleteItems.svelte'
+	import FormAutocompleteKey from './FormAutocompleteKey.svelte'
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'
 	import FormAutocompleteMessage from './FormAutocompleteMessage.svelte'
-	import FormAutocompleteMultiple from './FormAutocompleteMultiple.svelte'
 	import FormAutocompleteObject from './FormAutocompleteObject.svelte'
 	import FormAutocompletePlaceholder from './FormAutocompletePlaceholder.svelte'
-	import FormAutocompleteRemoteData from './FormAutocompleteRemoteData.svelte'
 	import FormAutocompleteRequired from './FormAutocompleteRequired.svelte'
 	import FormAutocompleteSizes from './FormAutocompleteSizes.svelte'
 	import FormAutocompleteStates from './FormAutocompleteStates.svelte'
@@ -41,24 +39,12 @@
 	<FormAutocompleteSizes />
 </Preview>
 
-<Doc title="Multiple Items">
-	You can select multiple items using Autocomplete component using <code>multiple</code> prop.
-</Doc>
-<Preview src="./FormAutocompleteMultiple.svelte">
-	<FormAutocompleteMultiple />
-</Preview>
-
 <Doc title="Complex Items">
 	You can have complex objects as item and you need to use <code>itemKey</code> and <code>itemValue</code> props to extract
 	the data that Autocomplete needs
 </Doc>
 <Preview src="./FormAutocompleteObject.svelte">
 	<FormAutocompleteObject />
-</Preview>
-
-<Doc title="Remote Data">Loads from remote data</Doc>
-<Preview src="./FormAutocompleteRemoteData.svelte">
-	<FormAutocompleteRemoteData />
 </Preview>
 
 <Doc title="States">
@@ -81,12 +67,12 @@
 	<FormAutocompleteColumn />
 </Preview>
 
-<Doc title="Items">Autocomplete can have custom item names.</Doc>
-<Preview src="./FormAutocompleteItems.svelte">
-	<FormAutocompleteItems />
-</Preview>
-
 <Doc title="Required">You can mark it as a required field like this</Doc>
 <Preview src="./FormAutocompleteRequired.svelte">
 	<FormAutocompleteRequired />
+</Preview>
+
+<Doc title="Custom Key">You can choose a key to increase performance.</Doc>
+<Preview src="./FormAutocompleteKey.svelte">
+	<FormAutocompleteKey />
 </Preview>
