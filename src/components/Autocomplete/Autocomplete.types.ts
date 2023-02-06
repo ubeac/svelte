@@ -7,14 +7,12 @@ export const AUTOCOMPLETE_STATES = ['valid', 'invalid'] as const
 export type AutocompleteStates = typeof AUTOCOMPLETE_STATES[number]
 
 export interface AutocompleteProps extends Partial<ElProps> {
+	debounce?: number
 	disabled?: boolean
 	items?: (string | any)[]
-	itemKey?: string
-	itemValue?: string
-	multiple?: boolean
+	key?: string | ((item: any) => string)
 	placeholder?: string
 	size?: AutocompleteSizes
 	state?: AutocompleteStates
 	value?: string | any | any[]
-	load?: (query: string) => Promise<any[]>
 }

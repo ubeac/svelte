@@ -23,12 +23,7 @@
 	/**
 	 * Specifies the key of the object
 	 */
-	export let itemKey: $$Props['itemKey'] = 'key'
-
-	/**
-	 * Specifies the label of the object
-	 */
-	export let itemValue: $$Props['itemValue'] = 'value'
+	export let key: $$Props['key'] = undefined
 
 	/**
 	 * Set the text label of FormSelect
@@ -39,11 +34,6 @@
 	 * Load more options using async function.
 	 */
 	export let load: $$Props['load'] = undefined
-
-	/**
-	 * Choose multiple items
-	 */
-	export let multiple: $$Props['multiple'] = undefined
 
 	/**
 	 * Set placeholder for the autocomplete
@@ -82,12 +72,9 @@
 	$: autocompleteProps = {
 		disabled,
 		items,
-		itemKey,
-		itemValue,
+		key,
 		load,
-		multiple,
 		placeholder,
-		// required, // TODO
 		size,
 		state,
 	}
