@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib/components'
-
-	import type { LabelProps } from './Label.types'
+	import { El, type LabelProps } from '$lib/components'
 
 	type $$Props = LabelProps
 

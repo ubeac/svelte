@@ -6,6 +6,7 @@
 </script>
 
 <h1>Spinners</h1>
+<p>Indicate the loading state of a component or page with spinners.</p>
 
 <Doc title="Spinner colors">
 	<!--  -->

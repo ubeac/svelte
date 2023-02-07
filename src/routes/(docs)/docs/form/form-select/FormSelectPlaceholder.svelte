@@ -1,12 +1,9 @@
 <script lang="ts">
-	import { Select } from '@ubeac/svelte'
+	import { FormSelect } from '@ubeac/svelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
 	let value: any = undefined
 </script>
 
-<Select size="lg" bind:value {items} />
-<Select bind:value {items} />
-<Select size="sm" bind:value {items} />
-
+<FormSelect label="Label" bind:value {items} placeholder="Please select an item" />
 <i>Selected value: {value}</i>

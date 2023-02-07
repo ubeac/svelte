@@ -11,6 +11,7 @@
 </script>
 
 <h1>Dialog</h1>
+<p>Easily build interactive and user-friendly dialog box using Dialog component.</p>
 
 <Doc title="Default">
 	<!--  -->

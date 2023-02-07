@@ -7,13 +7,10 @@ export const SELECT_STATES = ['valid', 'invalid'] as const
 export type SelectStates = typeof SELECT_STATES[number]
 
 export interface SelectProps extends Partial<ElProps> {
-	value?: Array<any> | any
-	size?: number | string
-	selectSize?: SelectSizes
+	value?: any
+	size?: SelectSizes
 	disabled?: boolean
-	multiple?: boolean
 	items?: Array<any>
-	selected?: boolean
 	placeholder?: string
 	state?: SelectStates
 }

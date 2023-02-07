@@ -1,29 +1,18 @@
 <script lang="ts">
-	import { afterUpdate } from 'svelte'
+	import { Card, CardBody, type ContainerMaxWidths, El, Icon, PageBody } from '@ubeac/svelte'
 
-	import { Card, CardBody, type ContainerMaxWidths, El, Icon, PageBody, PageHeader } from '@ubeac/svelte'
-
+	import { page } from '$app/stores'
 	import { ToC } from '$lib/docs-components'
 
 	import { navigations } from '.'
 
 	let container: ContainerMaxWidths = 'lg'
-	let title = ''
-	let description = ''
-	let siteTitle = 'uBeac Svelte'
-	afterUpdate(() => {
-		let h1 = Array.from(document.getElementsByTagName('h1'))
-		title = h1.length > 0 ? siteTitle + ' | ' + h1[0].innerText : siteTitle
-		let card = Array.from(document.getElementsByClassName('u-card-body'))[0]
-		let p = Array.from(card.getElementsByTagName('p'))
-		description = p.length > 0 ? p[0].innerText : siteTitle
-	})
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-	<meta name="author" content="uBeac" />
+	<meta name="author" content="Amir Pournasserian" />
+	<title>{$page.data.metaData.title}</title>
+	<meta name="description" content={$page.data.metaData.description} />
 </svelte:head>
 
 <PageBody>
@@ -37,8 +26,7 @@
 								href={navigation.route ? navigation.route : `#${navigation.id}`}
 								class="nav-link"
 								data-bs-toggle="collapse"
-								aria-expanded="false"
-							>
+								aria-expanded="false">
 								{navigation.title}
 								{#if navigation.children}
 									<span class="nav-link-toggle" />

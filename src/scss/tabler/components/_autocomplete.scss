@@ -1,25 +1,25 @@
+//
+// Autocomplete
+//
+
 @import '@tabler/core/src/scss/vendor/tom-select';
 
-$prefix-autocomplete: $prefix + 'autocomplete';
-
 select.#{$prefix-autocomplete}-loaded {
-	clip: rect(0 0 0 0) !important;
-	border: 0 !important;
-	-webkit-clip-path: inset(50%) !important;
-	clip-path: inset(50%) !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	position: absolute !important;
-	white-space: nowrap !important;
-	width: 1px !important;
+	display: none;
 }
 
-$autocomplete-props: (
+$props: (
+	null: '.form-select',
 	dropdown: (
 		'.dropdown-menu',
 		'.w-100'
 	),
 	option: '.dropdown-item',
+	size: (
+		sm: '.form-select-sm',
+		md: '.form-select',
+		lg: '.form-select-lg'
+	),
 	state: (
 		valid: '.is-valid',
 		invalid: '.is-invalid'
@@ -27,24 +27,13 @@ $autocomplete-props: (
 );
 
 .#{$prefix-autocomplete} {
-	@include apply-props($autocomplete-props);
+	@include apply-props($props);
 
 	&-dropdown {
-		top: 36px;
-	}
-
-	& .create {
-		@extend .dropdown-item;
-		display: block;
-	}
-
-	&-option {
-		&[data-selectable] {
-			display: block;
-		}
+		top: calc(100% + 4px);
 	}
 
 	.no-results {
-		padding-left: 6px;
+		padding: 3px 0.75rem;
 	}
 }

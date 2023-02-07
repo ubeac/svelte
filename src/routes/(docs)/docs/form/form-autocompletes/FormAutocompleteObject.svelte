@@ -1,5 +1,5 @@
 <script>
-	import { Autocomplete } from '@ubeac/svelte'
+	import { FormAutocomplete } from '@ubeac/svelte'
 
 	let items = [
 		{ id: 'first', value: 'First Item' },
@@ -12,5 +12,5 @@
 	let value = items[2]
 </script>
 
-<Autocomplete {items} bind:value let:item let:index>{index} - {item.value}</Autocomplete>
+<FormAutocomplete label="Label" bind:value {items} let:item let:index>{index} - {item.value}</FormAutocomplete>
 <i>value: {JSON.stringify(value)}</i>
