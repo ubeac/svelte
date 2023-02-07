@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Card, CardBody, El } from '@ubeac/svelte'
+	import { Card, CardBody, El } from '@ubeac/svelte'
 
 	import DangerModal from './DangerModal.svelte'
 	import FormModal from './FormModal.svelte'
@@ -10,8 +10,6 @@
 	import SimpleModal from './SimpleModal.svelte'
 	import SmallModal from './SmallModal.svelte'
 	import SuccessModal from './SuccessModal.svelte'
-
-	let simpleModalIsOpen = false
 </script>
 
 <h1>Modals</h1>
@@ -19,7 +17,7 @@
 	<El row>
 		<El col="12" d="none" dMd="block">
 			<Card size="lg">
-				<CardBody class="px-4 py-3">
+				<CardBody px="4" py="3">
 					<SimpleModal />
 					<LargeModal />
 					<SmallModal />

@@ -1,18 +1,5 @@
 <script>
-	import {
-		Button,
-		Dialog,
-		DialogBody,
-		DialogClose,
-		DialogContent,
-		DialogFooter,
-		DialogHeader,
-		DialogTitle,
-		Card,
-		CardBody,
-		CardTitle,
-	} from '@ubeac/svelte'
-	import Icon from '@ubeac/svelte/components/Icon/Icon.svelte'
+	import { Button, Dialog, DialogClose, DialogContent, Card, CardBody, CardTitle, Icon } from '@ubeac/svelte'
 
 	let open = false
 </script>
