@@ -2,8 +2,8 @@ import type { ElProps } from '$lib/components'
 
 export type DialogPlacements = 'top' | 'center'
 
-const DIALOG_SIZES = ['sm', 'md', 'lg'] as const
-export type DialogSizes = typeof DIALOG_SIZES[number]
+const DIALOG_SIZES = ['sm', 'md', 'lg', 'full'] as const
+export type DialogSizes = (typeof DIALOG_SIZES)[number]
 
 export type DialogContext = {
 	hide: (force: boolean) => void
