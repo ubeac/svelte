@@ -3,7 +3,7 @@ import path from 'path'
 import sass from 'sass'
 
 // TODO: Optimize (only compile one)
-const files = ['tabler']
+const files = ['daisyui']
 
 function compile(file) {
 	const { css } = sass.compile(`./src/scss/${file}/index.scss`, {
