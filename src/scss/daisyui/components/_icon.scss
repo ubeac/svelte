@@ -41,6 +41,13 @@ $daisyuiColorName in $RoleColors {
     }
 }
 
+@each $colorName,
+$daisyuiColorName in $StateColors {
+    .#{$prefix}icon-color-#{$colorName} {
+        @extend .text-#{$daisyuiColorName};
+    }
+}
+
 // constant colors
 @each $colorName,
 $colorVariant in $namedColors {

@@ -11,6 +11,13 @@ $daisyuiColorName in $RoleColors {
     }
 }
 
+@each $colorName,
+$daisyuiColorName in $StateColors {
+    .#{$prefix}button-color-#{$colorName} {
+        @extend .btn-#{$daisyuiColorName};
+    }
+}
+
 // constant colors
 @each $colorName,
 $colorVariant in $namedColors {
