@@ -21,6 +21,8 @@
 
 	import { navigations } from './docs'
 
+	import '/src/styles/daisyui.css'
+
 	let container: ContainerMaxWidths = 'md'
 	let theme: Themes = 'light'
 	let progressValue = 0
@@ -85,7 +87,7 @@
 <svelte:head>
 	<title>{$page.data.metaData.title}</title>
 	<meta name="description" content={$page.data.metaData.description} />
-	<link rel="stylesheet" href="/css/daisyui.css" />
+	<!-- <link rel="stylesheet" href="/css/daisyui.css" /> -->
 </svelte:head>
 
 <App {theme}>
