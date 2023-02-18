@@ -1,5 +1,4 @@
 $prefix: 'u-' !default;
-
-body {
-    background-color: blue;
-}
+@import './colors';
+@import 'daisyui/dist/full';
+@import './components';
